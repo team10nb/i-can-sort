@@ -9,7 +9,6 @@ const image = {
 };
 
 const props = {
-    value: 33,
     image: image,
     width: 200,
     height: 200,

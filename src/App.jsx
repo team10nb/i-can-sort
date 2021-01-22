@@ -30,7 +30,6 @@ function App() {
     };
 
     const props = {
-        value: 33,
         image: image,
         width: 200,
         height: 200,
@@ -38,7 +37,6 @@ function App() {
         progress: progress,
     };
     const props2 = {
-        value: 22,
         image: image2,
         width: 200,
         height: 200,
