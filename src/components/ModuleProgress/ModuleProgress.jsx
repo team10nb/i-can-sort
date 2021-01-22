@@ -34,7 +34,7 @@ export default function ModuleProgress(props) {
     return (
         <div className={classes.root}>
             <BorderLinearProgress
-                {...{ variant: "determinate", value: props.progress }}
+                variant= "determinate" value= {props.progress} 
             />
         </div>
     );

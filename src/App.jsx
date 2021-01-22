@@ -5,8 +5,8 @@ function App() {
     const [progress, setProgress] = React.useState(10);
     const [progress2, setProgress2] = React.useState(15);
 
-    const handleClick = (setProgress) => () => {
-        setProgress((oldProgress) => {
+    const handleClick = (setterProgress) => () => {
+        setterProgress((oldProgress) => {
             if (oldProgress === 100) {
                 return 0;
             }
@@ -34,7 +34,7 @@ function App() {
         image: image,
         width: 200,
         height: 200,
-        handleClick: handleClick(setProgress),
+        onClick: handleClick(setProgress),
         progress: progress,
     };
     const props2 = {
@@ -42,7 +42,7 @@ function App() {
         image: image2,
         width: 200,
         height: 200,
-        handleClick: handleClick(setProgress2),
+        onClick: handleClick(setProgress2),
         progress: progress2,
     };
 
