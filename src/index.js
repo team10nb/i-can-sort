@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Procedure from './components/Scenes/Procedure'
 import reportWebVitals from './reportWebVitals';
-
+//comment comment
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Procedure />
   </React.StrictMode>,
   document.getElementById('root')
 );
