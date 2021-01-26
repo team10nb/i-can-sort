@@ -2,7 +2,7 @@ import React from "react";
 import Module from "./components/Module/Module";
 
 function App() {
-    const [progress, setProgress] = React.useState(10);
+    const [progress, setProgress] = React.useState(45);
     const [progress2, setProgress2] = React.useState(15);
 
     const handleClick = (setterProgress) => () => {
@@ -32,16 +32,20 @@ function App() {
     const props = {
         image: image,
         width: 200,
-        height: 200,
+        height: 180,
         onClick: handleClick(setProgress),
         progress: progress,
+        color: "#004D80",
+        preOne: true,
     };
     const props2 = {
         image: image2,
         width: 200,
-        height: 200,
+        height: 180,
         onClick: handleClick(setProgress2),
         progress: progress2,
+        color: "#1a90ff",
+        preOne: false,
     };
 
     return (
