@@ -117,7 +117,7 @@ function ProcedureMainPage() {
                     <Module {...props} />
                 </Link>
                 <Link to="/Page">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/Page">
                     <Module {...props} />

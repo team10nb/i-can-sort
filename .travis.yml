@@ -1,0 +1,22 @@
+language: node_js
+# OS:
+#   - linux
+#   - mac
+#   - windows
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+jobs:
+  include:
+    # - stage: lint
+    #   script:
+    #     - npm install
+    #     - npm install eslint -g
+    #     - npm run lint
+    - stage: test
+      script:
+        - npm install
+        - npm build
+        - npm run test
