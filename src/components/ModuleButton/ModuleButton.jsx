@@ -5,25 +5,32 @@ import Typography from "@material-ui/core/Typography";
 import "@fontsource/roboto"
 
 export default function ModuleButton(props) {
+    const {width, height, color, preOne, image, onClick} = props;
+    const borderWidth = preOne ? "3px" : "0px";
+
     const useStyles = makeStyles((theme) => ({
         root: {
-            boxShadow: "2px 8px 30px 2px #888888",
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
-            borderBottomRightRadius: 2,
-            borderBottomLeftRadius: 2,
+            // boxShadow: "2px 8px 30px 2px #888888",
+            borderTopLeftRadius: 17,
+            borderTopRightRadius: 17,
+            borderBottomRightRadius: 0,
+            borderBottomLeftRadius: 0,
+            borderColor: color,
+            borderStyle: "solid",
+            borderWidth: borderWidth,
+            borderBottomWidth: "0px",
             marginTop: 5,
-            marginBottom: 5,
+            marginBottom: 0,
             display: "flex",
             flexWrap: "wrap",
             minWidth: 200,
-            minHeight: 200,
-            width: props.width,
-            height: props.height,
+            minHeight: 180,
+            width: width,
+            height: height,
         },
         image: {
             position: "relative",
-            height: 200,
+            height: height,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
@@ -32,7 +39,7 @@ export default function ModuleButton(props) {
             "&:hover, &$focusVisible": {
                 zIndex: 1,
                 "& $imageBackdrop": {
-                    backgroundImage: `url(${props.image.gif})`,
+                    backgroundImage: `url(${image.gif})`,
                     backgroundColor: "",
                     opacity: 1,
                 },
@@ -44,8 +51,8 @@ export default function ModuleButton(props) {
         },
         focusVisible: {},
         imageButton: {
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
+            borderTopLeftRadius: 17,
+            borderTopRightRadius: 17,
             position: "absolute",
             left: 0,
             right: 0,
@@ -57,9 +64,9 @@ export default function ModuleButton(props) {
             color: theme.palette.common.white,
         },
         imageSrc: {
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
-            backgroundImage: `url(${props.image.static})`,
+            borderTopLeftRadius: 17,
+            borderTopRightRadius: 17,
+            // backgroundImage: `url(${props.image.static})`,
             position: "absolute",
             left: 0,
             right: 0,
@@ -69,9 +76,9 @@ export default function ModuleButton(props) {
             backgroundPosition: "center 40%",
         },
         imageBackdrop: {
-            borderTopLeftRadius: 10,
-            borderTopRightRadius: 10,
-            backgroundImage: `url(${props.image.static})`,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+            // backgroundImage: `url(${props.image.static})`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center 40%",
@@ -80,17 +87,23 @@ export default function ModuleButton(props) {
             right: 0,
             top: 0,
             bottom: 0,
-            backgroundColor: theme.palette.common.grey,
-            opacity: 0.4,
+            // backgroundColor: theme.palette.common.grey,
+            backgroundColor: "#d5d5d5",
+            opacity: 1,
             transition: theme.transitions.create("opacity"),
         },
         imageTitle: {
             position: "absolute",
-            padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
-                theme.spacing(1) + 6
-            }px`,
+            right: 0,
+            bottom: 0,
+            // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
+            //     theme.spacing(1) + 6
+            // }px`,
+            paddingBottom: 5,
+            paddingRight: 10,
             fontFamily: "Roboto",
             fontSize: 20,
+            color: "white",
         },
     }));
 
@@ -100,16 +113,16 @@ export default function ModuleButton(props) {
         <div className={classes.root}>
             <ButtonBase
                 // focusRipple
-                key={props.image.title}
+                key={image.title}
                 className={classes.image}
                 focusVisibleClassName={classes.focusVisible}
-                onClick={props.onClick}
+                onClick={onClick}
             >
                 <span
                     className={classes.imageSrc}
                     style={{
                         // backgroundImage: `url(${props.image.static})`,
-                        backgroundColor: 'grey',
+                        backgroundColor: "#d5d5d5",
                     }}
                 />
                 <span className={classes.imageBackdrop} />
@@ -118,10 +131,10 @@ export default function ModuleButton(props) {
                     <Typography
                         component='span'
                         variant='subtitle1'
-                        color='inherit'
+                        color= 'inherit'
                         className={classes.imageTitle}
                     >
-                        {props.image.title}
+                        {image.title}
                     </Typography>
                 </span>
             </ButtonBase>
