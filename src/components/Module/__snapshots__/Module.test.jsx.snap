@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        style="display: inline-block; margin: 40px;"
+        style="display: inline-block; margin: 10px;"
       >
         <div
           class="makeStyles-root-1"
@@ -18,7 +18,7 @@ Object {
           >
             <span
               class="makeStyles-imageSrc-5"
-              style="background-color: grey;"
+              style="background-color: rgb(213, 213, 213);"
             />
             <span
               class="makeStyles-imageBackdrop-6"
@@ -58,7 +58,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      style="display: inline-block; margin: 40px;"
+      style="display: inline-block; margin: 10px;"
     >
       <div
         class="makeStyles-root-1"
@@ -70,7 +70,7 @@ Object {
         >
           <span
             class="makeStyles-imageSrc-5"
-            style="background-color: grey;"
+            style="background-color: rgb(213, 213, 213);"
           />
           <span
             class="makeStyles-imageBackdrop-6"

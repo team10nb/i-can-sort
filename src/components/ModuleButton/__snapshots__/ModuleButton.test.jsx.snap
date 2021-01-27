@@ -15,7 +15,7 @@ Object {
         >
           <span
             class="makeStyles-imageSrc-19"
-            style="background-color: grey;"
+            style="background-color: rgb(213, 213, 213);"
           />
           <span
             class="makeStyles-imageBackdrop-20"
@@ -47,7 +47,7 @@ Object {
       >
         <span
           class="makeStyles-imageSrc-19"
-          style="background-color: grey;"
+          style="background-color: rgb(213, 213, 213);"
         />
         <span
           class="makeStyles-imageBackdrop-20"
