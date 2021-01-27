@@ -1,8 +1,8 @@
 language: node_js
-# OS:
+ OS:
 #   - linux
 #   - mac
-#   - windows
+   - windows
 node_js:
   - node
 cache:
