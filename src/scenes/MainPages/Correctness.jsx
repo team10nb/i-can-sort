@@ -64,7 +64,7 @@ function ChoiceMenu(){
 
 function CorrectnessMainPage() {
     const [progress, setProgress] = React.useState(10);
-    const [progress2, setProgress2] = React.useState(15);
+    const [progress2, setProgress2] = React.useState(50);
 
     const handleClick = (setterProgress) => () => {
         // setterProgress((oldProgress) => {
@@ -99,6 +99,7 @@ function CorrectnessMainPage() {
         onClick: handleClick(setProgress),
         progress: progress,
         color: "#ff6f00",
+        preOne: true
     };
     const props2 = {
         image: image2,
@@ -106,6 +107,7 @@ function CorrectnessMainPage() {
         height: 200,
         onClick: handleClick(setProgress2),
         progress: progress2,
+        color: "#ff6f00",
     };
 
     return (
@@ -114,25 +116,25 @@ function CorrectnessMainPage() {
                     <Module {...props} />
                 </Link>
                 <Link to="/Page">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/Page">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/Page">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/Page">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/BubbleSort">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/BubbleSort">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
                 <Link to="/BubbleSort">
-                    <Module {...props} />
+                    <Module {...props2} />
                 </Link>
 
                 <div style={{paddingLeft: 30, marginTop: -30}}> 
