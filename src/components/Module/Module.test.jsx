@@ -1,26 +1,30 @@
 import { render } from "@testing-library/react";
 import Module from "./Module";
-import * as ModuleButtons from "../ModuleButton/ModuleButton";
 
-jest.mock("../ModuleProgress/ModuleProgress", () => {
-    return {
-        __esModule: true,
-        default: () => <div>mockModuleProgress</div>,
-    }
-});
+const image = {
+    static: "./logo512.png",
+    gif: "catch.gif",
+    title: "Bubble sort",
+    width: "20%",
+};
 
-test("should call two modules", () => {
-    const buttonSpy = jest
-        .spyOn(ModuleButtons, "default")
-        .mockImplementation(() => <div>mockModuleButton</div>);
+const props = {
+    image: image,
+    width: 200,
+    height: 200,
+    handleClick: jest.fn(),
+    progress: 15,
+};
 
-    const content = render(<Module />);
+test('should call two modules', () => {
 
-    content.getByText("mockModuleProgress");
-    content.getByText("mockModuleButton");
+    // console.log(Module)
+    // const buttonSpy = jest.spyOn(ModuleButtonn, "ModuleButton").mockImplementation("() => () => <div/>");
+    // const progressSpy = jest.spyOn(ModuleProgress).mockImplementation(jest.fn());
 
-    expect(buttonSpy).toBeCalledTimes(1);
-
+    const content = render(<Module {...props}/>);
     expect(content).toMatchSnapshot();
-    
-});
+    // expect(ModuleButton).toBeCalledTimes(1);
+    // expect(progressSpy).toBeCalledTimes(1);
+
+})

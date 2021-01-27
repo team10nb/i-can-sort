@@ -6,12 +6,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import HomeIcon from '@material-ui/icons/Home';
 
-
 const iconStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    
-    // backgroundColor: props.color,
+
     justifyContent: 'center',
     '& > svg': {
         margin: theme.spacing(1),
@@ -19,7 +17,6 @@ const iconStyles = makeStyles((theme) => ({
     },
   },
 }));
-
 
 const divStyles = makeStyles((theme) => ({
     root: {
@@ -49,8 +46,6 @@ root: {
 
 
   export default function SubScenes(props) {
-    
-
     const iconClasses = iconStyles();
     const divClasses = divStyles();
     const cardOneClasses = cardOneStyles();
@@ -60,17 +55,13 @@ root: {
         return(
             
             <div>
-                 
-                
                 <div class ={iconClasses.root}>
-       
                   <AppBar position="static" color= {props.color}>
-                    
                     <Tabs >
                       <Tab icon = {<HomeIcon />} />
-                      <Tab label="Item One"  />
-                      <Tab label="Item Two" />
-                      <Tab label="Item Three"  />
+                      <Tab label="Introduction"  />
+                      <Tab label="Operation" />
+                      <Tab label="Implementation"  />
                     </Tabs>
                   </AppBar>
                   {/* <TabPanel value={value} index={0}>

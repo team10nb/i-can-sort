@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles, createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 const BorderLinearProgress = withStyles((theme) => ({
@@ -17,11 +17,19 @@ const BorderLinearProgress = withStyles((theme) => ({
     },
     bar: {
         borderRadius: 2,
-        backgroundColor: "#1a90ff",
+        // backgroundColor: "#81c784",
     },
 }))(LinearProgress);
 
 export default function ModuleProgress(props) {
+    const theme = createMuiTheme({
+        palette: {
+          primary: {
+            main: props.color,
+          },
+        },
+      });
+
     const useStyles = makeStyles({
         root: {
             flexGrow: 1,
@@ -30,12 +38,13 @@ export default function ModuleProgress(props) {
         },
     });
     const classes = useStyles();
-
     return (
         <div className={classes.root}>
+            <ThemeProvider theme={theme}>
             <BorderLinearProgress
-                variant= "determinate" value= {props.progress} 
+                variant= "determinate" value= {props.progress} color="primary"
             />
+            </ThemeProvider>
         </div>
     );
 }
