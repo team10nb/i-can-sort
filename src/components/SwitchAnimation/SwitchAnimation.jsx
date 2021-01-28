@@ -29,17 +29,18 @@ export const SwitchAnimation = () => {
 
     const run = (trace) => {
         const timeoutIds = [];
-        const timer = 1000 / playSpeed;
+        const timer = 500 / playSpeed;
     
         // Set a timeout for each item in the trace
         trace.forEach((item, i) => {
           let timeoutId = setTimeout(
-            (item) => {
-                setCurrentStep( (prevStep) => prevStep + 1);
+            (item, currentStep) => {
+                setCurrentStep( (currentStep) => currentStep + 1);
                 setColors(item);
+                console.log(currentStep);
             },
-            i * timer,
-            item
+            timer + i * timer,
+            item, currentStep
           );
     
           timeoutIds.push(timeoutId);
@@ -69,16 +70,20 @@ export const SwitchAnimation = () => {
 
       const stepForward = () => {
         if (currentStep < trace.length - 1) {
+          const item = trace[currentStep + 1];
+
           clearTimeouts();
-          setCurrentStep(currentStep + 1);
+          setCurrentStep((prevStep) => prevStep + 1);
           const newtrace = trace.slice(currentStep);
+          
+          setColors(item);
           run(newtrace);
         }
       };
     
       const stepBackward = () => {
         if (currentStep > 0) {
-          const item = trace[currentStep - 1];
+          const item = trace[currentStep - 2];
           setCurrentStep(currentStep - 1);
           setColors(item);
         }
