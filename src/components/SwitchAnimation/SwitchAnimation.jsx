@@ -1,24 +1,49 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { set, shuffle } from "lodash";
+import IconButton from "@material-ui/core/IconButton";
+import AnimationProgress from "../AnimationProgress/AnimationProgress";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
+import ReplayIcon from "@material-ui/icons/Replay";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+import Menu from "../Menu/Menu";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const spring = {
     type: "spring",
     damping: 20, //这个是摇摆次数
     stiffness: 300, //这个是粘滞程度
 };
-
 export const SwitchAnimation = () => {
-    const [colors, setColors] = useState(trace[0]);
+    const [colors, setColors] = useState(trace[1]); // 初始状态不一样开始的时候会自然一点
     const [playSpeed, setPlaySpeed] = useState(1);
     const [currentStep, setCurrentStep] = useState(0);
     const [timeOutIds, setTimeOutIds] = useState([]);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null);
 
-    // useEffect(() => {
-    //     setTimeout(() => setColors(shuffle(colors)), 1000);
-    // }, [colors]);
+    //speed变的时候要重新播放一下, 改变速度
+    useEffect(() => {
+        if (isPlaying) {
+            pause();
+            resume();
+        }
+    }, [playSpeed]);
+
+    // 用来打开倍速菜单
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = (event) => {
+        const value = event.nativeEvent.target.value / 4;
+        if (!isNaN(value)) {
+            setPlaySpeed(value);
+        }
+        setAnchorEl(null);
+    };
 
     const clearTimeouts = () => {
         timeOutIds.forEach((timeoutId) => clearTimeout(timeoutId));
@@ -41,7 +66,7 @@ export const SwitchAnimation = () => {
                         ? setIsPlaying(false)
                         : setIsPlaying(true);
                 },
-                timer / 3 + i * timer,
+                i * timer,
                 item,
                 currentStep
             );
@@ -63,7 +88,6 @@ export const SwitchAnimation = () => {
 
     const resume = () => {
         setIsPlaying(true);
-        console.log(currentStep);
         const newtrace = trace.slice(currentStep);
         run(newtrace);
     };
@@ -88,55 +112,84 @@ export const SwitchAnimation = () => {
 
     return (
         <div>
-            <ul>
+            <ul className='bars'>
                 {colors.map((background) => (
                     <motion.li
                         key={background.backgroundColor}
                         layout
                         transition={spring}
                         style={background}
+                        className='bar'
                     />
                 ))}
             </ul>
-            <button
-                onClick={() => {
-                    setCurrentStep(0);
-                    setColors(trace[0]);
-                }}
-            >
-                Reset
-            </button>
-            <button
-                onClick={() => {
-                    isPlaying ? pause() : resume();
-                }}
-            >
-                {isPlaying ? "pause" : "play"}
-            </button>
-            <button
-                onClick={() => {
-                    stepBackward();
-                }}
-            >
-                Last step
-            </button>
-            <button
-                onClick={() => {
-                    stepForward();
-                }}
-            >
-                Next step
-            </button>
+            <Tooltip title='Replay'>
+                <IconButton
+                    onClick={() => {
+                        setCurrentStep(0);
+                        setColors(trace[0]);
+                    }}
+                    disabled={false}
+                >
+                    <ReplayIcon style={{ color: "grey" }} fontSize='small' />
+                </IconButton>
+            </Tooltip>
+
+            <Tooltip title='Previous Step'>
+                <IconButton
+                    onClick={() => {
+                        stepBackward();
+                    }}
+                    disabled={false}
+                >
+                    <SkipPreviousIcon
+                        style={{ color: "grey" }}
+                        fontSize='small'
+                    />
+                </IconButton>
+            </Tooltip>
+
+            <Tooltip title={isPlaying ? "Pause" : "Play"}>
+                <IconButton
+                    onClick={() => {
+                        isPlaying ? pause() : resume();
+                    }}
+                >
+                    {isPlaying ? (
+                        <PauseCircleFilledIcon fontSize='large' />
+                    ) : (
+                        <PlayCircleFilledIcon fontSize='large' />
+                    )}
+                </IconButton>
+            </Tooltip>
+            <Tooltip title='Next Step'>
+                <IconButton
+                    onClick={() => {
+                        stepForward();
+                    }}
+                    disabled={false}
+                >
+                    <SkipNextIcon style={{ color: "grey" }} fontSize='small' />
+                </IconButton>
+            </Tooltip>
+            
+                <Menu
+                    handleClick={handleClick}
+                    handleClose={handleClose}
+                    anchorEl={anchorEl}
+                    speed={playSpeed + "x"}
+                />
+            
+            <br />
+            <Tooltip title='Progress'>
+                <AnimationProgress
+                    width='270px'
+                    progress={(100 * currentStep) / (trace.length - 1)}
+                />
+            </Tooltip>
         </div>
     );
 };
-
-const initialColors = [
-    { height: "20px", backgroundColor: "#FF008C" },
-    { height: "50px", backgroundColor: "#D309E1" },
-    { height: "90px", backgroundColor: "#9C1AFF" },
-    { height: "140px", backgroundColor: "#7700FF" },
-];
 
 const trace = [
     [
