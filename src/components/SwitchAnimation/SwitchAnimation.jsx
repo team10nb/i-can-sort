@@ -70,20 +70,24 @@ export const SwitchAnimation = () => {
 
       const stepForward = () => {
         if (currentStep < trace.length - 1) {
+            console.log(currentStep);
+
           const item = trace[currentStep + 1];
 
           clearTimeouts();
           setCurrentStep((prevStep) => prevStep + 1);
-          const newtrace = trace.slice(currentStep);
+          const newtrace = trace.slice(currentStep + 1);
           
           setColors(item);
+
           run(newtrace);
         }
       };
     
       const stepBackward = () => {
         if (currentStep > 0) {
-          const item = trace[currentStep - 2];
+            console.log(currentStep);
+          const item = trace[currentStep - 1];
           setCurrentStep(currentStep - 1);
           setColors(item);
         }
