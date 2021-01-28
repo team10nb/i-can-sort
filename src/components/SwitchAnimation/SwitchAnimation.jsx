@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { shuffle } from "lodash";
+import { set, shuffle } from "lodash";
 
 const spring = {
     type: "spring",
@@ -35,11 +35,11 @@ export const SwitchAnimation = () => {
         trace.forEach((item, i) => {
           let timeoutId = setTimeout(
             (item, currentStep) => {
-                setCurrentStep( (currentStep) => currentStep + 1);
+                setCurrentStep( (currentStep) => (i === trace.length - 1 ) ? currentStep : currentStep + 1);
                 setColors(item);
-                console.log(currentStep);
+                (i === trace.length - 1 ) ? setIsPlaying(false) : setIsPlaying(true);
             },
-            timer + i * timer,
+            timer/3 + i * timer,
             item, currentStep
           );
     
