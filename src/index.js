@@ -7,3 +7,4 @@ import "./styles.css";
 const App = () => <SwitchAnimation />;
 
 render(<App />, document.getElementById("root"));
+
