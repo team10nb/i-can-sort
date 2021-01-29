@@ -1,31 +1,78 @@
+import "@fontsource/roboto";
 import * as React from "react";
-import { useState, useEffect } from "react";
+import Menu from "../Menu/Menu";
 import { motion } from "framer-motion";
+import Zoom from "@material-ui/core/Zoom";
+import { useState, useEffect } from "react";
+import Tooltip from "@material-ui/core/Tooltip";
+import ReplayIcon from "@material-ui/icons/Replay";
 import IconButton from "@material-ui/core/IconButton";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import AnimationSlider from "../AnimationSlider/AnimationSlider";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import AnimationProgress from "../AnimationProgress/AnimationProgress";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
-import ReplayIcon from "@material-ui/icons/Replay";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
-import Menu from "../Menu/Menu";
-import Tooltip from "@material-ui/core/Tooltip";
 
+// a framer motion transition attributes
 const spring = {
-    type: "spring",
-    damping: 20, //这个是摇摆次数
-    stiffness: 300, //这个是粘滞程度
+    type: "spring", // a framer motion type that simulates spring
+    damping: 20, //Strength of opposing force. If set to 0, spring will oscillate indefinitely
+    stiffness: 300, //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
+    mass: 1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
+
 export const SwitchAnimation = () => {
-    const [colors, setColors] = useState(trace[0]); // 初始状态不一样开始的时候会自然一点
+    // The bars displayed to visulise the numbers
+    const [bars, setBars] = useState(trace[0]);
+    // The speed of playing the animation
     const [playSpeed, setPlaySpeed] = useState(1);
+    // The current step among traces
     const [currentStep, setCurrentStep] = useState(0);
+    // It is used to clean timeouts to pause
     const [timeOutIds, setTimeOutIds] = useState([]);
+    // The state of the animation, whether is playing
     const [isPlaying, setIsPlaying] = useState(false);
+    // It is used to control the speed menu
     const [anchorEl, setAnchorEl] = useState(null);
+    // The state of play button and next step button, whether is disabled
     const [playDisabled, setPlayDisabled] = useState(false);
+    // the State of previous step bnutton
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
+    const useStyles = makeStyles({
+        root: {},
+        bars: {
+            listStyle: "none",
+            padding: 0,
+            margin: 0,
+            position: "relative",
+            display: "flex",
+            width: "300px",
+            flexWrap: "wrap-reverse",
+        },
+        bar: {
+            listStyle: "none",
+            padding: 0,
+            margin: 0,
+            boxShadow: "0px 0px 2px 2px #88888833",
+            borderRadius: "10px",
+            marginBottom: "10px",
+            marginRight: "30px",
+            width: "30px",
+            height: "140px",
+        },
+        customTooltip: {
+            // I used the rgba color for the standard "secondary" color
+            fontFamily: "Roboto",
+            fontSize: "0.8em",
+        },
+    });
+
+    const classes = useStyles();
+
+    // Update buttons' disable property when steps are changed
     useEffect(() => {
         currentStep === 0
             ? setBackwardDisabled(true)
@@ -35,19 +82,21 @@ export const SwitchAnimation = () => {
             : setPlayDisabled(false);
     }, [currentStep]);
 
-    //speed变的时候要重新播放一下, 改变速度
+    // Use the latest speed to play the animation
     useEffect(() => {
+        // if it is playing, replay
         if (isPlaying) {
             pause();
             resume();
         }
     }, [playSpeed]);
 
-    // 用来打开倍速菜单
+    // It is used to open the speed menu
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
+    // It is used to adjust speed, triggered when close the speed menu
     const handleClose = (event) => {
         const value = event.nativeEvent.target.value / 4;
         if (!isNaN(value)) {
@@ -56,101 +105,130 @@ export const SwitchAnimation = () => {
         setAnchorEl(null);
     };
 
+    const handleSliderChange = (event, newValue) => {
+            // pause();
+            if (newValue > 0) {
+            console.log(newValue);
+
+                const item = trace[newValue];
+            setCurrentStep(newValue);
+            setBars(item);
+            }
+            
+    };
+
+    // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
         timeOutIds.forEach((timeoutId) => clearTimeout(timeoutId));
         setTimeOutIds([]);
     };
 
+    // Main method, used to generate a time line based on the speed
+    // change bars after a time interval
     const run = (trace) => {
+        // The current bars are the [0] of trace, to make the animation start without delay
+        // here we begin the animation from [1] of trace
+        // it's also suitable for pause, step forward and backwar
         const subTrace = trace.slice(1);
         const timeoutIds = [];
+        // a time interval unit
         const timer = 500 / playSpeed;
 
         // Set a timeout for each item in the trace
         subTrace.forEach((item, i) => {
             let timeoutId = setTimeout(
-                (item, currentStep) => {
-                    setCurrentStep((currentStep) =>
-                        i === trace.length - 1 ? currentStep : currentStep + 1
+                (item) => {
+                    // update the current step
+                    setCurrentStep((prevStep) =>
+                        i === trace.length - 1 ? prevStep : prevStep + 1
                     );
-                    setColors(item);
+                    // update bars to be animated
+                    setBars(item);
                     i === subTrace.length - 1
                         ? setIsPlaying(false)
                         : setIsPlaying(true);
-
-                    console.log(subTrace.length - 1);
                 },
-                i * timer,
-                item,
-                currentStep
+                i * timer, //time interval
+                item
             );
-
             timeoutIds.push(timeoutId);
         });
 
         // Clear timeouts upon completion
         let timeoutId = setTimeout(clearTimeouts, trace.length * timer);
         timeoutIds.push(timeoutId);
-
         setTimeOutIds(timeoutIds);
     };
 
+    // To pause the animation
     const pause = () => {
         setIsPlaying(false);
         clearTimeouts();
     };
 
+    // To resume the animation
     const resume = () => {
         setIsPlaying(true);
         const newtrace = trace.slice(currentStep);
         run(newtrace);
     };
 
+    // Go to next step and pause
     const stepForward = () => {
         if (currentStep < trace.length - 1) {
             pause();
             const item = trace[currentStep + 1];
             setCurrentStep((prevStep) => prevStep + 1);
-            setColors(item);
+            setBars(item);
         }
-        currentStep + 1 === trace.length
-            ? setPlayDisabled(true)
-            : setPlayDisabled(false);
     };
 
+    // Go to the previous step and pause
     const stepBackward = () => {
         if (currentStep > 0) {
             pause();
             const item = trace[currentStep - 1];
             setCurrentStep((prevStep) => prevStep - 1);
-            setColors(item);
+            setBars(item);
         }
     };
 
     return (
         <div>
-            <ul className='bars'>
-                {colors.map((background) => (
+            {/* bars */}
+            <ul className={classes.bars}>
+                {bars.map((background) => (
                     <motion.li
-                        key={background.backgroundColor}
+                        key={background.backgroundColor} // each bar's identification
                         layout
                         transition={spring}
                         style={background}
-                        className='bar'
-                    />
+                        className={classes.bar}
+                    > {background.height}
+                    </motion.li>
                 ))}
             </ul>
-            <Tooltip title='Replay'>
+
+            {/* replay button */}
+            <Tooltip
+                title='Replay'
+                TransitionComponent={Zoom}
+                enterDelay={500}
+                leaveDelay={200}
+                classes={{ tooltip: classes.customTooltip }}
+            >
                 <span>
                     <IconButton
+                        // pause the animation and reset
                         onClick={() => {
                             pause();
                             setCurrentStep(0);
-                            setColors(trace[0]);
+                            setBars(trace[0]);
                         }}
                         disabled={false}
                     >
                         <ReplayIcon
+                            // color may need to follow the theme color
                             style={{ color: "grey" }}
                             fontSize='small'
                         />
@@ -158,7 +236,14 @@ export const SwitchAnimation = () => {
                 </span>
             </Tooltip>
 
-            <Tooltip title='Previous Step'>
+            {/* previous step button */}
+            <Tooltip
+                title='Previous Step'
+                TransitionComponent={Zoom}
+                enterDelay={500}
+                leaveDelay={200}
+                classes={{ tooltip: classes.customTooltip }}
+            >
                 <span>
                     <IconButton
                         onClick={() => {
@@ -167,6 +252,7 @@ export const SwitchAnimation = () => {
                         disabled={backwardDisabled}
                     >
                         <SkipPreviousIcon
+                            // color may need to follow the theme color
                             style={{ color: "grey" }}
                             fontSize='small'
                         />
@@ -174,14 +260,23 @@ export const SwitchAnimation = () => {
                 </span>
             </Tooltip>
 
-            <Tooltip title={isPlaying ? "Pause" : "Play"}>
+            {/* play button */}
+            <Tooltip
+                title={isPlaying ? "Pause" : "Play"}
+                TransitionComponent={Zoom}
+                enterDelay={500}
+                leaveDelay={200}
+                classes={{ tooltip: classes.customTooltip }}
+            >
                 <span>
                     <IconButton
+                        // function using depends on isPlaying
                         onClick={() => {
                             isPlaying ? pause() : resume();
                         }}
                         disabled={playDisabled}
                     >
+                        {/* button appearence depends on isPlaying*/}
                         {isPlaying ? (
                             <PauseCircleFilledIcon fontSize='large' />
                         ) : (
@@ -191,7 +286,14 @@ export const SwitchAnimation = () => {
                 </span>
             </Tooltip>
 
-            <Tooltip title='Next Step'>
+            {/* next step button */}
+            <Tooltip
+                title='Next Step'
+                TransitionComponent={Zoom}
+                enterDelay={500}
+                leaveDelay={200}
+                classes={{ tooltip: classes.customTooltip }}
+            >
                 <span>
                     <IconButton
                         onClick={() => {
@@ -200,6 +302,7 @@ export const SwitchAnimation = () => {
                         disabled={playDisabled}
                     >
                         <SkipNextIcon
+                            // color may need to follow the theme color
                             style={{ color: "grey" }}
                             fontSize='small'
                         />
@@ -207,6 +310,7 @@ export const SwitchAnimation = () => {
                 </span>
             </Tooltip>
 
+            {/* the speed choosing menu */}
             <Menu
                 handleClick={handleClick}
                 handleClose={handleClose}
@@ -215,18 +319,18 @@ export const SwitchAnimation = () => {
             />
 
             <br />
-            <Tooltip title='Progress'>
-                <span>
-                    <AnimationProgress
-                        width='270px'
-                        progress={(100 * currentStep) / (trace.length - 1)}
-                    />
-                </span>
-            </Tooltip>
+
+            <AnimationProgress
+                width='270px' // this value need to be transmitted
+                progress={100 * (currentStep / (trace.length - 1))} // length in progress bar for one step
+            />
+            <AnimationSlider width='270px' step={1} max={trace.length - 1} handleChange={handleSliderChange} value={currentStep}/>
         </div>
     );
 };
 
+// sample trace, store each step's bar info
+// this value need to be transmitted
 const trace = [
     [
         { height: "50px", backgroundColor: "#FF008C" },
