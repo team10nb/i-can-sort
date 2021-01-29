@@ -16,10 +16,10 @@ import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 
 // a framer motion transition attributes
 const spring = {
-    type: "spring", // a framer motion type that simulates spring
-    damping: 20, //Strength of opposing force. If set to 0, spring will oscillate indefinitely
-    stiffness: 300, //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
-    mass: 1, // Mass of the moving object. Higher values will result in more lethargic movement
+    type: "spring",     // a framer motion type that simulates spring
+    damping: 20,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
+    stiffness: 300,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
+    mass: 1,            // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
 export const SwitchAnimation = () => {
@@ -237,11 +237,11 @@ export const SwitchAnimation = () => {
                     width: "270px",
                 }}
             >
-                {/* replay button */}
+                {/* reset button */}
                 <Tooltip
-                    title='Replay'
+                    title='Reset'
                     TransitionComponent={Zoom}
-                    enterDelay={500}
+                    enterDelay={300}
                     leaveDelay={200}
                     classes={{ tooltip: classes.customTooltip }}
                 >
@@ -279,7 +279,6 @@ export const SwitchAnimation = () => {
                 </IconButton>
 
                 {/* play button */}
-
                 <IconButton
                     // function using depends on isPlaying
                     onClick={() => {
@@ -287,7 +286,7 @@ export const SwitchAnimation = () => {
                     }}
                     disabled={playDisabled}
                 >
-                    {/* button appearence depends on isPlaying*/}
+                    {/* button appearence depends on isPlaying */}
                     {isPlaying ? (
                         <PauseCircleFilledIcon fontSize='large' />
                     ) : (
