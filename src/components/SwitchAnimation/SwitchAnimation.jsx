@@ -11,7 +11,6 @@ import SkipNextIcon from "@material-ui/icons/SkipNext";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import AnimationProgress from "../AnimationProgress/AnimationProgress";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 
@@ -42,31 +41,42 @@ export const SwitchAnimation = () => {
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
     const useStyles = makeStyles({
-        root: {},
+        root: {
+            justifyContent: "center",
+        },
         bars: {
             listStyle: "none",
             padding: 0,
             margin: 0,
             position: "relative",
             display: "flex",
-            width: "300px",
             flexWrap: "wrap-reverse",
+            justifyContent: "center",
         },
         bar: {
             listStyle: "none",
             padding: 0,
             margin: 0,
+
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
             marginBottom: "10px",
             marginRight: "30px",
             width: "30px",
             height: "140px",
+            fontSize: "0.1em",
         },
         customTooltip: {
-            // I used the rgba color for the standard "secondary" color
-            fontFamily: "Roboto",
+            fontFamily: "inherit",
+            fontSize: "0.5em",
+            fontWeight: "700",
+            paddingTop: "8px",
+            paddingBottom: "10px",
+            letterSpacing: "1px",
+        },
+        barNumber: {
             fontSize: "0.8em",
+            marginTop: "-20px",
         },
     });
 
@@ -106,15 +116,14 @@ export const SwitchAnimation = () => {
     };
 
     const handleSliderChange = (event, newValue) => {
-            // pause();
-            if (newValue > 0) {
-            console.log(newValue);
+        if (isPlaying) {
+            pause();
+        }
+        console.log(newValue);
 
-                const item = trace[newValue];
-            setCurrentStep(newValue);
-            setBars(item);
-            }
-            
+        const item = trace[newValue];
+        setCurrentStep(newValue);
+        setBars(item);
     };
 
     // It is used to clean timeouts to pause the animation
@@ -194,7 +203,7 @@ export const SwitchAnimation = () => {
     };
 
     return (
-        <div>
+        <div className={classes.root}>
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
@@ -204,127 +213,116 @@ export const SwitchAnimation = () => {
                         transition={spring}
                         style={background}
                         className={classes.bar}
-                    > {background.height}
+                    >
+                        <div className={classes.barNumber}>
+                            {background.height}
+                        </div>
                     </motion.li>
                 ))}
             </ul>
 
-            {/* replay button */}
-            <Tooltip
-                title='Replay'
-                TransitionComponent={Zoom}
-                enterDelay={500}
-                leaveDelay={200}
-                classes={{ tooltip: classes.customTooltip }}
-            >
-                <span>
-                    <IconButton
-                        // pause the animation and reset
-                        onClick={() => {
-                            pause();
-                            setCurrentStep(0);
-                            setBars(trace[0]);
-                        }}
-                        disabled={false}
-                    >
-                        <ReplayIcon
-                            // color may need to follow the theme color
-                            style={{ color: "grey" }}
-                            fontSize='small'
-                        />
-                    </IconButton>
-                </span>
-            </Tooltip>
-
-            {/* previous step button */}
-            <Tooltip
-                title='Previous Step'
-                TransitionComponent={Zoom}
-                enterDelay={500}
-                leaveDelay={200}
-                classes={{ tooltip: classes.customTooltip }}
-            >
-                <span>
-                    <IconButton
-                        onClick={() => {
-                            stepBackward();
-                        }}
-                        disabled={backwardDisabled}
-                    >
-                        <SkipPreviousIcon
-                            // color may need to follow the theme color
-                            style={{ color: "grey" }}
-                            fontSize='small'
-                        />
-                    </IconButton>
-                </span>
-            </Tooltip>
-
-            {/* play button */}
-            <Tooltip
-                title={isPlaying ? "Pause" : "Play"}
-                TransitionComponent={Zoom}
-                enterDelay={500}
-                leaveDelay={200}
-                classes={{ tooltip: classes.customTooltip }}
-            >
-                <span>
-                    <IconButton
-                        // function using depends on isPlaying
-                        onClick={() => {
-                            isPlaying ? pause() : resume();
-                        }}
-                        disabled={playDisabled}
-                    >
-                        {/* button appearence depends on isPlaying*/}
-                        {isPlaying ? (
-                            <PauseCircleFilledIcon fontSize='large' />
-                        ) : (
-                            <PlayCircleFilledIcon fontSize='large' />
-                        )}
-                    </IconButton>
-                </span>
-            </Tooltip>
-
-            {/* next step button */}
-            <Tooltip
-                title='Next Step'
-                TransitionComponent={Zoom}
-                enterDelay={500}
-                leaveDelay={200}
-                classes={{ tooltip: classes.customTooltip }}
-            >
-                <span>
-                    <IconButton
-                        onClick={() => {
-                            stepForward();
-                        }}
-                        disabled={playDisabled}
-                    >
-                        <SkipNextIcon
-                            // color may need to follow the theme color
-                            style={{ color: "grey" }}
-                            fontSize='small'
-                        />
-                    </IconButton>
-                </span>
-            </Tooltip>
-
-            {/* the speed choosing menu */}
-            <Menu
-                handleClick={handleClick}
-                handleClose={handleClose}
-                anchorEl={anchorEl}
-                speed={playSpeed + "x"}
+            <AnimationSlider
+                width='270px'
+                step={1}
+                max={trace.length - 1}
+                handleChange={handleSliderChange}
+                value={currentStep}
             />
 
+            <div
+                style={{
+                    position: "relative",
+                    left: "50%",
+                    transform: "translate(-50%)",
+                    width: "270px",
+                }}
+            >
+                {/* replay button */}
+                <Tooltip
+                    title='Replay'
+                    TransitionComponent={Zoom}
+                    enterDelay={500}
+                    leaveDelay={200}
+                    classes={{ tooltip: classes.customTooltip }}
+                >
+                    <span>
+                        <IconButton
+                            // pause the animation and reset
+                            onClick={() => {
+                                pause();
+                                setCurrentStep(0);
+                                setBars(trace[0]);
+                            }}
+                            disabled={false}
+                        >
+                            <ReplayIcon
+                                // color may need to follow the theme color
+                                style={{ color: "grey" }}
+                                fontSize='small'
+                            />
+                        </IconButton>
+                    </span>
+                </Tooltip>
+
+                {/* previous step button */}
+                <IconButton
+                    onClick={() => {
+                        stepBackward();
+                    }}
+                    disabled={backwardDisabled}
+                >
+                    <SkipPreviousIcon
+                        // color may need to follow the theme color
+                        style={{ color: "grey" }}
+                        fontSize='small'
+                    />
+                </IconButton>
+
+                {/* play button */}
+
+                <IconButton
+                    // function using depends on isPlaying
+                    onClick={() => {
+                        isPlaying ? pause() : resume();
+                    }}
+                    disabled={playDisabled}
+                >
+                    {/* button appearence depends on isPlaying*/}
+                    {isPlaying ? (
+                        <PauseCircleFilledIcon fontSize='large' />
+                    ) : (
+                        <PlayCircleFilledIcon fontSize='large' />
+                    )}
+                </IconButton>
+
+                {/* next step button */}
+                <IconButton
+                    onClick={() => {
+                        stepForward();
+                    }}
+                    disabled={playDisabled}
+                >
+                    <SkipNextIcon
+                        // color may need to follow the theme color
+                        style={{ color: "grey" }}
+                        fontSize='small'
+                    />
+                </IconButton>
+
+                {/* the speed choosing menu */}
+                <Menu
+                    handleClick={handleClick}
+                    handleClose={handleClose}
+                    anchorEl={anchorEl}
+                    speed={playSpeed + "x"}
+                />
+            </div>
             <br />
 
-            <AnimationProgress
+            {/* <AnimationProgress
                 width='270px' // this value need to be transmitted
                 progress={100 * (currentStep / (trace.length - 1))} // length in progress bar for one step
-            />
-            <AnimationSlider width='270px' step={1} max={trace.length - 1} handleChange={handleSliderChange} value={currentStep}/>
+            /> */}
         </div>
     );
 };
