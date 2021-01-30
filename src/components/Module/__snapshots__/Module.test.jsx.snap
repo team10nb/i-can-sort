@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        style="display: inline-block; margin: 40px;"
+        style="display: inline-block; margin: 10px;"
       >
         <div>
           mockModuleButton
@@ -19,7 +19,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      style="display: inline-block; margin: 40px;"
+      style="display: inline-block; margin: 10px;"
     >
       <div>
         mockModuleButton
