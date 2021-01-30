@@ -11,7 +11,8 @@ test('should call AnimationSlider', () => {
     expect(sliderSpy).toBeCalledTimes(1);
 })
 
-xit('should call AnimationControl', () => {
+test('should call AnimationControl', () => {
+    jest.restoreAllMocks();
     const controlSpy = jest.spyOn(AnimationControls, "default").mockImplementation(() => <div>mockAnimationControl</div>);
 
     const {getByText} = render(<SwitchAnimation />);
