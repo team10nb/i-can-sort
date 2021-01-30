@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
-import "@fontsource/roboto"
+import "@fontsource/roboto";
 
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;

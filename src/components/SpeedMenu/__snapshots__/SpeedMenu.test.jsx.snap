@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should SpeedMenu match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="makeStyles-root-11"
+      >
+        <button
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-13"
+          style="min-width: 40px;"
+          tabindex="0"
+          title="Speed"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            speedMenu
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="MuiPopover-root makeStyles-menu-12"
+      id="simple-menu"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
+    >
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="menu"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="0"
+            value="1"
+          >
+            0.25x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="2"
+          >
+            0.5x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="4"
+          >
+            1x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="8"
+          >
+            2x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="16"
+          >
+            4x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="makeStyles-root-11"
+    >
+      <button
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-13"
+        style="min-width: 40px;"
+        tabindex="0"
+        title="Speed"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          speedMenu
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
