@@ -42,7 +42,9 @@ export const SwitchAnimation = () => {
 
     const useStyles = makeStyles({
         root: {
+            display: "grid",
             justifyContent: "center",
+            alignContent: "center"
         },
         bars: {
             listStyle: "none",
@@ -61,10 +63,12 @@ export const SwitchAnimation = () => {
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
             marginBottom: "10px",
-            marginRight: "30px",
+            marginRight: "15px",
+            marginLeft: "15px",
             width: "30px",
             height: "140px",
             fontSize: "0.1em",
+            justifyContent: "center",
         },
         customTooltip: {
             fontFamily: "inherit",
@@ -220,7 +224,7 @@ export const SwitchAnimation = () => {
                     </motion.li>
                 ))}
             </ul>
-
+            
             <AnimationSlider
                 width='270px'
                 step={1}
@@ -234,7 +238,7 @@ export const SwitchAnimation = () => {
                     position: "relative",
                     left: "50%",
                     transform: "translate(-50%)",
-                    width: "270px",
+                    width: "240px",
                 }}
             >
                 {/* reset button */}
