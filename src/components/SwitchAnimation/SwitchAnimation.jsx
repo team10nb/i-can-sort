@@ -1,6 +1,6 @@
 import "@fontsource/roboto";
 import * as React from "react";
-import Menu from "../Menu/Menu";
+import SpeedMenu from "../SpeedMenu/SpeedMenu";
 import { motion } from "framer-motion";
 import Zoom from "@material-ui/core/Zoom";
 import { useState, useEffect } from "react";
@@ -313,7 +313,7 @@ export const SwitchAnimation = () => {
                 </IconButton>
 
                 {/* the speed choosing menu */}
-                <Menu
+                <SpeedMenu
                     handleClick={handleClick}
                     handleClose={handleClose}
                     anchorEl={anchorEl}
