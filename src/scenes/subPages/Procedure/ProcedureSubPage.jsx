@@ -11,6 +11,7 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
+import InputBar from "../../../components/InputBar/InputBar"
 
 const useStyles = makeStyles((theme) => ({
   tabs:{
@@ -25,8 +26,27 @@ const useStyles = makeStyles((theme) => ({
   icon:{
     textAlign: 'left',
     width: 100,
-  }
+  },
+  div:{
+    display: 'flex',    
+    '& > *': {
+      margin: theme.spacing(3),
+    }
+  },
+  cardOne:{
+    background: "#F0F0F0",
+    width: "30%",
+    height: 560
+  },
+  cardTwo:{
+    background: "#F0F0F0",
+    width: "70%",
+    height: 560,
+    alignItems:"center",
+  },
+
 }));
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -68,11 +88,13 @@ export default function ProcedureSubPage(props) {
       primary: {
         main: props.color,
       },
+      //改颜色
       secondary: {
         main: "#e0e0e0"
       },
+
     },
-    // direction: 'ltr',
+      // direction: 'ltr',
   });
 
   const [value, setValue] = React.useState(1);
@@ -92,18 +114,19 @@ export default function ProcedureSubPage(props) {
   return (
     <div>
       <ThemeProvider theme={theme}>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" >
         <Tabs
           // className={classes.tabs}
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor="secondary"
+          background = "primary"
+          // textColor="primary"
           variant="fullWidth"
           aria-label="full width tabs example"
         >
           <Button className={classes.icon} onClick={handleClick}>
-            <HomeIcon color="primary"/>
+            <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
           </Button>
 
           <Tab label="Introduction" {...a11yProps(1)} className={classes.tab}/>
@@ -121,32 +144,26 @@ export default function ProcedureSubPage(props) {
         </TabPanel>
 
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <div >
-          <Card >
-          <CardContent>
-            Introduction page
-          </CardContent>
-          </Card>
-          <Card >
-          <CardContent>
-            Introduction page
-          </CardContent>
-          </Card>
+          <div className = {classes.div}>
+            <Card className={classes.cardOne}>
+              <CardContent>
+                {props.intro}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}>
+              {/* <InputBar></InputBar> */}
+            </Card>
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={2} dir={theme.direction}>
-        <div >
-          <Card >
-          <CardContent>
-            Introduction page2
-          </CardContent>
-          </Card>
-          <Card >
-          <CardContent>
-            Introduction page2
-          </CardContent>
-          </Card>
+          <div className = {classes.div}>
+            <Card className={classes.cardOne}>
+              <CardContent>
+                {props.operate}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}></Card>
           </div>
         </TabPanel>
 
