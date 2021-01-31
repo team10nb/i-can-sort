@@ -72,46 +72,63 @@ function ChoiceMenu(){
 
 function ProcedureMainPage(props) {
     const classes = useStyles();
-    const [progress, setProgress] = React.useState(props.location.state);
 
-    // const handleClick = (setterProgress) => () => {
-        // setterProgress((oldProgress) => {
-        //     if (oldProgress === 100) {
-        //         return 0;
-        //     }
-        //     const diff = Math.random() * 10;
-        //     return Math.min(oldProgress + diff, 100);
-        // });
-        // console.log(progress);
+    const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
+    const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
+    const progress = props.location.state ? props.location.state : localProgress;
+    localStorage.setItem("progress", JSON.stringify(progress));
 
-    // };
-    const newProgress = props.location.state ? props.location.state : progress;
-  
-    const image = {
+    const handleClick = (title) => () => {
+      localStorage.setItem("pre", JSON.stringify(title));
+    }
+
+    const handlePre = (title) => {
+      const preOne = (title === localPre) ? true : false;
+      return preOne;
+    }
+
+    const bubbleImage = {
         static: "./logo512.png",
         gif: "catch.gif",
         title: "Bubble sort",
         width: "20%",
     };
 
+    const image = {
+      static: "./logo512.png",
+      gif: "catch.gif",
+      title: "Bub sort",
+      width: "20%",
+  };
+
+    const bubbleProps = {
+      image: bubbleImage,
+      width: 200,
+      height: 200,
+      onClick: handleClick(bubbleImage.title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(bubbleImage.title),
+  };
+
     const props2 = {
         image: image,
         width: 200,
         height: 200,
-        // onClick: handleClick(setProgress),
+        onClick: handleClick(image.title),
         progress: progress,
         color: color,
-        preOne: true,
+        preOne: handlePre(image.title),
     };
- 
+
     return (
       <div style={{textAlign: "center", paddingLeft:"15%"}}>
         <div className={classes.grid} >
           <Grid container spacing={0} >
 
           <Grid item xs={6} sm={3} >
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Bubble">
+              <Module {...bubbleProps} />
           </Link>
           </Grid>
 
