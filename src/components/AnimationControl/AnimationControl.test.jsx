@@ -15,7 +15,7 @@ const props = { handleResetClick, stepForward, stepBackward, pause, resume, hand
 
 
 
-test('should have 5 buttons', () => {
+test('should contain 5 buttons', () => {
     const {getAllByRole} = render(<AnimationControl {...props}/>);
     const buttons = getAllByRole('button');
     expect(buttons.length).toBe(5);
@@ -39,3 +39,7 @@ test('should call functions', () => {
     
 })
 
+test('should match AnimationControl snapshot', () => {
+    const content = render(<AnimationControl {...props}/>);
+    expect(content).toMatchSnapshot();
+})
