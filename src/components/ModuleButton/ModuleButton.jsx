@@ -7,6 +7,8 @@ import "@fontsource/roboto"
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;
     const borderWidth = preOne ? "3px" : "0px";
+    const imageHeight = preOne ? height - 3 : height;
+    const titlePadding = preOne ? 10 - 3 : 10;
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -18,7 +20,6 @@ export default function ModuleButton(props) {
             borderColor: color,
             borderStyle: "solid",
             borderWidth: borderWidth,
-            borderBottomWidth: "0px",
             marginTop: 5,
             marginBottom: 0,
             display: "flex",
@@ -30,7 +31,7 @@ export default function ModuleButton(props) {
         },
         image: {
             position: "relative",
-            height: height,
+            height: imageHeight,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
@@ -100,7 +101,7 @@ export default function ModuleButton(props) {
             //     theme.spacing(1) + 6
             // }px`,
             paddingBottom: 5,
-            paddingRight: 10,
+            paddingRight: titlePadding,
             fontFamily: "Roboto",
             fontSize: 20,
             color: "white",
