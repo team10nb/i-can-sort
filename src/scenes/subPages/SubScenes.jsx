@@ -81,7 +81,7 @@ getTextInfo=(file)=>{
       
       }
       return false;
-    };
+    }
 
   
         return(

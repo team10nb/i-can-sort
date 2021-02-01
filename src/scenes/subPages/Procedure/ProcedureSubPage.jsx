@@ -90,7 +90,7 @@ export default function ProcedureSubPage(props) {
       },
       //改颜色
       secondary: {
-        main: "#e0e0e0"
+        main: "#FFFFFF"
       },
 
     },

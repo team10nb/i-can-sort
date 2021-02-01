@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     width: 150,
   },
   grid: {
+    alignItems: 'center',
     flexGrow: 1,
     width: 900,
     height: 600,

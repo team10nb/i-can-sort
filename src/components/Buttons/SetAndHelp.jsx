@@ -13,12 +13,18 @@ import ListItemText from '@material-ui/core/ListItemText';
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import LanguageIcon from '@material-ui/icons/Language';
 import InfoIcon from '@material-ui/icons/Info';
-
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Paper from '@material-ui/core/Paper';
+import Grow from '@material-ui/core/Grow';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Popover from '@material-ui/core/Popover';
+import { Dialog } from '@material-ui/core';
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,6 +43,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
   export default function SetAndHelp() {
     const classes = useStyles();
   
+    {/*setting button can pop out a toggleDrawer
+       keep closed at usual,click to open it
+       toggleDrawer contains plenty of accordions
+    */}
     const [state, setState] = React.useState({
     left: false,
   });
@@ -55,10 +65,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
-      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
      
+     {/*
+      setting music: can change song, sound volume
+     */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -69,9 +81,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
           <ListItemText primary='BackGround Music' />   
         </AccordionSummary>
         <AccordionDetails>
-          //音乐条   
+          Music
         </AccordionDetails>
       </Accordion>
+
+      {/*
+      setting language: can change language: Chinese, English
+     */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -91,10 +107,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
               <ListItemIcon> <QueueMusicIcon />  </ListItemIcon>
               <ListItemText primary='English' />           
             </ListItem>
-          </List>
-          
-        </AccordionDetails>
+          </List>         
+        </AccordionDetails>  
       </Accordion>
+
+      {/*
+         checking information: check information of the team of this project
+      */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -111,6 +130,24 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
       </Accordion>
     </div>
   );
+
+    {/*
+      help button can pop out several dialogs
+      the effect is that invisible dialog
+    */}
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+  
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
+
     return (
       <div className={classes.root}>
         <IconButton aria-label="setting" onClick={toggleDrawer('left', true)}> <SettingsOutlinedIcon /></IconButton>
@@ -122,9 +159,90 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
           >
             {list('left')}
           </SwipeableDrawer>
-        <IconButton aria-label="help" onClick={() => { alert('help') }}>
+
+        {/* <FormControlLabel
+          control={<Checkbox icon = {<HelpOutlineIcon />} onChange={handleChange}> </Checkbox>}
+        /> */}
+        <IconButton aria-label="help"  onClick={handleClick}>
           <HelpOutlineOutlinedIcon />
         </IconButton>
+
+       
+        <Popover 
+           id={id}
+           open={open}
+           onClose={handleClose}
+           color = "disable"
+           anchorReference="anchorPosition"
+           anchorPosition={{ top: 200, left: 150 }}
+           anchorOrigin={{
+           vertical: 'top',
+           horizontal: 'rihgt',
+           }}
+          transformOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        >
+        <Accordion >
+        <AccordionSummary
+          expandIcon={<ArrowForwardIosIcon />}
+          aria-controls="panel1a-content"          
+        >
+          <ListItemText primary='They are sort algorithm entries' />   
+        </AccordionSummary>
+      </Accordion>
+        </Popover>
+        <Popover 
+           id={id}
+           open={open}
+           onClose={handleClose}
+           color = "disable"
+           anchorReference="anchorPosition"
+           anchorPosition={{ top: 500, left: 150 }}
+           anchorOrigin={{
+           vertical: 'top',
+           horizontal: 'right',
+           }}
+          transformOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        >
+        <Accordion>
+        <AccordionSummary
+          expandIcon={<ArrowForwardIosIcon />}
+          aria-controls="panel1a-content"          
+        >
+          <ListItemText primary='They are set and help button' />   
+        </AccordionSummary>
+      </Accordion>
+        </Popover>
+        <Popover 
+           id={id}
+           open={open}
+           onClose={handleClose}
+           color = "disable"
+           anchorReference="anchorPosition"
+           anchorPosition={{ top: 590, left: 150 }}
+           anchorOrigin={{
+           vertical: 'top',
+           horizontal: 'right',
+           }}
+          transformOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        >
+        <Accordion>
+        <AccordionSummary
+          expandIcon={<ArrowForwardIosIcon />}
+          aria-controls="panel1a-content"          
+        >
+          <ListItemText primary='They are module entry' />   
+        </AccordionSummary>
+      </Accordion>
+        </Popover>
       </div>
     );
   }
