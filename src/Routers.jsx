@@ -17,7 +17,7 @@ export default function Routers() {
             <Switch>
             <Route path="/Tutorial" component={Tutorial} />
             {/* <Route path="/Setting" component={Setting} /> */}
-            <Route path="/Help" component={Help} />
+            {/* <Route path="/Help" component={Help} /> */}
             {/* <Route path="/ProcedureMainPage" render={props => <ProcedureMainPage algoProcess="0" {...props}/>} /> */}
             <Route path="/ProcedureMainPage" component={ProcedureMainPage} />
             <Route path="/EfficiencyMainPage" component={EfficiencyMainPage} />

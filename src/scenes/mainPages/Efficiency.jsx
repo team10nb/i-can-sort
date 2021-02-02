@@ -145,7 +145,7 @@ function EfficiencyMainPage(props) {
 
           <Grid item xs={12}>
             <div style={{textAlign:"left"}}>
-            <SetAndHelp />
+            <SetAndHelp {...props2}/>
             </div>
           </Grid>
 
