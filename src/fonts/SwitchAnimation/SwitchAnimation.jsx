@@ -5,10 +5,6 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
-import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
-
 
 // a framer motion transition attributes
 const spring = {
@@ -71,7 +67,6 @@ export const SwitchAnimation = (props) => {
         barNumber: {
             fontSize: "0.8em",
             marginTop: "-20px",
-            textAlign: "center",
         },
     });
 
@@ -212,22 +207,18 @@ export const SwitchAnimation = (props) => {
 
     return (
         <div className={classes.root}>
-            <h1>{description[currentStep]}</h1>
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
                     <motion.li
-                        key={background.key} // each bar's identification
+                        key={background.backgroundColor} // each bar's identification
                         layout
                         transition={spring}
                         style={background}
                         className={classes.bar}
-                        animate={{
-                            backgroundColor: background.backgroundColor,
-                        }}
                     >
                         <div className={classes.barNumber}>
-                            {background.value}
+                            {background.height}
                         </div>
                     </motion.li>
                 ))}
@@ -247,20 +238,72 @@ export const SwitchAnimation = (props) => {
     );
 };
 
+// sample trace, store each step's bar info
+// this value need to be transmitted
+const trace = [
+    [
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+    ],
+    [
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+    [
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+    [
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+    [
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+    ],
+    [
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+    [
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+    [
+        { height: "10px", backgroundColor: "#7700FF" },
+        { height: "20px", backgroundColor: "#66AA00" },
+        { height: "30px", backgroundColor: "#D309E1" },
+        { height: "50px", backgroundColor: "#FF008C" },
+        { height: "90px", backgroundColor: "#9C1AFF" },
+    ],
+];
 
-let arr = [2,1,6,10,9,12,8,3];
-
-
-// ****************************************************
-
-// 包含了下面两个数据的
-let full = InsertionSort(arr);
-
-// 每个bar应该怎么变动。
-const trace = full.trace;
-
-// 显示在屏幕上的description。
-const description = full.description;
+// 可能可以以以下的形式来做每一个数字的object
+// { styles: {height: "50px", backgroundColor: "#D309E1"}, // style, 用来造bar
+//   key: 1, // 这个是用来识别是哪个物体的唯一标志
+//   value: 50, //数字的大小, 对应高度
+//  }
 
 
 export default SwitchAnimation;
