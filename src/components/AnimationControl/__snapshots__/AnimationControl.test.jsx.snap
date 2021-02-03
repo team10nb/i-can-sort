@@ -9,7 +9,7 @@ Object {
         style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
       >
         <span
-          class=""
+          class="makeStyles-customTooltip-13"
           title="Reset"
         >
           <button
@@ -109,12 +109,12 @@ Object {
           />
         </button>
         <div
-          class="makeStyles-root-11"
+          class="makeStyles-root-14"
         >
           <button
             aria-controls="simple-menu"
             aria-haspopup="true"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-13"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-16"
             style="min-width: 40px;"
             tabindex="0"
             title="Speed"
@@ -134,7 +134,7 @@ Object {
     </div>
     <div
       aria-hidden="true"
-      class="MuiPopover-root makeStyles-menu-12"
+      class="MuiPopover-root makeStyles-menu-15"
       id="simple-menu"
       role="presentation"
       style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
@@ -155,7 +155,7 @@ Object {
         >
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-18 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="0"
             value="1"
@@ -167,7 +167,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-18 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="2"
@@ -179,7 +179,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-18 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="4"
@@ -191,7 +191,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-18 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="8"
@@ -203,7 +203,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-15 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-18 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="16"
@@ -226,7 +226,7 @@ Object {
       style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
     >
       <span
-        class=""
+        class="makeStyles-customTooltip-13"
         title="Reset"
       >
         <button
@@ -326,12 +326,12 @@ Object {
         />
       </button>
       <div
-        class="makeStyles-root-11"
+        class="makeStyles-root-14"
       >
         <button
           aria-controls="simple-menu"
           aria-haspopup="true"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-13"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-16"
           style="min-width: 40px;"
           tabindex="0"
           title="Speed"

@@ -20,6 +20,7 @@ export default function AnimationControl(props) {
             paddingTop: "8px",
             paddingBottom: "10px",
             letterSpacing: "1px",
+            marginTop: "3px"
         },
     });
 
@@ -42,7 +43,7 @@ export default function AnimationControl(props) {
                 TransitionComponent={Zoom}
                 enterDelay={300}
                 leaveDelay={200}
-                classes={classes.customTooltip }
+                className={classes.customTooltip }
                 arrow
             >
                 <span>
