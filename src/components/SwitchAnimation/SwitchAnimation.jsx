@@ -64,14 +64,6 @@ export const SwitchAnimation = (props) => {
             fontSize: "0.1em",
             justifyContent: "center",
         },
-        customTooltip: {
-            fontFamily: "inherit",
-            fontSize: "0.5em",
-            fontWeight: "700",
-            paddingTop: "8px",
-            paddingBottom: "10px",
-            letterSpacing: "1px",
-        },
         barNumber: {
             fontSize: "0.8em",
             marginTop: "-20px",
@@ -210,9 +202,8 @@ export const SwitchAnimation = (props) => {
         setBars(trace[0]);
     };
 
-    const customTooltip = { tooltip: classes.customTooltip }
 
-    const animationControlProps = {customTooltip, handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace};
+    const animationControlProps = { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace};
 
     return (
         <div className={classes.root}>
