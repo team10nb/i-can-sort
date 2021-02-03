@@ -82,16 +82,21 @@ function ChoiceMenu(){
 function ProcedureMainPage(props) {
     const classes = useStyles();
 
+    //get progress info from local
     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
     const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
+
+    //set progress
     const progress = props.location.state ? props.location.state : localProgress;
     localStorage.setItem("progress", JSON.stringify(progress));
 
     const handleClick = (title) => () => {
+      //store previous visited algorithm
       localStorage.setItem("pre", JSON.stringify(title));
     }
 
     const handlePre = (title) => {
+      //set previous visited algorithm
       const preOne = (title === localPre) ? true : false;
       return preOne;
     }
