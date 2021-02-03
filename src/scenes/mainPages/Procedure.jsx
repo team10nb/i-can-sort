@@ -24,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
     width: 900,
     height: 600,
   },
+  div: {
+      textAlign: "center",
+      paddingLeft: 150,
+      paddingTop: 30,
+      width:1200,
+      height:700
+    }
 }));
 
 //Set theme color
@@ -136,7 +143,7 @@ function ProcedureMainPage(props) {
     };
 
     return (
-      <div style={{textAlign: "center", paddingLeft:"15%"}}>
+      <div className={classes.div}>
         <div className={classes.grid} >
           <Grid container spacing={0} >
 

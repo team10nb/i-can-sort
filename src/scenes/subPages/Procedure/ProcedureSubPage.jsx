@@ -122,7 +122,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-    <div>
+   <div style={{width:1200, height:700}}>
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
