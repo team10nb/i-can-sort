@@ -1,3 +1,4 @@
+// The procedure main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
 import {Link} from 'react-router-dom';
 import SetAndHelp from '../../components/Buttons/SetAndHelp';
@@ -6,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles,createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
+//Set css
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -24,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Set theme color
 const color = '#1565c0';
 
+//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
+//The Procedure button is theme color without jump function
 function ChoiceMenu(){
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -71,19 +76,27 @@ function ChoiceMenu(){
   );
 }
 
+//Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
+//Click the modules to jump to the corresponding algorithm learning page
+//The progress bar under each module represents the learning progress of the algorithm
 function ProcedureMainPage(props) {
     const classes = useStyles();
 
+    //get progress info from local
     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
     const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
+
+    //set progress
     const progress = props.location.state ? props.location.state : localProgress;
     localStorage.setItem("progress", JSON.stringify(progress));
 
     const handleClick = (title) => () => {
+      //store previous visited algorithm
       localStorage.setItem("pre", JSON.stringify(title));
     }
 
     const handlePre = (title) => {
+      //set previous visited algorithm
       const preOne = (title === localPre) ? true : false;
       return preOne;
     }

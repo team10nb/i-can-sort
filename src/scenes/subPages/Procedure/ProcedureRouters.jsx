@@ -1,3 +1,4 @@
+//Register routes for procedure algorithms
 import ProcedureBubble from './Bubble/Bubble';
 
 const ProcedureRouters = [

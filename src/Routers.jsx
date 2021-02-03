@@ -1,3 +1,4 @@
+//Register routes for the whole program
 import React from 'react';
 import { BrowserRouter as Router,Route} from 'react-router-dom';
 import Tutorial from './scenes/Tutorial';
@@ -10,6 +11,7 @@ import ProcedureMainPage from './scenes/mainPages/Procedure';
 import EfficiencyMainPage from './scenes/mainPages/Efficiency';
 import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 
+//Return routes
 export default function Routers() {
     return(
         <Router >

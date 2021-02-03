@@ -10,7 +10,7 @@ export default function ProcedureBubble(props) {
 
     const data = {
         color: color,
-        process: 30,
+        progress: 70,
         history: props.history,      
         intro: intro,
         operate: operate,
