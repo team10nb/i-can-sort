@@ -3,6 +3,7 @@ import Zoom from "@material-ui/core/Zoom";
 import SpeedMenu from "../SpeedMenu/SpeedMenu";
 import Tooltip from "@material-ui/core/Tooltip";
 import ReplayIcon from "@material-ui/icons/Replay";
+import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -11,7 +12,19 @@ import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 
 export default function AnimationControl(props) {
 
-    const {customTooltip, handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace} = props;
+    const useStyles = makeStyles({
+        customTooltip: {
+            fontFamily: "inherit",
+            fontSize: "0.5em",
+            fontWeight: "700",
+            paddingTop: "8px",
+            paddingBottom: "10px",
+            letterSpacing: "1px",
+        },
+    });
+
+    const classes = useStyles();
+    const { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed} = props;
 
 
     return (
@@ -29,7 +42,8 @@ export default function AnimationControl(props) {
                 TransitionComponent={Zoom}
                 enterDelay={300}
                 leaveDelay={200}
-                classes={customTooltip }
+                classes={classes.customTooltip }
+                arrow
             >
                 <span>
                     <IconButton

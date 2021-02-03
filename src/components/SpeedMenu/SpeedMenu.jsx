@@ -42,6 +42,7 @@ export default function SimpleMenu(props) {
             paddingTop: "8px",
             paddingBottom: "10px",
             letterSpacing:"1px",
+            marginTop: "3px"
         },
     });
     const classes = useStyles();
@@ -54,6 +55,7 @@ export default function SimpleMenu(props) {
                 enterDelay={500}
                 leaveDelay={200}
                 classes={{ tooltip: classes.customTooltip }}
+                arrow
             >
                 <Button
                     aria-controls='simple-menu'

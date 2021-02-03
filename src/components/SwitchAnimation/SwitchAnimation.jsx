@@ -3,7 +3,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
 
 // a framer motion transition attributes
@@ -15,7 +15,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    const {trace_, } = props;
+    // const {trace, description} = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -63,14 +63,6 @@ export const SwitchAnimation = (props) => {
             height: "140px",
             fontSize: "0.1em",
             justifyContent: "center",
-        },
-        customTooltip: {
-            fontFamily: "inherit",
-            fontSize: "0.5em",
-            fontWeight: "700",
-            paddingTop: "8px",
-            paddingBottom: "10px",
-            letterSpacing: "1px",
         },
         barNumber: {
             fontSize: "0.8em",
@@ -210,9 +202,8 @@ export const SwitchAnimation = (props) => {
         setBars(trace[0]);
     };
 
-    const customTooltip = { tooltip: classes.customTooltip }
 
-    const animationControlProps = {customTooltip, handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace};
+    const animationControlProps = { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace};
 
     return (
         <div className={classes.root}>

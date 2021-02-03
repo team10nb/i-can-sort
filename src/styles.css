@@ -1,8 +1,8 @@
 /* fonts */
 @font-face {
   font-family: 'Quicksand';
-  src: url('./Quicksand-Light.woff2') format('woff2'),
-      url('./Quicksand-Light.woff') format('woff');
+  src: url('./fonts/Quicksand-Light.woff2') format('woff2'),
+      url('./fonts/Quicksand-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }

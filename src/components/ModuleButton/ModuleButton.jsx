@@ -10,6 +10,7 @@ export default function ModuleButton(props) {
     const imageHeight = preOne ? height - 3 : height;
     const titlePadding = preOne ? 10 - 3 : 10;
 
+    // styles of this module button
     const useStyles = makeStyles((theme) => ({
         root: {
             // boxShadow: "2px 8px 30px 2px #888888",
@@ -119,6 +120,8 @@ export default function ModuleButton(props) {
                 focusVisibleClassName={classes.focusVisible}
                 onClick={onClick}
             >
+                
+                {/* background of the button */}
                 <span
                     className={classes.imageSrc}
                     style={{
@@ -126,8 +129,11 @@ export default function ModuleButton(props) {
                         backgroundColor: "#d5d5d5",
                     }}
                 />
+
+                {/* a layer beyond the background */}
                 <span className={classes.imageBackdrop} />
 
+                {/* title */}
                 <span className={classes.imageButton}>
                     <Typography
                         component='span'
@@ -138,6 +144,7 @@ export default function ModuleButton(props) {
                         {image.title}
                     </Typography>
                 </span>
+
             </ButtonBase>
         </div>
     );

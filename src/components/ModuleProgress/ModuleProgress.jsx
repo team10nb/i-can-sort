@@ -11,6 +11,7 @@ export default function ModuleProgress(props) {
     // TODO if complete??
     const presentingColor = progress === 100 ? color : color;
 
+    // modify the default styles of linear progress bar
     const BorderLinearProgress = withStyles((theme) => ({
         root: {
             height: 10,
@@ -30,6 +31,7 @@ export default function ModuleProgress(props) {
         },
     }))(LinearProgress);
 
+    // control the width of the progress bar
     const useStyles = makeStyles({
         root: {
             flexGrow: 1,

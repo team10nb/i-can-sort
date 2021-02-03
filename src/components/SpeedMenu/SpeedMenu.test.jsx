@@ -34,7 +34,7 @@ test('should call handleClick and close', () => {
     expect(handleClose).toBeCalledTimes(1);
 })
 
-test('should SpeedMenu match snapshot', () => {
+test('should match SpeedMenu snapshot', () => {
     const content = render(<SpeedMenu {...props}/>);
     expect(content).toMatchSnapshot();
 })
