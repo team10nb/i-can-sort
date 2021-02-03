@@ -1,0 +1,29 @@
+/* fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./Quicksand-Light.woff2') format('woff2'),
+      url('./Quicksand-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* reset & common styles */
+body, ul, h1, h2, h3, p, button, a, div{
+  font-family: 'Quicksand';
+  letter-spacing: 2px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.651);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5em;
+  }
+
+  
