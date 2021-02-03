@@ -1,3 +1,5 @@
+//The template of procedure subpages.
+//Consists of a menu bar with the theme color and Card components to contain content
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -13,6 +15,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 import InputBar from "../../../components/InputBar/InputBar"
 
+//Set css
 const useStyles = makeStyles((theme) => ({
   tabs:{
     textAlign: 'center',
@@ -47,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-
+//The subpages are corresponding to menu items
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -68,12 +71,14 @@ function TabPanel(props) {
   );
 }
 
+//Limit the prop type for TabPanel
 TabPanel.propTypes = {
   children: PropTypes.instanceOf(<Tab/>),
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
 };
 
+//Set props for tabs
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
@@ -81,6 +86,8 @@ function a11yProps(index) {
   };
 }
 
+//Return a menu bar consists of a home button and three tabs
+//Each tab is corresponding to a tabpanel
 export default function ProcedureSubPage(props) {
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -100,14 +107,17 @@ export default function ProcedureSubPage(props) {
   const [value, setValue] = React.useState(1);
 
   const handleClick = () => {
-    props.history.push({pathname: '/ProcedureMainPage', state: props.process});
+    //return to procedure main page with the progress
+    props.history.push({pathname: '/ProcedureMainPage', state: props.progress});
   };
 
   const handleChange = (event, newValue) => {
+    //change the menu item
     setValue(newValue);
   };
 
   const handleChangeIndex = (index) => {
+    //change the tabpanel
     setValue(index);
   };
 
