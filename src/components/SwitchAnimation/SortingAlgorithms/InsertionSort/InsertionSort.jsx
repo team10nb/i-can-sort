@@ -14,15 +14,12 @@ function hardcopy(patchedList) {
 }
 
 export default function InssertionSort(arr) {
-    return InssertionSortHelper(patch(arr));
-}
 
-function InssertionSortHelper(patched) {
+    let patched = patch(arr);
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
     let i = 0;
     let j = 0;
-    let x = 0;
     let k = {};
     let temp = {};
     let len = patched.length;
@@ -31,11 +28,9 @@ function InssertionSortHelper(patched) {
     changeColor(patched, i, COLORS.finished);
 
     trace.push(hardcopy(patched));
-    description.push("Mark first element as sorted");
+    description.push("Mark the first element as sorted");
 
     for (i = 1; i < len; i++) {
-        //判断是否进入过while
-        let ifSwiched = false;
         //保存当前要拿来对比插入的数
         k = patched[i];
         //将key和前一个数相比

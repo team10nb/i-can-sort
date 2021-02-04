@@ -19,7 +19,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    // const {trace, description} = props;
+    const {trace, description} = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -249,19 +249,6 @@ export const SwitchAnimation = (props) => {
 };
 
 
-let arr = [2,1,6,10,9,12,8,3];
-
-
-// ****************************************************
-
-// 改为BubbleSort，SelectionSort或InsertionSort可观看对应动画；
-let full = InsertionSort(arr);
-
-// 每个bar应该怎么变动。
-const trace = full.trace;
-
-// 显示在屏幕上的description。
-const description = full.description;
 
 
 export default SwitchAnimation;
