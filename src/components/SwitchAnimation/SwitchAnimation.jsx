@@ -13,9 +13,9 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 // a framer motion transition attributes
 const spring = {
     type: "spring",     // a framer motion type that simulates spring
-    damping: 20,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
-    stiffness: 300,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
-    mass: 1,            // Mass of the moving object. Higher values will result in more lethargic movement
+    damping: 15,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
+    stiffness: 150,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
+    mass: 0.1,            // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
 export const SwitchAnimation = (props) => {
@@ -224,6 +224,7 @@ export const SwitchAnimation = (props) => {
                         className={classes.bar}
                         animate={{
                             backgroundColor: background.backgroundColor,
+                            y: background.y,
                         }}
                     >
                         <div className={classes.barNumber}>
