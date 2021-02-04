@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="makeStyles-root-1"
+      >
+        <span
+          class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-2 MuiSlider-colorPrimary"
+        >
+          <span
+            class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-7"
+          />
+          <span
+            class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-6"
+            style="left: 0%; width: 50%;"
+          />
+          <input
+            type="hidden"
+            value="5"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="0"
+            style="left: 0%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="1"
+            style="left: 10%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="2"
+            style="left: 20%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="3"
+            style="left: 30%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="4"
+            style="left: 40%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+            data-index="5"
+            style="left: 50%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+            data-index="6"
+            style="left: 60%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+            data-index="7"
+            style="left: 70%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+            data-index="8"
+            style="left: 80%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+            data-index="9"
+            style="left: 90%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+            data-index="10"
+            style="left: 100%;"
+          />
+          <span
+            aria-labelledby="Progress"
+            aria-orientation="horizontal"
+            aria-valuemax="10"
+            aria-valuemin="0"
+            aria-valuenow="5"
+            class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-3 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-9"
+            data-index="0"
+            role="slider"
+            style="left: 50%;"
+            tabindex="0"
+          >
+            <span
+              class="PrivateValueLabel-offset-11 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-5"
+            >
+              <span
+                class="PrivateValueLabel-circle-12"
+              >
+                <span
+                  class="PrivateValueLabel-label-13"
+                >
+                  5
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="makeStyles-root-1"
+    >
+      <span
+        class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-2 MuiSlider-colorPrimary"
+      >
+        <span
+          class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-7"
+        />
+        <span
+          class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-6"
+          style="left: 0%; width: 50%;"
+        />
+        <input
+          type="hidden"
+          value="5"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="0"
+          style="left: 0%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="1"
+          style="left: 10%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="2"
+          style="left: 20%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="3"
+          style="left: 30%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="4"
+          style="left: 40%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8 MuiSlider-markActive"
+          data-index="5"
+          style="left: 50%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+          data-index="6"
+          style="left: 60%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+          data-index="7"
+          style="left: 70%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+          data-index="8"
+          style="left: 80%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+          data-index="9"
+          style="left: 90%;"
+        />
+        <span
+          class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-8"
+          data-index="10"
+          style="left: 100%;"
+        />
+        <span
+          aria-labelledby="Progress"
+          aria-orientation="horizontal"
+          aria-valuemax="10"
+          aria-valuemin="0"
+          aria-valuenow="5"
+          class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-3 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-9"
+          data-index="0"
+          role="slider"
+          style="left: 50%;"
+          tabindex="0"
+        >
+          <span
+            class="PrivateValueLabel-offset-11 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-5"
+          >
+            <span
+              class="PrivateValueLabel-circle-12"
+            >
+              <span
+                class="PrivateValueLabel-label-13"
+              >
+                5
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
