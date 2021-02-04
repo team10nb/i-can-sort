@@ -3,9 +3,9 @@ import patch from "../Patch/Patch";
 
 let COLORS = {
   original: "#00BFFF", // 蓝
-  comparing: "#FFD700", // 黄
+  comparing: "#FF0000", // 红
   finished: "#008000", // 绿
-  current: "#FF0000", // 红
+  current: "#000000", // 黑
   minimum: "#123456",
 }
 
@@ -35,67 +35,108 @@ function InssertionSortHelper(patched){
   description.push("Mark first element as sorted");
 
   for (i = 1; i < len; i++) {
+    //判断是否进入过while
+    let ifSwiched = false;
     //保存当前要拿来对比插入的数
     k = patched[i];
     //将key和前一个数相比
     j = i - 1;
     //前一个数大于key时，将大的数放在后面
+    
     changeColor(patched,i,COLORS.comparing);
+    changeColor(patched,j,COLORS.comparing);
+    trace.push(hardcopy(patched));
+    description.push(" Compare " + patched[i].value + " and" + patched[j].value);
       while (j >= 0 && patched[j].value > k.value) {
+
+        if(j < i - 1){
+
+          changeColor(patched,j,COLORS.comparing);
+          trace.push(hardcopy(patched));
+          description.push(" Compare " + k.value + " and " + patched[j].value);
+
+          temp = patched[j + 1]; 
+          patched[j + 1] = patched[j];
+          patched[j] = temp;
+  
+          changeColor(patched, j+1, COLORS.finished);
+          // changeColor(patched, j, COLORS.comparing);
+          description.push(patched[j+1].value + " is bigger than " + patched[j].value + ", switch positions");
+          trace.push(hardcopy(patched));
+
+          
+  
+          //再和之前的一个数相比，直到比到第一个，即j < 0
+          //j < 0不符合while条件，跳出循环
+          j--;
+         
+          continue;
+        }
+        
+
         //将大的数后移一个位置（即j）
         //此处不需要交换位置，因为还未找到key数的真正位置，
         //还需要进行对比，直接覆盖就好，key已经保存了当前拿来插入的数
-        
         temp = patched[j + 1]; 
-
-        
         patched[j + 1] = patched[j];
-        changeColor(patched, j+1, COLORS.finished);
         patched[j] = temp;
-        // changeColor(changeColor(patched, j, COLORS.comparing));
 
+        changeColor(patched, i, COLORS.finished);
+        // changeColor(patched, j, COLORS.comparing);
+        description.push(patched[j].value + " is less than " + patched[ j+1 ].value + ", switch positions");
         trace.push(hardcopy(patched));
-        description.push(" ");
+
+        ifSwiched = true;
         //再和之前的一个数相比，直到比到第一个，即j < 0
         //j < 0不符合while条件，跳出循环
         j--;
-
-        trace.push(hardcopy(patched));
-        description.push(" ");
         
       }
 
-      for(x = 0; x < i ; x++){
-        changeColor(patched, x, COLORS.finished);
-      }
-        trace.push(hardcopy(patched));
-        description.push(" ");
+          //根据遍历数（i），将前i个元素变为finish
+          if(!ifSwiched){
+
+            for(x = 0; x < i ; x++){
+              changeColor(patched, x, COLORS.finished);
+            }
+
+            changeColor(patched, i, COLORS.finished);
+            changeColor(patched, i+1, COLORS.comparing);
+            trace.push(hardcopy(patched));
+            description.push(patched[i].value + " isn't less than " + patched[i - 1].value + " , no operations, go check the next bar " + patched[i+1].value);
+          }else if(ifSwiched && j == -1){
+            for(x = 0; x < i ; x++){
+              changeColor(patched, x, COLORS.finished);
+            }
+            continue;
+            
+          }else if(i + 1 < len){
+            
+            changeColor(patched, j, COLORS.comparing);
+            trace.push(hardcopy(patched));
+            description.push("Compare " + patched[j + 1].value + " and " + patched[j].value );
+
+            changeColor(patched, j, COLORS.finished);
+            changeColor(patched, j+1, COLORS.finished);
+            changeColor(patched, i+1, COLORS.comparing);
+            trace.push(hardcopy(patched));
+            description.push(patched[j + 1].value + " isn't less than " + patched[j].value + " , no operations, go check the next bar " + patched[i + 1].value);
+            // patched[i - 1].value + " is bigger than " + patched[i - 2].value + " , nNNNo operations"
+            for(x = 0; x < i ; x++){
+              changeColor(patched, x, COLORS.finished);
+            }
+            continue;
+          }else{
+            for(x = 0; x < i ; x++){
+              changeColor(patched, x, COLORS.finished);
+            }
+            trace.push(hardcopy(patched));
+            description.push("Insertion Sort Finished!");
+          }
+        
+       
   }
 
     return {trace: trace, description: description};
-
-//   let description = ["Unsorted Array"];
-//   let trace = [hardcopy(patched)];
-//   let len = patched.length  
-//   let preIndex, current;
-
-// for (let i = 1; i < len; i++) {
-//     preIndex = i - 1;
-//     current = patched[i];
-
-//     while (preIndex >= 0 && current < patched[preIndex].value) {
-//       patched[preIndex + 1] = patched[preIndex];
-//       preIndex--;
-//       trace.push(hardcopy(patched));
-//       description.push("bye");
-//     }
-
-//     patched[preIndex + 1] = current;
-
-//     trace.push(hardcopy(patched));
-//     description.push("hi");
-// }
-
-// return {trace: trace, description: description};
 
 }
