@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
-import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+
 
 
 // a framer motion transition attributes
@@ -212,7 +210,8 @@ export const SwitchAnimation = (props) => {
 
     return (
         <div className={classes.root}>
-            <h1>{description[currentStep]}</h1>
+            <p>{description[currentStep]}</p>
+            <br/><br/>
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
