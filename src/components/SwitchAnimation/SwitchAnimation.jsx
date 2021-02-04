@@ -253,7 +253,7 @@ let arr = [2,1,6,10,9,12,8,3];
 
 // ****************************************************
 
-// 包含了下面两个数据的
+// 改为BubbleSort，SelectionSort或InsertionSort可观看对应动画；
 let full = InsertionSort(arr);
 
 // 每个bar应该怎么变动。
