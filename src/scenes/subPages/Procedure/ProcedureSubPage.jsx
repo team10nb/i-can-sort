@@ -13,7 +13,7 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-import InputBar from "../../../components/InputBar/InputBar"
+// import InputBar from "../../../components/InputBar/InputBar"
 
 //Set css
 const useStyles = makeStyles((theme) => ({

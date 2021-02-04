@@ -1,25 +1,23 @@
 import { render } from '@testing-library/react';
-import userEvent from "@testing-library/user-event";
 import Set from './SetAndHelp';
 import Help from './SetAndHelp'
-import IconButton from '@material-ui/core/IconButton';
 
-// test('set button should call onClick', () => {
-    
-//     const mockHandleClick = jest.fn();
-    
-    
-//     const props = {
-//         // arialabel: "help",
-//         onClick: mockHandleClick,
-//     };
 
-//     const {getByText} = render(<Set {...props} />);
-//     const button = getByText();
-//     userEvent.click(button);
-//     expect(mockHandleClick).toBeCalledTimes(1);
+test('set should contain two buttons', () => {
+    const toggleDrawer = jest.fn();
+    const {getAllByRole} = render(<Set {...toggleDrawer}/>);
+    const buttons = getAllByRole('button');
+    expect(buttons.length).toBe(2);
+})
 
-// })
+test('help should contain two buttons', () => {
+    const handleClick = jest.fn();
+    const {getAllByRole} = render(<Help {...handleClick}/>);
+    const buttons = getAllByRole('button');
+    expect(buttons.length).toBe(2);
+})
+
+
 
 test('set button should match Snapshot', () => {
     
