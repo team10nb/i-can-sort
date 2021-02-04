@@ -115,3 +115,4 @@ export default function InssertionSort(arr) {
 
     return { trace: trace, description: description };
 }
+

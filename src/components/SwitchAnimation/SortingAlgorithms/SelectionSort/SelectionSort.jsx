@@ -57,25 +57,26 @@ function selectionSortHelper(patched) {
           minIndex = j;                 // 将最小数的索引保存
           changeColor(patched, minIndex, COLORS.current);
           trace.push(hardcopy(patched));
-          description.push(patched[j].value + " is less than current minimum value " + patched[z].value + ". Set" + patched[j].value  +"as new minimum");
+          description.push(patched[j].value + " is less than current minimum value " + patched[z].value + ". Set " + patched[j].value  +" as new minimum");
         }else if (patched[j].value > patched[minIndex].value){
           changeColor(patched, j, COLORS.original);
-          // trace.push(hardcopy(patched));
-          // description.push(patched[i].value + " is bigger than current minimum value " + patched[minIndex].value + ". No oprations");
         }else{
           changeColor(patched, j, COLORS.original);
-          // trace.push(hardcopy(patched));
-          // description.push(patched[i].value + " is equal to current minimum value " + patched[minIndex].value + ". No oprations");
         }
       }
 
-temp = patched[i];
-patched[i] = patched[minIndex];
-patched[minIndex] = temp;
+    if(minIndex == i){
+      description.push("As the minimum is the first unsorted element, no swap is necessary");
+    }else{
+      description.push("Swap the minimum " + patched[minIndex].value + " with the first unsorted element "+ patched[i].value);
+    }
 
-changeColor(patched, i, COLORS.fi);
-trace.push(hardcopy(patched));
-description.push("");
+  temp = patched[i];
+  patched[i] = patched[minIndex];
+  patched[minIndex] = temp;
+
+  changeColor(patched, i, COLORS.finished);
+  trace.push(hardcopy(patched));
 
 }
 
