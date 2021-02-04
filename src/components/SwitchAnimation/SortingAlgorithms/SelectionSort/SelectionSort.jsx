@@ -66,9 +66,9 @@ function selectionSortHelper(patched) {
       }
 
     if(minIndex == i){
-      description.push("As the minimum is the first unsorted element, no swap is necessary.");
+      description.push("As the minimum is the first unsorted element, no swap is necessary");
     }else{
-      description.push("Swap the minimum " + patched[minIndex].value + " with the first unsorted element "+ patched[i].value +".");
+      description.push("Swap the minimum " + patched[minIndex].value + " with the first unsorted element "+ patched[i].value);
     }
 
   temp = patched[i];
