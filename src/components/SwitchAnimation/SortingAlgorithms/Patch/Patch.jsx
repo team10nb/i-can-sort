@@ -13,7 +13,7 @@ export default function patch(arr) {
   arr.forEach(element => {
       // 如果这个数比10大，那就让他矮一点
       returnList.push(
-        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i });
+        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i, y: 0, });
       i++;
   });
   return returnList;
