@@ -25,10 +25,8 @@ const useStyles = makeStyles((theme) => ({
   },
   div: {
       textAlign: "center",
-      paddingLeft: 150,
+      paddingLeft: 30,
       paddingTop: 30,
-      width:1200,
-      height:700
     }
 }));
 

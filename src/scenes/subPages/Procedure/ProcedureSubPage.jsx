@@ -39,12 +39,12 @@ const useStyles = makeStyles((theme) => ({
   cardOne:{
     background: "#F0F0F0",
     width: "30%",
-    height: 560
+    height: 520
   },
   cardTwo:{
     background: "#F0F0F0",
     width: "70%",
-    height: 560,
+    height: 520,
     alignItems:"center",
   },
 
@@ -122,7 +122,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-   <div style={{width:1200, height:700}}>
+   <div style={{width:960, height:650}}>
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs

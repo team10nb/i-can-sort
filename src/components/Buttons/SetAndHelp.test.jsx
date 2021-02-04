@@ -21,7 +21,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 // })
 
-test('set button should match Snapshot', () => {
+xit('set button should match Snapshot', () => {
     
     const mockHandleClick = jest.fn();
     
@@ -35,7 +35,7 @@ test('set button should match Snapshot', () => {
     expect(content).toMatchSnapshot();
 })
 
-test('help button should match Snapshot', () => {
+xit('help button should match Snapshot', () => {
     
     const mockHandleClick = jest.fn();
     
