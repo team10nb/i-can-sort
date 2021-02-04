@@ -6,94 +6,102 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-root-64"
+        class="makeStyles-root-28"
       >
         <p />
         <br />
         <br />
         <ul
-          class="makeStyles-bars-65"
+          class="makeStyles-bars-29"
         >
           <li
-            class="makeStyles-bar-66"
-            style="height: 50px; background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            class="makeStyles-bar-30"
+            style="height: 50px; background-color: rgb(255, 0, 140); transform: none;"
           >
             <div
-              class="makeStyles-barNumber-67"
+              class="makeStyles-barNumber-31"
             />
           </li>
           <li
-            class="makeStyles-bar-66"
-            style="height: 30px; background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            class="makeStyles-bar-30"
+            style="height: 30px; background-color: rgb(211, 9, 225); transform: none;"
           >
             <div
-              class="makeStyles-barNumber-67"
+              class="makeStyles-barNumber-31"
             />
           </li>
           <li
-            class="makeStyles-bar-66"
-            style="height: 90px; background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            class="makeStyles-bar-30"
+            style="height: 90px; background-color: rgb(156, 26, 255); transform: none;"
           >
             <div
-              class="makeStyles-barNumber-67"
+              class="makeStyles-barNumber-31"
             />
           </li>
           <li
-            class="makeStyles-bar-66"
-            style="height: 10px; background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            class="makeStyles-bar-30"
+            style="height: 10px; background-color: rgb(119, 0, 255); transform: none;"
           >
             <div
-              class="makeStyles-barNumber-67"
+              class="makeStyles-barNumber-31"
             />
           </li>
           <li
-            class="makeStyles-bar-66"
-            style="height: 20px; background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            class="makeStyles-bar-30"
+            style="height: 20px; background-color: rgb(102, 170, 0); transform: none;"
           >
             <div
-              class="makeStyles-barNumber-67"
+              class="makeStyles-barNumber-31"
             />
           </li>
         </ul>
         <div
-          class="makeStyles-root-68"
+          class="makeStyles-root-32"
         >
           <span
-            class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-47 MuiSlider-colorPrimary"
+            class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-33 MuiSlider-colorPrimary"
           >
             <span
-              class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-52"
+              class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-38"
             />
             <span
-              class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-51"
+              class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-37"
+              style="left: 0%; width: 0%;"
             />
             <input
               type="hidden"
               value="0"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-53 MuiSlider-markActive"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-39 MuiSlider-markActive"
               data-index="0"
+              style="left: 0%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-39"
+              data-index="1"
+              style="left: 100%;"
             />
             <span
               aria-labelledby="Progress"
               aria-orientation="horizontal"
-              aria-valuemax="0"
+              aria-valuemax="1"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-48 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-54"
+              class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-34 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-40"
               data-index="0"
               role="slider"
+              style="left: 0%;"
               tabindex="0"
             >
               <span
-                class="PrivateValueLabel-offset-56 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-50"
+                class="PrivateValueLabel-offset-42 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-36"
               >
                 <span
-                  class="PrivateValueLabel-circle-57"
+                  class="PrivateValueLabel-circle-43"
                 >
                   <span
-                    class="PrivateValueLabel-label-58"
+                    class="PrivateValueLabel-label-44"
                   >
                     0
                   </span>
@@ -106,7 +114,7 @@ Object {
           style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
         >
           <span
-            class="makeStyles-customTooltip-69"
+            class="makeStyles-customTooltip-45"
             title="Reset"
           >
             <button
@@ -157,9 +165,8 @@ Object {
             </span>
           </button>
           <button
-            class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
-            disabled=""
-            tabindex="-1"
+            class="MuiButtonBase-root MuiIconButton-root"
+            tabindex="0"
             type="button"
           >
             <span
@@ -176,11 +183,13 @@ Object {
                 />
               </svg>
             </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
           </button>
           <button
-            class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
-            disabled=""
-            tabindex="-1"
+            class="MuiButtonBase-root MuiIconButton-root"
+            tabindex="0"
             type="button"
           >
             <span
@@ -198,14 +207,17 @@ Object {
                 />
               </svg>
             </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
           </button>
           <div
-            class="makeStyles-root-70"
+            class="makeStyles-root-46"
           >
             <button
               aria-controls="simple-menu"
               aria-haspopup="true"
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-72"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-48"
               style="min-width: 40px;"
               tabindex="0"
               title="Speed"
@@ -226,7 +238,7 @@ Object {
     </div>
     <div
       aria-hidden="true"
-      class="MuiPopover-root makeStyles-menu-71"
+      class="MuiPopover-root makeStyles-menu-47"
       id="simple-menu"
       role="presentation"
       style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
@@ -247,7 +259,7 @@ Object {
         >
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-74 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-50 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="0"
             value="1"
@@ -259,7 +271,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-74 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-50 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="2"
@@ -271,7 +283,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-74 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-50 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="4"
@@ -283,7 +295,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-74 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-50 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="8"
@@ -295,7 +307,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-74 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-50 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="16"
@@ -315,94 +327,102 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-root-64"
+      class="makeStyles-root-28"
     >
       <p />
       <br />
       <br />
       <ul
-        class="makeStyles-bars-65"
+        class="makeStyles-bars-29"
       >
         <li
-          class="makeStyles-bar-66"
-          style="height: 50px; background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          class="makeStyles-bar-30"
+          style="height: 50px; background-color: rgb(255, 0, 140); transform: none;"
         >
           <div
-            class="makeStyles-barNumber-67"
+            class="makeStyles-barNumber-31"
           />
         </li>
         <li
-          class="makeStyles-bar-66"
-          style="height: 30px; background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          class="makeStyles-bar-30"
+          style="height: 30px; background-color: rgb(211, 9, 225); transform: none;"
         >
           <div
-            class="makeStyles-barNumber-67"
+            class="makeStyles-barNumber-31"
           />
         </li>
         <li
-          class="makeStyles-bar-66"
-          style="height: 90px; background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          class="makeStyles-bar-30"
+          style="height: 90px; background-color: rgb(156, 26, 255); transform: none;"
         >
           <div
-            class="makeStyles-barNumber-67"
+            class="makeStyles-barNumber-31"
           />
         </li>
         <li
-          class="makeStyles-bar-66"
-          style="height: 10px; background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          class="makeStyles-bar-30"
+          style="height: 10px; background-color: rgb(119, 0, 255); transform: none;"
         >
           <div
-            class="makeStyles-barNumber-67"
+            class="makeStyles-barNumber-31"
           />
         </li>
         <li
-          class="makeStyles-bar-66"
-          style="height: 20px; background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          class="makeStyles-bar-30"
+          style="height: 20px; background-color: rgb(102, 170, 0); transform: none;"
         >
           <div
-            class="makeStyles-barNumber-67"
+            class="makeStyles-barNumber-31"
           />
         </li>
       </ul>
       <div
-        class="makeStyles-root-68"
+        class="makeStyles-root-32"
       >
         <span
-          class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-47 MuiSlider-colorPrimary"
+          class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-33 MuiSlider-colorPrimary"
         >
           <span
-            class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-52"
+            class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-38"
           />
           <span
-            class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-51"
+            class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-37"
+            style="left: 0%; width: 0%;"
           />
           <input
             type="hidden"
             value="0"
           />
           <span
-            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-53 MuiSlider-markActive"
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-39 MuiSlider-markActive"
             data-index="0"
+            style="left: 0%;"
+          />
+          <span
+            class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-39"
+            data-index="1"
+            style="left: 100%;"
           />
           <span
             aria-labelledby="Progress"
             aria-orientation="horizontal"
-            aria-valuemax="0"
+            aria-valuemax="1"
             aria-valuemin="0"
             aria-valuenow="0"
-            class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-48 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-54"
+            class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-34 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-40"
             data-index="0"
             role="slider"
+            style="left: 0%;"
             tabindex="0"
           >
             <span
-              class="PrivateValueLabel-offset-56 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-50"
+              class="PrivateValueLabel-offset-42 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-36"
             >
               <span
-                class="PrivateValueLabel-circle-57"
+                class="PrivateValueLabel-circle-43"
               >
                 <span
-                  class="PrivateValueLabel-label-58"
+                  class="PrivateValueLabel-label-44"
                 >
                   0
                 </span>
@@ -415,7 +435,7 @@ Object {
         style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
       >
         <span
-          class="makeStyles-customTooltip-69"
+          class="makeStyles-customTooltip-45"
           title="Reset"
         >
           <button
@@ -466,9 +486,8 @@ Object {
           </span>
         </button>
         <button
-          class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
-          disabled=""
-          tabindex="-1"
+          class="MuiButtonBase-root MuiIconButton-root"
+          tabindex="0"
           type="button"
         >
           <span
@@ -485,11 +504,13 @@ Object {
               />
             </svg>
           </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
         </button>
         <button
-          class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
-          disabled=""
-          tabindex="-1"
+          class="MuiButtonBase-root MuiIconButton-root"
+          tabindex="0"
           type="button"
         >
           <span
@@ -507,14 +528,17 @@ Object {
               />
             </svg>
           </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
         </button>
         <div
-          class="makeStyles-root-70"
+          class="makeStyles-root-46"
         >
           <button
             aria-controls="simple-menu"
             aria-haspopup="true"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-72"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-48"
             style="min-width: 40px;"
             tabindex="0"
             title="Speed"
