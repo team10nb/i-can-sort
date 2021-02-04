@@ -2,14 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
-import "@fontsource/roboto"
+import "@fontsource/roboto";
 
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;
     const borderWidth = preOne ? "3px" : "0px";
-    const imageHeight = preOne ? height - 3 : height;
-    const titlePadding = preOne ? 10 - 3 : 10;
 
+    // styles of this module button
     const useStyles = makeStyles((theme) => ({
         root: {
             // boxShadow: "2px 8px 30px 2px #888888",
@@ -20,6 +19,7 @@ export default function ModuleButton(props) {
             borderColor: color,
             borderStyle: "solid",
             borderWidth: borderWidth,
+            borderBottomWidth: "0px",
             marginTop: 5,
             marginBottom: 0,
             display: "flex",
@@ -31,7 +31,7 @@ export default function ModuleButton(props) {
         },
         image: {
             position: "relative",
-            height: imageHeight,
+            height: height,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
@@ -101,7 +101,7 @@ export default function ModuleButton(props) {
             //     theme.spacing(1) + 6
             // }px`,
             paddingBottom: 5,
-            paddingRight: titlePadding,
+            paddingRight: 10,
             fontFamily: "Roboto",
             fontSize: 20,
             color: "white",
@@ -109,7 +109,7 @@ export default function ModuleButton(props) {
     }));
 
     const classes = useStyles();
-//
+
     return (
         <div className={classes.root}>
             <ButtonBase
@@ -119,6 +119,8 @@ export default function ModuleButton(props) {
                 focusVisibleClassName={classes.focusVisible}
                 onClick={onClick}
             >
+                
+                {/* background of the button */}
                 <span
                     className={classes.imageSrc}
                     style={{
@@ -126,8 +128,11 @@ export default function ModuleButton(props) {
                         backgroundColor: "#d5d5d5",
                     }}
                 />
+
+                {/* a layer beyond the background */}
                 <span className={classes.imageBackdrop} />
 
+                {/* title */}
                 <span className={classes.imageButton}>
                     <Typography
                         component='span'
@@ -138,6 +143,7 @@ export default function ModuleButton(props) {
                         {image.title}
                     </Typography>
                 </span>
+
             </ButtonBase>
         </div>
     );

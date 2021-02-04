@@ -6,7 +6,7 @@ import {Input} from 'antd';
 
 
 
-export default class InputBar extends React.Component {
+class InputBar extends React.Component {
 
     constructor(props){
         super(props);
@@ -74,10 +74,8 @@ export default class InputBar extends React.Component {
                 <Search id="text"
                     placeholder={placeholder}
                     allowClear="true"
-                    // enterButton="Create"
-                    // size="large"
-                    // position = "center"
-                    style = {{ width: 800}}
+                    enterButton="Create"
+                    size="large"
                     onSearch={e=>this.handleNumbers(e)}
                     defaultValue = {defaultValue ? defaultValue:''}     // 可以选择性设置框内默认值
                 />
@@ -127,3 +125,4 @@ function trimRight(s){
 
 
 
+export default InputBar;

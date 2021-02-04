@@ -7,10 +7,11 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 export default function ModuleProgress(props) {
 
     const {width, color, progress, preOne} = props;
-    const presentingWidth = (width);
+    const presentingWidth = preOne ? (width + 6) : (width);
     // TODO if complete??
     const presentingColor = progress === 100 ? color : color;
 
+    // modify the default styles of linear progress bar
     const BorderLinearProgress = withStyles((theme) => ({
         root: {
             height: 10,
@@ -30,6 +31,7 @@ export default function ModuleProgress(props) {
         },
     }))(LinearProgress);
 
+    // control the width of the progress bar
     const useStyles = makeStyles({
         root: {
             flexGrow: 1,

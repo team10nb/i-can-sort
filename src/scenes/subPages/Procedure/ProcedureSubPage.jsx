@@ -13,7 +13,8 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-import InputBar from "../../../components/InputBar/InputBar"
+import { SwitchAnimation } from '../../../components/SwitchAnimation/SwitchAnimation';
+
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -122,7 +123,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-   <div style={{width:960, height:650}}>
+   <div style={{width:960, height:700}}>
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
@@ -156,12 +157,15 @@ export default function ProcedureSubPage(props) {
         <TabPanel value={value} index={1} dir={theme.direction}>
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
-              <CardContent>
-                {props.intro}
+              <CardContent >
+                {props.intro.introMessage}
               </CardContent>
             </Card>
-            <Card className={classes.cardTwo}>
-              {/* <InputBar></InputBar> */}
+            <Card className={classes.cardTwo} >
+              <CardContent style={{position:"relative", top:'15%'}}>
+              {/* <CardContent > */}
+                {props.intro.animation}
+              </CardContent>
             </Card>
           </div>
         </TabPanel>
@@ -170,10 +174,15 @@ export default function ProcedureSubPage(props) {
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
               <CardContent>
-                {props.operate}
+                {/* {props.operate} */}
               </CardContent>
             </Card>
-            <Card className={classes.cardTwo}></Card>
+            <Card className={classes.cardTwo}>
+              <CardContent>
+                {props.operate}
+                {/* <SwitchAnimation/> */}
+              </CardContent>
+            </Card>
           </div>
         </TabPanel>
 
