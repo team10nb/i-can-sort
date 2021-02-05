@@ -6,8 +6,20 @@ import "./index.css";
 // import Routers from "./Routers";
 import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import "./styles.css";
+import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
+import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
+import InsertionSort from "./components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 
-const App = () => <SwitchAnimation />;
+let arr = [2, 1, 6, 10, 9, 12, 8, 3];
+
+// ****************************************************
+
+// 改为BubbleSort，SelectionSort或InsertionSort可观看对应动画；
+// let full = InsertionSort(arr);
+let props = SelectionSort(arr);
+// let full = BubbleSort(arr);
+
+const App = () => <SwitchAnimation {...props} width={600}/>;
 
 ReactDOM.render(
     // <React.StrictMode>

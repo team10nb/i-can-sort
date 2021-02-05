@@ -3,11 +3,32 @@ import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
 import * as AnimationSliders from "../AnimationSlider/AnimationSlider";
 import * as AnimationControls from "../AnimationControl/AnimationControl";
 
-test('should call AnimationSlider', () => {
-    const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
+const trace = [
+    [
+        { height: "50px", backgroundColor: "#FF008C", key: '1' },
+        { height: "30px", backgroundColor: "#D309E1", key: '2' },
+        { height: "90px", backgroundColor: "#9C1AFF", key: '3' },
+        { height: "10px", backgroundColor: "#7700FF", key: '4' },
+        { height: "20px", backgroundColor: "#66AA00", key: '5' },
+    ],[
+        { height: "50px", backgroundColor: "#FF008C", key: '1' },
+        { height: "30px", backgroundColor: "#D309E1", key: '2' },
+        { height: "90px", backgroundColor: "#9C1AFF", key: '3' },
+        { height: "10px", backgroundColor: "#7700FF", key: '4' },
+        { height: "20px", backgroundColor: "#66AA00", key: '5' },
+    ],
 
-    const {getByText} = render(<SwitchAnimation />);
-    getByText("mockAnimationSlider");
+];
+
+const description = ["", ""];
+
+const props = {description, trace}
+
+test('should call AnimationSlider', () => {
+    jest.restoreAllMocks();
+    const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
+    const content = render(<SwitchAnimation {...props}/>);
+    content.getByText("mockAnimationSlider");
     expect(sliderSpy).toBeCalledTimes(1);
 })
 
@@ -15,7 +36,7 @@ test('should call AnimationControl', () => {
     jest.restoreAllMocks();
     const controlSpy = jest.spyOn(AnimationControls, "default").mockImplementation(() => <div>mockAnimationControl</div>);
 
-    const {getByText} = render(<SwitchAnimation />);
+    const {getByText} = render(<SwitchAnimation {...props}/>);
     getByText("mockAnimationControl");
     expect(controlSpy).toBeCalledTimes(1);
 });
@@ -23,7 +44,7 @@ test('should call AnimationControl', () => {
 test('should match snapshot', () => {
     jest.restoreAllMocks();
     // jest.resetModules();
-    const content = render(<SwitchAnimation />);
+    const content = render(<SwitchAnimation {...props}/>);
 
     expect(content).toMatchSnapshot();
 })

@@ -37,13 +37,13 @@ const PrettoSlider = withStyles({
 })(Slider);
 
 export default function DiscreteSlider(props) {
-    const { step, max, handleChange, value } = props;
+    const { step, max, handleChange, value, width } = props;
 
     const useStyles = makeStyles({
         root: {
             display: "grid",
             alignContent: "center",
-            width: "480px",
+            width: width,
             marginTop: "10px",
         },
     });

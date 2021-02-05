@@ -1,3 +1,24 @@
+reason/description里面写为什么test fail了
+对**组件代码**做修改和修改的理由写在每个代码块前的注释里（由于没有通过test，而对**原码**做的修改）
+有必要的话，贴一下test的代码
+第一个version可以不写注释 最后一个version(pass的version)可以不写reason
+
+#### ComponentName: SpeedMenu
+
+|Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
+|-------|----|---------|-------------------|----------------|----------------|
+|1 | 1.30 | Fail | All | No code has been constructed |version 1|
+|2 | 1.30 | Pass |/|Initial version is created|version 2|
+|3 | 2.4 | Fail |should match speedMenu snapshot|Change styles|version 3|
+|4 | 2.4 | Pass | /                     |Snapshot updated|version 4|
+
+##### Code - version 2
+```javascript
+None
+```
+
+##### Code - version 3
+```javascript
 import "@fontsource/roboto";
 import React from "react";
 import Button from "@material-ui/core/Button";
@@ -97,3 +118,20 @@ export default function SimpleMenu(props) {
         </div>
     );
 }
+
+
+```
+
+##### Code - version 4
+```javascript
+        button: {
+            width: "10px",
+            paddingLeft: "0px",
+            paddingRight: "0px",
+            fontSize: "10px",
+            fontWeight: "600",
+            fontFamily: "inherit",
+        },
+```
+
+
