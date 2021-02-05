@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
+import ExplainationBox from "../ExplainationBox/ExplainationBox";
 
 
 
@@ -212,7 +213,6 @@ export const SwitchAnimation = (props) => {
 
     return (
         <div className={classes.root}>
-            <p>{description[currentStep]}</p>
             <br/><br/>
             {/* bars */}
             <ul className={classes.bars}>
@@ -234,6 +234,8 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </ul>
+            <br/>
+            <ExplainationBox color='#52af77' width='55'>{description[currentStep]}</ExplainationBox>
             
             <AnimationSlider
                 width= {width}
