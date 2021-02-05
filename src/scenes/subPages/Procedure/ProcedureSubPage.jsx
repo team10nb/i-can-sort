@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -13,7 +13,6 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-import { SwitchAnimation } from '../../../components/SwitchAnimation/SwitchAnimation';
 
 
 //Set css
@@ -123,7 +122,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-   <div style={{width:960, height:700}}>
+   <div >
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs

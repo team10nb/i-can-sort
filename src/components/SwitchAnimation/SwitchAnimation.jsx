@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
-import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+import BubbleSort from "./SortingAlgorithms/BubbleSort/BubbleSort";
+import SelectionSort from "./SortingAlgorithms/SelectionSort/SelectionSort";
+import InsertionSort from "./SortingAlgorithms/InsertionSort/InsertionSort";
 
 
 // a framer motion transition attributes

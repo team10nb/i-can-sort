@@ -23,11 +23,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: 900,
     height: 600,
+    paddingLeft: 30,
+    paddingTop: 30,
   },
   div: {
       textAlign: "center",
-      paddingLeft: 30,
-      paddingTop: 30,
+      height: 690,
+      width: 960,
     }
 }));
 
@@ -141,7 +143,7 @@ function ProcedureMainPage(props) {
     };
 
     return (
-      <div className={classes.div}>
+      <div className={classes.div} style = {{border: "1px", borderStyle: "solid"}}>
         <div className={classes.grid} >
           <Grid container spacing={0} >
 

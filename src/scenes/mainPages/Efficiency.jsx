@@ -22,11 +22,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: 900,
     height: 600,
+    paddingLeft: 30,
+    paddingTop: 30,
   },
   div: {
       textAlign: "center",
-      paddingLeft: 30,
-      paddingTop: 30,
+      height: 690,
+      width: 960,
     }
 }));
 

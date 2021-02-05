@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.6.0",
     "antd": "^4.11.2",
     "electron": "^11.1.1",
+    "framer-motion": "^3.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "styleguide": "styleguidist server  --config config/styleguidist.config.js",
+    "styleguide:build": "styleguidist build --config config/styleguidist.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "electron-packager": "^15.2.0"
+    "electron-packager": "^15.2.0",
+    "react-styleguidist": "^11.1.5"
   }
 }

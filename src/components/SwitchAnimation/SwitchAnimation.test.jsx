@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
+import SwitchAnimation from "./SwitchAnimation";
 import * as AnimationSliders from "../AnimationSlider/AnimationSlider";
 import * as AnimationControls from "../AnimationControl/AnimationControl";
 

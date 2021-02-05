@@ -3,7 +3,6 @@ import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import {Link} from 'react-router-dom';
 
   const useStyles = makeStyles((theme) => ({
     root: {
