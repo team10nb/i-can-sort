@@ -30,7 +30,7 @@ export default function SimpleMenu(props) {
             width: "10px",
             paddingLeft: "0px",
             paddingRight: "0px",
-            fontSize: "1em",
+            fontSize: "10px",
             fontWeight: "600",
             fontFamily: "inherit",
         },

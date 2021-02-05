@@ -17,7 +17,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    const {trace, description} = props;
+    const {trace, description, width} = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -40,7 +40,8 @@ export const SwitchAnimation = (props) => {
         root: {
             display: "grid",
             justifyContent: "center",
-            alignContent: "center"
+            alignContent: "flex-end",
+            height: 480,
         },
         bars: {
             listStyle: "none",
@@ -67,9 +68,10 @@ export const SwitchAnimation = (props) => {
             justifyContent: "center",
         },
         barNumber: {
-            fontSize: "0.8em",
-            marginTop: "-20px",
+            fontSize: "16px",
+            marginTop: "-23px",
             textAlign: "center",
+            fontWeight: "600",
         },
     });
 
@@ -234,7 +236,7 @@ export const SwitchAnimation = (props) => {
             </ul>
             
             <AnimationSlider
-                width='270px'
+                width= {width}
                 step={1}
                 max={trace.length - 1}
                 handleChange={handleSliderChange}

@@ -19,7 +19,7 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = SelectionSort(arr);
 // let full = BubbleSort(arr);
 
-const App = () => <SwitchAnimation {...props} />;
+const App = () => <SwitchAnimation {...props} width={600}/>;
 
 ReactDOM.render(
     // <React.StrictMode>
