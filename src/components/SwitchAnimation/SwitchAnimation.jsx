@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import BubbleSort from "./SortingAlgorithms/BubbleSort/BubbleSort";
-import SelectionSort from "./SortingAlgorithms/SelectionSort/SelectionSort";
-import InsertionSort from "./SortingAlgorithms/InsertionSort/InsertionSort";
+import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
+import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
+import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 
 
 // a framer motion transition attributes
@@ -255,7 +255,7 @@ let arr = [2,1,6,10,9,12,8,3];
 // ****************************************************
 
 // 改为BubbleSort，SelectionSort或InsertionSort可观看对应动画；
-let full = BubbleSort(arr);
+let full = InsertionSort(arr);
 
 // 每个bar应该怎么变动。
 const trace = full.trace;

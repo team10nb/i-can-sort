@@ -18,10 +18,11 @@ import {Link} from 'react-router-dom';
   
     return (
       <div className={classes.root}>
+        <Link to="Setting">
         <IconButton aria-label="setting">
           <SettingsOutlinedIcon />
         </IconButton>
-      
+        </Link>
         <IconButton aria-label="help" onClick={() => { alert('help') }}>
           <HelpOutlineOutlinedIcon />
         </IconButton>
