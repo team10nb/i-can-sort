@@ -1,28 +1,11 @@
-import changeColor from "../Patch/ChangeColor";
-import patch from "../Patch/Patch";
-
-let COLORS = {
-    original: "#00BFFF", // 蓝
-    comparing: "#FF0000", // 红
-    finished: "#008000", // 绿
-    current: "#000000", // 黑
-    minimum: "#123456",
-};
-
-function hardcopy(patchedList) {
-    return JSON.parse(JSON.stringify(patchedList));
-}
+import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
 export default function InssertionSort(arr) {
-    return InssertionSortHelper(patch(arr));
-}
-
-function InssertionSortHelper(patched) {
+    let patched = patch(arr);
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
     let i = 0;
     let j = 0;
-    let x = 0;
     let k = {};
     let temp = {};
     let len = patched.length;
@@ -31,11 +14,9 @@ function InssertionSortHelper(patched) {
     changeColor(patched, i, COLORS.finished);
 
     trace.push(hardcopy(patched));
-    description.push("Mark first element as sorted");
+    description.push("Mark the first element as sorted");
 
     for (i = 1; i < len; i++) {
-        //判断是否进入过while
-        let ifSwiched = false;
         //保存当前要拿来对比插入的数
         k = patched[i];
         //将key和前一个数相比
@@ -43,7 +24,6 @@ function InssertionSortHelper(patched) {
 
         // 第i个刚好比前面的都要大, 因此已经sorted了
         if (patched[j].value <= patched[j + 1].value) {
-
             // 比较
             changeColor(patched, i, COLORS.comparing);
             patched[i].y = -50;
@@ -86,14 +66,16 @@ function InssertionSortHelper(patched) {
 
             // 因为while循环会跳过已经sorted的两项, 所以这里用if补充进去
             if (j >= 1 && patched[j - 1].value <= patched[j].value) {
-
                 // 比较与前一个
                 changeColor(patched, j, COLORS.comparing);
                 patched[j].y = -50;
                 changeColor(patched, j - 1, COLORS.comparing);
                 trace.push(hardcopy(patched));
                 description.push(
-                    " Compare " + patched[j].value + " and " + patched[j-1].value
+                    " Compare " +
+                        patched[j].value +
+                        " and " +
+                        patched[j - 1].value
                 );
 
                 // 找到了正确的位置, 插入并改变颜色至finish
@@ -102,8 +84,7 @@ function InssertionSortHelper(patched) {
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
-            } else if (j == 0) {
-
+            } else if (j === 0) {
                 // 处于第一项的特殊情况, 是对前面if条件的补充, 因为这个时候j == 0, 已经在最前面了
                 changeColor(patched, j, COLORS.finished);
                 patched[j].y = 0;

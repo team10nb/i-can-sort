@@ -1,5 +1,7 @@
 //Register routes for procedure algorithms
 import ProcedureBubble from './Bubble/Bubble';
+import ProcedureSelection from './Selection/Selection';
+import ProcedureInsertion from './Insertion/Insertion';
 
 const ProcedureRouters = [
     {
@@ -7,12 +9,12 @@ const ProcedureRouters = [
        component: ProcedureBubble,
      },
      {
-       path: '/ProcedureSubPage/Bubble',
-       component: ProcedureBubble,
+       path: '/ProcedureSubPage/Selection',
+       component: ProcedureSelection,
      },
      {
-       path: '/ProcedureSubPage/Bubble',
-       component: ProcedureBubble,
+       path: '/ProcedureSubPage/Insertion',
+       component: ProcedureInsertion,
      },
    ]
    

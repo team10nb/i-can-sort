@@ -115,32 +115,73 @@ function ProcedureMainPage(props) {
         width: "20%",
     };
 
-    const image = {
-      static: "./logo512.png",
-      gif: "catch.gif",
-      title: "Bub sort",
-      width: "20%",
-  };
+    const images = [
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Bubble sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Selection sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Insertion sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Bub sort",
+        width: "20%",
+      },
 
-    const bubbleProps = {
-      image: bubbleImage,
+  ];
+
+  const bubbleProps = {
+      image: images[0],
       width: 200,
       height: 200,
-      onClick: handleClick(bubbleImage.title),
+      onClick: handleClick(images[0].title),
       progress: progress,
       color: color,
-      preOne: handlePre(bubbleImage.title),
+      preOne: handlePre(images[0].title),
   };
 
-    const props2 = {
-        image: image,
-        width: 200,
-        height: 200,
-        onClick: handleClick(image.title),
-        progress: progress,
-        color: color,
-        preOne: handlePre(image.title),
-    };
+    const selectionProps = {
+      image: images[1],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[1].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[1].title),
+  };
+
+    const insertionProps = {
+      image: images[2],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[2].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[2].title),
+  };
+
+const props2 = {
+  image: images[3],
+  width: 200,
+  height: 200,
+  onClick: handleClick(images[3].title),
+  progress: progress,
+  color: color,
+  preOne: handlePre(images[3].title),
+};
 
     return (
       <div className={classes.div} style = {{border: "1px", borderStyle: "solid"}}>
@@ -154,14 +195,14 @@ function ProcedureMainPage(props) {
           </Grid>
 
           <Grid item xs={6} sm={3} >
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Selection"> 
+              <Module {...selectionProps} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Insertion"> 
+              <Module {...insertionProps} />
           </Link>
           </Grid>
 

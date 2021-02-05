@@ -161,7 +161,7 @@ export default function ProcedureSubPage(props) {
               </CardContent>
             </Card>
             <Card className={classes.cardTwo} >
-              <CardContent style={{position:"relative", top:'15%'}}>
+              <CardContent style={{position:"relative"}}>
               {/* <CardContent > */}
                 {props.intro.animation}
               </CardContent>
