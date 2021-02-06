@@ -5,6 +5,7 @@ import "./index.css";
 // import { BrowserRouter } from "react-router-dom";
 // import Routers from "./Routers";
 import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
+import SwitchSort from "./components/SwitchSort/SwitchSort";
 import "./styles.css";
 import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
@@ -16,10 +17,12 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 
 // 改为BubbleSort，SelectionSort或InsertionSort可观看对应动画；
 // let full = InsertionSort(arr);
-let props = SelectionSort(arr);
+// let props = SelectionSort(arr);
 // let full = BubbleSort(arr);
 
-const App = () => <SwitchAnimation {...props} width={600}/>;
+// const App = () => <SwitchAnimation {...props} width={600}/>;
+const App = () => <SwitchSort sort='Insertion' />;
+
 
 ReactDOM.render(
     // <React.StrictMode>
