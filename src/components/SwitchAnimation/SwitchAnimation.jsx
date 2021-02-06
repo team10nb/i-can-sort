@@ -9,14 +9,14 @@ import ExplainationBox from "../ExplainationBox/ExplainationBox";
 
 // a framer motion transition attributes
 const spring = {
-    type: "spring",     // a framer motion type that simulates spring
-    damping: 15,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
-    stiffness: 150,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
-    mass: 0.1,            // Mass of the moving object. Higher values will result in more lethargic movement
+    type: "spring", // a framer motion type that simulates spring
+    damping: 15, //Strength of opposing force. If set to 0, spring will oscillate indefinitely
+    stiffness: 150, //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
+    mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
 export const SwitchAnimation = (props) => {
-    const {trace, description, width} = props;
+    const { trace, description, width } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -41,6 +41,7 @@ export const SwitchAnimation = (props) => {
             justifyContent: "center",
             alignContent: "flex-end",
             height: 480,
+            marginTop: "20px",
         },
         bars: {
             listStyle: "none",
@@ -97,8 +98,7 @@ export const SwitchAnimation = (props) => {
 
     useEffect(() => {
         handleResetClick();
-
-    }, [trace])
+    }, [trace]);
 
     // It is used to open the speed menu
     const handleClick = (event) => {
@@ -173,7 +173,6 @@ export const SwitchAnimation = (props) => {
         setIsPlaying(false);
         clearTimeouts();
         localStorage.setItem("history", "hello");
-        
     };
 
     // To resume the animation
@@ -211,12 +210,26 @@ export const SwitchAnimation = (props) => {
         setBars(trace[0]);
     };
 
-
-    const animationControlProps = { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed, trace};
+    const animationControlProps = {
+        handleResetClick,
+        stepForward,
+        stepBackward,
+        pause,
+        resume,
+        isPlaying,
+        playDisabled,
+        backwardDisabled,
+        handleClick,
+        handleClose,
+        anchorEl,
+        playSpeed,
+        trace,
+    };
 
     return (
         <div className={classes.root}>
-            <br/><br/>
+            <br />
+            <br />
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
@@ -237,11 +250,13 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </ul>
-            <br/>
-            <ExplainationBox color='#52af77' width='55'>{description[currentStep]}</ExplainationBox>
-            
+            <br />
+            <ExplainationBox color='#52af77' width='55'>
+                {description[currentStep]}
+            </ExplainationBox>
+
             <AnimationSlider
-                width= {width}
+                width={width}
                 step={1}
                 max={trace.length - 1}
                 handleChange={handleSliderChange}
@@ -249,12 +264,8 @@ export const SwitchAnimation = (props) => {
             />
 
             <AnimationControl {...animationControlProps} />
-
         </div>
     );
 };
-
-
-
 
 export default SwitchAnimation;
