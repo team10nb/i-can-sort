@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { createMuiTheme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -7,6 +7,7 @@ import {
     withStyles,
     ThemeProvider,
 } from "@material-ui/core/styles";
+
 
 const theme = createMuiTheme({
     palette: {
@@ -22,17 +23,16 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         alignContent: "flex-end",
-        height: 35,
+        height: 40,
     },
     text: {
-        // width:'400px',
         margin: "0 10px",
     },
     button: {
-        // height:'56px',
-        // backgroundColor: "#52af77",
+        backgroundColor: "#52af77",
         color: "white",
-        marginTop: "2px",
+        marginTop: "0px",
+        borderRadius: 10,
     },
 }));
 
@@ -84,10 +84,8 @@ export default function InputBar(props) {
                 type='search'
                 helperText={helper}
                 variant='outlined'
-                //   onChange={(e) => {storeInput(e);}}
                 onChange={storeInput}
                 onFocus={storeInput}
-                //   style={textStyle}
                 defaultValue={defaultArr}
                 className={classes.text}
                 size='small'
@@ -97,12 +95,8 @@ export default function InputBar(props) {
                     variant='contained'
                     disableElevation
                     color='primary'
-                    //   onClick={this.checkFormat.bind(this)}
-                    //   onClick={() => {checkFormat();}}
                     onClick={checkFormat}
                     className={classes.button}
-
-                    //   style={buttonStyle}
                 >
                     Create
                 </Button>
@@ -110,7 +104,3 @@ export default function InputBar(props) {
         </div>
     );
 }
-
-// let InputBarChild = forwardRef(InputBar);
-
-// export default InputBarChild;
