@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-// import { ClassRounded } from "@material-ui/icons";
+
 
 const ExplainationBox = withStyles({
     root: {
@@ -12,11 +12,10 @@ const ExplainationBox = withStyles({
         letterSpacing: "1px",
         textAlign: "center",
         borderRadius: "12px",
-        backgroundColor: "white",
+        // backgroundColor: "white",
         marginTop: "4px",
         marginBottom: "3px",
     },
-    variant: "outlined",
 })(Paper);
 
 export default function SimplePaper(props) {
@@ -25,9 +24,9 @@ export default function SimplePaper(props) {
         root: {
             display: "grid",
             "& > *": {
-                width: theme.spacing(width),
+                width: theme.spacing(width*1),
                 height: theme.spacing(3),
-                border: "1px solid white",
+                border: "3px solid " + color,
             },
             justifyContent: "center",
             alignContent: "flex-end",
