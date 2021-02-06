@@ -35,7 +35,8 @@ export default function SwitchSort(props) {
         }
         // 数字,数字,数字
         else if (s.match(/^\d+((,|，)\d+)*$/)) {
-            const nums = s.split(/[，,]/);
+            const numString = s.split(/[，,]/);
+            const nums = numString.map(num => parseInt(num));
             let outRange = false;
             for (let i = 0; i < nums.length; i++) {
                 if (nums[i] > 30) {

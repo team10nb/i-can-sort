@@ -1,12 +1,12 @@
 import React from "react";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {
     makeStyles,
     withStyles,
-    ThemeProvider,
 } from "@material-ui/core/styles";
+
 
 
 const theme = createMuiTheme({
@@ -94,7 +94,7 @@ export default function InputBar(props) {
                 <Button
                     variant='contained'
                     disableElevation
-                    color='primary'
+                    // color='primary'
                     onClick={checkFormat}
                     className={classes.button}
                 >

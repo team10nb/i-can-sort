@@ -47,6 +47,7 @@ export const SwitchAnimation = (props) => {
             listStyle: "none",
             padding: 0,
             margin: 0,
+            marginBottom: 15,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -228,8 +229,6 @@ export const SwitchAnimation = (props) => {
 
     return (
         <div className={classes.root}>
-            <br />
-            <br />
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
@@ -250,7 +249,6 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </ul>
-            <br />
             <ExplainationBox color='#52af77' width='55'>
                 {description[currentStep]}
             </ExplainationBox>

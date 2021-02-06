@@ -12,7 +12,7 @@ const ExplainationBox = withStyles({
         letterSpacing: "1px",
         textAlign: "center",
         borderRadius: "12px",
-        // backgroundColor: "white",
+        backgroundColor: "white",
         marginTop: "4px",
         marginBottom: "3px",
     },
@@ -26,7 +26,7 @@ export default function SimplePaper(props) {
             "& > *": {
                 width: theme.spacing(width*1),
                 height: theme.spacing(3),
-                border: "3px solid " + color,
+                border: "3px solid white",
             },
             justifyContent: "center",
             alignContent: "flex-end",
