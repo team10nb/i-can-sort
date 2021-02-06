@@ -1,6 +1,6 @@
 // The correctness main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import SetAndHelp from '../../components/Buttons/SetAndHelp';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
@@ -39,7 +39,7 @@ const color = '#ff6f00';
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Correctness button is theme color without jump function
-function ChoiceMenu(){
+export function CorrectnessChoiceMenu(){
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -182,7 +182,7 @@ function CorrectnessMainPage(props) {
 
           <Grid item xs={12}>
             <div style={{marginLeft:-8, marginTop: 50}}>
-            <ChoiceMenu/>
+            <CorrectnessChoiceMenu/>
             </div>
           </Grid>
 

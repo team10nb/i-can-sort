@@ -38,7 +38,7 @@ const color = '#1565c0';
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Procedure button is theme color without jump function
-function ChoiceMenu(){
+export function ProcedureChoiceMenu(){
   const classes = useStyles();
   const theme = createMuiTheme({
     palette: {
@@ -107,13 +107,6 @@ function ProcedureMainPage(props) {
       const preOne = (title === localPre) ? true : false;
       return preOne;
     }
-
-    const bubbleImage = {
-        static: "./logo512.png",
-        gif: "catch.gif",
-        title: "Bubble sort",
-        width: "20%",
-    };
 
     const images = [
       {
@@ -184,7 +177,7 @@ const props2 = {
 };
 
     return (
-      <div className={classes.div} style = {{border: "1px", borderStyle: "solid"}}>
+      <div className={classes.div} >
         <div className={classes.grid} >
           <Grid container spacing={0} >
 
@@ -244,7 +237,7 @@ const props2 = {
 
           <Grid item xs={12}>
             <div style={{marginLeft:-8, marginTop: 50}}>
-            <ChoiceMenu/>
+            <ProcedureChoiceMenu/>
             </div>
           </Grid>
 

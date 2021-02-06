@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   div:{
     display: 'flex',    
+    width: 1020,
     '& > *': {
       margin: theme.spacing(3),
     }
@@ -161,7 +162,7 @@ export default function ProcedureSubPage(props) {
               </CardContent>
             </Card>
             <Card className={classes.cardTwo} >
-              <CardContent style={{position:"relative"}}>
+              <CardContent >
               {/* <CardContent > */}
                 {props.intro.animation}
               </CardContent>
@@ -179,26 +180,26 @@ export default function ProcedureSubPage(props) {
             <Card className={classes.cardTwo}>
               <CardContent>
                 {props.operate}
-                {/* <SwitchAnimation/> */}
               </CardContent>
             </Card>
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <div >
-          {/* <Card >
-          <CardContent>
-            Introduction page
-          </CardContent>
-          </Card> */}
-          <Card >
-          <CardContent>
-            Implementation page
-          </CardContent>
-          </Card>
+        <div className = {classes.div}>
+            <Card className={classes.cardOne}>
+              <CardContent>
+                {/* {props.operate} */}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}>
+              <CardContent>
+                {props.operate}
+              </CardContent>
+            </Card>
           </div>
         </TabPanel>
+        
       </SwipeableViews>
       </ThemeProvider>
     </div>
