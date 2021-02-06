@@ -16,8 +16,9 @@ export default function SwitchSort(props) {
 
 
     const storeInput = (e)=>{
-        let eValue = trim(e.target.value);
+        let eValue = e.target.value;
         eValue = eValue.replace(/\s+/g,"");
+        eValue = removeDot(eValue);
         
         if(e.target.value && eValue){     
             setStr(eValue);
@@ -39,10 +40,6 @@ export default function SwitchSort(props) {
             else if(s.match(/^\d+((,|，)\d+)*$/)){
                 const nums = s.split(/[，,]/);
                 let outRange = false;
-                // let outLength = false;
-                // setIsValid(true);
-                // setWrongMsg(' ');      
-                // setArr(nums);
                 for(let i=0; i<nums.length; i++){
                     if(nums[i]>30){
                         outRange = true;
@@ -101,36 +98,36 @@ export default function SwitchSort(props) {
 
 
 //供使用者调用，去除两边空格
-function trim(s){  
-    return trimRight(trimLeft(s));  
-}  
+// function trim(s){  
+//     return trimRight(trimLeft(s));  
+// }  
 
 
 //去掉左边的空白  
-function trimLeft(s){  
-    if(s == null) {  
-        return "";  
-    }  
-    var whitespace = " \t\n\r";  
-    var str = s;  
-    if(whitespace.indexOf(str.charAt(0)) !== -1) {  
-        var j=0, i = str.length;  
-        while(j < i && whitespace.indexOf(str.charAt(j)) !== -1){  
-            j++;  
-        }  
-        str = str.substring(j, i);  
-    }  
-    return str;  
-}  
+// function trimLeft(s){  
+//     if(s == null) {  
+//         return "";  
+//     }  
+//     var whitespace = " \t\n\r";  
+//     var str = s;  
+//     if(whitespace.indexOf(str.charAt(0)) !== -1) {  
+//         var j=0, i = str.length;  
+//         while(j < i && whitespace.indexOf(str.charAt(j)) !== -1){  
+//             j++;  
+//         }  
+//         str = str.substring(j, i);  
+//     }  
+//     return str;  
+// }  
 
 //去掉右边的空白  
-function trimRight(s){  
+function removeDot(s){  
     if(s == null) return "";  
-    var whitespace = " \t\n\r";  
+    var dot = "，,";  
     var str = s;  
-    if(whitespace.indexOf(str.charAt(str.length-1)) !== -1){  
+    if(dot.indexOf(str.charAt(str.length-1)) !== -1){  
         var i = str.length - 1;  
-        while (i >= 0 && whitespace.indexOf(str.charAt(i)) !== -1){  
+        while (i >= 0 && dot.indexOf(str.charAt(i)) !== -1){  
             i--;  
         }  
         str = str.substring(0, i+1);  
