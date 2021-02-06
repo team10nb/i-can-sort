@@ -95,6 +95,11 @@ export const SwitchAnimation = (props) => {
         }
     }, [playSpeed]);
 
+    useEffect(() => {
+        handleResetClick();
+
+    }, [trace])
+
     // It is used to open the speed menu
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
