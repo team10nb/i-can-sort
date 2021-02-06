@@ -7,6 +7,7 @@ import "@fontsource/roboto";
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;
     const borderWidth = preOne ? "3px" : "0px";
+    const presentHeight = preOne ? height - 3 : height;
 
     // styles of this module button
     const useStyles = makeStyles((theme) => ({
@@ -27,11 +28,11 @@ export default function ModuleButton(props) {
             minWidth: 200,
             minHeight: 180,
             width: width,
-            height: height,
+            height: presentHeight,
         },
         image: {
             position: "relative",
-            height: height,
+            height: presentHeight,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
