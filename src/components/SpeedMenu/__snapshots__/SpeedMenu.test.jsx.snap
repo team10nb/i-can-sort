@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should SpeedMenu match snapshot 1`] = `
+exports[`should match SpeedMenu snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

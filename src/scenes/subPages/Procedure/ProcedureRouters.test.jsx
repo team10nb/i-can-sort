@@ -25,9 +25,9 @@ test('should pass right routers', () => {
 
 })
 
-test('should link right to right routers', () => {
+// test('should link right to right routers', () => {
 
-   const content = render(< Router {...Routers}/>);
-   expect(content).toMatchSnapshot();
+//    const content = render(< Router {...Routers}/>);
+//    expect(content).toMatchSnapshot();
 
-})
+// })

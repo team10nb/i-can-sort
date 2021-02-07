@@ -13,7 +13,7 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-// import InputBar from "../../../components/InputBar/InputBar"
+
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -101,7 +101,7 @@ export default function ProcedureSubPage(props) {
       },
 
     },
-      // direction: 'ltr',
+    
   });
 
   const [value, setValue] = React.useState(1);
@@ -126,12 +126,12 @@ export default function ProcedureSubPage(props) {
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
-          // className={classes.tabs}
+          
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
           background = "primary"
-          // textColor="primary"
+          
           variant="fullWidth"
           aria-label="full width tabs example"
         >
@@ -161,7 +161,7 @@ export default function ProcedureSubPage(props) {
               </CardContent>
             </Card>
             <Card className={classes.cardTwo}>
-              {/* <InputBar></InputBar> */}
+             
             </Card>
           </div>
         </TabPanel>
@@ -179,11 +179,7 @@ export default function ProcedureSubPage(props) {
 
         <TabPanel value={value} index={3} dir={theme.direction}>
           <div >
-          {/* <Card >
-          <CardContent>
-            Introduction page
-          </CardContent>
-          </Card> */}
+        
           <Card >
           <CardContent>
             Implementation page

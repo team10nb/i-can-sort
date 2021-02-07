@@ -10,30 +10,20 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-// import Card from '@material-ui/core/Card';
-import Popover from '@material-ui/core/Popover';
 import Tooltip from '@material-ui/core/Tooltip';
-import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoIcon from '@material-ui/icons/Info';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
 
 
 {/*
   This function is for designing the set and help button  
 */}
 
+
   const useStyles = makeStyles((theme) => ({
-    root: {
-      display:"flex",
-      '& > *': {
-        margin: theme.spacing(0),
-      },
-    },
     list: {
       width: 250,
     },
@@ -44,19 +34,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
   
   
 
-  export default function SetAndHelp(props){
-    const classes = useStyles();
-    
-    return(
-     <div class = {classes.root}>
-        <Set />     
-        <Help {...props}/>
-       
-     </div>
-    );
-
-  }
-  export  function Set() {
+  export default function Set() {
     const classes = useStyles();
   
     {/*setting button can pop out a toggleDrawer
@@ -167,112 +145,5 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
     );
   }
 
-
  
-  export  function Help(props) {
-    //help button can pop out several dialogs
-    const color = props.color;
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-  
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
-  
-    const open = Boolean(anchorEl);
-    const id = open ? 'simple-popover' : undefined;
-
-    return(
-      <div>
-        <Tooltip title="tutorial" placement="bottom" arrow>
-          <IconButton aria-label="help"  onClick={handleClick}>
-            <HelpOutlineOutlinedIcon />
-          </IconButton>
-        </Tooltip>
-                
-           <Popover 
-           id={id}
-           open={open}
-           onClose={handleClose}
-           anchorReference="anchorPosition"
-           anchorPosition={{ top: 200, left: 200 }}
-           anchorOrigin={{
-           vertical: 'top',
-           horizontal: 'rihgt',
-           }}
-          transformOrigin={{
-          vertical: 'center',
-          horizontal: 'right',
-        }}
-        >
-          
-        <Accordion style={{ backgroundColor: color}}>
-        <AccordionSummary
-          expandIcon={<ArrowForwardIosIcon style={{color:'white'}}/>}
-          aria-controls="panel1a-content"          
-        >
-          <ListItemText style = {{ color:'white'}} primary='click here' />   
-        </AccordionSummary>
-      </Accordion>
-        </Popover>
-
-        <Popover 
-           id={id}
-           open={open}
-           onClose={handleClose}
-           anchorReference="anchorPosition"
-           anchorPosition={{ top: 500, left: 200 }}
-           anchorOrigin={{
-           vertical: 'top',
-           horizontal: 'right',
-           }}
-          transformOrigin={{
-          vertical: 'center',
-          horizontal: 'right',
-        }}
-        >
-        <Accordion style={{ backgroundColor: color}}>
-        <AccordionSummary
-          expandIcon={<ArrowForwardIosIcon style={{color:'white'}}/>}
-          aria-controls="panel1a-content"          
-        >
-          <ListItemText style = {{ color:'white'}} primary='click here' />   
-        </AccordionSummary>
-      </Accordion>
-        </Popover>
-        <Popover 
-           id={id}
-           open={open}
-           onClose={handleClose}
-           anchorReference="anchorPosition"
-           anchorPosition={{ top: 590, left: 200}}
-           anchorOrigin={{
-           vertical: 'top',
-           horizontal: 'right',
-           }}
-          transformOrigin={{
-          vertical: 'center',
-          horizontal: 'right',
-        }}
-        >
-        
-        <Accordion style={{ backgroundColor: color}}>
-        <AccordionSummary
-          expandIcon={<ArrowForwardIosIcon style={{color:'white'}}/>}
-          aria-controls="panel1a-content"          
-        >
-          <ListItemText style = {{ color:'white'}} primary='click here' />   
-        </AccordionSummary>
-      </Accordion>
-        </Popover>
-      </div>
-    )
-
-
-
-
-  }
 
