@@ -29,7 +29,7 @@ test('should call AnimationSlider', () => {
     const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
     const content = render(<SwitchAnimation {...props}/>);
     content.getByText("mockAnimationSlider");
-    expect(sliderSpy).toBeCalledTimes(1);
+    expect(sliderSpy).toBeCalledTimes(2);
 })
 
 test('should call AnimationControl', () => {
@@ -38,7 +38,7 @@ test('should call AnimationControl', () => {
 
     const {getByText} = render(<SwitchAnimation {...props}/>);
     getByText("mockAnimationControl");
-    expect(controlSpy).toBeCalledTimes(1);
+    expect(controlSpy).toBeCalledTimes(2);
 });
 
 test('should match snapshot', () => {

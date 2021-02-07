@@ -10,8 +10,9 @@ import Zoom from "@material-ui/core/Zoom";
 const MenuItem = withStyles({
     root: {
         justifyContent: "center",
-        fontSize: "0.5em",
+        fontSize: "10px",
         fontFamily: "inherit",
+        fontWeight: "600",
     },
 })(MuiMenuItem);
 
