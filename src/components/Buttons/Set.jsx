@@ -37,17 +37,111 @@ import InfoIcon from '@material-ui/icons/Info';
   export default function Set() {
     const classes = useStyles();
   
+    {/*setting button can pop out a toggleDrawer
+       keep closed at usual,click to open it
+       toggleDrawer contains plenty of accordions
+    */}
+    const [state, setState] = React.useState({
+    left: false,
+  });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+      if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+     
+     {/*
+      setting music: can change song, sound volume
+     */}
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <QueueMusicIcon /> 
+          <ListItemText primary='BackGround Music' />   
+        </AccordionSummary>
+        <AccordionDetails>
+          Music
+        </AccordionDetails>
+      </Accordion>
+
+      {/*
+      setting language: can change language: Chinese, English
+     */}
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <LanguageIcon />
+          <ListItemText primary='Prefer Language' />   
+        </AccordionSummary>
+        <AccordionDetails>
+          <List>
+            <ListItem button >
+              <ListItemIcon> <QueueMusicIcon />  </ListItemIcon>
+              <ListItemText primary='Chinese(simple)' />           
+            </ListItem>  
+            <ListItem button >
+              <ListItemIcon> <QueueMusicIcon />  </ListItemIcon>
+              <ListItemText primary='English' />           
+            </ListItem>
+          </List>         
+        </AccordionDetails>  
+      </Accordion>
+
+      {/*
+         checking information: check information of the team of this project
+      */}
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <InfoIcon />
+          <ListItemText primary='About Us' />   
+        </AccordionSummary>
+        <AccordionDetails>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.     
+        </AccordionDetails>
+      </Accordion>
+    </div>
+  );
+
+   
     return (
-      <div className={classes.root}>
-        <Link to="Setting">
-        <IconButton aria-label="setting">
-          <SettingsOutlinedIcon />
-        </IconButton>
-        </Link>
-        <IconButton aria-label="help" onClick={() => { alert('help') }}>
-          <HelpOutlineOutlinedIcon />
-        </IconButton>
+      <div>
+        {/*set button*/}
+        <Tooltip title="setting" placement="bottom" arrow>
+          <IconButton aria-label="setting" onClick={toggleDrawer('left', true)}> <SettingsOutlinedIcon /></IconButton>
+        </Tooltip>        
+          <SwipeableDrawer
+            anchor={'left'}
+            open={state['left']}
+            onClose={toggleDrawer('left', false)}
+            onOpen={toggleDrawer('left', true)}
+          >
+            {list('left')}
+          </SwipeableDrawer>
       </div>
+      
     );
   }
 
