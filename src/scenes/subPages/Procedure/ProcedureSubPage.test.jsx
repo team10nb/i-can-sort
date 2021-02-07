@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import ProcedureSubPage from "./ProcedureSubPage";
 
 const mockHandleClick = jest.fn();
-//
+///
 const props = { 
     handleChange: mockHandleClick, 
     color: '#1565c0', 
