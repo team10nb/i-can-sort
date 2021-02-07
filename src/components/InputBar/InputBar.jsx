@@ -1,21 +1,10 @@
 import React from "react";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {
     makeStyles,
     withStyles,
 } from "@material-ui/core/styles";
-
-
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#52af77",
-        },
-    },
-});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         marginTop: "0px",
         borderRadius: 10,
+        "&:hover, &$focusVisible": { backgroundColor: "#52af77"}
     },
 }));
 
@@ -90,17 +80,14 @@ export default function InputBar(props) {
                 className={classes.text}
                 size='small'
             />
-            <ThemeProvider theme={theme}>
                 <Button
                     variant='contained'
                     disableElevation
-                    // color='primary'
                     onClick={checkFormat}
                     className={classes.button}
                 >
                     Create
                 </Button>
-            </ThemeProvider>
         </div>
     );
 }
