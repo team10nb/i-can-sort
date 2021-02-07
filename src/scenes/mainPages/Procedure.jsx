@@ -24,12 +24,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: 900,
     height: 600,
+    paddingLeft: 30,
+    paddingTop: 30,
   },
   div: {
       textAlign: "center",
-      paddingLeft: 30,
-      paddingTop: 30,
-    },
+height: 690,
+width: 960,
+},
   buttonSet:{
     display:"flex",
     '& > *': {
@@ -43,7 +45,7 @@ const color = '#1565c0';
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Procedure button is theme color without jump function
-function ChoiceMenu(){
+export function ProcedureChoiceMenu(){
   const classes = useStyles();
   const theme = createMuiTheme({
     palette: {
@@ -113,42 +115,76 @@ function ProcedureMainPage(props) {
       return preOne;
     }
 
-    const bubbleImage = {
+    const images = [
+      {
         static: "./logo512.png",
         gif: "catch.gif",
         title: "Bubble sort",
         width: "20%",
-    };
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Selection sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Insertion sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Bub sort",
+        width: "20%",
+      },
 
-    const image = {
-      static: "./logo512.png",
-      gif: "catch.gif",
-      title: "Bub sort",
-      width: "20%",
-  };
+  ];
 
-    const bubbleProps = {
-      image: bubbleImage,
+  const bubbleProps = {
+      image: images[0],
       width: 200,
       height: 200,
-      onClick: handleClick(bubbleImage.title),
+      onClick: handleClick(images[0].title),
       progress: progress,
       color: color,
-      preOne: handlePre(bubbleImage.title),
+      preOne: handlePre(images[0].title),
   };
 
-    const props2 = {
-        image: image,
-        width: 200,
-        height: 200,
-        onClick: handleClick(image.title),
-        progress: progress,
-        color: color,
-        preOne: handlePre(image.title),
-    };
+    const selectionProps = {
+      image: images[1],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[1].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[1].title),
+  };
+
+    const insertionProps = {
+      image: images[2],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[2].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[2].title),
+  };
+
+const props2 = {
+  image: images[3],
+  width: 200,
+  height: 200,
+  onClick: handleClick(images[3].title),
+  progress: progress,
+  color: color,
+  preOne: handlePre(images[3].title),
+};
 
     return (
-      <div className={classes.div}>
+      <div className={classes.div} >
         <div className={classes.grid} >
           <Grid container spacing={0} >
 
@@ -159,14 +195,14 @@ function ProcedureMainPage(props) {
           </Grid>
 
           <Grid item xs={6} sm={3} >
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Selection"> 
+              <Module {...selectionProps} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Insertion"> 
+              <Module {...insertionProps} />
           </Link>
           </Grid>
 
@@ -208,7 +244,7 @@ function ProcedureMainPage(props) {
 
           <Grid item xs={12}>
             <div style={{marginLeft:-8, marginTop: 50}}>
-            <ChoiceMenu/>
+            <ProcedureChoiceMenu/>
             </div>
           </Grid>
 

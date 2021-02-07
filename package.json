@@ -26,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "styleguide": "styleguidist server  --config config/styleguidist.config.js",
+    "styleguide:build": "styleguidist build --config config/styleguidist.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "electron-packager": "^15.2.0"
+    "electron-packager": "^15.2.0",
+    "react-styleguidist": "^11.1.5"
   }
 }

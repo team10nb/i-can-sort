@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -13,7 +13,6 @@ import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-import { SwitchAnimation } from '../../../components/SwitchAnimation/SwitchAnimation';
 
 
 //Set css
@@ -33,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   div:{
     display: 'flex',    
+    width: 1020,
     '& > *': {
       margin: theme.spacing(3),
     }
@@ -123,7 +123,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-   <div style={{width:960, height:700}}>
+   <div >
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
@@ -162,7 +162,7 @@ export default function ProcedureSubPage(props) {
               </CardContent>
             </Card>
             <Card className={classes.cardTwo} >
-              <CardContent style={{position:"relative", top:'15%'}}>
+              <CardContent >
               {/* <CardContent > */}
                 {props.intro.animation}
               </CardContent>
@@ -180,22 +180,26 @@ export default function ProcedureSubPage(props) {
             <Card className={classes.cardTwo}>
               <CardContent>
                 {props.operate}
-                {/* <SwitchAnimation/> */}
               </CardContent>
             </Card>
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <div >
-        
-          <Card >
-          <CardContent>
-            Implementation page
-          </CardContent>
-          </Card>
+        <div className = {classes.div}>
+            <Card className={classes.cardOne}>
+              <CardContent>
+                {/* {props.operate} */}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}>
+              <CardContent>
+                {props.operate}
+              </CardContent>
+            </Card>
           </div>
         </TabPanel>
+        
       </SwipeableViews>
       </ThemeProvider>
     </div>

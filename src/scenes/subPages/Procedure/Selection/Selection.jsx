@@ -2,13 +2,13 @@ import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
-import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
+import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = BubbleSort(arr);
+let props = SelectionSort(arr);
 
 const introMessage = <div>
-                <h1>Bubble sort</h1>
+                <h1>Selection sort</h1>
                 {/* <h2><font color = "white"> hello world </font></h2> */}
                 <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
             </div>;
@@ -29,7 +29,7 @@ const operate = <SwitchAnimation {...props} width={600}/>;
 
 
 
-export default function ProcedureBubble(props) {
+export default function ProcedureSelection(props) {
 
     const data = {
         color: color,

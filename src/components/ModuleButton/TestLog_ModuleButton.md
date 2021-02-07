@@ -1,38 +1,43 @@
+reason/description里面写为什么test fail了
+对**组件代码**做修改和修改的理由写在每个代码块前的注释里（由于没有通过test，而对**原码**做的修改）
+有必要的话，贴一下test的代码
+第一个version可以不写注释 最后一个version(pass的version)可以不写reason
+
+#### ComponentName: ModuleButton
+
+|Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
+|-------|----|---------|-------------------|----------------|----------------|
+|1 | 1.22 | Fail | All | No code has been constructed |version 1|
+|2 | 1.22 | Pass |/|Initial version is created|version 2|
+
+##### Code - version 2
+```javascript
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
-import "@fontsource/roboto";
+import "@fontsource/roboto"
 
 export default function ModuleButton(props) {
-    const {width, height, color, preOne, image, onClick} = props;
-    const borderWidth = preOne ? "3px" : "0px";
-    const presentHeight = preOne ? height - 3 : height;
-
-    // styles of this module button
     const useStyles = makeStyles((theme) => ({
         root: {
-            // boxShadow: "2px 8px 30px 2px #888888",
-            borderTopLeftRadius: 17,
-            borderTopRightRadius: 17,
-            borderBottomRightRadius: 0,
-            borderBottomLeftRadius: 0,
-            borderColor: color,
-            borderStyle: "solid",
-            borderWidth: borderWidth,
-            borderBottomWidth: "0px",
+            boxShadow: "2px 8px 30px 2px #888888",
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+            borderBottomRightRadius: 2,
+            borderBottomLeftRadius: 2,
             marginTop: 5,
-            marginBottom: 0,
+            marginBottom: 5,
             display: "flex",
             flexWrap: "wrap",
             minWidth: 200,
-            minHeight: 180,
-            width: width,
-            height: presentHeight,
+            minHeight: 200,
+            width: props.width,
+            height: props.height,
         },
         image: {
             position: "relative",
-            height: presentHeight,
+            height: 200,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
@@ -41,7 +46,7 @@ export default function ModuleButton(props) {
             "&:hover, &$focusVisible": {
                 zIndex: 1,
                 "& $imageBackdrop": {
-                    backgroundImage: `url(${image.gif})`,
+                    backgroundImage: `url(${props.image.gif})`,
                     backgroundColor: "",
                     opacity: 1,
                 },
@@ -53,8 +58,8 @@ export default function ModuleButton(props) {
         },
         focusVisible: {},
         imageButton: {
-            borderTopLeftRadius: 17,
-            borderTopRightRadius: 17,
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
             position: "absolute",
             left: 0,
             right: 0,
@@ -66,9 +71,9 @@ export default function ModuleButton(props) {
             color: theme.palette.common.white,
         },
         imageSrc: {
-            borderTopLeftRadius: 17,
-            borderTopRightRadius: 17,
-            // backgroundImage: `url(${props.image.static})`,
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+            backgroundImage: `url(${props.image.static})`,
             position: "absolute",
             left: 0,
             right: 0,
@@ -78,9 +83,9 @@ export default function ModuleButton(props) {
             backgroundPosition: "center 40%",
         },
         imageBackdrop: {
-            borderTopLeftRadius: 15,
-            borderTopRightRadius: 15,
-            // backgroundImage: `url(${props.image.static})`,
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+            backgroundImage: `url(${props.image.static})`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center 40%",
@@ -89,23 +94,17 @@ export default function ModuleButton(props) {
             right: 0,
             top: 0,
             bottom: 0,
-            // backgroundColor: theme.palette.common.grey,
-            backgroundColor: "#d5d5d5",
-            opacity: 1,
+            backgroundColor: theme.palette.common.grey,
+            opacity: 0.4,
             transition: theme.transitions.create("opacity"),
         },
         imageTitle: {
             position: "absolute",
-            right: 0,
-            bottom: 0,
-            // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
-            //     theme.spacing(1) + 6
-            // }px`,
-            paddingBottom: 5,
-            paddingRight: 10,
+            padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
+                theme.spacing(1) + 6
+            }px`,
             fontFamily: "Roboto",
             fontSize: 20,
-            color: "white",
         },
     }));
 
@@ -115,37 +114,35 @@ export default function ModuleButton(props) {
         <div className={classes.root}>
             <ButtonBase
                 // focusRipple
-                key={image.title}
+                key={props.image.title}
                 className={classes.image}
                 focusVisibleClassName={classes.focusVisible}
-                onClick={onClick}
+                onClick={props.onClick}
             >
-                
-                {/* background of the button */}
                 <span
                     className={classes.imageSrc}
                     style={{
                         // backgroundImage: `url(${props.image.static})`,
-                        backgroundColor: "#d5d5d5",
+                        backgroundColor: 'grey',
                     }}
                 />
-
-                {/* a layer beyond the background */}
                 <span className={classes.imageBackdrop} />
 
-                {/* title */}
                 <span className={classes.imageButton}>
                     <Typography
                         component='span'
                         variant='subtitle1'
-                        color= 'inherit'
+                        color='inherit'
                         className={classes.imageTitle}
                     >
-                        {image.title}
+                        {props.image.title}
                     </Typography>
                 </span>
-
             </ButtonBase>
         </div>
     );
 }
+
+```
+
+
