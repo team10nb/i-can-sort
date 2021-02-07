@@ -102,7 +102,7 @@ export default function ProcedureSubPage(props) {
       },
 
     },
-      // direction: 'ltr',
+    
   });
 
   const [value, setValue] = React.useState(1);
@@ -127,12 +127,12 @@ export default function ProcedureSubPage(props) {
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
-          // className={classes.tabs}
+          
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
           background = "primary"
-          // textColor="primary"
+          
           variant="fullWidth"
           aria-label="full width tabs example"
         >
@@ -188,11 +188,7 @@ export default function ProcedureSubPage(props) {
 
         <TabPanel value={value} index={3} dir={theme.direction}>
           <div >
-          {/* <Card >
-          <CardContent>
-            Introduction page
-          </CardContent>
-          </Card> */}
+        
           <Card >
           <CardContent>
             Implementation page

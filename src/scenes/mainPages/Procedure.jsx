@@ -1,7 +1,8 @@
 // The procedure main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
 import {Link} from 'react-router-dom';
-import SetAndHelp from '../../components/Buttons/SetAndHelp';
+import Set from '../../components/Buttons/Set';
+import PHelp from '../../components/Buttons/PHelp';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
 import { makeStyles,createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
@@ -28,7 +29,13 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       paddingLeft: 30,
       paddingTop: 30,
-    }
+    },
+  buttonSet:{
+    display:"flex",
+    '& > *': {
+      margin: theme.spacing(0),
+    },
+  },
 }));
 
 //Set theme color
@@ -194,8 +201,8 @@ function ProcedureMainPage(props) {
           </Grid>
 
           <Grid item xs={12}>
-            <div style={{textAlign:"left"}}>
-            <SetAndHelp {...props2}/>
+            <div className = {classes.buttonSet}>
+            <Set /><PHelp {...props2}/>
             </div>
           </Grid>
 
