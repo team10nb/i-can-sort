@@ -126,8 +126,8 @@ function CorrectnessMainPage(props) {
           <Grid container spacing={0} >
 
           <Grid item xs={6} sm={3} >
-          <Link to="/Page">
-              <Module {...bubbleProps} />
+          <Link to="/CorrectnessSubpage/Tutorial">
+              <Module {...props2} />
           </Link>
           </Grid>
 
