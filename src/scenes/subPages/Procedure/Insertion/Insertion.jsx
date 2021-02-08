@@ -3,6 +3,7 @@ import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
+import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = InsertionSort(arr);
@@ -15,17 +16,10 @@ const introMessage = <div>
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={600}/>,
+    animation: <SwitchAnimation {...props} width={500}/>,
 }
 
-// const operate = <div>
-//                 <h1>Operation</h1>
-//                 <h2><font color = "white"> Goodbye world </font></h2>
-//                 <p>wow, goodbye bird!</p>
-//                 <li>wow, goodbye tree</li>
-//             </div>;
-
-const operate = <SwitchAnimation {...props} width={600}/>;
+const operate = <SwitchSort sort={"Insertion"}/>;
 
 
 

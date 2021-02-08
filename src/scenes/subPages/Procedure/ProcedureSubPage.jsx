@@ -39,12 +39,18 @@ const useStyles = makeStyles((theme) => ({
   },
   cardOne:{
     background: "#F0F0F0",
-    width: "30%",
+    width: "40%",
     height: 520
   },
   cardTwo:{
     background: "#F0F0F0",
-    width: "70%",
+    width: "60%",
+    height: 520,
+    alignItems:"center",
+  },
+  cardOperation:{
+    background: "#F0F0F0",
+    width: "100%",
     height: 520,
     alignItems:"center",
   },
@@ -172,12 +178,12 @@ export default function ProcedureSubPage(props) {
 
         <TabPanel value={value} index={2} dir={theme.direction}>
           <div className = {classes.div}>
-            <Card className={classes.cardOne}>
+            {/* <Card className={classes.cardOne}>
               <CardContent>
                 {/* {props.operate} */}
-              </CardContent>
-            </Card>
-            <Card className={classes.cardTwo}>
+              {/* </CardContent>
+            </Card> */} 
+            <Card className={classes.cardOperation}>
               <CardContent>
                 {props.operate}
               </CardContent>
