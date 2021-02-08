@@ -1,9 +1,9 @@
 import React from 'react';
-import Scenes from './SubScenes'
+import {color} from '../../mainPages/Correctness';
 
-export default function Procedure() {
+export default function CorrectnessSubPage() {
     const props = {
-        color: "secondary"
+        color: color,
     };
     return(
         <div>
@@ -11,3 +11,4 @@ export default function Procedure() {
         </div>
     );
 }
+

@@ -38,4 +38,3 @@
 |should call AnimationControl||||
 | should match Snapshot | Compare new snapshot with old one. |  | Snapshots are the same. |
 
-
