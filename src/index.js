@@ -1,18 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import reportWebVitals from "./reportWebVitals";
-// import { BrowserRouter } from "react-router-dom";
-// import Routers from "./Routers";
-// import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
-import SwitchSort from "./components/SwitchSort/SwitchSort";
-import { BrowserRouter } from "react-router-dom";
-import Routers from "./Routers";
+import reportWebVitals from "./reportWebVitals";
+// import SwitchSort from "./components/SwitchSort/SwitchSort";
 // import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import "./styles.css";
-// import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-// import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
-// import InsertionSort from "./components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+import App from './App';
 
 // let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 
@@ -25,13 +18,22 @@ import "./styles.css";
 
 // const App = () => <SwitchAnimation />;
 
-ReactDOM.render(
-    // <App />,
-    // <React.StrictMode>
-    <BrowserRouter>
+// ReactDOM.render(
+//     <App />,
+//     // <React.StrictMode>
+//     // <BrowserRouter>
+ 
+//     // <Routers />
+//     // </BrowserRouter>,
+//     // </React.StrictMode>,
+//     document.getElementById("root")
+// );
 
-    <Routers />
-    </BrowserRouter>,
-    // </React.StrictMode>,
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
     document.getElementById("root")
 );
+
+reportWebVitals();

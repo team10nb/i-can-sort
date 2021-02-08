@@ -1,6 +1,6 @@
 // The correctness main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Set from '../../components/Buttons/Set';
 import CHelp from '../../components/Buttons/CHelp';
 import Module from '../../components/Module/Module';

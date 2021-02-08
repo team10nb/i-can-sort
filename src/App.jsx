@@ -1,61 +1,47 @@
 import React from "react";
-import Module from "./components/Module/Module";
+import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+import Tutorial from './scenes/Tutorial';
+import Exercise from './scenes/Exercise';
+import CorrectnessMainPage from './scenes/mainPages/Correctness';
+import ProcedureMainPage from './scenes/mainPages/Procedure';
+import EfficiencyMainPage from './scenes/mainPages/Efficiency';
+import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 
-function App() {
-    const [progress, setProgress] = React.useState(45);
-    const [progress2, setProgress2] = React.useState(15);
-
-    const handleClick = (setterProgress) => () => {
-        setterProgress((oldProgress) => {
-            if (oldProgress === 100) {
-                return 0;
-            }
-            const diff = Math.random() * 10;
-            return Math.min(oldProgress + diff, 100);
-        });
-        console.log(progress);
-    };
-
-    const image = {
-        static: "./logo512.png",
-        gif: "catch.gif",
-        title: "Bubble sort",
-        width: "20%",
-    };
-    const image2 = {
-        static: "./logo512.png",
-        gif: "sorting.gif",
-        title: "Bubble sort",
-        width: "20%",
-    };
-
-    const props = {
-        image: image,
-        width: 200,
-        height: 180,
-        onClick: handleClick(setProgress),
-        progress: progress,
-        color: "#004D80",
-        preOne: true,
-    };
-    const props2 = {
-        image: image2,
-        width: 200,
-        height: 180,
-        onClick: handleClick(setProgress2),
-        progress: progress2,
-        color: "#1a90ff",
-        preOne: false,
-    };
-
-    return (
-        <div>
-            <Module {...props} />
-            <Module {...props2} />
-            <Module {...props} />
-            <Module {...props2} />
-        </div>
+//Return routes
+function Routers() {
+    return(
+        <Router >
+            <div>
+            <Switch>
+            <Route path="/Tutorial" component={Tutorial} />
+            {/* <Route path="/ProcedureMainPage" render={props => <ProcedureMainPage algoProcess="0" {...props}/>} /> */}
+            <Route path="/ProcedureMainPage" component={ProcedureMainPage} />
+            <Route path="/EfficiencyMainPage" component={EfficiencyMainPage} />
+            <Route path="/CorrectnessMainPage" component={CorrectnessMainPage} />
+            <Route path="/Exercise" component={Exercise} />
+            <Route path="/ProcedureSubPage"
+                render={() => {
+                    return(
+                        <Switch>
+                            {ProcedureRouters.map((route, algorithm) => (
+                                <Route
+                                key={algorithm}
+	                        	path={route.path}
+	                        	component={route.component}
+                                />
+                            ))}
+                        </Switch>
+                    );
+                }}
+            ></Route>
+            <Route path="/" component={ProcedureMainPage}/>
+            </Switch>
+            </div>
+        </Router>
     );
 }
 
-export default App;
+
+export default function App() {
+    return(<Routers/>);
+}
