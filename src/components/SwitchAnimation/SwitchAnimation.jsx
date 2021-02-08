@@ -86,6 +86,7 @@ export const SwitchAnimation = (props) => {
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
+            // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -95,10 +96,12 @@ export const SwitchAnimation = (props) => {
             pause();
             resume();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playSpeed]);
 
     useEffect(() => {
         handleResetClick();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trace]);
 
     // It is used to open the speed menu
