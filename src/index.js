@@ -4,14 +4,14 @@ import "./index.css";
 // import reportWebVitals from "./reportWebVitals";
 // import { BrowserRouter } from "react-router-dom";
 // import Routers from "./Routers";
-import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
+// import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import SwitchSort from "./components/SwitchSort/SwitchSort";
 import "./styles.css";
-import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
-import InsertionSort from "./components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+// import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
+// import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
+// import InsertionSort from "./components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
+// let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 
 // ****************************************************
 

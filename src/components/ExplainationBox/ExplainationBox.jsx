@@ -19,7 +19,7 @@ const ExplainationBox = withStyles({
 })(Paper);
 
 export default function SimplePaper(props) {
-    const { color, width } = props;
+    const { width } = props;
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",

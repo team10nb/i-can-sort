@@ -11,6 +11,8 @@ reason/description里面写为什么test fail了
 |2 | 1.27 | Pass |/|Initial version is created|version 2|
 |3 | 2.4 | Fail |should match snapshot|Change props passing|version 3|
 |4 | 2.4 | Pass | /                     |Snapshot updated|version 4|
+|5 | 2.7 | Fail | should call AnimationSlider, should call AnimationControl |useEffect causes another call to those two components|version 5|
+|6 | 2.7 | Pass | / |modify test file, update to 2 times|version 6|
 
 ##### Code - version 2
 ```javascript
@@ -325,4 +327,23 @@ export const SwitchAnimation = (props) => {
 export default SwitchAnimation;
 ```
 
+##### Code - version 6
 
+```javascript
+test('should call AnimationSlider', () => {
+    jest.restoreAllMocks();
+    const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
+    const content = render(<SwitchAnimation {...props}/>);
+    content.getByText("mockAnimationSlider");
+    expect(sliderSpy).toBeCalledTimes(2);
+})
+
+test('should call AnimationControl', () => {
+    jest.restoreAllMocks();
+    const controlSpy = jest.spyOn(AnimationControls, "default").mockImplementation(() => <div>mockAnimationControl</div>);
+
+    const {getByText} = render(<SwitchAnimation {...props}/>);
+    getByText("mockAnimationControl");
+    expect(controlSpy).toBeCalledTimes(2);
+});
+```

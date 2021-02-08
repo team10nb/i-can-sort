@@ -52,7 +52,6 @@ const CssTextField = withStyles({
 
 export default function InputBar(props) {
     const {
-        color,
         defaultArr,
         isValid,
         wrongMsg,
