@@ -16,7 +16,7 @@ const MenuItem = withStyles({
     },
 })(MuiMenuItem);
 
-export default function SimpleMenu(props) {
+export default function SpeedMenu(props) {
     const { handleClick, handleClose, anchorEl, speed } = props;
 
     const useStyles = makeStyles({

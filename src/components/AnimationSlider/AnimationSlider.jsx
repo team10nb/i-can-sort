@@ -36,7 +36,7 @@ const PrettoSlider = withStyles({
     }
 })(Slider);
 
-export default function DiscreteSlider(props) {
+export default function AnimationSlider(props) {
     const { step, max, handleChange, value, width } = props;
 
     const useStyles = makeStyles({
