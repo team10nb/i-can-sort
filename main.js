@@ -14,8 +14,7 @@ mainWindow = new BrowserWindow({
     resizable: false,
     maximizable: false,
     webPreferences: {
-      nodeIntegration: true,
-      webSecurity: false,
+      nodeIntegration: true
     }
   })
 

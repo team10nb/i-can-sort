@@ -27,8 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron-start": "electron .",
-    "styleguide": "styleguidist server  --config config/styleguidist.config.js",
-    "styleguide:build": "styleguidist build --config config/styleguidist.config.js"
+    "styleguide": "styleguidist server  --config styleguidist.config.js",
+    "styleguide:build": "styleguidist build --config styleguidist.config.js"
   },
   "eslintConfig": {
     "extends": [

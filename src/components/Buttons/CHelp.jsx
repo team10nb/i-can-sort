@@ -20,10 +20,6 @@ import Dialog from '@material-ui/core/Dialog';
 // import logo2 from '../../Resource/Chelp2.png';
 // import logo3 from '../../Resource/Chelp3.png';
 import {color} from '../../scenes/mainPages/Correctness';
-import Clogo from '../../Resource/pictureLoader';
-const logo1 = Clogo[0]; 
-const logo2 = Clogo[1]; 
-const logo3 = Clogo[2]; 
 
 {/*
   This function is for designing the set and help button  
@@ -62,7 +58,7 @@ const logo3 = Clogo[2];
       case 0:
         return (
           <CardActionArea >
-            <img src={logo1} alt="logo1" width='587' heigh='300'  />
+            {/* <img src={logo1} alt="logo1" width='587' heigh='300'  /> */}
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 This a entry for each sorting algorithm.
@@ -76,7 +72,7 @@ const logo3 = Clogo[2];
       case 1:
         return (
           <CardActionArea >
-            <img src={logo2} alt="logo2" width='587' heigh='300'  />
+            {/* <img src={logo2} alt="logo2" width='587' heigh='300'  /> */}
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 Left one is a setting button, click  it to change settings.
@@ -136,7 +132,7 @@ const logo3 = Clogo[2];
               {activeStep === steps - 1 ? (
               <div>
                 <CardActionArea  >               
-                  <img src={logo3} alt="logo3" width='587' heigh='300'  />
+                  {/* <img src={logo3} alt="logo3" width='587' heigh='300'  /> */}
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
                       This a choice menu. Menu contains Tutorial, Procedure, Efficiency, Correctness and Exercise.
