@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 //The subpages are corresponding to menu items
-function TabPanel(props) {
+export function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -100,7 +100,7 @@ export default function ProcedureSubPage(props) {
       secondary: {
         main: "#FFFFFF"
       },
-
+      
     },
     
   });

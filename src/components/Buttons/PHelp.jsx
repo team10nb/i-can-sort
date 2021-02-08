@@ -36,7 +36,7 @@ const logo3 = Plogo[2];
       justifyContent: 'center',
     },
     card: {
-      maxWidth: 587,
+      maxWidth: 580,
       minHeight: 560,
     },
     avatar: {

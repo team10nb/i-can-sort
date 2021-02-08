@@ -14,7 +14,8 @@ mainWindow = new BrowserWindow({
     resizable: false,
     maximizable: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webSecurity: false,
     }
   })
 
@@ -48,4 +49,16 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow()
   }
+})
+
+app.whenReady().then(() => {
+	//注册FileProtocol
+  protocol.interceptFileProtocol('file', (req, callback) => {
+    const url = req.url.substr(8);
+    callback(slash(decodeURI(url)));
+  }, (error) => {
+    if (error) {
+      console.error('Failed to register protocol');
+    }
+  });
 })

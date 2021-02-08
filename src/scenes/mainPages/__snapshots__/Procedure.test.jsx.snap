@@ -6,11 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-div-8"
-        style="border: 1px; border-style: solid;"
+        class="makeStyles-div-9"
       >
         <div
-          class="makeStyles-grid-7"
+          class="makeStyles-grid-8"
         >
           <div
             class="MuiGrid-root MuiGrid-container"
@@ -25,25 +24,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-9"
+                    class="makeStyles-root-11"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-10"
+                      class="MuiButtonBase-root makeStyles-image-12"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-13"
+                        class="makeStyles-imageSrc-15"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-14"
+                        class="makeStyles-imageBackdrop-16"
                       />
                       <span
-                        class="makeStyles-imageButton-12"
+                        class="makeStyles-imageButton-14"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-15 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bubble sort
                         </span>
@@ -54,17 +53,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-16"
+                    class="makeStyles-root-18"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-17 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-18 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-19 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-20 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-19 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-21 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -82,25 +81,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-20"
+                    class="makeStyles-root-22"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-21"
+                      class="MuiButtonBase-root makeStyles-image-23"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-24"
+                        class="makeStyles-imageSrc-26"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-25"
+                        class="makeStyles-imageBackdrop-27"
                       />
                       <span
-                        class="makeStyles-imageButton-23"
+                        class="makeStyles-imageButton-25"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-26 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Selection sort
                         </span>
@@ -111,17 +110,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-27"
+                    class="makeStyles-root-29"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-28 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-29 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-30 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-31 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-30 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-32 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -139,25 +138,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-31"
+                    class="makeStyles-root-33"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-32"
+                      class="MuiButtonBase-root makeStyles-image-34"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-35"
+                        class="makeStyles-imageSrc-37"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-36"
+                        class="makeStyles-imageBackdrop-38"
                       />
                       <span
-                        class="makeStyles-imageButton-34"
+                        class="makeStyles-imageButton-36"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-37 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Insertion sort
                         </span>
@@ -168,17 +167,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-38"
+                    class="makeStyles-root-40"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-39 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-40 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-41 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-42 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-41 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-43 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -196,25 +195,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-42"
+                    class="makeStyles-root-44"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-43"
+                      class="MuiButtonBase-root makeStyles-image-45"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-46"
+                        class="makeStyles-imageSrc-48"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-47"
+                        class="makeStyles-imageBackdrop-49"
                       />
                       <span
-                        class="makeStyles-imageButton-45"
+                        class="makeStyles-imageButton-47"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-48 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-50 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bub sort
                         </span>
@@ -225,17 +224,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-49"
+                    class="makeStyles-root-51"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-50 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-51 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-52 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-53 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-52 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-54 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -253,25 +252,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-53"
+                    class="makeStyles-root-55"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-54"
+                      class="MuiButtonBase-root makeStyles-image-56"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-57"
+                        class="makeStyles-imageSrc-59"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-58"
+                        class="makeStyles-imageBackdrop-60"
                       />
                       <span
-                        class="makeStyles-imageButton-56"
+                        class="makeStyles-imageButton-58"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-59 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-61 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bub sort
                         </span>
@@ -282,17 +281,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-60"
+                    class="makeStyles-root-62"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-61 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-62 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-63 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-64 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-63 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-65 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -310,25 +309,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-64"
+                    class="makeStyles-root-66"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-65"
+                      class="MuiButtonBase-root makeStyles-image-67"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-68"
+                        class="makeStyles-imageSrc-70"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-69"
+                        class="makeStyles-imageBackdrop-71"
                       />
                       <span
-                        class="makeStyles-imageButton-67"
+                        class="makeStyles-imageButton-69"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-70 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-72 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bub sort
                         </span>
@@ -339,17 +338,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-71"
+                    class="makeStyles-root-73"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-72 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-73 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-74 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-75 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-74 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-76 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -367,25 +366,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-75"
+                    class="makeStyles-root-77"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-76"
+                      class="MuiButtonBase-root makeStyles-image-78"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-79"
+                        class="makeStyles-imageSrc-81"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-80"
+                        class="makeStyles-imageBackdrop-82"
                       />
                       <span
-                        class="makeStyles-imageButton-78"
+                        class="makeStyles-imageButton-80"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-81 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-83 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bub sort
                         </span>
@@ -396,17 +395,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-82"
+                    class="makeStyles-root-84"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-83 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-84 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-85 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-86 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-85 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-87 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -424,25 +423,25 @@ Object {
                   style="display: inline-block; margin: 10px;"
                 >
                   <div
-                    class="makeStyles-root-86"
+                    class="makeStyles-root-88"
                   >
                     <button
-                      class="MuiButtonBase-root makeStyles-image-87"
+                      class="MuiButtonBase-root makeStyles-image-89"
                       tabindex="0"
                       type="button"
                     >
                       <span
-                        class="makeStyles-imageSrc-90"
+                        class="makeStyles-imageSrc-92"
                         style="background-color: rgb(213, 213, 213);"
                       />
                       <span
-                        class="makeStyles-imageBackdrop-91"
+                        class="makeStyles-imageBackdrop-93"
                       />
                       <span
-                        class="makeStyles-imageButton-89"
+                        class="makeStyles-imageButton-91"
                       >
                         <span
-                          class="MuiTypography-root makeStyles-imageTitle-92 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                          class="MuiTypography-root makeStyles-imageTitle-94 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
                           Bub sort
                         </span>
@@ -453,17 +452,17 @@ Object {
                     </button>
                   </div>
                   <div
-                    class="makeStyles-root-93"
+                    class="makeStyles-root-95"
                   >
                     <div
                       aria-valuemax="100"
                       aria-valuemin="0"
                       aria-valuenow="0"
-                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-94 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-95 MuiLinearProgress-determinate"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-96 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-97 MuiLinearProgress-determinate"
                       role="progressbar"
                     >
                       <div
-                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-96 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-98 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -475,43 +474,46 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
             >
               <div
-                style="text-align: left;"
+                class="makeStyles-buttonSet-10"
               >
-                <div
-                  class="makeStyles-root-97"
-                >
-                  <a
-                    href="/Setting"
+                <div>
+                  <button
+                    aria-label="setting"
+                    class="MuiButtonBase-root MuiIconButton-root"
+                    tabindex="0"
+                    title="setting"
+                    type="button"
                   >
-                    <button
-                      aria-label="setting"
-                      class="MuiButtonBase-root MuiIconButton-root"
-                      tabindex="0"
-                      type="button"
+                    <span
+                      class="MuiIconButton-label"
                     >
-                      <span
-                        class="MuiIconButton-label"
+                       
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
+                        <path
+                          d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                  <div
+                    class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                    style="width: 20px;"
+                  />
+                </div>
+                <div>
                   <button
                     aria-label="help"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
+                    title="tutorial"
                     type="button"
                   >
                     <span
@@ -542,14 +544,14 @@ Object {
                 style="margin-left: -8px; margin-top: 50px;"
               >
                 <div
-                  class="makeStyles-root-5"
+                  class="makeStyles-root-6"
                 >
                   <a
                     href="/Tutorial"
                     style="text-decoration: none;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                       tabindex="0"
                       type="button"
                     >
@@ -564,7 +566,7 @@ Object {
                     </button>
                   </a>
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6 MuiButton-containedPrimary MuiButton-disableElevation"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
                     tabindex="0"
                     type="button"
                   >
@@ -582,7 +584,7 @@ Object {
                     style="text-decoration: none;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                       tabindex="0"
                       type="button"
                     >
@@ -601,7 +603,7 @@ Object {
                     style="text-decoration: none;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                       tabindex="0"
                       type="button"
                     >
@@ -620,7 +622,7 @@ Object {
                     style="text-decoration: none;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                       tabindex="0"
                       type="button"
                     >
@@ -644,11 +646,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-div-8"
-      style="border: 1px; border-style: solid;"
+      class="makeStyles-div-9"
     >
       <div
-        class="makeStyles-grid-7"
+        class="makeStyles-grid-8"
       >
         <div
           class="MuiGrid-root MuiGrid-container"
@@ -663,25 +664,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-9"
+                  class="makeStyles-root-11"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-10"
+                    class="MuiButtonBase-root makeStyles-image-12"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-13"
+                      class="makeStyles-imageSrc-15"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-14"
+                      class="makeStyles-imageBackdrop-16"
                     />
                     <span
-                      class="makeStyles-imageButton-12"
+                      class="makeStyles-imageButton-14"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-15 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bubble sort
                       </span>
@@ -692,17 +693,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-16"
+                  class="makeStyles-root-18"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-17 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-18 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-19 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-20 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-19 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-21 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -720,25 +721,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-20"
+                  class="makeStyles-root-22"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-21"
+                    class="MuiButtonBase-root makeStyles-image-23"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-24"
+                      class="makeStyles-imageSrc-26"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-25"
+                      class="makeStyles-imageBackdrop-27"
                     />
                     <span
-                      class="makeStyles-imageButton-23"
+                      class="makeStyles-imageButton-25"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-26 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Selection sort
                       </span>
@@ -749,17 +750,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-27"
+                  class="makeStyles-root-29"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-28 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-29 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-30 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-31 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-30 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-32 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -777,25 +778,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-31"
+                  class="makeStyles-root-33"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-32"
+                    class="MuiButtonBase-root makeStyles-image-34"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-35"
+                      class="makeStyles-imageSrc-37"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-36"
+                      class="makeStyles-imageBackdrop-38"
                     />
                     <span
-                      class="makeStyles-imageButton-34"
+                      class="makeStyles-imageButton-36"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-37 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Insertion sort
                       </span>
@@ -806,17 +807,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-38"
+                  class="makeStyles-root-40"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-39 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-40 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-41 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-42 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-41 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-43 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -834,25 +835,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-42"
+                  class="makeStyles-root-44"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-43"
+                    class="MuiButtonBase-root makeStyles-image-45"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-46"
+                      class="makeStyles-imageSrc-48"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-47"
+                      class="makeStyles-imageBackdrop-49"
                     />
                     <span
-                      class="makeStyles-imageButton-45"
+                      class="makeStyles-imageButton-47"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-48 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-50 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bub sort
                       </span>
@@ -863,17 +864,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-49"
+                  class="makeStyles-root-51"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-50 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-51 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-52 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-53 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-52 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-54 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -891,25 +892,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-53"
+                  class="makeStyles-root-55"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-54"
+                    class="MuiButtonBase-root makeStyles-image-56"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-57"
+                      class="makeStyles-imageSrc-59"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-58"
+                      class="makeStyles-imageBackdrop-60"
                     />
                     <span
-                      class="makeStyles-imageButton-56"
+                      class="makeStyles-imageButton-58"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-59 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-61 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bub sort
                       </span>
@@ -920,17 +921,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-60"
+                  class="makeStyles-root-62"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-61 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-62 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-63 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-64 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-63 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-65 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -948,25 +949,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-64"
+                  class="makeStyles-root-66"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-65"
+                    class="MuiButtonBase-root makeStyles-image-67"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-68"
+                      class="makeStyles-imageSrc-70"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-69"
+                      class="makeStyles-imageBackdrop-71"
                     />
                     <span
-                      class="makeStyles-imageButton-67"
+                      class="makeStyles-imageButton-69"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-70 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-72 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bub sort
                       </span>
@@ -977,17 +978,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-71"
+                  class="makeStyles-root-73"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-72 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-73 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-74 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-75 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-74 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-76 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -1005,25 +1006,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-75"
+                  class="makeStyles-root-77"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-76"
+                    class="MuiButtonBase-root makeStyles-image-78"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-79"
+                      class="makeStyles-imageSrc-81"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-80"
+                      class="makeStyles-imageBackdrop-82"
                     />
                     <span
-                      class="makeStyles-imageButton-78"
+                      class="makeStyles-imageButton-80"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-81 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-83 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bub sort
                       </span>
@@ -1034,17 +1035,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-82"
+                  class="makeStyles-root-84"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-83 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-84 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-85 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-86 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-85 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-87 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -1062,25 +1063,25 @@ Object {
                 style="display: inline-block; margin: 10px;"
               >
                 <div
-                  class="makeStyles-root-86"
+                  class="makeStyles-root-88"
                 >
                   <button
-                    class="MuiButtonBase-root makeStyles-image-87"
+                    class="MuiButtonBase-root makeStyles-image-89"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="makeStyles-imageSrc-90"
+                      class="makeStyles-imageSrc-92"
                       style="background-color: rgb(213, 213, 213);"
                     />
                     <span
-                      class="makeStyles-imageBackdrop-91"
+                      class="makeStyles-imageBackdrop-93"
                     />
                     <span
-                      class="makeStyles-imageButton-89"
+                      class="makeStyles-imageButton-91"
                     >
                       <span
-                        class="MuiTypography-root makeStyles-imageTitle-92 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        class="MuiTypography-root makeStyles-imageTitle-94 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
                         Bub sort
                       </span>
@@ -1091,17 +1092,17 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-root-93"
+                  class="makeStyles-root-95"
                 >
                   <div
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-94 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-95 MuiLinearProgress-determinate"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-96 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-97 MuiLinearProgress-determinate"
                     role="progressbar"
                   >
                     <div
-                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-96 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-98 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -1113,43 +1114,46 @@ Object {
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
           >
             <div
-              style="text-align: left;"
+              class="makeStyles-buttonSet-10"
             >
-              <div
-                class="makeStyles-root-97"
-              >
-                <a
-                  href="/Setting"
+              <div>
+                <button
+                  aria-label="setting"
+                  class="MuiButtonBase-root MuiIconButton-root"
+                  tabindex="0"
+                  title="setting"
+                  type="button"
                 >
-                  <button
-                    aria-label="setting"
-                    class="MuiButtonBase-root MuiIconButton-root"
-                    tabindex="0"
-                    type="button"
+                  <span
+                    class="MuiIconButton-label"
                   >
-                    <span
-                      class="MuiIconButton-label"
+                     
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
+                      <path
+                        d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+                <div
+                  class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                  style="width: 20px;"
+                />
+              </div>
+              <div>
                 <button
                   aria-label="help"
                   class="MuiButtonBase-root MuiIconButton-root"
                   tabindex="0"
+                  title="tutorial"
                   type="button"
                 >
                   <span
@@ -1180,14 +1184,14 @@ Object {
               style="margin-left: -8px; margin-top: 50px;"
             >
               <div
-                class="makeStyles-root-5"
+                class="makeStyles-root-6"
               >
                 <a
                   href="/Tutorial"
                   style="text-decoration: none;"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                     tabindex="0"
                     type="button"
                   >
@@ -1202,7 +1206,7 @@ Object {
                   </button>
                 </a>
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6 MuiButton-containedPrimary MuiButton-disableElevation"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
                   tabindex="0"
                   type="button"
                 >
@@ -1220,7 +1224,7 @@ Object {
                   style="text-decoration: none;"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                     tabindex="0"
                     type="button"
                   >
@@ -1239,7 +1243,7 @@ Object {
                   style="text-decoration: none;"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                     tabindex="0"
                     type="button"
                   >
@@ -1258,7 +1262,7 @@ Object {
                   style="text-decoration: none;"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-6"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
                     tabindex="0"
                     type="button"
                   >

@@ -7,11 +7,13 @@ import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = BubbleSort(arr);
 
-const introMessage = <div>
+const introMessage =
+                <div>
                 <h1>Bubble sort</h1>
-                {/* <h2><font color = "white"> hello world </font></h2> */}
                 <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-            </div>;
+                </div>
+               
+           
 
 const intro = {
     introMessage: introMessage,
