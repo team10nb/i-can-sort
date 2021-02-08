@@ -16,7 +16,6 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 ```
 
 ###  **Props**
-width, color, progress, preOne
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
