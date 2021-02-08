@@ -16,9 +16,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Dialog from '@material-ui/core/Dialog';
-// import logo1 from '../../Resource/Phelp1.png';
-// import logo2 from '../../Resource/Phelp2.png';
-// import logo3 from '../../Resource/Phelp3.png';
+import logo1 from '../../Resource/Phelp1.png';
+import logo2 from '../../Resource/Phelp2.png';
+import logo3 from '../../Resource/Phelp3.png';
 import {color} from '../../scenes/mainPages/Procedure';
 
 {/*
@@ -58,7 +58,7 @@ import {color} from '../../scenes/mainPages/Procedure';
       case 0:
         return (
           <CardActionArea >
-            {/* <img src={logo1} alt="logo1" width='587' heigh='300'  /> */}
+            <img src={logo1} alt="logo1" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 This a entry for each sorting algorithm.
@@ -72,7 +72,7 @@ import {color} from '../../scenes/mainPages/Procedure';
       case 1:
         return (
           <CardActionArea >
-            {/* <img src={logo2} alt="logo2" width='587' heigh='300'  /> */}
+            <img src={logo2} alt="logo2" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 Left one is a setting button, click  it to change settings.
@@ -134,7 +134,7 @@ import {color} from '../../scenes/mainPages/Procedure';
               {activeStep === steps - 1 ? (
               <div>
                 <CardActionArea  >
-                  {/* <img src={logo3} alt="logo3" width='587' heigh='300'  /> */}
+                  <img src={logo3} alt="logo3" width='587' heigh='300'  />
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
                       This a choice menu. Menu contains Tutorial, Procedure, Efficiency, Correctness and Exercise.
