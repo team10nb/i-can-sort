@@ -6,6 +6,9 @@ import "./index.css";
 // import Routers from "./Routers";
 // import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import SwitchSort from "./components/SwitchSort/SwitchSort";
+import { BrowserRouter } from "react-router-dom";
+import Routers from "./Routers";
+// import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import "./styles.css";
 // import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 // import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
@@ -20,17 +23,15 @@ import "./styles.css";
 // let props = SelectionSort(arr);
 // let full = BubbleSort(arr);
 
-// const App = () => <SwitchAnimation {...props} width={600}/>;
-const App = () => <SwitchSort sort='Insertion' />;
-
+// const App = () => <SwitchAnimation />;
 
 ReactDOM.render(
+    // <App />,
     // <React.StrictMode>
-    // <BrowserRouter>
-    <App />,
+    <BrowserRouter>
 
-    // <Routers />
-    // </BrowserRouter>,
+    <Routers />
+    </BrowserRouter>,
     // </React.StrictMode>,
     document.getElementById("root")
 );
