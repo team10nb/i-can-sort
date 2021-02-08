@@ -9,13 +9,13 @@ import AnimationControl from "../AnimationControl/AnimationControl";
 // a framer motion transition attributes
 const spring = {
     type: "spring",     // a framer motion type that simulates spring
-    damping: 20,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
-    stiffness: 300,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
-    mass: 1,            // Mass of the moving object. Higher values will result in more lethargic movement
+    damping: 15,        //Strength of opposing force. If set to 0, spring will oscillate indefinitely
+    stiffness: 150,     //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
+    mass: 0.1,            // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
 export const SwitchAnimation = (props) => {
-    // const {trace, description} = props;
+    const {trace, description, width} = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -38,7 +38,8 @@ export const SwitchAnimation = (props) => {
         root: {
             display: "grid",
             justifyContent: "center",
-            alignContent: "center"
+            alignContent: "flex-end",
+            height: 480,
         },
         bars: {
             listStyle: "none",
@@ -65,8 +66,10 @@ export const SwitchAnimation = (props) => {
             justifyContent: "center",
         },
         barNumber: {
-            fontSize: "0.8em",
-            marginTop: "-20px",
+            fontSize: "16px",
+            marginTop: "-23px",
+            textAlign: "center",
+            fontWeight: "600",
         },
     });
 
@@ -207,25 +210,31 @@ export const SwitchAnimation = (props) => {
 
     return (
         <div className={classes.root}>
+            <p>{description[currentStep]}</p>
+            <br/><br/>
             {/* bars */}
             <ul className={classes.bars}>
                 {bars.map((background) => (
                     <motion.li
-                        key={background.backgroundColor} // each bar's identification
+                        key={background.key} // each bar's identification
                         layout
                         transition={spring}
                         style={background}
                         className={classes.bar}
+                        animate={{
+                            backgroundColor: background.backgroundColor,
+                            y: background.y,
+                        }}
                     >
                         <div className={classes.barNumber}>
-                            {background.height}
+                            {background.value}
                         </div>
                     </motion.li>
                 ))}
             </ul>
             
             <AnimationSlider
-                width='270px'
+                width= {width}
                 step={1}
                 max={trace.length - 1}
                 handleChange={handleSliderChange}
@@ -238,72 +247,7 @@ export const SwitchAnimation = (props) => {
     );
 };
 
-// sample trace, store each step's bar info
-// this value need to be transmitted
-const trace = [
-    [
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-    ],
-    [
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-    [
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-    [
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-    [
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-    ],
-    [
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-    [
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-    [
-        { height: "10px", backgroundColor: "#7700FF" },
-        { height: "20px", backgroundColor: "#66AA00" },
-        { height: "30px", backgroundColor: "#D309E1" },
-        { height: "50px", backgroundColor: "#FF008C" },
-        { height: "90px", backgroundColor: "#9C1AFF" },
-    ],
-];
 
-// 可能可以以以下的形式来做每一个数字的object
-// { styles: {height: "50px", backgroundColor: "#D309E1"}, // style, 用来造bar
-//   key: 1, // 这个是用来识别是哪个物体的唯一标志
-//   value: 50, //数字的大小, 对应高度
-//  }
 
 
 export default SwitchAnimation;

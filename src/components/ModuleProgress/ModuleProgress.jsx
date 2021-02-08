@@ -7,7 +7,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 export default function ModuleProgress(props) {
 
     const {width, color, progress, preOne} = props;
-    const presentingWidth = (width);
+    const presentingWidth = preOne ? (width + 6) : (width);
     // TODO if complete??
     const presentingColor = progress === 100 ? color : color;
 

@@ -7,8 +7,7 @@ import "@fontsource/roboto";
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;
     const borderWidth = preOne ? "3px" : "0px";
-    const imageHeight = preOne ? height - 3 : height;
-    const titlePadding = preOne ? 10 - 3 : 10;
+    const presentHeight = preOne ? height - 3 : height;
 
     // styles of this module button
     const useStyles = makeStyles((theme) => ({
@@ -21,6 +20,7 @@ export default function ModuleButton(props) {
             borderColor: color,
             borderStyle: "solid",
             borderWidth: borderWidth,
+            borderBottomWidth: "0px",
             marginTop: 5,
             marginBottom: 0,
             display: "flex",
@@ -28,11 +28,11 @@ export default function ModuleButton(props) {
             minWidth: 200,
             minHeight: 180,
             width: width,
-            height: height,
+            height: presentHeight,
         },
         image: {
             position: "relative",
-            height: imageHeight,
+            height: presentHeight,
             width: "100%",
             // [theme.breakpoints.down("xs")]: {
             //     width: "100% !important", // Overrides inline-style
@@ -102,7 +102,7 @@ export default function ModuleButton(props) {
             //     theme.spacing(1) + 6
             // }px`,
             paddingBottom: 5,
-            paddingRight: titlePadding,
+            paddingRight: 10,
             fontFamily: "Roboto",
             fontSize: 20,
             color: "white",
@@ -110,7 +110,7 @@ export default function ModuleButton(props) {
     }));
 
     const classes = useStyles();
-//
+
     return (
         <div className={classes.root}>
             <ButtonBase

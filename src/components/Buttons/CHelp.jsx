@@ -14,10 +14,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import logo1 from '../../Resource/Chelp1.png';
-import logo2 from '../../Resource/Chelp2.png';
-import logo3 from '../../Resource/Chelp3.png';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import Dialog from '@material-ui/core/Dialog';
+// import logo1 from '../../Resource/Chelp1.png';
+// import logo2 from '../../Resource/Chelp2.png';
+// import logo3 from '../../Resource/Chelp3.png';
 import {color} from '../../scenes/mainPages/Correctness';
+import Clogo from '../../Resource/pictureLoader';
+const logo1 = Clogo[0]; 
+const logo2 = Clogo[1]; 
+const logo3 = Clogo[2]; 
 
 {/*
   This function is for designing the set and help button  
@@ -30,8 +36,8 @@ import {color} from '../../scenes/mainPages/Correctness';
       justifyContent: 'center',
     },
     card: {
-      maxWidth: 587,
-      minHeight: 550,
+      maxWidth: 580,
+      minHeight: 560,
     },
     avatar: {
       backgroundColor: color,
@@ -88,16 +94,18 @@ import {color} from '../../scenes/mainPages/Correctness';
  
   export  default function CHelp() {
     const classes = useStyles();
-    //help button can pop out several dialogs
-    const [open, setOpen] = React.useState(false);
 
-    const handleOpen = () => {
+    const [open, setOpen] = React.useState(false);
+ 
+
+    const handleClickOpen = () => {
       setOpen(true);
     };
 
     const handleClose = () => {
       setOpen(false);
     };
+
 
     const [activeStep, setActiveStep] = React.useState(0);  
 
@@ -115,30 +123,19 @@ import {color} from '../../scenes/mainPages/Correctness';
     };
 
     const card =(
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition 
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-        timeout: 500,
-        }}
-      >
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
         <Fade in={open}>
           <Card className={classes.card}>
             <CardHeader
               avatar={
-                <Avatar aria-label="recipe" className={classes.avatar} >
-                  {activeStep + 1}
-                </Avatar>
+                <IconButton aria-label="close"  onClick={handleClose}>
+                <HighlightOffIcon  style={{ color: color, fontSize: 30  }} />
+              </IconButton>
               }
             />
               {activeStep === steps - 1 ? (
               <div>
-                <CardActionArea  >
+                <CardActionArea  >               
                   <img src={logo3} alt="logo3" width='587' heigh='300'  />
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
@@ -146,9 +143,10 @@ import {color} from '../../scenes/mainPages/Correctness';
                       Choose a module and click it.   
                     </Typography>                
                   </CardContent>
+                  
                 </CardActionArea>
                 <CardActions>
-                  <Button onClick={handleReset} className={classes.button}>Reset</Button>
+                  <Button onClick={handleReset} variant="outlined" style={{ color: color}}>Reset</Button>
                 </CardActions>
               </div>
               ) : (
@@ -156,7 +154,7 @@ import {color} from '../../scenes/mainPages/Correctness';
                   <div>
                     {getStepContent(activeStep)}                    
                       <CardActions>
-                        <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>Back</Button>                     
+                        <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined" style={{ color: color}}>Back</Button>                     
                         <Button
                           variant="contained"
                           color= {color}
@@ -170,13 +168,13 @@ import {color} from '../../scenes/mainPages/Correctness';
                 )}
           </Card> 
         </Fade>
-      </Modal>   
+      </Dialog>   
     );
 
     return(
       <div>
         <Tooltip title="tutorial" placement="bottom" arrow>
-          <IconButton aria-label="help"  onClick={handleOpen}>
+          <IconButton aria-label="help"  onClick={handleClickOpen}>
             <HelpOutlineOutlinedIcon />
           </IconButton>
         </Tooltip>

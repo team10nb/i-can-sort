@@ -48,3 +48,4 @@ yarn-error.log*
 
 .eslintcache
 package-lock.json
+/.idea/

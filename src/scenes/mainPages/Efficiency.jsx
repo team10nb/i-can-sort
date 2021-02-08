@@ -23,7 +23,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: 900,
     height: 600,
+    paddingLeft: 30,
+    paddingTop: 30,
   },
+  div: {
+      textAlign: "center",
+height: 690,
+width: 960,
+},
   buttonSet:{
     display:"flex",
     '& > *': {
@@ -37,7 +44,7 @@ const color = '#4caf50';
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Efficiency button is theme color without jump function
-function ChoiceMenu(){
+export function EfficiencyChoiceMenu(){
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -106,7 +113,7 @@ function EfficiencyMainPage(props) {
     };
 
     return (
-      <div style={{textAlign: "center", paddingLeft:"15%"}}>
+      <div className={classes.div}>
         <div className={classes.grid} >
           <Grid container spacing={0} >
 
@@ -166,7 +173,7 @@ function EfficiencyMainPage(props) {
 
           <Grid item xs={12}>
             <div style={{marginLeft:-8, marginTop: 50}}>
-            <ChoiceMenu/>
+            <EfficiencyChoiceMenu/>
             </div>
           </Grid>
 

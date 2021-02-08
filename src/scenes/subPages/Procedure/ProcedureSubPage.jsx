@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   div:{
     display: 'flex',    
+    width: 1020,
     '& > *': {
       margin: theme.spacing(3),
     }
@@ -39,19 +40,19 @@ const useStyles = makeStyles((theme) => ({
   cardOne:{
     background: "#F0F0F0",
     width: "30%",
-    height: 560
+    height: 520
   },
   cardTwo:{
     background: "#F0F0F0",
     width: "70%",
-    height: 560,
+    height: 520,
     alignItems:"center",
   },
 
 }));
 
 //The subpages are corresponding to menu items
-function TabPanel(props) {
+export function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -99,7 +100,7 @@ export default function ProcedureSubPage(props) {
       secondary: {
         main: "#FFFFFF"
       },
-
+      
     },
     
   });
@@ -122,7 +123,7 @@ export default function ProcedureSubPage(props) {
   };
 
   return (
-    <div>
+   <div >
       <ThemeProvider theme={theme}>
       <AppBar position="static" >
         <Tabs
@@ -156,12 +157,15 @@ export default function ProcedureSubPage(props) {
         <TabPanel value={value} index={1} dir={theme.direction}>
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
-              <CardContent>
-                {props.intro}
+              <CardContent >
+                {props.intro.introMessage}
               </CardContent>
             </Card>
-            <Card className={classes.cardTwo}>
-             
+            <Card className={classes.cardTwo} >
+              <CardContent >
+              {/* <CardContent > */}
+                {props.intro.animation}
+              </CardContent>
             </Card>
           </div>
         </TabPanel>
@@ -170,23 +174,32 @@ export default function ProcedureSubPage(props) {
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
               <CardContent>
+                {/* {props.operate} */}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}>
+              <CardContent>
                 {props.operate}
               </CardContent>
             </Card>
-            <Card className={classes.cardTwo}></Card>
           </div>
         </TabPanel>
 
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <div >
-        
-          <Card >
-          <CardContent>
-            Implementation page
-          </CardContent>
-          </Card>
+        <div className = {classes.div}>
+            <Card className={classes.cardOne}>
+              <CardContent>
+                {/* {props.operate} */}
+              </CardContent>
+            </Card>
+            <Card className={classes.cardTwo}>
+              <CardContent>
+                {props.operate}
+              </CardContent>
+            </Card>
           </div>
         </TabPanel>
+        
       </SwipeableViews>
       </ThemeProvider>
     </div>

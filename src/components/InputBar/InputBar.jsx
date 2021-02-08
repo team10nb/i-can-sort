@@ -1,90 +1,118 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-// import './InputBar.css';
-import {Input} from 'antd';
+import React, {useState, useRef, useImperativeHandle, forwardRef} from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+export default function InputBar(props, ref) {
+  const { color, defaultArr } = props;
+
+  const [str, setStr] = useState('');
+  const [arr, setArr] = useState([]);
+  const [isValid, setIsValid] = useState(true);
+  const [wrongMsg, setWrongMsg] = useState('');
 
 
 
+//   const componentDidMount = ()=>{
+//     this.props.onRef(this);
+//   }
 
-export default class InputBar extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            arr: [],
-            isValid: false,
-            wrongType: -1
-        };
-    }
-
+    // const childRef = useRef(null);
+    // useImperativeHandle(ref, () => { 
+    //     // return arr;
+    //     return {
+    //         //clickSwitch是子组件暴露的函数
+    //         getArr() {
+             
+    //             return childRef.current.arr;
+    //         }
+    //     }
     
-    handleNumbers = (e)=>{
-        console.log(e);
-        if(e && trim(e)){           
-            this.checkFormat(trim(e));
-        }else{
-            this.setState({
-                isValid: false,
-                wrongType: 1    // 输入框为空
-            });
-        }
-        return e;
-    }
+    // })
 
-    //用正则表达式保证数据
-    checkFormat(s){    
+
+  const storeInput = (e)=>{
+    const eValue = trim(e.target.value);
+    
+    if(e.target.value && eValue){     
+        setStr(eValue);
+        setIsValid(true);
+    }
+  }
+  
+
+//   用正则表达式保证数据
+    const checkFormat = () =>{  
+        // console.log(str);
+        const s = str;  
         // 只有一个数字 
         if(s.match(/^[0-9]*$/)){
-            this.setState({
-                isValid: false,
-                wrongType: 2       // 只有一个数字
-            });
-            // console.log(s);
-            // return "Please enter 2 or more numbers.";
+            setIsValid(false);
+
+            setWrongMsg('Please enter more than 1 number.');      // 只有一个数字
         }
         // 数字,数字,数字
         else if(s.match(/^\d+((,|，)\d+)*$/)){
-            this.setState({
-                isValid: true,
-                wrongType: -1,
-                arr: s.split(/[，,]/)
-            });
-            // console.log(this.state.arr+'hhhh');
-            // return 0;
+            setIsValid(true);
+            setWrongMsg('');      // 只有一个数字
+            setArr(s.split(/[，,]/));
         }
         else{
-            this.setState({
-                isValid:false,
-                wrongType: 3        // 格式不对
-            });
-            // return "Please follow the correct format.";
+            setIsValid(false);
+            setWrongMsg('Please follow the correct format.');     // 格式不对
         }
         return 0;
     }
 
+  
+    const error = isValid ? '':'error';
+    const label = isValid ? 'Enter your own array':'Invalid Input';
+    const helper = isValid ? ' ':wrongMsg;
 
-    
-    // 搜索框
-    render(){
-        const placeholder = this.props.placeholder;
-        const defaultValue = this.props.defaultValue;       
-        let {Search} = Input;
-        return (
-            <div>
-                <Search id="text"
-                    placeholder={placeholder}
-                    allowClear="true"
-                    // enterButton="Create"
-                    // size="large"
-                    // position = "center"
-                    style = {{ width: 800}}
-                    onSearch={e=>this.handleNumbers(e)}
-                    defaultValue = {defaultValue ? defaultValue:''}     // 可以选择性设置框内默认值
-                />
-            </div>            
-        );
+    let textStyle={
+      width:'400px',
+      margin:'0 10px',
     }
+
+    let buttonStyle={
+      height:'56px',
+    }
+
+
+    return (
+      <div>
+        <TextField
+          error={error}
+          label={label}
+          type="search"
+          helperText={helper}
+          variant="outlined"
+          onChange={(e) => {storeInput(e);}}
+          onFocus={(e) => {storeInput(e);}}
+          style={textStyle}
+          defaultValue={defaultArr}
+        //   ref={childRef}
+        />
+        
+        <Button 
+          variant="contained" 
+          color="primary" 
+          disableElevation
+        //   onClick={this.checkFormat.bind(this)}
+          onClick={() => {checkFormat();}}
+        
+          style={buttonStyle}
+          >
+            Create
+        </Button>
+    </div>
+    );
 }
+
+// let InputBarChild = forwardRef(InputBar);
+
+// export default InputBarChild;
+
 
 //供使用者调用，去除两边空格
 function trim(s){  
@@ -123,7 +151,3 @@ function trimRight(s){
     }  
     return str;  
 }
-
-
-
-
