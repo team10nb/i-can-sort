@@ -10,6 +10,8 @@ reason/description里面写为什么test fail了
 |1 | 2.3 | Fail | should contain ProcedureChoiceMenu | Function was not exported |version 1|
 |2 | 2.4 | Fail |should match snapshot|Cannot use <Link> outside  <Router>|version 2|
 |3 | 2.4 | Pass | /                     |Snapshot updated|version 3|
+|4 | 2.9 | Fail | should match snapshot |Add setProgress function|version 4|
+|5 | 2.10 | Pass | / |Snapshot updated|version 4|
 
 ##### Code - version 2
 ```javascript
@@ -37,7 +39,33 @@ test('should match Snapshot', () => {
 })
 ```
 
+##### Code - version 4
 
+```javascript
+/**
+* Procedure.jsx
+* add functions
+*/
+
+function setProgress(algorithm){
+  const progressArray = localStorage.getItem(algorithm) ? JSON.parse(localStorage.getItem(algorithm)) : 0 ;
+  return calculateProgress(progressArray);
+}
+
+function calculateProgress(progressArray){
+  let value = 0;
+  let count = 0;
+  for (var i=0; i<progressArray.length; i++){
+    if (progressArray[i] == true){
+      value += 30;
+      count++;
+    }  
+  }
+  if(count == progressArray.length)
+    value = 100;
+  return value;
+}
+```
 
 #### ComponentName:  EfficiencyMainPage
 
@@ -45,6 +73,8 @@ test('should match Snapshot', () => {
 | -------- | ---- | --------- | ----------------------------------- | --------------------------------------- | ---------------- |
 | 1        | 2.4  | Fail      | should contain EfficiencyChoiceMenu | Function was not exported               | version 1        |
 | 2        | 2.4  | Pass      | /                                   | Export function EfficiencyChoiceMenu( ) | version 2        |
+| 3        | 2.10 | Fail      | should match snapshot               | Instead <ThemeProvider> with css style  | version 3        |
+| 4        | 2.10 | Pass      | /                                   | Snapshot updated                        | version 3        |
 
 ##### Code - version 2
 
@@ -56,6 +86,17 @@ test('should match Snapshot', () => {
 export function EfficiencyChoiceMenu(){...}
 ```
 
+##### Code - version 3
+
+```javascript
+/**
+* Efficiency.jsx
+*/
+ <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
+        Efficiency
+ </Button>
+```
+
 
 
 #### ComponentName: CorrectnessMainPage
@@ -64,6 +105,8 @@ export function EfficiencyChoiceMenu(){...}
 | -------- | ---- | --------- | ------------------------------------ | ---------------------------------------- | ---------------- |
 | 1        | 2.4  | Fail      | should contain CorrectnessChoiceMenu | Function was not exported                | version 1        |
 | 2        | 2.4  | Pass      | /                                    | Export function CorrectnessChoiceMenu( ) | version 2        |
+| 3        | 2.10 | Fail      | should match snapshot                | Instead <ThemeProvider> with css style   | version 3        |
+| 4        | 2.10 | Pass      | /                                    | Snapshot updated                         | version 3        |
 
 ##### Code - version 2
 
@@ -73,5 +116,16 @@ export function EfficiencyChoiceMenu(){...}
 * export function
 */
 export function CorrectnessChoiceMenu(){...}
+```
+
+##### Code - version 3
+
+```javascript
+/**
+* Correctness.jsx
+*/
+ <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
+        Correctness
+ </Button>
 ```
 
