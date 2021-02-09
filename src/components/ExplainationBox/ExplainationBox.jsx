@@ -21,7 +21,7 @@ const ExplainationBoxes = withStyles({
 })(Paper);
 
 export default function ExplainationBox(props) {
-    const { width } = props;
+    const { width, children } = props;
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",
@@ -39,7 +39,7 @@ export default function ExplainationBox(props) {
     return (
         <div className={classes.root}>
             <ExplainationBoxes variant='outlined'>
-                {props.children}
+                {children}
             </ExplainationBoxes>
         </div>
     );

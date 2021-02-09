@@ -4,6 +4,7 @@ import InputBar from "../InputBar/InputBar";
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
 import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+import {random} from "lodash";
 
 export default function SwitchSort(props) {
     const { sort } = props;
@@ -17,21 +18,20 @@ export default function SwitchSort(props) {
     const MINNUMBER = 1;
     const MAXLENGTH = 15;
 
-    const storeInput = (e) => {
-        let eValue = e.target.value;
-        eValue = eValue.replace(/\s+/g, "");
-        eValue = removeDot(eValue);
-
-        if (e.target.value && eValue) {
-            setStr(eValue);
-            setIsValid(true);
-        }
+    const handleChange = (e) => {
+        setStr(e.target.value);
     };
 
     //   用正则表达式保证数据
     const checkFormat = () => {
-        console.log(str);
-        const s = str;
+        let s = str.replace(/\s+/g, "");
+        s = removeDot(s);
+        setStr(s);
+
+        if (s) {
+            setIsValid(true);
+        }
+
         // 只有一个数字
         if (s.match(/^[0-9]*$/)) {
             setIsValid(false);
@@ -75,6 +75,21 @@ export default function SwitchSort(props) {
         return 0;
     };
 
+    const shuffle = () => {
+        const length = random(3,15);
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            const element = array[i];
+            array
+            .push(random(1,25));
+        }
+        setIsValid(true);
+        setWrongMsg(" ");
+        setArr(array);
+        setStr(array.join(","));
+    }
+
+
     let trace = "";
     if (sort === "Bubble") {
         trace = BubbleSort(arr);
@@ -100,12 +115,12 @@ export default function SwitchSort(props) {
             }}>
                 <div style={{
                 height: 40,
-                width: 120,
+                width: 90,
                 fontSize:"26px",
                 fontWeight:"500",
-                transform: "rotate(90deg)",
-                marginTop:"35px",
-                marginLeft:"-55px",
+                // transform: "rotate(90deg)",
+                // marginTop:"35px",
+                // marginLeft:"-55px",
                 }}>
                 {sort }
                 </div>
@@ -113,11 +128,12 @@ export default function SwitchSort(props) {
             
             
             <InputBar
-                defaultArr={arr}
-                storeInput={storeInput}
+                inputString = {str}
+                handleChange={handleChange}
                 checkFormat={checkFormat}
                 isValid={isValid}
                 wrongMsg={wrongMsg}
+                shuffle={shuffle}
             />
             </div>
             <SwitchAnimation {...trace} width={900} />

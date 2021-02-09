@@ -8,7 +8,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "780px",
+        width: "730px",
         display: "flex",
         justifyContent: "center",
         alignContent: "flex-end",
@@ -17,12 +17,21 @@ const useStyles = makeStyles((theme) => ({
     text: {
         marginRight:"10px",
     },
-    button: {
+    buttonCreate: {
         backgroundColor: "#52af77",
         color: "white",
         marginTop: "0px",
         borderRadius: 10,
-        "&:hover, &$focusVisible": { backgroundColor: "#52af77"}
+        "&:hover, &$focusVisible": { backgroundColor: "#52af77"},
+        marginLeft: "10px"
+    },
+    buttonShuffle: {
+        backgroundColor: "#97adac",
+        color: "white",
+        marginTop: "0px",
+        borderRadius: 10,
+        "&:hover, &$focusVisible": { backgroundColor: "#97adac"},
+        marginLeft: "10px",
     },
 }));
 
@@ -55,8 +64,10 @@ export default function InputBar(props) {
         defaultArr,
         isValid,
         wrongMsg,
-        storeInput,
+        handleChange,
         checkFormat,
+        shuffle,
+        inputString
     } = props;
 
     const classes = useStyles();
@@ -74,9 +85,9 @@ export default function InputBar(props) {
                 type='search'
                 helperText={helper}
                 variant='outlined'
-                onChange={storeInput}
-                onFocus={storeInput}
-                defaultValue={defaultArr}
+                onChange={handleChange}
+                onFocus={handleChange}
+                value={inputString}
                 className={classes.text}
                 size='small'
             />
@@ -84,9 +95,17 @@ export default function InputBar(props) {
                     variant='contained'
                     disableElevation
                     onClick={checkFormat}
-                    className={classes.button}
+                    className={classes.buttonCreate}
                 >
                     Create
+                </Button>
+                <Button
+                    variant='contained'
+                    disableElevation
+                    onClick={shuffle}
+                    className={classes.buttonShuffle}
+                >
+                    Shuffle
                 </Button>
 
             </div>
