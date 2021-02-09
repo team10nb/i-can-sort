@@ -11,6 +11,10 @@ import BubbleSort from "./components/SwitchAnimation/SortingAlgorithms/BubbleSor
 import SelectionSort from "./components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
 import InsertionSort from "./components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 
+import IntroBubble from "./components/Introduction/BubbleSort";
+import IntroInsertion from "./components/Introduction/InsertionSort";
+import IntroSelection from "./components/Introduction/SelectionSort";
+
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 
 // ****************************************************
@@ -21,7 +25,13 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 // let full = BubbleSort(arr);
 
 // const App = () => <SwitchAnimation {...props} width={600}/>;
-const App = () => <SwitchSort sort='Insertion' />;
+// const App = () => <SwitchSort sort='Insertion' />;
+
+const App = () => <IntroBubble />;
+const App = () => <IntroSelection />;
+const App = () => <IntroInsertion />;
+
+
 
 
 ReactDOM.render(
