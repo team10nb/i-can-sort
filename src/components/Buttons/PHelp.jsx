@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import Avatar from '@material-ui/core/Avatar';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
 import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
@@ -16,18 +13,15 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Dialog from '@material-ui/core/Dialog';
-// import logo1 from '../../Resource/Phelp1.png';
-// import logo2 from '../../Resource/Phelp2.png';
-// import logo3 from '../../Resource/Phelp3.png';
+import Grid from '@material-ui/core/Grid';
 import {color} from '../../scenes/mainPages/Procedure';
 import {Plogo} from '../../Resource/pictureLoader';
-const logo1 = Plogo[0];
-const logo2 = Plogo[1];
-const logo3 = Plogo[2];
 
-{/*
-  This function is for designing the set and help button  
-*/}
+  const logo1 = Plogo[0];
+
+  const logo2 = Plogo[1];
+
+  const logo3 = Plogo[2];
 
   const useStyles = makeStyles((theme) => ({
     modal: {
@@ -37,18 +31,9 @@ const logo3 = Plogo[2];
     },
     card: {
       maxWidth: 580,
-      minHeight: 560,
+      minHeight: 540,
     },
     avatar: {
-      backgroundColor: color,
-    },
-    button: {
-      marginRight: theme.spacing(1),
-      
-    },
-    button1:
-    {
-      marginRight: theme.spacing(1),
       backgroundColor: color,
     },
   }));
@@ -156,16 +141,23 @@ const logo3 = Plogo[2];
                   <div>
                     {getStepContent(activeStep)}                    
                       <CardActions>
-                      <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined" style={{ color: color}}>Back</Button>                                       
-                        <Button
-                          variant="contained"
-                          color= {color}
-                          onClick={handleNext}
-                          className={classes.button1}
+                     
+                        <Grid                   
+                          container
+                          justify="space-between"
                         >
-                          Next Tip
-                        </Button>
-                      </CardActions>                 
+                          <Grid key='0' item>
+                          <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined" style={{ color: color}}>Last Tip</Button>     
+                          </Grid>
+                          <Grid key='1' item>
+                          <Button variant="outlined" onClick={handleNext} style={{ color: color}}>Next Tip</Button>
+
+                          </Grid>
+                          
+                        </Grid>
+                       
+                      </CardActions>        
+                               
                   </div>
                 )}
           </Card> 

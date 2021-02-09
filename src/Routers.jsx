@@ -24,7 +24,7 @@ export default function Routers() {
             <Route path="/EfficiencyMainPage" component={EfficiencyMainPage} />
             <Route path="/CorrectnessMainPage" component={CorrectnessMainPage} />
             <Route path="/Exercise" component={Exercise} />
-            <Route path="/CorrectnessSubPage"
+            <Route path="/Correctness"
                 render={() => {
                     return(
                         <Switch>

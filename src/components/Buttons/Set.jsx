@@ -18,11 +18,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoIcon from '@material-ui/icons/Info';
 
 
-{/*
-  This function is for designing the set and help button  
-*/}
-
-
   const useStyles = makeStyles((theme) => ({
     list: {
       width: 250,
@@ -37,13 +32,9 @@ import InfoIcon from '@material-ui/icons/Info';
   export default function Set() {
     const classes = useStyles();
   
-    {/*setting button can pop out a toggleDrawer
-       keep closed at usual,click to open it
-       toggleDrawer contains plenty of accordions
-    */}
     const [state, setState] = React.useState({
     left: false,
-  });
+    });
 
     const toggleDrawer = (anchor, open) => (event) => {
       if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -62,9 +53,6 @@ import InfoIcon from '@material-ui/icons/Info';
       onKeyDown={toggleDrawer(anchor, false)}
     >
      
-     {/*
-      setting music: can change song, sound volume
-     */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
