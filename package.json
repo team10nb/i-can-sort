@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-start": "electron .",
+    "electron-start": "react-scripts build && electron .",
     "styleguide": "styleguidist server  --config styleguidist.config.js",
     "styleguide:build": "styleguidist build --config styleguidist.config.js"
   },

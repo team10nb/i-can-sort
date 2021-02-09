@@ -44,7 +44,11 @@ module.exports = {
                 outputPath: 'assets/fonts',
                 publicPath: url => `../assets/fonts/${url}`
               }
-            },   
+            },
+            {
+              test: /.(jpg|png)$/,
+              use:['url-loader']
+            }   
           ]
         }
       }
