@@ -23,8 +23,6 @@ import Zoom from "@material-ui/core/Zoom";
 
 ### **Props**
 
-handleClick, handleClose, anchorEl, speed
-
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 

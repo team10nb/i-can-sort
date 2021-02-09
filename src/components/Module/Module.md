@@ -18,8 +18,6 @@ import ModuleButton from "../ModuleButton/ModuleButton";
 
 ### **Props**
 
-width, height, color, preOne, image, onClick
-
 | Name    | Type   | Default | Description                                                                   |
 | ------- | ------ | ------- | ----------------------------------------------------------------------------- |
 | width   | number |         | The length of the button and progress bar.                                                     |

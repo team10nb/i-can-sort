@@ -26,8 +26,6 @@ import ReplayIcon from "@material-ui/icons/Replay"; import { makeStyles } from
 
 ### **Props**
 
-handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed
-
 | Name             | Type   | Default | Description                                                   |
 | ---------------- | ------ | ------- | ------------------------------------------------------------- |
 | handleResetClick | fn     |         | Handle clicking reset button.                                 |

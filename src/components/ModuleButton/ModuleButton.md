@@ -24,8 +24,6 @@ import { makeStyles } from "@material-ui/core/styles"; import ButtonBase from
 
 ### **Props**
 
-width, height, color, preOne, image, onClick
-
 | Name    | Type   | Default | Description                                                                   |
 | ------- | ------ | ------- | ----------------------------------------------------------------------------- |
 | width   | number |         | The length of the button.                                                     |

@@ -11,20 +11,19 @@ Animation component which contains a control bar, a slider and a description box
 ### **Import**
 
 ```html
-import Zoom from "@material-ui/core/Zoom"; import SpeedMenu from
-"../SpeedMenu/SpeedMenu"; import Tooltip from "@material-ui/core/Tooltip";
-import ReplayIcon from "@material-ui/icons/Replay"; import { makeStyles } from
-"@material-ui/core/styles"; import IconButton from
-"@material-ui/core/IconButton"; import SkipNextIcon from
-"@material-ui/icons/SkipNext"; import SkipPreviousIcon from
-"@material-ui/icons/SkipPrevious"; import PlayCircleFilledIcon from
-"@material-ui/icons/PlayCircleFilled"; import PauseCircleFilledIcon from
-"@material-ui/icons/PauseCircleFilled";
+import Zoom from "@material-ui/core/Zoom"; 
+import SpeedMenu from "../SpeedMenu/SpeedMenu"; 
+import Tooltip from "@material-ui/core/Tooltip";
+import ReplayIcon from "@material-ui/icons/Replay"; 
+import { makeStyles } from "@material-ui/core/styles"; 
+import IconButton from "@material-ui/core/IconButton";
+import SkipNextIcon from "@material-ui/icons/SkipNext"; 
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious"; 
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled"; 
+import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 ```
 
 ### **Props**
-
-trace, description, width
 
 | Name             | Type   | Default | Description                                                   |
 | ---------------- | ------ | ------- | ------------------------------------------------------------- |

@@ -17,8 +17,6 @@ import Slider from "@material-ui/core/Slider";
 
 ### **Props**
 
-step, max, handleChange, value, width
-
 | Name         | Type   | Default | Description                                        |
 | ------------ | ------ | ------- | -------------------------------------------------- |
 | handleChange | fn     |         | Handle change of the slider by user event.         |
