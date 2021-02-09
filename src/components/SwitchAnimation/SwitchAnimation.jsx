@@ -252,7 +252,7 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </ul>
-            <ExplainationBox width='55'>
+            <ExplainationBox width='60'>
                 {description[currentStep]}
             </ExplainationBox>
 

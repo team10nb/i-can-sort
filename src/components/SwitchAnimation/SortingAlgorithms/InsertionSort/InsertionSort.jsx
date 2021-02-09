@@ -48,7 +48,7 @@ export default function InssertionSort(arr) {
             patched[j + 1].y = -50;
             changeColor(patched, j, COLORS.comparing);
             trace.push(hardcopy(patched));
-            description.push(" Compare " + k.value + " and" + patched[j].value);
+            description.push(" Compare " + k.value + " and " + patched[j].value);
 
             temp = patched[j + 1];
             patched[j + 1] = patched[j];

@@ -76,12 +76,12 @@ export default function SwitchSort(props) {
     };
 
     const shuffle = () => {
-        const length = random(3,15);
+        const length = random(3,MAXLENGTH-4);
         let array = [];
         for (let i = 0; i < length; i++) {
             const element = array[i];
             array
-            .push(random(1,25));
+            .push(random(1,MAXNUMBER-5));
         }
         setIsValid(true);
         setWrongMsg(" ");
