@@ -29,10 +29,6 @@ export default function SwitchSort(props) {
         s = removeDot(s);
         setStr(s);
 
-        if (s) {
-            setIsValid(true);
-        }
-
         // 只有一个数字
         if (s.match(/^[0-9]*$/)) {
             setIsValid(false);
