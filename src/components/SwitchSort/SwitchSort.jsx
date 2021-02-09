@@ -20,6 +20,7 @@ export default function SwitchSort(props) {
 
     const handleChange = (e) => {
         setStr(e.target.value);
+        setIsValid(true);
     };
 
     //   用正则表达式保证数据
