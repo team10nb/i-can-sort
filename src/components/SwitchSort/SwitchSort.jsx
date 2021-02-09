@@ -4,6 +4,7 @@ import InputBar from "../InputBar/InputBar";
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
 import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import {random} from "lodash";
 
 export default function SwitchSort(props) {
@@ -94,6 +95,8 @@ export default function SwitchSort(props) {
         trace = InsertionSort(arr);
     } else if (sort === "Selection") {
         trace = SelectionSort(arr);
+    } else if (sort === "Quick") {
+        trace = QuickSort(arr);
     }
 
     return (

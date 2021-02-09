@@ -1,81 +1,66 @@
 import React from 'react';
-import {
-  swap,
-  newTrace,
-  addToTrace,
-  lastSorted,
-  createRange,
-  createKey
-} from './helpers';
+import { COLORS, patch, hardcopy, changeColor, swap } from "../Patch/Patch";
+import {random} from "lodash";
 
-const QuickSort = (nums) => {
+const QuickSort = (arr) => {
+  let patched = patch(arr);
+  let description = ["Unsorted Array"];
   // Initial State
-  const trace = newTrace(nums);
+  let trace = [hardcopy(patched)];
 
-  function choosePivot(array, start, end) {
+  function choosePivot(start, end) {
     // randomly pick an element between start and end;
-    return Math.floor(Math.random() * (end - start)) + start;
+    return random(start, end);
   }
 
   function partition(array, start, end) {
     let i = start + 1;
     let j = start + 1;
 
-    // Visualize: Keep pivot marked
-    addToTrace(trace, array, lastSorted(trace), [start]);
 
     while (j <= end) {
-      if (array[j] < array[start]) {
+        // Visualize: Compare item j with pivot
+        changeColor(patched, j, COLORS.comparing);
+        changeColor(patched, start, COLORS.comparing);
+        trace.push(hardcopy(patched));
+        description.push("Compare " + array[j].value + " with pivot " + array[start].value);
+      if (array[j].value < array[start].value) {
         // Visualize: Mark item that is less than pivot
-        addToTrace(
-          trace,
-          array,
-          lastSorted(trace),
-          [start],
-          [j],
-          [],
-          createRange(start + 1, i)
-        );
+        changeColor(patched, j, COLORS.left);
+        changeColor(patched, start, COLORS.pivot);
+        trace.push(hardcopy(patched));
+        description.push("Mark " + array[j].value + " as less than pivot " + array[start].value);
 
         swap(array, i, j);
 
         // Visualize: Move item to lesser list
-        addToTrace(
-          trace,
-          array,
-          lastSorted(trace),
-          [start],
-          [i],
-          [],
-          createRange(start + 1, i)
-        );
+        trace.push(hardcopy(patched));
+        description.push("Move the smaller " + array[i].value + " to left side");
         i += 1;
+      }else{
+
+        changeColor(patched, j, COLORS.original);
       }
       j += 1;
     }
 
+    changeColor(patched, start, COLORS.pivot);
     // Visualize: Mark center position
-    addToTrace(
-      trace,
-      array,
-      lastSorted(trace),
-      [i - 1],
-      [],
-      [],
-      createRange(start, i - 1)
-    );
-    swap(array, start, i - 1);
+    let pivot = patched.splice(start, 1);
+    patched.splice(i-1, 0, pivot[0]);
+    trace.push(hardcopy(patched));
+    description.push("All compared, move pivot to the right of smaller ones");
 
-    // Visualize: Move pivot to center
-    addToTrace(
-      trace,
-      array,
-      lastSorted(trace),
-      [i - 1],
-      [],
-      [],
-      createRange(start, i - 1)
-    );
+
+    changeColor(patched, i-1, COLORS.finished);
+    for (let j = start; j < i-1; j++) {
+      changeColor(patched, j, COLORS.original);
+    }
+    // Visualize: Now pivot is at the right position
+    trace.push(hardcopy(patched));
+    description.push("Now pivot is at the correct position");
+
+    // return position of pivot
     return i - 1;
   }
 
@@ -83,41 +68,52 @@ const QuickSort = (nums) => {
     if (start >= end) {
       if (start === end) {
         // Visualize: Mark only item as sorted
-        addToTrace(trace, array, [...lastSorted(trace), start]);
+        changeColor(patched, start, COLORS.finished);
+        trace.push(hardcopy(patched));
+        description.push("The only item is certainly sorted");
+      }else {
+        trace.push(hardcopy(patched));
+        description.push("Fine, all sorted");
       }
       return null;
     }
 
-    let pivot = choosePivot(array, start, end);
+    let pivot = choosePivot(start, end);
 
     // Visualize: Mark chosen pivot
-    addToTrace(trace, array, lastSorted(trace), [pivot]);
+    changeColor(patched, pivot, COLORS.pivot);
+    trace.push(hardcopy(patched));
+    description.push("Randomly choose a pivot");
 
     swap(array, start, pivot);
 
     // Visualize: Move chosen pivot to start
-    addToTrace(trace, array, lastSorted(trace), [pivot]);
+    trace.push(hardcopy(patched));
+    description.push("Move the chosen pivot to the start of this section");
 
     pivot = partition(array, start, end);
 
-    // Visualize: Mark pivot after partition as sorted
-    addToTrace(trace, array, [...lastSorted(trace), pivot]);
 
+
+    // Visualize: Move chosen pivot to start
+    trace.push(hardcopy(patched));
+    description.push("Ok, let's see the left section of this pivot");
     recursiveQuickSort(array, start, pivot - 1);
+
+    // Visualize: Move chosen pivot to start
+    trace.push(hardcopy(patched));
+    description.push("Ok, let's see the right section of this pivot");
     recursiveQuickSort(array, pivot + 1, end);
   }
 
-  recursiveQuickSort(nums, 0, nums.length - 1);
+  recursiveQuickSort(patched, 0, arr.length - 1);
 
-  return trace;
+  trace.push(hardcopy(patched));
+  description.push("Quick sort is finished, all sorted");
+  return { trace: trace, description: description };
+  
 };
 
-export const QuickSortKey = createKey(
-  'Comparing',
-  'Swapping',
-  null,
-  'Less than pivot'
-);
 
 export const QuickSortDesc = {
   title: 'Quick Sort',

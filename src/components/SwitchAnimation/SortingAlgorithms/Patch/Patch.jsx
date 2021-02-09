@@ -21,7 +21,11 @@ export let COLORS = {
   comparing: "#FFD700", // 黄
   finished: "#008000", // 绿
   current: "#FF0000", // 红
-  minimum: "#123456", // 还没定的颜色
+  minimum: "#7700FF", // 还没定的颜色
+  pivot: "#FF008C", // pivot
+  left: "#D309E1", // left
+  right: "#9C1AFF" // right
+
   // 其他的可能要用的颜色就写在这里
 }
 
@@ -71,3 +75,9 @@ changeY 函数提供一个（稍微简单一点的）方式，改变bar的y。
 export function changeY(arr, i, y) {
   arr[i].y = y;
 }
+
+export const swap = (array, i, j) => {
+  const tmp = array[i];
+  array[i] = array[j];
+  array[j] = tmp;
+};

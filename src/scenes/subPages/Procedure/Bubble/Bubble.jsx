@@ -46,7 +46,7 @@ const intro = {
 }
 
 
-const operate = <SwitchSort sort={"Bubble"}/>;
+const operate = <SwitchSort sort={"Quick"}/>;
 
 
 
