@@ -12,12 +12,7 @@ const introMessage =
                 <div>
                 <h1>Bubble sort</h1>
                 <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-                
                 <h1>Performance</h1>
-                {/* <p style={{textAlign:"left"}}>Worst-case time complexity &nbsp;&nbsp; O(n<sup>2</sup>)<br/>
-                Average time complexity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O(n<sup>2</sup>)<br/>
-                Best-case time complexity  O(n)<br/>
-                Worst-case space complexity  O(1)</p> */}
                 <table>
                     <tr>
                         <td>Worst-case time complexity</td>
@@ -38,8 +33,6 @@ const introMessage =
                 </table>
                 </div>
                
-           
-
 const intro = {
     introMessage: introMessage,
     animation: <SwitchAnimation {...props} width={500}/>,
@@ -52,9 +45,12 @@ const operate = <SwitchSort sort={"Bubble"}/>;
 
 export default function ProcedureBubble(props) {
 
+    const progress = localStorage.getItem("bubble") ? JSON.parse(localStorage.getItem("bubble")) : [false, false, false];
+
     const data = {
         color: color,
-        progress: 70,
+        algorithm: "bubble",
+        progress: progress,
         history: props.history,      
         intro: intro,
         operate: operate,

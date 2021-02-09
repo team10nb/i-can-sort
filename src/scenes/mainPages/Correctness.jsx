@@ -5,7 +5,7 @@ import Set from '../../components/Buttons/Set';
 import CHelp from '../../components/Buttons/CHelp';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
-import { makeStyles,createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 //Set css
@@ -47,19 +47,11 @@ const color = '#ff6f00';
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Correctness button is theme color without jump function
 export function CorrectnessChoiceMenu(){
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: color,
-      },
-    },
-  });
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <ThemeProvider theme={theme}>
       <Link to="/Tutorial" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Tutorial
@@ -78,7 +70,7 @@ export function CorrectnessChoiceMenu(){
       </Button>
       </Link>
 
-      <Button variant="contained" color="primary" disableElevation className={classes.button}>
+      <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
         Correctness
       </Button>
 
@@ -87,7 +79,6 @@ export function CorrectnessChoiceMenu(){
         Exercise
       </Button>
       </Link>
-      </ThemeProvider>
     </div>
   );
 }

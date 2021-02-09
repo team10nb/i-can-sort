@@ -25,9 +25,12 @@ const operate = <SwitchSort sort={"Selection"}/>;
 
 export default function ProcedureSelection(props) {
 
+    const progress = localStorage.getItem("selection") ? JSON.parse(localStorage.getItem("selection")) : [false, false, false];
+
     const data = {
         color: color,
-        progress: 70,
+        algorithm: "selection",
+        progress: progress,
         history: props.history,      
         intro: intro,
         operate: operate,

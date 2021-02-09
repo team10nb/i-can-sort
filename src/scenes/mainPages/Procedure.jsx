@@ -5,7 +5,7 @@ import Set from '../../components/Buttons/Set';
 import PHelp from '../../components/Buttons/PHelp';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
-import { makeStyles,createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 //Set css
@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 30,
   },
   div: {
-      textAlign: "center",
-height: 690,
-width: 960,
-},
+    textAlign: "center",
+    height: 690,
+    width: 960,
+  },
   buttonSet:{
     display:"flex",
     '& > *': {
@@ -47,24 +47,16 @@ const color = '#1565c0';
 //The Procedure button is theme color without jump function
 export function ProcedureChoiceMenu(){
   const classes = useStyles();
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: color,
-      },
-    },
-  });
 
   return (
     <div className={classes.root}>
-      <ThemeProvider theme={theme}>
       <Link to="/Tutorial" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Tutorial
       </Button>
       </Link>
 
-      <Button color="primary" variant="contained" disableElevation className={classes.button}>
+      <Button variant="contained" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
         Procedure
       </Button>
 
@@ -85,24 +77,36 @@ export function ProcedureChoiceMenu(){
         Exercise
       </Button>
       </Link>
-      </ThemeProvider>
     </div>
   );
+}
+
+function setProgress(algorithm){
+  const progressArray = localStorage.getItem(algorithm) ? JSON.parse(localStorage.getItem(algorithm)) : 0 ;
+  return calculateProgress(progressArray);
+}
+
+function calculateProgress(progressArray){
+  let value = 0;
+  let count = 0;
+  for (var i=0; i<progressArray.length; i++){
+    if (progressArray[i] == true){
+      value += 30;
+      count++;
+    }  
+  }
+  if(count == progressArray.length)
+    value = 100;
+  return value;
 }
 
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-function ProcedureMainPage(props) {
+function ProcedureMainPage() {
     const classes = useStyles();
 
-    //get progress info from local
     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
-    const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
-
-    //set progress
-    const progress = props.location.state ? props.location.state : localProgress;
-    localStorage.setItem("progress", JSON.stringify(progress));
 
     const handleClick = (title) => () => {
       //store previous visited algorithm
@@ -148,7 +152,7 @@ function ProcedureMainPage(props) {
       width: 200,
       height: 200,
       onClick: handleClick(images[0].title),
-      progress: progress,
+      progress: setProgress("bubble"),
       color: color,
       preOne: handlePre(images[0].title),
   };
@@ -158,7 +162,7 @@ function ProcedureMainPage(props) {
       width: 200,
       height: 200,
       onClick: handleClick(images[1].title),
-      progress: progress,
+      progress: setProgress("selection"),
       color: color,
       preOne: handlePre(images[1].title),
   };
@@ -168,7 +172,7 @@ function ProcedureMainPage(props) {
       width: 200,
       height: 200,
       onClick: handleClick(images[2].title),
-      progress: progress,
+      progress: setProgress("insertion"),
       color: color,
       preOne: handlePre(images[2].title),
   };
@@ -177,10 +181,10 @@ const props2 = {
   image: images[3],
   width: 200,
   height: 200,
-  onClick: handleClick(images[3].title),
-  progress: progress,
+  // onClick: handleClick(images[3].title),
+  progress: 0,
   color: color,
-  preOne: handlePre(images[3].title),
+  preOne: false,
 };
 
     return (

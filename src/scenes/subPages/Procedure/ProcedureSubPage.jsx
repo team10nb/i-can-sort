@@ -38,17 +38,20 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   cardOne:{
+    marginTop: 80,
     background: "#F0F0F0",
     width: "40%",
     height: 520
   },
   cardTwo:{
+    marginTop: 80,
     background: "#F0F0F0",
     width: "60%",
     height: 520,
     alignItems:"center",
   },
   cardOperation:{
+    marginTop: 80,
     background: "#F0F0F0",
     width: "100%",
     height: 520,
@@ -96,11 +99,13 @@ function a11yProps(index) {
 //Return a menu bar consists of a home button and three tabs
 //Each tab is corresponding to a tabpanel
 export default function ProcedureSubPage(props) {
+  const{color, algorithm, progress, history, intro, operate} = props;
+
   const classes = useStyles();
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: props.color,
+        main: color,
       },
       //改颜色
       secondary: {
@@ -113,13 +118,19 @@ export default function ProcedureSubPage(props) {
 
   const [value, setValue] = React.useState(1);
 
+  function finishPage(page){
+    progress[page] = true;
+    localStorage.setItem(algorithm, JSON.stringify(progress));
+  }
+
   const handleClick = () => {
-    //return to procedure main page with the progress
-    props.history.push({pathname: '/ProcedureMainPage', state: props.progress});
+    //return to procedure main page 
+    history.push({pathname: '/ProcedureMainPage'});
   };
 
   const handleChange = (event, newValue) => {
-    //change the menu item
+    //change the menu item, finish current page
+    finishPage(newValue-1);
     setValue(newValue);
   };
 
@@ -131,9 +142,9 @@ export default function ProcedureSubPage(props) {
   return (
    <div >
       <ThemeProvider theme={theme}>
-      <AppBar position="static" >
+      <AppBar>
         <Tabs
-          
+
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
@@ -160,17 +171,16 @@ export default function ProcedureSubPage(props) {
         <TabPanel value={value} index={0}> 
         </TabPanel>
 
-        <TabPanel value={value} index={1} dir={theme.direction}>
+        <TabPanel value={value} index={1} dir={theme.direction} {...finishPage(0)}>
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
               <CardContent >
-                {props.intro.introMessage}
+                {intro.introMessage}
               </CardContent>
             </Card>
             <Card className={classes.cardTwo} >
               <CardContent >
-              {/* <CardContent > */}
-                {props.intro.animation}
+                {intro.animation}
               </CardContent>
             </Card>
           </div>
@@ -178,14 +188,9 @@ export default function ProcedureSubPage(props) {
 
         <TabPanel value={value} index={2} dir={theme.direction}>
           <div className = {classes.div}>
-            {/* <Card className={classes.cardOne}>
-              <CardContent>
-                {/* {props.operate} */}
-              {/* </CardContent>
-            </Card> */} 
             <Card className={classes.cardOperation}>
               <CardContent>
-                {props.operate}
+                {operate}
               </CardContent>
             </Card>
           </div>
@@ -195,12 +200,11 @@ export default function ProcedureSubPage(props) {
         <div className = {classes.div}>
             <Card className={classes.cardOne}>
               <CardContent>
-                {/* {props.operate} */}
               </CardContent>
             </Card>
             <Card className={classes.cardTwo}>
               <CardContent>
-                {props.operate}
+                {operate}
               </CardContent>
             </Card>
           </div>

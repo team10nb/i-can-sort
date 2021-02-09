@@ -586,6 +586,7 @@ Object {
                   </a>
                   <button
                     class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
+                    style="color: white; background-color: rgb(76, 175, 80);"
                     tabindex="0"
                     type="button"
                   >
@@ -1226,6 +1227,7 @@ Object {
                 </a>
                 <button
                   class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
+                  style="color: white; background-color: rgb(76, 175, 80);"
                   tabindex="0"
                   type="button"
                 >

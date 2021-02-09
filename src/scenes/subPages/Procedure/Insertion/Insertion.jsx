@@ -25,9 +25,12 @@ const operate = <SwitchSort sort={"Insertion"}/>;
 
 export default function ProcedureInsertion(props) {
 
+    const progress = localStorage.getItem("insertion") ? JSON.parse(localStorage.getItem("insertion")) : [false, false, false];
+
     const data = {
         color: color,
-        progress: 70,
+        algorithm: "insertion",
+        progress: progress,
         history: props.history,      
         intro: intro,
         operate: operate,
