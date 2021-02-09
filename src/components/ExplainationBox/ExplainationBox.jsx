@@ -8,13 +8,15 @@ const ExplainationBoxes = withStyles({
         fontFamily: "inherit",
         fontSize: "1em",
         fontWeight: "700",
-        paddingTop: "8px",
+        paddingTop: "3px",
+        paddingBottom: "3px",
         letterSpacing: "1px",
         textAlign: "center",
         borderRadius: "12px",
         backgroundColor: "white",
         marginTop: "4px",
         marginBottom: "3px",
+        alignContent: "center",
     },
 })(Paper);
 

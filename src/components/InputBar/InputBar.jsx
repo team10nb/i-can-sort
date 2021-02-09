@@ -8,14 +8,14 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "550px",
+        width: "780px",
         display: "flex",
         justifyContent: "center",
         alignContent: "flex-end",
         height: 40,
     },
     text: {
-        margin: "0 10px",
+        marginRight:"10px",
     },
     button: {
         backgroundColor: "#52af77",
@@ -67,6 +67,7 @@ export default function InputBar(props) {
 
     return (
         <div className={classes.root}>
+            <div style={{width: "550px", display:"flex"}}>
             <CssTextField
                 error={error}
                 label={label}
@@ -87,6 +88,8 @@ export default function InputBar(props) {
                 >
                     Create
                 </Button>
+
+            </div>
         </div>
     );
 }

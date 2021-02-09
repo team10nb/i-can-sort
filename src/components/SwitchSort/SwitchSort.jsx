@@ -8,10 +8,14 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 export default function SwitchSort(props) {
     const { sort } = props;
 
-    const [str, setStr] = useState("");
+    const [str, setStr] = useState("2,1,6,10,9,12,8,3");
     const [arr, setArr] = useState([2, 1, 6, 10, 9, 12, 8, 3]);
     const [isValid, setIsValid] = useState(true);
     const [wrongMsg, setWrongMsg] = useState(" ");
+
+    const MAXNUMBER = 25;
+    const MINNUMBER = 1;
+    const MAXLENGTH = 15;
 
     const storeInput = (e) => {
         let eValue = e.target.value;
@@ -26,7 +30,7 @@ export default function SwitchSort(props) {
 
     //   用正则表达式保证数据
     const checkFormat = () => {
-        // console.log(str);
+        console.log(str);
         const s = str;
         // 只有一个数字
         if (s.match(/^[0-9]*$/)) {
@@ -39,24 +43,24 @@ export default function SwitchSort(props) {
             const nums = numString.map(num => parseInt(num));
             let outRange = false;
             for (let i = 0; i < nums.length; i++) {
-                if (nums[i] > 30) {
+                if (nums[i] > MAXNUMBER) {
                     outRange = true;
                     break;
-                } else if (nums[i] < 1) {
+                } else if (nums[i] < MINNUMBER) {
                     outRange = true;
                     break;
                 }
             }
 
-            if (nums.length > 15 && outRange) {
+            if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
                     "Please enter no more than 15 numbers that between 1-30."
                 );
-            } else if (nums.length > 15 && !outRange) {
+            } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
                 setWrongMsg("Please enter no more than 15 numbers.");
-            } else if (nums.length <= 15 && outRange) {
+            } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg("Please enter numbers that between 1-30.");
             } else {
@@ -86,9 +90,28 @@ export default function SwitchSort(props) {
                 display: "grid",
                 justifyContent: "center",
                 alignContent: "flex-end",
-                height: 540,
+                height: 500,
             }}
         >
+            <div style={{
+                height: 40,
+                width:900,
+                display: "flex"
+            }}>
+                <div style={{
+                height: 40,
+                width: 120,
+                fontSize:"26px",
+                fontWeight:"500",
+                transform: "rotate(90deg)",
+                marginTop:"35px",
+                marginLeft:"-55px",
+                }}>
+                {sort }
+                </div>
+                
+            
+            
             <InputBar
                 defaultArr={arr}
                 storeInput={storeInput}
@@ -96,32 +119,11 @@ export default function SwitchSort(props) {
                 isValid={isValid}
                 wrongMsg={wrongMsg}
             />
-            <SwitchAnimation {...trace} width={600} />
+            </div>
+            <SwitchAnimation {...trace} width={900} />
         </div>
     );
 }
-
-//供使用者调用，去除两边空格
-// function trim(s){
-//     return trimRight(trimLeft(s));
-// }
-
-//去掉左边的空白
-// function trimLeft(s){
-//     if(s == null) {
-//         return "";
-//     }
-//     var whitespace = " \t\n\r";
-//     var str = s;
-//     if(whitespace.indexOf(str.charAt(0)) !== -1) {
-//         var j=0, i = str.length;
-//         while(j < i && whitespace.indexOf(str.charAt(j)) !== -1){
-//             j++;
-//         }
-//         str = str.substring(j, i);
-//     }
-//     return str;
-// }
 
 //去掉右边的空白
 function removeDot(s) {

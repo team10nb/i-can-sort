@@ -40,7 +40,7 @@ export const SwitchAnimation = (props) => {
             display: "grid",
             justifyContent: "center",
             alignContent: "flex-end",
-            height: 480,
+            height: 430,
             marginTop: "20px",
         },
         bars: {
