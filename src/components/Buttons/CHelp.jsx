@@ -18,13 +18,7 @@ import logo2 from '../../Resource/Chelp2.png';
 import logo3 from '../../Resource/Chelp3.png';
 import Grid from '@material-ui/core/Grid';
 import {color} from '../../scenes/mainPages/Correctness';
-import Clogo from '../../Resource/pictureLoader';
 
-  const logo1 = Clogo[0];
-
-  const logo2 = Clogo[1];
-
-  const logo3 = Clogo[2];
 
   const useStyles = makeStyles((theme) => ({
     modal: {

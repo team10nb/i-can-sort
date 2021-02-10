@@ -14,14 +14,10 @@ import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Dialog from '@material-ui/core/Dialog';
 import Grid from '@material-ui/core/Grid';
+import logo1 from '../../Resource/Phelp1.png';
+import logo2 from '../../Resource/Phelp2.png';
+import logo3 from '../../Resource/Phelp3.png';
 import {color} from '../../scenes/mainPages/Procedure';
-import {Plogo} from '../../Resource/pictureLoader';
-
-  const logo1 = Plogo[0];
-
-  const logo2 = Plogo[1];
-
-  const logo3 = Plogo[2];
 
   const useStyles = makeStyles((theme) => ({
     modal: {

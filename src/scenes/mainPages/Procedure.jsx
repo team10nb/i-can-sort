@@ -177,24 +177,16 @@ function ProcedureMainPage() {
       preOne: handlePre(images[2].title),
   };
 
-const props2 = {
-  image: images[3],
-  width: 200,
-  height: 200,
-  // onClick: handleClick(images[3].title),
-  progress: 0,
-  color: color,
-  preOne: false,
-};
     const props2 = {
       image: images[3],
       width: 200,
       height: 200,
-      onClick: handleClick(images[3].title),
-      progress: progress,
+      // onClick: handleClick(images[3].title),
+      progress: 0,
       color: color,
-      preOne: handlePre(images[3].title),
-    };
+      preOne: false,
+  };
+
 
     return (
       <div className={classes.div} >

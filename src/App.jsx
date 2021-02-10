@@ -6,6 +6,7 @@ import CorrectnessMainPage from './scenes/mainPages/Correctness';
 import ProcedureMainPage from './scenes/mainPages/Procedure';
 import EfficiencyMainPage from './scenes/mainPages/Efficiency';
 import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
+import CorrectnessRouters from './scenes/subPages/Correctness/CorrectnessRouters';
 
 //Return routes
 function Routers() {
@@ -19,6 +20,21 @@ function Routers() {
             <Route path="/EfficiencyMainPage" component={EfficiencyMainPage} />
             <Route path="/CorrectnessMainPage" component={CorrectnessMainPage} />
             <Route path="/Exercise" component={Exercise} />
+            <Route path="/Correctness"
+                render={() => {
+                    return(
+                        <Switch>
+                            {CorrectnessRouters.map((route, algorithm) => (
+                                <Route
+                                key={algorithm}
+	                        	path={route.path}
+	                        	component={route.component}
+                                />
+                            ))}
+                        </Switch>
+                    );
+                }}
+            ></Route>
             <Route path="/ProcedureSubPage"
                 render={() => {
                     return(
