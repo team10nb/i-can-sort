@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
             width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: drawerWidth,
           },
+        height:45,
+        backgroundColor:color,       
     },
 
     appBar2: {      
@@ -49,12 +51,13 @@ const useStyles = makeStyles((theme) => ({
     icon:{
         marginRight: theme.spacing(2),
         width: 100,
+        height: 45,
     },
 
     chip:{
         position: 'relative',
         marginRight: -50,
-        marginLeft: 80,
+        marginLeft: 120,
         minWidth: 400,
         justifyContent:"center",  
         fontWeight: "bold",      
@@ -103,7 +106,8 @@ const useStyles = makeStyles((theme) => ({
     hightlightItem:{
         height:40,
         backgroundColor: color,
-        color: "#F8F8F8",       
+        color: "#F8F8F8",    
+        "&:hover": {backgroundColor:color},
     },
 
     
@@ -111,7 +115,17 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   function getSteps() {
-    return ['Input', 'Input_Def', 'Termination', 'Termination_Def', 'Conclusion', 'Partial Correctness', 'Total Correctness', 'Partial_Example', 'Total_Example', 'Correctness_Intro' ];
+    return ['Input', 
+            'Input_Def', 
+            'Termination', 
+            'Termination_Def', 
+            'Conclusion', 
+            'Partial Correctness',
+            'Total Correctness', 
+            'Partial_Example', 
+            'Total_Example', 
+            'Correctness_Intro' 
+    ];
   }
 
   function getStepContent(activeStep) {
@@ -132,16 +146,6 @@ const useStyles = makeStyles((theme) => ({
   
     export default function CorrectnessTutorial(props) {
     const classes = useStyles();
-
-    const theme = createMuiTheme({
-        palette: {
-          primary: {
-            main: color,
-          },
-          //改颜色
-        },
-        
-      });
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -169,9 +173,9 @@ const useStyles = makeStyles((theme) => ({
     
 
     return (
-        <ThemeProvider theme={theme}>
+        <div>
             <CssBaseline />
-            <AppBar position="static" className={classes.appBar1} >
+            <AppBar className={classes.appBar1} >
                 <div className ={classes.div}>
                 <Button className={classes.icon} onClick={handleClick}>
                     <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
@@ -201,7 +205,15 @@ const useStyles = makeStyles((theme) => ({
                             </ListItem>
                             {['Input', 'Input_Def'].map((text, index) => (
                                 
-                            index === activeStep?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem>:<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem> 
+                            index === activeStep 
+                                ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}>
+                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                    <ListItemText primary={text} />
+                                </ListItem>
+                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}>
+                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                    <ListItemText primary={text} />
+                                </ListItem> 
                             ))}                  
                         </List>
                         <Divider />
@@ -210,7 +222,15 @@ const useStyles = makeStyles((theme) => ({
                             <ListItemText primary= 'Termination' />
                             </ListItem>
                             {['Termination', 'Termination_Def'].map((text, index) => (
-                            index + 2 === activeStep?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem>:<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 2)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem> 
+                            index + 2 === activeStep
+                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
+                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                    <ListItemText primary={text} />
+                                </ListItem>
+                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 2)}>
+                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                    <ListItemText primary={text} />
+                                </ListItem> 
                             ))}
                         </List>
 
@@ -220,14 +240,22 @@ const useStyles = makeStyles((theme) => ({
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
                             {['Conclusion' , 'Partial Correctness', 'Total Correctness', 'Partial_Example', 'Total_Example', 'Correctness_Intro' ].map((text, index) => (
-                            index + 4 === activeStep?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 4)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem>:<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 4)}><ListItemIcon><ChevronRightIcon/></ListItemIcon><ListItemText primary={text} /></ListItem> 
+                            index + 4 === activeStep
+                            ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 4)}>
+                                <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                            :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 4)}
+                                ><ListItemIcon><ChevronRightIcon/></ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem> 
                             ))}
                         </List>
                    </div>
                 </Drawer>               
                 {getStepContent(activeStep)}    
             </main>
-            <AppBar position="static" className = {classes.appBar2}>
+            <AppBar className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}
                     position="fixed"
@@ -247,7 +275,7 @@ const useStyles = makeStyles((theme) => ({
                     }
                 />
             </AppBar>
-        </ThemeProvider>
+        </div>
        
        
     );
