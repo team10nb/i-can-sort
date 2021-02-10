@@ -1,13 +1,14 @@
 {
   "main": "main.js",
   "homepage": ".",
-  "name": "icansort",
+  "name": "react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "4.1.0",
     "@material-ui/core": "4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
@@ -15,6 +16,7 @@
     "lodash": "^4.17.20",
     "antd": "^4.11.2",
     "electron": "^11.1.1",
+    "npm-tree": "0.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",

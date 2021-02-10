@@ -93,7 +93,7 @@ function calculateProgress(progressArray){
     if (progressArray[i] == true){
       value += 30;
       count++;
-    }  
+    }
   }
   if(count == progressArray.length)
     value = 100;
@@ -186,6 +186,15 @@ const props2 = {
   color: color,
   preOne: false,
 };
+    const props2 = {
+      image: images[3],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[3].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[3].title),
+    };
 
     return (
       <div className={classes.div} >

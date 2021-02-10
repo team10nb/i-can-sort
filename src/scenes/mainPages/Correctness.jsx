@@ -88,35 +88,71 @@ export function CorrectnessChoiceMenu(){
 //The progress bar under each module represents the learning progress of the algorithm
 function CorrectnessMainPage(props) {
     const classes = useStyles();
-    const progress = props.location.state ? props.location.state : 0;
+     //get progress info from local
+     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
+     const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
+ 
+     //set progress
+     const progress = props.location.state ? props.location.state : localProgress;
+     localStorage.setItem("progress", JSON.stringify(progress));
+ 
+     const handleClick = (title) => () => {
+       //store previous visited algorithm
+       localStorage.setItem("pre", JSON.stringify(title));
+     }
+ 
+     const handlePre = (title) => {
+       //set previous visited algorithm
+       const preOne = (title === localPre) ? true : false;
+       return preOne;
+     }
     
-    const image = {
+     const images = [
+      {
         static: "./logo512.png",
         gif: "catch.gif",
         title: "Bubble sort",
         width: "20%",
-    };
-    const image2 = {
+      },
+      {
         static: "./logo512.png",
-        gif: "sorting.gif",
-        title: "Bubble sort",
+        gif: "catch.gif",
+        title: "Selection sort",
         width: "20%",
-    };
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Insertion sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "catch.gif",
+        title: "Bub sort",
+        width: "20%",
+      },
 
-    const bubbleProps = {
-        image: image,
-        width: 200,
-        height: 200,
-        progress: progress,
-        color: color,
-        preOne: true,
-    };
+  ];
+
+    const TutorialProps = {
+      image: images[0],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[0].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[0].title),
+  };
+
     const props2 = {
-        image: image2,
-        width: 200,
-        height: 200,
-        progress: progress,
-        color: color,
+      image: images[3],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[3].title),
+      progress: progress,
+      color: color,
+      preOne: handlePre(images[3].title),
     };
 
     return (
@@ -125,8 +161,8 @@ function CorrectnessMainPage(props) {
           <Grid container spacing={0} >
 
           <Grid item xs={6} sm={3} >
-          <Link to="/Page">
-              <Module {...bubbleProps} />
+          <Link to="/Correctness/Tutorial">
+              <Module {...TutorialProps} />
           </Link>
           </Grid>
 
