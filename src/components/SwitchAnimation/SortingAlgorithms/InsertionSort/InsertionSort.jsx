@@ -2,29 +2,32 @@ import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
 export default function InssertionSort(arr) {
     let patched = patch(arr);
+
+    // Visualize: Initial State
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
+
     let i = 0;
     let j = 0;
     let k = {};
     let temp = {};
     let len = patched.length;
 
-    // 默认第一个已经排序，从第二个开始和前面的对比并插入
+    // Visualize: Suppose the first one is sorted，comparing begins from the second one
     changeColor(patched, i, COLORS.finished);
 
     trace.push(hardcopy(patched));
     description.push("Mark the first element as sorted");
 
     for (i = 1; i < len; i++) {
-        //保存当前要拿来对比插入的数
+        // The comparing number
         k = patched[i];
-        //将key和前一个数相比
+        // Compare the key with the previous one
         j = i - 1;
 
-        // 第i个刚好比前面的都要大, 因此已经sorted了
+        // If the ith is already the biggest, already sorted
         if (patched[j].value <= patched[j + 1].value) {
-            // 比较
+            // Visualize: Comparing
             changeColor(patched, i, COLORS.comparing);
             patched[i].y = -50;
             changeColor(patched, j, COLORS.comparing);
@@ -33,7 +36,7 @@ export default function InssertionSort(arr) {
                 " Compare " + patched[j + 1].value + " and " + patched[j].value
             );
 
-            // 告知已经sorted了
+            // Visualize: Alreay sorted
             changeColor(patched, j, COLORS.finished);
             changeColor(patched, i, COLORS.finished);
             patched[j].y = 0;
@@ -43,7 +46,7 @@ export default function InssertionSort(arr) {
         }
 
         while (j >= 0 && patched[j].value > k.value) {
-            // 比较并swap
+            // Visualize: Compare and swap elements
             changeColor(patched, j + 1, COLORS.comparing);
             patched[j + 1].y = -50;
             changeColor(patched, j, COLORS.comparing);
@@ -54,7 +57,7 @@ export default function InssertionSort(arr) {
             patched[j + 1] = patched[j];
             patched[j] = temp;
 
-            // 继续向前比较
+            // Visualize: Keep going on comparing
             changeColor(patched, j + 1, COLORS.finished);
             description.push(
                 patched[j].value +
@@ -64,7 +67,7 @@ export default function InssertionSort(arr) {
             );
             trace.push(hardcopy(patched));
 
-            // 因为while循环会跳过已经sorted的两项, 所以这里用if补充进去
+            // Visualize: Compare the sorted elements which are ignoerd by while loop
             if (j >= 1 && patched[j - 1].value <= patched[j].value) {
                 // 比较与前一个
                 changeColor(patched, j, COLORS.comparing);
@@ -78,14 +81,14 @@ export default function InssertionSort(arr) {
                         patched[j - 1].value
                 );
 
-                // 找到了正确的位置, 插入并改变颜色至finish
+                // Visualize: Find the proper position, insert
                 changeColor(patched, j - 1, COLORS.finished);
                 changeColor(patched, j, COLORS.finished);
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
             } else if (j === 0) {
-                // 处于第一项的特殊情况, 是对前面if条件的补充, 因为这个时候j == 0, 已经在最前面了
+                // Visualize: If the element is the first one
                 changeColor(patched, j, COLORS.finished);
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
@@ -95,7 +98,7 @@ export default function InssertionSort(arr) {
         }
     }
 
-    // 完成了
+    // Visualize: Final state
     description.push("Insertion sort is finished, all sorted");
     trace.push(hardcopy(patched));
 

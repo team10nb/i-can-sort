@@ -6,6 +6,7 @@ import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 // a framer motion transition attributes
 const spring = {
@@ -248,6 +249,16 @@ export const SwitchAnimation = (props) => {
                     >
                         <div className={classes.barNumber}>
                             {background.value}
+                        </div>
+                        <div
+                            style={{
+                                marginTop: background.height-17,
+                                fontSize: "16px",
+                                textAlign: "center",
+                                fontWeight: "600",
+                            }}
+                        >
+                            {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
                         </div>
                     </motion.li>
                 ))}
