@@ -52,7 +52,7 @@ export function patch(arr) {
   let i = 0;
   arr.forEach(element => {
       returnList.push(
-        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i, y: 0, });
+        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i, y: 0, isPivot: false });
       i++;
   });
   return returnList;
