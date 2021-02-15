@@ -1,8 +1,8 @@
 language: node_js
 OS:
-#   - linux
-#   - mac
-  - windows
+  # - linux
+  - mac
+  # - windows
 node_js:
   - '15.6.0'
 cache:
