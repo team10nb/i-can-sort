@@ -5,17 +5,17 @@ import * as AnimationControls from "../AnimationControl/AnimationControl";
 
 const trace = [
     [
-        { height: "50px", backgroundColor: "#FF008C", key: '1' },
-        { height: "30px", backgroundColor: "#D309E1", key: '2' },
-        { height: "90px", backgroundColor: "#9C1AFF", key: '3' },
-        { height: "10px", backgroundColor: "#7700FF", key: '4' },
-        { height: "20px", backgroundColor: "#66AA00", key: '5' },
+        { height: "50", backgroundColor: "#FF008C", key: '1' },
+        { height: "30", backgroundColor: "#D309E1", key: '2' },
+        { height: "90", backgroundColor: "#9C1AFF", key: '3' },
+        { height: "10", backgroundColor: "#7700FF", key: '4' },
+        { height: "20", backgroundColor: "#66AA00", key: '5' },
     ],[
-        { height: "50px", backgroundColor: "#FF008C", key: '1' },
-        { height: "30px", backgroundColor: "#D309E1", key: '2' },
-        { height: "90px", backgroundColor: "#9C1AFF", key: '3' },
-        { height: "10px", backgroundColor: "#7700FF", key: '4' },
-        { height: "20px", backgroundColor: "#66AA00", key: '5' },
+        { height: "50", backgroundColor: "#FF008C", key: '1' },
+        { height: "30", backgroundColor: "#D309E1", key: '2' },
+        { height: "90", backgroundColor: "#9C1AFF", key: '3' },
+        { height: "10", backgroundColor: "#7700FF", key: '4' },
+        { height: "20", backgroundColor: "#66AA00", key: '5' },
     ],
 
 ];

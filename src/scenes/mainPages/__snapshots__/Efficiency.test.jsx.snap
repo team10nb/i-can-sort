@@ -504,7 +504,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                    class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                     style="width: 20px;"
                   />
                 </div>
@@ -1145,7 +1145,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                  class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                   style="width: 20px;"
                 />
               </div>

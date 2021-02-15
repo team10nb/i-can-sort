@@ -13,42 +13,57 @@ Object {
         >
           <li
             class="makeStyles-bar-74"
-            style="height: 50px; background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            style="background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
               class="makeStyles-barNumber-75"
             />
-          </li>
-          <li
-            class="makeStyles-bar-74"
-            style="height: 30px; background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
-          >
             <div
-              class="makeStyles-barNumber-75"
+              style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
             />
           </li>
           <li
             class="makeStyles-bar-74"
-            style="height: 90px; background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            style="background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
               class="makeStyles-barNumber-75"
             />
-          </li>
-          <li
-            class="makeStyles-bar-74"
-            style="height: 10px; background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
-          >
             <div
-              class="makeStyles-barNumber-75"
+              style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
             />
           </li>
           <li
             class="makeStyles-bar-74"
-            style="height: 20px; background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            style="background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
               class="makeStyles-barNumber-75"
+            />
+            <div
+              style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-74"
+            style="background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-75"
+            />
+            <div
+              style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-74"
+            style="background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-75"
+            />
+            <div
+              style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
             />
           </li>
         </ul>
@@ -338,42 +353,57 @@ Object {
       >
         <li
           class="makeStyles-bar-74"
-          style="height: 50px; background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          style="background-color: rgb(255, 0, 140); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
         >
           <div
             class="makeStyles-barNumber-75"
           />
-        </li>
-        <li
-          class="makeStyles-bar-74"
-          style="height: 30px; background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
-        >
           <div
-            class="makeStyles-barNumber-75"
+            style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
           />
         </li>
         <li
           class="makeStyles-bar-74"
-          style="height: 90px; background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          style="background-color: rgb(211, 9, 225); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
         >
           <div
             class="makeStyles-barNumber-75"
           />
-        </li>
-        <li
-          class="makeStyles-bar-74"
-          style="height: 10px; background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
-        >
           <div
-            class="makeStyles-barNumber-75"
+            style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
           />
         </li>
         <li
           class="makeStyles-bar-74"
-          style="height: 20px; background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          style="background-color: rgb(156, 26, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
         >
           <div
             class="makeStyles-barNumber-75"
+          />
+          <div
+            style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+          />
+        </li>
+        <li
+          class="makeStyles-bar-74"
+          style="background-color: rgb(119, 0, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+        >
+          <div
+            class="makeStyles-barNumber-75"
+          />
+          <div
+            style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+          />
+        </li>
+        <li
+          class="makeStyles-bar-74"
+          style="background-color: rgb(102, 170, 0); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+        >
+          <div
+            class="makeStyles-barNumber-75"
+          />
+          <div
+            style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
           />
         </li>
       </ul>

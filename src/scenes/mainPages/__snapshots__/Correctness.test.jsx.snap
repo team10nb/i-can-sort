@@ -18,7 +18,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
             >
               <a
-                href="/Page"
+                href="/Correctness/Tutorial"
               >
                 <div
                   style="display: inline-block; margin: 10px;"
@@ -101,7 +101,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -158,7 +158,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -215,7 +215,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-50 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -272,7 +272,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-61 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -329,7 +329,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-72 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -386,7 +386,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-83 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -443,7 +443,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-94 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -504,7 +504,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                    class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                     style="width: 20px;"
                   />
                 </div>
@@ -659,7 +659,7 @@ Object {
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
           >
             <a
-              href="/Page"
+              href="/Correctness/Tutorial"
             >
               <div
                 style="display: inline-block; margin: 10px;"
@@ -742,7 +742,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -799,7 +799,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -856,7 +856,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-50 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -913,7 +913,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-61 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -970,7 +970,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-72 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -1027,7 +1027,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-83 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -1084,7 +1084,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-94 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span
@@ -1145,7 +1145,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
+                  class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                   style="width: 20px;"
                 />
               </div>
