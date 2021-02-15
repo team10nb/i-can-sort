@@ -1,22 +1,18 @@
 language: node_js
- OS:
+OS:
 #   - linux
 #   - mac
-   - windows
+  - windows
 node_js:
-  - node
+  - '15.6.0'
 cache:
   directories:
     - node_modules
 jobs:
   include:
-    # - stage: lint
-    #   script:
-    #     - npm install
-    #     - npm install eslint -g
-    #     - npm run lint
     - stage: test
       script:
+        - npm install -g npm@6.14.10
         - npm install
         - npm build
         - npm run test
