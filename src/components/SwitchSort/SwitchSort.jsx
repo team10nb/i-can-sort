@@ -9,32 +9,40 @@ import {random} from "lodash";
 export default function SwitchSort(props) {
     const { sort } = props;
 
+    // The user input
     const [str, setStr] = useState("2,1,6,10,9,12,8,3");
+    // The array gained from processed user input
     const [arr, setArr] = useState([2, 1, 6, 10, 9, 12, 8, 3]);
+    // The bool value which represent whether user input is valid or not
     const [isValid, setIsValid] = useState(true);
+    // The wrong message 
     const [wrongMsg, setWrongMsg] = useState(" ");
 
+    // The maximum value of input number
     const MAXNUMBER = 25;
+    // The minimun value of input number
     const MINNUMBER = 1;
+    // The maximum length of input array
     const MAXLENGTH = 15;
 
+    // store user input
     const handleChange = (e) => {
         setStr(e.target.value);
         setIsValid(true);
     };
 
-    //   用正则表达式保证数据
+    // check the format of user input
     const checkFormat = () => {
         let s = str.replace(/\s+/g, "");
         s = removeDot(s);
         setStr(s);
 
-        // 只有一个数字
+        // user only enter one number
         if (s.match(/^[0-9]*$/)) {
             setIsValid(false);
-            setWrongMsg("Please enter more than 1 number."); // 只有一个数字
+            setWrongMsg("Please enter more than 1 number.");
         }
-        // 数字,数字,数字
+        // correct format 
         else if (s.match(/^\d+((,|，)\d+)*$/)) {
             const numString = s.split(/[，,]/);
             const nums = numString.map(num => parseInt(num));
@@ -48,7 +56,7 @@ export default function SwitchSort(props) {
                     break;
                 }
             }
-
+            // check if input numbers are valid
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
@@ -67,11 +75,12 @@ export default function SwitchSort(props) {
             }
         } else {
             setIsValid(false);
-            setWrongMsg("Please follow the correct format."); // 格式不对
+            setWrongMsg("Please follow the correct format."); 
         }
         return 0;
     };
 
+    // to produce random array
     const shuffle = () => {
         const length = random(3,MAXLENGTH-4);
         let array = [];
@@ -86,7 +95,7 @@ export default function SwitchSort(props) {
         setStr(array.join(","));
     }
 
-
+    // use corresponding algorithm to props
     let trace = "";
     if (sort === "Bubble") {
         trace = BubbleSort(arr);
@@ -122,8 +131,6 @@ export default function SwitchSort(props) {
                 {sort }
                 </div>
                 
-            
-            
             <InputBar
                 inputString = {str}
                 handleChange={handleChange}
@@ -138,7 +145,7 @@ export default function SwitchSort(props) {
     );
 }
 
-//去掉右边的空白
+// remove dot(s) of str's right 
 function removeDot(s) {
     if (s == null) return "";
     var dot = "，,";
