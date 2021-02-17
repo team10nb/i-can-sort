@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-root-19"
+        class="makeStyles-root-21"
       >
         <div
           style="width: 550px; display: flex;"
         >
           <div
-            class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-23 makeStyles-text-20"
+            class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-26 makeStyles-text-22"
           >
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
@@ -31,10 +31,10 @@ Object {
               />
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-24 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-27 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-26 PrivateNotchedOutline-legendNotched-27"
+                  class="PrivateNotchedOutline-legendLabelled-29 PrivateNotchedOutline-legendNotched-30"
                 >
                   <span>
                     Enter your own array using comma
@@ -51,7 +51,7 @@ Object {
             </p>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-21 MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-24 MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -65,7 +65,7 @@ Object {
             />
           </button>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-22 MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-25 MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -84,13 +84,13 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-root-19"
+      class="makeStyles-root-21"
     >
       <div
         style="width: 550px; display: flex;"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-23 makeStyles-text-20"
+          class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-26 makeStyles-text-22"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
@@ -109,10 +109,10 @@ Object {
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-24 MuiOutlinedInput-notchedOutline"
+              class="PrivateNotchedOutline-root-27 MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="PrivateNotchedOutline-legendLabelled-26 PrivateNotchedOutline-legendNotched-27"
+                class="PrivateNotchedOutline-legendLabelled-29 PrivateNotchedOutline-legendNotched-30"
               >
                 <span>
                   Enter your own array using comma
@@ -129,7 +129,7 @@ Object {
           </p>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-21 MuiButton-disableElevation"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-24 MuiButton-disableElevation"
           tabindex="0"
           type="button"
         >
@@ -143,7 +143,7 @@ Object {
           />
         </button>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-22 MuiButton-disableElevation"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-25 MuiButton-disableElevation"
           tabindex="0"
           type="button"
         >

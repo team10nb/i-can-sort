@@ -17,13 +17,13 @@ Object {
             Bubble
           </div>
           <div
-            class="makeStyles-root-46"
+            class="makeStyles-root-47"
           >
             <div
               style="width: 550px; display: flex;"
             >
               <div
-                class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-50 makeStyles-text-47"
+                class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-52 makeStyles-text-48"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
@@ -42,10 +42,10 @@ Object {
                   />
                   <fieldset
                     aria-hidden="true"
-                    class="PrivateNotchedOutline-root-51 MuiOutlinedInput-notchedOutline"
+                    class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="PrivateNotchedOutline-legendLabelled-53 PrivateNotchedOutline-legendNotched-54"
+                      class="PrivateNotchedOutline-legendLabelled-55 PrivateNotchedOutline-legendNotched-56"
                     >
                       <span>
                         Enter your own array using comma
@@ -62,7 +62,7 @@ Object {
                 </p>
               </div>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-48 MuiButton-disableElevation"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-50 MuiButton-disableElevation"
                 tabindex="0"
                 type="button"
               >
@@ -76,7 +76,7 @@ Object {
                 />
               </button>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-49 MuiButton-disableElevation"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-51 MuiButton-disableElevation"
                 tabindex="0"
                 type="button"
               >
@@ -93,112 +93,136 @@ Object {
           </div>
         </div>
         <div
-          class="makeStyles-root-79"
+          class="makeStyles-root-81"
         >
           <ul
-            class="makeStyles-bars-80"
+            class="makeStyles-bars-82"
           >
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 20px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 2
               </div>
+              <div
+                style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 10px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 1
               </div>
+              <div
+                style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 60px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 6
               </div>
+              <div
+                style="margin-top: 43px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 100px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 10
               </div>
+              <div
+                style="margin-top: 83px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 90px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 9
               </div>
+              <div
+                style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 120px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 12
               </div>
+              <div
+                style="margin-top: 103px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 8
               </div>
+              <div
+                style="margin-top: 63px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
             <li
-              class="makeStyles-bar-81"
+              class="makeStyles-bar-83"
               style="height: 30px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
             >
               <div
-                class="makeStyles-barNumber-82"
+                class="makeStyles-barNumber-84"
               >
                 3
               </div>
+              <div
+                style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
             </li>
           </ul>
           <div
-            class="makeStyles-root-83"
+            class="makeStyles-root-85"
           >
             <div
-              class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-60 MuiPaper-outlined MuiPaper-rounded"
+              class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-62 MuiPaper-outlined MuiPaper-rounded"
             >
               Unsorted Array
             </div>
           </div>
           <div
-            class="makeStyles-root-84"
+            class="makeStyles-root-86"
           >
             <span
-              class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-62 MuiSlider-colorPrimary"
+              class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-64 MuiSlider-colorPrimary"
             >
               <span
-                class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-67"
+                class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-69"
               />
               <span
-                class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-66"
+                class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-68"
                 style="left: 0%; width: 0%;"
               />
               <input
@@ -206,332 +230,332 @@ Object {
                 value="0"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68 MuiSlider-markActive"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70 MuiSlider-markActive"
                 data-index="0"
                 style="left: 0%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="1"
                 style="left: 1.5384615384615385%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="2"
                 style="left: 3.076923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="3"
                 style="left: 4.615384615384615%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="4"
                 style="left: 6.153846153846154%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="5"
                 style="left: 7.6923076923076925%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="6"
                 style="left: 9.23076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="7"
                 style="left: 10.76923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="8"
                 style="left: 12.307692307692308%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="9"
                 style="left: 13.846153846153847%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="10"
                 style="left: 15.384615384615385%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="11"
                 style="left: 16.923076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="12"
                 style="left: 18.46153846153846%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="13"
                 style="left: 20%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="14"
                 style="left: 21.53846153846154%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="15"
                 style="left: 23.076923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="16"
                 style="left: 24.615384615384617%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="17"
                 style="left: 26.153846153846153%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="18"
                 style="left: 27.692307692307693%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="19"
                 style="left: 29.23076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="20"
                 style="left: 30.76923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="21"
                 style="left: 32.30769230769231%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="22"
                 style="left: 33.84615384615385%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="23"
                 style="left: 35.38461538461539%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="24"
                 style="left: 36.92307692307692%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="25"
                 style="left: 38.46153846153846%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="26"
                 style="left: 40%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="27"
                 style="left: 41.53846153846154%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="28"
                 style="left: 43.07692307692308%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="29"
                 style="left: 44.61538461538461%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="30"
                 style="left: 46.15384615384615%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="31"
                 style="left: 47.69230769230769%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="32"
                 style="left: 49.23076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="33"
                 style="left: 50.76923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="34"
                 style="left: 52.30769230769231%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="35"
                 style="left: 53.84615384615385%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="36"
                 style="left: 55.38461538461539%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="37"
                 style="left: 56.92307692307692%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="38"
                 style="left: 58.46153846153846%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="39"
                 style="left: 60%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="40"
                 style="left: 61.53846153846154%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="41"
                 style="left: 63.07692307692308%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="42"
                 style="left: 64.61538461538461%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="43"
                 style="left: 66.15384615384616%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="44"
                 style="left: 67.6923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="45"
                 style="left: 69.23076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="46"
                 style="left: 70.76923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="47"
                 style="left: 72.3076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="48"
                 style="left: 73.84615384615384%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="49"
                 style="left: 75.38461538461539%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="50"
                 style="left: 76.92307692307692%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="51"
                 style="left: 78.46153846153847%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="52"
                 style="left: 80%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="53"
                 style="left: 81.53846153846153%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="54"
                 style="left: 83.07692307692308%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="55"
                 style="left: 84.61538461538461%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="56"
                 style="left: 86.15384615384616%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="57"
                 style="left: 87.6923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="58"
                 style="left: 89.23076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="59"
                 style="left: 90.76923076923077%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="60"
                 style="left: 92.3076923076923%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="61"
                 style="left: 93.84615384615384%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="62"
                 style="left: 95.38461538461539%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="63"
                 style="left: 96.92307692307692%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="64"
                 style="left: 98.46153846153847%;"
               />
               <span
-                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
                 data-index="65"
                 style="left: 100%;"
               />
@@ -541,20 +565,20 @@ Object {
                 aria-valuemax="65"
                 aria-valuemin="0"
                 aria-valuenow="0"
-                class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-63 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-69"
+                class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-65 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-71"
                 data-index="0"
                 role="slider"
                 style="left: 0%;"
                 tabindex="0"
               >
                 <span
-                  class="PrivateValueLabel-offset-71 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-65"
+                  class="PrivateValueLabel-offset-73 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-67"
                 >
                   <span
-                    class="PrivateValueLabel-circle-72"
+                    class="PrivateValueLabel-circle-74"
                   >
                     <span
-                      class="PrivateValueLabel-label-73"
+                      class="PrivateValueLabel-label-75"
                     >
                       0
                     </span>
@@ -567,7 +591,7 @@ Object {
             style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
           >
             <span
-              class="makeStyles-customTooltip-85"
+              class="makeStyles-customTooltip-87"
               title="Reset"
             >
               <button
@@ -665,12 +689,12 @@ Object {
               />
             </button>
             <div
-              class="makeStyles-root-86"
+              class="makeStyles-root-88"
             >
               <button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
-                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-88"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-90"
                 style="min-width: 40px;"
                 tabindex="0"
                 title="Speed"
@@ -692,7 +716,7 @@ Object {
     </div>
     <div
       aria-hidden="true"
-      class="MuiPopover-root makeStyles-menu-87"
+      class="MuiPopover-root makeStyles-menu-89"
       id="simple-menu"
       role="presentation"
       style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
@@ -713,7 +737,7 @@ Object {
         >
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-92 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="0"
             value="1"
@@ -725,7 +749,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-92 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="2"
@@ -737,7 +761,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-92 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="4"
@@ -749,7 +773,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-92 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="8"
@@ -761,7 +785,7 @@ Object {
           </li>
           <li
             aria-disabled="false"
-            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-92 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
             role="menuitem"
             tabindex="-1"
             value="16"
@@ -792,13 +816,13 @@ Object {
           Bubble
         </div>
         <div
-          class="makeStyles-root-46"
+          class="makeStyles-root-47"
         >
           <div
             style="width: 550px; display: flex;"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-50 makeStyles-text-47"
+              class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-52 makeStyles-text-48"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
@@ -817,10 +841,10 @@ Object {
                 />
                 <fieldset
                   aria-hidden="true"
-                  class="PrivateNotchedOutline-root-51 MuiOutlinedInput-notchedOutline"
+                  class="PrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    class="PrivateNotchedOutline-legendLabelled-53 PrivateNotchedOutline-legendNotched-54"
+                    class="PrivateNotchedOutline-legendLabelled-55 PrivateNotchedOutline-legendNotched-56"
                   >
                     <span>
                       Enter your own array using comma
@@ -837,7 +861,7 @@ Object {
               </p>
             </div>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-48 MuiButton-disableElevation"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-50 MuiButton-disableElevation"
               tabindex="0"
               type="button"
             >
@@ -851,7 +875,7 @@ Object {
               />
             </button>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-49 MuiButton-disableElevation"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-51 MuiButton-disableElevation"
               tabindex="0"
               type="button"
             >
@@ -868,112 +892,136 @@ Object {
         </div>
       </div>
       <div
-        class="makeStyles-root-79"
+        class="makeStyles-root-81"
       >
         <ul
-          class="makeStyles-bars-80"
+          class="makeStyles-bars-82"
         >
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 20px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               2
             </div>
+            <div
+              style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 10px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               1
             </div>
+            <div
+              style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 60px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               6
             </div>
+            <div
+              style="margin-top: 43px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 100px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               10
             </div>
+            <div
+              style="margin-top: 83px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 90px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               9
             </div>
+            <div
+              style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 120px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               12
             </div>
+            <div
+              style="margin-top: 103px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               8
             </div>
+            <div
+              style="margin-top: 63px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
           <li
-            class="makeStyles-bar-81"
+            class="makeStyles-bar-83"
             style="height: 30px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
           >
             <div
-              class="makeStyles-barNumber-82"
+              class="makeStyles-barNumber-84"
             >
               3
             </div>
+            <div
+              style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
           </li>
         </ul>
         <div
-          class="makeStyles-root-83"
+          class="makeStyles-root-85"
         >
           <div
-            class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-60 MuiPaper-outlined MuiPaper-rounded"
+            class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-62 MuiPaper-outlined MuiPaper-rounded"
           >
             Unsorted Array
           </div>
         </div>
         <div
-          class="makeStyles-root-84"
+          class="makeStyles-root-86"
         >
           <span
-            class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-62 MuiSlider-colorPrimary"
+            class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-64 MuiSlider-colorPrimary"
           >
             <span
-              class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-67"
+              class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-69"
             />
             <span
-              class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-66"
+              class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-68"
               style="left: 0%; width: 0%;"
             />
             <input
@@ -981,332 +1029,332 @@ Object {
               value="0"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68 MuiSlider-markActive"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70 MuiSlider-markActive"
               data-index="0"
               style="left: 0%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="1"
               style="left: 1.5384615384615385%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="2"
               style="left: 3.076923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="3"
               style="left: 4.615384615384615%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="4"
               style="left: 6.153846153846154%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="5"
               style="left: 7.6923076923076925%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="6"
               style="left: 9.23076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="7"
               style="left: 10.76923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="8"
               style="left: 12.307692307692308%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="9"
               style="left: 13.846153846153847%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="10"
               style="left: 15.384615384615385%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="11"
               style="left: 16.923076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="12"
               style="left: 18.46153846153846%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="13"
               style="left: 20%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="14"
               style="left: 21.53846153846154%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="15"
               style="left: 23.076923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="16"
               style="left: 24.615384615384617%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="17"
               style="left: 26.153846153846153%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="18"
               style="left: 27.692307692307693%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="19"
               style="left: 29.23076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="20"
               style="left: 30.76923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="21"
               style="left: 32.30769230769231%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="22"
               style="left: 33.84615384615385%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="23"
               style="left: 35.38461538461539%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="24"
               style="left: 36.92307692307692%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="25"
               style="left: 38.46153846153846%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="26"
               style="left: 40%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="27"
               style="left: 41.53846153846154%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="28"
               style="left: 43.07692307692308%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="29"
               style="left: 44.61538461538461%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="30"
               style="left: 46.15384615384615%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="31"
               style="left: 47.69230769230769%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="32"
               style="left: 49.23076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="33"
               style="left: 50.76923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="34"
               style="left: 52.30769230769231%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="35"
               style="left: 53.84615384615385%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="36"
               style="left: 55.38461538461539%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="37"
               style="left: 56.92307692307692%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="38"
               style="left: 58.46153846153846%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="39"
               style="left: 60%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="40"
               style="left: 61.53846153846154%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="41"
               style="left: 63.07692307692308%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="42"
               style="left: 64.61538461538461%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="43"
               style="left: 66.15384615384616%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="44"
               style="left: 67.6923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="45"
               style="left: 69.23076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="46"
               style="left: 70.76923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="47"
               style="left: 72.3076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="48"
               style="left: 73.84615384615384%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="49"
               style="left: 75.38461538461539%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="50"
               style="left: 76.92307692307692%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="51"
               style="left: 78.46153846153847%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="52"
               style="left: 80%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="53"
               style="left: 81.53846153846153%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="54"
               style="left: 83.07692307692308%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="55"
               style="left: 84.61538461538461%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="56"
               style="left: 86.15384615384616%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="57"
               style="left: 87.6923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="58"
               style="left: 89.23076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="59"
               style="left: 90.76923076923077%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="60"
               style="left: 92.3076923076923%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="61"
               style="left: 93.84615384615384%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="62"
               style="left: 95.38461538461539%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="63"
               style="left: 96.92307692307692%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="64"
               style="left: 98.46153846153847%;"
             />
             <span
-              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-70"
               data-index="65"
               style="left: 100%;"
             />
@@ -1316,20 +1364,20 @@ Object {
               aria-valuemax="65"
               aria-valuemin="0"
               aria-valuenow="0"
-              class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-63 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-69"
+              class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-65 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-71"
               data-index="0"
               role="slider"
               style="left: 0%;"
               tabindex="0"
             >
               <span
-                class="PrivateValueLabel-offset-71 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-65"
+                class="PrivateValueLabel-offset-73 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-67"
               >
                 <span
-                  class="PrivateValueLabel-circle-72"
+                  class="PrivateValueLabel-circle-74"
                 >
                   <span
-                    class="PrivateValueLabel-label-73"
+                    class="PrivateValueLabel-label-75"
                   >
                     0
                   </span>
@@ -1342,7 +1390,7 @@ Object {
           style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
         >
           <span
-            class="makeStyles-customTooltip-85"
+            class="makeStyles-customTooltip-87"
             title="Reset"
           >
             <button
@@ -1440,12 +1488,12 @@ Object {
             />
           </button>
           <div
-            class="makeStyles-root-86"
+            class="makeStyles-root-88"
           >
             <button
               aria-controls="simple-menu"
               aria-haspopup="true"
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-88"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-90"
               style="min-width: 40px;"
               tabindex="0"
               title="Speed"
