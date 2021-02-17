@@ -1,0 +1,1520 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        style="display: grid; justify-content: center; align-content: flex-end; height: 500px;"
+      >
+        <div
+          style="height: 40px; width: 900px; display: flex;"
+        >
+          <div
+            style="height: 40px; width: 90px; font-size: 26px; font-weight: 500;"
+          >
+            Bubble
+          </div>
+          <div
+            class="makeStyles-root-46"
+          >
+            <div
+              style="width: 550px; display: flex;"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-50 makeStyles-text-47"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Enter your own array using comma
+                </label>
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputTypeSearch MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                    type="search"
+                    value="2,1,6,10,9,12,8,3"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root-51 MuiOutlinedInput-notchedOutline"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legendLabelled-53 PrivateNotchedOutline-legendNotched-54"
+                    >
+                      <span>
+                        Enter your own array using comma
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <p
+                  class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled MuiFormHelperText-marginDense"
+                >
+                  <span>
+                    ​
+                  </span>
+                </p>
+              </div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-48 MuiButton-disableElevation"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Create
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-49 MuiButton-disableElevation"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Shuffle
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="makeStyles-root-79"
+        >
+          <ul
+            class="makeStyles-bars-80"
+          >
+            <li
+              class="makeStyles-bar-81"
+              style="height: 20px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                2
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 10px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                1
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 60px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                6
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 100px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                10
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 90px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                9
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 120px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                12
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                8
+              </div>
+            </li>
+            <li
+              class="makeStyles-bar-81"
+              style="height: 30px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-82"
+              >
+                3
+              </div>
+            </li>
+          </ul>
+          <div
+            class="makeStyles-root-83"
+          >
+            <div
+              class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-60 MuiPaper-outlined MuiPaper-rounded"
+            >
+              Unsorted Array
+            </div>
+          </div>
+          <div
+            class="makeStyles-root-84"
+          >
+            <span
+              class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-62 MuiSlider-colorPrimary"
+            >
+              <span
+                class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-67"
+              />
+              <span
+                class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-66"
+                style="left: 0%; width: 0%;"
+              />
+              <input
+                type="hidden"
+                value="0"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68 MuiSlider-markActive"
+                data-index="0"
+                style="left: 0%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="1"
+                style="left: 1.5384615384615385%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="2"
+                style="left: 3.076923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="3"
+                style="left: 4.615384615384615%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="4"
+                style="left: 6.153846153846154%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="5"
+                style="left: 7.6923076923076925%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="6"
+                style="left: 9.23076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="7"
+                style="left: 10.76923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="8"
+                style="left: 12.307692307692308%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="9"
+                style="left: 13.846153846153847%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="10"
+                style="left: 15.384615384615385%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="11"
+                style="left: 16.923076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="12"
+                style="left: 18.46153846153846%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="13"
+                style="left: 20%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="14"
+                style="left: 21.53846153846154%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="15"
+                style="left: 23.076923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="16"
+                style="left: 24.615384615384617%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="17"
+                style="left: 26.153846153846153%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="18"
+                style="left: 27.692307692307693%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="19"
+                style="left: 29.23076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="20"
+                style="left: 30.76923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="21"
+                style="left: 32.30769230769231%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="22"
+                style="left: 33.84615384615385%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="23"
+                style="left: 35.38461538461539%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="24"
+                style="left: 36.92307692307692%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="25"
+                style="left: 38.46153846153846%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="26"
+                style="left: 40%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="27"
+                style="left: 41.53846153846154%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="28"
+                style="left: 43.07692307692308%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="29"
+                style="left: 44.61538461538461%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="30"
+                style="left: 46.15384615384615%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="31"
+                style="left: 47.69230769230769%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="32"
+                style="left: 49.23076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="33"
+                style="left: 50.76923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="34"
+                style="left: 52.30769230769231%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="35"
+                style="left: 53.84615384615385%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="36"
+                style="left: 55.38461538461539%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="37"
+                style="left: 56.92307692307692%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="38"
+                style="left: 58.46153846153846%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="39"
+                style="left: 60%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="40"
+                style="left: 61.53846153846154%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="41"
+                style="left: 63.07692307692308%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="42"
+                style="left: 64.61538461538461%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="43"
+                style="left: 66.15384615384616%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="44"
+                style="left: 67.6923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="45"
+                style="left: 69.23076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="46"
+                style="left: 70.76923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="47"
+                style="left: 72.3076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="48"
+                style="left: 73.84615384615384%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="49"
+                style="left: 75.38461538461539%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="50"
+                style="left: 76.92307692307692%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="51"
+                style="left: 78.46153846153847%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="52"
+                style="left: 80%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="53"
+                style="left: 81.53846153846153%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="54"
+                style="left: 83.07692307692308%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="55"
+                style="left: 84.61538461538461%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="56"
+                style="left: 86.15384615384616%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="57"
+                style="left: 87.6923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="58"
+                style="left: 89.23076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="59"
+                style="left: 90.76923076923077%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="60"
+                style="left: 92.3076923076923%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="61"
+                style="left: 93.84615384615384%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="62"
+                style="left: 95.38461538461539%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="63"
+                style="left: 96.92307692307692%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="64"
+                style="left: 98.46153846153847%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+                data-index="65"
+                style="left: 100%;"
+              />
+              <span
+                aria-labelledby="Progress"
+                aria-orientation="horizontal"
+                aria-valuemax="65"
+                aria-valuemin="0"
+                aria-valuenow="0"
+                class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-63 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-69"
+                data-index="0"
+                role="slider"
+                style="left: 0%;"
+                tabindex="0"
+              >
+                <span
+                  class="PrivateValueLabel-offset-71 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-65"
+                >
+                  <span
+                    class="PrivateValueLabel-circle-72"
+                  >
+                    <span
+                      class="PrivateValueLabel-label-73"
+                    >
+                      0
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+          >
+            <span
+              class="makeStyles-customTooltip-85"
+              title="Reset"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <div
+              class="makeStyles-root-86"
+            >
+              <button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-88"
+                style="min-width: 40px;"
+                tabindex="0"
+                title="Speed"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  1x
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="MuiPopover-root makeStyles-menu-87"
+      id="simple-menu"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
+    >
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="menu"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="0"
+            value="1"
+          >
+            0.25x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="2"
+          >
+            0.5x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="4"
+          >
+            1x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="8"
+          >
+            2x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-90 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="16"
+          >
+            4x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      style="display: grid; justify-content: center; align-content: flex-end; height: 500px;"
+    >
+      <div
+        style="height: 40px; width: 900px; display: flex;"
+      >
+        <div
+          style="height: 40px; width: 90px; font-size: 26px; font-weight: 500;"
+        >
+          Bubble
+        </div>
+        <div
+          class="makeStyles-root-46"
+        >
+          <div
+            style="width: 550px; display: flex;"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-50 makeStyles-text-47"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+              >
+                Enter your own array using comma
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputTypeSearch MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                  type="search"
+                  value="2,1,6,10,9,12,8,3"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-51 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-53 PrivateNotchedOutline-legendNotched-54"
+                  >
+                    <span>
+                      Enter your own array using comma
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled MuiFormHelperText-marginDense"
+              >
+                <span>
+                  ​
+                </span>
+              </p>
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-48 MuiButton-disableElevation"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Create
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-49 MuiButton-disableElevation"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Shuffle
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="makeStyles-root-79"
+      >
+        <ul
+          class="makeStyles-bars-80"
+        >
+          <li
+            class="makeStyles-bar-81"
+            style="height: 20px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              2
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 10px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              1
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 60px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              6
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 100px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              10
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 90px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              9
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 120px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              12
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              8
+            </div>
+          </li>
+          <li
+            class="makeStyles-bar-81"
+            style="height: 30px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+          >
+            <div
+              class="makeStyles-barNumber-82"
+            >
+              3
+            </div>
+          </li>
+        </ul>
+        <div
+          class="makeStyles-root-83"
+        >
+          <div
+            class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-60 MuiPaper-outlined MuiPaper-rounded"
+          >
+            Unsorted Array
+          </div>
+        </div>
+        <div
+          class="makeStyles-root-84"
+        >
+          <span
+            class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-62 MuiSlider-colorPrimary"
+          >
+            <span
+              class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-67"
+            />
+            <span
+              class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-66"
+              style="left: 0%; width: 0%;"
+            />
+            <input
+              type="hidden"
+              value="0"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68 MuiSlider-markActive"
+              data-index="0"
+              style="left: 0%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="1"
+              style="left: 1.5384615384615385%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="2"
+              style="left: 3.076923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="3"
+              style="left: 4.615384615384615%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="4"
+              style="left: 6.153846153846154%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="5"
+              style="left: 7.6923076923076925%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="6"
+              style="left: 9.23076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="7"
+              style="left: 10.76923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="8"
+              style="left: 12.307692307692308%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="9"
+              style="left: 13.846153846153847%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="10"
+              style="left: 15.384615384615385%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="11"
+              style="left: 16.923076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="12"
+              style="left: 18.46153846153846%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="13"
+              style="left: 20%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="14"
+              style="left: 21.53846153846154%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="15"
+              style="left: 23.076923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="16"
+              style="left: 24.615384615384617%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="17"
+              style="left: 26.153846153846153%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="18"
+              style="left: 27.692307692307693%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="19"
+              style="left: 29.23076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="20"
+              style="left: 30.76923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="21"
+              style="left: 32.30769230769231%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="22"
+              style="left: 33.84615384615385%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="23"
+              style="left: 35.38461538461539%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="24"
+              style="left: 36.92307692307692%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="25"
+              style="left: 38.46153846153846%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="26"
+              style="left: 40%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="27"
+              style="left: 41.53846153846154%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="28"
+              style="left: 43.07692307692308%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="29"
+              style="left: 44.61538461538461%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="30"
+              style="left: 46.15384615384615%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="31"
+              style="left: 47.69230769230769%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="32"
+              style="left: 49.23076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="33"
+              style="left: 50.76923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="34"
+              style="left: 52.30769230769231%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="35"
+              style="left: 53.84615384615385%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="36"
+              style="left: 55.38461538461539%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="37"
+              style="left: 56.92307692307692%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="38"
+              style="left: 58.46153846153846%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="39"
+              style="left: 60%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="40"
+              style="left: 61.53846153846154%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="41"
+              style="left: 63.07692307692308%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="42"
+              style="left: 64.61538461538461%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="43"
+              style="left: 66.15384615384616%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="44"
+              style="left: 67.6923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="45"
+              style="left: 69.23076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="46"
+              style="left: 70.76923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="47"
+              style="left: 72.3076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="48"
+              style="left: 73.84615384615384%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="49"
+              style="left: 75.38461538461539%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="50"
+              style="left: 76.92307692307692%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="51"
+              style="left: 78.46153846153847%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="52"
+              style="left: 80%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="53"
+              style="left: 81.53846153846153%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="54"
+              style="left: 83.07692307692308%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="55"
+              style="left: 84.61538461538461%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="56"
+              style="left: 86.15384615384616%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="57"
+              style="left: 87.6923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="58"
+              style="left: 89.23076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="59"
+              style="left: 90.76923076923077%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="60"
+              style="left: 92.3076923076923%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="61"
+              style="left: 93.84615384615384%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="62"
+              style="left: 95.38461538461539%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="63"
+              style="left: 96.92307692307692%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="64"
+              style="left: 98.46153846153847%;"
+            />
+            <span
+              class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-68"
+              data-index="65"
+              style="left: 100%;"
+            />
+            <span
+              aria-labelledby="Progress"
+              aria-orientation="horizontal"
+              aria-valuemax="65"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-63 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-69"
+              data-index="0"
+              role="slider"
+              style="left: 0%;"
+              tabindex="0"
+            >
+              <span
+                class="PrivateValueLabel-offset-71 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-65"
+              >
+                <span
+                  class="PrivateValueLabel-circle-72"
+                >
+                  <span
+                    class="PrivateValueLabel-label-73"
+                  >
+                    0
+                  </span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+        >
+          <span
+            class="makeStyles-customTooltip-85"
+            title="Reset"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </span>
+          <button
+            class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                style="color: grey;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            class="MuiButtonBase-root MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                style="color: grey;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="makeStyles-root-86"
+          >
+            <button
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-88"
+              style="min-width: 40px;"
+              tabindex="0"
+              title="Speed"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                1x
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
