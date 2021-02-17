@@ -122,25 +122,25 @@ function ProcedureMainPage() {
     const images = [
       {
         static: "./logo512.png",
-        gif: "catch.gif",
+        gif: "bubble.gif",
         title: "Bubble sort",
         width: "20%",
       },
       {
         static: "./logo512.png",
-        gif: "catch.gif",
+        gif: "selection.gif",
         title: "Selection sort",
         width: "20%",
       },
       {
         static: "./logo512.png",
-        gif: "catch.gif",
+        gif: "insertion.gif",
         title: "Insertion sort",
         width: "20%",
       },
       {
         static: "./logo512.png",
-        gif: "catch.gif",
+        gif: "quick.gif",
         title: "Bub sort",
         width: "20%",
       },

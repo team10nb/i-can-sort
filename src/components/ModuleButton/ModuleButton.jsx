@@ -114,7 +114,7 @@ export default function ModuleButton(props) {
     return (
         <div className={classes.root}>
             <ButtonBase
-                // focusRipple
+                focusRipple
                 key={image.title}
                 className={classes.image}
                 focusVisibleClassName={classes.focusVisible}
