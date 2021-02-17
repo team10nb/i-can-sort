@@ -141,7 +141,19 @@ function ProcedureMainPage() {
       {
         static: "./logo512.png",
         gif: "quick.gif",
-        title: "Bub sort",
+        title: "Quick sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "merge.gif",
+        title: "Merge sort",
+        width: "20%",
+      },
+      {
+        static: "./logo512.png",
+        gif: "heap.gif",
+        title: "Heap sort",
         width: "20%",
       },
 
@@ -177,8 +189,38 @@ function ProcedureMainPage() {
       preOne: handlePre(images[2].title),
   };
 
-    const props2 = {
+    const quickProps = {
       image: images[3],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[3].title),
+      progress: setProgress("quick"),
+      color: color,
+      preOne: handlePre(images[3].title),
+  };
+
+    const mergeProps = {
+      image: images[4],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[4].title),
+      progress: setProgress("merge"),
+      color: color,
+      preOne: handlePre(images[4].title),
+  };
+
+    const heapProps = {
+      image: images[5],
+      width: 200,
+      height: 200,
+      onClick: handleClick(images[5].title),
+      progress: setProgress("heap"),
+      color: color,
+      preOne: handlePre(images[5].title),
+  };
+
+    const props2 = {
+      image: images[4],
       width: 200,
       height: 200,
       // onClick: handleClick(images[3].title),
@@ -212,34 +254,34 @@ function ProcedureMainPage() {
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Quick"> 
+              <Module {...quickProps} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Merge"> 
+              <Module {...mergeProps} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
+          <Link to="/ProcedureSubpage/Heap"> 
+              <Module {...heapProps} />
           </Link>
           </Grid>
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/ProcedureSubpage/Bubble"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/ProcedureSubpage/Bubble"> 
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/ProcedureSubpage/Bubble"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
           <Grid item xs={12}>
             <div className = {classes.buttonSet}>
