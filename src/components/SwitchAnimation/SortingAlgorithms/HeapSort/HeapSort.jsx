@@ -54,11 +54,10 @@ export default function HeapSort(arr) {
      for (var i = patched.length - 1; i > 0; i--) {
       swap(patched, 0, i);
       maxHeapify(patched, 0, i);
-      description.push("1");
+      description.push("dbq我不知道怎么写这个文字描述");
       trace.push(hardcopy(patched));
      }
      return { trace: trace, description: description };
-    //  return { trace: trace, description: description };
     }
     
     return sort(patched);
