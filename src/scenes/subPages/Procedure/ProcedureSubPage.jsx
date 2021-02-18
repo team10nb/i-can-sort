@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 //The subpages are corresponding to menu items
-export function TabPanel(props) {
+function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
