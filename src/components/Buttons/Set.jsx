@@ -16,6 +16,8 @@ import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoIcon from '@material-ui/icons/Info';
+import China from '../../Resource/China.png';
+import England from '../../Resource/England.png';
 
 
   const useStyles = makeStyles((theme) => ({
@@ -82,11 +84,11 @@ import InfoIcon from '@material-ui/icons/Info';
         <AccordionDetails>
           <List>
             <ListItem button >
-              <ListItemIcon> <QueueMusicIcon />  </ListItemIcon>
+              <ListItemIcon> <img src = {China} />  </ListItemIcon>
               <ListItemText primary='Chinese(simple)' />           
             </ListItem>  
             <ListItem button >
-              <ListItemIcon> <QueueMusicIcon />  </ListItemIcon>
+              <ListItemIcon> <img src = {England} />  </ListItemIcon>
               <ListItemText primary='English' />           
             </ListItem>
           </List>         
