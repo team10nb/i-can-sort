@@ -42,49 +42,10 @@ width: 960,
 //Set theme color
 const color = '#4caf50';
 
-//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
-//The Efficiency button is theme color without jump function
-export function EfficiencyChoiceMenu(){
- 
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Tutorial
-      </Button>
-      </Link>
-
-      <Link to="/ProcedureMainPage" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Procedure
-      </Button>
-      </Link>
-
-      <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
-        Efficiency
-      </Button>
-
-      <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Correctness
-      </Button>
-      </Link>
-
-      <Link to="/Exercise" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
-    </div>
-  );
-}
-
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-function EfficiencyMainPage(props) {
+export default function EfficiencyMainPage() {
     const classes = useStyles();
     const [progress, setProgress] = React.useState(10);
 
@@ -175,5 +136,44 @@ function EfficiencyMainPage(props) {
     );
 }
 
+
+//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
+//The Efficiency button is theme color without jump function
+export function EfficiencyChoiceMenu(){
+ 
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Tutorial
+      </Button>
+      </Link>
+
+      <Link to="/ProcedureMainPage" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Procedure
+      </Button>
+      </Link>
+
+      <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
+        Efficiency
+      </Button>
+
+      <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Correctness
+      </Button>
+      </Link>
+
+      <Link to="/Exercise" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Exercise
+      </Button>
+      </Link>
+    </div>
+  );
+}
+
 export {color};
-export default EfficiencyMainPage;

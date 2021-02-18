@@ -43,44 +43,6 @@ const useStyles = makeStyles((theme) => ({
 //Set theme color
 const color = '#1565c0';
 
-//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
-//The Procedure button is theme color without jump function
-export function ProcedureChoiceMenu(){
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Tutorial
-      </Button>
-      </Link>
-
-      <Button variant="contained" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
-        Procedure
-      </Button>
-
-      <Link to="/EfficiencyMainPage" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Efficiency
-      </Button>
-      </Link>
-
-      <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Correctness
-      </Button>
-      </Link>
-
-      <Link to="/Exercise" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
-    </div>
-  );
-}
-
 function setProgress(algorithm){
   const progressArray = localStorage.getItem(algorithm) ? JSON.parse(localStorage.getItem(algorithm)) : 0 ;
   return calculateProgress(progressArray);
@@ -103,7 +65,7 @@ function calculateProgress(progressArray){
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-function ProcedureMainPage() {
+export default function ProcedureMainPage() {
     const classes = useStyles();
 
     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
@@ -302,5 +264,42 @@ function ProcedureMainPage() {
     );
 }
 
+//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
+//The Procedure button is theme color without jump function
+export function ProcedureChoiceMenu(){
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Tutorial
+      </Button>
+      </Link>
+
+      <Button variant="contained" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
+        Procedure
+      </Button>
+
+      <Link to="/EfficiencyMainPage" style={{ textDecoration:'none'}} >
+      <Button variant="contained" className={classes.button}>
+        Efficiency
+      </Button>
+      </Link>
+
+      <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}}>
+      <Button variant="contained" className={classes.button}>
+        Correctness
+      </Button>
+      </Link>
+
+      <Link to="/Exercise" style={{ textDecoration:'none'}}>
+      <Button variant="contained" className={classes.button}>
+        Exercise
+      </Button>
+      </Link>
+    </div>
+  );
+}
+
 export {color};
-export default ProcedureMainPage;
