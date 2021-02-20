@@ -44,7 +44,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Bubble sort
+                          Bub sort
                         </span>
                       </span>
                       <span
@@ -685,7 +685,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Bubble sort
+                        Bub sort
                       </span>
                     </span>
                     <span

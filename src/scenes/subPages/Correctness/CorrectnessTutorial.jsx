@@ -1,10 +1,9 @@
 import React from 'react';
-import { makeStyles, createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
@@ -174,7 +173,6 @@ const useStyles = makeStyles((theme) => ({
 
     return (
         <div>
-            <CssBaseline />
             <AppBar className={classes.appBar1} >
                 <div className ={classes.div}>
                 <Button className={classes.icon} onClick={handleClick}>

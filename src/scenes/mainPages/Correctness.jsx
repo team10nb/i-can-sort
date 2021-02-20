@@ -113,7 +113,7 @@ export default function CorrectnessMainPage(props) {
       // onClick: handleClick(images[3].title),
       progress: 0,
       color: color,
-      preOne: false,
+      // preOne: false,
     };
 
     return (
