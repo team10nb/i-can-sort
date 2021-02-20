@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
    
     const handleClick = () => {
         //return to procedure main page with the progress
-        props.history.push({pathname: '/CorrectnessMainPage', state: props.progress});
+        props.history.push({pathname: '/CorrectnessMainPage'});
     };
 
     

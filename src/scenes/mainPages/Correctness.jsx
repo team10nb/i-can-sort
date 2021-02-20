@@ -50,23 +50,23 @@ const color = '#ff6f00';
 export default function CorrectnessMainPage(props) {
     const classes = useStyles();
      //get progress info from local
-     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
-     const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
+    //  const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
+    //  const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
  
      //set progress
-     const progress = props.location.state ? props.location.state : localProgress;
-     localStorage.setItem("progress", JSON.stringify(progress));
+    //  const progress = props.location.state ? props.location.state : localProgress;
+    //  localStorage.setItem("progress", JSON.stringify(progress));
  
-     const handleClick = (title) => () => {
-       //store previous visited algorithm
-       localStorage.setItem("pre", JSON.stringify(title));
-     }
+    //  const handleClick = (title) => () => {
+    //    //store previous visited algorithm
+    //    localStorage.setItem("pre", JSON.stringify(title));
+    //  }
  
-     const handlePre = (title) => {
-       //set previous visited algorithm
-       const preOne = (title === localPre) ? true : false;
-       return preOne;
-     }
+    //  const handlePre = (title) => {
+    //    //set previous visited algorithm
+    //    const preOne = (title === localPre) ? true : false;
+    //    return preOne;
+    //  }
     
      const images = [
       {
@@ -96,24 +96,24 @@ export default function CorrectnessMainPage(props) {
 
   ];
 
-    const TutorialProps = {
-      image: images[0],
-      width: 200,
-      height: 200,
-      onClick: handleClick(images[0].title),
-      progress: progress,
-      color: color,
-      preOne: handlePre(images[0].title),
-  };
+  //   const TutorialProps = {
+  //     image: images[0],
+  //     width: 200,
+  //     height: 200,
+  //     onClick: handleClick(images[0].title),
+  //     progress: progress,
+  //     color: color,
+  //     preOne: handlePre(images[0].title),
+  // };
 
     const props2 = {
       image: images[3],
       width: 200,
       height: 200,
-      onClick: handleClick(images[3].title),
-      progress: progress,
+      // onClick: handleClick(images[3].title),
+      progress: 0,
       color: color,
-      preOne: handlePre(images[3].title),
+      preOne: false,
     };
 
     return (
@@ -123,7 +123,7 @@ export default function CorrectnessMainPage(props) {
 
           <Grid item xs={6} sm={3} >
           <Link to="/Correctness/Tutorial">
-              <Module {...TutorialProps} />
+              <Module {...props2} />
           </Link>
           </Grid>
 
