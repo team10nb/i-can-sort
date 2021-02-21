@@ -40,13 +40,13 @@ const useStyles = makeStyles((theme) => ({
   cardOne:{
     marginTop: 80,
     background: "#F0F0F0",
-    width: "40%",
+    width: "43%",
     height: 520
   },
   cardTwo:{
     marginTop: 80,
     background: "#F0F0F0",
-    width: "60%",
+    width: "57%",
     height: 520,
     alignItems:"center",
   },

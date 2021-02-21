@@ -8,11 +8,32 @@ import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = SelectionSort(arr);
 
-const introMessage = <div>
-                <h1>Selection sort</h1>
-                {/* <h2><font color = "white"> hello world </font></h2> */}
-                <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-            </div>;
+const introMessage = 
+<div>
+<h1>Selection sort</h1>
+<p style={{textAlign:"left"}}>The algorithm divides the input list into a sorted sublist and a unsorted sublist. It proceeds by finding the smallest (largest) element in the unsorted sublist, swapping it with the leftmost unsorted element, and moving the sublist boundaries one element to the right.</p>
+<h1>Performance</h1>
+<table>
+    <tbody>
+    <tr>
+        <td>Worst-case time complexity</td>
+        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
+    </tr>
+    <tr>
+        <td>Average time complexity </td>
+        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
+    </tr>
+    <tr>
+        <td>Best-case time complexity </td>
+        <td style = {{paddingLeft:7}}>O(n)</td>
+    </tr>
+    <tr>
+        <td>Worst-case space complexity </td>
+        <td style = {{paddingLeft:7}}>O(1)</td>
+    </tr>
+    </tbody>
+</table>
+</div>
 
 const intro = {
     introMessage: introMessage,

@@ -9,10 +9,30 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = QuickSort(arr);
 
 const introMessage = <div>
-                <h1>Quick sort</h1>
-                {/* <h2><font color = "white"> hello world </font></h2> */}
-                <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-            </div>;
+<h1>Quick sort</h1>
+<p style={{textAlign:"left"}}>Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. </p>
+<h1>Performance</h1>
+<table>
+    <tbody>
+    <tr>
+        <td style={{textAlign:"left"}}>Worst-case time complexity</td>
+        <td style = {{textAlign:"right"}}>O(n<sup>2</sup>)</td>
+    </tr>
+    <tr>
+        <td style={{textAlign:"left"}}>Average time complexity </td>
+        <td style = {{textAlign:"right"}}>O(nlogn)</td>
+    </tr>
+    <tr>
+        <td style={{textAlign:"left"}}>Best-case time complexity </td>
+        <td style = {{textAlign:"right"}}>O(nlogn)</td>
+    </tr>
+    <tr>
+        <td style={{textAlign:"left"}}>Worst-case space complexity </td>
+        <td style = {{textAlign:"right"}}>O(nlogn)</td>
+    </tr>
+    </tbody>
+</table>
+</div>
 
 const intro = {
     introMessage: introMessage,

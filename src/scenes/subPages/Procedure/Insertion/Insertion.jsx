@@ -9,10 +9,30 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = InsertionSort(arr);
 
 const introMessage = <div>
-                <h1>Insertion sort</h1>
-                {/* <h2><font color = "white"> hello world </font></h2> */}
-                <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-            </div>;
+<h1>Insertion sort</h1>
+<p style={{textAlign:"left"}}>Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, it removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no elements remain.</p>
+<h1>Performance</h1>
+<table>
+    <tbody>
+    <tr>
+        <td>Worst-case time complexity</td>
+        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
+    </tr>
+    <tr>
+        <td>Average time complexity </td>
+        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
+    </tr>
+    <tr>
+        <td>Best-case time complexity </td>
+        <td style = {{paddingLeft:7}}>O(n)</td>
+    </tr>
+    <tr>
+        <td>Worst-case space complexity </td>
+        <td style = {{paddingLeft:7}}>O(1)</td>
+    </tr>
+    </tbody>
+</table>
+</div>
 
 const intro = {
     introMessage: introMessage,

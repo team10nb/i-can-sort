@@ -8,11 +8,31 @@
 // let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 // let props = MergeSort(arr);
 
-// const introMessage = <div>
-//                 <h1>Merge sort</h1>
-//                 {/* <h2><font color = "white"> hello world </font></h2> */}
-//                 <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-//             </div>;
+// const introMessage = 
+{/* <h1>Merge sort</h1>
+<p style={{textAlign:"left"}}>Merge sort works as two steps: First, divide the input list into n sublists, each containing one element. Then, repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.</p>
+<h1>Performance</h1>
+<table>
+    <tbody>
+    <tr>
+        <td>Worst-case time complexity</td>
+        <td style = {{paddingLeft:7}}>O(nlogn)</td>
+    </tr>
+    <tr>
+        <td>Average time complexity </td>
+        <td style = {{paddingLeft:7}}>O(nlogn)</td>
+    </tr>
+    <tr>
+        <td>Best-case time complexity </td>
+        <td style = {{paddingLeft:7}}>O(nlogn)</td>
+    </tr>
+    <tr>
+        <td>Worst-case space complexity </td>
+        <td style = {{paddingLeft:7}}>O(n)</td>
+    </tr>
+    </tbody>
+</table>
+</div> */}
 
 // const intro = {
 //     introMessage: introMessage,
