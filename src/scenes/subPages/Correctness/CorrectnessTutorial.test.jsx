@@ -1,12 +1,7 @@
 import { render } from '@testing-library/react';
-import userEvent from "@testing-library/user-event";
 import CorrectnessTutorial from './CorrectnessTutorial';
 
-// const handleNext = jest.fn();
-// let anchorEl = null;
-const handleNext = jest.fn();
 
-const props = handleNext;
 
 test('should contain buttons', () => {
     const {getAllByText} = render(        

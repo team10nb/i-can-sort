@@ -8,7 +8,7 @@ Object {
       <div
         class="makeStyles-root-72"
       >
-        <ul
+        <div
           class="makeStyles-bars-73"
         >
           <li
@@ -66,7 +66,7 @@ Object {
               style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
             />
           </li>
-        </ul>
+        </div>
         <div
           class="makeStyles-root-76"
         >
@@ -348,7 +348,7 @@ Object {
     <div
       class="makeStyles-root-72"
     >
-      <ul
+      <div
         class="makeStyles-bars-73"
       >
         <li
@@ -406,7 +406,7 @@ Object {
             style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
           />
         </li>
-      </ul>
+      </div>
       <div
         class="makeStyles-root-76"
       >

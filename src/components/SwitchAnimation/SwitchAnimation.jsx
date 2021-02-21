@@ -234,7 +234,7 @@ export const SwitchAnimation = (props) => {
     return (
         <div className={classes.root}>
             {/* bars */}
-            <ul className={classes.bars}>
+            <div className={classes.bars}>
                 {bars.map((background) => (
                     <motion.li
                         key={background.key} // each bar's identification
@@ -262,7 +262,7 @@ export const SwitchAnimation = (props) => {
                         </div>
                     </motion.li>
                 ))}
-            </ul>
+            </div>
             <ExplainationBox width='60' height={explainationBoxHeight}>
                 {description[currentStep]}
             </ExplainationBox>

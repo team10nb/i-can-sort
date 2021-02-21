@@ -102,11 +102,11 @@ expect(content).toMatchSnapshot();
 
 |Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
 |-------|----|---------|-------------------|----------------|----------------|
-|1 | 2.5 | pass  |  | should match snapshot ||
+|1 | 2.5 | fail  | should match snapshot |<ul> cannot appear as a descendant of <p>.|codeversion1|
 |2 | 2.5 | fail  |should call home button  | no home button  |code version 1|
-|3 | 2.5 | pass  || should call home button   |code version 1|
 ##### Code - version 1
 ```javascript
+<div></div>
 HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} 
 ```
 #### ComponentName: CorrectnessTutorial

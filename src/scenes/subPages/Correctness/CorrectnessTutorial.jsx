@@ -255,10 +255,10 @@ const useStyles = makeStyles((theme) => ({
                 </Drawer>               
                 {getStepContent(activeStep)}    
             </main>
-            <AppBar className = {classes.appBar2}>
+            <AppBar  className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}
-                    // position="fixed"
+                    position="static"
                     className = {classes.stepper}
                     variant="text"                  
                     activeStep={activeStep}

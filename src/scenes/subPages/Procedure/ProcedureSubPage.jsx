@@ -144,6 +144,7 @@ export default function ProcedureSubPage(props) {
       <ThemeProvider theme={theme}>
       <AppBar>
         <Tabs
+      
 
           value={value}
           onChange={handleChange}

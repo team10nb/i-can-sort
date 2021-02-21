@@ -477,7 +477,7 @@ Object {
           class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar2-15 mui-fixed MuiPaper-elevation4"
         >
           <div
-            class="MuiPaper-root MuiMobileStepper-root MuiMobileStepper-positionBottom makeStyles-stepper-19 MuiPaper-elevation0"
+            class="MuiPaper-root MuiMobileStepper-root MuiMobileStepper-positionStatic makeStyles-stepper-19 MuiPaper-elevation0"
             middlebutton="[object Object]"
           >
             <button
@@ -989,7 +989,7 @@ Object {
         class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar2-15 mui-fixed MuiPaper-elevation4"
       >
         <div
-          class="MuiPaper-root MuiMobileStepper-root MuiMobileStepper-positionBottom makeStyles-stepper-19 MuiPaper-elevation0"
+          class="MuiPaper-root MuiMobileStepper-root MuiMobileStepper-positionStatic makeStyles-stepper-19 MuiPaper-elevation0"
           middlebutton="[object Object]"
         >
           <button

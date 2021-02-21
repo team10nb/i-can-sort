@@ -10,7 +10,7 @@
 
 // const introMessage = 
 {/* <h1>Merge sort</h1>
-<p style={{textAlign:"left"}}>Merge sort works as two steps: First, divide the input list into n sublists, each containing one element. Then, repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.</p>
+<div style={{textAlign:"left"}}>Merge sort works as two steps: First, divide the input list into n sublists, each containing one element. Then, repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.</div>
 <h1>Performance</h1>
 <table>
     <tbody>
