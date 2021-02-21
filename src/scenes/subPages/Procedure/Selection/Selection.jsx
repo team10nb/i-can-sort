@@ -4,6 +4,8 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import SelectionIntro from '../../../../components/Introduction/SelectionSort';
+
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = SelectionSort(arr);
@@ -37,7 +39,7 @@ const introMessage =
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={500}/>,
+    animation: <SelectionIntro/>,
 }
 
 const operate = <SwitchSort sort={"Selection"}/>;

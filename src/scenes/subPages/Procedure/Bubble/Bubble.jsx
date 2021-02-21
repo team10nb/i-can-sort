@@ -4,6 +4,7 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import BubbleIntro from '../../../../components/Introduction/BubbleSort';
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = BubbleSort(arr);
@@ -37,7 +38,7 @@ const introMessage =
                
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={500}/>,
+    animation: <BubbleIntro />,
 }
 
 

@@ -174,7 +174,7 @@ export default function ProcedureSubPage(props) {
         <TabPanel value={value} index={1} dir={theme.direction} {...finishPage(0)}>
           <div className = {classes.div}>
             <Card className={classes.cardOne}>
-              <CardContent >
+              <CardContent style={{paddingLeft: "24px", paddingTop: "0px"}}>
                 {intro.introMessage}
               </CardContent>
             </Card>

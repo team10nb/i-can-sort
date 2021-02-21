@@ -5,33 +5,34 @@ import Paper from "@material-ui/core/Paper";
 
 const ExplainationBoxes = withStyles({
     root: {
+        display: "flex",
         fontFamily: "inherit",
         fontSize: "1em",
         fontWeight: "700",
-        paddingTop: "3px",
-        paddingBottom: "3px",
         letterSpacing: "1px",
-        textAlign: "center",
         borderRadius: "12px",
         backgroundColor: "white",
         marginTop: "4px",
         marginBottom: "3px",
-        alignContent: "center",
+        textAlign:"center",
+        alignItems:"center",
+        justifyContent:"center",
     },
 })(Paper);
 
 export default function ExplainationBox(props) {
-    const { width, children } = props;
+    const { width, height, children } = props;
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",
             "& > *": {
                 width: theme.spacing(width*1),
-                height: theme.spacing(3),
+                height: theme.spacing(height*1),
                 border: "3px solid white",
             },
             justifyContent: "center",
-            alignContent: "flex-end",
+            alignContent: "center",
+            verticalAlign:"center",
         },
     }));
     const classes = useStyles();
