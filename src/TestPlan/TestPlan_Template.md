@@ -49,6 +49,13 @@
 | should pass right routers | should pass right html|expect().toStrictEqual() | two texts are the same|
 | should link to right routers | Compare new snapshot with old one. |  | Snapshots are the same. |
 
+#### ComponentNames: CorrectnessTutorial
+
+|Test Name|Description|Operation|Expected Outcome|
+|----|------|----------------|------------|
+| should contain buttons| all buttons should be contained with right name|getAllByText | get all buttons' name|
+| should match Snapshot | Compare new snapshot with old one. |  | Snapshots are the same. |
+
 
 
 

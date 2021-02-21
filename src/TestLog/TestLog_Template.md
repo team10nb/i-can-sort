@@ -47,14 +47,16 @@ reason/description里面写为什么test fail了
 |2 | 2.1 | pass |  |  | code version 2|
 
 ##### Code - version 1
-
+```javascript
 IconButton aria-label="setting" onClick={toggleDrawer('left', true)} 
-       
+```
 
 ##### Code - version 2
+
+```javascript
 Tooltip title="setting" placement="bottom" arrow
 IconButton aria-label="setting" onClick={toggleDrawer('left', true)}
-
+```
 #### ComponentName: Introduction 
 
 |Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
@@ -62,8 +64,9 @@ IconButton aria-label="setting" onClick={toggleDrawer('left', true)}
 |1 | 2.2 | pass  |  | should pass right text |code version 1|
 
 ##### Code - version 1
+```javascript
 expect(intro).toStrictEqual(text);
-
+```
 #### ComponentName: Operation 
 
 |Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
@@ -71,8 +74,9 @@ expect(intro).toStrictEqual(text);
 |1 | 2.2 | pass  |  | should pass right text |code version 1|
 
 ##### Code - version 1
+```javascript
 expect(operate).toStrictEqual(text);
-
+```
 #### ComponentName: Bubble
 
 |Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
@@ -80,9 +84,10 @@ expect(operate).toStrictEqual(text);
 |1 | 2.3 | pass  |  | should match snapshot |code version 1|
 
 ##### Code - version 1
+```javascript
 const content = render(<Bubble {...props>);
 expect(content).toMatchSnapshot();
-
+```
 
 #### ComponentName: ProcedureRouters
 
@@ -101,9 +106,33 @@ expect(content).toMatchSnapshot();
 |2 | 2.5 | fail  |should call home button  | no home button  |code version 1|
 |3 | 2.5 | pass  || should call home button   |code version 1|
 ##### Code - version 1
-
+```javascript
 HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} 
+```
+#### ComponentName: CorrectnessTutorial
 
+|Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
+|-------|----|---------|-------------------|----------------|----------------|
+|1 | 2.21 | pass  |  | should match snapshot ||
+|2 | 2.21 | pass  |  | should contains buttons |codeVersion1|
+##### Code - version 1
+```javascript
+{['Input', 'Input_Def'].map((text, index) => (
+    index === activeStep 
+        ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}>
+            <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+            <ListItemText primary={text} />
+        </ListItem>
+        :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}>
+            <ListItemIcon><ChevronRightIcon/></ListItemIcon>
+            <ListItemText primary={text} />
+        </ListItem> 
+    ))}        
+ <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF"}} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                        Next                       
+ </Button>
+
+```
 
 
 

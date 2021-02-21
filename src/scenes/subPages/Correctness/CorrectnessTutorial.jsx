@@ -146,6 +146,8 @@ const useStyles = makeStyles((theme) => ({
     export default function CorrectnessTutorial(props) {
     const classes = useStyles();
 
+    
+
     const [activeStep, setActiveStep] = React.useState(0);
 
     const maxSteps = getSteps().length;
@@ -256,7 +258,7 @@ const useStyles = makeStyles((theme) => ({
             <AppBar className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}
-                    position="fixed"
+                    // position="fixed"
                     className = {classes.stepper}
                     variant="text"                  
                     activeStep={activeStep}
@@ -265,7 +267,7 @@ const useStyles = makeStyles((theme) => ({
                         Next                       
                     </Button>
                     }
-                    middleButton = {<MoreHorizIcon color={color} />}
+                    middlebutton = {<MoreHorizIcon color={color} />}
                     backButton={
                     <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF"}} onClick={handleBack} disabled={activeStep === 0}>
                         Back
