@@ -398,6 +398,6 @@ export default function IntroBubble() {
     const props = { trace: trace, description: description };
 
     
-    return <SwitchAnimation {...props} width={500} explainationBoxHeight={6}/>;
+    return <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>;
 
 }

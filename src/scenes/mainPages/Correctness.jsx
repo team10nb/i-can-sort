@@ -90,7 +90,7 @@ export default function CorrectnessMainPage(props) {
       {
         static: "./logo512.png",
         gif: "catch.gif",
-        title: "Bub sort",
+        title: "Tutorial",
         width: "20%",
       },
 
