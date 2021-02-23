@@ -74,7 +74,7 @@ export default function InputBar(props) {
     const classes = useStyles();
 
     const error = isValid ? false : true;
-    const label = isValid ? "Enter your own array using comma" : "Invalid Input";
+    const label = isValid ? "Enter positive integers from 1 to 30" : "Invalid Input";
     const helper = isValid ? " " : wrongMsg;
 
     return (
