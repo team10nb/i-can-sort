@@ -31,13 +31,13 @@ const introMessage = <div>
         <td style = {{textAlign:"right"}}>O(1)</td>
     </tr>
     </tbody>
-</table>
+</table> */}
 </div>
 
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={500}/>,
+    animation: <SwitchAnimation {...props} width={490}/>,
 }
 
 const operate = <SwitchSort sort={"Heap"}/>;

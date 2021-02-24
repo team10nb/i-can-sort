@@ -70,29 +70,18 @@ export default function CorrectnessMainPage(props) {
     
      const images = [
       {
-        static: "./logo512.png",
+        static: "",
         gif: "catch.gif",
-        title: "Bubble sort",
+        title: "Tutorial",
         width: "20%",
       },
       {
-        static: "./logo512.png",
-        gif: "catch.gif",
-        title: "Selection sort",
-        width: "20%",
+         static: "",
+         gif: "catch.gif",
+         title: "Proof",
+         width: "20%",
       },
-      {
-        static: "./logo512.png",
-        gif: "catch.gif",
-        title: "Insertion sort",
-        width: "20%",
-      },
-      {
-        static: "./logo512.png",
-        gif: "catch.gif",
-        title: "Bub sort",
-        width: "20%",
-      },
+
 
   ];
 
@@ -106,8 +95,18 @@ export default function CorrectnessMainPage(props) {
   //     preOne: handlePre(images[0].title),
   // };
 
+    const props1 = {
+          image: images[1],
+          width: 200,
+          height: 200,
+          // onClick: handleClick(images[3].title),
+          progress: 0,
+          color: color,
+          // preOne: false,
+    };
+
     const props2 = {
-      image: images[3],
+      image: images[0],
       width: 200,
       height: 200,
       // onClick: handleClick(images[3].title),
@@ -129,45 +128,45 @@ export default function CorrectnessMainPage(props) {
 
           <Grid item xs={6} sm={3} >
           <Link to="/Page">
-              <Module {...props2} />
+              <Module {...props1} />
           </Link>
           </Grid>
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
+{/*           <Grid item xs={6} sm={3}> */}
+{/*           <Link to="/Page"> */}
+{/*               <Module {...props2} /> */}
+{/*           </Link> */}
+{/*           </Grid> */}
 
           <Grid item xs={12}>
           <div className = {classes.buttonSet}>
