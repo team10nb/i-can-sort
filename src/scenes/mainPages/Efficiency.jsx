@@ -50,7 +50,7 @@ export default function EfficiencyMainPage() {
     const [progress, setProgress] = React.useState(10);
 
     const image = {
-        static: "./logo512.png",
+        static: "",
         gif: "catch.gif",
         title: "Bubble sort",
         width: "20%",

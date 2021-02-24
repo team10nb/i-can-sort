@@ -80,7 +80,7 @@ export default function ModuleButton(props) {
         imageBackdrop: {
             borderTopLeftRadius: 15,
             borderTopRightRadius: 15,
-            // backgroundImage: `url(${props.image.static})`,
+            backgroundImage: `url(${props.image.static})`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center 40%",

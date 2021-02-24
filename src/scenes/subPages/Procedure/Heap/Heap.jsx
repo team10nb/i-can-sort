@@ -11,8 +11,8 @@ let props = HeapSort(arr);
 const introMessage = <div>
 <h1>Heap sort</h1>
 <p style={{textAlign:"left"}}>Heap sort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element from it and inserting it into the sorted region.</p>
-<h1>Performance</h1>
-<table>
+{/* <h1>Performance</h1> */}
+{/* <table>
     <tbody>
     <tr>
         <td>Worst-case time complexity</td>
@@ -31,7 +31,7 @@ const introMessage = <div>
         <td style = {{textAlign:"right"}}>O(1)</td>
     </tr>
     </tbody>
-</table>
+</table> */}
 </div>
 
 
