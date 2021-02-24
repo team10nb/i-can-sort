@@ -31,7 +31,7 @@ const introMessage = <div>
         <td style = {{textAlign:"right"}}>O(1)</td>
     </tr>
     </tbody>
-</table> */}
+</table>
 </div>
 
 
