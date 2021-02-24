@@ -1,4 +1,4 @@
-import { COLORS, patch, hardcopy, changeColor, swap } from "../Patch/Patch";
+import { COLORS, patch, hardcopy, changeColor, swap, changeY } from "../Patch/Patch";
 
 
 export default function HeapSort(arr) {
@@ -13,7 +13,9 @@ export default function HeapSort(arr) {
      var iMax,
       iLeft,
       iRight;
+
      while (true) {
+
       iMax = index;
       iLeft = 2 * index + 1;
       iRight = 2 * (index + 1);
@@ -27,12 +29,43 @@ export default function HeapSort(arr) {
       }
     
       if (iMax !== index) {
+        //compare bars to build max heap
+        changeColor(patched, iMax, COLORS.comparing);
+        changeColor(patched, index, COLORS.comparing);
+        description.push(
+          "Compare " + 
+          patched[index].value + 
+          " and " + 
+          patched[iMax].value);
+        trace.push(hardcopy(patched));
+
+        description.push(
+          patched[iMax].value + 
+          " is bigger than " +
+           patched[index].value
+          );
+        trace.push(hardcopy(patched));
+        
+        //swapping
         swap(patched, iMax, index);
+        description.push(
+          "Swap " +
+          patched[iMax].value +
+          " and " +
+          patched[index].value
+          );
+        trace.push(hardcopy(patched));
+
+        //恢复对比中bar的颜色
+        changeColor(patched, iMax, COLORS.original);
+        changeColor(patched, index, COLORS.original);
+              
         index = iMax;
       } else {
        break;
       }
      }
+
     }
     
     //将堆所有数据重新排序，使其成为最大堆
@@ -51,11 +84,43 @@ export default function HeapSort(arr) {
     function sort(patched) {
      buildMaxHeap(patched);
     
-     for (var i = patched.length - 1; i > 0; i--) {
-      swap(patched, 0, i);
+     for (var i = patched.length - 1; i > 0; i--) {;
       maxHeapify(patched, 0, i);
-      description.push("dbq我不知道怎么写这个文字描述");
+
+      //成堆
+      for (var j = 0; j < i+1; j++) {
+        changeColor(patched, j, COLORS.current);
+        changeY(patched, j, -50);
+      }
+
+      description.push("A max heap is built, heap size is : " + j);
       trace.push(hardcopy(patched));
+
+      //恢复堆颜色
+      for (var j = 0; j < i+1; j++) {
+        changeColor(patched, j, COLORS.original);
+        changeY(patched, j, 0);
+      }
+
+      changeColor(patched, 0 , COLORS.finished)
+      description.push(
+        "The top element " +
+         patched[0].value +
+        " of the heap must be the largest element in the heap."
+      );
+      trace.push(hardcopy(patched));
+
+      //swap数据的第一个节点到当前排序位置
+      swap(patched, 0, i);
+      
+      description.push(
+        "Separated "+ 
+        patched[0].value +
+        " from the heap"
+      );
+      trace.push(hardcopy(patched));
+      
+      maxHeapify(patched, 0, i);    
      }
      return { trace: trace, description: description };
     }
