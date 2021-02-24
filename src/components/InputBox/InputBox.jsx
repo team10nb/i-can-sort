@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -51,10 +51,14 @@ const useStyles = makeStyles((theme) => ({
         createData('1,2,3,4'),
       ];
 
-export default function Input(props) {
+export default function InputTable(props) {
     const classes = useStyles();
-    const [isComplete, setIsComplete] = useState(false);
-
+    const {legalArrays, illegalArrays, isCompleteLegal, isCompleteIllegal, legalClick, illegalClick} = props;
+    useEffect(() => {
+        console.log(isCompleteIllegal)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isCompleteIllegal]);
+    
     return(
         <div className = {classes.root}>
             <div>
@@ -73,7 +77,7 @@ export default function Input(props) {
 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
-                        onClick={()=>setIsComplete(true)}
+                        onClick={legalClick}
                         
                     >
                         <PlayArrowIcon style={{ fontSize: 13}}/>
@@ -89,12 +93,12 @@ export default function Input(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.map((row) => (
-                                    <TableRow key={row.name} className = {classes.row}>
+                                {legalArrays.map((val, key) => (
+                                    <TableRow key={key + "legal"} className = {classes.row}>
                                         <TableCell component="th" scope="row" >
-                                            {row.name}
+                                            {val.toString()}
                                         </TableCell>
-                                        <TableCell align="center" > <Tick isComplete={isComplete}/></TableCell>
+                                        <TableCell align="center" > <Tick isComplete={isCompleteLegal[key]}/></TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
@@ -121,7 +125,7 @@ export default function Input(props) {
 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
-                        onClick={()=>setIsComplete(true)}
+                        onClick={illegalClick}
                         
                     >
                         <PlayArrowIcon style={{ fontSize: 13}}/>
@@ -137,12 +141,12 @@ export default function Input(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.map((row) => (
-                                    <TableRow key={row.name}>
-                                        <TableCell component="th" scope="row">
-                                            {row.name}
+                            {illegalArrays.map((val, key) => (
+                                    <TableRow key={key + "illegal"} className = {classes.row}>
+                                        <TableCell component="th" scope="row" >
+                                            {val.toString()}
                                         </TableCell>
-                                        <TableCell align="center"> <Cross isComplete={isComplete} /></TableCell>
+                                        <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
