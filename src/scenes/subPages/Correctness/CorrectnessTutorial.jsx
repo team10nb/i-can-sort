@@ -47,11 +47,18 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
+    stepContent:{
+        marginTop:630,
+        marginLeft:250,
+    },
+
     icon:{
         marginRight: theme.spacing(2),
         width: 100,
         height: 45,
     },
+
+
 
     chip:{
         position: 'relative',
@@ -183,8 +190,11 @@ const useStyles = makeStyles((theme) => ({
                 <Chip className={classes.chip} label= {step[activeStep]} />  
                 </div>                          
             </AppBar>
+                <div className = {classes.stepContent}>
+                   {getStepContent(activeStep)}    
+                </div>   
      
-            <main className={classes.content}>
+            
                 <Drawer
                 className={classes.drawer}
                 variant="permanent"
@@ -252,9 +262,10 @@ const useStyles = makeStyles((theme) => ({
                             ))}
                         </List>
                    </div>
-                </Drawer>               
-                {getStepContent(activeStep)}    
-            </main>
+                </Drawer>     
+                       
+                
+            
             <AppBar  className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}
