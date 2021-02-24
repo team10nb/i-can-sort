@@ -7,7 +7,7 @@ import { color } from '../../../mainPages/Correctness';
 export default function Input_Def(props) {
     return(
         <div>
-            {/* <div>
+            <div>
             <h1 style = {{fontSize:20, color:color}}>Input and Output</h1>
             <p style = {{fontSize:16}}>Input is something that is put in, and output is something produced. <br/>
             As for a computational algorithm, input refers to instances that the algorithm take for further computation.<br/>
@@ -21,7 +21,7 @@ export default function Input_Def(props) {
             <br/>
             Correctness of a computational algorithm only cares about legal input instances.<br/>
             e.g. An algorithm expects to take integers as input, then anything other than integers are illegal</p>
-            </div>     */}
+            </div>    
         </div>
     );
 }
