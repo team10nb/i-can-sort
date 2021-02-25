@@ -15,7 +15,9 @@ import {Tick, Cross} from '../TickCross/TickCross';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-    
+    // root:{
+    //     maxHeight: 530
+    // },
 
     div1:{
         display:"flex",
@@ -26,14 +28,12 @@ const useStyles = makeStyles((theme) => ({
       },
     
     table:{
-        height: 170,
-        width: 180
+        // maxheight: 170,
+        maxheight:50,
+        minwidth: 100
     },
 
-    row:{
-       height: 10,
-    },
-
+   
     button:{
         height:10
     }
@@ -41,18 +41,32 @@ const useStyles = makeStyles((theme) => ({
     
     }));
 
-    function createData(name) {
-        return {name};
+    function createData(str) {
+        return {str};
       }
       
-      const rows = [
-        createData('1,2,3,4'),
-        createData('5,6,7,8'),
-        createData('1,2,3,4'),
-      ];
-
-export default function Input(props) {
+export default function InputBox(props) {
     const classes = useStyles();
+    const {
+        legalShuffle,
+        illegalShuffle,
+        inputLegalString,
+        inputIllegalString,
+    } = props;
+
+    const legalRows = [
+        createData(inputLegalString[0]),
+        createData(inputLegalString[1]),
+        createData(inputLegalString[2]),
+    ]
+
+    const illegalRows = [
+        createData(inputIllegalString[0]),
+        createData(inputIllegalString[1]),
+        createData(inputIllegalString[2]),
+
+    ]
+
     const [isComplete, setIsComplete] = useState(false);
 
     return(
@@ -66,11 +80,11 @@ export default function Input(props) {
                     <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}}
+                        onClick = {legalShuffle}
                     >
                         shuffle
                     </Button>
                     <IconButton 
-
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
                         onClick={()=>setIsComplete(true)}
@@ -83,16 +97,16 @@ export default function Input(props) {
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
-                            <TableRow className = {classes.row}>
+                            <TableRow >
                                 <TableCell >Input</TableCell>
                                 <TableCell align="center" >Result</TableCell>
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.map((row) => (
-                                    <TableRow key={row.name} className = {classes.row}>
+                                {legalRows.map((row) => (
+                                    <TableRow key={row.str} >
                                         <TableCell component="th" scope="row" >
-                                            {row.name}
+                                            {row.str}
                                         </TableCell>
                                         <TableCell align="center" > <Tick isComplete={isComplete}/></TableCell>
                                     </TableRow>
@@ -111,9 +125,10 @@ export default function Input(props) {
             
             <div>
                 <div className = {classes.div1}>
-                    <Button 
+                <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}}
+                        onClick = {illegalShuffle}
                     >
                         shuffle
                     </Button>
@@ -137,14 +152,14 @@ export default function Input(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.map((row) => (
-                                    <TableRow key={row.name}>
-                                        <TableCell component="th" scope="row">
-                                            {row.name}
+                                {illegalRows.map((row) => (
+                                    <TableRow key={row.str} >
+                                        <TableCell component="th" scope="row" >
+                                            {row.str}
                                         </TableCell>
-                                        <TableCell align="center"> <Cross isComplete={isComplete} /></TableCell>
+                                        <TableCell align="center" > <Tick isComplete={isComplete}/></TableCell>
                                     </TableRow>
-                                ))}
+                                ))}   
                             </TableBody>
                         </Table>
                     </TableContainer>
