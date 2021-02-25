@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import InputBox from '../../../../components/InputBox/InputBox';
-import ExplainationBox from "../../../../components/ExplainationBox/ExplainationBox";
+import React, { useState } from "react";
+import {
+    makeStyles,
+} from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import InputBox from "../InputTable/InputTable";
+import ExplainationBox from "../ExplainationBox/ExplainationBox";
 import { motion } from "framer-motion";
 import ErrorIcon from "@material-ui/icons/Error";
-import {random} from "lodash";
+import { random } from "lodash";
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -16,17 +17,17 @@ const spring = {
 };
 
 const useStyles = makeStyles((theme) => ({
-    div:{
-        display: 'flex',
+    div: {
+        display: "flex",
         width: 740,
-        height: 530,    
+        height: 530,
         // marginTop:630,
         // marginLeft:250,
-        '& > *': {
-          margin: theme.spacing(1),
-        }
-      },
-    card:{
+        "& > *": {
+            margin: theme.spacing(1),
+        },
+    },
+    card: {
         // margintop: 10,
         background: "#F0F0F0",
         width: 550,
@@ -34,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
         display: "grid",
         justifyContent: "center",
     },
-
     InputBox: {
         marginTop: 5,
         background: "#F0F0F0",
@@ -56,14 +56,6 @@ const useStyles = makeStyles((theme) => ({
         listStyle: "none",
         padding: 0,
         margin: 0,
-    // InputBox:{
-    // // marginTop: 5,
-    // background: "#F0F0F0",
-    // width: 180,
-    // height: 520,
-    // alignItems:"center",
-    // },
-
         boxShadow: "0px 0px 2px 2px #88888833",
         borderRadius: "10px",
         marginBottom: "10px",
@@ -90,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Input(props) {
+export default function InputTutorial(props) {
     const classes = useStyles();
 
     // The maximum value of pairs
@@ -101,99 +93,119 @@ export default function Input(props) {
     const MINNUMBER = 1;
     // The maximum length of input array
     const LENGTH = 4;
+    // It is used to clean timeouts to pause
+    const [timeOutIds, setTimeOutIds] = useState([]);
+    // Indicate whether a legal input demonstration complete
     const [isCompleteLegal, setIsCompleteLegal] = useState([
         false,
         false,
         false,
     ]);
+    // Indicate whether a illegal input demonstration complete
     const [isCompleteIllegal, setIsCompleteIllegal] = useState([
         false,
         false,
         false,
     ]);
-    
+    // Indicate whether 
     const [isLegalPlaying, setIsLegalPlaying] = useState(true);
     // The legal string
-    const [legalstr, setLegalStr] = useState(["2,1,6,10", "9,12,8,3", "3,2,17,10"]);
+    const [legalString, setLegalString] = useState([
+        "2,1,6,10",
+        "9,12,8,3",
+        "3,2,17,10",
+    ]);
     // The legal array
-    const [legalarr, setLegalArr] = useState([[2, 1, 6, 10], [9, 12, 8, 3], [3, 2, 17, 10]]);
+    const [legalArray, setLegalArray] = useState([
+        [2, 1, 6, 10],
+        [9, 12, 8, 3],
+        [3, 2, 17, 10],
+    ]);
     // The illegal string
-    const [illegalstr, setIllegalStr] = useState(["2,a,6,10", "9,*,&,3", "3,#,&,10"]);
-    const [illegalArr, setIllegalArr] = useState([['2','a','6','10'], ['9','*','&','3'], ['3','#','&','10']]);
+    const [illegalString, setIllegalString] = useState([
+        "2,a,6,10",
+        "9,*,&,3",
+        "3,#,&,10",
+    ]);
+    // The illegal array
+    const [illegalArray, setIllegalArray] = useState([
+        ["2", "a", "6", "10"],
+        ["9", "*", "&", "3"],
+        ["3", "#", "&", "10"],
+    ]);
     // The bars displayed to visulise the numbers
-    const [bars, setBars] = useState(legalarr[0]);
+    const [bars, setBars] = useState(legalArray[0]);
 
+    // It is used to clean timeouts to pause the animation
+    const clearTimeouts = () => {
+        timeOutIds.forEach((timeoutId) => clearTimeout(timeoutId));
+        setTimeOutIds([]);
+    };
 
+    // To shuffle the legal input array
     const legalShuffle = () => {
         let triple = [];
         let tripleArr = [];
-        for (let j = 0; j < PAIR; j++){
+        for (let j = 0; j < PAIR; j++) {
             let array = [];
             for (let i = 0; i < LENGTH; i++) {
                 // const element = array[i];
-                array
-                .push(random(1,MAXNUMBER-5));
+                array.push(random(MINNUMBER, MAXNUMBER - 5));
             }
-            triple
-            .push(array.join(","));
+            triple.push(array.join(","));
             tripleArr.push(array);
             // setStr(triple.join(","));
         }
-        setLegalArr(tripleArr);
-        setLegalStr(triple);
-        setBars([0,0,0,0]);
-        setIsCompleteLegal([
-            false,
-            false,
-            false,
-        ]);
+        setLegalArray(tripleArr);
+        setLegalString(triple);
+        setBars([0, 0, 0, 0]);
+
+        setIsCompleteLegal([false, false, false]);
         setIsLegalPlaying(true);
+    };
 
-        
-    }
-
+    // To shuffle illegal input array
     const illegalShuffle = () => {
-        var characters  = '!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var characters =
+            "!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         var charactersLength = characters.length;
-        let triple = [];        
+        let triple = [];
         let tripleArr = [];
 
-        for (let j = 0; j < PAIR; j++){
+        for (let j = 0; j < PAIR; j++) {
             let array = [];
             for (let i = 0; i < LENGTH; i++) {
-                array
-                .push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+                array.push(
+                    characters.charAt(
+                        Math.floor(Math.random() * charactersLength)
+                    )
+                );
             }
-            if (array.join(",").match(/^[0-9]+((,)[0-9]+)*$/)){
-                j --;
+            if (array.join(",").match(/^[0-9]+((,)[0-9]+)*$/)) {
+                j--;
                 continue;
             }
-            triple
-            .push(array.join(","));
+            triple.push(array.join(","));
             tripleArr.push(array);
         }
-        setIllegalStr(triple);
-        setIllegalArr(tripleArr);
-        // setBars(tripleArr[0]);
-        setBars([0,0,0,0]);
-        setIsCompleteIllegal([
-            false,
-            false,
-            false,
-        ]);
+
+        setIllegalString(triple);
+        setIllegalArray(tripleArr);
+        setBars([0, 0, 0, 0]);
+
+        setIsCompleteIllegal([false, false, false]);
         setIsLegalPlaying(true);
+    };
 
-    }
-
-    const legalTimeoutIds = [];
-    const illegalTimeoutIds = [];
-
+    // handler of play button of legal input
     const legalClick = () => {
-        setBars([0,0,0,0]);
+        clearTimeouts();
+        const legalTimeoutIds = [];
+        setBars([0, 0, 0, 0]);
         setIsLegalPlaying(true);
         setIsCompleteLegal([false, false, false]);
 
-        legalarr.forEach((item, i) => {
+        legalArray.forEach((item, i) => {
             let timeoutId = setTimeout(
                 (item) => {
                     if (i === 0) {
@@ -204,20 +216,28 @@ export default function Input(props) {
                         setIsCompleteLegal([true, true, true]);
                     }
                     setBars(item.sort((a, b) => a - b));
-                    console.log(item)
+                    console.log(item);
                 },
                 (i + 1) * 700, //time interval
                 item
             );
             legalTimeoutIds.push(timeoutId);
         });
+
+        // Clear timeouts upon completion
+        let timeoutId = setTimeout(clearTimeouts, (legalArray.length + 1) * 700);
+        legalTimeoutIds.push(timeoutId);
+        setTimeOutIds(legalTimeoutIds);
     };
 
+    // handler of play button of illegal input
     const illegalClick = () => {
+        clearTimeouts();
+        const illegalTimeoutIds = [];
         setIsLegalPlaying(false);
         setIsCompleteIllegal([false, false, false]);
-        
-        illegalstr.forEach((item, i) => {
+
+        illegalString.forEach((item, i) => {
             let timeoutId = setTimeout(
                 (item) => {
                     if (i === 0) {
@@ -234,6 +254,11 @@ export default function Input(props) {
             );
             illegalTimeoutIds.push(timeoutId);
         });
+
+        // Clear timeouts upon completion
+        let timeoutId = setTimeout(clearTimeouts, (legalArray.length + 1) * 700);
+        illegalTimeoutIds.push(timeoutId);
+        setTimeOutIds(illegalTimeoutIds);
     };
 
     return (
@@ -259,28 +284,40 @@ export default function Input(props) {
                                 </motion.li>
                             ))
                         ) : (
-                            <div style={{display: "grid",
-                            justifyContent: "center",
-                            alignContent: "flex-end"}}>
-                                <ErrorIcon style={{ fontSize: 60, color: "red" }} />
-                                
+                            <div
+                                style={{
+                                    display: "grid",
+                                    justifyContent: "center",
+                                    alignContent: "flex-end",
+                                }}
+                            >
+                                <ErrorIcon
+                                    style={{ fontSize: 60, color: "red" }}
+                                />
                             </div>
-                            
                         )}
                     </div>
-                    {isLegalPlaying? "" : <span style={{fontWeight:"600", marginBottom:"8px"}}>Could not sort illegal input {bars.toString()}</span>}
+                    {isLegalPlaying ? (
+                        ""
+                    ) : (
+                        <span
+                            style={{ fontWeight: "600", marginBottom: "8px" }}
+                        >
+                            Could not sort illegal input {bars.toString()}
+                        </span>
+                    )}
                     <ExplainationBox width="30" height={3}>
                         {isLegalPlaying ? bars.toString() : "Error"}
                     </ExplainationBox>
                 </div>
             </Card>
-            <InputBox 
+            <InputBox
                 // className = {classes.InputBox}
-                legalShuffle = {legalShuffle} 
-                illegalShuffle = {illegalShuffle}
-                inputLegalString = {legalstr}
-                inputIllegalString = {illegalstr}
-                legalArrays={legalarr}
+                legalShuffle={legalShuffle}
+                illegalShuffle={illegalShuffle}
+                inputLegalString={legalString}
+                inputIllegalString={illegalString}
+                legalArrays={legalArray}
                 // illegalArrays={illegalArrays}
                 isCompleteIllegal={isCompleteIllegal}
                 isCompleteLegal={isCompleteLegal}

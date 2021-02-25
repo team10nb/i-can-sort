@@ -15,7 +15,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import InputDef from './Tutorial/Input_Def';
-import Input from './Tutorial/Input';
+import Input from '../../../components/InputTutorial/InputTutorial';
 
 
 
