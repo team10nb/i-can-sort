@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -15,7 +15,9 @@ import {Tick, Cross} from '../TickCross/TickCross';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-    
+    // root:{
+    //     maxHeight: 530
+    // },
 
     div1:{
         display:"flex",
@@ -26,14 +28,12 @@ const useStyles = makeStyles((theme) => ({
       },
     
     table:{
-        height: 170,
-        width: 180
+        // maxheight: 170,
+        maxheight:50,
+        minwidth: 100
     },
 
-    row:{
-       height: 10,
-    },
-
+   
     button:{
         height:10
     }
@@ -41,24 +41,45 @@ const useStyles = makeStyles((theme) => ({
     
     }));
 
-    function createData(name) {
-        return {name};
+    function createData(str) {
+        return {str};
       }
       
-      const rows = [
-        createData('1,2,3,4'),
-        createData('5,6,7,8'),
-        createData('1,2,3,4'),
-      ];
-
-export default function InputTable(props) {
+export default function InputBox(props) {
     const classes = useStyles();
-    const {legalArrays, illegalArrays, isCompleteLegal, isCompleteIllegal, legalClick, illegalClick} = props;
+    const {
+        legalShuffle,
+        illegalShuffle,
+        inputLegalString,
+        inputIllegalString,
+        legalArrays, 
+        illegalArrays, 
+        isCompleteLegal, 
+        isCompleteIllegal, 
+        legalClick, 
+        illegalClick
+    } = props;
+
     useEffect(() => {
         console.log(isCompleteIllegal)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isCompleteIllegal]);
-    
+
+    const legalRows = [
+        createData(inputLegalString[0]),
+        createData(inputLegalString[1]),
+        createData(inputLegalString[2]),
+    ]
+
+    const illegalRows = [
+        createData(inputIllegalString[0]),
+        createData(inputIllegalString[1]),
+        createData(inputIllegalString[2]),
+
+    ]
+
+    const [isComplete, setIsComplete] = useState(false);
+
     return(
         <div className = {classes.root}>
             <div>
@@ -70,11 +91,11 @@ export default function InputTable(props) {
                     <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}}
+                        onClick = {legalShuffle}
                     >
                         shuffle
                     </Button>
                     <IconButton 
-
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
                         onClick={legalClick}
@@ -87,16 +108,20 @@ export default function InputTable(props) {
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
-                            <TableRow className = {classes.row}>
+                            <TableRow >
                                 <TableCell >Input</TableCell>
                                 <TableCell align="center" >Result</TableCell>
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {legalArrays.map((val, key) => (
+                                {/* {legalArrays.map((val, key) => (
                                     <TableRow key={key + "legal"} className = {classes.row}>
                                         <TableCell component="th" scope="row" >
-                                            {val.toString()}
+                                            {val.toString()} */}
+                                {legalRows.map((row, key) => (
+                                    <TableRow key={key + "legal"} >
+                                        <TableCell component="th" scope="row" >
+                                            {row.str}
                                         </TableCell>
                                         <TableCell align="center" > <Tick isComplete={isCompleteLegal[key]}/></TableCell>
                                     </TableRow>
@@ -115,9 +140,10 @@ export default function InputTable(props) {
             
             <div>
                 <div className = {classes.div1}>
-                    <Button 
+                <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}}
+                        onClick = {illegalShuffle}
                     >
                         shuffle
                     </Button>
@@ -141,14 +167,20 @@ export default function InputTable(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                            {illegalArrays.map((val, key) => (
+                            {/* {illegalArrays.map((val, key) => (
                                     <TableRow key={key + "illegal"} className = {classes.row}>
                                         <TableCell component="th" scope="row" >
                                             {val.toString()}
                                         </TableCell>
+                                        <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell> */}
+                                {illegalRows.map((row, key) => (
+                                    <TableRow key={key + "illegal"} >
+                                        <TableCell component="th" scope="row" >
+                                            {row.str}
+                                        </TableCell>
                                         <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell>
                                     </TableRow>
-                                ))}
+                                ))}   
                             </TableBody>
                         </Table>
                     </TableContainer>
