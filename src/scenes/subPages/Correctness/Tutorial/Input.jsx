@@ -143,7 +143,8 @@ export default function Input(props) {
 
 
     const legalShuffle = () => {
-        let triple = [];
+        let triplestr = [];
+        let triplearr = [];
         for (let j = 0; j < PAIR; j++){
             let array = [];
             for (let i = 0; i < LENGTH; i++) {
@@ -151,12 +152,18 @@ export default function Input(props) {
                 array
                 .push(random(1,MAXNUMBER-5));
             }
-            triple
+            triplestr
             .push(array.join(","));
-            // setStr(triple.join(","));
+            triplearr
+            .push(array);
         }
-        setLegalArr(triple);
-        setLegalStr(triple);
+        setLegalArr(triplearr);
+        setLegalStr(triplestr);
+        setIsCompleteLegal([
+            false,
+            false,
+            false,
+        ]);
         
     }
 
@@ -178,6 +185,11 @@ export default function Input(props) {
             .push(array.join(","));
         }
         setIllegalStr(triple);
+        setIsCompleteIllegal([
+            false,
+            false,
+            false,
+        ]);
     }
 
 

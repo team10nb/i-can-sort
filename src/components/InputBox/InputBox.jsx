@@ -92,6 +92,7 @@ export default function InputBox(props) {
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF"}}
                         onClick = {legalShuffle}
+                        
                     >
                         shuffle
                     </Button>
