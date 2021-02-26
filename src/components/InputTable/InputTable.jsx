@@ -19,7 +19,19 @@ const useStyles = makeStyles((theme) => ({
     // root:{
     //     maxHeight: 530
     // },
-
+    buttons: {
+        display:"flex",
+        marginLeft: 25,
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    title:{
+        display:"flex",
+        marginLeft: 50,
+        marginTop: 15,
+        fontFamily: "sans-serif",
+        fontWeight: "500",
+    },
     div1:{
         display:"flex",
         marginTop: 0,
@@ -84,14 +96,14 @@ export default function InputBox(props) {
     return(
         <div className = {classes.root}>
             <div>
-                <Typography variant="overline" display="block" gutterBottom>  
+                <div className = {classes.title}>  
                 Legal Input
-                </Typography>
+                </div>
                 
-                <div className = {classes.div1}>                  
+                <div className = {classes.buttons}>                  
                     <Button 
                         variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF"}}
+                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10}}
                         onClick = {legalShuffle}
                         
                     >
@@ -120,7 +132,7 @@ export default function InputBox(props) {
                                 {legalRows.map((row, key) => (
                                     <TableRow key={key + "legal"} >
                                         <TableCell component="th" scope="row" >
-                                            {row.str}
+                                            <div style={{width:"60px", fontWeight:"700"}}>{row.str}</div>
                                         </TableCell>
                                         <TableCell align="center"  > <Tick isComplete={isCompleteLegal[key]}/></TableCell>
                                     </TableRow>
@@ -128,35 +140,20 @@ export default function InputBox(props) {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    {/* <table className = {classname}>
-                        <tr>
-                            <th>Input</th>
-                            <th>Result</th>
-                        </tr>
-                            {legalRows.map((row, key) => (
-                                    <tr key={key + "legal"} className = {rowclassname}>
-                                        <td component="th" scope="row" >
-                                            {row.str}
-                                        </td>
-                                        <td align="center" > <Tick isComplete={isCompleteLegal[key]}/></td>
-                                    </tr>
-                            ))}
-                        
-                    </table> */}
                 </div>
             </div>
             <Typography variant="overline" display="block" gutterBottom>
                
             </Typography>
-            <Typography variant="overline" display="block" gutterBottom>
+            <div className = {classes.title}>
                 Illegal Input
-            </Typography>
+            </div>
             
             <div>
-                <div className = {classes.div1}>
+                <div className = {classes.buttons}>
                 <Button 
                         variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF"}}
+                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10}}
                         onClick = {illegalShuffle}
                     >
                         shuffle
@@ -171,7 +168,7 @@ export default function InputBox(props) {
                         <PlayArrowIcon style={{ fontSize: 13}}/>
                     </IconButton>               
                 </div>
-                <div>
+                <div className = {classes.div1}>
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
@@ -181,16 +178,10 @@ export default function InputBox(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                            {/* {illegalArrays.map((val, key) => (
-                                    <TableRow key={key + "illegal"} className = {classes.row}>
-                                        <TableCell component="th" scope="row" >
-                                            {val.toString()}
-                                        </TableCell>
-                                        <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell> */}
                                 {illegalRows.map((row, key) => (
                                     <TableRow key={key + "illegal"} >
                                         <TableCell component="th" scope="row" >
-                                            {row.str}
+                                        <div style={{width:"60px", fontWeight:"700"}}>{row.str}</div>
                                         </TableCell>
                                         <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell>
                                     </TableRow>

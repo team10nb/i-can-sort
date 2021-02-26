@@ -1,9 +1,17 @@
 .table{
     height: 40px;
-    width: 100px;
+    width: 186px;
 }
 
 .tr{
     height: 10px;
-    width:20px;
+    width:185px;
+}
+
+.th{
+    width: 125px;
+}
+
+.td{
+    width: 60px;
 }
