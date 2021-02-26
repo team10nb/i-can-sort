@@ -83,7 +83,7 @@ function TabPanel(props) {
 
 //Limit the prop type for TabPanel
 TabPanel.propTypes = {
-  children: PropTypes.instanceOf(<Tab/>),
+  children: PropTypes.object,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
 };

@@ -15,7 +15,22 @@ const props = {
     operate:<SwitchSort sort={"Bubble"}/>
 }
 
+jest.mock("react-swipeable-views", () => {
+    return {
+        __esModule: true,
+        default: () => <div>mockInputTutorial</div>,
+    }
+});
+jest.mock("@material-ui/core/styles", () => {
+    return {
+        ...jest.requireActual('@material-ui/core/styles'),
+        ThemeProvider: () => <div>mockInputTutorial</div>,
+    }
+});
+
+
 test('should match Snapshot', () => {
+    
     const content = render(<ProcedureSubPage {...props}/>);
     expect(content).toMatchSnapshot();
 })

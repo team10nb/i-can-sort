@@ -159,6 +159,12 @@ export default function InputTutorial(props) {
         setLegalArray(tripleArr);
         setLegalString(triple);
         setBars([0, 0, 0, 0]);
+        setIsCompleteLegal([
+            false,
+            false,
+            false,
+        ]);
+        setIsLegalPlaying(true);
 
         setIsCompleteLegal([false, false, false]);
         setIsLegalPlaying(true);
