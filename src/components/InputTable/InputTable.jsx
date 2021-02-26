@@ -27,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
     },
     title:{
         display:"flex",
-        marginLeft: 50,
-        marginTop: 15,
-        fontFamily: "sans-serif",
-        fontWeight: "500",
+        marginLeft: 35,
+        fontFamily: "inherit",
+        fontWeight: "700",
+        fontSize:"16px"
     },
     div1:{
         display:"flex",
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
         margin: theme.spacing(1),
         },
+        marginBottom:"19px"
       },
     
     table:{

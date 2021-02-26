@@ -7,7 +7,7 @@ const ExplainationBoxes = withStyles({
     root: {
         display: "flex",
         fontFamily: "inherit",
-        fontSize: "1em",
+        fontSize: "16px",
         fontWeight: "700",
         letterSpacing: "1px",
         borderRadius: "12px",

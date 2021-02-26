@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         width: 740,
         height: 530,
         // marginTop:630,
-        // marginLeft:250,
+        marginLeft:20,
         "& > *": {
             margin: theme.spacing(1),
         },
@@ -31,12 +31,11 @@ const useStyles = makeStyles((theme) => ({
         // margintop: 10,
         background: "#F0F0F0",
         width: 550,
-        height: 530,
+        height: 510,
         display: "grid",
         justifyContent: "center",
     },
     InputBox: {
-        marginTop: 5,
         background: "#F0F0F0",
         width: 180,
         // height: 520,
@@ -78,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
         alignContent: "flex-end",
         marginTop: "100px",
         height: "300px",
-        width: "300px",
+        width: "350px",
     },
 }));
 
@@ -144,6 +143,7 @@ export default function InputTutorial(props) {
 
     // To shuffle the legal input array
     const legalShuffle = () => {
+        clearTimeouts();
         let triple = [];
         let tripleArr = [];
         for (let j = 0; j < PAIR; j++) {
@@ -172,6 +172,7 @@ export default function InputTutorial(props) {
 
     // To shuffle illegal input array
     const illegalShuffle = () => {
+        clearTimeouts();
         var characters =
             "!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         var charactersLength = characters.length;
@@ -307,12 +308,12 @@ export default function InputTutorial(props) {
                         ""
                     ) : (
                         <span
-                            style={{ fontWeight: "600", marginBottom: "8px" }}
+                            style={{ fontWeight: "600", marginBottom: "20px",marginLeft:"450px",  fontSize:"20px", width:"800px"}}
                         >
                             Could not sort illegal input {bars.toString()}
                         </span>
                     )}
-                    <ExplainationBox width="30" height={3}>
+                    <ExplainationBox width="30" height={3} style={{fontSize:"100px"}}>
                         {isLegalPlaying ? bars.toString() : "Error"}
                     </ExplainationBox>
                 </div>
