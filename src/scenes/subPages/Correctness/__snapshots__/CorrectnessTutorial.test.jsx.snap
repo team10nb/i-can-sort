@@ -128,39 +128,6 @@ Object {
                       class="MuiTouchRipple-root"
                     />
                   </div>
-                  <div
-                    aria-disabled="false"
-                    class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemIcon-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                      >
-                        Input_Def
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </div>
                 </ul>
                 <hr
                   class="MuiDivider-root"
@@ -208,39 +175,6 @@ Object {
                         class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                       >
                         Termination
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemIcon-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                      >
-                        Termination_Def
                       </span>
                     </div>
                     <span
@@ -293,7 +227,7 @@ Object {
                       <span
                         class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                       >
-                        Conclusion
+                        Comparison
                       </span>
                     </div>
                     <span
@@ -392,73 +326,7 @@ Object {
                       <span
                         class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                       >
-                        Partial_Example
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemIcon-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                      >
-                        Total_Example
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemIcon-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                      >
-                        Correctness_Intro
+                        Conclusion
                       </span>
                     </div>
                     <span
@@ -470,7 +338,7 @@ Object {
             </div>
           </div>
           <div>
-            hello, I am the first one.
+            mockInputTutorial
           </div>
         </main>
         <header
@@ -495,7 +363,7 @@ Object {
             </button>
             1
              / 
-            10
+            6
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeSmall MuiButton-sizeSmall"
               style="background-color: rgb(255, 111, 0); color: rgb(255, 255, 255);"
@@ -640,39 +508,6 @@ Object {
                     class="MuiTouchRipple-root"
                   />
                 </div>
-                <div
-                  aria-disabled="false"
-                  class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                  role="button"
-                  tabindex="0"
-                >
-                  <div
-                    class="MuiListItemIcon-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiListItemText-root"
-                  >
-                    <span
-                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                    >
-                      Input_Def
-                    </span>
-                  </div>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </div>
               </ul>
               <hr
                 class="MuiDivider-root"
@@ -720,39 +555,6 @@ Object {
                       class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                     >
                       Termination
-                    </span>
-                  </div>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </div>
-                <div
-                  aria-disabled="false"
-                  class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                  role="button"
-                  tabindex="0"
-                >
-                  <div
-                    class="MuiListItemIcon-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiListItemText-root"
-                  >
-                    <span
-                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                    >
-                      Termination_Def
                     </span>
                   </div>
                   <span
@@ -805,7 +607,7 @@ Object {
                     <span
                       class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                     >
-                      Conclusion
+                      Comparison
                     </span>
                   </div>
                   <span
@@ -904,73 +706,7 @@ Object {
                     <span
                       class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
                     >
-                      Partial_Example
-                    </span>
-                  </div>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </div>
-                <div
-                  aria-disabled="false"
-                  class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                  role="button"
-                  tabindex="0"
-                >
-                  <div
-                    class="MuiListItemIcon-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiListItemText-root"
-                  >
-                    <span
-                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                    >
-                      Total_Example
-                    </span>
-                  </div>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </div>
-                <div
-                  aria-disabled="false"
-                  class="MuiButtonBase-root MuiListItem-root makeStyles-listItem-25 MuiListItem-gutters MuiListItem-button"
-                  role="button"
-                  tabindex="0"
-                >
-                  <div
-                    class="MuiListItemIcon-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiListItemText-root"
-                  >
-                    <span
-                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-                    >
-                      Correctness_Intro
+                      Conclusion
                     </span>
                   </div>
                   <span
@@ -982,7 +718,7 @@ Object {
           </div>
         </div>
         <div>
-          hello, I am the first one.
+          mockInputTutorial
         </div>
       </main>
       <header
@@ -1007,7 +743,7 @@ Object {
           </button>
           1
            / 
-          10
+          6
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeSmall MuiButton-sizeSmall"
             style="background-color: rgb(255, 111, 0); color: rgb(255, 255, 255);"
