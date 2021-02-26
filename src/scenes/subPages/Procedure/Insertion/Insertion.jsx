@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Yani Huang
+*/
+
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';

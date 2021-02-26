@@ -1,3 +1,7 @@
+/*
+    Author: Ruizi Han, Shiliang Chen
+*/
+
 import { render } from "@testing-library/react";
 import ExplainationBox from "./ExplainationBox";
 

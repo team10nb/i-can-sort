@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import { render } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import AnimationControl from "./AnimationControl";

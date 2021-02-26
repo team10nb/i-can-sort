@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Yuting Jiang
+*/
+
 import React from "react";
 import ModuleProgress from "../ModuleProgress/ModuleProgress";
 import ModuleButton from "../ModuleButton/ModuleButton";

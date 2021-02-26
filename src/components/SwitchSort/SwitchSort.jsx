@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import React, { useState } from "react";
 import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
 import InputBar from "../InputBar/InputBar";

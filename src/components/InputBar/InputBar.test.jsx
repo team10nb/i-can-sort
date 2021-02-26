@@ -1,3 +1,7 @@
+/*
+    Author: Yijie Lu, Ruizi Han
+*/
+
 import { Input } from "@material-ui/core";
 import { render } from "@testing-library/react";
 import InputBar from "./InputBar";

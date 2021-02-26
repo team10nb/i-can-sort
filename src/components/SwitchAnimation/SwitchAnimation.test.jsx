@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import { render } from "@testing-library/react";
 import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
 import * as AnimationSliders from "../AnimationSlider/AnimationSlider";

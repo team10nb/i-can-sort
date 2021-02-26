@@ -1,3 +1,7 @@
+/*
+    Author: Yijie Lu, Shiliang Chen
+*/
+
 import React, { useState } from "react";
 import {
     makeStyles,

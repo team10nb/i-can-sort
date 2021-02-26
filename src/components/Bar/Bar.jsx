@@ -1,3 +1,7 @@
+/*
+    Author: Ruizi Han, Yijie Lu
+*/
+
 import React from 'react';
 
 class Bar extends React.Component{

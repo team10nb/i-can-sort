@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";

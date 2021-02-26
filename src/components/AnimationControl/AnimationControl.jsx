@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import * as React from "react";
 import Zoom from "@material-ui/core/Zoom";
 import SpeedMenu from "../SpeedMenu/SpeedMenu";

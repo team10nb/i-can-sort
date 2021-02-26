@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import "@fontsource/roboto";
 import React from "react";
 import Button from "@material-ui/core/Button";

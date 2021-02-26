@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Yuting Jiang
+*/
+
 import { render } from "@testing-library/react";
 import Module from "./Module";
 import * as ModuleButtons from "../ModuleButton/ModuleButton";

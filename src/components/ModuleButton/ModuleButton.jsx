@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Yuting Jiang
+*/
+
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";

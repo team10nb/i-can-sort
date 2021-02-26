@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Yuting Jiang
+*/
+
 import { render } from "@testing-library/react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import userEvent from "@testing-library/user-event";

@@ -1,3 +1,7 @@
+/*
+    Author: Shiliang Chen, Ruizi Han
+*/
+
 import { render } from '@testing-library/react';
 import AnimationSlider from './AnimationSlider';
 
