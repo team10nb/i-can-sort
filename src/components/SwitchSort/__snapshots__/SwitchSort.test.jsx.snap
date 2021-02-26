@@ -29,7 +29,7 @@ Object {
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
                   data-shrink="true"
                 >
-                  Enter your own array using comma
+                  Enter positive integers from 1 to 30
                 </label>
                 <div
                   class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
@@ -48,7 +48,7 @@ Object {
                       class="PrivateNotchedOutline-legendLabelled-55 PrivateNotchedOutline-legendNotched-56"
                     >
                       <span>
-                        Enter your own array using comma
+                        Enter positive integers from 1 to 30
                       </span>
                     </legend>
                   </fieldset>
@@ -828,7 +828,7 @@ Object {
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
                 data-shrink="true"
               >
-                Enter your own array using comma
+                Enter positive integers from 1 to 30
               </label>
               <div
                 class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
@@ -847,7 +847,7 @@ Object {
                     class="PrivateNotchedOutline-legendLabelled-55 PrivateNotchedOutline-legendNotched-56"
                   >
                     <span>
-                      Enter your own array using comma
+                      Enter positive integers from 1 to 30
                     </span>
                   </legend>
                 </fieldset>

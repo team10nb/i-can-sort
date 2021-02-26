@@ -13,7 +13,7 @@ export function Cross(props) {
 
 
   return (
-    <svg className="progress-icon" width ="30%" height = "20%" viewBox="0 0 50 50">
+    <svg className="progress-icon" width ="15px" height='20px' viewBox="0 0 50 50">
         <motion.path
           fill="none"
           strokeWidth="5"
@@ -65,7 +65,7 @@ export function Tick(props) {
 
 
   return (
-      <svg className="progress-icon" width ="30%" height = "20%" viewBox="0 0 50 50">
+    <svg className="progress-icon" width ="15px" height='20px' viewBox="0 0 50 50">
         <motion.path
           fill="none"
           strokeWidth="5"

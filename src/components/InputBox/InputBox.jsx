@@ -13,6 +13,7 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import {color} from '../../scenes/mainPages/Correctness';
 import {Tick, Cross} from '../TickCross/TickCross';
 import Typography from '@material-ui/core/Typography';
+import './Input.css'
 
 const useStyles = makeStyles((theme) => ({
     // root:{
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     table:{
         // maxheight: 170,
         maxheight:50,
-        minwidth: 100
+        maxwidth: 100
     },
 
    
@@ -47,13 +48,13 @@ const useStyles = makeStyles((theme) => ({
       
 export default function InputBox(props) {
     const classes = useStyles();
+    let classname = 'table';
+    let rowclassname = 'tr';
     const {
         legalShuffle,
         illegalShuffle,
         inputLegalString,
-        inputIllegalString,
-        legalArrays, 
-        illegalArrays, 
+        inputIllegalString, 
         isCompleteLegal, 
         isCompleteIllegal, 
         legalClick, 
@@ -105,7 +106,7 @@ export default function InputBox(props) {
                         <PlayArrowIcon style={{ fontSize: 13}}/>
                     </IconButton>                   
                 </div>
-                <div>
+                <div className = {classes.div1}>
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
@@ -115,10 +116,7 @@ export default function InputBox(props) {
                             </TableRow>
                             </TableHead>
                             <TableBody>
-                                {/* {legalArrays.map((val, key) => (
-                                    <TableRow key={key + "legal"} className = {classes.row}>
-                                        <TableCell component="th" scope="row" >
-                                            {val.toString()} */}
+                                
                                 {legalRows.map((row, key) => (
                                     <TableRow key={key + "legal"} >
                                         <TableCell component="th" scope="row" >
@@ -130,6 +128,21 @@ export default function InputBox(props) {
                             </TableBody>
                         </Table>
                     </TableContainer>
+                    {/* <table className = {classname}>
+                        <tr>
+                            <th>Input</th>
+                            <th>Result</th>
+                        </tr>
+                            {legalRows.map((row, key) => (
+                                    <tr key={key + "legal"} className = {rowclassname}>
+                                        <td component="th" scope="row" >
+                                            {row.str}
+                                        </td>
+                                        <td align="center" > <Tick isComplete={isCompleteLegal[key]}/></td>
+                                    </tr>
+                            ))}
+                        
+                    </table> */}
                 </div>
             </div>
             <Typography variant="overline" display="block" gutterBottom>
