@@ -323,13 +323,11 @@ export default function InputTutorial() {
                 </div>
             </Card>
             <InputTable
-                // className = {classes.InputBox}
                 legalShuffle={legalShuffle}
                 illegalShuffle={illegalShuffle}
                 inputLegalString={legalString}
                 inputIllegalString={illegalString}
                 legalArrays={legalArray}
-                // illegalArrays={illegalArrays}
                 isCompleteIllegal={isCompleteIllegal}
                 isCompleteLegal={isCompleteLegal}
                 legalClick={legalClick}
