@@ -1,3 +1,7 @@
+/*
+    Author: Yuting Jiang, Yijie Lu
+*/
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';

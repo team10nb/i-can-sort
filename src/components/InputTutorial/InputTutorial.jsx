@@ -7,7 +7,7 @@ import {
     makeStyles,
 } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import InputBox from "../InputTable/InputTable";
+import InputTable from "../InputTable/InputTable";
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
 import { motion } from "framer-motion";
 import ErrorIcon from "@material-ui/icons/Error";
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function InputTutorial(props) {
+export default function InputTutorial() {
     const classes = useStyles();
 
     // The maximum value of pairs
@@ -322,7 +322,7 @@ export default function InputTutorial(props) {
                     </ExplainationBox>
                 </div>
             </Card>
-            <InputBox
+            <InputTable
                 // className = {classes.InputBox}
                 legalShuffle={legalShuffle}
                 illegalShuffle={illegalShuffle}

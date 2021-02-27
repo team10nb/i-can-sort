@@ -2,7 +2,7 @@
     Author: Yijie Lu, Shiliang Chen
 */
 
-import React, { useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -17,12 +17,9 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import {color} from '../../scenes/mainPages/Correctness';
 import {Tick, Cross} from '../TickCross/TickCross';
 import Typography from '@material-ui/core/Typography';
-import './Input.css'
+
 
 const useStyles = makeStyles((theme) => ({
-    // root:{
-    //     maxHeight: 530
-    // },
     buttons: {
         display:"flex",
         marginLeft: 25,
@@ -46,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
       },
     
     table:{
-        // maxheight: 170,
         maxheight:50,
         maxwidth: 100
     },
@@ -59,14 +55,13 @@ const useStyles = makeStyles((theme) => ({
     
     }));
 
-    function createData(str) {
-        return {str};
-      }
+function createData(str) {
+    return {str};
+}
       
-export default function InputBox(props) {
+export default function InputTable(props) {
     const classes = useStyles();
-    let classname = 'table';
-    let rowclassname = 'tr';
+
     const {
         legalShuffle,
         illegalShuffle,
@@ -95,8 +90,6 @@ export default function InputBox(props) {
         createData(inputIllegalString[2]),
 
     ]
-
-    const [isComplete, setIsComplete] = useState(false);
 
     return(
         <div className = {classes.root}>

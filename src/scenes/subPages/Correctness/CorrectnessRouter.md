@@ -1,6 +1,6 @@
 
 ### **Developer**
-Yijie Lu
+Yijie Lu, Yuting Jiang
 
 Reference: MATERIAL-UI (https://material-ui.com)
 
