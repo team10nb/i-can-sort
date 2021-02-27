@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
@@ -16,24 +15,9 @@ export default function AlgorithmButton(props) {
     },
   };
 
-//   const [onHover,setOnHover] = useState(true);
-
-//   function handleHover(){
-//       let image;
-//         if(onHover){
-//             image = backgroundImage;
-//         }else{
-//             image =  null;
-//         }
-//         // setOnHover(false);
-//         return image;
-//     }
-
-//   const image = handleHover();
-
   const useStyles = makeStyles((theme) => ({
     buttonBase: {
-        width: 270,
+        width: 260,
         height: 250,
         borderRadius: 15,
         justifyContent: 'left',

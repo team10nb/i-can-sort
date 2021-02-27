@@ -4,12 +4,13 @@ import AlgorithmButton from '../../../../components/CorrectnessExample/Algorithm
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {color} from '../../../mainPages/Correctness';
+import Button from '@material-ui/core/Button';
+import { green } from '@material-ui/core/colors';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 const styles = {
     table:{
         display: 'block', 
-        border:1, 
-        // borderStyle:'solid', 
     },
     thead:{
         float: 'left',
@@ -36,11 +37,19 @@ const styles = {
         textAlign:'center',
         width: 60,
         height:30,
-        border:1, 
-        // borderRightStyle:'solid', 
     },
 }
-const title_interminate = <h3>Interminate</h3>;
+function HomeIcon(props) {
+    return (
+      <SvgIcon {...props}>
+          
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    );
+  }
+const title_interminate = 
+    <h3>Interminate<br />
+    <Button variant="outlined" disabled startIcon={<HomeIcon style={{ color: green[500] }} />}>Partial</Button></h3>;
 const code_interminate = 
 <pre>  
 {`
@@ -54,12 +63,15 @@ factorial1 (int n){
 }
 `}
 </pre>
-const exp_interminate = "Cannot terminate, no output.";
-const output_interminate = "";
+const props_interminate = {
+    list: [1,1,2,6,24,120,720,5040,40320,362880,'...'],
+    exp: "Cannot terminate, no output.",
+    output: "",
+}
 
 
-const title_interminateAndIncorrect = <h3>Terminate and Incorrect</h3>;
-const code_interminateAndIncorrect = 
+const title_terminateAndIncorrect = <h3>Terminate and Incorrect</h3>;
+const code_terminateAndIncorrect = 
 <pre>  
 {`
 factorial2 (int n){
@@ -72,12 +84,15 @@ factorial2 (int n){
 }
 `}
 </pre>
-const exp_interminateAndIncorrect = "Wrong result.";
-const output_interminateAndIncorrect = "29";
+const props_terminateAndIncorrect = {
+    list: [1,2,4,7,11,16,22,29],
+    exp: "Wrong result.",
+    output: "29",
+}
 
 
-const title_interminateAndCorrect = <h3>Terminate and Correct</h3>;
-const code_interminateAndCorrect = 
+const title_terminateAndCorrect = <h3>Terminate and Correct</h3>;
+const code_terminateAndCorrect = 
 <pre>  
 {`
 factorial3 (int n){
@@ -90,9 +105,11 @@ factorial3 (int n){
 }
 `}
 </pre>
-const exp_interminateAndCorrect = "Correct";
-const output_interminateAndCorrect = "5040";
-
+const props_terminateAndCorrect = {
+    list: [1,1,2,6,24,120,720,5040],
+    exp: "Correct",
+    output: "5040",
+}  
 
 function ExampleTable(props){
     function tables() {
@@ -131,43 +148,32 @@ export default function Partial() {
     const [table,setTable] = useState([]);
     const [exp,setExp] = useState("");
     const [output,setOutput] = useState("");
+    const [timer,setTimer] = useState();
 
-    function runAlogrithm(current, list, exp, output){
+    const handleClick = (props) => () => {
+        clearInterval(timer);
+        setExp("");
+        setOutput("");
+        setTable([]);
+
+        const {list, exp, output} = props;
+        var current = [];
         var times=0;
-        var timer=setInterval(()=>{
+
+        var newTimer =setInterval(()=>{
         if(times >= list.length-1){
             setExp(exp);
             setOutput(output);
-            clearInterval(timer);
+            clearInterval(newTimer);
         }
         current.push(list[times]);
         const newTable = current.slice();
         setTable(newTable);
         times++;
         },300);
-    }
 
-    const handleClick = (index) => () => {
-        setExp("");
-        setOutput("");
-        var current = [];
-        switch (index) {
-            case 0:
-                var list = [1,1,2,6,24,120,720,5040,40320,362880,'...'];
-                runAlogrithm(current, list, exp_interminate, output_interminate);
-                break;
-            case 1:
-                var list = [1,2,4,7,11,16,22,29];
-                runAlogrithm(current, list, exp_interminateAndIncorrect, output_interminateAndIncorrect);
-                break;
-            case 2:
-                var list = [1,1,2,6,24,120,720,5040];
-                runAlogrithm(current, list, exp_interminateAndCorrect, output_interminateAndCorrect);
-                break;
-            default:
-                break;
-        }
-      };
+        setTimer(newTimer);
+    }
 
 
     return( 
@@ -176,12 +182,12 @@ export default function Partial() {
             <Card style={{backgroundColor:'#EFEFEF'}}>
             <CardContent>
                 <h1>Input: n = 7</h1>
-                <div style = {{height:150}}>
-                    <h1 style = {{color:color, display: 'inline-block'}}>Process: </h1>
+                <div style = {{height:135}}>
+                    <h1 style = {{display: 'inline-block'}}>Process: </h1>
                     <Card style = {{height:60, backgroundColor:'#EFEFEF'}}>
                     <ExampleTable numbers={table} style = {{paddingLeft:20}}/>
                     </Card>
-                    <h1 style = {{color: color}}>Explanation: {exp}</h1>
+                    <h1 style = {{color: color}}> {exp}</h1>
                 </div>
                 <h1>Output: {output}</h1>
             </CardContent>
@@ -189,13 +195,31 @@ export default function Partial() {
 
             <div style = {{paddingTop:20}}>
                 <div style={{display:'inline-block'}}>
-                <AlgorithmButton paddingLeft={0} paddingRight={0} title = {title_interminate} code = {code_interminate} onClick={handleClick(0)} isHover={true}/>
+                <AlgorithmButton 
+                    paddingLeft={0} 
+                    paddingRight={0} 
+                    title = {title_interminate} 
+                    code = {code_interminate} 
+                    onClick={handleClick(props_interminate)}
+                />
                 </div>
                 <div style={{display:'inline-block'}}>
-                <AlgorithmButton paddingLeft={0} paddingRight={35} title = {title_interminateAndIncorrect} code = {code_interminateAndIncorrect} onClick={handleClick(1)}/>
+                <AlgorithmButton 
+                    paddingLeft={-10} 
+                    paddingRight={20} 
+                    title = {title_terminateAndIncorrect} 
+                    code = {code_terminateAndIncorrect} 
+                    onClick={handleClick(props_terminateAndIncorrect)}
+                />
                 </div>
                 <div style={{display:'inline-block'}}>
-                <AlgorithmButton paddingLeft={0} paddingRight={0} title = {title_interminateAndCorrect} code = {code_interminateAndCorrect} onClick={handleClick(2)}/>
+                <AlgorithmButton 
+                    paddingLeft={0} 
+                    paddingRight={0} 
+                    title = {title_terminateAndCorrect} 
+                    code = {code_terminateAndCorrect} 
+                    onClick={handleClick(props_terminateAndCorrect)}
+                />
                 </div>
             </div>
         </div>
