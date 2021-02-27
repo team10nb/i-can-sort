@@ -16,6 +16,7 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import InputDef from './Tutorial/Input_Def';
 import Input from './Tutorial/Input';
+import Partial from './Tutorial/Partial';
 
 
 const drawerWidth = 240;
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
           margin: theme.spacing(0),
         },
     },
+
 
     // stepContent:{
     //     marginTop:630,
@@ -122,15 +124,11 @@ const useStyles = makeStyles((theme) => ({
 
   function getSteps() {
     return ['Input', 
-            'Input_Def', 
-            'Termination', 
-            'Termination_Def', 
-            'Conclusion', 
+            'Termination',
+            'Comparison',
             'Partial Correctness',
             'Total Correctness', 
-            'Partial_Example', 
-            'Total_Example', 
-            'Correctness_Intro' 
+            'Conclusion'
     ];
   }
 
@@ -143,7 +141,11 @@ const useStyles = makeStyles((theme) => ({
           case 1:
               return(
                   <InputDef />
-              );    
+              );
+        case 3:
+            return(
+                <Partial />
+            );
           default:
               break;
       }
@@ -153,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
     export default function CorrectnessTutorial(props) {
     const classes = useStyles();
 
-    
+
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -191,9 +193,10 @@ const useStyles = makeStyles((theme) => ({
                 </div>                          
             </AppBar>
                 {/* <div className = {classes.stepContent}>
-                   {getStepContent(activeStep)}    
+                   {getStepContent(activeStep)}
                 </div>    */}
-     
+
+
                 <main className={classes.content}>
                 <Drawer
                 className={classes.drawer}
@@ -213,7 +216,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem  className = {classes.listItem}>                          
                             <ListItemText primary= 'Input' />
                             </ListItem>
-                            {['Input', 'Input_Def'].map((text, index) => (
+                            {['Input'].map((text, index) => (
                                 
                             index === activeStep 
                                 ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}>
@@ -231,13 +234,13 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>             
                             <ListItemText primary= 'Termination' />
                             </ListItem>
-                            {['Termination', 'Termination_Def'].map((text, index) => (
-                            index + 2 === activeStep
-                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
+                            {['Termination'].map((text, index) => (
+                            index + 1 === activeStep
+                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 1)}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} />
                                 </ListItem>
-                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 2)}>
+                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 1)}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} />
                                 </ListItem> 
@@ -249,25 +252,27 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>                           
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
-                            {['Conclusion' , 'Partial Correctness', 'Total Correctness', 'Partial_Example', 'Total_Example', 'Correctness_Intro' ].map((text, index) => (
-                            index + 4 === activeStep
-                            ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 4)}>
+                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Conclusion'].map((text, index) => (
+                            index + 2 === activeStep
+                            ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
-                            :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 4)}
+                            :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 2)}
                                 ><ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem> 
                             ))}
                         </List>
                    </div>
-                </Drawer>  
-                {getStepContent(activeStep)}    
-            </main>   
-                       
-                
-            
+                   </Drawer>
+                    {getStepContent(activeStep)}
+                  </main>
+
+
+
+
+
             <AppBar  className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}

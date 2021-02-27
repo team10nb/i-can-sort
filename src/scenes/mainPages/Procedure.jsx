@@ -52,12 +52,12 @@ function calculateProgress(progressArray){
   let value = 0;
   let count = 0;
   for (var i=0; i<progressArray.length; i++){
-    if (progressArray[i] == true){
+    if (progressArray[i] === true){
       value += 30;
       count++;
     }
   }
-  if(count == progressArray.length)
+  if(count === progressArray.length)
     value = 100;
   return value;
 }
@@ -83,37 +83,37 @@ export default function ProcedureMainPage() {
 
     const images = [
       {
-        static: "./logo512.png",
+        static: "bubble.png",
         gif: "bubble.gif",
         title: "Bubble sort",
         width: "20%",
       },
       {
-        static: "./logo512.png",
+        static: "",
         gif: "selection.gif",
         title: "Selection sort",
         width: "20%",
       },
       {
-        static: "./logo512.png",
+        static: "",
         gif: "insertion.gif",
         title: "Insertion sort",
         width: "20%",
       },
       {
-        static: "./logo512.png",
+        static: "",
         gif: "quick.gif",
         title: "Quick sort",
         width: "20%",
       },
       {
-        static: "./logo512.png",
+        static: "",
         gif: "merge.gif",
         title: "Merge sort",
         width: "20%",
       },
       {
-        static: "./logo512.png",
+        static: "",
         gif: "heap.gif",
         title: "Heap sort",
         width: "20%",
@@ -233,17 +233,6 @@ export default function ProcedureMainPage() {
           </Link>
           </Grid>
 
-{/*           <Grid item xs={6} sm={3}> */}
-{/*           <Link to="/ProcedureSubpage/Bubble"> */}
-{/*               <Module {...props2} /> */}
-{/*           </Link> */}
-{/*           </Grid> */}
-
-{/*           <Grid item xs={6} sm={3}> */}
-{/*           <Link to="/ProcedureSubpage/Bubble"> */}
-{/*               <Module {...props2} /> */}
-{/*           </Link> */}
-{/*           </Grid> */}
 
           <Grid item xs={12}>
             <div className = {classes.buttonSet}>

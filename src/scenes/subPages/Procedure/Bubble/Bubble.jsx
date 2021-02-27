@@ -1,20 +1,15 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
-import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import BubbleIntro from '../../../../components/Introduction/BubbleSort';
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = BubbleSort(arr);
 
 const introMessage =
                 <div>
                 <h1>Bubble sort</h1>
-                <div style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</div>
-                <h1>Performance</h1>
-                <table>
+                <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
+                {/* <h1>Performance</h1> */}
+                {/* <table>
                     <tbody>
                     <tr>
                         <td>Worst-case time complexity</td>
@@ -33,7 +28,7 @@ const introMessage =
                         <td style = {{paddingLeft:7}}>O(1)</td>
                     </tr>
                     </tbody>
-                </table>
+                </table> */}
                 </div>
                
 const intro = {
