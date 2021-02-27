@@ -22,8 +22,8 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     buttons: {
         display:"flex",
-        marginLeft: 25,
-        marginTop: 10,
+        marginLeft: 28,
+        marginTop: 20,
         marginBottom: 10,
     },
     title:{
@@ -42,11 +42,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom:"19px"
       },
     
-    table:{
-        maxheight:50,
-        maxwidth: 100
-    },
-
    
     button:{
         height:10
@@ -101,7 +96,7 @@ export default function InputTable(props) {
                 <div className = {classes.buttons}>                  
                     <Button 
                         variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10}}
+                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
                         onClick = {legalShuffle}
                         
                     >
@@ -109,11 +104,12 @@ export default function InputTable(props) {
                     </Button>
                     <IconButton 
                         variant="contained" 
+                        size = 'small'
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
                         onClick={legalClick}
                         
                     >
-                        <PlayArrowIcon style={{ fontSize: 13}}/>
+                        <PlayArrowIcon  />
                     </IconButton>                   
                 </div>
                 <div className = {classes.div1}>
@@ -151,7 +147,7 @@ export default function InputTable(props) {
                 <div className = {classes.buttons}>
                 <Button 
                         variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10}}
+                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
                         onClick = {illegalShuffle}
                     >
                         shuffle
@@ -159,11 +155,12 @@ export default function InputTable(props) {
                     <IconButton 
 
                         variant="contained" 
+                        size = 'small'
                         style={{backgroundColor:color, color:"#FFFFFF"}} 
                         onClick={illegalClick}
                         
                     >
-                        <PlayArrowIcon style={{ fontSize: 13}}/>
+                        <PlayArrowIcon  />
                     </IconButton>               
                 </div>
                 <div className = {classes.div1}>
