@@ -6,12 +6,17 @@ import React, { useState } from "react";
 import {
     makeStyles,
 } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
+import Card from '@material-ui/core/Card';
 import InputTable from "../InputTable/InputTable";
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import Link from '@material-ui/core/Link';
+import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
+import Typography from '@material-ui/core/Typography';
 import { motion } from "framer-motion";
 import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
+import { Divider } from "@material-ui/core";
+
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -79,10 +84,30 @@ const useStyles = makeStyles((theme) => ({
         display: "grid",
         justifyContent: "center",
         alignContent: "flex-end",
-        marginTop: "100px",
+        marginBottom: "110px",
+        marginLeft: "45px",
         height: "300px",
         width: "350px",
     },
+    explanation:{
+        display: "flex",
+        '& > *': {
+            marginTop: theme.spacing(4),
+          },
+        '& > * + *': {     
+            marginLeft: theme.spacing(2),
+        },
+       
+    },
+    links:{
+        display: "flex",
+        // '& > *': {
+        //     marginTop: theme.spacing(6),
+        //   },
+        '& > * + *': {     
+            marginLeft: theme.spacing(2),
+        },
+    }
 }));
 
 export default function InputTutorial() {
@@ -275,6 +300,19 @@ export default function InputTutorial() {
     return (
         <div className={classes.div}>
             <Card className={classes.card}>
+                <div className = {classes.explanation}>
+                        <HelpOutlineOutlinedIcon />
+                        <div className = {classes.links}>
+                        
+                            <Typography  variant="button" display="block" gutterBottom>
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>legal input</Link>&nbsp;?
+                            </Typography>
+                            <Typography  variant="button" display="block" gutterBottom>
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>illegal input</Link>&nbsp;?
+                            </Typography>
+                        </div>  
+                </div>
+                <Divider />
                 <div className={classes.switchAnimation}>
                     <div className={classes.bars}>
                         {isLegalPlaying ? (
@@ -321,6 +359,10 @@ export default function InputTutorial() {
                         {isLegalPlaying ? bars.toString() : "Error"}
                     </ExplainationBox>
                 </div>
+                
+                
+                
+                
             </Card>
             <InputTable
                 legalShuffle={legalShuffle}
