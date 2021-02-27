@@ -5,8 +5,9 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {color} from '../../../mainPages/Correctness';
 import Button from '@material-ui/core/Button';
-import { green } from '@material-ui/core/colors';
-import SvgIcon from '@material-ui/core/SvgIcon';
+import { green, red } from '@material-ui/core/colors';
+import CheckIcon from '@material-ui/icons/Check';
+import CloseIcon from '@material-ui/icons/Close';
 
 const styles = {
     table:{
@@ -21,7 +22,7 @@ const styles = {
     th:{
         fontSize: 14,
         display: 'block',
-        width: 65,
+        width: 60,
         height:30,
         textAlign:'center',
     },
@@ -29,27 +30,38 @@ const styles = {
         height:60,
         display: 'inline-block',
         border:1, 
-        borderRightStyle:'solid', 
+        // borderRightStyle:'solid', 
     },
     td:{
         fontSize: 14,
         display: 'block',
         textAlign:'center',
-        width: 60,
+        width: 55,
         height:30,
     },
 }
-function HomeIcon(props) {
-    return (
-      <SvgIcon {...props}>
-          
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </SvgIcon>
-    );
-  }
+
 const title_interminate = 
-    <h3>Interminate<br />
-    <Button variant="outlined" disabled startIcon={<HomeIcon style={{ color: green[500] }} />}>Partial</Button></h3>;
+// {/* <h3>Interminate<br /> */}
+<h3>Example1<br />
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CheckIcon style={{ color: green[500] }} />}
+        style = {{height: 27, color: green[500]}}
+    >
+        Partial
+    </Button>
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CloseIcon style={{ color: red[700] }} />}
+        style = {{height: 27, color: red[700]}}
+    >
+        Total
+    </Button>
+</h3>
+
 const code_interminate = 
 <pre>  
 {`
@@ -70,7 +82,26 @@ const props_interminate = {
 }
 
 
-const title_terminateAndIncorrect = <h3>Terminate and Incorrect</h3>;
+const title_terminateAndIncorrect = 
+// {/* <h3>Terminate and Incorrect<br /> */}
+<h3>Example2<br />
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CloseIcon style={{ color: red[700] }} />}
+        style = {{height: 27, color: red[700]}}
+    >
+        Partial
+    </Button>
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CloseIcon style={{ color: red[700] }} />}
+        style = {{height: 27, color: red[700]}}
+    >
+        Total
+    </Button>
+</h3>;
 const code_terminateAndIncorrect = 
 <pre>  
 {`
@@ -91,7 +122,26 @@ const props_terminateAndIncorrect = {
 }
 
 
-const title_terminateAndCorrect = <h3>Terminate and Correct</h3>;
+const title_terminateAndCorrect = 
+// {/* <h3>Terminate and Correct<br /> */}
+<h3>Example3<br />
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CheckIcon style={{ color: green[500] }} />}
+        style = {{height: 27, color: green[500]}}
+    >
+        Partial
+    </Button>
+    <Button 
+        variant="outlined" 
+        disabled 
+        startIcon={<CheckIcon style={{ color: green[500] }} />}
+        style = {{height: 27, color: green[500]}}
+    >
+        Total
+    </Button>
+</h3>;
 const code_terminateAndCorrect = 
 <pre>  
 {`
@@ -183,10 +233,10 @@ export default function Partial() {
             <CardContent>
                 <h1>Input: n = 7</h1>
                 <div style = {{height:135}}>
-                    <h1 style = {{display: 'inline-block'}}>Process: </h1>
-                    <Card style = {{height:60, backgroundColor:'#EFEFEF'}}>
+                    <h1 style = {{display: 'inline-block'}}>Process: </h1><br />
+                    <Button variant='outlined' disabled style={{height:60, backgroundColor:'#EFEFEF', color:color}}>
                     <ExampleTable numbers={table} style = {{paddingLeft:20}}/>
-                    </Card>
+                    </Button>
                     <h1 style = {{color: color}}> {exp}</h1>
                 </div>
                 <h1>Output: {output}</h1>
@@ -205,8 +255,8 @@ export default function Partial() {
                 </div>
                 <div style={{display:'inline-block'}}>
                 <AlgorithmButton 
-                    paddingLeft={-10} 
-                    paddingRight={20} 
+                    paddingLeft={10} 
+                    paddingRight={10} 
                     title = {title_terminateAndIncorrect} 
                     code = {code_terminateAndIncorrect} 
                     onClick={handleClick(props_terminateAndIncorrect)}
