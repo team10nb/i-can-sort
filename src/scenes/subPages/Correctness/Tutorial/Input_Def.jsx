@@ -1,12 +1,28 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import { color } from '../../../mainPages/Correctness';
+import AlgorithmButton from '../../../../components/CorrectnessExample/AlgorithmButton';
 
-
+const code = 
+<pre>  
+{`
+factorial1 (int n){
+  int result = 1;
+  for (int i=1; ; i++)
+  {
+    result = result * i;
+  }
+  return result;
+}
+`}
+</pre>
 
 export default function Input_Def(props) {
     return(
         <div>
+            
+           
+            
             {/* <div>
             <h1 style = {{fontSize:20, color:color}}>Input and Output</h1>
             <p style = {{fontSize:16}}>Input is something that is put in, and output is something produced. <br/>
