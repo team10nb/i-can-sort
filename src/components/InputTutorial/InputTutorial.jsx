@@ -304,10 +304,10 @@ export default function InputTutorial() {
                         <HelpOutlineOutlinedIcon />
                         <div className = {classes.links}>
                         
-                            <Typography  variant="button" display="block" gutterBottom>
+                            <Typography  >
                             What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>legal input</Link>&nbsp;?
                             </Typography>
-                            <Typography  variant="button" display="block" gutterBottom>
+                            <Typography  >
                             What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>illegal input</Link>&nbsp;?
                             </Typography>
                         </div>  
