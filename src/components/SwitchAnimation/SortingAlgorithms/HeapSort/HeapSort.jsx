@@ -101,7 +101,7 @@ export default function HeapSort(arr) {
                 changeY(patched, j, -50);
             }
 
-            description.push("A max heap is built, heap size is : " + j);
+            description.push("A max heap is built, heap size is: " + j);
             trace.push(hardcopy(patched));
 
             //恢复堆颜色
@@ -112,9 +112,9 @@ export default function HeapSort(arr) {
 
             changeColor(patched, 0, COLORS.finished);
             description.push(
-                "The top element " +
+                "Top element " +
                     patched[0].value +
-                    " of the heap must be the largest element in the heap."
+                    " is the largest in the heap"
             );
             trace.push(hardcopy(patched));
 
@@ -122,7 +122,7 @@ export default function HeapSort(arr) {
             swap(patched, 0, i);
 
             description.push(
-                "Separated " + patched[i].value + " from the heap"
+                "Take " + patched[i].value + " out of the heap"
             );
             trace.push(hardcopy(patched));
 
