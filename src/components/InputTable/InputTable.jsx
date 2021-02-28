@@ -11,9 +11,11 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import RefreshIcon from '@material-ui/icons/Refresh';
 import {color} from '../../scenes/mainPages/Correctness';
 import {Tick, Cross} from '../TickCross/TickCross';
 import Typography from '@material-ui/core/Typography';
@@ -22,20 +24,25 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     buttons: {
         display:"flex",
-        marginLeft: 28,
-        marginTop: 20,
-        marginBottom: 10,
+        '& > *': {
+            marginTop: theme.spacing(2),
+            marginLeft: theme.spacing(6.5),
+          },
+        '& > * + *': {     
+            marginLeft: theme.spacing(3),
+        },
     },
     title:{
         display:"flex",
-        marginLeft: 35,
+        marginLeft: 44,
         fontFamily: "inherit",
         fontWeight: "700",
-        fontSize:"16px"
+        fontSize:"16px",
+       
     },
     div1:{
         display:"flex",
-        marginTop: 0,
+        marginTop: 14,
         '& > *': {
         margin: theme.spacing(1),
         },
@@ -94,23 +101,36 @@ export default function InputTable(props) {
                 </div>
                 
                 <div className = {classes.buttons}>                  
-                    <Button 
+                    {/* <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
                         onClick = {legalShuffle}
                         
                     >
                         shuffle
-                    </Button>
-                    <IconButton 
-                        variant="contained" 
-                        size = 'small'
-                        style={{backgroundColor:color, color:"#FFFFFF"}} 
-                        onClick={legalClick}
-                        
-                    >
-                        <PlayArrowIcon  />
-                    </IconButton>                   
+                    </Button> */}
+                    <Tooltip title="shuffle" placement="bottom" arrow>
+                        <IconButton 
+                            variant="contained" 
+                            size = 'small'
+                            style={{backgroundColor:color, color:"#FFFFFF"}} 
+                            onClick={legalShuffle}
+                            
+                        >
+                            <RefreshIcon />
+                    </IconButton>
+                    </Tooltip>
+                    <Tooltip title="play" placement="bottom" arrow>
+                        <IconButton 
+                            variant="contained" 
+                            size = 'small'
+                            style={{backgroundColor:color, color:"#FFFFFF"}} 
+                            onClick={legalClick}
+                            
+                        >
+                            <PlayArrowIcon  />
+                        </IconButton>
+                    </Tooltip>                                   
                 </div>
                 <div className = {classes.div1}>
                     <TableContainer component={Paper} >
@@ -145,23 +165,35 @@ export default function InputTable(props) {
             
             <div>
                 <div className = {classes.buttons}>
-                <Button 
+                {/* <Button 
                         variant="contained" 
                         style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
                         onClick = {illegalShuffle}
                     >
                         shuffle
-                    </Button>
-                    <IconButton 
-
-                        variant="contained" 
-                        size = 'small'
-                        style={{backgroundColor:color, color:"#FFFFFF"}} 
-                        onClick={illegalClick}
-                        
-                    >
-                        <PlayArrowIcon  />
-                    </IconButton>               
+                    </Button> */}
+                    <Tooltip title="shuffle" placement="bottom" arrow>
+                        <IconButton 
+                            variant="contained" 
+                            size = 'small'
+                            style={{backgroundColor:color, color:"#FFFFFF"}} 
+                            onClick={illegalShuffle}
+                            
+                        >
+                            <RefreshIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="play" placement="bottom" arrow>
+                        <IconButton 
+                            variant="contained" 
+                            size = 'small'
+                            style={{backgroundColor:color, color:"#FFFFFF"}} 
+                            onClick={illegalClick}
+                            
+                        >
+                            <PlayArrowIcon  />
+                        </IconButton>
+                    </Tooltip>                                
                 </div>
                 <div className = {classes.div1}>
                     <TableContainer component={Paper} >
