@@ -49,6 +49,6 @@ import { makeStyles } from '@material-ui/core/styles';
     inputIllegalString={["2,a,6,10","9,*,&,3","3,#,&,10",]}
     legalArrays={["2,1,6,10","9,12,8,3","3,2,17,10",]}
     isCompleteIllegal={[false,false,false,]}
-    isCompleteLegal={[false,false,false,]
+    isCompleteLegal={[false,false,false,]}
 />
 ```
