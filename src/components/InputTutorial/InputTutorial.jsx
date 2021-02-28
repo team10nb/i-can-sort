@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
+import {color as CorrectnessColor} from '../../scenes/mainPages/Correctness';
 
 
 const spring = {
@@ -254,7 +255,7 @@ export default function InputTutorial() {
                     setBars(item.sort((a, b) => a - b));
                     console.log(item);
                 },
-                (i + 1) * 700, //time interval
+                (i + 1) * 1000, //time interval
                 item
             );
             legalTimeoutIds.push(timeoutId);
@@ -270,6 +271,7 @@ export default function InputTutorial() {
     const illegalClick = () => {
         clearTimeouts();
         const illegalTimeoutIds = [];
+        setBars([0, 0, 0, 0]);
         setIsLegalPlaying(false);
         setIsCompleteIllegal([false, false, false]);
 
@@ -285,7 +287,7 @@ export default function InputTutorial() {
                     }
                     setBars(item);
                 },
-                (i + 1) * 700, //time interval
+                (i + 1) * 1000, //time interval
                 item
             );
             illegalTimeoutIds.push(timeoutId);
@@ -352,7 +354,7 @@ export default function InputTutorial() {
                         <span
                             style={{ fontWeight: "600", marginBottom: "20px",marginLeft:"450px",  fontSize:"20px", width:"800px"}}
                         >
-                            Could not sort illegal input {bars.toString()}
+                            Could not sort illegal input <span style={{color:CorrectnessColor}}>{bars.toString()}</span>
                         </span>
                     )}
                     <ExplainationBox width="30" height={3} style={{fontSize:"100px"}}>
