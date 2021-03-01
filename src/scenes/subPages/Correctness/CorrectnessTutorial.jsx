@@ -18,9 +18,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
-import InputDef from './Tutorial/Input_Def';
 import Input from '../../../components/InputTutorial/InputTutorial';
-
+import Partial from './Tutorial/Partial';
 
 
 const drawerWidth = 240;
@@ -52,18 +51,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
-    // stepContent:{
-    //     marginTop:630,
-    //     marginLeft:250,
-    // },
-
     icon:{
         marginRight: theme.spacing(2),
         width: 100,
         height: 45,
     },
-
-
 
     chip:{
         position: 'relative',
@@ -127,23 +119,27 @@ const useStyles = makeStyles((theme) => ({
 
   function getSteps() {
     return ['Input', 
-            'Termination', 
-            'Comparison', 
+            'Termination',
+            'Comparison',
             'Partial Correctness',
-            'Total Correctness', 
-            'Conclusion' 
+            'Total Correctness',
+            'Example'
     ];
   }
 
   function getStepContent(activeStep) {
       switch (activeStep) {
-        case 0:
+          case 0:
             return(
                 <Input />
             );
         case 1:
             return(
                 <InputDef />
+            );
+        case 5:
+            return(
+                <Partial />
             );
         default:
             break;
@@ -153,8 +149,6 @@ const useStyles = makeStyles((theme) => ({
   
     export default function CorrectnessTutorial(props) {
     const classes = useStyles();
-
-    
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -191,11 +185,8 @@ const useStyles = makeStyles((theme) => ({
                 <Chip className={classes.chip} label= {step[activeStep]} />  
                 </div>                          
             </AppBar>
-                {/* <div className = {classes.stepContent}>
-                   {getStepContent(activeStep)}    
-                </div>    */}
      
-                <main className={classes.content}>
+            <main className={classes.content}>
                 <Drawer
                 className={classes.drawer}
                 variant="permanent"
@@ -250,7 +241,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>                           
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
-                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Conclusion' ].map((text, index) => (
+                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Example' ].map((text, index) => (
                             index + 2 === activeStep
                             ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>
@@ -263,12 +254,12 @@ const useStyles = makeStyles((theme) => ({
                             ))}
                         </List>
                    </div>
-                </Drawer>  
-                {getStepContent(activeStep)}    
-            </main>   
-                       
-                
-            
+                </Drawer>
+                {getStepContent(activeStep)}
+            </main>
+
+
+
             <AppBar  className = {classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}

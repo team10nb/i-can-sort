@@ -52,12 +52,12 @@ function calculateProgress(progressArray){
   let value = 0;
   let count = 0;
   for (var i=0; i<progressArray.length; i++){
-    if (progressArray[i] == true){
+    if (progressArray[i] === true){
       value += 30;
       count++;
     }
   }
-  if(count == progressArray.length)
+  if(count === progressArray.length)
     value = 100;
   return value;
 }
