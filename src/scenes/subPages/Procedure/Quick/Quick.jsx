@@ -15,8 +15,8 @@ let props = QuickSort(arr);
 const introMessage = <div>
 <h1>Quick sort</h1>
 <div style={{textAlign:"left"}}>Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. </div>
-<h1>Performance</h1>
-<table>
+{/* <h1>Performance</h1> */}
+{/* <table>
     <tbody>
     <tr>
         <td style={{textAlign:"left"}}>Worst-case time complexity</td>
@@ -35,7 +35,7 @@ const introMessage = <div>
         <td style = {{textAlign:"right"}}>O(nlogn)</td>
     </tr>
     </tbody>
-</table> 
+</table>  */}
 </div>
 
 const intro = {

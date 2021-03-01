@@ -80,7 +80,7 @@ import Music from '../Music/Music';
           id="panel1a-header"
         >
           <LanguageIcon />
-          <ListItemText primary='Prefer Language' />   
+          <ListItemText primary='Language' />   
         </AccordionSummary>
         <AccordionDetails>
           <List>
