@@ -33,8 +33,8 @@ export default function AlgorithmButton(props) {
       <div style={styles.div}> 
           <ButtonBase className={classes.buttonBase} onClick={onClick}>
             <Typography variant="body2" align='left'>
-                {title}
-                {code}
+                <span>{title}</span>
+                <span>{code}</span>
             </Typography> 
           </ButtonBase>
       </div>

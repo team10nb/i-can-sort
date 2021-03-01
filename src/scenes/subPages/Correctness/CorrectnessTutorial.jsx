@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
             'Comparison', 
             'Partial Correctness',
             'Total Correctness', 
-            'Conclusion' 
+            'Example' 
     ];
   }
 
@@ -139,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
               return(
                   <InputDef />
               );   
-        case 3:
+        case 5:
             return(
                 <Partial />
             );    
@@ -246,7 +246,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>                           
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
-                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Conclusion'].map((text, index) => (
+                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Example'].map((text, index) => (
                             index + 2 === activeStep
                             ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>

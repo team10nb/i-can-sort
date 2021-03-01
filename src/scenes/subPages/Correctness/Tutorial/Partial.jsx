@@ -20,11 +20,12 @@ const styles = {
         display: 'inline-block',
     },
     th:{
-        fontSize: 14,
+        fontSize: 16,
         display: 'block',
         width: 60,
         height:30,
         textAlign:'center',
+        textTransform: 'lowercase',
     },
     tr:{
         height:60,
@@ -33,16 +34,15 @@ const styles = {
         // borderRightStyle:'solid', 
     },
     td:{
-        fontSize: 14,
+        fontSize: 16,
         display: 'block',
         textAlign:'center',
-        width: 55,
+        width: 57,
         height:30,
     },
 }
 
 const title_interminate = 
-// {/* <h3>Interminate<br /> */}
 <h3>Example1<br />
     <Button 
         variant="outlined" 
@@ -67,7 +67,9 @@ const code_interminate =
 {`
 factorial1 (int n){
   int result = 1;
-  for (int i=1; ; i++)
+`}
+<code style = {{color: red[700]}}>  for (int i=1; ; i++)</code>
+{`
   {
     result = result * i;
   }
@@ -77,13 +79,12 @@ factorial1 (int n){
 </pre>
 const props_interminate = {
     list: [1,1,2,6,24,120,720,5040,40320,362880,'...'],
-    exp: "Cannot terminate, no output.",
+    exp: "The algorihm cannot terminate, no output.",
     output: "",
 }
 
 
 const title_terminateAndIncorrect = 
-// {/* <h3>Terminate and Incorrect<br /> */}
 <h3>Example2<br />
     <Button 
         variant="outlined" 
@@ -109,7 +110,9 @@ factorial2 (int n){
   int result = 1;
   for (int i=1; i<=n; i++)
   {
-     result = result + i;
+`}
+<code style={{color: red[700]}}>    result = result + i;</code>
+{`
   }
   return result;
 }
@@ -117,13 +120,12 @@ factorial2 (int n){
 </pre>
 const props_terminateAndIncorrect = {
     list: [1,2,4,7,11,16,22,29],
-    exp: "Wrong result.",
+    exp: "Wrong result. The output is not as expected.",
     output: "29",
 }
 
 
 const title_terminateAndCorrect = 
-// {/* <h3>Terminate and Correct<br /> */}
 <h3>Example3<br />
     <Button 
         variant="outlined" 
@@ -157,7 +159,7 @@ factorial3 (int n){
 </pre>
 const props_terminateAndCorrect = {
     list: [1,1,2,6,24,120,720,5040],
-    exp: "Correct",
+    exp: "The algorithm termitates and output is correct.",
     output: "5040",
 }  
 
@@ -229,17 +231,18 @@ export default function Partial() {
     return( 
         <div>
             {/* <h1 style = {{paddingBottom:30}}>Let's take 7! as an example.</h1> */}
-            <Card style={{backgroundColor:'#EFEFEF'}}>
+            <Card style={{width:785, backgroundColor:'#EFEFEF'}}>
             <CardContent>
                 <h1>Input: n = 7</h1>
-                <div style = {{height:135}}>
-                    <h1 style = {{display: 'inline-block'}}>Process: </h1><br />
+                <div style = {{height:145}}>
+                    <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial(7) </h1><br />
                     <Button variant='outlined' disabled style={{height:60, backgroundColor:'#EFEFEF', color:color}}>
                     <ExampleTable numbers={table} style = {{paddingLeft:20}}/>
                     </Button>
                     <h1 style = {{color: color}}> {exp}</h1>
                 </div>
-                <h1>Output: {output}</h1>
+                <h1>Expected Output: 5040</h1>
+                <h1>Actual Output: {output}</h1>
             </CardContent>
             </Card>
 
