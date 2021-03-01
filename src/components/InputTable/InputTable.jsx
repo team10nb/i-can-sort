@@ -137,7 +137,7 @@ export default function InputTable(props) {
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
                             <TableRow >
-                                <TableCell >Input</TableCell>
+                                <TableCell align="center">Input</TableCell>
                                 <TableCell align="center" >Result</TableCell>
                             </TableRow>
                             </TableHead>
@@ -145,7 +145,7 @@ export default function InputTable(props) {
                                 
                                 {legalRows.map((row, key) => (
                                     <TableRow key={key + "legal"} >
-                                        <TableCell component="th" scope="row" >
+                                        <TableCell align="center" >
                                             <div style={{width:"60px", fontWeight:"700"}}>{row.str}</div>
                                         </TableCell>
                                         <TableCell align="center"  > <Tick isComplete={isCompleteLegal[key]}/></TableCell>
@@ -200,14 +200,14 @@ export default function InputTable(props) {
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
                             <TableRow>
-                                <TableCell>Input</TableCell>
+                                <TableCell align="center">Input</TableCell>
                                 <TableCell align="center">Result</TableCell>
                             </TableRow>
                             </TableHead>
                             <TableBody>
                                 {illegalRows.map((row, key) => (
                                     <TableRow key={key + "illegal"} >
-                                        <TableCell component="th" scope="row" >
+                                        <TableCell align="center" >
                                         <div style={{width:"60px", fontWeight:"700"}}>{row.str}</div>
                                         </TableCell>
                                         <TableCell align="center" > <Cross isComplete={isCompleteIllegal[key]}/></TableCell>

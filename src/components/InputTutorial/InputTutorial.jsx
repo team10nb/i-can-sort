@@ -113,11 +113,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function InputTutorial() {
     const classes = useStyles();
-
+    const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     // The maximum value of pairs
     const PAIR = 3;
     // The maximum value of input number
-    const MAXNUMBER = 25;
+    const MAXNUMBER = 7;
     // The minimun value of input number
     const MINNUMBER = 1;
     // The maximum length of input array
@@ -140,30 +140,30 @@ export default function InputTutorial() {
     const [isLegalPlaying, setIsLegalPlaying] = useState(true);
     // The legal string
     const [legalString, setLegalString] = useState([
-        "2,1,6,10",
-        "9,12,8,3",
-        "3,2,17,10",
+        3,
+        5,
+        1,
     ]);
     // The legal array
     const [legalArray, setLegalArray] = useState([
-        [2, 1, 6, 10],
-        [9, 12, 8, 3],
-        [3, 2, 17, 10],
+        3,
+        5,
+        1,
     ]);
     // The illegal string
     const [illegalString, setIllegalString] = useState([
-        "2,a,6,10",
-        "9,*,&,3",
-        "3,#,&,10",
+        'a',
+        'e',
+        'd',
     ]);
     // The illegal array
     const [illegalArray, setIllegalArray] = useState([
-        ["2", "a", "6", "10"],
-        ["9", "*", "&", "3"],
-        ["3", "#", "&", "10"],
+        'a',
+        'e',
+        'd',
     ]);
-    // The bars displayed to visulise the numbers
-    const [bars, setBars] = useState(legalArray[0]);
+    const [weekday, setWeekday] = useState("Sunday");
+    const [dayCount, setDayCount] = useState(0);
 
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
@@ -175,28 +175,18 @@ export default function InputTutorial() {
     const legalShuffle = () => {
         clearTimeouts();
         let triple = [];
-        let tripleArr = [];
         for (let j = 0; j < PAIR; j++) {
-            let array = [];
-            for (let i = 0; i < LENGTH; i++) {
-                // const element = array[i];
-                array.push(random(MINNUMBER, MAXNUMBER - 5));
-            }
-            triple.push(array.join(","));
-            tripleArr.push(array);
-            // setStr(triple.join(","));
+            triple.push(random(MINNUMBER, MAXNUMBER));
         }
-        setLegalArray(tripleArr);
+        setLegalArray(triple);
         setLegalString(triple);
-        setBars([0, 0, 0, 0]);
+        setWeekday(week[0]);
+        setDayCount(1);
         setIsCompleteLegal([
             false,
             false,
             false,
         ]);
-        setIsLegalPlaying(true);
-
-        setIsCompleteLegal([false, false, false]);
         setIsLegalPlaying(true);
     };
 
@@ -204,41 +194,30 @@ export default function InputTutorial() {
     const illegalShuffle = () => {
         clearTimeouts();
         var characters =
-            "!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            "!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz089";
         var charactersLength = characters.length;
         let triple = [];
-        let tripleArr = [];
 
         for (let j = 0; j < PAIR; j++) {
-            let array = [];
-            for (let i = 0; i < LENGTH; i++) {
-                array.push(
-                    characters.charAt(
-                        Math.floor(Math.random() * charactersLength)
-                    )
-                );
-            }
-            if (array.join(",").match(/^[0-9]+((,)[0-9]+)*$/)) {
-                j--;
-                continue;
-            }
-            triple.push(array.join(","));
-            tripleArr.push(array);
+            triple.push(characters.charAt(
+                Math.floor(Math.random() * charactersLength)
+            ));
         }
 
         setIllegalString(triple);
-        setIllegalArray(tripleArr);
-        setBars([0, 0, 0, 0]);
+        setIllegalArray(triple);
+        setDayCount(0);
 
         setIsCompleteIllegal([false, false, false]);
-        setIsLegalPlaying(true);
+        setIsLegalPlaying(false);
     };
 
     // handler of play button of legal input
     const legalClick = () => {
         clearTimeouts();
         const legalTimeoutIds = [];
-        setBars([0, 0, 0, 0]);
+        setWeekday(week[0]);
+        setDayCount(1);
         setIsLegalPlaying(true);
         setIsCompleteLegal([false, false, false]);
 
@@ -252,7 +231,8 @@ export default function InputTutorial() {
                     } else if (i === 2) {
                         setIsCompleteLegal([true, true, true]);
                     }
-                    setBars(item.sort((a, b) => a - b));
+                    setWeekday(week[item-1]);
+                    setDayCount(item);
                     console.log(item);
                 },
                 (i + 1) * 1000, //time interval
@@ -271,7 +251,7 @@ export default function InputTutorial() {
     const illegalClick = () => {
         clearTimeouts();
         const illegalTimeoutIds = [];
-        setBars([0, 0, 0, 0]);
+        setDayCount(0);
         setIsLegalPlaying(false);
         setIsCompleteIllegal([false, false, false]);
 
@@ -285,7 +265,8 @@ export default function InputTutorial() {
                     } else if (i === 2) {
                         setIsCompleteIllegal([true, true, true]);
                     }
-                    setBars(item);
+                    setWeekday(week[item-1]);
+                    setDayCount(item);
                 },
                 (i + 1) * 1000, //time interval
                 item
@@ -318,22 +299,11 @@ export default function InputTutorial() {
                 <div className={classes.switchAnimation}>
                     <div className={classes.bars}>
                         {isLegalPlaying ? (
-                            bars.map((value, key) => (
-                                <motion.li
-                                    key={key} // each bar's identification
-                                    layout
-                                    transition={spring}
-                                    style={{
-                                        backgroundColor: "#00BFFF",
-                                        height: value * 10 + "px",
-                                    }}
-                                    className={classes.bar}
-                                >
-                                    <div className={classes.barNumber}>
-                                        {value}
-                                    </div>
-                                </motion.li>
-                            ))
+                        <span
+                        style={{ fontWeight: "600",  fontSize:"60px", color:CorrectnessColor}}
+                        >
+                            {weekday}
+                        </span>
                         ) : (
                             <div
                                 style={{
@@ -354,11 +324,11 @@ export default function InputTutorial() {
                         <span
                             style={{ fontWeight: "600", marginBottom: "20px",marginLeft:"450px",  fontSize:"20px", width:"800px"}}
                         >
-                            Could not sort illegal input <span style={{color:CorrectnessColor}}>{bars.toString()}</span>
+                            Could not process illegal input: <span style={{color:CorrectnessColor}}>{dayCount}</span>
                         </span>
                     )}
-                    <ExplainationBox width="30" height={3} style={{fontSize:"100px"}}>
-                        {isLegalPlaying ? bars.toString() : "Error"}
+                    <ExplainationBox width="40" height={3} style={{fontSize:"100px"}}>
+                        {isLegalPlaying ? "No." + dayCount + " day of a week is " + weekday : "Error! Only integers 1-7 are legal"}
                     </ExplainationBox>
                 </div>
                 
