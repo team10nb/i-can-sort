@@ -1,3 +1,7 @@
+/*
+    Author: Yuting Jiang
+*/
+
 import React from 'react';
 import { useState } from 'react';
 import AlgorithmButton from '../../../../components/CorrectnessExample/AlgorithmButton';
@@ -234,7 +238,7 @@ export default function Partial() {
             <Card style={{width:785, backgroundColor:'#EFEFEF'}}>
             <CardContent>
                 <h1>Input: n = 7</h1>
-                <div style = {{height:145}}>
+                <div style = {{height:140}}>
                     <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial(7) </h1><br />
                     <Button variant='outlined' disabled style={{height:60, backgroundColor:'#EFEFEF', color:color}}>
                     <ExampleTable numbers={table} style = {{paddingLeft:20}}/>

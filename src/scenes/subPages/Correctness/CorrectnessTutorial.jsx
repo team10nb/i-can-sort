@@ -20,6 +20,8 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import Input from '../../../components/InputTutorial/InputTutorial';
 import Partial from './Tutorial/Partial';
+import Partial_Def from './Tutorial/Parital_Def';
+import Total_Def from './Tutorial/Total_Def';
 
 
 const drawerWidth = 240;
@@ -120,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
   function getSteps() {
     return ['Input', 
             'Termination',
-            'Comparison',
+            'Introduction',
             'Partial Correctness',
             'Total Correctness',
             'Example'
@@ -133,9 +135,13 @@ const useStyles = makeStyles((theme) => ({
             return(
                 <Input />
             );
-        case 1:
+        case 3:
             return(
-                <InputDef />
+                <Partial_Def />
+            );
+        case 4:
+            return(
+                <Total_Def />
             );
         case 5:
             return(
@@ -241,7 +247,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>                           
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
-                            {['Comparison' , 'Partial Correctness', 'Total Correctness', 'Example' ].map((text, index) => (
+                            {['Introduction' , 'Partial Correctness', 'Total Correctness', 'Example' ].map((text, index) => (
                             index + 2 === activeStep
                             ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>
