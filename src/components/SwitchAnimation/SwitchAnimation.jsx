@@ -267,7 +267,7 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </div>
-            <ExplainationBox width='60' height={explainationBoxHeight}>
+            <ExplainationBox width={60} height={explainationBoxHeight}>
                 {description[currentStep]}
             </ExplainationBox>
 
@@ -277,6 +277,7 @@ export const SwitchAnimation = (props) => {
                 max={trace.length - 1}
                 handleChange={handleSliderChange}
                 value={currentStep}
+                display="none"
             />
 
             <AnimationControl {...animationControlProps} />
