@@ -8,6 +8,8 @@ import EfficiencyMainPage from './scenes/mainPages/Efficiency';
 import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 import CorrectnessRouters from './scenes/subPages/Correctness/CorrectnessRouters';
 
+import Termination from './scenes/subPages/Correctness/Tutorial/Termination';
+
 //Return routes
 function Routers() {
     return(
@@ -59,5 +61,7 @@ function Routers() {
 
 
 export default function App() {
-    return(<Routers/>);
+    // return(<Routers/>);
+    return(<Termination/>);
+
 }
