@@ -12,6 +12,36 @@ import Button from '@material-ui/core/Button';
 import { green, red } from '@material-ui/core/colors';
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+}));
+
+function BasicTextFields() {
+  const classes = useStyles();
+
+  return (
+    <form className={classes.root} noValidate autoComplete="off">
+      <TextField 
+        size="small" 
+        id="input" l
+        abel="Enter a positive integer " 
+        InputProps={{
+            startAdornment: <InputAdornment position="start">n = </InputAdornment>,
+        }}
+        variant="outlined"
+    />
+    </form>
+  );
+}
 
 const styles = {
     table:{
@@ -206,29 +236,35 @@ export default function Partial() {
     const [output,setOutput] = useState("");
     const [timer,setTimer] = useState();
 
+    // const handleClick = (props) => () => {
+    //     clearInterval(timer);
+    //     setExp("");
+    //     setOutput("");
+    //     setTable([]);
+
+    //     const {list, exp, output} = props;
+    //     var current = [];
+    //     var times=0;
+
+        // var newTimer =setInterval(()=>{
+        // if(times >= list.length-1){
+        //     setExp(exp);
+        //     setOutput(output);
+        //     clearInterval(newTimer);
+        // }
+        // current.push(list[times]);
+        // const newTable = current.slice();
+        // setTable(newTable);
+        // times++;
+        // },300);
+
+        // setTimer(newTimer);
+    // }
+
     const handleClick = (props) => () => {
-        clearInterval(timer);
-        setExp("");
-        setOutput("");
-        setTable([]);
-
-        const {list, exp, output} = props;
-        var current = [];
-        var times=0;
-
-        var newTimer =setInterval(()=>{
-        if(times >= list.length-1){
-            setExp(exp);
-            setOutput(output);
-            clearInterval(newTimer);
-        }
-        current.push(list[times]);
-        const newTable = current.slice();
-        setTable(newTable);
-        times++;
-        },300);
-
-        setTimer(newTimer);
+        const {exp, output} = props;
+        setExp(exp);
+        setOutput(output);
     }
 
 
@@ -237,16 +273,19 @@ export default function Partial() {
             {/* <h1 style = {{paddingBottom:30}}>Let's take 7! as an example.</h1> */}
             <Card style={{width:785, backgroundColor:'#EFEFEF'}}>
             <CardContent>
-                <h1>Input: n = 7</h1>
-                <div style = {{height:140}}>
-                    <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial(7) </h1><br />
+                <h1>Algorithm: factorial(n) </h1>
+                <h1>Input: <BasicTextFields></BasicTextFields></h1>
+                {/* <div style = {{height:140}}>
+                    <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial of 7 </h1><br />
                     <Button variant='outlined' disabled style={{height:60, backgroundColor:'#EFEFEF', color:color}}>
                     <ExampleTable numbers={table} style = {{paddingLeft:20}}/>
                     </Button>
                     <h1 style = {{color: color}}> {exp}</h1>
-                </div>
-                <h1>Expected Output: 5040</h1>
+                </div> */}
+                <h1>Expected Output: n!</h1>
+                <h3>----------click below example algorithms to see the output------------</h3>
                 <h1>Actual Output: {output}</h1>
+                <h1 style = {{color: color}}> {exp}</h1>
             </CardContent>
             </Card>
 
