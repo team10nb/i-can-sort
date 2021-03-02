@@ -357,7 +357,7 @@ export default function InputTutorial() {
                             Could not sort illegal input <span style={{color:CorrectnessColor}}>{bars.toString()}</span>
                         </span>
                     )}
-                    <ExplainationBox width="30" height={3} style={{fontSize:"100px"}}>
+                    <ExplainationBox width={30} height={3} style={{fontSize:"100px"}}>
                         {isLegalPlaying ? bars.toString() : "Error"}
                     </ExplainationBox>
                 </div>

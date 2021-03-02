@@ -37,7 +37,7 @@ const introMessage = <div>
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={490}/>,
+    animation: <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>,
 }
 
 const operate = <SwitchSort sort={"Heap"}/>;

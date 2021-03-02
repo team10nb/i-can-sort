@@ -152,7 +152,7 @@ export default function SwitchSort(props) {
                 shuffle={shuffle}
             />
             </div>
-            <SwitchAnimation {...trace} width={900} />
+            <SwitchAnimation {...trace} width={900} explainationBoxHeight={3}/>
         </div>
     );
 }
