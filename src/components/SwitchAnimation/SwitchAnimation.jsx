@@ -21,7 +21,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    const { trace, description, width, explainationBoxHeight, setBlock } = props;
+    const { trace, description, width, explainationBoxHeight } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -92,11 +92,6 @@ export const SwitchAnimation = (props) => {
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
             // eslint-disable-next-line react-hooks/exhaustive-deps
-        
-        
-        setBlock(currentStep);
-
-        
     }, [currentStep]);
 
     // Use the latest speed to play the animation
