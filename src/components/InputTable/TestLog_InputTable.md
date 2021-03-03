@@ -1,3 +1,11 @@
+#### ComponentName: InputTable
+
+|Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
+|-------|----|---------|-------------------|----------------|----------------|
+|1 | 3.3 | Pass | All | Test meets the plan |version 1|
+
+##### Code - version 1
+```javascript
 /*
     Author: Yijie Lu, Shiliang Chen
 */
@@ -222,3 +230,6 @@ export default function InputTable(props) {
         </div>
     );
 }
+
+```
+
