@@ -1,5 +1,5 @@
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
+
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import "@fontsource/roboto";
 import * as React from "react";
@@ -9,6 +9,12 @@ import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+
+
+
 
 // a framer motion transition attributes
 const spring = {
@@ -18,26 +24,11 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-const CodeBox = withStyles({
-    root: {
-        display: "flex",
-        fontFamily: "inherit",
-        fontSize: "1em",
-        // fontWeight: "700",
-        letterSpacing: "1px",
-        // borderRadius: "12px",
-        // alignItems:"center",
-        // justifyContent:"center",
-        marginTop: 80,
-        background: "#F0F0F0",
-        width: "44%",
-        // height: 520
-    }
-})(Card);
+
 
 const Code = (props)=> {
     const {blockNum} = props;
-
+  
     const useStyles = makeStyles((theme) => ({
         root: {
             // display: "grid",
@@ -98,7 +89,7 @@ var i, j;`}
     </div>
     
     return(
-        <CodeBox>{terminableCode}</CodeBox>
+        <div>{terminableCode}</div>
     )
 }
 
@@ -126,13 +117,15 @@ export default function DynamicCode(props){
     // the State of previous step bnutton
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
-    const useStyles = makeStyles({
+    const useStyles = makeStyles((theme) =>({
         root: {
-            display: "grid",
-            justifyContent: "center",
-            alignContent: "flex-end",
-            height: 430,
-            marginTop: "20px",
+    
+            '& > * + *': {     
+                marginTop: theme.spacing(3),
+            },
+            // marginTop: 50,
+            width: 380,
+            
         },
         bars: {
             listStyle: "none",
@@ -165,7 +158,19 @@ export default function DynamicCode(props){
             textAlign: "center",
             fontWeight: "600",
         },
-    });
+        cardOne:{
+            width: 380, 
+            height: 240
+        },
+        cardTwo:{
+            width: 380, 
+            height: 240
+        },
+        slider:{
+            marginLeft: 33,
+            marginBottom: 5,
+        }
+    }));
 
     const classes = useStyles();
 
@@ -321,83 +326,72 @@ export default function DynamicCode(props){
         trace,
     };
 
-    return (
-        <div
-            style={{
-                display: "grid",
-                justifyContent: "center",
-                alignContent: "flex-end",
-                height: 500,
-            }}
-        >
-            <div style={{
-                height: 40,
-                width:900,
-                display: "flex"
-            }}>
-                <div style={{
-                height: 40,
-                width: 90,
-                fontSize:"26px",
-                fontWeight:"500",
-                // transform: "rotate(90deg)",
-                // marginTop:"35px",
-                // marginLeft:"-55px",
-                }}>
-                {"terminate"}
-                </div>            
-            </div>
-            <div className={classes.root}>
-            {/* bars */}
-            <div className={classes.bars}>
-                {bars.map((background) => (
-                    <motion.li
-                        key={background.key} // each bar's identification
-                        layout
-                        transition={spring}
-                        style={background}
-                        className={classes.bar}
-                        animate={{
-                            backgroundColor: background.backgroundColor,
-                            y: background.y,
-                        }}
-                    >
-                        <div className={classes.barNumber}>
-                            {background.value}
-                        </div>
-                        <div
-                            style={{
-                                marginTop: background.height-17,
-                                fontSize: "16px",
-                                textAlign: "center",
-                                fontWeight: "600",
+    return (            
+            <div className = {classes.root}>
+                Termination
+                <Card className = {classes.cardOne}> 
+                
+                    <div className={classes.bars}>
+                    {bars.map((background) => (
+                        <motion.li
+                            key={background.key} // each bar's identification
+                            layout
+                            transition={spring}
+                            style={background}
+                            className={classes.bar}
+                            animate={{
+                                backgroundColor: background.backgroundColor,
+                                y: background.y,
                             }}
                         >
-                            {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
-                        </div>
-                    </motion.li>
-                ))}
+                            <div className={classes.barNumber}>
+                                {background.value}
+                            </div>
+                            <div
+                                style={{
+                                    marginTop: background.height-17,
+                                    fontSize: "16px",
+                                    textAlign: "center",
+                                    fontWeight: "600",
+                                }}
+                            >
+                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                            </div>
+                        </motion.li>
+                    ))}
+                </div>
+                
+                <div className = {classes.slider}>
+                <AnimationSlider
+                    width={width}
+                    step={1}
+                    max={trace.length - 1}
+                    handleChange={handleSliderChange}
+                    value={currentStep}
+                    display="none"
+                    
+                   
+                />
+                </div>
+                
+
+                <AnimationControl {...animationControlProps} />
+            </Card>
+            
+           
+
+            <Card className = {classes.cardTwo}>
+                <CardContent><Code blockNum={blockNums[currentStep]}/></CardContent>
+                
+            </Card>
+
             </div>
-            <ExplainationBox width={60} height={explainationBoxHeight}>
-                {description[currentStep]}
-            </ExplainationBox>
 
-            <AnimationSlider
-                width={width}
-                step={1}
-                max={trace.length - 1}
-                handleChange={handleSliderChange}
-                value={currentStep}
-                display="none"
-            />
+            
+            
 
-            <AnimationControl {...animationControlProps} />
-            <div>
-                <Code blockNum={blockNums[currentStep]}/>
-            </div>
+          
 
-            </div>
-
-        </div>
+        
     );
 };
