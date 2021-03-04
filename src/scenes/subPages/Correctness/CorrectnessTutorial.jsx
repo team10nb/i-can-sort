@@ -22,6 +22,7 @@ import Input from '../../../components/InputTutorial/InputTutorial';
 import Partial from './Tutorial/Partial';
 import Partial_Def from './Tutorial/Parital_Def';
 import Total_Def from './Tutorial/Total_Def';
+import Termination from './Tutorial/Termination';
 
 
 const drawerWidth = 240;
@@ -131,9 +132,13 @@ const useStyles = makeStyles((theme) => ({
 
   function getStepContent(activeStep) {
       switch (activeStep) {
-          case 0:
+        case 0:
             return(
                 <Input />
+            );
+        case 1:
+            return(
+                <Termination />
             );
         case 3:
             return(

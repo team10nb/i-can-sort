@@ -9,6 +9,8 @@ import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 import CorrectnessRouters from './scenes/subPages/Correctness/CorrectnessRouters';
 
 import Termination from './scenes/subPages/Correctness/Tutorial/Termination';
+import Partial from './scenes/subPages/Correctness/Tutorial/Partial';
+
 
 //Return routes
 function Routers() {
@@ -61,7 +63,8 @@ function Routers() {
 
 
 export default function App() {
-    // return(<Routers/>);
-    return(<Termination/>);
+    return(<Routers/>);
+    // return(<Termination/>);
+    // return(<Partial/>);
 
 }
