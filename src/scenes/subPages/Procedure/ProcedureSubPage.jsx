@@ -14,7 +14,6 @@ import { CardContent } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 
-
 //Set css
 const useStyles = makeStyles((theme) => ({
   tabs:{
@@ -99,7 +98,7 @@ function a11yProps(index) {
 //Return a menu bar consists of a home button and three tabs
 //Each tab is corresponding to a tabpanel
 export default function ProcedureSubPage(props) {
-  const{color, algorithm, progress, history, intro, operate} = props;
+  const{color, algorithm, progress, history, intro, operate, file} = props;
 
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -200,6 +199,9 @@ export default function ProcedureSubPage(props) {
         <div className = {classes.div}>
             <Card className={classes.cardOne}>
               <CardContent>
+                <Button style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
+                  Export
+                </Button>
               </CardContent>
             </Card>
             <Card className={classes.cardTwo}>
