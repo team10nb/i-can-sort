@@ -16,7 +16,7 @@ test('should contain buttons', () => {
     // getAllByText("Input_Def");
     getAllByText("Termination");
     // getAllByText("Termination_Def");
-    getAllByText("Conclusion");
+    // getAllByText("Conclusion");
     getAllByText("Partial Correctness");
     getAllByText("Total Correctness");
     // getAllByText("Partial_Example");
