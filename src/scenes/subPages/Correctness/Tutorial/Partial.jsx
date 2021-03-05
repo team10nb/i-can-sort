@@ -12,6 +12,40 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
+import {withStyles} from "@material-ui/core/styles";
+
+const button = {
+    border:'none', 
+    outline:'none', 
+    width:40, 
+    display: 'inline-block', 
+    color: color,
+    
+};
+
+const CssTextField = withStyles({
+    root: {
+        "& label.Mui-focused": {
+            color: "grey",
+        },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: color,
+        },
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderColor: "grey",
+                borderRadius: 12,
+            },
+            "&:hover fieldset": {
+                borderColor: "grey",
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: color,
+            },
+        },
+        width: "500px",
+    },
+})(TextField);
 
 const title_interminate = 
 <h3>Example1<br />
@@ -255,7 +289,7 @@ export default function Partial() {
             <CardContent>
                 <h1 style={{height:35}}>Algorithm: factorial(n) </h1>
                 <h1 style={{ height:60}}>Input: &nbsp;
-                <TextField 
+                <CssTextField 
                     size="small" 
                     label="Enter a positive integer from 1 to 100" 
                     InputProps={{
@@ -267,7 +301,7 @@ export default function Partial() {
                     helperText={wrongMsg}
                     style = {{width:300}}
                 />
-                <button onClick={confirm} style={{border:'none', outline:'none', width:40, display: 'inline-block'}}>Confirm</button>
+                <button onClick={confirm} className={button} style={{border:'none', outline:'none', color: color}}>Confirm</button>
                 </h1>
                 {/* <div style = {{height:140}}>
                     <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial of 7 </h1><br />
