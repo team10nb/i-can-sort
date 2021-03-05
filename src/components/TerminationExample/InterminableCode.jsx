@@ -1,19 +1,16 @@
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-
-import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import AnimationSlider from "../AnimationSlider/AnimationSlider";
-import AnimationControl from "../AnimationControl/AnimationControl";
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-
-
+import Typography from '@material-ui/core/Typography';
+import IconButton from "@material-ui/core/IconButton";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 
 
 // a framer motion transition attributes
@@ -24,80 +21,71 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-
-
 const Code = (props)=> {
     const {blockNum} = props;
   
     const useStyles = makeStyles((theme) => ({
-        root: {
-            // display: "grid",
-            // "& > *": {
-            //     width: theme.spacing(width*1),
-            //     height: theme.spacing(height*1),
-            //     border: "3px solid white",
-            // },
-            justifyContent: "center",
-            alignContent: "center",
-            verticalAlign: "center",
-            display: "flex",
-            fontFamily: "inherit",
-            fontSize: "1em",
-            fontWeight: "700",
-            letterSpacing: "1px",
-            borderRadius: "12px",
-            backgroundColor: "white",
-            marginTop: "4px",
-            marginBottom: "3px",
-            marginLeft: "3px",
-            // alignItems:"center",
-            // justifyContent:"center",
-        },
-        back:{
+        // root: {
+        //     // display: "grid",
+        //     // "& > *": {
+        //     //     width: theme.spacing(width*1),
+        //     //     height: theme.spacing(height*1),
+        //     //     border: "3px solid white",
+        //     // },
+        //     justifyContent: "center",
+        //     alignContent: "center",
+        //     verticalAlign: "center",
+        //     display: "flex",
+        //     fontFamily: "inherit",
+        //     fontSize: "1em",
+        //     fontWeight: "700",
+        //     letterSpacing: "1px",
+        //     borderRadius: "12px",
+        //     backgroundColor: "white",
+        //     marginTop: "4px",
+        //     marginBottom: "3px",
+        //     marginLeft: "3px",
+        //     // alignItems:"center",
+        //     // justifyContent:"center",
+        // },
+        background:{
             backgroundColor: "yellow",
+            marginTop: -6,
         },
+        noBackground:{
+            marginTop: -6,
+        }       
     }));
     const classes = useStyles();
 
-    const terminableCode = 
+    const interminableCode = 
     <div>
-        <pre className={blockNum===1 ? classes.back : classes.noback}>
-{`function bubble_sort (array, length) {
-var i, j;`}
+        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
+{`function swap_forever (array) {`}
         </pre>
-        <pre className={blockNum===2 ? classes.back : classes.noback}>
-{`for(i from 0 to length-1){`}
+        <pre className={classes.noBackground}>
+{`  var i = 1;`}
         </pre>
-        <pre className={blockNum===3 ? classes.back : classes.noback}>
-{`    for(j from 0 to length-1-i){`}
+        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
+{`  while(i > 0){`}
         </pre>
-        <pre className={blockNum===4 ? classes.back : classes.noback}>
-{`         if (array[j] > array[j+1])`}
+        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
+{`    swap(array[0], array[1])`}
         </pre>
-        <pre className={blockNum===5 ? classes.back : classes.noback}>
-{`            swap(array[j], array[j+1])`}
+        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
+{`  }`}
         </pre>
-        <pre className={blockNum===6 ? classes.back : classes.noback}>
-{`        }`}
-        </pre>
-        <pre className={blockNum===7 ? classes.back : classes.noback}>
-{`    }`}
-        </pre>
-        <pre className={blockNum===8 ? classes.back : classes.noback}>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`}`}
         </pre>
     </div>
     
     return(
-        <div>{terminableCode}</div>
+        <div>{interminableCode}</div>
     )
 }
 
-
-
-
-
-export default function DynamicCode(props){
+export default function Interminable(props){
     const { trace, description, width, explainationBoxHeight, blockNums } = props;
 
     // The bars displayed to visulise the numbers
@@ -117,21 +105,21 @@ export default function DynamicCode(props){
     // the State of previous step bnutton
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
+    const [isFinish, setIsFinish] = useState(false);
+
     const useStyles = makeStyles((theme) =>({
         root: {
-    
             '& > * + *': {     
                 marginTop: theme.spacing(3),
             },
             // marginTop: 50,
-            width: 380,
-            
+            width: 380,        
         },
         bars: {
             listStyle: "none",
             padding: 0,
             margin: 0,
-            marginBottom: 15,
+            // marginBottom: 10,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -141,10 +129,10 @@ export default function DynamicCode(props){
             listStyle: "none",
             padding: 0,
             margin: 0,
-
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
-            marginBottom: "10px",
+            marginTop: 70,
+            marginBottom: "5px",
             marginRight: "15px",
             marginLeft: "15px",
             width: "30px",
@@ -164,11 +152,20 @@ export default function DynamicCode(props){
         },
         cardTwo:{
             width: 380, 
-            height: 240
+            height: 240,
+            background: "#F0F0F0",        
         },
-        slider:{
-            marginLeft: 33,
-            marginBottom: 5,
+        title:{
+            display:"flex",
+            fontFamily: "inherit",
+            fontWeight: "700",
+            fontSize:"16px",
+            justifyContent: "center",
+        },
+        control:{
+            // display:"flex",
+
+            // justifyContent: "center",
         }
     }));
 
@@ -186,19 +183,35 @@ export default function DynamicCode(props){
     }, [currentStep]);
 
     // Use the latest speed to play the animation
-    useEffect(() => {
-        // if it is playing, replay
-        if (isPlaying) {
-            pause();
-            resume();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [playSpeed]);
+    // useEffect(() => {
+    //     // if it is playing, replay
+    //     if (isPlaying) {
+    //         pause();
+    //         resume();
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [playSpeed]);
 
     // useEffect(() => {
     //     handleResetClick();
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, [trace]);
+
+    useEffect(() => {
+        if(currentStep==3){
+            setIsFinish(true);
+        }else{
+            setIsFinish(false);
+        }
+    }, [currentStep]);
+
+    useEffect(() => {
+        if(isFinish==true){
+            reset();
+            // resume();
+            // run(trace);
+        }
+    }, [isFinish]);
 
     // It is used to open the speed menu
     const handleClick = (event) => {
@@ -214,16 +227,6 @@ export default function DynamicCode(props){
         setAnchorEl(null);
     };
 
-    const handleSliderChange = (event, newValue) => {
-        if (isPlaying) {
-            pause();
-        }
-        console.log(newValue);
-
-        const item = trace[newValue];
-        setCurrentStep(newValue);
-        setBars(item);
-    };
 
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
@@ -284,51 +287,16 @@ export default function DynamicCode(props){
         console.log(his);
     };
 
-    // Go to next step and pause
-    const stepForward = () => {
-        if (currentStep < trace.length - 1) {
-            pause();
-            const item = trace[currentStep + 1];
-            setCurrentStep((prevStep) => prevStep + 1);
-            setBars(item);
-        }
-    };
-
-    // Go to the previous step and pause
-    const stepBackward = () => {
-        if (currentStep > 0) {
-            pause();
-            const item = trace[currentStep - 1];
-            setCurrentStep((prevStep) => prevStep - 1);
-            setBars(item);
-        }
-    };
-
-    const handleResetClick = () => {
-        pause();
+    const reset = () => {
         setCurrentStep(0);
         setBars(trace[0]);
     };
 
-    const animationControlProps = {
-        handleResetClick,
-        stepForward,
-        stepBackward,
-        pause,
-        resume,
-        isPlaying,
-        playDisabled,
-        backwardDisabled,
-        handleClick,
-        handleClose,
-        anchorEl,
-        playSpeed,
-        trace,
-    };
 
     return (            
             <div className = {classes.root}>
-                Termination
+                <div className = {classes.title}>Interminable</div>
+                
                 <Card className = {classes.cardOne}> 
                 
                     <div className={classes.bars}>
@@ -360,38 +328,44 @@ export default function DynamicCode(props){
                         </motion.li>
                     ))}
                 </div>
+                <ExplainationBox width={60} height={explainationBoxHeight}>
+                    {description[currentStep]}
+                </ExplainationBox>
                 
-                <div className = {classes.slider}>
-                <AnimationSlider
-                    width={width}
-                    step={1}
-                    max={trace.length - 1}
-                    handleChange={handleSliderChange}
-                    value={currentStep}
-                    display="none"
-                    
-                   
-                />
+                <div style={{
+                    marginLeft: 160,
+                    marginTop: -20,
+                }}>
+                    <IconButton
+                        // function using depends on isPlaying
+                        onClick={() => {
+                            isPlaying ? pause() : resume();
+                        }}
+                        // disabled={playDisabled}
+                        className = {classes.control}
+                    >
+                        {/* button appearence depends on isPlaying */}
+                        {isPlaying ? (
+                            <PauseCircleFilledIcon fontSize='large' />
+                        ) : (
+                            <PlayCircleFilledIcon fontSize='large' />
+                        )}
+                    </IconButton>
                 </div>
-                
 
-                <AnimationControl {...animationControlProps} />
+
+                
             </Card>
-            
-           
 
             <Card className = {classes.cardTwo}>
-                <CardContent><Code blockNum={blockNums[currentStep]}/></CardContent>
+                <CardContent>
+                    <Typography>
+                        <Code blockNum={blockNums[currentStep]}/>
+                    </Typography>
+                </CardContent>
                 
             </Card>
 
-            </div>
-
-            
-            
-
-          
-
-        
+            </div>        
     );
 };
