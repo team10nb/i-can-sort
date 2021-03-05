@@ -49,7 +49,7 @@ const Code = (props)=> {
         //     // justifyContent:"center",
         // },
         background:{
-            backgroundColor: "yellow",
+            backgroundColor: "#FEE5D4",
             marginTop: -6,
         },
         noBackground:{
