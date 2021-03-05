@@ -17,6 +17,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
 import {color as CorrectnessColor} from '../../scenes/mainPages/Correctness';
+import TutorialLink from './TutorialLink';
 
 
 const spring = {
@@ -102,17 +103,24 @@ const useStyles = makeStyles((theme) => ({
     },
     links:{
         display: "flex",
-        // '& > *': {
-        //     marginTop: theme.spacing(6),
-        //   },
+        '& > *': {
+            marginTop: theme.spacing(1.5),
+          },
         '& > * + *': {     
             marginLeft: theme.spacing(2),
         },
-    }
+    },
+    text:{
+        display: "flex",
+        '& > * + *': {     
+            marginLeft: theme.spacing(0),
+        },
+    },
 }));
 
-export default function InputTutorial() {
+export default function InputTutorial(props) {
     const classes = useStyles();
+
     const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     // The maximum value of pairs
     const PAIR = 3;
@@ -284,14 +292,14 @@ export default function InputTutorial() {
         <div className={classes.div}>
             <Card className={classes.card}>
                 <div className = {classes.explanation}>
-                        <HelpOutlineOutlinedIcon />
+                        <TutorialLink />
                         <div className = {classes.links}>
                         
-                            <Typography  >
-                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>legal input</Link>&nbsp;?
+                            <Typography  className = {classes.text}>
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Typography style={{color: CorrectnessColor}} >legal&nbsp;&nbsp;input</Typography>&nbsp;?
                             </Typography>
-                            <Typography  >
-                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>illegal input</Link>&nbsp;?
+                            <Typography  className = {classes.text}>
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Typography style={{color: CorrectnessColor}} >illegal&nbsp;&nbsp;input</Typography>&nbsp;?
                             </Typography>
                         </div>  
                 </div>
