@@ -73,17 +73,17 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignContent: "flex-end",
         marginTop: "-50px",
-        marginLeft: "53px",
+        marginLeft: "66px",
         height: "300px",
         width: "350px",
     },
     explanation: {
         display: "flex",
         "& > *": {
-            marginRight: theme.spacing(2),
+            marginRight: theme.spacing(0.5),
         },
         "& > * + *": {
-            marginLeft: theme.spacing(1.5),
+            marginLeft: theme.spacing(0),
         },
         height: "45px",
     },
@@ -350,19 +350,19 @@ export default function InputTutorial(props) {
                         <TutorialLink />
                         <div className={classes.links}>
                             <Typography className={classes.text}>
-                                What&nbsp;&nbsp;is&nbsp;&nbsp;
+                                for&nbsp;&nbsp;any&nbsp;&nbsp; 
                                 <Typography style={{ color: CorrectnessColor }}>
                                     legal&nbsp;&nbsp;input
                                 </Typography>
-                                &nbsp;?
+                                &nbsp;,&nbsp;expected&nbsp;&nbsp;output&nbsp;&nbsp;can&nbsp;&nbsp;be&nbsp;&nbsp;generated
                             </Typography>
-                            <Typography className={classes.text}>
+                            {/* <Typography className={classes.text}>
                                 What&nbsp;&nbsp;is&nbsp;&nbsp;
                                 <Typography style={{ color: CorrectnessColor }}>
                                     illegal&nbsp;&nbsp;input
                                 </Typography>
                                 &nbsp;?
-                            </Typography>
+                            </Typography> */}
                         </div>
                     </div>                 
                 </div>
