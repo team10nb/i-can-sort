@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         display: "grid",
         justifyContent: "center",
         alignContent: "flex-end",
-        marginBottom: "110px",
+        marginBottom: "50px",
         marginLeft: "45px",
         height: "300px",
         width: "350px",
@@ -94,27 +94,30 @@ const useStyles = makeStyles((theme) => ({
     explanation:{
         display: "flex",
         '& > *': {
-            marginTop: theme.spacing(4),
+            marginTop: theme.spacing(1.3),
           },
         '& > * + *': {     
             marginLeft: theme.spacing(2),
         },
+        height:"48px",
        
     },
     links:{
         display: "flex",
         '& > *': {
-            marginTop: theme.spacing(1.5),
+            marginTop: theme.spacing(1.4),
           },
         '& > * + *': {     
             marginLeft: theme.spacing(2),
         },
+        height:"50px"
     },
     text:{
         display: "flex",
         '& > * + *': {     
             marginLeft: theme.spacing(0),
         },
+        height:"50px"
     },
 }));
 
@@ -303,8 +306,12 @@ export default function InputTutorial(props) {
                             </Typography>
                         </div>  
                 </div>
-                <Divider />
+                <Divider style={{marginTop:"-25px"}}/>
                 <div className={classes.switchAnimation}>
+                <div className={classes.bars} style={{ fontWeight: "300",  fontSize:"20px", marginTop:"-200px"}}>What day is&nbsp;(
+                <span
+                        style={{ fontWeight: "600",  fontSize:"20px", color:CorrectnessColor}}>
+                            {dayCount + 1}</span>) of a week?</div>
                     <div className={classes.bars}>
                         {isLegalPlaying ? (
                         <span

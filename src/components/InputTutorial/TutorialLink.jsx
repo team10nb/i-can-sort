@@ -167,7 +167,7 @@ import {color} from '../../scenes/mainPages/Correctness';
 
   
     return(
-      <div>
+      <div style={{height:"48px"}}>
         <Tooltip title="tutorial" placement="bottom" arrow>
           <IconButton aria-label="help"  onClick={handleClickOpen}>
             <HelpOutlineOutlinedIcon className = {classes.icon}/>   
