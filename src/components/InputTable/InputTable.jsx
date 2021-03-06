@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize:"16px",
        
     },
-    div1:{
+    tables:{
         display:"flex",
-        marginTop: 14,
+        marginTop: 11,
         '& > *': {
         margin: theme.spacing(1),
         },
@@ -131,7 +131,7 @@ export default function InputTable(props) {
                         </IconButton>
                     </Tooltip>                                   
                 </div>
-                <div className = {classes.div1}>
+                <div className = {classes.tables}>
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
@@ -194,7 +194,7 @@ export default function InputTable(props) {
                         </IconButton>
                     </Tooltip>                                
                 </div>
-                <div className = {classes.div1}>
+                <div className = {classes.tables}>
                     <TableContainer component={Paper} >
                         <Table className={classes.table} size="small" aria-label="a dense table">
                             <TableHead>
