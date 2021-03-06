@@ -350,11 +350,11 @@ export default function InputTutorial(props) {
                         <TutorialLink />
                         <div className={classes.links}>
                             <Typography className={classes.text}>
-                                for&nbsp;&nbsp;any&nbsp;&nbsp; 
+                                For&nbsp;any&nbsp; 
                                 <Typography style={{ color: CorrectnessColor }}>
-                                    legal&nbsp;&nbsp;input
+                                    legal&nbsp;input
                                 </Typography>
-                                &nbsp;,&nbsp;expected&nbsp;&nbsp;output&nbsp;&nbsp;can&nbsp;&nbsp;be&nbsp;&nbsp;generated
+                                ,&nbsp;expected&nbsp;output&nbsp;can&nbsp;be&nbsp;generated
                             </Typography>
                             {/* <Typography className={classes.text}>
                                 What&nbsp;&nbsp;is&nbsp;&nbsp;
