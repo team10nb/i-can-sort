@@ -25,7 +25,7 @@ export let COLORS = {
   pivot: "#FF008C", // pivot
   left: "#D309E1", // left
   right: "#9C1AFF", // right
-  mergeColors: ["#97A73D", "#FAE692", "#F2C182", "#EB945E", "#82C5DC","#BAD6E6", "#AEBCD8","#67648D",]
+  mergeColors: ["#97A73D", "#FAE692", "#F2C182", "#EB945E", "#82C5DC","#BAD6E6", "#AEBCD8","#67648D",   "#EB945E", "#82C5DC","#BAD6E6", "#AEBCD8","#67648D"]
 
   // 其他的可能要用的颜色就写在这里
 }
