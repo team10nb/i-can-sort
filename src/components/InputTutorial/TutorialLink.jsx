@@ -14,7 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Dialog from '@material-ui/core/Dialog';
 import Grid from '@material-ui/core/Grid';
-import logo1 from '../../Resource/inputExplanation.jpg';
+import logo1 from '../../Resource/inputExp1.jpg';
+import logo2 from '../../Resource/inputExp2.jpg';
 import {color} from '../../scenes/mainPages/Correctness';
 
   const useStyles = makeStyles((theme) => ({
@@ -58,13 +59,13 @@ import {color} from '../../scenes/mainPages/Correctness';
       case 1:
         return (
           <CardActionArea >
-            {/* <img src={logo2} alt="logo2" width='587' heigh='300'  />
+            <img src={logo2} alt="logo2" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                 Left one is a setting button, click  it to change settings.
                 Right one is a help button, click it to see explanations for each component.          
               </Typography>             
-            </CardContent> */}
+            </CardContent>
           </CardActionArea>
         );
       default:
@@ -167,7 +168,7 @@ import {color} from '../../scenes/mainPages/Correctness';
 
   
     return(
-      <div>
+      <div style={{height:"48px"}}>
         <Tooltip title="tutorial" placement="bottom" arrow>
           <IconButton aria-label="help"  onClick={handleClickOpen}>
             <HelpOutlineOutlinedIcon className = {classes.icon}/>   
