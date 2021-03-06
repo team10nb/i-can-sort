@@ -24,7 +24,8 @@ export let COLORS = {
   minimum: "#7700FF", // 还没定的颜色
   pivot: "#FF008C", // pivot
   left: "#D309E1", // left
-  right: "#9C1AFF" // right
+  right: "#9C1AFF", // right
+  mergeColors: ["#97A73D", "#FAE692", "#F2C182", "#EB945E", "#82C5DC","#BAD6E6", "#AEBCD8","#67648D",]
 
   // 其他的可能要用的颜色就写在这里
 }
@@ -52,7 +53,7 @@ export function patch(arr) {
   let i = 0;
   arr.forEach(element => {
       returnList.push(
-        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i, y: 0, isPivot: false });
+        { value:element, height: element * 10, backgroundColor: COLORS.original, key: i, y: 0, isPivot: false, x:0 });
       i++;
   });
   return returnList;

@@ -249,6 +249,7 @@ export const SwitchAnimation = (props) => {
                         animate={{
                             backgroundColor: background.backgroundColor,
                             y: background.y,
+                            x: background.x,
                         }}
                     >
                         <div className={classes.barNumber}>

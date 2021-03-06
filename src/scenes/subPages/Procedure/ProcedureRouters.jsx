@@ -3,7 +3,7 @@ import ProcedureBubble from './Bubble/Bubble';
 import ProcedureSelection from './Selection/Selection';
 import ProcedureInsertion from './Insertion/Insertion';
 import ProcedureQuick from './Quick/Quick';
-// import ProcedureMerge from './Merge/Merge';
+import ProcedureMerge from './Merge/Merge';
 import ProcedureHeap from './Heap/Heap';
 
 const ProcedureRouters = [
@@ -25,7 +25,7 @@ const ProcedureRouters = [
       },
       {
         path: '/ProcedureSubPage/Merge',
-        // component: ProcedureMerge,
+        component: ProcedureMerge,
       },
       {
         path: '/ProcedureSubPage/Heap',
