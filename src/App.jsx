@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
-import Tutorial from './scenes/Tutorial';
-import Exercise from './scenes/Exercise';
+import TutorialMainPage from './scenes/mainPages/Tutorial';
+import TutorialRouters from './scenes/subPages/Tutorial/TutorialRouters';
 import CorrectnessMainPage from './scenes/mainPages/Correctness';
 import ProcedureMainPage from './scenes/mainPages/Procedure';
-import EfficiencyMainPage from './scenes/mainPages/Efficiency';
 import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 import CorrectnessRouters from './scenes/subPages/Correctness/CorrectnessRouters';
 
@@ -14,12 +13,28 @@ function Routers() {
         <Router >
             <div>
             <Switch>
-            <Route path="/Tutorial" component={Tutorial} />
+            <Route path="/TutorialMainPage" component={TutorialMainPage} />
             {/* <Route path="/ProcedureMainPage" render={props => <ProcedureMainPage algoProcess="0" {...props}/>} /> */}
             <Route path="/ProcedureMainPage" component={ProcedureMainPage} />
-            <Route path="/EfficiencyMainPage" component={EfficiencyMainPage} />
+            
             <Route path="/CorrectnessMainPage" component={CorrectnessMainPage} />
-            <Route path="/Exercise" component={Exercise} />
+            <Route path="/TutorialSubPage"
+                render={() => {
+                    return(
+                        <Switch>
+                            {TutorialRouters.map((route, algorithm) => (
+                                <Route
+                                key={algorithm}
+	                        	path={route.path}
+	                        	component={route.component}
+                                />
+                            ))}
+                        </Switch>
+                    );
+                }}
+            ></Route>
+           
+            
             <Route path="/Correctness"
                 render={() => {
                     return(
@@ -35,6 +50,7 @@ function Routers() {
                     );
                 }}
             ></Route>
+
             <Route path="/ProcedureSubPage"
                 render={() => {
                     return(

@@ -18,9 +18,7 @@ test('should contain CorrectnessChoiceMenu', () => {
     );
     getByText("Tutorial");
     getByText("Procedure");
-    getByText("Efficiency");
     getByText("Correctness");
-    getByText("Exercise");
 })
 
 test('should match Snapshot', () => {

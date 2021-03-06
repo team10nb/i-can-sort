@@ -260,7 +260,7 @@ export function ProcedureChoiceMenu(){
 
   return (
     <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
+      <Link to="/TutorialMainPage" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Tutorial
       </Button>
@@ -270,23 +270,12 @@ export function ProcedureChoiceMenu(){
         Procedure
       </Button>
 
-      <Link to="/EfficiencyMainPage" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Efficiency
-      </Button>
-      </Link>
-
       <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}}>
       <Button variant="contained" className={classes.button}>
         Correctness
       </Button>
       </Link>
 
-      <Link to="/Exercise" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
     </div>
   );
 }

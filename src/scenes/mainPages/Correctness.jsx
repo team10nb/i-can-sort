@@ -195,7 +195,7 @@ export function CorrectnessChoiceMenu(){
 
   return (
     <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
+      <Link to="/TutorialMainPage" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Tutorial
       </Button>
@@ -207,21 +207,10 @@ export function CorrectnessChoiceMenu(){
       </Button>
       </Link>
 
-      <Link to="/EfficiencyMainPage" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Efficiency
-      </Button>
-      </Link>
-
       <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
         Correctness
       </Button>
 
-      <Link to="/Exercise" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
     </div>
   );
 }
