@@ -99,7 +99,7 @@ function a11yProps(index) {
 //Return a menu bar consists of a home button and three tabs
 //Each tab is corresponding to a tabpanel
 export default function ProcedureSubPage(props) {
-  const{color, algorithm, progress, history, intro, operate} = props;
+  const{color, algorithm, progress, history, intro, operate, Implementation} = props;
 
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -198,8 +198,8 @@ export default function ProcedureSubPage(props) {
         </TabPanel>
 
         <TabPanel value={value} index={3} dir={theme.direction}>
-        <div className = {classes.div}>
-            <Card className={classes.cardOne}>
+        {/* <div className = {classes.div}> */}
+            {/* <Card className={classes.cardOne}>
               <CardContent>
               </CardContent>
             </Card>
@@ -207,8 +207,9 @@ export default function ProcedureSubPage(props) {
               <CardContent>
                 {operate}
               </CardContent>
-            </Card>
-          </div>
+            </Card> */}
+            <Implementation/>
+          {/* </div> */}
         </TabPanel>
         
       </SwipeableViews>
