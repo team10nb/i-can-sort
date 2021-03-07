@@ -3,7 +3,7 @@ import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import BubbleIntro from '../../../../components/Introduction/BubbleSort';
-import file from '../../../../Resource/34_Agenda.pdf';
+import file from '../../../../Resource/Bubble Sort.pdf';
 
 const introMessage =
                 <div>

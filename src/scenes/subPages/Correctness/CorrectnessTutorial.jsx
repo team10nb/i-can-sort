@@ -16,7 +16,7 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import InputDef from './Tutorial/Input_Def';
 import Input from './Tutorial/Input';
-import Partial from './Tutorial/Partial';
+import Example from './Tutorial/Example';
 
 
 const drawerWidth = 240;
@@ -135,13 +135,10 @@ const useStyles = makeStyles((theme) => ({
             return(
                 <Input />
             );
-          case 1:
-              return(
-                  <InputDef />
-              );   
+
         case 5:
             return(
-                <Partial />
+                <Example />
             );    
           default:
               break;
