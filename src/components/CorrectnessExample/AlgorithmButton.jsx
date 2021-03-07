@@ -18,7 +18,7 @@ export default function AlgorithmButton(props) {
   const useStyles = makeStyles((theme) => ({
     buttonBase: {
         paddingLeft: 20,
-        width: 260,
+        width: 250,
         height: 270,
         borderRadius: 15,
         justifyContent: 'left',

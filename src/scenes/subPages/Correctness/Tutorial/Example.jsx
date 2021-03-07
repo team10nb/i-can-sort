@@ -253,8 +253,8 @@ export default function Partial() {
     return( 
         <div>
             <BackDrop message={message}/>
-            <div style={{paddingLeft:10}}>
-            <Card style={{height: 280, width:770, backgroundColor:'#EFEFEF', paddingTop:6}}>
+            <div style={{paddingLeft:6}}>
+            <Card style={{height: 280, width:775, backgroundColor:'#EFEFEF', paddingTop:6}}>
             <CardContent>
                 <h1 style={{height:35}}>Algorithm: factorial(n) </h1>
                 <h1 style={{ height:60}}>Input: &nbsp;
