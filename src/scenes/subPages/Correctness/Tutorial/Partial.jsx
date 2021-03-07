@@ -15,6 +15,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
+import '../../../../fonts/fonts.css';
 
 const title_interminate = 
 <h3>Example1<br />
@@ -37,7 +38,7 @@ const title_interminate =
 </h3>
 
 const code_interminate = 
-<pre>  
+<pre style={{fontFamily: "Space Mono", fontWeight:"400"}}>  
 {`
 factorial1 (int n){
   int result = 1;
@@ -78,7 +79,7 @@ const title_terminateAndIncorrect =
     </Button>
 </h3>;
 const code_terminateAndIncorrect = 
-<pre>  
+<pre style={{fontFamily: "Space Mono", fontWeight:"400"}}>  
 {`
 factorial2 (int n){
   int result = 1;
@@ -119,7 +120,7 @@ const title_terminateAndCorrect =
     </Button>
 </h3>;
 const code_terminateAndCorrect = 
-<pre>  
+<pre style={{fontFamily: "Space Mono", fontWeight:"400"}}>  
 {`
 factorial3 (int n){
   int result = 1;
