@@ -19,7 +19,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import Input from '../../../components/InputTutorial/InputTutorial';
-import Partial from './Tutorial/Partial';
+import Example from './Tutorial/Example';
 import Partial_Def from './Tutorial/Parital_Def';
 import Total_Def from './Tutorial/Total_Def';
 
@@ -145,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
             );
         case 5:
             return(
-                <Partial />
+                <Example />
             );
         default:
             break;

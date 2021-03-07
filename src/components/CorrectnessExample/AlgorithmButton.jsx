@@ -17,8 +17,9 @@ export default function AlgorithmButton(props) {
 
   const useStyles = makeStyles((theme) => ({
     buttonBase: {
-        width: 255,
-        height: 260,
+        paddingLeft: 20,
+        width: 260,
+        height: 270,
         borderRadius: 15,
         justifyContent: 'left',
         textAlign: 'left',
@@ -32,10 +33,10 @@ export default function AlgorithmButton(props) {
   return (
       <div style={styles.div}> 
           <ButtonBase className={classes.buttonBase} onClick={onClick}>
-            <Typography variant="body2" align='left'>
+          <Typography variant="body2" align='left'>
                 <span>{title}</span>
                 <span>{code}</span>
-            </Typography> 
+          </Typography>
           </ButtonBase>
       </div>
   );
