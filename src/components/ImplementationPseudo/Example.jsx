@@ -1,5 +1,5 @@
 import ImplementationPseudo from './ImplementationPseudo';
-import { Bubble } from './PseudoCode';
+import { Bubble, Selection, Insertion, Quick, Heap, } from './PseudoCode';
 import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 
 const BubbleExample = () => {
