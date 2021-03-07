@@ -76,10 +76,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     barNumber: {
-        fontSize: "16px",
-        marginTop: "-23px",
-        textAlign: "center",
-        fontWeight: "600",
+        
     },
     switchAnimation: {
         display: "grid",
