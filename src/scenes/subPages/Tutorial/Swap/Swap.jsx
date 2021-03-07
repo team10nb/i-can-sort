@@ -195,12 +195,58 @@ export default function TutorialSwap(props) {
             "Now values of a & b are swapped"
         ];
 
+        const table = [
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{0}</td>
+                </tr>
+            ],
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{0}</td>
+                </tr>
+            ],
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{10}</td>
+                </tr>
+            ],
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{10}</td>
+                </tr>
+            ],
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{10}</td>
+                <td style = {styles.td}>{10}</td>
+                </tr>
+            ],
+            [
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{5}</td>
+                <td style = {styles.td}>{10}</td>
+                <td style = {styles.td}>{5}</td>
+                </tr>
+            ],
+        ]
+
         const props = {
             trace,
             description,
             width: "320px",
             explainationBoxHeight: "3",
             blockNums,
+            table: table,
         };
 
         return <SwapTutorial {...props} />;
@@ -211,4 +257,20 @@ export default function TutorialSwap(props) {
             <SwapAnimation />
         </div>
     );
+}
+
+
+const styles = {
+    tr:{
+        height:60,
+        display: 'inline-block',
+        border:1, 
+    },
+    td:{
+        fontSize: 16,
+        display: 'block',
+        textAlign:'center',
+        width: 35,
+        height:30,
+    },
 }

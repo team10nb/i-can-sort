@@ -7,6 +7,12 @@ import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import img_bubble from '../../Resource/bubble.png';
+import img_selection from '../../Resource/selection.png';
+import img_insertion from '../../Resource/insert.png';
+import img_merge from '../../Resource/merge.png';
+import img_heap from '../../Resource/heap.png';
+import img_quick from '../../Resource/quick.png';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -83,37 +89,37 @@ export default function ProcedureMainPage() {
 
     const images = [
       {
-        static: "bubble.png",
+        static: img_bubble,
         gif: "bubble.gif",
         title: "Bubble sort",
         width: "20%",
       },
       {
-        static: "",
+        static: img_selection,
         gif: "selection.gif",
         title: "Selection sort",
         width: "20%",
       },
       {
-        static: "",
+        static: img_insertion,
         gif: "insertion.gif",
         title: "Insertion sort",
         width: "20%",
       },
       {
-        static: "",
+        static: img_quick,
         gif: "quick.gif",
         title: "Quick sort",
         width: "20%",
       },
       {
-        static: "",
+        static: img_merge,
         gif: "merge.gif",
         title: "Merge sort",
         width: "20%",
       },
       {
-        static: "",
+        static: img_heap,
         gif: "heap.gif",
         title: "Heap sort",
         width: "20%",

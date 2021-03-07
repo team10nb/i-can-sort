@@ -11,6 +11,38 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
 
+//css for table
+const styles = {
+    table:{
+        display: 'block', 
+    },
+    thead:{
+        float: 'left',
+    },
+    tbody:{
+        display: 'inline-block',
+    },
+    th:{
+        fontSize: 16,
+        display: 'block',
+        width: 60,
+        height:30,
+        textAlign:'center',
+        textTransform: 'lowercase',
+    },
+    tr:{
+        height:60,
+        display: 'inline-block',
+        border:1, 
+    },
+    td:{
+        fontSize: 16,
+        display: 'block',
+        textAlign:'center',
+        width: 35,
+        height:30,
+    },
+}
 
 
 // a framer motion transition attributes
@@ -71,7 +103,7 @@ const Code = (props)=> {
 
 
 export default function Terminable(props){
-    const { trace, description, width, explainationBoxHeight, blockNums } = props;
+    const { trace, description, width, explainationBoxHeight, blockNums, table } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -91,15 +123,14 @@ export default function Terminable(props){
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
     const useStyles = makeStyles((theme) =>({
-        root: {
-    
-            '& > * + *': {     
-                marginTop: theme.spacing(3),
-            },
-            // marginTop: 50,
-            width: 380,
+        // root: {  
+        //     '& > * + *': {     
+        //         marginTop: theme.spacing(3),
+        //     },
+        //     // marginTop: 50,
+        //     width: 380,
             
-        },
+        // },
         bars: {
             listStyle: "none",
             padding: 0,
@@ -138,12 +169,20 @@ export default function Terminable(props){
             justifyContent: "center",
             alignContent: "flex-end",
             background: "#F0F0F0",  
+            paddingTop: -30,
         },
         cardTwo:{
-            width: 380, 
+            width: 320, 
             height: 180,
             paddingTop: 5,
-            background: "#F0F0F0",        
+            background: "#F0F0F0",   
+            marginTop: 100, 
+        },
+        cardThree:{
+            width: 320, 
+            height: 120,
+            paddingTop: 5,
+            background: "#F0F0F0",  
         },
         slider:{
             marginLeft: 0,
@@ -155,6 +194,13 @@ export default function Terminable(props){
             fontWeight: "700",
             fontSize:"16px",
             justifyContent: "center",
+        },
+        div:{
+            display: 'flex',    
+            '& > *': 
+            {     
+                marginRight: 20,
+            },
         },
     }));
 
@@ -312,10 +358,63 @@ export default function Terminable(props){
         trace,
     };
 
+    const ExampleTable = ()=> {
+        function tables() {
+            let tables=[];
+            let i = 1;
+            for(var index=0; index<currentStep; index++){
+                i = index + 1;
+                tables.push(table[i]); 
+            }
+            return tables;
+        }
+    
+        return(
+            <div>
+            <table style={styles.table}>
+                <thead style = {styles.thead}>
+                <tr style = {styles.tr}>
+                    <th style = {styles.th}>temp</th>
+                    <th style = {styles.th}>a</th>
+                    <th style = {styles.th}>b</th>
+                </tr>
+                </thead>
+                <tbody style = {styles.tbody}>
+                <tr style = {styles.tr}>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{0}</td>
+                <td style = {styles.td}>{0}</td>
+                </tr>
+                {tables()}
+                </tbody>
+            </table>
+            </div>
+        );
+    }
+
     return (            
-            <div className = {classes.root}>
+            // <div className = {classes.root}>
+            <div>
                 <div className = {classes.title}>Swap a & b</div>
-                
+
+                <div className = {classes.div}>
+                    <div>
+                    <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
+                        <CardContent>
+                            <ExampleTable table={table}/>
+                        </CardContent>
+                       
+                    </Card>
+                    <Card className = {classes.cardTwo}>
+                        <CardContent>
+                            <Typography>
+                                <Code blockNum={blockNums[currentStep]}/>
+                            </Typography>
+                        </CardContent>
+                        
+                    </Card>
+                    </div>
+
                 <Card className = {classes.cardOne}> 
                 
                     <div className={classes.bars}>
@@ -346,45 +445,29 @@ export default function Terminable(props){
                             </div>
                         </motion.li>
                     ))}
-                </div>
-                <ExplainationBox width={40} height={explainationBoxHeight}>
-                    {description[currentStep]}
-                </ExplainationBox>
-                
-                <div className = {classes.slider}>
-                <AnimationSlider
-                    width={width}
-                    step={1}
-                    max={trace.length - 1}
-                    handleChange={handleSliderChange}
-                    value={currentStep}
-                    display="none"
+                    </div>
+                    <ExplainationBox width={40} height={explainationBoxHeight}>
+                        {description[currentStep]}
+                    </ExplainationBox>
                     
-                   
-                />
+                    <div className = {classes.slider}>
+                    <AnimationSlider
+                        width={width}
+                        step={1}
+                        max={trace.length - 1}
+                        handleChange={handleSliderChange}
+                        value={currentStep}
+                        display="none"
+                        
+                    
+                    />
+                    </div>
+                    
+                    <AnimationControl {...animationControlProps} />
+                </Card>
                 </div>
                 
-                <AnimationControl {...animationControlProps} />
-            </Card>
-            
-           
-
-            <Card className = {classes.cardTwo}>
-                <CardContent>
-                    <Typography>
-                        <Code blockNum={blockNums[currentStep]}/>
-                    </Typography>
-                </CardContent>
-                
-            </Card>
-
             </div>
-
-            
-            
-
-          
-
         
     );
 };
