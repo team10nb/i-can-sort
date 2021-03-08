@@ -3,11 +3,7 @@
 */
 
 import React from 'react';
-import {
-    makeStyles,
-} from "@material-ui/core/styles";
-import SwitchAnimation from '../../../../components/SwitchAnimation/SwitchAnimation';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import { makeStyles } from "@material-ui/core/styles";
 import TerminableCode from '../../../../components/TerminationExample/TerminableCode';
 import InterminableCode from '../../../../components/TerminationExample/InterminableCode';
 import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
@@ -47,12 +43,7 @@ const TerminablePart = () => {
 
 
 const InterminablePart = () => {
-    // const arr = [4, 6];
-    const blockNums = [1, 2, 3, 2];
-
-    // const {trace, description} = BubbleSort(arr);
-
-
+    const blockNums = [1, 3, 2];
     const trace = [
         [
             {value: 4, height: 40, backgroundColor: "#00BFFF", key: 0, y: 0},

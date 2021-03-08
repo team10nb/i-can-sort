@@ -1,4 +1,8 @@
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+/*
+    Author: Ruizi Han, Shiliang Chen
+*/
+
+import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -25,29 +29,6 @@ const Code = (props)=> {
     const {blockNum} = props;
   
     const useStyles = makeStyles((theme) => ({
-        // root: {
-        //     // display: "grid",
-        //     // "& > *": {
-        //     //     width: theme.spacing(width*1),
-        //     //     height: theme.spacing(height*1),
-        //     //     border: "3px solid white",
-        //     // },
-        //     justifyContent: "center",
-        //     alignContent: "center",
-        //     verticalAlign: "center",
-        //     display: "flex",
-        //     fontFamily: "inherit",
-        //     fontSize: "1em",
-        //     fontWeight: "700",
-        //     letterSpacing: "1px",
-        //     borderRadius: "12px",
-        //     backgroundColor: "white",
-        //     marginTop: "4px",
-        //     marginBottom: "3px",
-        //     marginLeft: "3px",
-        //     // alignItems:"center",
-        //     // justifyContent:"center",
-        // },
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
@@ -98,21 +79,14 @@ export default function Interminable(props){
     const [timeOutIds, setTimeOutIds] = useState([]);
     // The state of the animation, whether is playing
     const [isPlaying, setIsPlaying] = useState(false);
-    // It is used to control the speed menu
-    const [anchorEl, setAnchorEl] = useState(null);
-    // The state of play button and next step button, whether is disabled
-    const [playDisabled, setPlayDisabled] = useState(false);
-    // the State of previous step bnutton
-    const [backwardDisabled, setBackwardDisabled] = useState(true);
 
-    const [isFinish, setIsFinish] = useState(false);
+    const [intervalIds, setIntervalIds] = useState();
 
     const useStyles = makeStyles((theme) =>({
         root: {
             '& > * + *': {     
                 marginTop: theme.spacing(3),
             },
-            // marginTop: 50,
             width: 380,        
         },
         bars: {
@@ -162,71 +136,14 @@ export default function Interminable(props){
             fontSize:"16px",
             justifyContent: "center",
         },
-        control:{
-            // display:"flex",
-
-            // justifyContent: "center",
-        }
     }));
 
     const classes = useStyles();
 
-    // Update buttons' disable property when steps are changed
-    useEffect(() => {
-        currentStep === 0
-            ? setBackwardDisabled(true)
-            : setBackwardDisabled(false);
-        currentStep + 1 === trace.length
-            ? setPlayDisabled(true)
-            : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentStep]);
-
-    // Use the latest speed to play the animation
     // useEffect(() => {
-    //     // if it is playing, replay
-    //     if (isPlaying) {
-    //         pause();
-    //         resume();
-    //     }
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [playSpeed]);
-
-    // useEffect(() => {
-    //     handleResetClick();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [trace]);
-
-    useEffect(() => {
-        if(currentStep==3){
-            setIsFinish(true);
-        }else{
-            setIsFinish(false);
-        }
-    }, [currentStep]);
-
-    useEffect(() => {
-        if(isFinish==true){
-            reset();
-            // resume();
-            // run(trace);
-        }
-    }, [isFinish]);
-
-    // It is used to open the speed menu
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    // It is used to adjust speed, triggered when close the speed menu
-    const handleClose = (event) => {
-        const value = event.nativeEvent.target.value / 4;
-        if (!isNaN(value)) {
-            setPlaySpeed(value);
-        }
-        setAnchorEl(null);
-    };
-
+    //     console.log(currentStep);
+    //     console.log(bars);
+    // }, [currentStep]);
 
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
@@ -240,58 +157,75 @@ export default function Interminable(props){
         // The current bars are the [0] of trace, to make the animation start without delay
         // here we begin the animation from [1] of trace
         // it's also suitable for pause, step forward and backwar
-        const subTrace = trace.slice(1);
+        const subTrace = trace.slice(0);
         const timeoutIds = [];
         // a time interval unit
         const timer = 500 / playSpeed;
 
-        // Set a timeout for each item in the trace
-        subTrace.forEach((item, i) => {
-            let timeoutId = setTimeout(
-                (item) => {
-                    // update the current step
-                    setCurrentStep((prevStep) =>
-                        i === trace.length - 1 ? prevStep : prevStep + 1
-                    );
-                    // update bars to be animated
-                    setBars(item);
-                    i === subTrace.length - 1
-                        ? setIsPlaying(false)
-                        : setIsPlaying(true);
-                },
-                i * timer, //time interval
-                item
-            );
-            timeoutIds.push(timeoutId);
-        });
+        let item = [];
+        let step = currentStep;
 
-        // Clear timeouts upon completion
-        let timeoutId = setTimeout(clearTimeouts, trace.length * timer);
-        timeoutIds.push(timeoutId);
-        setTimeOutIds(timeoutIds);
+        switch(currentStep%4){
+            case 0:
+                item = trace[1];
+                break;
+            case 1:
+                item = trace[2];
+                break;
+            case 2:
+                item = trace[3];
+                break;
+            case 3:
+                item = trace[0];
+                break;
+            default:
+                break;
+        };
+        setBars(item);
+        setCurrentStep((prevStep) => prevStep + 1);
+        step++;
+
+        // Set a timeout for each item in the trace
+        let intervalId = setInterval(
+            (trace) =>{
+                switch(step%4){
+                    case 0:
+                        item = trace[1];
+                        break;
+                    case 1:
+                        item = trace[2];
+                        break;
+                    case 2:
+                        item = trace[3];
+                        break;
+                    case 3:
+                        item = trace[0];
+                        break;
+                    default:
+                        break;
+                };
+                setBars(item);
+                setCurrentStep((prevStep) => prevStep + 1);
+                step++;
+            },
+            timer,
+            subTrace
+        );
+        setIntervalIds(intervalId);
     };
 
     // To pause the animation
     const pause = () => {
         setIsPlaying(false);
         clearTimeouts();
-        localStorage.setItem("history", "hello");
+        clearInterval(intervalIds);
     };
 
     // To resume the animation
     const resume = () => {
         setIsPlaying(true);
-        const newtrace = trace.slice(currentStep);
-        run(newtrace);
-        const his = localStorage.getItem("history");
-        console.log(his);
+        run(trace);
     };
-
-    const reset = () => {
-        setCurrentStep(0);
-        setBars(trace[0]);
-    };
-
 
     return (            
             <div className = {classes.root}>
@@ -328,20 +262,19 @@ export default function Interminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplainationBox width={60} height={explainationBoxHeight}>
-                    {description[currentStep]}
+                <ExplainationBox width={60} height={explainationBoxHeight} >
+                    {"i = 1"}
                 </ExplainationBox>
                 
                 <div style={{
                     marginLeft: 160,
-                    marginTop: -20,
+                    marginTop: -10,
                 }}>
                     <IconButton
                         // function using depends on isPlaying
                         onClick={() => {
                             isPlaying ? pause() : resume();
                         }}
-                        // disabled={playDisabled}
                         className = {classes.control}
                     >
                         {/* button appearence depends on isPlaying */}
@@ -352,20 +285,15 @@ export default function Interminable(props){
                         )}
                     </IconButton>
                 </div>
-
-
-                
             </Card>
 
             <Card className = {classes.cardTwo}>
                 <CardContent>
                     <Typography>
-                        <Code blockNum={blockNums[currentStep]}/>
+                        <Code blockNum={blockNums[currentStep===0 ? 0 : currentStep%2+1]}/>
                     </Typography>
                 </CardContent>
-                
             </Card>
-
             </div>        
     );
 };

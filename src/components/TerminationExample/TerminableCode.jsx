@@ -20,35 +20,10 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-
-
 const Code = (props)=> {
     const {blockNum} = props;
   
     const useStyles = makeStyles((theme) => ({
-        // root: {
-        //     // display: "grid",
-        //     // "& > *": {
-        //     //     width: theme.spacing(width*1),
-        //     //     height: theme.spacing(height*1),
-        //     //     border: "3px solid white",
-        //     // },
-        //     justifyContent: "center",
-        //     alignContent: "center",
-        //     verticalAlign: "center",
-        //     display: "flex",
-        //     fontFamily: "inherit",
-        //     fontSize: "1em",
-        //     fontWeight: "700",
-        //     letterSpacing: "1px",
-        //     borderRadius: "12px",
-        //     backgroundColor: "white",
-        //     marginTop: "4px",
-        //     marginBottom: "3px",
-        //     marginLeft: "3px",
-        //     // alignItems:"center",
-        //     // justifyContent:"center",
-        // },
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
@@ -96,8 +71,6 @@ const Code = (props)=> {
         <div>{terminableCode}</div>
     )
 }
-
-
 
 
 
@@ -402,12 +375,6 @@ export default function Terminable(props){
             </Card>
 
             </div>
-
-            
-            
-
-          
-
         
     );
 };
