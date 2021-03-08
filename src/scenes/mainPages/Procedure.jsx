@@ -7,6 +7,8 @@ import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import FirstInBackdrop from '../FirstInBackdrop/FirstInBackdrop';
+
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -69,6 +71,17 @@ export default function ProcedureMainPage() {
     const classes = useStyles();
 
     const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
+
+    if(localStorage.getItem("first") == 1){
+      localStorage.setItem("first", JSON.stringify(1));
+    }else if(localStorage.getItem("first") == 0){
+      localStorage.setItem("first", JSON.stringify(0));
+    }else{
+      localStorage.setItem("first", JSON.stringify(1));
+    }
+
+
+    const firstIn = localStorage.getItem("first") ? JSON.parse(localStorage.getItem("first")) : null;
 
     const handleClick = (title) => () => {
       //store previous visited algorithm
@@ -193,7 +206,8 @@ export default function ProcedureMainPage() {
 
 
     return (
-      <div className={classes.div} >
+      <div>
+        <div className={classes.div} >
         <div className={classes.grid} >
           <Grid container spacing={0} >
 
@@ -249,6 +263,13 @@ export default function ProcedureMainPage() {
         </Grid>
         </div>
       </div>
+
+        {firstIn == 1?(
+          <FirstInBackdrop />
+        ):(<div/>)}
+        
+      </div>
+      
         
     );
 }
@@ -260,7 +281,7 @@ export function ProcedureChoiceMenu(){
 
   return (
     <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
+      <Link to="/TutorialMainPage" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Tutorial
       </Button>
@@ -270,25 +291,15 @@ export function ProcedureChoiceMenu(){
         Procedure
       </Button>
 
-      <Link to="/EfficiencyMainPage" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Efficiency
-      </Button>
-      </Link>
-
       <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}}>
       <Button variant="contained" className={classes.button}>
         Correctness
       </Button>
       </Link>
 
-      <Link to="/Exercise" style={{ textDecoration:'none'}}>
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
     </div>
   );
 }
+
 
 export {color};

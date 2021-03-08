@@ -1,4 +1,4 @@
-// The efficiency main page, consists of algorithm modules, set and help buttons, and the choice menu
+// The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
 import {Link} from 'react-router-dom';
 import Set from '../../components/Buttons/Set';
@@ -45,24 +45,73 @@ const color = '#4caf50';
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-export default function EfficiencyMainPage() {
+export default function TutorialMainPage() {
     const classes = useStyles();
     const [progress, setProgress] = React.useState(10);
 
-    const image = {
+    const images = [
+      {
         static: "",
         gif: "catch.gif",
-        title: "Bubble sort",
+        title: "Swap",
         width: "20%",
+      },
+      {
+         static: "",
+         gif: "catch.gif",
+         title: "Loop",
+         width: "20%",
+      },
+      {
+        static: "",
+        gif: "catch.gif",
+        title: "Terminology",
+        width: "20%",
+     },
+
+
+  ];
+
+    const swap = {
+          image: images[0],
+          width: 200,
+          height: 200,
+          // onClick: handleClick(images[3].title),
+          progress: 0,
+          color: color,
+          // preOne: false,
+    };
+
+    const loop = {
+          image: images[1],
+          width: 200,
+          height: 200,
+          // onClick: handleClick(images[3].title),
+          progress: 0,
+          color: color,
+          // preOne: false,
+    };
+
+    const terminology = {
+          image: images[2],
+          width: 200,
+          height: 200,
+          // onClick: handleClick(images[3].title),
+          progress: 0,
+          color: color,
+          // preOne: false,
     };
 
     const props2 = {
-        image: image,
-        width: 200,
-        height: 200,
-        progress: progress,
-        color: color,
+      // image: images[0],
+      width: 200,
+      height: 200,
+      // onClick: handleClick(images[3].title),
+      progress: 0,
+      color: color,
+      // preOne: false,
     };
+
 
     return (
       <div className={classes.div}>
@@ -70,50 +119,20 @@ export default function EfficiencyMainPage() {
           <Grid container spacing={0} >
 
           <Grid item xs={6} sm={3} >
-          <Link to="/Page">
-              <Module {...props2} />
+          <Link to="/TutorialSubPage/Swap">
+              <Module {...swap} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3} >
-          <Link to="/Page">
-              <Module {...props2} />
+          <Link to="/TutorialSubPage/Loop">
+              <Module {...loop} />
           </Link>
           </Grid>
 
           <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
-
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
-
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
-
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
-
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
-          </Link>
-          </Grid>
-
-          <Grid item xs={6} sm={3}>
-          <Link to="/Page">
-              <Module {...props2} />
+          <Link to="/TutorialSubPage/Terminology">
+              <Module {...terminology} />
           </Link>
           </Grid>
 
@@ -125,7 +144,7 @@ export default function EfficiencyMainPage() {
 
           <Grid item xs={12}>
             <div style={{marginLeft:-8, marginTop: 50}}>
-            <EfficiencyChoiceMenu/>
+            <TutorialChoiceMenu/>
             </div>
           </Grid>
 
@@ -139,17 +158,15 @@ export default function EfficiencyMainPage() {
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Efficiency button is theme color without jump function
-export function EfficiencyChoiceMenu(){
+export function TutorialChoiceMenu(){
  
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Link to="/Tutorial" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
+      <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
         Tutorial
       </Button>
-      </Link>
 
       <Link to="/ProcedureMainPage" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
@@ -157,21 +174,12 @@ export function EfficiencyChoiceMenu(){
       </Button>
       </Link>
 
-      <Button variant="contained" color="primary" disableElevation className={classes.button} style={{color:"white", backgroundColor: color}}>
-        Efficiency
-      </Button>
-
       <Link to="/CorrectnessMainPage" style={{ textDecoration:'none'}} >
       <Button variant="contained" className={classes.button}>
         Correctness
       </Button>
       </Link>
 
-      <Link to="/Exercise" style={{ textDecoration:'none'}} >
-      <Button variant="contained" className={classes.button}>
-        Exercise
-      </Button>
-      </Link>
     </div>
   );
 }
