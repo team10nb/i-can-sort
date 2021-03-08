@@ -145,7 +145,7 @@ export default function Terminable(props){
             background: "#F0F0F0",        
         },
         slider:{
-            marginLeft: 33,
+            marginLeft: 28,
             marginBottom: 0,
         },
         title:{
