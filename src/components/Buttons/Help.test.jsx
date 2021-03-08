@@ -1,3 +1,6 @@
+/*
+    Author: Yijie Lu
+*/
 import { render } from '@testing-library/react';
 import CHelp from './CHelp';
 

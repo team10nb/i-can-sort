@@ -1,3 +1,6 @@
+/*
+    Author: Yijie Lu
+*/
 // The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
 import {Link} from 'react-router-dom';
