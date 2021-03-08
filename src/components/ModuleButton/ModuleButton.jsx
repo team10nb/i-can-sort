@@ -45,13 +45,15 @@ export default function ModuleButton(props) {
             "&:hover, &$focusVisible": {
                 zIndex: 1,
                 "& $imageBackdrop": {
-                    backgroundImage: `url(${image.gif})`,
+                    // backgroundImage: `url(${image.gif})`,
                     backgroundColor: "",
-                    opacity: 1,
+                    opacity: 0,
+                    transition: "opacity 0.3s"
                 },
                 "& $imageTitle": {
-                    border: "4px solid currentColor",
+                    // border: "4px solid currentColor",
                     opacity: 0,
+                    // transition: "opacity 0.5s"
                 },
             },
         },
@@ -72,7 +74,7 @@ export default function ModuleButton(props) {
         imageSrc: {
             borderTopLeftRadius: 17,
             borderTopRightRadius: 17,
-            // backgroundImage: `url(${props.image.static})`,
+            backgroundImage: `url(${image.gif})`,
             position: "absolute",
             left: 0,
             right: 0,
@@ -97,6 +99,7 @@ export default function ModuleButton(props) {
             backgroundColor: "#d5d5d5",
             opacity: 1,
             transition: theme.transitions.create("opacity"),
+            transition: "opacity 0.3s"
         },
         imageTitle: {
             position: "absolute",
