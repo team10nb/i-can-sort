@@ -99,8 +99,8 @@ import {color} from '../../scenes/mainPages/Correctness';
           <img src={logo2} alt="logo2"  width='587' heigh='300' />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
-              For this page, the algorithm is called "what day is it today?". By inputting a number from 1 to 7, the algorithm
-              will output the week name from Sunday to Saturday.          
+              By inputting a number from 1 to 7, the algorithm
+              will output the week name from Sunday to Saturday.         
             </Typography>             
           </CardContent>
         </CardActionArea>
@@ -169,8 +169,7 @@ import {color} from '../../scenes/mainPages/Correctness';
                   <img src={logo4} alt="logo4"  width='587' heigh='300' />
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      For this page, the legal input for this algorithm is the positive interger up to 7.it can be 1, 2, 3, 4, 5, 6, 7.
-                      while the illegal input will be any characters expects the positive interger up to 7.     
+                      For this page, the legal input set of this algorithm is positive intergers 1 to 7.&nbsp;Any other are illegal. This algorithm meets correctness since it can generate correct week name for any legal input.     
                     </Typography>             
                   </CardContent>
                 </CardActionArea>
