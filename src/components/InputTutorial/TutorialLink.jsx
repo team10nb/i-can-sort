@@ -27,6 +27,10 @@ import {color} from '../../scenes/mainPages/Correctness';
       alignItems: 'center',
       justifyContent: 'center',
     },
+    dialog:{
+      backgroundColor:'red',
+      opacity: '0.5'
+    },
     card: {
       maxWidth: 580,
       minHeight: 550,
@@ -149,7 +153,7 @@ import {color} from '../../scenes/mainPages/Correctness';
     };
 
     const card = (
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} classes = {classes.dialog}>
         <Fade in={open}>
           <Card className={classes.card}>
             <CardHeader
