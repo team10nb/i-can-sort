@@ -99,12 +99,10 @@ export default function Terminable(props){
 
     const useStyles = makeStyles((theme) =>({
         root: {
-    
             '& > * + *': {     
                 marginTop: theme.spacing(3),
             },
-            width: 380,
-            
+            width: 380,    
         },
         bars: {
             listStyle: "none",
