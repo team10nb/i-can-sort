@@ -105,10 +105,6 @@ export default function ImplementationPseudo(props){
             height: 520,
             background: "#F0F0F0",      
         },
-        slider:{
-            marginLeft: 18,
-            marginBottom: 0,
-        },
         title:{
             display:"flex",
             fontFamily: "inherit",
@@ -315,7 +311,6 @@ export default function ImplementationPseudo(props){
                     {description[currentStep]}
                 </ExplainationBox>
 
-                <div className = {classes.slider}>
                 <AnimationSlider
                     width={480}
                     step={1}
@@ -324,7 +319,6 @@ export default function ImplementationPseudo(props){
                     value={currentStep}
                     display="none"                                       
                 />
-                </div>
                 
                 <AnimationControl {...animationControlProps} />
                     </div>
