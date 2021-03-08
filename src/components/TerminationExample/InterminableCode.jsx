@@ -16,7 +16,6 @@ import IconButton from "@material-ui/core/IconButton";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 
-
 // a framer motion transition attributes
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -25,6 +24,7 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
+// dynamic pseudocode
 const Code = (props)=> {
     const {blockNum} = props;
   
@@ -67,7 +67,7 @@ const Code = (props)=> {
 }
 
 export default function Interminable(props){
-    const { trace, description, width, explainationBoxHeight, blockNums } = props;
+    const { trace, explainationBoxHeight, blockNums } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -79,7 +79,7 @@ export default function Interminable(props){
     const [timeOutIds, setTimeOutIds] = useState([]);
     // The state of the animation, whether is playing
     const [isPlaying, setIsPlaying] = useState(false);
-
+    // It is used to clean interval to pause
     const [intervalIds, setIntervalIds] = useState();
 
     const useStyles = makeStyles((theme) =>({
@@ -140,19 +140,14 @@ export default function Interminable(props){
 
     const classes = useStyles();
 
-    // useEffect(() => {
-    //     console.log(currentStep);
-    //     console.log(bars);
-    // }, [currentStep]);
-
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
         timeOutIds.forEach((timeoutId) => clearTimeout(timeoutId));
         setTimeOutIds([]);
     };
 
-    // Main method, used to generate a time line based on the speed
     // change bars after a time interval
+    // first loop
     const run = (trace) => {
         // The current bars are the [0] of trace, to make the animation start without delay
         // here we begin the animation from [1] of trace
@@ -165,6 +160,7 @@ export default function Interminable(props){
         let item = [];
         let step = currentStep;
 
+        // get the corresponding item from trace
         switch(currentStep%4){
             case 0:
                 item = trace[1];
@@ -185,7 +181,7 @@ export default function Interminable(props){
         setCurrentStep((prevStep) => prevStep + 1);
         step++;
 
-        // Set a timeout for each item in the trace
+        // Set time interval for one swapping
         let intervalId = setInterval(
             (trace) =>{
                 switch(step%4){
@@ -229,10 +225,8 @@ export default function Interminable(props){
 
     return (            
             <div className = {classes.root}>
-                <div className = {classes.title}>Interminable</div>
-                
-                <Card className = {classes.cardOne}> 
-                
+                <div className = {classes.title}>Algorithm Cannot Terminate</div>               
+                <Card className = {classes.cardOne}>                 
                     <div className={classes.bars}>
                     {bars.map((background) => (
                         <motion.li

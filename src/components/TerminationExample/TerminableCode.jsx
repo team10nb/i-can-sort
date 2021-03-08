@@ -1,4 +1,8 @@
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+/*
+    Author: Ruizi Han, Yijie Lu
+*/
+
+import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -11,7 +15,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 
-
 // a framer motion transition attributes
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -20,6 +23,7 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
+// dynamic pseudocode
 const Code = (props)=> {
     const {blockNum} = props;
   
@@ -73,9 +77,8 @@ const Code = (props)=> {
 }
 
 
-
 export default function Terminable(props){
-    const { trace, description, width, explainationBoxHeight, blockNums } = props;
+    const { trace, width, blockNums } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -91,7 +94,7 @@ export default function Terminable(props){
     const [anchorEl, setAnchorEl] = useState(null);
     // The state of play button and next step button, whether is disabled
     const [playDisabled, setPlayDisabled] = useState(false);
-    // the State of previous step bnutton
+    // the State of previous step button
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
     const useStyles = makeStyles((theme) =>({
@@ -100,7 +103,6 @@ export default function Terminable(props){
             '& > * + *': {     
                 marginTop: theme.spacing(3),
             },
-            // marginTop: 50,
             width: 380,
             
         },
@@ -108,7 +110,6 @@ export default function Terminable(props){
             listStyle: "none",
             padding: 0,
             margin: 0,
-            // marginBottom: 10,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -179,11 +180,6 @@ export default function Terminable(props){
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playSpeed]);
-
-    // useEffect(() => {
-    //     handleResetClick();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [trace]);
 
     // It is used to open the speed menu
     const handleClick = (event) => {
@@ -257,7 +253,6 @@ export default function Terminable(props){
     const pause = () => {
         setIsPlaying(false);
         clearTimeouts();
-        localStorage.setItem("history", "hello");
     };
 
     // To resume the animation
@@ -265,8 +260,6 @@ export default function Terminable(props){
         setIsPlaying(true);
         const newtrace = trace.slice(currentStep);
         run(newtrace);
-        const his = localStorage.getItem("history");
-        console.log(his);
     };
 
     // Go to next step and pause
@@ -313,10 +306,8 @@ export default function Terminable(props){
 
     return (            
             <div className = {classes.root}>
-                <div className = {classes.title}>Terminable</div>
-                
-                <Card className = {classes.cardOne}> 
-                
+                <div className = {classes.title}>Algorithm Can Terminate</div>               
+                <Card className = {classes.cardOne}>                
                     <div className={classes.bars}>
                     {bars.map((background) => (
                         <motion.li
@@ -354,27 +345,19 @@ export default function Terminable(props){
                     max={trace.length - 1}
                     handleChange={handleSliderChange}
                     value={currentStep}
-                    display="none"
-                    
-                   
+                    display="none"                   
                 />
-                </div>
-                
+                </div>               
                 <AnimationControl {...animationControlProps} />
             </Card>
-            
-           
-
+        
             <Card className = {classes.cardTwo}>
                 <CardContent>
                     <Typography>
                         <Code blockNum={blockNums[currentStep]}/>
                     </Typography>
-                </CardContent>
-                
+                </CardContent>                
             </Card>
-
-            </div>
-        
+            </div>       
     );
 };

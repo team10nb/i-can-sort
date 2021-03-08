@@ -12,38 +12,40 @@ const useStyles = makeStyles((theme) => ({
 
     root:{
         display: "flex",
-        // '& > *': {
-        //     marginTop: theme.spacing(4),
-        //   },
         '& > * + *': {     
             marginLeft: theme.spacing(2),
         },
     },
 }));
 
+// slider width
 const width = 320; 
+// explaination box height
 const explainationBoxHeight = 3;
 
+// algorithm can terminate example
 const TerminablePart = () => {
+    // example array
     const arr = [2, 6, 9, 10, 3];
+    // pseudocode highlight block numbers
     const blockNums = [1, 4, 3, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 5, 7, 4, 3, 7, 7, 8];
 
     const {trace, description} = BubbleSort(arr);
     
     const props = {
         trace,
-        description,
         width,
-        explainationBoxHeight,
         blockNums
     };
     
     return(<TerminableCode {...props}/>);
 }
 
-
+// algorithm cannot terminate example
 const InterminablePart = () => {
+    // pseudocode highlight block numbers
     const blockNums = [1, 3, 2];
+    // loop trace
     const trace = [
         [
             {value: 4, height: 40, backgroundColor: "#00BFFF", key: 0, y: 0},
@@ -59,13 +61,9 @@ const InterminablePart = () => {
             {value: 4, height: 40, backgroundColor: "#FFD700", key: 0, y: 0}
         ]
     ];
-
-    const description = ["ddcdws"];
     
     const props = {
         trace,
-        description,
-        width,
         explainationBoxHeight,
         blockNums
     };
