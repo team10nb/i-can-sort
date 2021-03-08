@@ -75,7 +75,7 @@ const title_interminate =
 const code_interminate = 
 <pre style={{marginTop:-20}}>  
 {`
-factorial1 (int n){
+factorial (int n){
   int result = 1;
 `}
 <code style = {{color: red[700]}}>  for (int i=1; ; i++)</code>
@@ -116,7 +116,7 @@ const title_terminateAndIncorrect =
 const code_terminateAndIncorrect = 
 <pre style={{marginTop:-20}}> 
 {`
-factorial2 (int n){
+factorial (int n){
   int result = 1;
   for (int i=1; i<=n; i++)
   {
@@ -156,7 +156,7 @@ const title_terminateAndCorrect =
 const code_terminateAndCorrect = 
 <pre style={{marginTop:-20}}>  
 {`
-factorial3 (int n){
+factorial (int n){
   int result = 1;
   for (int i=1; i<=n; i++)
   {
@@ -171,7 +171,7 @@ const props_terminateAndCorrect = {
     output: 3,
 }  
 
-const message = <p>Suppose now we have an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font> that is used to calculate the factorial of 1 to 20.</p>
+const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</font> different examples to implement an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font>, which is used <br />to calculate the factorial of 1 to 20.</p>
 
 export default function Partial() {
     const classes = useStyles();
@@ -179,7 +179,7 @@ export default function Partial() {
     const [timer,setTimer] = useState();
 
     const [exp,setExp] = useState("");
-    const [output,setOutput] = useState("");
+    const [output,setOutput] = useState(null);
 
     const [input, setInput] = useState();
     const [expOutput, setExpOutput] = useState();
@@ -195,19 +195,16 @@ export default function Partial() {
             setWrongMsg("Please enter a positive integer from 1 to 20.");
             return;
         }
-    
-        let s = input.replace(/\s+/g, "");
-        s = removeDot(s);
-    
+
         //input is null
-        if(s === ""){
+        if(input === ""){
             setInput("empty");
             setExpOutput("");
             setWrongMsg("Please enter a positive integer from 1 to 20.");
         }
     
         //valid input
-        if (s.match(/^[0-9]*$/) && input>0 && input<21){
+        if (input.match(/^[0-9]*$/) && input>0 && input<21){
             setExpOutput(factorial(input));
             setWrongMsg("");
         }
@@ -220,6 +217,7 @@ export default function Partial() {
 
     const handleClick = (props) => () => {
         const {exp, output} = props;
+        confirm();
         runAlgorithm(exp, output);
     };
 
@@ -229,7 +227,7 @@ export default function Partial() {
 
     const runAlgorithm = (exp, index) => {
         if(isUndefined(input) || input==="empty"){
-            setExp("Please enter input first.");
+            setExp("Please enter input and click 'CONFIRM' button first.");
             return;
         }
         switch(index) {
@@ -254,7 +252,7 @@ export default function Partial() {
         <div>
             <BackDrop message={message}/>
             <div style={{paddingLeft:6}}>
-            <Card style={{height: 280, width:775, backgroundColor:'#EFEFEF', paddingTop:6}}>
+            <Card style={{height: 280, width:770, backgroundColor:'#EFEFEF', paddingTop:6}}>
             <CardContent>
                 <h1 style={{height:35}}>Algorithm: factorial(n) </h1>
                 <h1 style={{ height:60}}>Input: &nbsp;
@@ -270,7 +268,7 @@ export default function Partial() {
                     helperText={wrongMsg}
                     style = {{width:300}}
                 />
-                <Button variant="outlined" className={classes.button} onClick={confirm}>Confirm</Button>
+                {/* <Button variant="outlined" className={classes.button} onClick={confirm}>Confirm</Button> */}
                 </h1>
                 <h1>Expected Output: {expOutput}</h1>
                 <h1 style={{color: color}}>----------------Click below example algorithms to see the output------------------</h1>
@@ -336,6 +334,8 @@ function factorial(number){
 }
 
 function factorial_add(number){
+    if(number==="")
+        return;
     var result = 1;
     for (var i=1; i<=number; i++){
         result = result + i;
