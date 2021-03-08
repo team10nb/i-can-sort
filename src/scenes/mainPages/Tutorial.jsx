@@ -2,11 +2,14 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import Set from '../../components/Buttons/Set';
-import CHelp from '../../components/Buttons/CHelp';
+import Help from '../../components/Buttons/Help';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import logo1 from '../../Resource/Chelp1.png';
+import logo2 from '../../Resource/Chelp2.png';
+import logo3 from '../../Resource/Chelp3.png';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -112,6 +115,13 @@ export default function TutorialMainPage() {
       // preOne: false,
     };
 
+    const helpProp = {
+      logo1: logo1,
+      logo2: logo2,
+      logo3: logo3,
+      color: color,
+    }
+
 
     return (
       <div className={classes.div}>
@@ -138,7 +148,7 @@ export default function TutorialMainPage() {
 
           <Grid item xs={12}>
           <div className = {classes.buttonSet}>
-            <Set /><CHelp {...props2}/>
+            <Set /><Help {...helpProp}/>
             </div>
           </Grid>
 

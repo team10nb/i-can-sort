@@ -1,47 +1,63 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
 import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
-import Button from '@material-ui/core/Button';
-import CardHeader from '@material-ui/core/CardHeader';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import Dialog from '@material-ui/core/Dialog';
-import logo1 from '../../Resource/Chelp1.png';
-import logo2 from '../../Resource/Chelp2.png';
-import logo3 from '../../Resource/Chelp3.png';
-import Grid from '@material-ui/core/Grid';
-import {color} from '../../scenes/mainPages/Correctness';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
+import Backdrop from '@material-ui/core/Backdrop';
 
 
   const useStyles = makeStyles((theme) => ({
-    modal: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+    backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      color: "#212121",
     },
+
     card: {
       maxWidth: 580,
       minHeight: 540,
-
+      borderRadius:"30px",
     },
 
     avatar: {
-      backgroundColor: color,
+      "& > *": {
+        marginTop: theme.spacing(1),
+        marginRight: theme.spacing(62.5),
+      },
     },
+
+    button:{
+      display: "flex",
+        "& > *": {
+            marginBottom: theme.spacing(2.5),
+            marginLeft: theme.spacing(3),
+        },
+        "& > * + *": {
+            marginLeft: theme.spacing(55),
+        },
+     },
+
+     resetbutton:{    
+        "& > *": {
+           marginRight: theme.spacing(61),
+            marginTop: theme.spacing(0),
+        },
+     },
   }));
   
   
 
   
 
-  function getStepContent(step) {
+  function getStepContent(step, props) {
+    const{logo1, logo2, logo3, color} = props;
     switch (step) {
       case 0:
         return (
@@ -55,7 +71,6 @@ import {color} from '../../scenes/mainPages/Correctness';
               </Typography>                
             </CardContent>
           </CardActionArea>
-
         );
       case 1:
         return (
@@ -76,12 +91,13 @@ import {color} from '../../scenes/mainPages/Correctness';
 
 
  
-  export  default function CHelp() {
+  export  default function CHelp(props) {
+    const{logo1, logo2, logo3, color} = props;
+
     const classes = useStyles();
 
     const [open, setOpen] = React.useState(false);
  
-
     const handleClickOpen = () => {
       setOpen(true);
     };
@@ -102,22 +118,21 @@ import {color} from '../../scenes/mainPages/Correctness';
     const handleBack = () => {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
+
     const handleReset = () => {
       setActiveStep(0);
     };
 
     const card =(
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} className = {classes.dialog}>
-        <Fade in={open}>
-          <Card className={classes.card}>
-            <CardHeader
-              avatar={
-                <IconButton aria-label="close"  onClick={handleClose}>
-                <HighlightOffIcon  style={{ color: color, fontSize: 30  }} />
+      <Backdrop className={classes.backdrop} open={open} >
+        <Card className={classes.card}>
+          <div className = {classes.avatar}>
+              <IconButton aria-label="close"  onClick={handleClose} >
+                <HighlightOffIcon style={{ color: color, opacity: 0.8, fontSize: 40  } } />
               </IconButton>
-              }
-            />
-              {activeStep === steps - 1 ? (
+          </div>
+            {activeStep === steps - 1 ? (
+            <div>
               <div>
                 <CardActionArea  >               
                   <img src={logo3} alt="logo3" width='587' heigh='300'  />
@@ -126,37 +141,26 @@ import {color} from '../../scenes/mainPages/Correctness';
                       This a choice menu. Menu contains Tutorial, Procedure, Efficiency, Correctness and Exercise.
                       Choose a module and click it.   
                     </Typography>                
-                  </CardContent>
-                  
+                  </CardContent>           
                 </CardActionArea>
-                <CardActions>
-                  <Button onClick={handleReset} variant="outlined" style={{ color: color}}>Reset</Button>
-                </CardActions>
               </div>
-              ) : (
-               
-                  <div>
-                    {getStepContent(activeStep)}                    
-                      <CardActions>
-                      <Grid
-                          container
-                          justify="space-between"
-                        >
-                          <Grid key='0' item>
-                          <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined" style={{ color: color}}>Last Tip</Button>
-                          </Grid>
-                          <Grid key='1' item>
-                          <Button variant="outlined" onClick={handleNext} style={{ color: color}}>Next Tip</Button>
-
-                          </Grid>
-
-                        </Grid>
-                      </CardActions>
-                  </div>
-                )}
+              <div className = {classes.resetbutton}>
+                <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
+              </div>
+            </div>
+            ) : (       
+              <div>
+                <div>
+                  {getStepContent(activeStep, props)}                    
+                </div>
+                <div className = {classes.button}>               
+                  <IconButton  disabled={activeStep === 0} onClick={handleBack}  style={{ backgroundColor: color, opacity:0.5, }} size='small'><ChevronLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>           
+                  <IconButton  onClick={handleNext} style={{ backgroundColor: color, opacity:0.5, }} size='small'><ChevronRightIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>             
+                </div>
+            </div>
+              )}
           </Card> 
-        </Fade>
-      </Dialog>   
+        </Backdrop>   
     );
 
     return(

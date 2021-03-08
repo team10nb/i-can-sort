@@ -1,19 +1,20 @@
+/*
+    Author: Yijie Lu
+*/
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
 import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
-import Button from '@material-ui/core/Button';
-import CardHeader from '@material-ui/core/CardHeader';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import Dialog from '@material-ui/core/Dialog';
-import Grid from '@material-ui/core/Grid';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
+import Backdrop from '@material-ui/core/Backdrop';
 import logo0 from '../../Resource/inputExp0.png';
 import logo1 from '../../Resource/inputExp1.png';
 import logo2 from '../../Resource/inputExp2.jpg';
@@ -22,42 +23,41 @@ import logo4 from '../../Resource/inputExp4.jpg';
 import {color} from '../../scenes/mainPages/Correctness';
 
   const useStyles = makeStyles((theme) => ({
-    modal: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    dialog:{
-      backgroundColor:'red',
-      opacity: '0.5'
+    backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      color: "#212121",
     },
     card: {
       maxWidth: 580,
       minHeight: 550,
+      borderRadius:"30px", 
     },
     avatar: {
-      backgroundColor: color,
+      "& > *": {
+        marginTop: theme.spacing(1),
+        marginLeft: theme.spacing(1),
+      },
     },
     icon:{
         color: "#696969"
     },
     actionArea:{
       maxWidth: 395,
-      maxHeight: 580,
+      maxHeight: 570,
     },
     button:{
       display: "flex",
         "& > *": {
-            marginLeft: theme.spacing(2),
+            marginBottom: theme.spacing(2.5),
+            marginLeft: theme.spacing(3),
         },
         "& > * + *": {
-            marginLeft: theme.spacing(45),
+            marginLeft: theme.spacing(55),
         },
      },
-     resetbutton:{
-     
+     resetbutton:{    
         "& > *": {
-           marginLeft: theme.spacing(2),
+           marginLeft: theme.spacing(2.6),
             marginTop: theme.spacing(2.5),
         },
      }
@@ -73,15 +73,7 @@ import {color} from '../../scenes/mainPages/Correctness';
       case 0:
         return (
           <CardActionArea  width='395px' height='580px'>
-            {/* <Typography variant="body2" color="textSecondary" component="p">
-                  The algorithm in this page is called "What day is it today?"  
-            </Typography> */}
             <img src={logo0} alt="logo0" width='587' heigh='300'  />
-            {/* <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                  given a integer from 1-7, output the week name of that day    
-              </Typography>                
-            </CardContent> */}
           </CardActionArea>
 
         );
@@ -89,12 +81,7 @@ import {color} from '../../scenes/mainPages/Correctness';
         return (
           <CardActionArea  width='395px' height='580px'>
             <img src={logo1} alt="logo1"  width='587' heigh='300' />
-            {/* <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Left one is a setting button, click  it to change settings.
-                Right one is a help button, click it to see explanations for each component.          
-              </Typography>             
-            </CardContent> */}
+
           </CardActionArea>
         );
       case 2:
@@ -128,7 +115,6 @@ import {color} from '../../scenes/mainPages/Correctness';
 
     const [open, setOpen] = React.useState(false);
  
-
     const handleClickOpen = () => {
       setOpen(true);
     };
@@ -153,19 +139,15 @@ import {color} from '../../scenes/mainPages/Correctness';
     };
 
     const card = (
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} classes = {classes.dialog}>
-        <Fade in={open}>
-          <Card className={classes.card}>
-            <CardHeader
-              avatar={
-                <IconButton aria-label="close"  onClick={handleClose}>
-                  <HighlightOffIcon  style={{ color: color, fontSize: 30  }} />
+      // <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} classes = {classes.dialog}>
+      //   <Fade in={open}>
+      <Backdrop className={classes.backdrop} open={open} >
+          <Card className={classes.card}>          
+            <div className = {classes.avatar}>
+                <IconButton aria-label="close"  onClick={handleClose} >
+                  <HighlightOffIcon  style={{ color: color, opacity: 0.8, fontSize: 40  } } />
                 </IconButton>
-               
-              }
-              
-
-            />
+            </div> 
               {activeStep === steps - 1 ? (
                 <div>
                   <div>
@@ -176,47 +158,25 @@ import {color} from '../../scenes/mainPages/Correctness';
                       For this page, the legal input set of this algorithm is positive intergers 1 to 7.&nbsp;Any other are illegal. This algorithm meets correctness since it can generate correct week name for any legal input.     
                     </Typography>             
                   </CardContent>
-                </CardActionArea>
-                
-                 
-                 
-                
-               
+                </CardActionArea>    
               </div>
               <div className = {classes.resetbutton}>
-              <Button onClick={handleReset} variant="outlined" style={{ color: color}}>Reset</Button>
-               </div>
-                </div>
-              
+                <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
+              </div>
+                </div>              
               ) : (
                 <div>
                   <div>
                     {getStepContent(activeStep)}                    
-                    
-                      
-                        
-
-                     
-
                   </div>
-                  <div className = {classes.button}>
-                      
-                  <Button disabled={activeStep === 0} onClick={handleBack} variant="outlined" style={{ color: color}}>Last Tip</Button>
-                  
-                  
-                  <Button variant="outlined" onClick={handleNext} style={{ color: color}}>Next Tip</Button>
-
-                  
-              </div>
-                </div>
-                  
+                  <div className = {classes.button}>               
+                  <IconButton  disabled={activeStep === 0} onClick={handleBack}  style={{ backgroundColor: color, opacity:0.5, }} size='small'><ChevronLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>           
+                  <IconButton  onClick={handleNext} style={{ backgroundColor: color, opacity:0.5, }} size='small'><ChevronRightIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>             
+                  </div>
+                </div>                
                 )}
           </Card> 
-        </Fade>
-      </Dialog>   
-
-      
-
+      </Backdrop> 
     );
 
   

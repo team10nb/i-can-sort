@@ -2,12 +2,15 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import Set from '../../components/Buttons/Set';
-import PHelp from '../../components/Buttons/PHelp';
+import Help from '../../components/Buttons/Help';
 import Module from '../../components/Module/Module';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import FirstInBackdrop from '../FirstInBackdrop/FirstInBackdrop';
+import logo1 from '../../Resource/Phelp1.png';
+import logo2 from '../../Resource/Phelp2.png';
+import logo3 from '../../Resource/Phelp3.png';
 
 
 //Set css
@@ -204,6 +207,13 @@ export default function ProcedureMainPage() {
       preOne: false,
   };
 
+  const helpProp = {
+    logo1: logo1,
+    logo2: logo2,
+    logo3: logo3,
+    color: color,
+  }
+
 
     return (
       <div>
@@ -250,7 +260,7 @@ export default function ProcedureMainPage() {
 
           <Grid item xs={12}>
             <div className = {classes.buttonSet}>
-            <Set /><PHelp {...props2}/>
+            <Set /><Help {...helpProp}/>
             </div>
           </Grid>
 

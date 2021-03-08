@@ -1,13 +1,14 @@
+/*
+    Author: Yijie Lu
+*/
+
 import React from 'react';
 import Backdrop from '@material-ui/core/Backdrop';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import ChildCareIcon from '@material-ui/icons/ChildCare';
-import FaceIcon from '@material-ui/icons/Face';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,9 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardOne: {
     display: "flex",
-        // '& > *': {
-        //     marginLe: theme.spacing(4),
-        //   },
         '& > * + *': {     
             marginLeft: theme.spacing(8),
         },
@@ -54,15 +52,9 @@ export default function FirstInBackdrop(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const onClick1 = () => {
-    //return to tutorial main page 
     localStorage.setItem("first", JSON.stringify(0));
     window.location.href = "/TutorialMainPage";
   };
-  // const onClick2 = () => {
-  //   //return to procedure main page 
-  //   localStorage.setItem("first", JSON.stringify(0));
-  //   window.location.href = "/ProcedureMainPage";
-  // };
   const onClick = localStorage.setItem("first", JSON.stringify(0));
   return (
     <div>
