@@ -55,11 +55,11 @@ import {color} from '../../scenes/mainPages/Correctness';
             marginLeft: theme.spacing(55),
         },
      },
-     resetbutton:{    
-        "& > *": {
-           marginLeft: theme.spacing(2.9),
-            marginTop: theme.spacing(-0.5),
-        },
+     resetButton:{    
+      "& > *": {
+        marginBottom: theme.spacing(1),
+        marginLeft: theme.spacing(3),
+    },
      }
   }));
   
@@ -72,24 +72,24 @@ import {color} from '../../scenes/mainPages/Correctness';
     switch (step) {
       case 0:
         return (
-          <CardActionArea  style={{width:'580px', height:'415px'}}>
+          <CardActionArea  width='395px' height='580px'>
             <img src={logo0} alt="logo0" width='587' heigh='300'  />
           </CardActionArea>
 
         );
       case 1:
         return (
-          <CardActionArea  style={{width:'580px', height:'415px'}}>
+          <CardActionArea  width='395px' height='580px'>
             <img src={logo1} alt="logo1"  width='587' heigh='300' />
 
           </CardActionArea>
         );
       case 2:
       return (
-        <CardActionArea  style={{width:'580px', height:'415px'}}>
+        <CardActionArea  width='395px' height='580px'>
           <img src={logo2} alt="logo2"  width='587' heigh='300' />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p" style={{marginLeft:"20px"}}>
+            <Typography variant="body2" color="textSecondary" component="p">
               By inputting a number from 1 to 7, the algorithm
               will output the week name from Sunday to Saturday.         
             </Typography>             
@@ -98,7 +98,7 @@ import {color} from '../../scenes/mainPages/Correctness';
       );
       case 3:
         return (
-          <CardActionArea  style={{width:'580px', height:'415px'}}>
+          <CardActionArea  width='395px' height='580px'>
             <img src={logo3} alt="logo3"   width='587' heigh='300'/>
             
           </CardActionArea>
@@ -151,17 +151,16 @@ import {color} from '../../scenes/mainPages/Correctness';
               {activeStep === steps - 1 ? (
                 <div>
                   <div>
-                <CardActionArea  style={{width:'580px', height:'415px'}}>
+                <CardActionArea  width='395px' height='580px'>
                   <img src={logo4} alt="logo4"  width='587' heigh='300' />
                   <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p"style={{marginLeft:"20px"}}>
-                      For this page, the legal input set of this algorithm is positive intergers 1 to 7.<br></br>
-                      Any input other than these numbers are illegal. This algorithm is correct since it can generate correct week name for any legal input.     
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      For this page, the input set of this algorithm is positive intergers 1 to 7.&nbsp;Any other are illegal. This algorithm meets correctness since it can generate correct week name for any legal input.     
                     </Typography>             
                   </CardContent>
                 </CardActionArea>    
               </div>
-              <div className = {classes.resetbutton}>
+              <div className = {classes.resetButton}>
                 <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
               </div>
                 </div>              

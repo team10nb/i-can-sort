@@ -113,16 +113,16 @@ export default function FirstInBackdrop(props) {
           <ButtonBase >
             <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
             <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{
-            y: 0,
-    opacity: 1
-            
-          }}
-          transition={{
-            delay: 0.6
-          }}
-        >
+              initial={{ y: -50, opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1
+                
+              }}
+              transition={{
+                delay: 0.6
+              }}
+            >
             <Card className = {classes.cardTwo} >         
               <CardContent className = {classes.content2}>
               <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got' basic knowledge, start now!
