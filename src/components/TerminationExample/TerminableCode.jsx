@@ -125,9 +125,7 @@ const Code = (props)=> {
 const TerminableCode = () => {
     // example array
     const arr = [2, 6, 9, 10, 3];
-    // pseudocode highlight block numbers
-    const blockNums = [1, 4, 3, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 5, 7, 4, 3, 7, 7, 8];
-    const {trace, description} = BubbleSort(arr);
+    const {trace, description, blockNums} = BubbleSort(arr);
     
     const props = {
         trace,
