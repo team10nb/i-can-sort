@@ -64,7 +64,7 @@ import Backdrop from '@material-ui/core/Backdrop';
     switch (step) {
       case 0:
         return (
-          <CardActionArea >
+          <CardActionArea style={{width:'580px', height:'403px'}} >
             <img src={logo1} alt="logo1" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -77,7 +77,7 @@ import Backdrop from '@material-ui/core/Backdrop';
         );
       case 1:
         return (
-          <CardActionArea >
+          <CardActionArea style={{width:'580px', height:'403px'}} >
             <img src={logo2} alt="logo2" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -137,7 +137,7 @@ import Backdrop from '@material-ui/core/Backdrop';
             {activeStep === steps - 1 ? (
             <div>
               <div>
-                <CardActionArea  >               
+                <CardActionArea  style={{width:'580px', height:'403px'}}>               
                   <img src={logo3} alt="logo3" width='587' heigh='300'  />
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
@@ -147,7 +147,7 @@ import Backdrop from '@material-ui/core/Backdrop';
                   </CardContent>           
                 </CardActionArea>
               </div>
-              <div className = {classes.resetbutton}>
+              <div className = {classes.button}>
                 <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
               </div>
             </div>
