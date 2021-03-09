@@ -10,13 +10,14 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: "#212121",
   },
-  cardOne: {
+  cardBackground: {
     display: "flex",
         '& > * + *': {     
             marginLeft: theme.spacing(8),
@@ -27,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     opacity:0.8,
     borderRadius:"20px",
+  },
+  cardOne:{
+    width: 230,
+    height: 230,
+    backgroundColor:"#4caf50",
+    color:"white",
+    borderRadius:"30px", 
   },
   cardTwo:{
     width: 230,
@@ -39,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop:"69px"
   },
   content2:{
-    marginTop: "47px",       
+    marginTop: "55px",       
   },
   icon:{
     color:"white",
@@ -59,34 +67,73 @@ export default function FirstInBackdrop(props) {
   return (
     <div>
       <Backdrop className={classes.backdrop} open={open} >
-        <Card className = {classes.cardOne}>
+      <motion.div
+  initial={{ opacity: 0.2, scale: 0 }}
+  animate={{
+    opacity: 1,
+    scale: 1,
+    
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 150,
+    damping: 15,
+    mass: 0.1,
+    
+  }}
+>
+        <Card className = {classes.cardBackground}>
+        
         
           <ButtonBase >
             <Link to="./TutorialMainPage" style={{textDecoration:"none"}}>
-                       
-            <Card className = {classes.cardTwo} >
+            <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{
+            y: 0,
+    opacity: 1
+            
+          }}
+          transition={{
+            delay: 0.4
+          }}
+        >
+            <Card className = {classes.cardOne} >
               <CardContent className = {classes.content1}>
-                <Typography variant="h6" gutterBottom>I am a Freshman, go to tutorial first!
+                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I'm new at this, go to Tutorial first!
                 </Typography>
               </CardContent>
             </Card>
+            </motion.div>
             </Link>
           </ButtonBase>
           
           
+
           <ButtonBase >
             <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
+            <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{
+            y: 0,
+    opacity: 1
             
+          }}
+          transition={{
+            delay: 0.6
+          }}
+        >
             <Card className = {classes.cardTwo} >         
               <CardContent className = {classes.content2}>
-              <Typography variant="h6" gutterBottom>I have already know the basic knowledge, quickly start now!
+              <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got' basic knowledge, start now!
               </Typography>
               </CardContent>
-            </Card>
+            </Card></motion.div>
             </Link>
           </ButtonBase>
           
         </Card>
+        </motion.div>
       </Backdrop>
     </div>
   );

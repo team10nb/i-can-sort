@@ -15,7 +15,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
 import { color as CorrectnessColor } from "../../scenes/mainPages/Correctness";
-import TutorialLink from "./TutorialLink";
+import TutorialLink from "../CorrectnessHelp/CorrectnessHelp";
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring

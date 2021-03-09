@@ -72,24 +72,24 @@ import {color} from '../../scenes/mainPages/Correctness';
     switch (step) {
       case 0:
         return (
-          <CardActionArea  width='395px' height='580px'>
+          <CardActionArea  style={{width:'580px', height:'415px'}}>
             <img src={logo0} alt="logo0" width='587' heigh='300'  />
           </CardActionArea>
 
         );
       case 1:
         return (
-          <CardActionArea  width='395px' height='580px'>
+          <CardActionArea  style={{width:'580px', height:'415px'}}>
             <img src={logo1} alt="logo1"  width='587' heigh='300' />
 
           </CardActionArea>
         );
       case 2:
       return (
-        <CardActionArea  width='395px' height='580px'>
+        <CardActionArea  style={{width:'580px', height:'415px'}}>
           <img src={logo2} alt="logo2"  width='587' heigh='300' />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textSecondary" component="p" style={{marginLeft:"20px"}}>
               By inputting a number from 1 to 7, the algorithm
               will output the week name from Sunday to Saturday.         
             </Typography>             
@@ -98,7 +98,7 @@ import {color} from '../../scenes/mainPages/Correctness';
       );
       case 3:
         return (
-          <CardActionArea  width='395px' height='580px'>
+          <CardActionArea  style={{width:'580px', height:'415px'}}>
             <img src={logo3} alt="logo3"   width='587' heigh='300'/>
             
           </CardActionArea>
@@ -151,11 +151,12 @@ import {color} from '../../scenes/mainPages/Correctness';
               {activeStep === steps - 1 ? (
                 <div>
                   <div>
-                <CardActionArea  width='395px' height='580px'>
+                <CardActionArea  style={{width:'580px', height:'415px'}}>
                   <img src={logo4} alt="logo4"  width='587' heigh='300' />
                   <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      For this page, the legal input set of this algorithm is positive intergers 1 to 7.&nbsp;Any other are illegal. This algorithm meets correctness since it can generate correct week name for any legal input.     
+                    <Typography variant="body2" color="textSecondary" component="p"style={{marginLeft:"20px"}}>
+                      For this page, the legal input set of this algorithm is positive intergers 1 to 7.<br></br>
+                      Any input other than these numbers are illegal. This algorithm is correct since it can generate correct week name for any legal input.     
                     </Typography>             
                   </CardContent>
                 </CardActionArea>    
