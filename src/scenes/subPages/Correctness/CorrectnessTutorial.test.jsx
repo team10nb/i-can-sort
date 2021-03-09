@@ -12,7 +12,7 @@ test('should contain buttons', () => {
     const {getAllByText} = render(        
             <CorrectnessTutorial />
     );
-    getAllByText("Input");
+    // getAllByText("Input");
     // getAllByText("Input_Def");
     getAllByText("Termination");
     // getAllByText("Termination_Def");
