@@ -433,7 +433,7 @@ Object {
                   class="makeStyles-root-6"
                 >
                   <a
-                    href="/Tutorial"
+                    href="/TutorialMainPage"
                     style="text-decoration: none;"
                   >
                     <button
@@ -467,25 +467,6 @@ Object {
                     />
                   </button>
                   <a
-                    href="/EfficiencyMainPage"
-                    style="text-decoration: none;"
-                  >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                      tabindex="0"
-                      type="button"
-                    >
-                      <span
-                        class="MuiButton-label"
-                      >
-                        Efficiency
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
-                  <a
                     href="/CorrectnessMainPage"
                     style="text-decoration: none;"
                   >
@@ -498,25 +479,6 @@ Object {
                         class="MuiButton-label"
                       >
                         Correctness
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
-                  <a
-                    href="/Exercise"
-                    style="text-decoration: none;"
-                  >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                      tabindex="0"
-                      type="button"
-                    >
-                      <span
-                        class="MuiButton-label"
-                      >
-                        Exercise
                       </span>
                       <span
                         class="MuiTouchRipple-root"
@@ -960,7 +922,7 @@ Object {
                 class="makeStyles-root-6"
               >
                 <a
-                  href="/Tutorial"
+                  href="/TutorialMainPage"
                   style="text-decoration: none;"
                 >
                   <button
@@ -994,25 +956,6 @@ Object {
                   />
                 </button>
                 <a
-                  href="/EfficiencyMainPage"
-                  style="text-decoration: none;"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiButton-label"
-                    >
-                      Efficiency
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
-                <a
                   href="/CorrectnessMainPage"
                   style="text-decoration: none;"
                 >
@@ -1025,25 +968,6 @@ Object {
                       class="MuiButton-label"
                     >
                       Correctness
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
-                <a
-                  href="/Exercise"
-                  style="text-decoration: none;"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiButton-label"
-                    >
-                      Exercise
                     </span>
                     <span
                       class="MuiTouchRipple-root"

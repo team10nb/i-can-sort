@@ -13,6 +13,7 @@ export default function TutorialSwap(props) {
         history: props.history,
         // intro: intro,
         // operate: operate,
+        message: "Swap a & b"
     };
 
     const SwapAnimation = () => {
@@ -197,45 +198,45 @@ export default function TutorialSwap(props) {
 
         const table = [
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{0}</td>
+                <tr>
+                <td style={styles.td}>{0}</td>
+                <td style={styles.td}>{0}</td>
+                <td style={styles.td}>{0}</td>
                 </tr>
             ],
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{0}</td>
+                <tr>
+                <td style={styles.td}>{0}</td>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{0}</td>
                 </tr>
             ],
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{10}</td>
+                <tr>
+                <td style={styles.td}>{0}</td>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{10}</td>
                 </tr>
             ],
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{10}</td>
+                <tr>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{10}</td>
                 </tr>
             ],
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{10}</td>
-                <td style = {styles.td}>{10}</td>
+                <tr>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{10}</td>
+                <td style={styles.td}>{10}</td>
                 </tr>
             ],
             [
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{5}</td>
-                <td style = {styles.td}>{10}</td>
-                <td style = {styles.td}>{5}</td>
+                <tr>
+                <td style={styles.td}>{5}</td>
+                <td style={styles.td}>{10}</td>
+                <td style={styles.td}>{5}</td>
                 </tr>
             ],
         ]
@@ -254,6 +255,7 @@ export default function TutorialSwap(props) {
 
     return (
         <div>
+            <TutorialSubPage {...data}/>
             <SwapAnimation />
         </div>
     );
@@ -261,16 +263,8 @@ export default function TutorialSwap(props) {
 
 
 const styles = {
-    tr:{
-        height:60,
-        display: 'inline-block',
-        border:1, 
-    },
     td:{
-        fontSize: 16,
-        display: 'block',
-        textAlign:'center',
-        width: 35,
-        height:30,
+        textAlign:"center",
+        width:50
     },
 }

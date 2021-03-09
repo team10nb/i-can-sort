@@ -205,7 +205,7 @@ Object {
                   class="makeStyles-root-6"
                 >
                   <a
-                    href="/Tutorial"
+                    href="/TutorialMainPage"
                     style="text-decoration: none;"
                   >
                     <button
@@ -242,25 +242,6 @@ Object {
                       />
                     </button>
                   </a>
-                  <a
-                    href="/EfficiencyMainPage"
-                    style="text-decoration: none;"
-                  >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                      tabindex="0"
-                      type="button"
-                    >
-                      <span
-                        class="MuiButton-label"
-                      >
-                        Efficiency
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
                   <button
                     class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
                     style="color: white; background-color: rgb(255, 111, 0);"
@@ -276,25 +257,6 @@ Object {
                       class="MuiTouchRipple-root"
                     />
                   </button>
-                  <a
-                    href="/Exercise"
-                    style="text-decoration: none;"
-                  >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                      tabindex="0"
-                      type="button"
-                    >
-                      <span
-                        class="MuiButton-label"
-                      >
-                        Exercise
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
                 </div>
               </div>
             </div>
@@ -504,7 +466,7 @@ Object {
                 class="makeStyles-root-6"
               >
                 <a
-                  href="/Tutorial"
+                  href="/TutorialMainPage"
                   style="text-decoration: none;"
                 >
                   <button
@@ -541,25 +503,6 @@ Object {
                     />
                   </button>
                 </a>
-                <a
-                  href="/EfficiencyMainPage"
-                  style="text-decoration: none;"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiButton-label"
-                    >
-                      Efficiency
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
                 <button
                   class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
                   style="color: white; background-color: rgb(255, 111, 0);"
@@ -575,25 +518,6 @@ Object {
                     class="MuiTouchRipple-root"
                   />
                 </button>
-                <a
-                  href="/Exercise"
-                  style="text-decoration: none;"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiButton-label"
-                    >
-                      Exercise
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
               </div>
             </div>
           </div>

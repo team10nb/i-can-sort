@@ -10,37 +10,33 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import IntroBubble from '../Introduction/BubbleSort';
 
 //css for table
 const styles = {
     table:{
-        display: 'block', 
+        fontFamily: "Space Mono",
+        fontWeight: "500",
+        fontSize:"12px",
     },
     thead:{
-        float: 'left',
+        lineHeight: "1em", 
+        fontSize:"16px",
     },
     tbody:{
-        display: 'inline-block',
+        lineHeight: "2.7em",
     },
     th:{
-        fontSize: 16,
-        display: 'block',
-        width: 60,
-        height:30,
-        textAlign:'center',
-        textTransform: 'lowercase',
+        textAlign:"center",
+        width:50 
     },
     tr:{
-        height:60,
-        display: 'inline-block',
-        border:1, 
+        textAlign:"center",
+        width:50 
     },
     td:{
-        fontSize: 16,
-        display: 'block',
-        textAlign:'center',
-        width: 35,
-        height:30,
+        textAlign:"center",
+        width:50
     },
 }
 
@@ -60,12 +56,19 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#FEE5D4",
+            fontFamily: "Space Mono",
+            fontWeight: "500",
+            fontSize:"12px",
+            backgroundColor: "#c8e6c9",
             marginTop: -6,
+            lineHeight: "2.5em",
         },
         noBackground:{
+            fontFamily: "Space Mono",
+            fontWeight: "500",
+            fontSize:"12px",
             marginTop: -6,
-
+            lineHeight: "2.5em",
         }
         
     }));
@@ -123,14 +126,14 @@ export default function Terminable(props){
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
     const useStyles = makeStyles((theme) =>({
-        // root: {  
-        //     '& > * + *': {     
-        //         marginTop: theme.spacing(3),
-        //     },
-        //     // marginTop: 50,
-        //     width: 380,
-            
-        // },
+        root: {  
+            // '& > * + *': {     
+            //     marginTop: theme.spacing(3),
+            // },
+            marginTop: 60,
+            // width: 380, 
+            textAlign:"center",
+        },
         bars: {
             listStyle: "none",
             padding: 0,
@@ -163,8 +166,8 @@ export default function Terminable(props){
             fontWeight: "600",
         },
         cardOne:{
-            width: 380, 
-            height: 310,
+            width: 400, 
+            height: 520,
             display: "grid",
             justifyContent: "center",
             alignContent: "flex-end",
@@ -172,15 +175,16 @@ export default function Terminable(props){
             paddingTop: -30,
         },
         cardTwo:{
-            width: 320, 
-            height: 180,
+            width: 400, 
+            height: 300,
             paddingTop: 5,
             background: "#F0F0F0",   
-            marginTop: 100, 
+            marginTop: 30, 
+            display: 'flex',
         },
         cardThree:{
-            width: 320, 
-            height: 120,
+            width: 400, 
+            height: 180,
             paddingTop: 5,
             background: "#F0F0F0",  
         },
@@ -200,6 +204,7 @@ export default function Terminable(props){
             '& > *': 
             {     
                 marginRight: 20,
+                marginLeft: 20,
             },
         },
     }));
@@ -372,44 +377,47 @@ export default function Terminable(props){
         return(
             <div>
             <table style={styles.table}>
-                <thead style = {styles.thead}>
-                <tr style = {styles.tr}>
-                    <th style = {styles.th}>temp</th>
-                    <th style = {styles.th}>a</th>
-                    <th style = {styles.th}>b</th>
-                </tr>
+                <thead style={styles.thead}>
+                    <tr style={styles.tr}>
+                        <th style={styles.th}>temp</th>
+                        <th style={styles.th}>a</th>
+                        <th style={styles.th}>b</th>
+                    </tr>
                 </thead>
-                <tbody style = {styles.tbody}>
-                <tr style = {styles.tr}>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{0}</td>
-                <td style = {styles.td}>{0}</td>
-                </tr>
-                {tables()}
+                <tbody style={styles.tbody}>
+                    <tr>
+                        <td style={styles.td}>{0}</td>
+                        <td style={styles.td}>{0}</td>
+                        <td style={styles.td}>{0}</td>
+                    </tr>
+                    {tables()}
                 </tbody>
             </table>
+                
             </div>
         );
     }
 
     return (            
-            // <div className = {classes.root}>
-            <div>
-                <div className = {classes.title}>Swap a & b</div>
+            <div className = {classes.root}>
+                {/* <div className = {classes.title}>Swap a & b</div> */}
 
                 <div className = {classes.div}>
                     <div>
                     <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
                         <CardContent>
-                            <ExampleTable table={table}/>
+                            Intro
                         </CardContent>
                        
                     </Card>
                     <Card className = {classes.cardTwo}>
-                        <CardContent>
+                        <CardContent style={{marginTop:"3.7em"}}>
                             <Typography>
                                 <Code blockNum={blockNums[currentStep]}/>
                             </Typography>
+                        </CardContent>
+                        <CardContent style={{marginLeft:50, border:1, borderLeftStyle:"solid"}}>
+                            <ExampleTable table={table}/>
                         </CardContent>
                         
                     </Card>
