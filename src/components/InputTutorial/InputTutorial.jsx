@@ -111,7 +111,7 @@ export default function InputTutorial(props) {
     const classes = useStyles();
 
     const week = [
-        "Sunday",
+        
         "Monday",
         "Tuesday",
         "Wednesday",
@@ -152,8 +152,8 @@ export default function InputTutorial(props) {
     const [illegalString, setIllegalString] = useState(["a", "e", "d"]);
     // The illegal array
     const [illegalArray, setIllegalArray] = useState(["a", "e", "d"]);
-    const [weekday, setWeekday] = useState("Sunday");
-    const [dayCount, setDayCount] = useState(0);
+    const [weekday, setWeekday] = useState("Monday");
+    const [dayCount, setDayCount] = useState(1);
 
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
