@@ -1,6 +1,3 @@
-/*
-    Author: Yuting Jiang
-*/
 
 import React from 'react';
 import { useState } from 'react';
@@ -15,6 +12,45 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import BackDrop from '../../../../components/CorrectnessExample/BackDrop';
+
+const useStyles = makeStyles((theme) => ({
+    button:{
+        borderWidth: 1.5,
+        borderColor: '#808080',
+        color: '#808080',
+        borderRadius: 11,
+        "&:hover, &$focusVisible": {backgroundColor: '#EFEFEF'},
+        marginLeft: "10px",
+        height: 40,
+        width: 80,
+    },
+}))
+
+const CssTextField = withStyles({
+    root: {
+        "& label.Mui-focused": {
+            color: "grey",
+        },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: color,
+        },
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderColor: "grey",
+                borderRadius: 12,
+            },
+            "&:hover fieldset": {
+                borderColor: "grey",
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: color,
+            },
+        },
+        width: "500px",
+    },
+})(TextField);
 
 const title_interminate = 
 <h3>Example1<br />
@@ -37,9 +73,9 @@ const title_interminate =
 </h3>
 
 const code_interminate = 
-<pre>  
+<pre style={{marginTop:-20}}>  
 {`
-factorial1 (int n){
+factorial (int n){
   int result = 1;
 `}
 <code style = {{color: red[700]}}>  for (int i=1; ; i++)</code>
@@ -51,8 +87,8 @@ factorial1 (int n){
 }
 `}
 </pre>
+
 const props_interminate = {
-    list: [1,1,2,6,24,120,720,5040,40320,362880,'...'],
     exp: "The algorihm cannot terminate, no output.",
     output: 1,
 }
@@ -78,9 +114,9 @@ const title_terminateAndIncorrect =
     </Button>
 </h3>;
 const code_terminateAndIncorrect = 
-<pre>  
+<pre style={{marginTop:-20}}> 
 {`
-factorial2 (int n){
+factorial (int n){
   int result = 1;
   for (int i=1; i<=n; i++)
   {
@@ -93,7 +129,6 @@ factorial2 (int n){
 `}
 </pre>
 const props_terminateAndIncorrect = {
-    list: [1,2,4,7,11,16,22,29],
     exp: "Wrong result. The output is not as expected.",
     output: 2,
 }
@@ -119,9 +154,9 @@ const title_terminateAndCorrect =
     </Button>
 </h3>;
 const code_terminateAndCorrect = 
-<pre>  
+<pre style={{marginTop:-20}}>  
 {`
-factorial3 (int n){
+factorial (int n){
   int result = 1;
   for (int i=1; i<=n; i++)
   {
@@ -132,60 +167,24 @@ factorial3 (int n){
 `}
 </pre>
 const props_terminateAndCorrect = {
-    list: [1,1,2,6,24,120,720,5040],
     exp: "The algorithm termitates and output is correct.",
     output: 3,
 }  
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     '& > *': {
-//       margin: theme.spacing(1),
-//     },
-//   },
-// }));
-
-// function runAlgoritm(props){
-//     const {output} = props;
-//     // setOutput(output);
-// }
+const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</font> different examples to implement an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font>, which is used <br />to calculate the factorial of 1 to 20.</p>
 
 export default function Partial() {
+    const classes = useStyles();
     const [table,setTable] = useState([]);
     const [timer,setTimer] = useState();
 
     const [exp,setExp] = useState("");
-    const [output,setOutput] = useState("");
+    const [output,setOutput] = useState(null);
 
     const [input, setInput] = useState();
     const [expOutput, setExpOutput] = useState();
     const [wrongMsg, setWrongMsg] = useState(" ");
-   
-    // const handleClick = (props) => () => {
-    //     clearInterval(timer);
-    //     setExp("");
-    //     setOutput("");
-    //     setTable([]);
 
-    //     const {list, exp, output} = props;
-    //     var current = [];
-    //     var times=0;
-
-        // var newTimer =setInterval(()=>{
-        // if(times >= list.length-1){
-        //     setExp(exp);
-        //     setOutput(output);
-        //     clearInterval(newTimer);
-        // }
-        // current.push(list[times]);
-        // const newTable = current.slice();
-        // setTable(newTable);
-        // times++;
-        // },300);
-
-        // setTimer(newTimer);
-    // }
-    
     const confirm = () => {
         setExp("");
         setOutput("");
@@ -193,34 +192,32 @@ export default function Partial() {
         if(isUndefined(input)){
             setInput("empty");
             setExpOutput("");
-            setWrongMsg("Please enter a positive integer less than 100.");
+            setWrongMsg("Please enter a positive integer from 1 to 20.");
             return;
         }
-    
-        let s = input.replace(/\s+/g, "");
-        s = removeDot(s);
-    
+
         //input is null
-        if(s === ""){
+        if(input === ""){
             setInput("empty");
             setExpOutput("");
-            setWrongMsg("Please enter a positive integer less than 100.");
+            setWrongMsg("Please enter a positive integer from 1 to 20.");
         }
     
         //valid input
-        if (s.match(/^[0-9]*$/) && input<101 ){
+        if (input.match(/^[0-9]*$/) && input>0 && input<21){
             setExpOutput(factorial(input));
             setWrongMsg("");
         }
         else{
             setInput("empty");
             setExpOutput("");
-            setWrongMsg("Please enter a positive integer less than 100.");
+            setWrongMsg("Please enter a positive integer from 1 to 20.");
         }
     };
 
     const handleClick = (props) => () => {
         const {exp, output} = props;
+        confirm();
         runAlgorithm(exp, output);
     };
 
@@ -230,7 +227,7 @@ export default function Partial() {
 
     const runAlgorithm = (exp, index) => {
         if(isUndefined(input) || input==="empty"){
-            setExp("Please enter input first.");
+            setExp("Please enter input and click 'CONFIRM' button first.");
             return;
         }
         switch(index) {
@@ -253,14 +250,15 @@ export default function Partial() {
 
     return( 
         <div>
-            {/* <h1 style = {{paddingBottom:30}}>Let's take 7! as an example.</h1> */}
-            <Card style={{height: 280, width:785, backgroundColor:'#EFEFEF'}}>
+            <BackDrop message={message}/>
+            <div style={{paddingLeft:6}}>
+            <Card style={{height: 280, width:770, backgroundColor:'#EFEFEF', paddingTop:6}}>
             <CardContent>
                 <h1 style={{height:35}}>Algorithm: factorial(n) </h1>
                 <h1 style={{ height:60}}>Input: &nbsp;
-                <TextField 
+                <CssTextField 
                     size="small" 
-                    label="Enter a positive integer from 0 to 100" 
+                    label="Enter a positive integer from 1 to 20" 
                     InputProps={{
                         startAdornment: <InputAdornment position="start">n = </InputAdornment>,
                     }}
@@ -270,23 +268,16 @@ export default function Partial() {
                     helperText={wrongMsg}
                     style = {{width:300}}
                 />
-                <button onClick={confirm} style={{border:'none', outline:'none', width:40, display: 'inline-block'}}>Confirm</button>
+                {/* <Button variant="outlined" className={classes.button} onClick={confirm}>Confirm</Button> */}
                 </h1>
-                {/* <div style = {{height:140}}>
-                    <h1 style = {{display: 'inline-block',paddingBottom:10}}>Algorithm: factorial of 7 </h1><br />
-                    <Button variant='outlined' disabled style={{height:60, backgroundColor:'#EFEFEF', color:color}}>
-                    <ExampleTable numbers={table} style = {{paddingLeft:20}}/>
-                    </Button>
-                    <h1 style = {{color: color}}> {exp}</h1>
-                </div> */}
                 <h1>Expected Output: {expOutput}</h1>
-                <h3>----------------------------Click below example algorithms to see the output------------------------------</h3>
+                <h1 style={{color: color}}>----------------Click below example algorithms to see the output------------------</h1>
                 <h1>Actual Output: {output}</h1>
                 <h1 style = {{color: color}}> {exp}</h1>
             </CardContent>
             </Card>
-
-            <div style = {{paddingTop:20}}>
+            </div>
+            <div style = {{paddingTop:10}}>
                 <div style={{display:'inline-block'}}>
                 <AlgorithmButton 
                     paddingLeft={0} 
@@ -294,7 +285,6 @@ export default function Partial() {
                     title = {title_interminate} 
                     code = {code_interminate} 
                     onClick={handleClick(props_interminate)}
-                    // onClick={runAlgoritm(props_interminate)}
                 />
                 </div>
                 <div style={{display:'inline-block'}}>
@@ -304,7 +294,6 @@ export default function Partial() {
                     title = {title_terminateAndIncorrect} 
                     code = {code_terminateAndIncorrect} 
                     onClick={handleClick(props_terminateAndIncorrect)}
-                    // onClick={runAlgoritm(props_terminateAndIncorrect)}
                 />
                 </div>
                 <div style={{display:'inline-block'}}>
@@ -345,74 +334,11 @@ function factorial(number){
 }
 
 function factorial_add(number){
+    if(number==="")
+        return;
     var result = 1;
     for (var i=1; i<=number; i++){
         result = result + i;
     }
     return result;
 }
-
-// const styles = {
-//     table:{
-//         display: 'block', 
-//     },
-//     thead:{
-//         float: 'left',
-//     },
-//     tbody:{
-//         display: 'inline-block',
-//     },
-//     th:{
-//         fontSize: 16,
-//         display: 'block',
-//         width: 60,
-//         height:30,
-//         textAlign:'center',
-//         textTransform: 'lowercase',
-//     },
-//     tr:{
-//         height:60,
-//         display: 'inline-block',
-//         border:1, 
-//         // borderRightStyle:'solid', 
-//     },
-//     td:{
-//         fontSize: 16,
-//         display: 'block',
-//         textAlign:'center',
-//         width: 57,
-//         height:30,
-//     },
-// }
-
-// function ExampleTable(props){
-//     function tables() {
-//         let table=[];
-//         let i = 1;
-//         for(var index=0; index<props.numbers.length; index++){
-//             i = index + 1;
-//             if(i>10) {i = "...";}
-//             table.push(
-//                 <tr style = {styles.tr}>
-//                 <td style = {styles.td}>{props.numbers[index]}</td>
-//                 <td style = {styles.td}>{i}</td>
-//                 </tr>
-//             ); 
-//         }
-//         return table;
-//     }
-
-//     return(
-//         <table style={styles.table}>
-//             <thead style = {styles.thead}>
-//             <tr style = {styles.tr}>
-//                 <th style = {styles.th}>result</th>
-//                 <th style = {styles.th}>i</th>
-//             </tr>
-//             </thead>
-//             <tbody style = {styles.tbody}>
-//             {tables()}
-//             </tbody>
-//         </table>
-//     );
-// }

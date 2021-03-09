@@ -19,7 +19,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
 import Input from '../../../components/InputTutorial/InputTutorial';
-import Partial from './Tutorial/Partial';
+import Example from './Tutorial/Example';
 import Partial_Def from './Tutorial/Parital_Def';
 import Total_Def from './Tutorial/Total_Def';
 
@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   function getSteps() {
-    return ['Input', 
+    return [
             'Termination',
             'Introduction',
             'Partial Correctness',
@@ -131,21 +131,21 @@ const useStyles = makeStyles((theme) => ({
 
   function getStepContent(activeStep) {
       switch (activeStep) {
-          case 0:
+          case 1:
             return(
                 <Input />
             );
-        case 3:
+        case 2:
             return(
                 <Partial_Def />
             );
-        case 4:
+        case 3:
             return(
                 <Total_Def />
             );
-        case 5:
+        case 4:
             return(
-                <Partial />
+                <Example />
             );
         default:
             break;
@@ -206,36 +206,36 @@ const useStyles = makeStyles((theme) => ({
                             <ListItemText primary= 'Catalogue' />
                             </ListItem>
                         </List>
-                        <Divider />
-                        <List >
-                            <ListItem  className = {classes.listItem}>                          
-                            <ListItemText primary= 'Input' />
-                            </ListItem>
-                            {['Input'].map((text, index) => (
-                                
-                            index === activeStep 
-                                ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}>
-                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} />
-                                </ListItem>
-                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}>
-                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} />
-                                </ListItem> 
-                            ))}                  
-                        </List>
-                        <Divider />
+{/*                         <Divider /> */}
+{/*                         <List > */}
+{/*                             <ListItem  className = {classes.listItem}>                           */}
+{/*                             <ListItemText primary= 'Input' /> */}
+{/*                             </ListItem> */}
+{/*                             {['Input'].map((text, index) => ( */}
+{/*                                  */}
+{/*                             index === activeStep  */}
+{/*                                 ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}> */}
+{/*                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon> */}
+{/*                                     <ListItemText primary={text} /> */}
+{/*                                 </ListItem> */}
+{/*                                 :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}> */}
+{/*                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon> */}
+{/*                                     <ListItemText primary={text} /> */}
+{/*                                 </ListItem>  */}
+{/*                             ))}                   */}
+{/*                         </List> */}
+{/*                         <Divider /> */}
                         <List>
                             <ListItem className = {classes.listItem}>             
                             <ListItemText primary= 'Termination' />
                             </ListItem>
                             {['Termination'].map((text, index) => (
-                            index + 1 === activeStep
-                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 1)}>
+                            index === activeStep
+                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} />
                                 </ListItem>
-                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 1)}>
+                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} />
                                 </ListItem> 
@@ -248,12 +248,12 @@ const useStyles = makeStyles((theme) => ({
                             <ListItemText primary= 'Correctness' />
                             </ListItem>
                             {['Introduction' , 'Partial Correctness', 'Total Correctness', 'Example' ].map((text, index) => (
-                            index + 2 === activeStep
-                            ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 2)}>
+                            index + 1 === activeStep
+                            ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 1)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
-                            :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 2)}
+                            :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 1)}
                                 ><ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem> 
