@@ -64,9 +64,6 @@ const useStyles = makeStyles((theme) =>({
         fontSize:"16px",
         justifyContent: "center",
     },
-    box:{
-        marginTop:-60,
-    }
 }));
 
 // dynamic pseudocode
@@ -85,7 +82,7 @@ const Code = (props)=> {
     }));
     const classes = useStyles();
 
-    const terminableCode = 
+    const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`function bubble_sort (array, length) {`}
@@ -117,12 +114,13 @@ const Code = (props)=> {
     </div>
     
     return(
-        <div>{terminableCode}</div>
+        <div>{forCode}</div>
     )
 }
 
+const width = 320;
 // algorithm can terminate example
-const TerminableCode = () => {
+export default function ForLoop() {
     // example array
     const arr = [2, 6, 9, 10, 3];
     // pseudocode highlight block numbers
@@ -131,17 +129,13 @@ const TerminableCode = () => {
     
     const props = {
         trace,
-        description: "",
-        width: 320,
+        description,
+        width,
         blockNums,
         useStyles,
         Code,
-        title: "Algorithm Can Terminate",
+        title: "For Loop",
     };
     
     return(<AnimationCode {...props}/>);
 }
-
-export {
-    TerminableCode
-};

@@ -4,12 +4,10 @@
 
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import TerminableCode from '../../../../components/TerminationExample/TerminableCode';
+import { TerminableCode } from '../../../../components/TerminationExample/TerminableCode';
 import InterminableCode from '../../../../components/TerminationExample/InterminableCode';
-import BubbleSort from '../../../../components/SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 
 const useStyles = makeStyles((theme) => ({
-
     root:{
         display: "flex",
         '& > * + *': {     
@@ -17,29 +15,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
-
-// slider width
-const width = 320; 
-// explaination box height
-const explainationBoxHeight = 3;
-
-// algorithm can terminate example
-const TerminablePart = () => {
-    // example array
-    const arr = [2, 6, 9, 10, 3];
-    // pseudocode highlight block numbers
-    const blockNums = [1, 4, 3, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 5, 7, 4, 3, 7, 7, 8];
-
-    const {trace, description} = BubbleSort(arr);
-    
-    const props = {
-        trace,
-        width,
-        blockNums
-    };
-    
-    return(<TerminableCode {...props}/>);
-}
 
 // algorithm cannot terminate example
 const InterminablePart = () => {
@@ -64,7 +39,7 @@ const InterminablePart = () => {
     
     const props = {
         trace,
-        explainationBoxHeight,
+        explainationBoxHeight: 3,
         blockNums
     };
 
@@ -76,7 +51,7 @@ export default function Termination() {
 
     return(
         <div className = {classes.root}>
-            <TerminablePart/>
+            <TerminableCode/>
             <InterminablePart/>
         </div>
     );
