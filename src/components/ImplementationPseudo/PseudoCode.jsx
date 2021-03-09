@@ -60,26 +60,32 @@ const Selection = (props)=> {
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`repeat (numOfElements - 1) times{`}
         </pre>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
 {`  set the first unsorted element as the minimum`}
         </pre>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`  for each of the unsorted elements{`}
+        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
+{`   for each of the unsorted elements{`}
         </pre>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`    if element < currentMinimum{`}
+        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
+{`     if (element < currentMinimum){`}
         </pre>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`      set element as new minimum`}
-        </pre>
-        <pre>
-{`    }`}            
-        </pre>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`  swap minimum with first unsorted position`}
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
+{`       set element as new minimum`}
         </pre>
         <pre>
-{`  }`}            
+{`     }else{`}            
+        </pre>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+{`       compare next unsorted element`}         
+        </pre>
+        <pre>
+{`     }`}            
+        </pre>
+        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+{`   swap minimum with first unsorted position`}
+        </pre>
+        <pre>
+{`   }`}            
         </pre>
         <pre>
 {`}`}            
@@ -94,9 +100,6 @@ const Selection = (props)=> {
   
   
 
-
-
-
 const Insertion = (props)=> {
     const {blockNum} = props;
     const classes = useStyles();
@@ -107,28 +110,31 @@ const Insertion = (props)=> {
 {`mark first element as sorted`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for each unsorted element X{`}
+{` for each unsorted element X{`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`  'extract' the element X`}
+{`   'extract' the element X`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  for j = lastSortedIndex down to 0{`}
+{`   for j = lastSortedIndex down to 0{`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`    if current element j > X`}
+{`     if (current element j > X){`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`      move sorted element to the right by 1`}
+{`       swap sorted element to the right by 1`}
+        </pre>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
+{`     }`}
         </pre>
         <pre>
-{`    }`}            
+{`   }`}            
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`    break loop and insert X here`}
+{`     break loop and insert X here`}
         </pre>
         <pre>
-{`  }`}            
+{` }`}            
         </pre>
         <pre>
 {`}`}            
@@ -186,14 +192,6 @@ const Quick = (props)=> {
         quickCode
     );
 }
-
-
-    
-
-
-
-
-
 
 
 
