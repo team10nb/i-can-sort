@@ -119,8 +119,7 @@ export default function Terminable(props){
             margin: 0,
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
-            marginTop: 32,
-            marginBottom: "5px",
+            marginTop: 36,
             marginRight: "15px",
             marginLeft: "15px",
             width: "30px",
@@ -136,7 +135,7 @@ export default function Terminable(props){
         },
         cardOne:{
             width: 380, 
-            height: 240
+            height: 240,
         },
         cardTwo:{
             width: 380, 
@@ -145,7 +144,7 @@ export default function Terminable(props){
         },
         slider:{
             marginLeft: 28,
-            marginBottom: 0,
+            marginBottom: -9,
         },
         title:{
             display:"flex",

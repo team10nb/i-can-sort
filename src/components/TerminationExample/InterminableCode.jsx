@@ -93,7 +93,6 @@ export default function Interminable(props){
             listStyle: "none",
             padding: 0,
             margin: 0,
-            // marginBottom: 10,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -105,7 +104,7 @@ export default function Interminable(props){
             margin: 0,
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
-            marginTop: 70,
+            marginTop: 36,
             marginBottom: "5px",
             marginRight: "15px",
             marginLeft: "15px",
@@ -122,7 +121,7 @@ export default function Interminable(props){
         },
         cardOne:{
             width: 380, 
-            height: 240
+            height: 240,
         },
         cardTwo:{
             width: 380, 
@@ -262,7 +261,7 @@ export default function Interminable(props){
                 
                 <div style={{
                     marginLeft: 160,
-                    marginTop: -10,
+                    marginTop: -12,
                 }}>
                     <IconButton
                         // function using depends on isPlaying

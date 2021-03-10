@@ -48,17 +48,17 @@ const InterminablePart = () => {
     // loop trace
     const trace = [
         [
-            {value: 4, height: 40, backgroundColor: "#00BFFF", key: 0, y: 0},
-            {value: 6, height: 60, backgroundColor: "#00BFFF", key: 1, y: 0}
+            {value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 10, height: 100, backgroundColor: "#00BFFF", key: 1, y: 0}
         ],[
-            {value: 4, height: 40, backgroundColor: "#FFD700", key: 0, y: 0},
-            {value: 6, height: 60, backgroundColor: "#FFD700", key: 1, y: 0}
+            {value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0},
+            {value: 10, height: 100, backgroundColor: "#FFD700", key: 1, y: 0}
         ],[
-            {value: 6, height: 60, backgroundColor: "#00BFFF", key: 1, y: 0},
-            {value: 4, height: 40, backgroundColor: "#00BFFF", key: 0, y: 0}
+            {value: 10, height: 100, backgroundColor: "#00BFFF", key: 1, y: 0},
+            {value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0}
         ],[
-            {value: 6, height: 60, backgroundColor: "#FFD700", key: 1, y: 0},
-            {value: 4, height: 40, backgroundColor: "#FFD700", key: 0, y: 0}
+            {value: 10, height: 100, backgroundColor: "#FFD700", key: 1, y: 0},
+            {value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0}
         ]
     ];
     
