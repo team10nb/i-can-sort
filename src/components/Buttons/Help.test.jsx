@@ -2,7 +2,7 @@
     Author: Yijie Lu
 */
 import { render } from '@testing-library/react';
-import CHelp from './CHelp';
+import Help from './Help';
 
 const mockHandleClick = jest.fn();
     
@@ -12,7 +12,7 @@ const props = {
     handleOpen: mockHandleClick,
 };
 test('should contain 1 buttons', () => {
-    const {getAllByRole} = render(<CHelp {...props}/>);
+    const {getAllByRole} = render(<Help {...props}/>);
     const buttons = getAllByRole('button');
     expect(buttons.length).toBe(1);
 })
@@ -20,6 +20,6 @@ test('should contain 1 buttons', () => {
 test('help button should match Snapshot', () => {
     
  
-const content = render(<CHelp {...props} />);
+const content = render(<Help {...props} />);
 expect(content).toMatchSnapshot();
 })
