@@ -11,7 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ExplainationBox from "../ExplainationBox/ExplainationBox";
 import IntroBubble from '../Introduction/BubbleSort';
-
+import { Divider } from "@material-ui/core";
 //css for table
 const styles = {
     table:{
@@ -21,7 +21,7 @@ const styles = {
     },
     thead:{
         lineHeight: "1em", 
-        fontSize:"16px",
+        fontSize:"13px",
     },
     tbody:{
         lineHeight: "2.7em",
@@ -56,6 +56,7 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
+            width: "170px",
             fontFamily: "Space Mono",
             fontWeight: "500",
             fontSize:"12px",
@@ -64,6 +65,7 @@ const Code = (props)=> {
             lineHeight: "2.5em",
         },
         noBackground:{
+            width: "170px",
             fontFamily: "Space Mono",
             fontWeight: "500",
             fontSize:"12px",
@@ -138,7 +140,7 @@ export default function Terminable(props){
             listStyle: "none",
             padding: 0,
             margin: 0,
-            marginBottom: 20,
+            marginBottom: 30,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -176,15 +178,16 @@ export default function Terminable(props){
         },
         cardTwo:{
             width: 400, 
-            height: 300,
-            paddingTop: 5,
+            height: 265,
+            paddingTop: 10,
+            paddingBottom: 10,
             background: "#F0F0F0",   
             marginTop: 30, 
             display: 'flex',
         },
         cardThree:{
             width: 400, 
-            height: 180,
+            height: 200,
             paddingTop: 5,
             background: "#F0F0F0",  
         },
@@ -411,12 +414,15 @@ export default function Terminable(props){
                        
                     </Card>
                     <Card className = {classes.cardTwo}>
-                        <CardContent style={{marginTop:"3.7em"}}>
+                        
+                        <CardContent style={{marginTop:"3px"}}>
+                            <div style={{marginBottom:"13px", fontWeight:"600", fontFamily:"Space Mono"}}>Code</div> 
                             <Typography>
                                 <Code blockNum={blockNums[currentStep]}/>
                             </Typography>
                         </CardContent>
-                        <CardContent style={{marginLeft:50, border:1, borderLeftStyle:"solid"}}>
+                        <Divider orientation="vertical" flexItem />
+                        <CardContent style={{marginLeft:0, }}>
                             <ExampleTable table={table}/>
                         </CardContent>
                         
@@ -470,8 +476,10 @@ export default function Terminable(props){
                     
                     />
                     </div>
+                    <div style={{marginLeft: "-38px"}}>
+                        <AnimationControl {...animationControlProps} />
+                    </div>
                     
-                    <AnimationControl {...animationControlProps} />
                 </Card>
                 </div>
                 

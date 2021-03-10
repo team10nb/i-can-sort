@@ -56,7 +56,7 @@ export default function TutorialSwap(props) {
                 },
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 1,
                     y: 0,
@@ -79,14 +79,14 @@ export default function TutorialSwap(props) {
                 },
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 1,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 2,
                     y: 0,
@@ -95,21 +95,21 @@ export default function TutorialSwap(props) {
             [
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 0,
                     y: 0,
                 },
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 1,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 2,
                     y: 0,
@@ -118,21 +118,21 @@ export default function TutorialSwap(props) {
             [
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 0,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 1,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 2,
                     y: 0,
@@ -141,21 +141,21 @@ export default function TutorialSwap(props) {
             [
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 0,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 1,
                     y: 0,
                 },
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 2,
                     y: 0,
@@ -164,21 +164,21 @@ export default function TutorialSwap(props) {
             [
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 0,
                     y: 0,
                 },
                 {
                     value: 10,
-                    height: 100,
+                    height: 200,
                     backgroundColor: "#9C1AFF",
                     key: 1,
                     y: 0,
                 },
                 {
                     value: 5,
-                    height: 50,
+                    height: 100,
                     backgroundColor: "#D309E1",
                     key: 2,
                     y: 0,
