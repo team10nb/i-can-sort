@@ -211,10 +211,12 @@ export default function Terminable(props){
             },
         },
         introduction:{
-            padding:"2px",
+            paddingRight:"5px",
             fontSize:"18px",
             textAlign:"left",
-            marginLeft:"10px"
+            marginLeft:"15px",
+            marginTop:"10px",
+            lineHeight:"1.3em"
 
         }
     }));
@@ -418,7 +420,7 @@ export default function Terminable(props){
                         <CardContent>
                             <div className = {classes.introduction}>
                             Swapping a and b exchanges the value of them. <br></br><br/>
-                            The example here will show you how variable a with value 5 obtains value 10 from variable b, and vice versa.
+                            The example shows how variable a with value 5 obtains value 10 from variable b, and vice versa.
                             </div>
                         </CardContent>
                        
