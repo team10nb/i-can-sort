@@ -210,6 +210,13 @@ export default function Terminable(props){
                 marginLeft: 20,
             },
         },
+        introduction:{
+            padding:"2px",
+            fontSize:"18px",
+            textAlign:"left",
+            marginLeft:"10px"
+
+        }
     }));
 
     const classes = useStyles();
@@ -409,7 +416,10 @@ export default function Terminable(props){
                     <div>
                     <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
                         <CardContent>
-                            Intro
+                            <div className = {classes.introduction}>
+                            Swapping a and b exchanges the value of them. <br></br><br/>
+                            The example here will show you how variable a with value 5 obtains value 10 from variable b, and vice versa.
+                            </div>
                         </CardContent>
                        
                     </Card>
@@ -476,7 +486,7 @@ export default function Terminable(props){
                     
                     />
                     </div>
-                    <div style={{marginLeft: "-38px"}}>
+                    <div style={{marginLeft: "-38px", marginBottom:"15px"}}>
                         <AnimationControl {...animationControlProps} />
                     </div>
                     
