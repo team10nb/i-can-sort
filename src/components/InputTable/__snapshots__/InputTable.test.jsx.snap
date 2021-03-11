@@ -69,7 +69,7 @@ Object {
             </button>
           </div>
           <div
-            class="makeStyles-div1-7"
+            class="makeStyles-tables-7"
           >
             <div
               class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -235,7 +235,7 @@ Object {
             </button>
           </div>
           <div
-            class="makeStyles-div1-7"
+            class="makeStyles-tables-7"
           >
             <div
               class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -403,7 +403,7 @@ Object {
           </button>
         </div>
         <div
-          class="makeStyles-div1-7"
+          class="makeStyles-tables-7"
         >
           <div
             class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -569,7 +569,7 @@ Object {
           </button>
         </div>
         <div
-          class="makeStyles-div1-7"
+          class="makeStyles-tables-7"
         >
           <div
             class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"

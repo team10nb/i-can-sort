@@ -18,7 +18,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
             >
               <a
-                href="/Correctness/Tutorial"
+                href="/TutorialSubPage/Swap"
               >
                 <div
                   style="display: inline-block; margin: 10px;"
@@ -44,7 +44,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Tutorial
+                          Swap
                         </span>
                       </span>
                       <span
@@ -75,7 +75,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
             >
               <a
-                href="/Page"
+                href="/TutorialSubPage/Loop"
               >
                 <div
                   style="display: inline-block; margin: 10px;"
@@ -101,7 +101,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Proof
+                          Loop
                         </span>
                       </span>
                       <span
@@ -121,6 +121,63 @@ Object {
                     >
                       <div
                         class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-32 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        style="transform: translateX(-100%);"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
+            >
+              <a
+                href="/TutorialSubPage/Terminology"
+              >
+                <div
+                  style="display: inline-block; margin: 10px;"
+                >
+                  <div
+                    class="makeStyles-root-33"
+                  >
+                    <button
+                      class="MuiButtonBase-root makeStyles-image-34"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="makeStyles-imageSrc-37"
+                        style="background-color: rgb(213, 213, 213);"
+                      />
+                      <span
+                        class="makeStyles-imageBackdrop-38"
+                      />
+                      <span
+                        class="makeStyles-imageButton-36"
+                      >
+                        <span
+                          class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                        >
+                          Terminology
+                        </span>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    class="makeStyles-root-40"
+                  >
+                    <div
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      aria-valuenow="0"
+                      class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-41 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-42 MuiLinearProgress-determinate"
+                      role="progressbar"
+                    >
+                      <div
+                        class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-43 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                         style="transform: translateX(-100%);"
                       />
                     </div>
@@ -162,7 +219,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-40 PrivateSwipeArea-anchorLeft-41"
+                    class="PrivateSwipeArea-root-51 PrivateSwipeArea-anchorLeft-52"
                     style="width: 20px;"
                   />
                 </div>
@@ -194,14 +251,14 @@ Object {
                   </button>
                   <div
                     aria-hidden="true"
-                    class="MuiBackdrop-root makeStyles-backdrop-35"
+                    class="MuiBackdrop-root makeStyles-backdrop-46"
                     style="opacity: 0; visibility: hidden;"
                   >
                     <div
-                      class="MuiPaper-root MuiCard-root makeStyles-card-36 MuiPaper-elevation1 MuiPaper-rounded"
+                      class="MuiPaper-root MuiCard-root makeStyles-card-47 MuiPaper-elevation1 MuiPaper-rounded"
                     >
                       <div
-                        class="makeStyles-avatar-37"
+                        class="makeStyles-avatar-48"
                       >
                         <button
                           aria-label="close"
@@ -216,7 +273,7 @@ Object {
                               aria-hidden="true"
                               class="MuiSvgIcon-root"
                               focusable="false"
-                              style="color: rgb(255, 111, 0); opacity: 0.8; font-size: 40px;"
+                              style="color: rgb(76, 175, 80); opacity: 0.8; font-size: 40px;"
                               viewBox="0 0 24 24"
                             >
                               <path
@@ -261,12 +318,12 @@ Object {
                           </button>
                         </div>
                         <div
-                          class="makeStyles-button-38"
+                          class="makeStyles-button-49"
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                             disabled=""
-                            style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                            style="background-color: rgb(76, 175, 80); opacity: 0.5;"
                             tabindex="-1"
                             type="button"
                           >
@@ -288,7 +345,7 @@ Object {
                           </button>
                           <button
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
-                            style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                            style="background-color: rgb(76, 175, 80); opacity: 0.5;"
                             tabindex="0"
                             type="button"
                           >
@@ -327,25 +384,21 @@ Object {
                 <div
                   class="makeStyles-root-6"
                 >
-                  <a
-                    href="/TutorialMainPage"
-                    style="text-decoration: none;"
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
+                    style="color: white; background-color: rgb(76, 175, 80);"
+                    tabindex="0"
+                    type="button"
                   >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                      tabindex="0"
-                      type="button"
+                    <span
+                      class="MuiButton-label"
                     >
-                      <span
-                        class="MuiButton-label"
-                      >
-                        Tutorial
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
-                  </a>
+                      Tutorial
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
                   <a
                     href="/ProcedureMainPage"
                     style="text-decoration: none;"
@@ -365,21 +418,25 @@ Object {
                       />
                     </button>
                   </a>
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
-                    style="color: white; background-color: rgb(255, 111, 0);"
-                    tabindex="0"
-                    type="button"
+                  <a
+                    href="/CorrectnessMainPage"
+                    style="text-decoration: none;"
                   >
-                    <span
-                      class="MuiButton-label"
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+                      tabindex="0"
+                      type="button"
                     >
-                      Correctness
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
+                      <span
+                        class="MuiButton-label"
+                      >
+                        Correctness
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -402,7 +459,7 @@ Object {
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
           >
             <a
-              href="/Correctness/Tutorial"
+              href="/TutorialSubPage/Swap"
             >
               <div
                 style="display: inline-block; margin: 10px;"
@@ -428,7 +485,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-17 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Tutorial
+                        Swap
                       </span>
                     </span>
                     <span
@@ -459,7 +516,7 @@ Object {
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
           >
             <a
-              href="/Page"
+              href="/TutorialSubPage/Loop"
             >
               <div
                 style="display: inline-block; margin: 10px;"
@@ -485,7 +542,7 @@ Object {
                       <span
                         class="MuiTypography-root makeStyles-imageTitle-28 MuiTypography-subtitle1 MuiTypography-colorInherit"
                       >
-                        Proof
+                        Loop
                       </span>
                     </span>
                     <span
@@ -505,6 +562,63 @@ Object {
                   >
                     <div
                       class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-32 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                      style="transform: translateX(-100%);"
+                    />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3"
+          >
+            <a
+              href="/TutorialSubPage/Terminology"
+            >
+              <div
+                style="display: inline-block; margin: 10px;"
+              >
+                <div
+                  class="makeStyles-root-33"
+                >
+                  <button
+                    class="MuiButtonBase-root makeStyles-image-34"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="makeStyles-imageSrc-37"
+                      style="background-color: rgb(213, 213, 213);"
+                    />
+                    <span
+                      class="makeStyles-imageBackdrop-38"
+                    />
+                    <span
+                      class="makeStyles-imageButton-36"
+                    >
+                      <span
+                        class="MuiTypography-root makeStyles-imageTitle-39 MuiTypography-subtitle1 MuiTypography-colorInherit"
+                      >
+                        Terminology
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  class="makeStyles-root-40"
+                >
+                  <div
+                    aria-valuemax="100"
+                    aria-valuemin="0"
+                    aria-valuenow="0"
+                    class="MuiLinearProgress-root WithStyles(ForwardRef(LinearProgress))-root-41 MuiLinearProgress-colorPrimary WithStyles(ForwardRef(LinearProgress))-colorPrimary-42 MuiLinearProgress-determinate"
+                    role="progressbar"
+                  >
+                    <div
+                      class="MuiLinearProgress-bar WithStyles(ForwardRef(LinearProgress))-bar-43 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
                       style="transform: translateX(-100%);"
                     />
                   </div>
@@ -546,7 +660,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-40 PrivateSwipeArea-anchorLeft-41"
+                  class="PrivateSwipeArea-root-51 PrivateSwipeArea-anchorLeft-52"
                   style="width: 20px;"
                 />
               </div>
@@ -578,14 +692,14 @@ Object {
                 </button>
                 <div
                   aria-hidden="true"
-                  class="MuiBackdrop-root makeStyles-backdrop-35"
+                  class="MuiBackdrop-root makeStyles-backdrop-46"
                   style="opacity: 0; visibility: hidden;"
                 >
                   <div
-                    class="MuiPaper-root MuiCard-root makeStyles-card-36 MuiPaper-elevation1 MuiPaper-rounded"
+                    class="MuiPaper-root MuiCard-root makeStyles-card-47 MuiPaper-elevation1 MuiPaper-rounded"
                   >
                     <div
-                      class="makeStyles-avatar-37"
+                      class="makeStyles-avatar-48"
                     >
                       <button
                         aria-label="close"
@@ -600,7 +714,7 @@ Object {
                             aria-hidden="true"
                             class="MuiSvgIcon-root"
                             focusable="false"
-                            style="color: rgb(255, 111, 0); opacity: 0.8; font-size: 40px;"
+                            style="color: rgb(76, 175, 80); opacity: 0.8; font-size: 40px;"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -645,12 +759,12 @@ Object {
                         </button>
                       </div>
                       <div
-                        class="makeStyles-button-38"
+                        class="makeStyles-button-49"
                       >
                         <button
                           class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                           disabled=""
-                          style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                          style="background-color: rgb(76, 175, 80); opacity: 0.5;"
                           tabindex="-1"
                           type="button"
                         >
@@ -672,7 +786,7 @@ Object {
                         </button>
                         <button
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
-                          style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                          style="background-color: rgb(76, 175, 80); opacity: 0.5;"
                           tabindex="0"
                           type="button"
                         >
@@ -711,25 +825,21 @@ Object {
               <div
                 class="makeStyles-root-6"
               >
-                <a
-                  href="/TutorialMainPage"
-                  style="text-decoration: none;"
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
+                  style="color: white; background-color: rgb(76, 175, 80);"
+                  tabindex="0"
+                  type="button"
                 >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
-                    tabindex="0"
-                    type="button"
+                  <span
+                    class="MuiButton-label"
                   >
-                    <span
-                      class="MuiButton-label"
-                    >
-                      Tutorial
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                </a>
+                    Tutorial
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
                 <a
                   href="/ProcedureMainPage"
                   style="text-decoration: none;"
@@ -749,21 +859,25 @@ Object {
                     />
                   </button>
                 </a>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-containedPrimary MuiButton-disableElevation"
-                  style="color: white; background-color: rgb(255, 111, 0);"
-                  tabindex="0"
-                  type="button"
+                <a
+                  href="/CorrectnessMainPage"
+                  style="text-decoration: none;"
                 >
-                  <span
-                    class="MuiButton-label"
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+                    tabindex="0"
+                    type="button"
                   >
-                    Correctness
-                  </span>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </button>
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Correctness
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </a>
               </div>
             </div>
           </div>

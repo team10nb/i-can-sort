@@ -65,8 +65,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 120,
         minWidth: 400,
         justifyContent:"center",  
-        fontWeight: "bold",      
+        fontWeight: "600",      
         color: color,
+        fontFamily:"Quicksand",
         backgroundColor: "#F8F8F8",
     },
 
@@ -88,7 +89,8 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,   
         flexShrink: 0,
-        height:620
+        height:620,
+        fontFamily: "Arial"
     },
     
     drawerPaper: {
@@ -102,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
     listHeader:{
         height:30,       
         color: color,
+        fontSize: "20px"
     },
 
     listItem:{
@@ -114,6 +117,20 @@ const useStyles = makeStyles((theme) => ({
         color: "#F8F8F8",    
         "&:hover": {backgroundColor:color},
     },
+    listItemText:{
+        fontFamily:"Quicksand",
+        fontWeight: "600",
+      },
+      listItemTitle:{
+        fontFamily:"Quicksand",
+        fontWeight: "600",
+        fontSize: "18px"
+      },
+      listItemCatalogue:{
+        fontFamily:"Quicksand",
+        fontWeight: "600",
+        fontSize: "20px"
+      }
 
     
    
@@ -203,7 +220,7 @@ const useStyles = makeStyles((theme) => ({
                     <div className={classes.drawerContainer}>
                         <List>
                             <ListItem  className = {classes.listHeader}>                
-                            <ListItemText primary= 'Catalogue' />
+                            <ListItemText primary= 'Catalogue' classes={{primary:classes.listItemCatalogue}}/>
                             </ListItem>
                         </List>
 {/*                         <Divider /> */}
@@ -227,17 +244,17 @@ const useStyles = makeStyles((theme) => ({
 {/*                         <Divider /> */}
                         <List>
                             <ListItem className = {classes.listItem}>             
-                            <ListItemText primary= 'Termination' />
+                            <ListItemText primary= 'Termination' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>
                             {['Termination'].map((text, index) => (
                             index === activeStep
                                 ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} />
+                                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                                 </ListItem>
                                 :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} />
+                                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                                 </ListItem> 
                             ))}
                         </List>
@@ -245,17 +262,17 @@ const useStyles = makeStyles((theme) => ({
                         <Divider />
                         <List>
                             <ListItem className = {classes.listItem}>                           
-                            <ListItemText primary= 'Correctness' />
+                            <ListItemText primary= 'Correctness' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>
                             {['Introduction' , 'Partial Correctness', 'Total Correctness', 'Example' ].map((text, index) => (
                             index + 1 === activeStep
                             ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index + 1)}>
                                 <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                <ListItemText primary={text} />
+                                <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                             </ListItem>
                             :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index + 1)}
                                 ><ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                <ListItemText primary={text} />
+                                <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                             </ListItem> 
                             ))}
                         </List>

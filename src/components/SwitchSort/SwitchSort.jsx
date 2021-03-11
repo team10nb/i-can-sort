@@ -10,6 +10,7 @@ import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/Se
 import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
+import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
 import {random} from "lodash";
 
 export default function SwitchSort(props) {
@@ -113,9 +114,9 @@ export default function SwitchSort(props) {
         trace = QuickSort(arr);
     } else if (sort === "Heap") {
         trace = HeapSort(arr);
-    } //else if (sort === "Merge") {
-    //    trace = MergeSort(arr);
-    //}
+    } else if (sort === "Merge") {
+       trace = MergeSort(arr);
+    }
 
     return (
         <div
