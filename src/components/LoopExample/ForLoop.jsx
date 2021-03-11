@@ -5,7 +5,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
 import AnimationCode from '../AnimationCode/AnimationCode';
-import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 
 const useStyles = makeStyles((theme) =>({
     root: {
@@ -72,7 +71,7 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#FEE5D4",
+            backgroundColor: "#c7dbc3 ",
             marginTop: -6,
         },
         noBackground:{
@@ -85,30 +84,27 @@ const Code = (props)=> {
     const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort (array, length) {`}
+{`function for_loop () {`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i, j;`}
+{`  var i;`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  var a = 0;`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  var b = 2;`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for(i from 0 to length-1){`}
+{`  for(i from 0 to 3){`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     for(j from 0 to length-1-i){`}
+{`     a = a + b;`}
         </pre>
-        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if (array[j] > array[j+1])`}
-        </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`         swap(array[j], array[j+1])`}
-        </pre>
-        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    }`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={classes.noBackground}>
 {`  }`}
         </pre>
-        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
+        <pre className={classes.noBackground}>
 {`}`}
         </pre>
     </div>
@@ -119,13 +115,39 @@ const Code = (props)=> {
 }
 
 const width = 320;
-// algorithm can terminate example
 export default function ForLoop() {
-    // example array
-    const arr = [2, 6, 9, 10, 3];
-    // pseudocode highlight block numbers
-    const blockNums = [1, 4, 3, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 5, 7, 4, 3, 7, 7, 8];
-    const {trace, description} = BubbleSort(arr);
+    var traceUnit = [];
+    var descriptionUnit = '';
+
+    var trace = [
+        [
+            {value: 'a=0', height: 0, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 1, y: 0}
+        ]
+    ];
+    var description = ['Begin for loop'];
+    var blockNums = [1];
+
+    for(var i = 1; i < 5; i++){
+        traceUnit = [
+            {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 1, y: 0}
+        ];
+        trace.push(traceUnit, traceUnit);
+        // trace.push(traceUnit);
+        blockNums.push(3, 2);
+        // blockNums.push(2);
+
+        descriptionUnit = 'i = ' + (i-1) + ', do a = a + b';
+        description.push(descriptionUnit);
+        if(i == 4){
+            descriptionUnit = 'i increase by 1 and become 5, jump out the loop'
+        }else{
+            descriptionUnit = 'i increase by 1';
+        }
+        description.push(descriptionUnit);
+
+    }
     
     const props = {
         trace,

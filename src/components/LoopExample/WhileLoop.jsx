@@ -5,7 +5,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
 import AnimationCode from '../AnimationCode/AnimationCode';
-import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 
 const useStyles = makeStyles((theme) =>({
     root: {
@@ -72,7 +71,7 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#FEE5D4",
+            backgroundColor: "#c7dbc3 ",
             marginTop: -6,
         },
         noBackground:{
@@ -82,50 +81,88 @@ const Code = (props)=> {
     }));
     const classes = useStyles();
 
-    const whileCode = 
+    const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort (array, length) {`}
+{`function while_loop () {`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i, j;`}
+{`  var i = 0;`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  var a = 0;`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  var b = 2;`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for(i from 0 to length-1){`}
+{`  while(i < 4){`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     for(j from 0 to length-1-i){`}
+{`     a = a + b;`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if (array[j] > array[j+1])`}
+{`     i = i + 1;`}
         </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`         swap(array[j], array[j+1])`}
-        </pre>
-        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    }`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={classes.noBackground}>
 {`  }`}
         </pre>
-        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`}`}
         </pre>
     </div>
     
     return(
-        <div>{whileCode}</div>
+        <div>{forCode}</div>
     )
 }
 
 const width = 320;
-// algorithm can terminate example
-export default function WhileLoop() {
-    // example array
-    const arr = [2, 6, 9, 10, 3];
-    // pseudocode highlight block numbers
-    const blockNums = [1, 4, 3, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 3, 4, 5, 7, 4, 3, 4, 5, 7, 4, 3, 7, 7, 8];
-    const {trace, description} = BubbleSort(arr);
+export default function ForLoop() {
+    var traceUnit = [];
+    var descriptionUnit = '';
+
+    var trace = [
+        [
+            {value: 'i=0', height: 0, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'a=0', height: 0, backgroundColor: "#00BFFF", key: 1, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
+        ]
+    ];
+    var description = ['Begin while loop'];
+    var blockNums = [1];
+
+    for(var i = 1; i < 5; i++){
+        traceUnit = [
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'a='+(i-1)*2, height: (i-1)*20, backgroundColor: "#00BFFF", key: 1, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
+        ];
+        trace.push(traceUnit);
+        traceUnit = [
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
+        ];
+        trace.push(traceUnit);
+        traceUnit = [
+            {value: 'i='+i, height: i*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
+            {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
+        ];
+        trace.push(traceUnit);
+        
+        blockNums.push(2, 3, 4);
+
+        descriptionUnit = 'i = ' + (i-1) + ', i < 4';
+        description.push(descriptionUnit, 'do a = a + b', 'do i = i + 1');
+
+        if(i == 4){
+            trace.push(traceUnit);
+            blockNums.push(5);
+            description.push('i = 4, jump out the loop');
+        }
+    }
     
     const props = {
         trace,
