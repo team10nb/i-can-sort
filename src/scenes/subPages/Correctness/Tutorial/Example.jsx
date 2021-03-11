@@ -58,7 +58,7 @@ const title_interminate =
         variant="outlined" 
         disabled 
         startIcon={<CheckIcon style={{ color: green[500] }} />}
-        style = {{height: 27, color: green[500]}}
+        style = {{height: 27, width:100, color: green[500], marginTop: 6, marginRight:5}}
     >
         Partial
     </Button>
@@ -66,7 +66,7 @@ const title_interminate =
         variant="outlined" 
         disabled 
         startIcon={<CloseIcon style={{ color: red[700] }} />}
-        style = {{height: 27, color: red[700]}}
+        style = {{height: 27, width:100, color: red[700], marginTop: 6, marginRight:5}}
     >
         Total
     </Button>
@@ -100,7 +100,7 @@ const title_terminateAndIncorrect =
         variant="outlined" 
         disabled 
         startIcon={<CloseIcon style={{ color: red[700] }} />}
-        style = {{height: 27, color: red[700]}}
+        style = {{height: 27, width:100, color: red[700], marginTop: 6, marginRight:5}}
     >
         Partial
     </Button>
@@ -108,13 +108,13 @@ const title_terminateAndIncorrect =
         variant="outlined" 
         disabled 
         startIcon={<CloseIcon style={{ color: red[700] }} />}
-        style = {{height: 27, color: red[700]}}
+        style = {{height: 27, width:100, color: red[700], marginTop: 6, marginRight:5}}
     >
         Total
     </Button>
 </h3>;
 const code_terminateAndIncorrect = 
-<pre style={{marginTop:-20}}> 
+<pre style={{marginTop:-25}}> 
 {`
 factorial (int n){
   int result = 1;
@@ -140,7 +140,7 @@ const title_terminateAndCorrect =
         variant="outlined" 
         disabled 
         startIcon={<CheckIcon style={{ color: green[500] }} />}
-        style = {{height: 27, color: green[500]}}
+        style = {{height: 27, width:100, color: green[500], marginTop: 6, marginRight:5}}
     >
         Partial
     </Button>
@@ -148,7 +148,7 @@ const title_terminateAndCorrect =
         variant="outlined" 
         disabled 
         startIcon={<CheckIcon style={{ color: green[500] }} />}
-        style = {{height: 27, color: green[500]}}
+        style = {{height: 27, width:100, color: green[500], marginTop: 6, marginRight:5}}
     >
         Total
     </Button>
@@ -171,7 +171,7 @@ const props_terminateAndCorrect = {
     output: 3,
 }  
 
-const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</font> different examples to implement an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font>, which is used <br />to calculate the factorial of 1 to 20.</p>
+const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</font> different examples to implement an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font>, which is used to calculate the factorial of 1 to 20.</p>
 
 export default function Partial() {
     const classes = useStyles();
