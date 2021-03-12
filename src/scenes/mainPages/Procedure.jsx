@@ -11,6 +11,12 @@ import FirstInBackdrop from "../../components/FirstInBackdrop/FirstInBackdrop";
 import logo1 from "../../Resource/Phelp1.png";
 import logo2 from "../../Resource/Phelp2.png";
 import logo3 from "../../Resource/Phelp3.png";
+import img_bubble from "../../Resource/bubble.png";
+import img_selection from "../../Resource/selection.png";
+import img_insertion from "../../Resource/insert.png";
+import img_quick from "../../Resource/quick.png";
+import img_merge from "../../Resource/merge.png";
+import img_heap from "../../Resource/heap.png";
 import { motion } from "framer-motion";
 
 //Set css
@@ -18,11 +24,14 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: "flex",
         "& > *": {
-            marginLeft: theme.spacing(3.3),
+            marginLeft: 89,
         },
+        marginLeft: -66,
     },
     button: {
-        width: 150,
+        width: 230,
+        fontFamily: "Quicksand",
+        fontWeight: 1000,
     },
     grid: {
         alignItems: "center",
@@ -103,37 +112,37 @@ export default function ProcedureMainPage() {
 
     const images = [
         {
-            static: "bubble.png",
+            static: img_bubble,
             gif: "bubble.gif",
             title: "Bubble sort",
             width: "20%",
         },
         {
-            static: "",
+            static: img_selection,
             gif: "selection.gif",
             title: "Selection sort",
             width: "20%",
         },
         {
-            static: "",
+            static: img_insertion,
             gif: "insertion.gif",
             title: "Insertion sort",
             width: "20%",
         },
         {
-            static: "",
+            static: img_quick,
             gif: "quick.gif",
             title: "Quick sort",
             width: "20%",
         },
         {
-            static: "",
+            static: img_merge,
             gif: "merge.gif",
             title: "Merge sort",
             width: "20%",
         },
         {
-            static: "",
+            static: img_heap,
             gif: "heap.gif",
             title: "Heap sort",
             width: "20%",
