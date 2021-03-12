@@ -21,7 +21,7 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import China from '../../Resource/China.png';
 import England from '../../Resource/England.png';
 import ShareIcon from '@material-ui/icons/Share';
-import Alert from '@material-ui/lab/Alert';
+// import Alert from '@material-ui/lab/Alert';
 import Collapse from '@material-ui/core/Collapse';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -147,26 +147,26 @@ import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
                 You can click the below button to erase all current history:
               </Typography>
               <Collapse in={open}>
-                <Alert
-                  action={
-                    <IconButton
-                      aria-label="close"
-                      color="inherit"
-                      size="small"
-                      onClick = {handleClick}
-                    >
-                      confirm
-                    </IconButton>
-                  }
-                >
-                  Are you sure you want to erase all history? All study progress will disapear.
-                </Alert>
+{/*                 <Alert */}
+{/*                   action={ */}
+{/*                     <IconButton */}
+{/*                       aria-label="close" */}
+{/*                       color="inherit" */}
+{/*                       size="small" */}
+{/*                       onClick = {handleClick} */}
+{/*                     > */}
+{/*                       confirm */}
+{/*                     </IconButton> */}
+{/*                   } */}
+{/*                 > */}
+{/*                   Are you sure you want to erase all history? All study progress will disapear. */}
+{/*                 </Alert> */}
               </Collapse>
 
               <Snackbar open={appear} autoHideDuration={6000} onClose={handleClose}>
-                <Alert onClose={handleClose} severity="success">
-                  Successfully reset history!
-                </Alert>
+{/*                 <Alert onClose={handleClose} severity="success"> */}
+{/*                   Successfully reset history! */}
+{/*                 </Alert> */}
               </Snackbar>
 
               <IconButton 
