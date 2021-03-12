@@ -29,7 +29,7 @@ let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 //     // </React.StrictMode>,
 //     document.getElementById("root")
 // );
-localStorage.clear();
+//localStorage.clear();
 
 ReactDOM.render(
     <React.StrictMode>

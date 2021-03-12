@@ -68,12 +68,12 @@ export default function FirstInBackdrop(props) {
     <div>
       <Backdrop className={classes.backdrop} open={open} >
       <motion.div
-  initial={{ opacity: 0.2, scale: 0 }}
-  animate={{
-    opacity: 1,
-    scale: 1,
-    
-  }}
+        initial={{ opacity: 0.2, scale: 0 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          
+        }}
   transition={{
     type: "spring",
     stiffness: 150,
