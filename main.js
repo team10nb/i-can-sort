@@ -20,16 +20,16 @@ mainWindow = new BrowserWindow({
   })
 
 // 加载应用----react 打包
-// mainWindow.loadURL(url.format({
-//     pathname: path.join(__dirname, './build/index.html'),
-//     // pathname: 'http://localhost:3000/',
-//     protocol: 'file:',
-//     // protocol: 'http://localhost:3000/',
-//     slashes: true
-//   }))
+mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, './build/index.html'),
+    // pathname: 'http://localhost:3000/',
+    protocol: 'file:',
+    // protocol: 'http://localhost:3000/',
+    slashes: true
+  }))
   // 加载应用----适用于 react 开发时项目
 
-mainWindow.loadURL('http://localhost:3000/');
+// mainWindow.loadURL('http://localhost:3000/');
 
 mainWindow.on('closed', function () {
     mainWindow = null
