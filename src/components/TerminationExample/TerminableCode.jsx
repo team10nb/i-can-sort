@@ -88,7 +88,7 @@ const Code = (props)=> {
     const terminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort (array, length) {`}
+{`function bubble_sort(array, length){`}
         </pre>
         <pre className={classes.noBackground}>
 {`  var i, j;`}
@@ -134,7 +134,7 @@ const TerminableCode = () => {
         blockNums,
         useStyles,
         Code,
-        title: "Terminable Bubble Sort",
+        title: "Algorithm Can Terminate",
     };
     
     return(<AnimationCode {...props}/>);

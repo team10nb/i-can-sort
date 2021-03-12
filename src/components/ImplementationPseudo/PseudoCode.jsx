@@ -18,7 +18,7 @@ const Bubble = (props)=> {
     const bubbleCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort (array, lengthOfArray) {`}
+{`function bubble_sort(array, lengthOfArray){`}
         </pre>
         <pre className={classes.noBackground}>
 {`  var i, j;`}
@@ -30,7 +30,7 @@ const Bubble = (props)=> {
 {`     for(j = 0 to i){`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if (currentElement > rightElement)`}
+{`       if(currentElement > rightElement)`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`         swap(currentElement, rightElement)`}

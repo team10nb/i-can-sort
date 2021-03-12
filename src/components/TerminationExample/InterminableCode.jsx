@@ -42,7 +42,7 @@ const Code = (props)=> {
     const interminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function swap_forever (array) {`}
+{`function swap_forever(array){`}
         </pre>
         <pre className={classes.noBackground}>
 {`  var i = 1;`}
