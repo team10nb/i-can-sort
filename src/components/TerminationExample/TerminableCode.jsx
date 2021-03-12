@@ -100,7 +100,7 @@ const Code = (props)=> {
 {`     for(j from 0 to length-1-i){`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if (array[j] > array[j+1])`}
+{`       if(array[j] > array[j+1])`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`         swap(array[j], array[j+1])`}
