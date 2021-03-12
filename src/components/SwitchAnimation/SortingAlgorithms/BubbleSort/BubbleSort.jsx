@@ -4,6 +4,7 @@ export default function BubbleSort(arr) {
     let patched = patch(arr);
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
+    let blockNums = [1];
     let i = 0;
     let j = 0;
     let temp;
@@ -20,6 +21,7 @@ export default function BubbleSort(arr) {
             description.push(
                 "Compare " + patched[j].value + " and " + patched[j + 1].value
             );
+            blockNums.push(4);
 
             // 比较完成，算一步
             if (patched[j].value > patched[j + 1].value) {
@@ -33,6 +35,7 @@ export default function BubbleSort(arr) {
                         patched[j + 1].value +
                         ")"
                 );
+                blockNums.push(5);
                 temp = patched[j + 1];
                 patched[j + 1] = patched[j];
                 patched[j] = temp;
@@ -43,6 +46,7 @@ export default function BubbleSort(arr) {
                         patched[j + 1].value +
                         ", no operation"
                 );
+                blockNums.push(3);
             }
             trace.push(hardcopy(patched));
         }
@@ -54,11 +58,13 @@ export default function BubbleSort(arr) {
         changeColor(patched, j, COLORS.finished);
         trace.push(hardcopy(patched));
         description.push(patched[j].value + " is in the right place");
+        blockNums.push(2);
     }
 
     // 全都排好了
     trace.push(hardcopy(patched));
     description.push("Bubble Sort Finished!");
+    blockNums.push(8);
 
-    return { trace: trace, description: description };
+    return { trace: trace, description: description, blockNums: blockNums };
 }

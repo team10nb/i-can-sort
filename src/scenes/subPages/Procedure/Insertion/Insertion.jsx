@@ -9,6 +9,7 @@ import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAn
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import InsertionIntro from '../../../../components/Introduction/InsertionSort';
+import {InsertionExample} from '../../../../components/ImplementationPseudo/Example';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
@@ -60,6 +61,7 @@ export default function ProcedureInsertion(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        Implementation: InsertionExample,
     }
 
     return(
