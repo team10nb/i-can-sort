@@ -3,6 +3,8 @@ import { Bubble, Selection, Insertion, Quick, Heap, } from './PseudoCode';
 import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 import SelectionSort from '../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
+import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
+import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 
 const BubbleExample = () => {
     const Code = Bubble;
@@ -42,8 +44,42 @@ const SelectionExample = () => {
 const InsertionExample = () => {
     const Code = Insertion;
     const sort = '- Insertion Sort -';
-    const arr = [4, 8, 11, 13, 5];
+    const arr = [4, 13, 11, 8, 5];
     const {trace, description, blockNums} = InsertionSort(arr);
+    
+    const props = {
+        sort,
+        trace,
+        description,
+        blockNums,
+        Code,
+    };
+
+    return <ImplementationPseudo {...props}/>
+}
+
+const QuickExample = () => {
+    const Code = Quick;
+    const sort = '- Quick Sort -';
+    const arr = [4, 8, 11, 13, 5];
+    const {trace, description, blockNums} = QuickSort(arr);
+    
+    const props = {
+        sort,
+        trace,
+        description,
+        blockNums,
+        Code,
+    };
+
+    return <ImplementationPseudo {...props}/>
+}
+
+const HeapExample = () => {
+    const Code = Heap;
+    const sort = '- Heap Sort -';
+    const arr = [4, 8, 11, 13, 5];
+    const {trace, description, blockNums} = HeapSort(arr);
     
     const props = {
         sort,
@@ -61,4 +97,6 @@ export {
     BubbleExample,
     SelectionExample,
     InsertionExample,
+    QuickExample,
+    HeapExample,
 };

@@ -8,6 +8,8 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
+import {QuickExample} from '../../../../components/ImplementationPseudo/Example';
+
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = QuickSort(arr);
@@ -58,6 +60,7 @@ export default function ProcedureQuick(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        Implementation: QuickExample,
     }
 
     return(

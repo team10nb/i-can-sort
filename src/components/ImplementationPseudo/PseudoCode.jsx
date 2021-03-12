@@ -87,7 +87,7 @@ const Selection = (props)=> {
         <pre>
 {`   }`}            
         </pre>
-        <pre>
+        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
 {`}`}            
         </pre>
     </div>
@@ -124,19 +124,19 @@ const Insertion = (props)=> {
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
 {`       swap sorted element to the right by 1`}
         </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
 {`     }`}
         </pre>
         <pre>
 {`   }`}            
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
 {`     break loop and insert X here`}
         </pre>
         <pre>
 {` }`}            
         </pre>
-        <pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
 {`}`}            
         </pre>
     </div>
@@ -153,37 +153,37 @@ const Quick = (props)=> {
 
     const quickCode = 
     <div>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`for each (unsorted) partition{`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`set first element as pivot`}
+        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
+{` set a element as pivot randomly`}
+        </pre>
+        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
+{` put the pivot to the leftmost position of the array`}
+        </pre>
+        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
+{`   storeIndex = pivotIndex + 1`}
+        </pre>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
+{`   for i = pivotIndex + 1 to rightmostIndex{`}
+        </pre>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+{`     if element[i] < element[pivot]{`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`put the pivot to the leftmost position of the array`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  storeIndex = pivotIndex + 1`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  for i = pivotIndex + 1 to rightmostIndex{`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`    if element[i] < element[pivot]{`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`      swap(i, storeIndex); storeIndex++`}
+{`       swap(i, storeIndex); storeIndex++`}
         </pre>
         <pre>
-{`    }`}            
+{`     }`}            
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  swap(pivot, storeIndex - 1)`}
-        </pre>
-        <pre>
-{`  }`}            
+        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
+{`   swap(pivot, storeIndex - 1)`}
         </pre>
         <pre>
+{`   }`}            
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
 {`}`}            
         </pre>
     </div>
@@ -201,22 +201,22 @@ const Heap = (props)=> {
 
     const heapCode = 
     <div>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`Build_max_heap from unordered array`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
 {`for each unsorted element {`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
 {`  set the first unsorted element as the maximum`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
 {`  for i = 0 down to lastSortedIndex - 1{`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`    if element[n] < element[maximum]{`}
         </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
 {`      swap(n, maximum)`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>

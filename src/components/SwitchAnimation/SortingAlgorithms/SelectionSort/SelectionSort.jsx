@@ -112,7 +112,7 @@ export default function SelectionSort(arr) {
     // 全都排好了
     trace.push(hardcopy(patched));
     description.push("Selection Sort Finished");
-    blockNums.push(1);
+    blockNums.push(8);
 
     return { trace: trace, description: description, blockNums:blockNums };
 }
