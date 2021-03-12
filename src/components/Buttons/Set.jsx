@@ -29,13 +29,15 @@ import ClearAllIcon from '@material-ui/icons/ClearAll';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
+import ProcedureMainPage from '../../scenes/mainPages/Procedure';
+import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 
 
 
 
   const useStyles = makeStyles((theme) => ({
     list: {
-      width: 280,
+      width: 400,
     },
     fullList: {
       width: 'auto',
@@ -48,30 +50,33 @@ import Typography from '@material-ui/core/Typography';
   
   
 
-  export default function Set() {
+  export default function Set(props) {
+    const history = props;
     const classes = useStyles();
   
     const [state, setState] = React.useState({
       left: false,
     });
 
-    // const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
 
-    // const [appear, setAppear] = React.useState(false);
+    const [appear, setAppear] = React.useState(false);
 
-    // const handleClick = () => {
-    //   setOpen(false);
-    //   localStorage.clear();  
-    //   setAppear(true);
-    // };
+    const handleClick = () => {
+      setOpen(false);
+      localStorage.clear();  
+      setAppear(true);
+      window.open('/ProcedureMainPage')
+      // history.push({pathname: '/ProcedureMainPage'});
+    };
 
-    // const handleClose = (event, reason) => {
-    //   if (reason === 'clickaway') {
-    //     return;
-    //   }
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
 
-    //   setAppear(false);
-    // };
+      setAppear(false);
+    };
 
     
 
@@ -127,7 +132,7 @@ import Typography from '@material-ui/core/Typography';
         </AccordionDetails>
       </Accordion>
       
-      {/* <Accordion>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -173,7 +178,7 @@ import Typography from '@material-ui/core/Typography';
           </Paper>
               
         </AccordionDetails>
-      </Accordion> */}
+      </Accordion>
     </div>
   );
 
