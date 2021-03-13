@@ -61,7 +61,7 @@ export default function ProcedureInsertion(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
-        Implementation: InsertionExample,
+        Implementation: <InsertionExample/>,
     }
 
     return(

@@ -60,7 +60,7 @@ export default function ProcedureQuick(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
-        Implementation: QuickExample,
+        Implementation: <QuickExample/>,
     }
 
     return(

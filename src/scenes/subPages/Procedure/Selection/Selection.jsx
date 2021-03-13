@@ -58,7 +58,7 @@ export default function ProcedureSelection(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
-        Implementation: SelectionExample,
+        Implementation: <SelectionExample/>,
     }
 
     return(

@@ -129,18 +129,18 @@ export default function CorrectnessMainPage(props) {
     return (
         <motion.div
             className={classes.div}
-            // initial={{ opacity: 0.2, x: "100vw" }}
-            // animate={{
-            //     opacity: 1,
-            //     scale: 1,
-            //     x: "0vw",
-            // }}
-            // transition={{
-            //     type: "spring",
-            //     stiffness: 200,
-            //     damping: 25,
-            // }}
-            // exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
+            initial={{ opacity: 0.2, x: "100vw" }}
+            animate={{
+                opacity: 1,
+                scale: 1,
+                x: "0vw",
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 25,
+            }}
+            exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
         >
             <div className={classes.grid}>
                 <Grid container >

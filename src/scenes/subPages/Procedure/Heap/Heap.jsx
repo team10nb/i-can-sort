@@ -57,7 +57,7 @@ export default function ProcedureHeap(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
-        Implementation: HeapExample,
+        Implementation: <HeapExample/>,
     }
 
     return(

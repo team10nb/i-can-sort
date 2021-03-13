@@ -55,7 +55,7 @@ export default function ProcedureBubble(props) {
         intro: intro,
         operate: operate,
         file: file,
-        Implementation: BubbleExample,
+        Implementation: <BubbleExample/>,
     }
 
     return(

@@ -7,6 +7,7 @@ Object {
     <div>
       <div
         class="makeStyles-div-9"
+        style="opacity: 0.2; transform: translateX(100vw) translateZ(0);"
       >
         <div
           class="makeStyles-grid-8"
@@ -395,6 +396,7 @@ Object {
   "container": <div>
     <div
       class="makeStyles-div-9"
+      style="opacity: 0.2; transform: translateX(100vw) translateZ(0);"
     >
       <div
         class="makeStyles-grid-8"
