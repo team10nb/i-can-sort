@@ -145,13 +145,13 @@ export default function CorrectnessMainPage(props) {
             <div className={classes.grid}>
                 <Grid container >
                     <Grid container item xs={12}  spacing={0}>
-                    <Grid item xs={6} spacing={0}>
+                    <Grid item xs={6} >
                         <Link to="/Correctness/Tutorial">
                             <Module {...props2} />
                         </Link>
                     </Grid>
 
-                    <Grid item xs={6} spacing={0}>
+                    <Grid item xs={6} >
                         <Link to="/Page">
                             <Module {...props1} />
                         </Link>

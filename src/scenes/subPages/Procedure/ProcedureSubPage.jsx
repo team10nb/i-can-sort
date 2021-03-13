@@ -210,7 +210,7 @@ export default function ProcedureSubPage(props) {
                 {operate}
               </CardContent>
             </Card> */}
-            <Implementation/>
+            {Implementation}
           {/* </div> */}
         </TabPanel>
         

@@ -244,9 +244,9 @@ export default function Terminable(props){
         
             <Card className = {classes.cardTwo}>
                 <CardContent>
-                    <Typography>
+                    <div style={{lineHeight:"25px"}}>
                         <Code blockNum={blockNums[currentStep]}/>
-                    </Typography>
+                    </div>
                 </CardContent>                
             </Card>
             </div>       

@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
+// import "../../fonts/"
 
 // a framer motion transition attributes
 const spring = {
@@ -282,9 +283,9 @@ export default function Interminable(props){
 
             <Card className = {classes.cardTwo}>
                 <CardContent>
-                    <Typography>
+                    <div style={{lineHeight:"25px"}}>
                         <Code blockNum={blockNums[currentStep===0 ? 0 : currentStep%2+1]}/>
-                    </Typography>
+                    </div>
                 </CardContent>
             </Card>
             </div>        
