@@ -204,12 +204,11 @@ Object {
                   class="MuiTypography-root makeStyles-text-27 MuiTypography-body1"
                 >
                   For any 
-                  <p
-                    class="MuiTypography-root MuiTypography-body1"
+                  <span
                     style="color: rgb(255, 111, 0);"
                   >
                     legal input
-                  </p>
+                  </span>
                   , expected output can be generated
                 </p>
               </div>
@@ -422,12 +421,11 @@ Object {
                 class="MuiTypography-root makeStyles-text-27 MuiTypography-body1"
               >
                 For any 
-                <p
-                  class="MuiTypography-root MuiTypography-body1"
+                <span
                   style="color: rgb(255, 111, 0);"
                 >
                   legal input
-                </p>
+                </span>
                 , expected output can be generated
               </p>
             </div>

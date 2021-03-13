@@ -348,9 +348,9 @@ export default function InputTutorial(props) {
                         <div className={classes.links}>
                             <Typography className={classes.text}>
                                 For&nbsp;any&nbsp; 
-                                <Typography style={{ color: CorrectnessColor }}>
+                                <span style={{ color: CorrectnessColor }}>
                                     legal&nbsp;input
-                                </Typography>
+                                </span>
                                 ,&nbsp;expected&nbsp;output&nbsp;can&nbsp;be&nbsp;generated
                             </Typography>
                             {/* <Typography className={classes.text}>

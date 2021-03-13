@@ -1,5 +1,5 @@
 /*
-    Author: Yijie Lu
+    Author: Yijie Lu, Shiliang Chen
 */
 
 import React from 'react';
