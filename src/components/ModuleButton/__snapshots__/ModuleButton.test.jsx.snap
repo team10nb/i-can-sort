@@ -6,25 +6,25 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-root-15"
+        class="makeStyles-root-17"
       >
         <button
-          class="MuiButtonBase-root makeStyles-image-16"
+          class="MuiButtonBase-root makeStyles-image-18"
           tabindex="0"
           type="button"
         >
           <span
-            class="makeStyles-imageSrc-19"
+            class="makeStyles-imageSrc-21"
             style="background-color: rgb(213, 213, 213);"
           />
           <span
-            class="makeStyles-imageBackdrop-20"
+            class="makeStyles-imageBackdrop-22"
           />
           <span
-            class="makeStyles-imageButton-18"
+            class="makeStyles-imageButton-20"
           >
             <span
-              class="MuiTypography-root makeStyles-imageTitle-21 MuiTypography-subtitle1 MuiTypography-colorInherit"
+              class="MuiTypography-root makeStyles-imageTitle-23 MuiTypography-subtitle1 MuiTypography-colorInherit"
             >
               Bubble sort
             </span>
@@ -38,25 +38,25 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-root-15"
+      class="makeStyles-root-17"
     >
       <button
-        class="MuiButtonBase-root makeStyles-image-16"
+        class="MuiButtonBase-root makeStyles-image-18"
         tabindex="0"
         type="button"
       >
         <span
-          class="makeStyles-imageSrc-19"
+          class="makeStyles-imageSrc-21"
           style="background-color: rgb(213, 213, 213);"
         />
         <span
-          class="makeStyles-imageBackdrop-20"
+          class="makeStyles-imageBackdrop-22"
         />
         <span
-          class="makeStyles-imageButton-18"
+          class="makeStyles-imageButton-20"
         >
           <span
-            class="MuiTypography-root makeStyles-imageTitle-21 MuiTypography-subtitle1 MuiTypography-colorInherit"
+            class="MuiTypography-root makeStyles-imageTitle-23 MuiTypography-subtitle1 MuiTypography-colorInherit"
           >
             Bubble sort
           </span>
