@@ -17,8 +17,8 @@ export default function ModuleButton(props) {
     const useStyles = makeStyles((theme) => ({
         root: {
             // boxShadow: "2px 8px 30px 2px #888888",
-            borderTopLeftRadius: 17,
-            borderTopRightRadius: 17,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
             borderBottomRightRadius: 0,
             borderBottomLeftRadius: 0,
             borderColor: color,
@@ -35,6 +35,8 @@ export default function ModuleButton(props) {
             height: presentHeight,
         },
         image: {
+            borderTopLeftRadius: 17,
+            borderTopRightRadius: 17,
             position: "relative",
             height: presentHeight,
             width: "100%",
@@ -82,8 +84,8 @@ export default function ModuleButton(props) {
             backgroundPosition: "center 40%",
         },
         imageBackdrop: {
-            borderTopLeftRadius: 15,
-            borderTopRightRadius: 15,
+            borderTopLeftRadius: 17,
+            borderTopRightRadius: 17,
             backgroundImage: `url(${props.image.static})`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
@@ -113,14 +115,23 @@ export default function ModuleButton(props) {
             fontSize: 20,
             color: "white",
         },
+
+    }));
+
+    const useRippleStyles = makeStyles((theme) => ({
+        child:{
+            backgroundColor: "grey"
+        }
     }));
 
     const classes = useStyles();
+    const rippleClasses = useRippleStyles();
 
     return (
         <div className={classes.root}>
             <ButtonBase
                 focusRipple
+                TouchRippleProps={{ classes: rippleClasses }}
                 key={image.title}
                 className={classes.image}
                 focusVisibleClassName={classes.focusVisible}
