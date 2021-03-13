@@ -81,7 +81,11 @@ module.exports = {
         {
           test: /.(jpg|png)$/,
           use:['url-loader']
-        }   
+        },
+        {
+          test: /\.pdf(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: ['file-loader']
+        },  
       ]
     }
   }

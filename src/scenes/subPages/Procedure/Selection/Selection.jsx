@@ -5,6 +5,7 @@ import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAn
 import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import SelectionIntro from '../../../../components/Introduction/SelectionSort';
+import {SelectionExample} from '../../../../components/ImplementationPseudo/Example';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
@@ -57,6 +58,7 @@ export default function ProcedureSelection(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        Implementation: SelectionExample,
     }
 
     return(
