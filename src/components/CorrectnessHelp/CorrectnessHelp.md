@@ -41,7 +41,7 @@ import { color } from "../../scenes/mainPages/Correctness";
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-
+|/|/|/|/|
 
 
 ###  **Methods**
