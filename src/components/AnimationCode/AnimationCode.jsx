@@ -12,7 +12,6 @@ import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 
 
 // a framer motion transition attributes

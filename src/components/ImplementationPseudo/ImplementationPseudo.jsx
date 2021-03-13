@@ -1,3 +1,7 @@
+/*
+    Author: Ruizi Han
+*/
+
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
@@ -9,7 +13,6 @@ import ExplanationBox from '../ExplanationBox/ExplanationBox';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 
 
 // a framer motion transition attributes
@@ -271,9 +274,9 @@ export default function ImplementationPseudo(props){
                 <CardContent>
                     <div className = {classes.title}>{sort}</div>
 
-                    <Typography>
+                    <div>
                         <Code blockNum={blockNums[currentStep]}/>
-                    </Typography>
+                    </div>
                 </CardContent>
                 </Card>
                 <Card className = {classes.cardTwo}>             
