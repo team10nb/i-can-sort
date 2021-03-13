@@ -7,7 +7,7 @@ import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -68,7 +68,7 @@ const Code = (props)=> {
 }
 
 export default function Interminable(props){
-    const { trace, explainationBoxHeight, blockNums } = props;
+    const { trace, ExplanationBoxHeight, blockNums } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -256,9 +256,9 @@ export default function Interminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplainationBox width={60} height={explainationBoxHeight} >
+                <ExplanationBox width={60} height={ExplanationBoxHeight} >
                     {"i = 1"}
-                </ExplainationBox>
+                </ExplanationBox>
                 
                 <div style={{
                     marginLeft: 160,

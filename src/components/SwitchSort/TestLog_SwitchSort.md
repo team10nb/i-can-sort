@@ -1,4 +1,4 @@
-#### ComponentName: InputTable
+#### ComponentName: SwitchSort
 
 |Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
 |-------|----|---------|-------------------|----------------|----------------|

@@ -2,7 +2,7 @@
 --------
 <br>
 
-#### Component: AnimationControl
+#### Component: ModuleButton
 
 |Test Name|Description|Operation|Expected Outcome|
 |----|------|----------------|------------|

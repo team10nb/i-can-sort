@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import InputTable from "../InputTable/InputTable";
-import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import Typography from "@material-ui/core/Typography";
 import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
@@ -331,7 +331,7 @@ export default function InputTutorial(props) {
                             </span>
                         </span>
                     )}
-                    <ExplainationBox
+                    <ExplanationBox
                         width="40"
                         height={3}
                         style={{ fontSize: "100px" }}
@@ -339,7 +339,7 @@ export default function InputTutorial(props) {
                         {isLegalPlaying
                             ? "No." + dayCount + " day of a week is " + weekday
                             : "Error! Only integers 1-7 are legal"}
-                    </ExplainationBox>
+                    </ExplanationBox>
                 </div>
                 <div className={classes.divider}>
                     <Divider  />

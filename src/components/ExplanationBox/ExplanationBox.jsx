@@ -7,7 +7,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 
-const ExplainationBoxes = withStyles({
+const ExplanationBoxes = withStyles({
     root: {
         display: "flex",
         fontFamily: "inherit",
@@ -24,7 +24,7 @@ const ExplainationBoxes = withStyles({
     },
 })(Paper);
 
-export default function ExplainationBox(props) {
+export default function ExplanationBox(props) {
     const { width, height, children } = props;
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -43,9 +43,9 @@ export default function ExplainationBox(props) {
 
     return (
         <div className={classes.root}>
-            <ExplainationBoxes variant='outlined'>
+            <ExplanationBoxes variant='outlined'>
                 {children}
-            </ExplainationBoxes>
+            </ExplanationBoxes>
         </div>
     );
 }

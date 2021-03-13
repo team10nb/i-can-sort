@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -223,9 +223,9 @@ export default function Terminable(props){
                     ))}
                 </div>
                 <div className = {classes.box}>
-                    <ExplainationBox width={60} height={6}>
+                    <ExplanationBox width={60} height={6}>
                         {description[currentStep]}
-                    </ExplainationBox>
+                    </ExplanationBox>
                 </div>
                 
                 

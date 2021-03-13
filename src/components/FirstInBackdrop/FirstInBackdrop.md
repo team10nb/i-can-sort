@@ -45,6 +45,9 @@ import { motion } from "framer-motion";
 ###  **Demo**
 
 ```jsx
-< FirstInBackdrop
-/>
+// import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+// <Router>
+// < FirstInBackdrop/>
+// </Router>
+
 ```

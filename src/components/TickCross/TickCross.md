@@ -35,5 +35,9 @@ import {
 ### **Demo**
 
 ```jsx
-<TickCross isComplete = {true} />
+import {Tick, Cross} from './TickCross';
+<div>
+<Tick isComplete = {true} />
+<Cross isComplete = {true} />
+</div>
 ```
