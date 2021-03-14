@@ -18,16 +18,19 @@ const useStyles = makeStyles((theme) => ({
     color: "#212121",
   },
   cardBackground: {
-    display: "flex",
-        '& > * + *': {     
-            marginLeft: theme.spacing(8),
-        },
-        justifyContent: "center",
+    
     width: 650,
     height: 400,
     backgroundColor: "white",
     opacity:0.8,
     borderRadius:"20px",
+  },
+  buttonBase:{
+    display: "flex",
+        '& > * + *': {     
+            marginLeft: theme.spacing(8),
+        },
+        justifyContent: "center",
   },
   cardOne:{
     width: 230,
@@ -42,6 +45,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:"#1565c0",
     color:"white",
     borderRadius:"30px", 
+  },
+  title:{
+    marginLeft:"245px",
+    marginTop:"16px",
+  },
+  tip:{
+    marginLeft: 52,
+    marginRight: 50,
+    marginBottom: 23,
+    justifyContent: 'center',
+    textAlign:'center',
   },
   content1:{
     marginTop:"69px"
@@ -83,54 +97,61 @@ export default function FirstInBackdrop(props) {
   }}
 >
         <Card className = {classes.cardBackground}>
-        
-        
-          <ButtonBase >
-            <Link to="./TutorialMainPage" style={{textDecoration:"none"}}>
-            <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{
-            y: 0,
-    opacity: 1
-            
-          }}
-          transition={{
-            delay: 0.4
-          }}
-        >
-            <Card className = {classes.cardOne} >
-              <CardContent className = {classes.content1}>
-                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I'm new at this, go to Tutorial first!
-                </Typography>
-              </CardContent>
-            </Card>
-            </motion.div>
-            </Link>
-          </ButtonBase>
-          
-          
+          <Typography >
+            <Typography variant="h4" gutterBottom style={{fontFamily:"inherit", fontWeight:"600", color:"#0e4686"}}  className = {classes.title}> 
+              WELCOME! 
+            </Typography>
+            <Typography  gutterBottom style={{fontFamily:"inherit", fontWeight:"600", color:"#0e4686"}}  className = {classes.tip}> 
+              We design the tutorial for freshman,&nbsp;&nbsp;do you want to start from TUTORIAL&nbsp;? (You still can visit tutorial anytime even you don't choose it rightnow)
+            </Typography>
 
-          <ButtonBase >
-            <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              animate={{
+          </Typography>
+         
+          <div className = {classes.buttonBase}>
+            <ButtonBase >
+              <Link to="./TutorialMainPage" style={{textDecoration:"none"}}>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{
                 y: 0,
                 opacity: 1
-                
-              }}
-              transition={{
-                delay: 0.6
-              }}
-            >
-            <Card className = {classes.cardTwo} >         
-              <CardContent className = {classes.content2}>
-              <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got' basic knowledge, start now!
-              </Typography>
-              </CardContent>
-            </Card></motion.div>
-            </Link>
-          </ButtonBase>
+                }}
+                transition={{
+                  delay: 0.4
+                }}
+              >
+              <Card className = {classes.cardOne} >
+                <CardContent className = {classes.content1}>
+                  <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I'm new at this, go to Tutorial first!
+                  </Typography>
+                </CardContent>
+              </Card>
+              </motion.div>
+              </Link>
+            </ButtonBase>
+            <ButtonBase >
+              <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  opacity: 1
+                  
+                }}
+                transition={{
+                  delay: 0.6
+                }}
+              >
+              <Card className = {classes.cardTwo} >         
+                <CardContent className = {classes.content2}>
+                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got' basic knowledge, start now!
+                </Typography>
+                </CardContent>
+              </Card></motion.div>
+              </Link>
+            </ButtonBase>
+          </div>
+          
           
         </Card>
         </motion.div>
