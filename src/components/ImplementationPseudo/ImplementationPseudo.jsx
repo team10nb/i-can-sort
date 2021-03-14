@@ -101,14 +101,14 @@ export default function ImplementationPseudo(props){
         
         cardOne:{
             marginTop: 80,
-            width: "44%",
+            width: "50%",
             height: 520,
             background: "#F0F0F0",        
         },
 
         cardTwo:{
             marginTop: 80,
-            width: "56%",
+            width: "50%",
             height: 520,
             background: "#F0F0F0",      
         },
@@ -122,9 +122,14 @@ export default function ImplementationPseudo(props){
             marginBottom: 10,
         },
         export:{
-            marginTop: 50,
-            // marginLeft: 60,
-        }
+    
+        },
+        button:{
+            marginLeft: 110,
+            width: 200,
+            position: 'fixed',
+            bottom: 60,
+        },
     }));
 
     const classes = useStyles();
@@ -285,11 +290,11 @@ export default function ImplementationPseudo(props){
                     <div>
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
-                    <div className = {classes.export}>
-                    <Button style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
+                    {/* <div className = {classes.export}> */}
+                    <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
                         Click to Export
                     </Button>
-                    </div>
+                    {/* </div> */}
 
                 </CardContent>
                 </Card>
