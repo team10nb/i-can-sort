@@ -1,3 +1,7 @@
+/*
+    Author: Ruizi Han
+*/
+
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
@@ -9,7 +13,8 @@ import ExplanationBox from '../ExplanationBox/ExplanationBox';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import {color} from '../../scenes/mainPages/Procedure';
 
 
 // a framer motion transition attributes
@@ -22,11 +27,13 @@ const spring = {
 
 
 export default function ImplementationPseudo(props){
-    const { sort,
+    const { title,
+            algorithm,
             trace, 
             description, 
             blockNums, 
-            Code } = props;
+            Code, 
+            file } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -94,14 +101,14 @@ export default function ImplementationPseudo(props){
         
         cardOne:{
             marginTop: 80,
-            width: "44%",
+            width: "50%",
             height: 520,
             background: "#F0F0F0",        
         },
 
         cardTwo:{
             marginTop: 80,
-            width: "56%",
+            width: "50%",
             height: 520,
             background: "#F0F0F0",      
         },
@@ -113,6 +120,15 @@ export default function ImplementationPseudo(props){
             justifyContent: "center",
             marginTop: -6,
             marginBottom: 10,
+        },
+        export:{
+    
+        },
+        button:{
+            marginLeft: 110,
+            width: 200,
+            position: 'fixed',
+            bottom: 60,
         },
     }));
 
@@ -269,11 +285,17 @@ export default function ImplementationPseudo(props){
             <div className = {classes.root}>
                 <Card className = {classes.cardOne}>
                 <CardContent>
-                    <div className = {classes.title}>{sort}</div>
+                    <div className = {classes.title}>{title}</div>
 
-                    <Typography>
+                    <div>
                         <Code blockNum={blockNums[currentStep]}/>
-                    </Typography>
+                    </div>
+                    {/* <div className = {classes.export}> */}
+                    <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
+                        Click to Export
+                    </Button>
+                    {/* </div> */}
+
                 </CardContent>
                 </Card>
                 <Card className = {classes.cardTwo}>             

@@ -6,18 +6,24 @@ import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 
+import BubbleFile from '../../Resource/Bubble Sort.pdf';
+
+
 const BubbleExample = () => {
     const Code = Bubble;
-    const sort = '- Bubble Sort -';
+    const title = '- Bubble Sort -';
+    const algorithm = 'bubble';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = BubbleSort(arr);
     
     const props = {
-        sort,
+        title,
+        algorithm,
         trace,
         description,
         blockNums,
         Code,
+        file: BubbleFile,
     };
 
     return <ImplementationPseudo {...props}/>
@@ -26,12 +32,14 @@ const BubbleExample = () => {
 
 const SelectionExample = () => {
     const Code = Selection;
-    const sort = '- Selection Sort -';
+    const title = '- Selection Sort -';
+    const algorithm = 'selection';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = SelectionSort(arr);
     
     const props = {
-        sort,
+        title,
+        algorithm,
         trace,
         description,
         blockNums,
@@ -43,12 +51,14 @@ const SelectionExample = () => {
 
 const InsertionExample = () => {
     const Code = Insertion;
-    const sort = '- Insertion Sort -';
+    const title = '- Insertion Sort -';
+    const algorithm = 'insertion';
     const arr = [4, 13, 11, 8, 5];
     const {trace, description, blockNums} = InsertionSort(arr);
     
     const props = {
-        sort,
+        title,
+        algorithm,
         trace,
         description,
         blockNums,
@@ -60,12 +70,14 @@ const InsertionExample = () => {
 
 const QuickExample = () => {
     const Code = Quick;
-    const sort = '- Quick Sort -';
+    const title = '- Quick Sort -';
+    const algorithm = 'quick';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = QuickSort(arr);
     
     const props = {
-        sort,
+        title,
+        algorithm,
         trace,
         description,
         blockNums,
@@ -77,12 +89,14 @@ const QuickExample = () => {
 
 const HeapExample = () => {
     const Code = Heap;
-    const sort = '- Heap Sort -';
+    const title = '- Heap Sort -';
+    const algorithm = 'heap';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = HeapSort(arr);
     
     const props = {
-        sort,
+        title,
+        algorithm,
         trace,
         description,
         blockNums,

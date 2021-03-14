@@ -1,5 +1,5 @@
 /*
-    Author: Yijie Lu
+    Author: Yijie Lu, Shiliang Chen
 */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -169,7 +169,7 @@ import Backdrop from '@material-ui/core/Backdrop';
     return(
       <div>
         <Tooltip title="tutorial" placement="bottom" arrow>
-          <IconButton aria-label="help"  onClick={handleClickOpen} style={{ backgroundColor: "grey", opacity:0.5, }}>
+          <IconButton aria-label="help"  onClick={handleClickOpen} >
             <HelpOutlineOutlinedIcon />
           </IconButton>
         </Tooltip>
