@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 // a framer motion transition attributes
@@ -21,7 +21,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    const { trace, description, width, explainationBoxHeight } = props;
+    const { trace, description, width, ExplanationBoxHeight } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -268,9 +268,9 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </div>
-            <ExplainationBox width={60} height={explainationBoxHeight}>
+            <ExplanationBox width={60} height={ExplanationBoxHeight}>
                 {description[currentStep]}
-            </ExplainationBox>
+            </ExplanationBox>
 
             <AnimationSlider
                 width={width}

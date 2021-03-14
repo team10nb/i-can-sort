@@ -3,7 +3,7 @@
 
 <br>
 
-#### ComponentNames: ExplainationBox
+#### ComponentNames: ExplanationBox
 
 |Test Name|Description|Operation|Expected Outcome|
 |----|------|----------------|------------|

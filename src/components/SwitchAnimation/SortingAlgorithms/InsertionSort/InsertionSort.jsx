@@ -1,11 +1,12 @@
 import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
-export default function InssertionSort(arr) {
+export default function InsertionSort(arr) {
     let patched = patch(arr);
 
     // Visualize: Initial State
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
+    let blockNums = [1];
 
     let i = 0;
     let j = 0;
@@ -18,6 +19,7 @@ export default function InssertionSort(arr) {
 
     trace.push(hardcopy(patched));
     description.push("Mark the first element as sorted");
+    blockNums.push(1);
 
     for (i = 1; i < len; i++) {
         // The comparing number
@@ -35,6 +37,7 @@ export default function InssertionSort(arr) {
             description.push(
                 " Compare " + patched[j + 1].value + " and " + patched[j].value
             );
+            blockNums.push(5);
 
             // Visualize: Alreay sorted
             changeColor(patched, j, COLORS.finished);
@@ -43,6 +46,7 @@ export default function InssertionSort(arr) {
             patched[i].y = 0;
             description.push("Already sorted, no insertion");
             trace.push(hardcopy(patched));
+            blockNums.push(4);
         }
 
         while (j >= 0 && patched[j].value > k.value) {
@@ -52,6 +56,7 @@ export default function InssertionSort(arr) {
             changeColor(patched, j, COLORS.comparing);
             trace.push(hardcopy(patched));
             description.push(" Compare " + k.value + " and " + patched[j].value);
+            blockNums.push(5);
 
             temp = patched[j + 1];
             patched[j + 1] = patched[j];
@@ -66,6 +71,7 @@ export default function InssertionSort(arr) {
                     ", go on"
             );
             trace.push(hardcopy(patched));
+            blockNums.push(6);
 
             // Visualize: Compare the sorted elements which are ignoerd by while loop
             if (j >= 1 && patched[j - 1].value <= patched[j].value) {
@@ -80,6 +86,7 @@ export default function InssertionSort(arr) {
                         " and " +
                         patched[j - 1].value
                 );
+                blockNums.push(5);
 
                 // Visualize: Find the proper position, insert
                 changeColor(patched, j - 1, COLORS.finished);
@@ -87,12 +94,15 @@ export default function InssertionSort(arr) {
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
+                blockNums.push(8);
+
             } else if (j === 0) {
                 // Visualize: If the element is the first one
                 changeColor(patched, j, COLORS.finished);
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
+                blockNums.push(8);
             }
             j--;
         }
@@ -101,6 +111,7 @@ export default function InssertionSort(arr) {
     // Visualize: Final state
     description.push("Insertion sort is finished, all sorted");
     trace.push(hardcopy(patched));
+    blockNums.push(9);
 
-    return { trace: trace, description: description };
+    return { trace: trace, description: description, blockNums: blockNums };
 }

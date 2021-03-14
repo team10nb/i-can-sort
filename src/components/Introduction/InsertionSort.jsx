@@ -1,3 +1,7 @@
+/*
+    Author: Ruizi Han
+*/
+
 import React from "react";
 import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
 

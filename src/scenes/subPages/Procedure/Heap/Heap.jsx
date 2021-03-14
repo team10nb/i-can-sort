@@ -4,6 +4,8 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
+import {HeapExample} from '../../../../components/ImplementationPseudo/Example';
+
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = HeapSort(arr);
@@ -55,6 +57,7 @@ export default function ProcedureHeap(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        Implementation: <HeapExample/>,
     }
 
     return(

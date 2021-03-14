@@ -1,5 +1,5 @@
 /*
-    Author: Yijie Lu
+    Author: Yijie Lu, Shiliang Chen
 */
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
@@ -106,7 +106,7 @@ function getStepContent(step) {
     }
 }
 
-export default function Explanation() {
+export default function CorrectnessHelp() {
     const classes = useStyles();
 
     const [open, setOpen] = React.useState(false);

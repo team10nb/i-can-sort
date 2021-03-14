@@ -18,11 +18,14 @@ const useStyles = makeStyles((theme) => ({
         // minWidth: 200,
         display: "flex",
         "& > *": {
-            marginLeft: theme.spacing(3.3),
+            marginLeft: 89,
         },
+        marginLeft: -66,
     },
     button: {
-        width: 150,
+        width: 230,
+        fontFamily: "Quicksand",
+        fontWeight: 1000,
     },
     grid: {
         flexGrow: 1,
@@ -98,8 +101,8 @@ export default function CorrectnessMainPage(props) {
 
     const props1 = {
         image: images[1],
-        width: 200,
-        height: 200,
+        width: 425,
+        height: 435,
         // onClick: handleClick(images[3].title),
         progress: 0,
         color: color,
@@ -108,8 +111,8 @@ export default function CorrectnessMainPage(props) {
 
     const props2 = {
         image: images[0],
-        width: 200,
-        height: 200,
+        width: 425,
+        height: 435,
         // onClick: handleClick(images[3].title),
         progress: 0,
         color: color,
@@ -126,68 +129,34 @@ export default function CorrectnessMainPage(props) {
     return (
         <motion.div
             className={classes.div}
-            // initial={{ opacity: 0.2, x: "100vw" }}
-            // animate={{
-            //     opacity: 1,
-            //     scale: 1,
-            //     x: "0vw",
-            // }}
-            // transition={{
-            //     type: "spring",
-            //     stiffness: 200,
-            //     damping: 25,
-            // }}
-            // exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
+            initial={{ opacity: 0.2, x: "100vw" }}
+            animate={{
+                opacity: 1,
+                scale: 1,
+                x: "0vw",
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 25,
+            }}
+            exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
         >
             <div className={classes.grid}>
-                <Grid container spacing={0}>
-                    <Grid item xs={6} sm={3}>
+                <Grid container >
+                    <Grid container item xs={12}  spacing={0}>
+                    <Grid item xs={6} >
                         <Link to="/Correctness/Tutorial">
                             <Module {...props2} />
                         </Link>
                     </Grid>
 
-                    <Grid item xs={6} sm={3}>
+                    <Grid item xs={6} >
                         <Link to="/Page">
                             <Module {...props1} />
                         </Link>
                     </Grid>
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
-
-                    {/*           <Grid item xs={6} sm={3}> */}
-                    {/*           <Link to="/Page"> */}
-                    {/*               <Module {...props2} /> */}
-                    {/*           </Link> */}
-                    {/*           </Grid> */}
+                    </Grid>
 
                     <Grid item xs={12}>
                         <div className={classes.buttonSet}>

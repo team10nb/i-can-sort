@@ -3,7 +3,7 @@
 */
 
 import { render } from "@testing-library/react";
-import ExplainationBox from "./ExplainationBox";
+import ExplanationBox from "./ExplanationBox";
 
 const props = {
     width: 60,
@@ -11,6 +11,6 @@ const props = {
 
 it('should match snapshot', () => {
 
-    const content = render(<ExplainationBox {...props} />);
+    const content = render(<ExplanationBox {...props} />);
     expect(content).toMatchSnapshot();
 })

@@ -13,6 +13,7 @@ export default function HeapSort(arr) {
     // Visualize: Initial State
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
+    let blockNums = [1];
 
     //将堆的末端子节点作调整，使得子节点永远小于父节点
     function maxHeapify(patched, index, heapSize) {
@@ -48,6 +49,7 @@ export default function HeapSort(arr) {
                         patched[iMax].value
                 );
                 trace.push(hardcopy(patched));
+                blockNums.push(1);
 
                 description.push(
                     patched[iMax].value +
@@ -55,6 +57,7 @@ export default function HeapSort(arr) {
                         patched[index].value
                 );
                 trace.push(hardcopy(patched));
+                blockNums.push(1);
 
                 //swapping
                 swap(patched, iMax, index);
@@ -65,6 +68,7 @@ export default function HeapSort(arr) {
                         patched[index].value
                 );
                 trace.push(hardcopy(patched));
+                blockNums.push(1);
 
                 //恢复对比中bar的颜色
                 changeColor(patched, iMax, COLORS.original);
@@ -103,6 +107,7 @@ export default function HeapSort(arr) {
 
             description.push("A max heap is built, heap size is: " + j);
             trace.push(hardcopy(patched));
+            blockNums.push(1);
 
             //恢复堆颜色
             for (var j = 0; j < i + 1; j++) {
@@ -117,6 +122,7 @@ export default function HeapSort(arr) {
                     " is the largest in the heap"
             );
             trace.push(hardcopy(patched));
+            blockNums.push(3);
 
             //swap数据的第一个节点到当前排序位置
             swap(patched, 0, i);
@@ -125,6 +131,7 @@ export default function HeapSort(arr) {
                 "Take " + patched[i].value + " out of the heap"
             );
             trace.push(hardcopy(patched));
+            blockNums.push(6);
 
             maxHeapify(patched, 0, i);
         }
@@ -136,8 +143,9 @@ export default function HeapSort(arr) {
                 " is already sorted. Heap sort finished."
         );
         trace.push(hardcopy(patched));
+        blockNums.push(1);
 
-        return { trace: trace, description: description };
+        return { trace: trace, description: description, blockNums:blockNums };
     }
 
     return sort(patched);
