@@ -13,7 +13,7 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Tooltip from '@material-ui/core/Tooltip';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import Alert from '@material-ui/lab/Alert';
 import Collapse from '@material-ui/core/Collapse';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
@@ -180,7 +180,7 @@ import Typography from '@material-ui/core/Typography';
       <div>
         {/*set button*/}
         <Tooltip title="information" placement="bottom" arrow>
-          <IconButton aria-label="info" onClick={toggleDrawer('left', true)}> <InfoOutlinedIcon /></IconButton>
+          <IconButton aria-label="setting" onClick={toggleDrawer('left', true)} style={{backgroundColor:"#F0F0F0", fontSize:"small"}} > <SettingsOutlinedIcon /></IconButton>
         </Tooltip>        
           <SwipeableDrawer
             anchor={'left'}
