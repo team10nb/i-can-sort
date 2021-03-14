@@ -1,11 +1,10 @@
+/*author:Yijie Lu, Yuting Jiang*/
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -13,24 +12,16 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Tooltip from '@material-ui/core/Tooltip';
-import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
-import QueueMusicIcon from '@material-ui/icons/QueueMusic';
-import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import China from '../../Resource/China.png';
-import England from '../../Resource/England.png';
-import ShareIcon from '@material-ui/icons/Share';
-// import Alert from '@material-ui/lab/Alert';
+import Alert from '@material-ui/lab/Alert';
 import Collapse from '@material-ui/core/Collapse';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import ClearAllIcon from '@material-ui/icons/ClearAll';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
-import ProcedureMainPage from '../../scenes/mainPages/Procedure';
-import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+
 
 
 
@@ -44,42 +35,62 @@ import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
     },
     content:{
       color: "#6e767b"
+    },
+    warning:{
+    marginLeft:"23px",
+    marginRight:"5px",
+    textAlign:'lefter',
+    },
+    confirmButton:{
+      backgroundColor:"#FF8C00", 
+      color:"white",
+      opacity:0.8,
+      marginLeft:"92px",
+      marginTop:"12px",
+      "&:hover": {
+        backgroundColor:"#FF8C00",
+        opacity:1,
+        color:"white",
+      },
     }
-    
   }));
   
   
 
-  export default function Set(props) {
-    const history = props;
+  export default function Set() {
     const classes = useStyles();
-  
+    //drawer state
     const [state, setState] = React.useState({
       left: false,
     });
-
-    const [open, setOpen] = React.useState(false);
-
+    //alert state
+    const [open, setOpen] = React.useState(true);
+    //snack state
     const [appear, setAppear] = React.useState(false);
-
+    //confirm's handleclick
     const handleClick = () => {
+      //alert close 
       setOpen(false);
-      localStorage.clear();  
-      setAppear(true);
-      window.open('/ProcedureMainPage')
-      // history.push({pathname: '/ProcedureMainPage'});
+      //snackbar appear
+      setAppear(true); 
+      //reload page, set sleep time so that Snackbar has time to appear
+      setTimeout(function () { 
+          window.location.reload();
+       
+       }, 1500);
+       //clear local storage
+      localStorage.clear();      
     };
-
+    //drawer close
     const handleClose = (event, reason) => {
       if (reason === 'clickaway') {
         return;
       }
-
       setAppear(false);
     };
 
     
-
+    //set event: when click outside drawer, drawer will close 
     const toggleDrawer = (anchor, open) => (event) => {
       if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -95,6 +106,7 @@ import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
         role="presentation"
         onKeyDown={toggleDrawer(anchor, false)}
       >
+      {/* about us:explanation of project */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -112,6 +124,7 @@ import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
           </Paper>        
         </AccordionDetails>
       </Accordion>
+      {/* contact us: see github */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -126,58 +139,38 @@ import { BrowserRouter as Router,Route, Switch} from 'react-router-dom';
           <Typography variant="subtitle2" className = {classes.content} gutterBottom>
                 You can follow the link to visit our repository:
               </Typography>
-              <Link href="https://github.com/team10nb" variant="body2">Git Hub Address:&nbsp;&nbsp;I - can - sort</Link>
+              <Link href="https://github.com/team10nb" variant="body2">GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
           </Paper>
               
         </AccordionDetails>
       </Accordion>
-      
+      {/* Erase All Current History */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <ClearAllIcon  />&nbsp;&nbsp;
-          <ListItemText primary='Reset' />   
+          <DeleteIcon  />&nbsp;&nbsp;
+          <ListItemText primary='Erase All Current History' />   
         </AccordionSummary>
         <AccordionDetails>
-          <Paper elevation={0}>
-              <Typography variant="subtitle2" gutterBottom>
-                You can click the below button to erase all current history:
-              </Typography>
-              <Collapse in={open}>
-{/*                 <Alert */}
-{/*                   action={ */}
-{/*                     <IconButton */}
-{/*                       aria-label="close" */}
-{/*                       color="inherit" */}
-{/*                       size="small" */}
-{/*                       onClick = {handleClick} */}
-{/*                     > */}
-{/*                       confirm */}
-{/*                     </IconButton> */}
-{/*                   } */}
-{/*                 > */}
-{/*                   Are you sure you want to erase all history? All study progress will disapear. */}
-{/*                 </Alert> */}
-              </Collapse>
-
-              <Snackbar open={appear} autoHideDuration={6000} onClose={handleClose}>
-{/*                 <Alert onClose={handleClose} severity="success"> */}
-{/*                   Successfully reset history! */}
-{/*                 </Alert> */}
-              </Snackbar>
-
-              <IconButton 
-                onClick={() => {setOpen(true);}}
-              >
-                <DeleteIcon style= {{color:"red"}}/>
-              </IconButton>
-              
+          <Paper elevation={0}>          
+            <Collapse in={open}>
+              <Alert severity="warning">
+                <div className = {classes.warning}>
+                  Are you sure you want to erase all history&nbsp;?&nbsp;&nbsp;All study progress will disapear.                   
+                </div>                      
+                <Button variant="contained" size = "small" onClick = {handleClick} className={classes.confirmButton}  >COMFIRM</Button>                           
+              </Alert>
+            </Collapse>                         
           </Paper>
-              
-        </AccordionDetails>
+          <Snackbar open={appear} autoHideDuration={6000} onClose={handleClose}  >
+                <Alert onClose={handleClose} severity="success" style={{marginRight:"642px",width:"290px"}}>
+                  Successfully reset history!
+                </Alert>
+              </Snackbar> 
+        </AccordionDetails>       
       </Accordion>
     </div>
   );
