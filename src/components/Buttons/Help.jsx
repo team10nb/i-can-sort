@@ -67,7 +67,7 @@ import Backdrop from '@material-ui/core/Backdrop';
           <CardActionArea style={{width:'580px', height:'403px', marginBottom:"15px"}} >
             <img src={logo1} alt="logo1" width='587' heigh='300'  />
             <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" style={{ marginLeft: "20px", marginRight: "20px" }}>
                 This a entry for each sorting algorithm.
                 Choose one and click it to enter next Page.
                 A progress bar is at the bottom, it shows how much you have learnt.      
@@ -81,8 +81,8 @@ import Backdrop from '@material-ui/core/Backdrop';
             <img src={logo2} alt="logo2" width='587' heigh='300'  />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
-                Left one is a setting button, click  it to change settings.
-                Right one is a help button, click it to see explanations for each component.          
+                The left one is a setting button, click it to modify settings. <br></br>
+                The right one is a help button, click it to see how to use the software.          
               </Typography>             
             </CardContent>
           </CardActionArea>
@@ -139,10 +139,9 @@ import Backdrop from '@material-ui/core/Backdrop';
               <div>
                 <CardActionArea  style={{width:'580px', height:'403px', marginBottom:"15px"}}>               
                   <img src={logo3} alt="logo3" width='587' heigh='300'  />
-                  <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      This a choice menu. Menu contains Tutorial, Procedure, Efficiency, Correctness and Exercise.
-                      Choose a module and click it.   
+                  <CardContent style={{marginBottom:"-70px", marginTop:"60px"}}>
+                    <Typography variant="body2" color="textSecondary" component="p" style={{ marginLeft: "8px" }}>
+                      This a section menu. Choose one of the sections Tutorial, Procedure and Correctness to begin your journey.
                     </Typography>                
                   </CardContent>           
                 </CardActionArea>
