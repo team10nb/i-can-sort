@@ -310,7 +310,7 @@ Object {
                         <div>
                           <button
                             class="MuiButtonBase-root MuiCardActionArea-root"
-                            style="width: 580px; height: 403px;"
+                            style="width: 580px; height: 403px; margin-bottom: 15px;"
                             tabindex="0"
                             type="button"
                           >
@@ -325,6 +325,7 @@ Object {
                             >
                               <p
                                 class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                                style="margin-left: 20px; margin-right: 20px;"
                               >
                                 This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
                               </p>
@@ -771,7 +772,7 @@ Object {
                       <div>
                         <button
                           class="MuiButtonBase-root MuiCardActionArea-root"
-                          style="width: 580px; height: 403px;"
+                          style="width: 580px; height: 403px; margin-bottom: 15px;"
                           tabindex="0"
                           type="button"
                         >
@@ -786,6 +787,7 @@ Object {
                           >
                             <p
                               class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                              style="margin-left: 20px; margin-right: 20px;"
                             >
                               This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
                             </p>

@@ -194,7 +194,7 @@ export function TutorialChoiceMenu() {
                 Tutorial
             </Button>
 
-            <Link to="/ProcedureMainPage" style={{ textDecoration: "none" }}>
+            <Link to={{pathname:"/ProcedureMainPage", state:{id:"tutorial"}}} style={{ textDecoration: "none" }}>
                 <Button variant="contained" className={classes.button}>
                     Procedure
                 </Button>

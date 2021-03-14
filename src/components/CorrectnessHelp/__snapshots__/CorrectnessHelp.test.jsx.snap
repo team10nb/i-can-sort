@@ -74,7 +74,7 @@ Object {
               <div>
                 <button
                   class="MuiButtonBase-root MuiCardActionArea-root"
-                  style="width: 580px; height: 415px;"
+                  style="width: 580px; height: 415px; margin-bottom: 15px;"
                   tabindex="0"
                   type="button"
                 >
@@ -220,7 +220,7 @@ Object {
             <div>
               <button
                 class="MuiButtonBase-root MuiCardActionArea-root"
-                style="width: 580px; height: 415px;"
+                style="width: 580px; height: 415px; margin-bottom: 15px;"
                 tabindex="0"
                 type="button"
               >

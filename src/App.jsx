@@ -14,7 +14,7 @@ function Routers() {
             <div>
             <Switch>
             <Route path="/TutorialMainPage" component={TutorialMainPage} />
-            {/* <Route path="/ProcedureMainPage" render={props => <ProcedureMainPage algoProcess="0" {...props}/>} /> */}
+            {/* <Route path="/ProcedureMainPage" render={(props) => <ProcedureMainPage id="pro" {...props}/>} /> */}
             <Route path="/ProcedureMainPage" component={ProcedureMainPage} />
             
             <Route path="/CorrectnessMainPage" component={CorrectnessMainPage} />
