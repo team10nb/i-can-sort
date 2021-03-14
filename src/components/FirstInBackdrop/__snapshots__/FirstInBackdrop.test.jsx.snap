@@ -17,6 +17,94 @@ Object {
             <div
               class="MuiPaper-root MuiCard-root makeStyles-cardBackground-2 MuiPaper-elevation1 MuiPaper-rounded"
             >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <h4
+                  class="MuiTypography-root makeStyles-title-6 MuiTypography-h4 MuiTypography-gutterBottom"
+                  style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+                >
+                  Welcome!
+                </h4>
+                <p
+                  class="MuiTypography-root makeStyles-tip-7 MuiTypography-body1 MuiTypography-gutterBottom"
+                  style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+                >
+                  We designed a special section of Tutorial for freshmen. 
+                  <br />
+                  Do you have any experience on programming? 
+                  <br />
+                </p>
+              </p>
+              <div
+                class="makeStyles-buttonBase-3"
+              >
+                <button
+                  class="MuiButtonBase-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <div>
+                    mockLink
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  class="MuiButtonBase-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <div>
+                    mockLink
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        aria-hidden="true"
+        class="MuiBackdrop-root makeStyles-backdrop-1"
+        style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+      >
+        <div
+          style="opacity: 0.2; transform: scale(0) translateZ(0);"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cardBackground-2 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              <h4
+                class="MuiTypography-root makeStyles-title-6 MuiTypography-h4 MuiTypography-gutterBottom"
+                style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+              >
+                Welcome!
+              </h4>
+              <p
+                class="MuiTypography-root makeStyles-tip-7 MuiTypography-body1 MuiTypography-gutterBottom"
+                style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+              >
+                We designed a special section of Tutorial for freshmen. 
+                <br />
+                Do you have any experience on programming? 
+                <br />
+              </p>
+            </p>
+            <div
+              class="makeStyles-buttonBase-3"
+            >
               <button
                 class="MuiButtonBase-root"
                 tabindex="0"
@@ -42,48 +130,6 @@ Object {
                 />
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div>
-      <div
-        aria-hidden="true"
-        class="MuiBackdrop-root makeStyles-backdrop-1"
-        style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
-      >
-        <div
-          style="opacity: 0.2; transform: scale(0) translateZ(0);"
-        >
-          <div
-            class="MuiPaper-root MuiCard-root makeStyles-cardBackground-2 MuiPaper-elevation1 MuiPaper-rounded"
-          >
-            <button
-              class="MuiButtonBase-root"
-              tabindex="0"
-              type="button"
-            >
-              <div>
-                mockLink
-              </div>
-              <span
-                class="MuiTouchRipple-root"
-              />
-            </button>
-            <button
-              class="MuiButtonBase-root"
-              tabindex="0"
-              type="button"
-            >
-              <div>
-                mockLink
-              </div>
-              <span
-                class="MuiTouchRipple-root"
-              />
-            </button>
           </div>
         </div>
       </div>
