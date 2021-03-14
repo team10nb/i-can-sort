@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   cardBackground: {
     
     width: 650,
-    height: 400,
+    height: 450,
     backgroundColor: "white",
     opacity:0.8,
     borderRadius:"20px",
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title:{
     marginLeft:"245px",
-    marginTop:"16px",
+    marginTop:"36px",
   },
   tip:{
     marginLeft: 52,
@@ -98,11 +98,12 @@ export default function FirstInBackdrop(props) {
 >
         <Card className = {classes.cardBackground}>
           <Typography >
-            <Typography variant="h4" gutterBottom style={{fontFamily:"inherit", fontWeight:"600", color:"#0e4686"}}  className = {classes.title}> 
-              WELCOME! 
+            <Typography variant="h4" gutterBottom style={{fontFamily:"Quicksand", fontWeight:"600", color:"#0e4686"}}  className = {classes.title}> 
+              Welcome! 
             </Typography>
-            <Typography  gutterBottom style={{fontFamily:"inherit", fontWeight:"600", color:"#0e4686"}}  className = {classes.tip}> 
-              We design the tutorial for freshman,&nbsp;&nbsp;do you want to start from TUTORIAL&nbsp;? (You still can visit tutorial anytime even you don't choose it rightnow)
+            <Typography  gutterBottom style={{fontFamily:"Quicksand", fontWeight:"600", color:"#0e4686"}}  className = {classes.tip}> 
+              We designed a special section of Tutorial for freshmen. <br/>
+              Do you have any experience on programming? <br/>
             </Typography>
 
           </Typography>
@@ -144,7 +145,7 @@ export default function FirstInBackdrop(props) {
               >
               <Card className = {classes.cardTwo} >         
                 <CardContent className = {classes.content2}>
-                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got' basic knowledge, start now!
+                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got basic knowledge, start now!
                 </Typography>
                 </CardContent>
               </Card></motion.div>
