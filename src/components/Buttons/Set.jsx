@@ -75,8 +75,7 @@ import Typography from '@material-ui/core/Typography';
       setAppear(true); 
       //reload page, set sleep time so that Snackbar has time to appear
       setTimeout(function () { 
-          window.location.reload();
-       
+          window.location.replace('http://localhost:3000/');
        }, 1500);
        //clear local storage
       localStorage.clear();      
