@@ -13,6 +13,8 @@ import ExplanationBox from '../ExplanationBox/ExplanationBox';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import {color} from '../../scenes/mainPages/Procedure';
 
 
 // a framer motion transition attributes
@@ -25,11 +27,13 @@ const spring = {
 
 
 export default function ImplementationPseudo(props){
-    const { sort,
+    const { title,
+            algorithm,
             trace, 
             description, 
             blockNums, 
-            Code } = props;
+            Code, 
+            file } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -117,6 +121,10 @@ export default function ImplementationPseudo(props){
             marginTop: -6,
             marginBottom: 10,
         },
+        export:{
+            marginTop: 50,
+            // marginLeft: 60,
+        }
     }));
 
     const classes = useStyles();
@@ -272,11 +280,17 @@ export default function ImplementationPseudo(props){
             <div className = {classes.root}>
                 <Card className = {classes.cardOne}>
                 <CardContent>
-                    <div className = {classes.title}>{sort}</div>
+                    <div className = {classes.title}>{title}</div>
 
                     <div>
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
+                    <div className = {classes.export}>
+                    <Button style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
+                        Click to Export
+                    </Button>
+                    </div>
+
                 </CardContent>
                 </Card>
                 <Card className = {classes.cardTwo}>             
