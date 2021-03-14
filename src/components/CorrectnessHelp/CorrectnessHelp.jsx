@@ -68,19 +68,19 @@ function getStepContent(step) {
     switch (step) {
         case 0:
             return (
-                <CardActionArea style={{ width: "580px", height: "415px" }}>
+                <CardActionArea style={{ width: "580px", height: "415px", marginBottom:"15px" }}>
                     <img src={logo0} alt="logo0" width="587" heigh="300" />
                 </CardActionArea>
             );
         case 1:
             return (
-                <CardActionArea style={{ width: "580px", height: "415px" }}>
+                <CardActionArea style={{ width: "580px", height: "415px", marginBottom:"15px" }}>
                     <img src={logo1} alt="logo1" width="587" heigh="300" />
                 </CardActionArea>
             );
         case 2:
             return (
-                <CardActionArea style={{ width: "580px", height: "415px" }}>
+                <CardActionArea style={{ width: "580px", height: "415px", marginBottom:"15px" }}>
                     <img src={logo2} alt="logo2" width="587" heigh="300" />
                     <CardContent>
                         <Typography
@@ -97,7 +97,7 @@ function getStepContent(step) {
             );
         case 3:
             return (
-                <CardActionArea style={{ width: "580px", height: "415px" }}>
+                <CardActionArea style={{ width: "580px", height: "415px", marginBottom:"15px" }}>
                     <img src={logo3} alt="logo3" width="587" heigh="300" />
                 </CardActionArea>
             );
@@ -147,10 +147,10 @@ export default function CorrectnessHelp() {
                     </IconButton>
                 </div>
                 {activeStep === steps - 1 ? (
-                    <div style={{height: 481}}>
+                    <div>
                         <div>
                             <CardActionArea
-                                style={{ width: "580px", height: "415px" }}
+                                style={{ width: "580px", height: "415px", marginBottom:"15px" }}
                             >
                                 <img
                                     src={logo4}
