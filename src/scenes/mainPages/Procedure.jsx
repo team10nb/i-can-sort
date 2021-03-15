@@ -251,7 +251,7 @@ export default function ProcedureMainPage(props) {
                 }}
                 transition={{
                     type: "spring",
-                    stiffness: 200,
+                    stiffness: 250,
                     damping: 25,
                 }}
                 exit={{ opacity: 0.2, scale: 0, x: "-100vw" }}
