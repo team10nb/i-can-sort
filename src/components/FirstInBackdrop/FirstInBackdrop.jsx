@@ -97,7 +97,7 @@ export default function FirstInBackdrop(props) {
   }}
 >
         <Card className = {classes.cardBackground}>
-          <Typography >
+          <div >
             <Typography variant="h4" gutterBottom style={{fontFamily:"Quicksand", fontWeight:"600", color:"#0e4686"}}  className = {classes.title}> 
               Welcome! 
             </Typography>
@@ -106,7 +106,7 @@ export default function FirstInBackdrop(props) {
               Do you have any experience on programming? <br/>
             </Typography>
 
-          </Typography>
+          </div>
          
           <div className = {classes.buttonBase}>
             <ButtonBase >

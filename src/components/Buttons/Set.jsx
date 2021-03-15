@@ -37,9 +37,11 @@ import Typography from '@material-ui/core/Typography';
       color: "#6e767b"
     },
     warning:{
-    marginLeft:"23px",
+    marginLeft:"15px",
     marginRight:"5px",
     textAlign:'lefter',
+    fontSize:"14px",
+    fontWeight:"600",
     },
     confirmButton:{
       backgroundColor:"#FF8C00", 
@@ -158,7 +160,7 @@ import Typography from '@material-ui/core/Typography';
             <Collapse in={open}>
               <Alert severity="warning">
                 <div className = {classes.warning}>
-                  Are you sure you want to erase all history&nbsp;?&nbsp;&nbsp;All study progress will disapear.                   
+                  Are you sure you want to erase all history? All study progress will be reset.                   
                 </div>                      
                 <Button variant="contained" size = "small" onClick = {handleClick} className={classes.confirmButton}  >COMFIRM</Button>                           
               </Alert>

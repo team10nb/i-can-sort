@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match CorrectnessHelp snapshot 1`] = `
+exports[`should match FirstInBackdrop snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -17,9 +17,7 @@ Object {
             <div
               class="MuiPaper-root MuiCard-root makeStyles-cardBackground-2 MuiPaper-elevation1 MuiPaper-rounded"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <div>
                 <h4
                   class="MuiTypography-root makeStyles-title-6 MuiTypography-h4 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
@@ -35,7 +33,7 @@ Object {
                   Do you have any experience on programming? 
                   <br />
                 </p>
-              </p>
+              </div>
               <div
                 class="makeStyles-buttonBase-3"
               >
@@ -83,9 +81,7 @@ Object {
           <div
             class="MuiPaper-root MuiCard-root makeStyles-cardBackground-2 MuiPaper-elevation1 MuiPaper-rounded"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
+            <div>
               <h4
                 class="MuiTypography-root makeStyles-title-6 MuiTypography-h4 MuiTypography-gutterBottom"
                 style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
@@ -101,7 +97,7 @@ Object {
                 Do you have any experience on programming? 
                 <br />
               </p>
-            </p>
+            </div>
             <div
               class="makeStyles-buttonBase-3"
             >
