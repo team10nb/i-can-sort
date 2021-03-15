@@ -12,6 +12,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
+import '../../../../fonts/fonts.css';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import BackDrop from '../../../../components/CorrectnessExample/BackDrop';
 
@@ -73,7 +74,7 @@ const title_interminate =
 </h3>
 
 const code_interminate = 
-<pre style={{marginTop:-20}}>  
+<pre style={{fontFamily: "Space Mono", fontWeight:"400", marginTop:-20}}>  
 {`
 factorial (int n){
   int result = 1;
@@ -114,7 +115,7 @@ const title_terminateAndIncorrect =
     </Button>
 </h3>;
 const code_terminateAndIncorrect = 
-<pre style={{marginTop:-25}}> 
+<pre style={{fontFamily: "Space Mono", fontWeight:"400", marginTop:-25}}>  
 {`
 factorial (int n){
   int result = 1;
@@ -154,7 +155,7 @@ const title_terminateAndCorrect =
     </Button>
 </h3>;
 const code_terminateAndCorrect = 
-<pre style={{marginTop:-20}}>  
+<pre style={{fontFamily: "Space Mono", fontWeight:"400", marginTop:-20}}>  
 {`
 factorial (int n){
   int result = 1;

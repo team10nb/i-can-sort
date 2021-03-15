@@ -5,15 +5,21 @@ import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/sty
 import AppBar from '@material-ui/core/AppBar';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-
+import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
   icon:{
     textAlign: 'left',
     width: 100,
+    height: 60,
   },
-
+  title: {
+    flexGrow: 1,
+    textAlign: 'center',
+    color: "white",
+  },
 }));
 
 
@@ -21,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 //Return a menu bar consists of a home button and three tabs
 //Each tab is corresponding to a tabpanel
 export default function TutorialSubPage(props) {
-  const{color, algorithm, progress, history, intro, operate} = props;
+  const{color, algorithm, progress, history, intro, operate, message} = props;
 
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -46,15 +52,19 @@ export default function TutorialSubPage(props) {
 
 
   return (
+
    <div >
       <ThemeProvider theme={theme}>
       <AppBar>
+        <Toolbar>
           <Button className={classes.icon} onClick={handleClick}>
             <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
           </Button>
+          <Typography variant="h6" className={classes.title}>
+            <div style={{marginLeft:-100}}>{message}</div>
+          </Typography>
+        </Toolbar>
       </AppBar>
-
-      
       </ThemeProvider>
     </div>
   );

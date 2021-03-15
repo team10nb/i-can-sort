@@ -859,8 +859,14 @@ Object {
                 <div
                   style="display: inline-block; margin: 10px;"
                 >
+<<<<<<< HEAD
                   <div
                     class="makeStyles-root-35"
+=======
+                  <a
+                    href="/TutorialMainPage"
+                    style="text-decoration: none;"
+>>>>>>> tutorialDev
                   >
                     <button
                       class="MuiButtonBase-root makeStyles-image-36"
@@ -871,9 +877,38 @@ Object {
                         class="makeStyles-imageSrc-39"
                         style="background-color: rgb(213, 213, 213);"
                       />
+<<<<<<< HEAD
                       <span
                         class="makeStyles-imageBackdrop-40"
                       />
+=======
+                    </button>
+                  </a>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7 MuiButton-disableElevation"
+                    style="color: white; background-color: rgb(21, 101, 192);"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Procedure
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                  <a
+                    href="/CorrectnessMainPage"
+                    style="text-decoration: none;"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+                      tabindex="0"
+                      type="button"
+                    >
+>>>>>>> tutorialDev
                       <span
                         class="makeStyles-imageButton-38"
                       >
@@ -887,6 +922,7 @@ Object {
                         class="MuiTouchRipple-root"
                       />
                     </button>
+<<<<<<< HEAD
                   </div>
                   <div
                     class="makeStyles-root-43"
@@ -904,6 +940,9 @@ Object {
                       />
                     </div>
                   </div>
+=======
+                  </a>
+>>>>>>> tutorialDev
                 </div>
               </a>
             </div>
@@ -1404,6 +1443,40 @@ Object {
                     class="MuiTouchRipple-root"
                   />
                 </button>
+<<<<<<< HEAD
+=======
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <div
+              style="margin-left: -8px; margin-top: 50px;"
+            >
+              <div
+                class="makeStyles-root-6"
+              >
+                <a
+                  href="/TutorialMainPage"
+                  style="text-decoration: none;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Tutorial
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </a>
+>>>>>>> tutorialDev
                 <button
                   class="MuiButtonBase-root"
                   tabindex="0"
@@ -1436,6 +1509,28 @@ Object {
                     class="MuiTouchRipple-root"
                   />
                 </button>
+<<<<<<< HEAD
+=======
+                <a
+                  href="/CorrectnessMainPage"
+                  style="text-decoration: none;"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Correctness
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </a>
+>>>>>>> tutorialDev
               </div>
             </div>
           </div>
