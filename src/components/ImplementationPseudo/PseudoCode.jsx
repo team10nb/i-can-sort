@@ -19,9 +19,7 @@ const Bubble = (props)=> {
     <div>
         <pre>
 {`Algorithm: BubbleSort(Arr)
-
 Input: an array of integers Arr.
-
 Output: The result of sorting Arr.`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
@@ -64,38 +62,43 @@ const Selection = (props)=> {
 
     const selectionCode = 
     <div>
+        <pre>
+{`Algorithm: SelectionSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`repeat (numOfElements - 1) times{`}
+{`n = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  set the first unsorted element as the minimum`}
+{`for j=1 to n-1`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`   for each of the unsorted elements{`}
+{` smallest = j`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`     if (element < currentMinimum){`}
+{` for i = j+1 to n`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`       set element as new minimum`}
-        </pre>
-        <pre>
-{`     }else{`}            
+{`  if seq[i] < seq[smallest] then`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`       compare next unsorted element`}         
-        </pre>
-        <pre>
-{`     }`}            
+{`   smallest = i`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`   swap minimum with first unsorted position`}
-        </pre>
-        <pre>
-{`   }`}            
+{`  end if`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`}`}            
+{` end for`}
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{` swap(Arr[j],Arr[smallest])`}
+        </pre>
+        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
+{`end for`}
+        </pre>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
 
