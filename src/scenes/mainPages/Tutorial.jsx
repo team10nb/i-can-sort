@@ -14,6 +14,9 @@ import logo1 from "../../Resource/Chelp1.png";
 import logo2 from "../../Resource/Chelp2.png";
 import logo3 from "../../Resource/Thelp3.png";
 import { motion } from "framer-motion";
+import img_swap from "../../Resource/swap.png";
+import img_loop from "../../Resource/loop.png";
+import img_terminology from "../../Resource/terminology.png";
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -60,19 +63,19 @@ export default function TutorialMainPage() {
 
     const images = [
         {
-            static: "",
+            static: img_swap,
             gif: "catch.gif",
             title: "Swap",
             width: "20%",
         },
         {
-            static: "",
+            static: img_loop,
             gif: "catch.gif",
             title: "Loop",
             width: "20%",
         },
         {
-            static: "",
+            static: img_terminology,
             gif: "catch.gif",
             title: "Terminology",
             width: "20%",
