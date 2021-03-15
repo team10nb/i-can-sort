@@ -116,38 +116,49 @@ const Insertion = (props)=> {
 
     const insertionCode = 
     <div>
+        <pre>
+{`Algorithm: InsertionSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`mark first element as sorted`}
+{`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{` for each unsorted element X{`}
+{`preIndex = 0`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`   'extract' the element X`}
+{`current = 0`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`   for j = lastSortedIndex down to 0{`}
+{`for i = 1 to length -1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`     if (current element j > X){`}
+{` for j = i to 1`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`       swap sorted element to the right by 1`}
+{`  if Arr[j] > Arr[j-1] then`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`     }`}
-        </pre>
-        <pre>
-{`   }`}            
+{`   swap(Arr[j],Arr[j-1])`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`     break loop and insert X here`}
-        </pre>
-        <pre>
-{` }`}            
+{`  else`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`}`}            
+{`   break;`}
+        </pre>
+        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
+{`  end if`}
+        </pre>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+{` end for`}
+        </pre>
+        <pre className={blockNum===12 ? classes.background : classes.noBackground}>
+{`end for`}
+        </pre>
+        <pre className={blockNum===13 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
     
@@ -163,38 +174,49 @@ const Quick = (props)=> {
 
     const quickCode = 
     <div>
+              <pre>
+{`Algorithm: QuickSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`for each (unsorted) partition{`}
+{`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{` set a element as pivot randomly`}
+{`preIndex = 0`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{` put the pivot to the leftmost position of the array`}
+{`current = 0`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`   storeIndex = pivotIndex + 1`}
+{`for i = 1 to length -1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`   for i = pivotIndex + 1 to rightmostIndex{`}
+{` for j = i to 1`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`     if element[i] < element[pivot]{`}
+{`  if Arr[j] > Arr[j-1] then`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`       swap(i, storeIndex); storeIndex++`}
-        </pre>
-        <pre>
-{`     }`}            
+{`   swap(Arr[j],Arr[j-1])`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`   swap(pivot, storeIndex - 1)`}
-        </pre>
-        <pre>
-{`   }`}            
+{`  else`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`}`}            
+{`   break;`}
+        </pre>
+        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
+{`  end if`}
+        </pre>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+{` end for`}
+        </pre>
+        <pre className={blockNum===12 ? classes.background : classes.noBackground}>
+{`end for`}
+        </pre>
+        <pre className={blockNum===13 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
 
@@ -211,35 +233,46 @@ const Heap = (props)=> {
 
     const heapCode = 
     <div>
+               <pre>
+{`Algorithm: HeapSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Build_max_heap from unordered array`}
+{`Build_max_heap from unordered Arr`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for each unsorted element {`}
+{`for each unsorted element`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`  set the first unsorted element as the maximum`}
+{` set the first unsorted element as the maximum`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  for i = 0 down to lastSortedIndex - 1{`}
+{` for i = 0 to lastSortedIndex - 1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`    if element[n] < element[maximum]{`}
+{`  if element[n] < element[maximum] then`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`      swap(n, maximum)`}
+{`   swap(n, maximum)`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`      Discard node n from heap decrementing heap size`}
+{`   swap(Arr[j],Arr[j-1])`}
         </pre>
-        <pre>
-{`    }`}            
+        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
+{`   Discard node n from heap decrementing heap size`}
         </pre>
-        <pre>
-{`  }`}            
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{`  end if`}
         </pre>
-        <pre>
-{`}`}            
+        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
+{` end for`}
+        </pre>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+{`end for`}
+        </pre>
+        <pre className={blockNum===12 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
 
