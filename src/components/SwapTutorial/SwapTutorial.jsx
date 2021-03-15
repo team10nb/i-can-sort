@@ -427,8 +427,8 @@ export default function Terminable(props){
                     </Card>
                     <Card className = {classes.cardTwo}>
                         
-                        <CardContent style={{marginTop:"3px"}}>
-                            <div style={{marginBottom:"13px", fontWeight:"600", fontFamily:"Space Mono"}}>Code</div> 
+                        <CardContent style={{marginTop:"0px"}}>
+                            <div style={{marginBottom:"10px", fontWeight:"600", fontSize:"12px", fontFamily:"Space Mono"}}>Code</div> 
                             <Typography>
                                 <Code blockNum={blockNums[currentStep]}/>
                             </Typography>
