@@ -17,32 +17,39 @@ const Bubble = (props)=> {
 
     const bubbleCode = 
     <div>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort(array, lengthOfArray){`}
+        <pre>
+{`Algorithm: BubbleSort(Arr)
+
+Input: an array of integers Arr.
+
+Output: The result of sorting Arr.`}
         </pre>
-        <pre className={classes.noBackground}>
-{`  var i, j;`}
+        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
+{`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for(i = lengthOfArray to 1){`}
+{`for i from 0 to length-1`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     for(j = 0 to i){`}
+{` for j from 0 to length-1-i`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if(currentElement > rightElement)`}
+{`  if Arr[j] > Arr[j+1] then`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`         swap(currentElement, rightElement)`}
+{`   swap(Arr[j], Arr[j+1])`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    }`}
+{`  end if`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  }`}
+{` end for`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`}`}
+{`end for`}
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
     
