@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import img_partial from "../../../../Resource/partial.png";
+import Divider from '@material-ui/core/Divider';
 
 export default function Total_Def(props) {
     const styles ={
@@ -9,8 +10,9 @@ export default function Total_Def(props) {
             display: "flex",
             '& > *': 
             {     
-                marginRight: 20,
+                marginRight: 10,
             },
+            backgroundColor:"#EFEFEF", 
         },
         title:{
             fontSize: 26,
@@ -22,19 +24,19 @@ export default function Total_Def(props) {
         card1:{
             backgroundColor:"#EFEFEF", 
             height:550, 
-            width:"65%"
+            width:"55%"
         },
         card2:{
             backgroundColor:"#EFEFEF", 
             height:550, 
-            width:"35%"
+            width:"45%"
         },
     } 
     return(
-        <div style={styles.root}>
 
-        <Card style={styles.card1}>
-            <CardContent>
+        <Card style={styles.root}>
+
+           <CardContent style={styles.card1}>
             <h1 style={styles.title}>Correctness</h1>
             <div style={styles.div}>An algorithm for a computational problem is correct, if for every legal input instance, the required output is produced.</div>
 
@@ -45,14 +47,16 @@ export default function Total_Def(props) {
             On the other hand, if the algorthm failed to terminate, it is still partially correct.
             </div>
             </CardContent>
-        </Card>
-        
-        <Card style={styles.card2}>
+
             <CardContent>
-            <img src={img_partial}></img>
+            <Divider orientation="vertical" />
             </CardContent>
+
+            <CardContent style={styles.card2}>
+            <img src={img_partial} height={500} width={230}/>
+            </CardContent>
+    
         </Card>
-      
-        </div>
+
     );
 }
