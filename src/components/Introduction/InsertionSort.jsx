@@ -287,5 +287,5 @@ const description = ["Insertion sort is one algorithm used to sort a sequence of
 export default function IntroInsertion() {
     const props = { trace: trace, description: description };
 
-    return <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>;                    
+    return <SwitchAnimation {...props} width={490} explanationBoxHeight={6}/>;                    
 }

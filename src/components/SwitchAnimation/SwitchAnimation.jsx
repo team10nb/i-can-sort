@@ -21,7 +21,7 @@ const spring = {
 };
 
 export const SwitchAnimation = (props) => {
-    const { trace, description, width, ExplanationBoxHeight } = props;
+    const { trace, description, width, explanationBoxHeight } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -268,7 +268,7 @@ export const SwitchAnimation = (props) => {
                     </motion.li>
                 ))}
             </div>
-            <ExplanationBox width={60} height={ExplanationBoxHeight}>
+            <ExplanationBox width={60} height={explanationBoxHeight}>
                 {description[currentStep]}
             </ExplanationBox>
 
