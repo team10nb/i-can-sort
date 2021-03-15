@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import "@fontsource/roboto";
+import "../../fonts/fonts.css"
 
 export default function ModuleButton(props) {
     const {width, height, color, preOne, image, onClick} = props;
@@ -110,9 +111,10 @@ export default function ModuleButton(props) {
             // }px`,
             paddingBottom: 5,
             paddingRight: 10,
-            fontFamily: "Roboto",
+            fontFamily: "QuickSand",
             fontSize: 20,
             color: "white",
+            fontWeight:"700",
         },
     }));
 

@@ -56,36 +56,38 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            width: "170px",
+            width: "165px",
             fontFamily: "Space Mono",
             fontWeight: "500",
             fontSize:"12px",
             backgroundColor: "#c8e6c9",
             marginTop: -6,
             lineHeight: "2.5em",
+            paddingLeft:"5px",
         },
         noBackground:{
-            width: "170px",
+            width: "165px",
             fontFamily: "Space Mono",
             fontWeight: "500",
             fontSize:"12px",
             marginTop: -6,
             lineHeight: "2.5em",
+            paddingLeft:"5px",
         }
         
     }));
     const classes = useStyles();
 
     const swapCode = 
-    <div>
+    <div style={{textAlign:"left"}}>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`let temp = 0`}
+{`temp = 0`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`let a = 5`}
+{`a = 5`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`let b = 10`}
+{`b = 10`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
 {`temp = a`}
@@ -215,7 +217,7 @@ export default function Terminable(props){
             fontSize:"18px",
             textAlign:"left",
             marginLeft:"15px",
-            marginTop:"10px",
+            marginTop:"20px",
             lineHeight:"1.3em"
 
         }
@@ -419,8 +421,8 @@ export default function Terminable(props){
                     <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
                         <CardContent>
                             <div className = {classes.introduction}>
-                            Swapping a and b exchanges the value of them. <br></br><br/>
-                            The example shows how variable a with value 5 obtains value 10 from variable b, and vice versa.
+                            Swapping a and b exchanges the values of them. <br></br><br/>
+                            The example below will show you how swapping works.
                             </div>
                         </CardContent>
                        
