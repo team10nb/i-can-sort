@@ -11,6 +11,8 @@ import logo1 from "../../Resource/Chelp1.png";
 import logo2 from "../../Resource/Chelp2.png";
 import logo3 from "../../Resource/Chelp3.png";
 import { motion } from "framer-motion";
+import img_tutorial from "../../Resource/tutorial.png";
+import img_proof from "../../Resource/proof.png";
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -76,13 +78,13 @@ export default function CorrectnessMainPage(props) {
 
     const images = [
         {
-            static: "",
+            static: img_tutorial,
             gif: "catch.gif",
             title: "Tutorial",
             width: "20%",
         },
         {
-            static: "",
+            static: img_proof,
             gif: "catch.gif",
             title: "Proof",
             width: "20%",

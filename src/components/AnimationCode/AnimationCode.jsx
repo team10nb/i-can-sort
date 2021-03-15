@@ -238,7 +238,9 @@ export default function Terminable(props){
                     display="none"                   
                 />
                 </div>               
+                <div className = {classes.control}>
                 <AnimationControl {...animationControlProps} />
+                </div>
             </Card>
         
             <Card className = {classes.cardTwo}>
