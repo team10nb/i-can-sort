@@ -368,7 +368,6 @@ Object {
                     <button
                       aria-label="setting"
                       class="MuiButtonBase-root MuiIconButton-root"
-                      style="background-color: rgb(240, 240, 240); font-size: small;"
                       tabindex="0"
                       title="information"
                       type="button"
@@ -1086,7 +1085,6 @@ Object {
                   <button
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
-                    style="background-color: rgb(240, 240, 240); font-size: small;"
                     tabindex="0"
                     title="information"
                     type="button"

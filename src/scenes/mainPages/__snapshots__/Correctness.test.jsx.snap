@@ -79,7 +79,7 @@ Object {
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
               >
                 <a
-                  href="/Page"
+                  href="/Correctness/Prove"
                 >
                   <div
                     style="display: inline-block; margin: 10px;"
@@ -105,7 +105,7 @@ Object {
                           <span
                             class="MuiTypography-root makeStyles-imageTitle-29 MuiTypography-subtitle1 MuiTypography-colorInherit"
                           >
-                            Proof
+                            Tutorial
                           </span>
                         </span>
                         <span
@@ -143,7 +143,6 @@ Object {
                   <button
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
-                    style="background-color: rgb(240, 240, 240); font-size: small;"
                     tabindex="0"
                     title="information"
                     type="button"
@@ -470,7 +469,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
             >
               <a
-                href="/Page"
+                href="/Correctness/Prove"
               >
                 <div
                   style="display: inline-block; margin: 10px;"
@@ -496,7 +495,7 @@ Object {
                         <span
                           class="MuiTypography-root makeStyles-imageTitle-29 MuiTypography-subtitle1 MuiTypography-colorInherit"
                         >
-                          Proof
+                          Tutorial
                         </span>
                       </span>
                       <span
@@ -534,7 +533,6 @@ Object {
                 <button
                   aria-label="setting"
                   class="MuiButtonBase-root MuiIconButton-root"
-                  style="background-color: rgb(240, 240, 240); font-size: small;"
                   tabindex="0"
                   title="information"
                   type="button"

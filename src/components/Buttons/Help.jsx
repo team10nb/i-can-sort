@@ -19,8 +19,12 @@ import Backdrop from '@material-ui/core/Backdrop';
 
   const useStyles = makeStyles((theme) => ({
     backdrop: {
-      zIndex: theme.zIndex.drawer + 1,
+      zIndex: theme.zIndex.drawer,
       color: "#212121",
+      marginLeft:"-515px",
+      marginTop:"-155px",
+      height:"1000px",
+      width:"2000px",
     },
 
     card: {
