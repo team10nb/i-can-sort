@@ -14,7 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
-// import "../../fonts/"
+import "../../fonts/fonts.css"
 
 // a framer motion transition attributes
 const spring = {
@@ -32,9 +32,18 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            fontFamily:"Space Mono",
+            lineHeight:"20px",
+            fontSize:"10px",
+            paddingLeft:"5px",
         },
         noBackground:{
             marginTop: -6,
+            fontFamily:"Space Mono",
+            lineHeight:"20px",
+            fontSize:"10px",
+            paddingLeft:"5px",
+
         }       
     }));
     const classes = useStyles();

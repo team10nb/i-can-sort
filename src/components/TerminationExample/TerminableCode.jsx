@@ -77,9 +77,18 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"10px",
+            paddingLeft:"5px",
+
         },
         noBackground:{
             marginTop: -6,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"10px",
+            paddingLeft:"5px",
         }
         
     }));
