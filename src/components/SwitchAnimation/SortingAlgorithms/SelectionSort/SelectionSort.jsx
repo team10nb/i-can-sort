@@ -23,7 +23,7 @@ export default function SelectionSort(arr) {
             description.push(
                 "Suppose " + patched[minIndex].value + " is the minimum"
             );
-            blockNums.push(2);
+            blockNums.push(3);
         }
 
         trace.push(hardcopy(patched));
@@ -32,7 +32,7 @@ export default function SelectionSort(arr) {
             patched[minIndex].value+
             " each of the unsorted elements"
         );
-        blockNums.push(3);
+        blockNums.push(4);
 
 
         for (j = i + 1; j < len; j++) {
@@ -45,7 +45,7 @@ export default function SelectionSort(arr) {
                     " and " +
                     patched[j].value
             );
-            blockNums.push(4);
+            blockNums.push(5);
 
             // 遍历数小于当前最小数则最小数变current，原最小数变origin
             if (patched[j].value < patched[minIndex].value) {
@@ -63,7 +63,7 @@ export default function SelectionSort(arr) {
                         patched[j].value +
                         " as new minimum"
                 );
-                blockNums.push(5);
+                blockNums.push(6);
             } else{
                 trace.push(hardcopy(patched));
                 if (patched[j].value > patched[minIndex].value) {
@@ -82,7 +82,7 @@ export default function SelectionSort(arr) {
                     );
                 }
                 changeColor(patched, j, COLORS.original);
-                blockNums.push(6);
+                blockNums.push(7);
             } 
         }
 
@@ -90,7 +90,7 @@ export default function SelectionSort(arr) {
             description.push(
                 "As the minimum is the first unsorted element, no swap"
             );
-            blockNums.push(1);
+            blockNums.push(9);
         } else {
             description.push(
                 "Swap the minimum " +
@@ -98,7 +98,7 @@ export default function SelectionSort(arr) {
                     " and the first unsorted element " +
                     patched[i].value
             );
-            blockNums.push(7);
+            blockNums.push(9);
         }
 
         temp = patched[i];
@@ -112,7 +112,7 @@ export default function SelectionSort(arr) {
     // 全都排好了
     trace.push(hardcopy(patched));
     description.push("Selection Sort Finished");
-    blockNums.push(8);
+    blockNums.push(11);
 
     return { trace: trace, description: description, blockNums:blockNums };
 }
