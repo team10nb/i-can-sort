@@ -181,7 +181,7 @@ import Typography from '@material-ui/core/Typography';
       <div>
         {/*set button*/}
         <Tooltip title="information" placement="bottom" arrow>
-          <IconButton aria-label="setting" onClick={toggleDrawer('left', true)} style={{backgroundColor:"#F0F0F0", fontSize:"small"}} > <SettingsOutlinedIcon /></IconButton>
+          <IconButton aria-label="setting" onClick={toggleDrawer('left', true)}  > <SettingsOutlinedIcon  /></IconButton>
         </Tooltip>        
           <SwipeableDrawer
             anchor={'left'}

@@ -154,8 +154,8 @@ export default function CorrectnessMainPage(props) {
                     </Grid>
 
                     <Grid item xs={6} >
-                        <Link to="/Page">
-                            <Module {...props1} />
+                        <Link to="/Correctness/Prove">
+                            <Module {...props2} />
                         </Link>
                     </Grid>
                     </Grid>
