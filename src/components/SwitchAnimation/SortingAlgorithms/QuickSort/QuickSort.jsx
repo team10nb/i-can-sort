@@ -55,7 +55,7 @@ const QuickSort = (arr) => {
         // Visualize: Move chosen pivot to start
         trace.push(hardcopy(patched));
         description.push("Move the chosen pivot to the start of this section");
-        blockNums.push(1);
+        blockNums.push(3);
     
         // Partition steps, move smaller ones to the left, return value is the position of pivot after partition
         pivot = partition(patched, start, end, description, trace);
@@ -65,7 +65,7 @@ const QuickSort = (arr) => {
         // Visualize: Start sorting LEFT section, Move chosen pivot to start
         trace.push(hardcopy(patched));
         description.push("Ok, let's see the left section of this pivot");
-        blockNums.push(3);
+        blockNums.push(1);
         recursiveQuickSort(patched, start, pivot - 1, description, trace);
     
         // Visualize: Start sorting RIGHT section, Move chosen pivot to start
@@ -94,7 +94,7 @@ const QuickSort = (arr) => {
                     " with pivot " +
                     patched[start].value
             );
-            blockNums.push(1);
+            blockNums.push(6);
     
             if (patched[j].value < patched[start].value) {
                 // Visualize: Mark item that is less than pivot
@@ -107,7 +107,7 @@ const QuickSort = (arr) => {
                         " as less than pivot " +
                         patched[start].value
                 );
-                blockNums.push(1);
+                blockNums.push(8);
     
                 //Move item to lesser list
                 swap(patched, i, j);
@@ -117,7 +117,7 @@ const QuickSort = (arr) => {
                 description.push(
                     "Move the smaller " + patched[i].value + " to left side"
                 );
-                blockNums.push(1);
+                blockNums.push(9);
                 i += 1;
             } else {
                 changeColor(patched, j, COLORS.original);
@@ -131,7 +131,7 @@ const QuickSort = (arr) => {
         patched.splice(i - 1, 0, pivot[0]);
         trace.push(hardcopy(patched));
         description.push("All compared, move pivot to the right of smaller ones");
-        blockNums.push(1);
+        blockNums.push(11);
     
         changeColor(patched, i - 1, COLORS.finished);
         for (let j = start; j < i - 1; j++) {
@@ -141,7 +141,7 @@ const QuickSort = (arr) => {
         trace.push(hardcopy(patched));
         patched[i - 1].isPivot = false;
         description.push("Now pivot is at the correct position");
-        blockNums.push(1);
+        blockNums.push(13);
     
         // return position of pivot
         return i - 1;
