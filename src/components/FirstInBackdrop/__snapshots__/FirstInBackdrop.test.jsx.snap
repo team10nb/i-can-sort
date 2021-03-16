@@ -39,6 +39,7 @@ Object {
               >
                 <button
                   class="MuiButtonBase-root"
+                  style="border-radius: 30px;"
                   tabindex="0"
                   type="button"
                 >
@@ -51,6 +52,7 @@ Object {
                 </button>
                 <button
                   class="MuiButtonBase-root"
+                  style="border-radius: 30px;"
                   tabindex="0"
                   type="button"
                 >
@@ -103,6 +105,7 @@ Object {
             >
               <button
                 class="MuiButtonBase-root"
+                style="border-radius: 30px;"
                 tabindex="0"
                 type="button"
               >
@@ -115,6 +118,7 @@ Object {
               </button>
               <button
                 class="MuiButtonBase-root"
+                style="border-radius: 30px;"
                 tabindex="0"
                 type="button"
               >

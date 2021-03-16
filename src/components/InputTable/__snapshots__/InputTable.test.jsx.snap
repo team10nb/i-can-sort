@@ -5,15 +5,17 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="makeStyles-root-6"
+      >
         <div>
           <div
-            class="makeStyles-title-6"
+            class="makeStyles-title-8"
           >
             Legal Input
           </div>
           <div
-            class="makeStyles-buttons-5"
+            class="makeStyles-buttons-7"
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
@@ -69,7 +71,7 @@ Object {
             </button>
           </div>
           <div
-            class="makeStyles-tables-7"
+            class="makeStyles-tables-9"
           >
             <div
               class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -173,13 +175,13 @@ Object {
           class="MuiTypography-root MuiTypography-overline MuiTypography-gutterBottom MuiTypography-displayBlock"
         />
         <div
-          class="makeStyles-title-6"
+          class="makeStyles-title-8"
         >
           Illegal Input
         </div>
         <div>
           <div
-            class="makeStyles-buttons-5"
+            class="makeStyles-buttons-7"
           >
             <button
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
@@ -235,7 +237,7 @@ Object {
             </button>
           </div>
           <div
-            class="makeStyles-tables-7"
+            class="makeStyles-tables-9"
           >
             <div
               class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -339,15 +341,17 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="makeStyles-root-6"
+    >
       <div>
         <div
-          class="makeStyles-title-6"
+          class="makeStyles-title-8"
         >
           Legal Input
         </div>
         <div
-          class="makeStyles-buttons-5"
+          class="makeStyles-buttons-7"
         >
           <button
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
@@ -403,7 +407,7 @@ Object {
           </button>
         </div>
         <div
-          class="makeStyles-tables-7"
+          class="makeStyles-tables-9"
         >
           <div
             class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
@@ -507,13 +511,13 @@ Object {
         class="MuiTypography-root MuiTypography-overline MuiTypography-gutterBottom MuiTypography-displayBlock"
       />
       <div
-        class="makeStyles-title-6"
+        class="makeStyles-title-8"
       >
         Illegal Input
       </div>
       <div>
         <div
-          class="makeStyles-buttons-5"
+          class="makeStyles-buttons-7"
         >
           <button
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
@@ -569,7 +573,7 @@ Object {
           </button>
         </div>
         <div
-          class="makeStyles-tables-7"
+          class="makeStyles-tables-9"
         >
           <div
             class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"

@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import img_partial from "../../../../Resource/partial.png";
 import Divider from '@material-ui/core/Divider';
 
-export default function Total_Def(props) {
+export default function Partial_Def(props) {
     const styles ={
         root:{
             display: "flex",
@@ -13,23 +13,34 @@ export default function Total_Def(props) {
                 marginRight: 10,
             },
             backgroundColor:"#EFEFEF", 
+            height:"500px",
+            width:"750px",
+            marginLeft:"22px",
+            marginRight:"20px",
+
         },
         title:{
-            fontSize: 26,
+            fontSize: 20,
         },
         div:{
-            fontSize: 18,
+            fontSize: 15,
             lineHeight: '2em',
+            fontWeight: "400",
         },
         card1:{
             backgroundColor:"#EFEFEF", 
-            height:550, 
-            width:"55%"
+            height:500, 
+            width:"55%",
+            paddingLeft:"30px",
+            paddingTop:"25px"
         },
         card2:{
             backgroundColor:"#EFEFEF", 
-            height:550, 
-            width:"45%"
+            height:500, 
+            width:"45%",
+            paddingTop:"44px",
+            paddingLeft:"20px",
+            paddingRight:"30px"
         },
     } 
     return(
@@ -48,12 +59,12 @@ export default function Total_Def(props) {
             </div>
             </CardContent>
 
-            <CardContent>
-            <Divider orientation="vertical" />
-            </CardContent>
+            
+            <Divider orientation="vertical" style={{height:"460px", marginTop:"20px"}}/>
+            
 
             <CardContent style={styles.card2}>
-            <img src={img_partial} height={500} width={230}/>
+            <img src={img_partial} height={400} width={320}/>
             </CardContent>
     
         </Card>

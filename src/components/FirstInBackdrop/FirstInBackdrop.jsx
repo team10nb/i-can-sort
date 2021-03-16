@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(8),
         },
         justifyContent: "center",
+        
   },
   cardOne:{
     width: 230,
@@ -60,10 +61,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign:'center',
   },
   content1:{
-    marginTop:"69px"
+    marginTop:"69px",
+    borderRadius:"30px", 
   },
   content2:{
     marginTop: "55px",       
+    borderRadius:"30px", 
   },
   icon:{
     color:"white",
@@ -122,7 +125,7 @@ export default function FirstInBackdrop(props) {
           </div>
          
           <div className = {classes.buttonBase}>
-            <ButtonBase >
+            <ButtonBase style={{borderRadius:"30px", }}>
               <Link to="./TutorialMainPage" style={{textDecoration:"none"}}>
               <motion.div
                 initial={{ y: -50, opacity: 0 }}
@@ -143,7 +146,7 @@ export default function FirstInBackdrop(props) {
               </motion.div>
               </Link>
             </ButtonBase>
-            <ButtonBase >
+            <ButtonBase  style={{borderRadius:"30px", }}>
               <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
               <motion.div
                 initial={{ y: -50, opacity: 0 }}

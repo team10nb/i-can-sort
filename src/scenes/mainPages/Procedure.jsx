@@ -84,9 +84,7 @@ function calculateProgress(progressArray) {
 export default function ProcedureMainPage(props) {
     const classes = useStyles();
 
-    const localPre = localStorage.getItem("pre")
-        ? JSON.parse(localStorage.getItem("pre"))
-        : null;
+    const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
 
     if (localStorage.getItem("first") == 1) {
         localStorage.setItem("first", JSON.stringify(1));
