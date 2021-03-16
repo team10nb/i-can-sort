@@ -317,7 +317,7 @@ Output: The result of sorting Arr.`}
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
 {` return Arr`}
         </pre>
-        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===0 ? classes.background : classes.noBackground}>
 {`end if`}
         </pre>
     </div>

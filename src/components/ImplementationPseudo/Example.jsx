@@ -10,6 +10,7 @@ import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import BubbleFile from '../../Resource/Bubble Sort.pdf';
+import MergeSort from '../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 
 
 const BubbleExample = () => {
@@ -95,7 +96,7 @@ const MergeExample = () => {
     const title = '- Merge Sort -';
     const algorithm = 'merge';
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = HeapSort(arr);
+    const {trace, description, blockNums} = MergeSort(arr);
     
     const props = {
         title,
