@@ -1,5 +1,8 @@
-import { makeStyles } from "@material-ui/core/styles";
+/*
+    Author: Ruizi Han, Yani Huang
+*/
 
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     background:{
@@ -26,10 +29,10 @@ Output: The result of sorting Arr.`}
 {`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for i from 0 to length-1`}
+{`for i from 0 to length-1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{` for j from 0 to length-1-i`}
+{` for j from 0 to length-1-i do`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
 {`  if Arr[j] > Arr[j+1] then`}
@@ -71,13 +74,13 @@ Output: The result of sorting Arr.`}
 {`n = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for j=1 to n-1`}
+{`for j=1 to n-1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
 {` smallest = j`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{` for i = j+1 to n`}
+{` for i = j+1 to n do`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`  if seq[i] < seq[smallest] then`}
@@ -125,39 +128,33 @@ Output: The result of sorting Arr.`}
 {`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`preIndex = 0`}
+{`for i = 1 to length -1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`current = 0`}
+{` preInde = i - 1`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`for i = 1 to length -1`}
+{` current = arr[i]`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{` for j = i to 1`}
+{` while preIndex >= 0 && current < Arr[preIndex] do`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`  if Arr[j] > Arr[j-1] then`}
+{`  Arr[preIndex + 1] = Arr[preIndex]`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`   swap(Arr[j],Arr[j-1])`}
+{`  preIndex--`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`  else`}
+{` end while`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`   break;`}
+{`Arr[preIndex + 1] = current`}
         </pre>
         <pre className={blockNum===10 ? classes.background : classes.noBackground}>
-{`  end if`}
-        </pre>
-        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
-{` end for`}
-        </pre>
-        <pre className={blockNum===12 ? classes.background : classes.noBackground}>
 {`end for`}
         </pre>
-        <pre className={blockNum===13 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
 {`return Arr`}
         </pre>
     </div>
@@ -174,43 +171,47 @@ const Quick = (props)=> {
 
     const quickCode = 
     <div>
-              <pre>
+        <pre>
 {`Algorithm: QuickSort(Arr)
 Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
         </pre>
+        <pre>
+{`//partition(a,b) is a subset of Arr including all elments from Arr[a] to Arr[b].
+`}
+        </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`length = Arr.length`}
+{`for each unsorted partition(a,b) do`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`preIndex = 0`}
+{` pivot = opsition of generate element from Arr[a] to Arr[b]`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`current = 0`}
+{` swap(Arr[pivot],Arr[a])`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`for i = 1 to length -1`}
+{` storeIndex = x + 1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{` for j = i to 1`}
+{` for i = x + 1 to b do`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`  if Arr[j] > Arr[j-1] then`}
+{`  if Arr[i] < Arr[pivot] then`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`   swap(Arr[j],Arr[j-1])`}
+{`   swap(Arr[i], Arr[storeIndex])`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`  else`}
+{`   storeIndex++`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`   break;`}
-        </pre>
-        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
 {`  end if`}
         </pre>
-        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
 {` end for`}
+        </pre>
+        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
+{` swap(Arr[pivot], Arr[storeIndex - 1])`}
         </pre>
         <pre className={blockNum===12 ? classes.background : classes.noBackground}>
 {`end for`}
@@ -233,7 +234,7 @@ const Heap = (props)=> {
 
     const heapCode = 
     <div>
-               <pre>
+        <pre>
 {`Algorithm: HeapSort(Arr)
 Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
@@ -281,30 +282,50 @@ Output: The result of sorting Arr.`}
     );
 }
 
-// const Merge = (props)=> {
-//     const {blockNum} = props;
-//     const classes = useStyles();
+const Merge = (props)=> {
+    const {blockNum} = props;
+    const classes = useStyles();
 
-//     const mergeCode = 
-//     <div>
-//         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-// {``}
-//         </pre>
-//         <pre>
-// {`    }`}            
-//         </pre>
-//         <pre>
-// {`  }`}            
-//         </pre>
-//         <pre>
-// {`}`}            
-//         </pre>
-//     </div>
+    const mergeCode = 
+    <div>
+        <pre>
+{`Algorithm: MergeSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
+        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
+{`if leftIndex > rightIndex then`}
+        </pre>
+        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
+{` return Arr`}
+        </pre>
+        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
+{`else`}
+        </pre>
+        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
+{` midIndex = (leftIndex + rightIndex) / 2`}
+        </pre>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
+{` mergeSort(array, leftIndex, midIndex)`}
+        </pre>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+{` mergeSort(array, midIndex+1, rightIndex)`}
+        </pre>
+        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
+{` merge(array, leftIndex, midIndex, rightIndex)`}
+        </pre>
+        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
+{` return Arr`}
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{`end if`}
+        </pre>
+    </div>
 
-//     return(
-//         mergeCode
-//     );
-// }
+    return(
+        mergeCode
+    );
+}
     
 export {
     Bubble,
@@ -312,5 +333,5 @@ export {
     Insertion,
     Quick,
     Heap,
-    // Merge,
+    Merge,
 };
