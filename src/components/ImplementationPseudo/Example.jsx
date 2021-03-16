@@ -1,11 +1,14 @@
+/*
+    Author: Yani Huang, Ruizi Han
+*/
+
 import ImplementationPseudo from './ImplementationPseudo';
-import { Bubble, Selection, Insertion, Quick, Heap, } from './PseudoCode';
+import { Bubble, Selection, Insertion, Quick, Heap, Merge } from './PseudoCode';
 import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 import SelectionSort from '../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
-
 import BubbleFile from '../../Resource/Bubble Sort.pdf';
 
 
@@ -87,6 +90,25 @@ const QuickExample = () => {
     return <ImplementationPseudo {...props}/>
 }
 
+const MergeExample = () => {
+    const Code = Merge;
+    const title = '- Merge Sort -';
+    const algorithm = 'merge';
+    const arr = [4, 8, 11, 13, 5];
+    const {trace, description, blockNums} = HeapSort(arr);
+    
+    const props = {
+        title,
+        algorithm,
+        trace,
+        description,
+        blockNums,
+        Code,
+    };
+
+    return <ImplementationPseudo {...props}/>
+}
+
 const HeapExample = () => {
     const Code = Heap;
     const title = '- Heap Sort -';
@@ -113,4 +135,5 @@ export {
     InsertionExample,
     QuickExample,
     HeapExample,
+    MergeExample,
 };
