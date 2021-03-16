@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import logo1 from "../../Resource/Chelp1.png";
-import logo2 from "../../Resource/Chelp2.png";
+import logo2 from "../../Resource/Thelp2.png";
 import logo3 from "../../Resource/Thelp3.png";
 import { motion } from "framer-motion";
 import img_swap from "../../Resource/swap.png";
