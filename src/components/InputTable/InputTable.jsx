@@ -22,6 +22,10 @@ import Typography from '@material-ui/core/Typography';
 
 
 const useStyles = makeStyles((theme) => ({
+    root:{
+        marginRight:-12,
+        marginLeft:12,
+    },
     buttons: {
         display:"flex",
         '& > *': {
@@ -42,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
     },
     tables:{
         display:"flex",
-        marginTop: 11,
+        marginTop: 8,
         '& > *': {
         margin: theme.spacing(1),
         },
-        marginBottom:"19px"
+        marginBottom:"14px"
       },
     
    

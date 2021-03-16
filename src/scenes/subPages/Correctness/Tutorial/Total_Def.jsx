@@ -7,31 +7,42 @@ import Divider from '@material-ui/core/Divider';
 
 export default function Total_Def(props) {
     const styles ={
-            root:{
-                display: "flex",
-                '& > *': 
-                {     
-                    marginRight: 10,
-                },
-                backgroundColor:"#EFEFEF", 
+        root:{
+            display: "flex",
+            '& > *': 
+            {     
+                marginRight: 10,
             },
-            title:{
-                fontSize: 26,
-            },
-            div:{
-                fontSize: 18,
-                lineHeight: '2em',
-            },
-            card1:{
-                backgroundColor:"#EFEFEF", 
-                height:550, 
-                width:"55%"
-            },
-            card2:{
-                backgroundColor:"#EFEFEF", 
-                height:550, 
-                width:"45%"
-            },
+            backgroundColor:"#EFEFEF", 
+            height:"500px",
+            width:"750px",
+            marginLeft:"22px",
+            marginRight:"20px",
+
+        },
+        title:{
+            fontSize: 20,
+        },
+        div:{
+            fontSize: 15,
+            lineHeight: '2em',
+            fontWeight: "400",
+        },
+        card1:{
+            backgroundColor:"#EFEFEF", 
+            height:500, 
+            width:"55%",
+            paddingLeft:"30px",
+            paddingTop:"25px"
+        },
+        card2:{
+            backgroundColor:"#EFEFEF", 
+            height:500, 
+            width:"45%",
+            paddingTop:"44px",
+            paddingLeft:"20px",
+            paddingRight:"30px"
+        },
     } 
 
     return(
@@ -49,12 +60,11 @@ export default function Total_Def(props) {
             </div>
             </CardContent>
 
-            <CardContent>
-            <Divider orientation="vertical" />
-            </CardContent>
+            <Divider orientation="vertical" style={{height:"460px", marginTop:"20px"}}/>
+
 
             <CardContent style={styles.card2} align='center'>
-            <img src={img_total} height={400}/>
+            <img src={img_total} height={400} width={320}/>
             </CardContent>
            
 
