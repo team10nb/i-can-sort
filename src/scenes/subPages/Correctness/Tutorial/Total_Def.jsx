@@ -53,8 +53,8 @@ export default function Total_Def(props) {
             <Divider orientation="vertical" />
             </CardContent>
 
-            <CardContent style={styles.card2}>
-            <img src={img_total} height={500} width={230}/>
+            <CardContent style={styles.card2} align='center'>
+            <img src={img_total} height={400}/>
             </CardContent>
            
 

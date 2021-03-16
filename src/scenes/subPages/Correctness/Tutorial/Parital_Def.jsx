@@ -53,7 +53,7 @@ export default function Total_Def(props) {
             </CardContent>
 
             <CardContent style={styles.card2}>
-            <img src={img_partial} height={500} width={230}/>
+            <img src={img_partial} height={400}/>
             </CardContent>
     
         </Card>
