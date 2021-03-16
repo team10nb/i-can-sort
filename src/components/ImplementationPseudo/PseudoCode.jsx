@@ -125,7 +125,7 @@ Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`length = Arr.length`}
+{`length = Arr.length `}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
 {`for i = 1 to length -1 do`}
