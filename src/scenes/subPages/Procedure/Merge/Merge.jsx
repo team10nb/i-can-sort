@@ -4,6 +4,7 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import MergeSort from '../../../../components/SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
+import {MergeExample} from '../../../../components/ImplementationPseudo/Example';
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = MergeSort(arr);
@@ -55,6 +56,7 @@ export default function ProcedureMerge(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        Implementation: <MergeExample/>,
     }
 
     return(
