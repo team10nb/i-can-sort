@@ -1,3 +1,7 @@
+/*
+    Author: Yani Huang, Shiliang Chen
+*/
+
 import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
 export default function SelectionSort(arr) {
