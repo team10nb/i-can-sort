@@ -10,7 +10,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+import { Link } from "react-router-dom";
 import Tooltip from '@material-ui/core/Tooltip';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
@@ -19,11 +19,7 @@ import Collapse from '@material-ui/core/Collapse';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
-
-
-
 
 
   const useStyles = makeStyles((theme) => ({
@@ -67,29 +63,13 @@ import Typography from '@material-ui/core/Typography';
     });
     //alert state
     const [open, setOpen] = React.useState(true);
-    //snack state
-    const [appear, setAppear] = React.useState(false);
-    //confirm's handleclick
     const handleClick = () => {
-      //alert close 
-      setOpen(false);
-      //snackbar appear
-      setAppear(true); 
-      //reload page, set sleep time so that Snackbar has time to appear
-      setTimeout(function () { 
-          window.location.replace('http://localhost:3000/');
-       }, 1500);
-       //clear local storage
-      localStorage.clear();      
+      setState(false);
+       localStorage.clear(); 
+       localStorage.setItem("snack", JSON.stringify(1));     
     };
     //drawer close
-    const handleClose = (event, reason) => {
-      if (reason === 'clickaway') {
-        return;
-      }
-      setAppear(false);
-    };
-
+    
     
     //set event: when click outside drawer, drawer will close 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -161,16 +141,13 @@ import Typography from '@material-ui/core/Typography';
               <Alert severity="warning">
                 <div className = {classes.warning}>
                   Are you sure you want to erase all history? All study progress will be reset.                   
-                </div>                      
-                <Button variant="contained" size = "small" onClick = {handleClick} className={classes.confirmButton}  >COMFIRM</Button>                           
+                </div>  
+                <Link to="/ProcedureMainPage" style={{ textDecoration: "none" }}>        
+                  <Button variant="contained" size = "small" onClick={handleClick}  className={classes.confirmButton}  >COMFIRM</Button>      
+                </Link>                     
               </Alert>
             </Collapse>                         
           </Paper>
-          <Snackbar open={appear} autoHideDuration={6000} onClose={handleClose}  >
-                <Alert onClose={handleClose} severity="success" style={{marginRight:"642px",width:"290px"}}>
-                  Successfully reset history!
-                </Alert>
-              </Snackbar> 
         </AccordionDetails>       
       </Accordion>
     </div>

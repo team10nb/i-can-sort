@@ -96,6 +96,14 @@ export default function ProcedureMainPage(props) {
         localStorage.setItem("first", JSON.stringify(1));
     }
 
+    if (localStorage.getItem("snack") == 1) {
+        localStorage.setItem("snack", JSON.stringify(1));
+    } else if (localStorage.getItem("snack") == 0) {
+        localStorage.setItem("snack", JSON.stringify(0));
+    } else {
+        localStorage.setItem("snack", JSON.stringify(0));
+    }
+
     const firstIn = localStorage.getItem("first")
         ? JSON.parse(localStorage.getItem("first"))
         : null;
@@ -104,6 +112,8 @@ export default function ProcedureMainPage(props) {
         //store previous visited algorithm
         localStorage.setItem("pre", JSON.stringify(title));
     };
+
+    
 
     const handlePre = (title) => {
         //set previous visited algorithm
@@ -309,11 +319,12 @@ export default function ProcedureMainPage(props) {
                     </Grid>
                 </div>
             </motion.div>
-
+           
             {firstIn == 1 ? <FirstInBackdrop /> : <div />}
         </div>
     );
 }
+
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Procedure button is theme color without jump function

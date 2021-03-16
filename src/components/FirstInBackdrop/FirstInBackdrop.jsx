@@ -8,6 +8,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from '@material-ui/core/Typography';
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -72,7 +74,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FirstInBackdrop(props) {
   const classes = useStyles();
+  const snack = localStorage.getItem("snack")
+    ? JSON.parse(localStorage.getItem("snack"))
+    : null;
   const [open, setOpen] = React.useState(true);
+  const [appear, setAppear] = React.useState(true);
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        localStorage.setItem("snack", JSON.stringify(0));
+        setAppear(false);
+      };
   const onClick1 = () => {
     localStorage.setItem("first", JSON.stringify(0));
     window.location.href = "/TutorialMainPage";
@@ -156,6 +169,11 @@ export default function FirstInBackdrop(props) {
           
         </Card>
         </motion.div>
+        {snack == 1 ? <Snackbar open={appear} onClose={handleClose}  >
+        <Alert onClose={handleClose} severity="success" >
+          Successfully reset history!
+        </Alert>
+      </Snackbar> : <div />}
       </Backdrop>
     </div>
   );
