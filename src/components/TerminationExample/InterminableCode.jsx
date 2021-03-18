@@ -51,22 +51,22 @@ const Code = (props)=> {
     const interminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function swap_forever(array){`}
+{`Algorithm: SwapForever(Arr)`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i = 1;`}
+{`Input: an array of two intergers Arr`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  i = 1`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  while(i > 0){`}
+{`  while i > 0 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`    swap(array[0], array[1])`}
+{`    swap(Arr[0], Arr[1])`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  }`}
-        </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`}`}
+{`  end for`}
         </pre>
     </div>
     
@@ -145,6 +145,14 @@ export default function Interminable(props){
             fontSize:"16px",
             justifyContent: "center",
         },
+        explanation:{
+            fontFamily: "inherit",
+            fontSize: "16px",
+            fontWeight: "700",
+            letterSpacing: "1px",
+            textAlign: 'center',
+            marginBottom: 12,
+        }
     }));
 
     const classes = useStyles();
@@ -265,7 +273,7 @@ export default function Interminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <p>
+                <p className = {classes.explanation}>
                     {"i = 1"}
                 </p>
                 

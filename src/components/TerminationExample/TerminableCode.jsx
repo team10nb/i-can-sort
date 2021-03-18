@@ -98,10 +98,16 @@ const Code = (props)=> {
     const terminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort(array, length){`}
+{`Algorithm: BubbleSort(Arr, length){`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i, j;`}
+{`Input: an array of integers Arr`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`       the array's size length`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`  i, j;`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
 {`  for(i from 0 to length-1){`}
