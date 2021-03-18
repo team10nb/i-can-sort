@@ -121,11 +121,8 @@ export default function ImplementationPseudo(props){
             marginTop: -6,
             marginBottom: 10,
         },
-        export:{
-    
-        },
         button:{
-            marginLeft: 110,
+            marginLeft: 95,
             width: 200,
             position: 'fixed',
             bottom: 60,
@@ -290,11 +287,9 @@ export default function ImplementationPseudo(props){
                     <div>
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
-                    {/* <div className = {classes.export}> */}
                     <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
-                        Click to Export
+                        Export Note
                     </Button>
-                    {/* </div> */}
 
                 </CardContent>
                 </Card>
