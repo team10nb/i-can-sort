@@ -75,7 +75,7 @@ export default function ForLoop() {
 
     var trace = [
         [
-            {value: 'i=0', height: 0, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i=0', height: 0, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a=0', height: 0, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ]
@@ -85,19 +85,19 @@ export default function ForLoop() {
 
     for(var i = 1; i < 5; i++){
         traceUnit = [
-            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+(i-1)*2, height: (i-1)*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
         trace.push(traceUnit);
         traceUnit = [
-            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
         trace.push(traceUnit);
         traceUnit = [
-            {value: 'i='+i, height: i*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+i, height: i*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
