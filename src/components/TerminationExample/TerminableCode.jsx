@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme) =>({
     },
     cardOne:{
         width: 380, 
-        height: 240
+        height: 240,
+        background: "#F0F0F0",        
     },
     cardTwo:{
         width: 380, 
@@ -77,51 +78,58 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
-            fontSize:"10px",
+            fontSize:"12px",
             paddingLeft:"5px",
-
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
-            fontSize:"10px",
+            fontSize:"12px",
             paddingLeft:"5px",
-        }
-        
+            // fontWeight: 550,
+        }, 
     }));
     const classes = useStyles();
 
+
+    
     const terminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function bubble_sort(array, length){`}
+{`Algorithm: BubbleSort(Arr)`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i, j;`}
+{`  length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for(i from 0 to length-1){`}
+{`  for i from 0 to length-1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     for(j from 0 to length-1-i){`}
+{`    for j from 0 to length-1-i do`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if(array[j] > array[j+1])`}
+{`      if Arr[j] > Arr[j+1] then`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`         swap(array[j], array[j+1])`}
+{`        swap((Arr[j], Arr[j+1])`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    }`}
+{`      end if`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  }`}
+{`    end for`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`}`}
+{`  end for`}
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
     
@@ -143,7 +151,7 @@ const TerminableCode = () => {
         blockNums,
         useStyles,
         Code,
-        title: "Algorithm Can Terminate",
+        title: "Terminable Bubble Sort",
     };
     
     return(<AnimationCode {...props}/>);

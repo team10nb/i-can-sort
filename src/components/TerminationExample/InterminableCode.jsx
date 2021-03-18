@@ -32,41 +32,41 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
-            lineHeight:"20px",
-            fontSize:"10px",
+            lineHeight:"22px",
+            fontSize:"12px",
             paddingLeft:"5px",
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
-            lineHeight:"20px",
-            fontSize:"10px",
+            lineHeight:"22px",
+            fontSize:"12px",
             paddingLeft:"5px",
-
-        }       
+            // fontWeight: 550,
+        }, 
     }));
     const classes = useStyles();
 
     const interminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function swap_forever(array){`}
+{`Algorithm: SwapForever(Arr)`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i = 1;`}
+{`  i = 1`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  while(i > 0){`}
+{`  while i > 0 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`    swap(array[0], array[1])`}
+{`    swap(Arr[0], Arr[1])`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  }`}
-        </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`}`}
+{`  end for`}
         </pre>
     </div>
     
@@ -131,6 +131,7 @@ export default function Interminable(props){
         cardOne:{
             width: 380, 
             height: 240,
+            background: "#F0F0F0",        
         },
         cardTwo:{
             width: 380, 
@@ -144,6 +145,14 @@ export default function Interminable(props){
             fontSize:"16px",
             justifyContent: "center",
         },
+        explanation:{
+            fontFamily: "inherit",
+            fontSize: "16px",
+            fontWeight: "700",
+            letterSpacing: "1px",
+            textAlign: 'center',
+            marginBottom: 12,
+        }
     }));
 
     const classes = useStyles();
@@ -264,9 +273,9 @@ export default function Interminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplanationBox width={60} height={ExplanationBoxHeight} >
+                <p className = {classes.explanation}>
                     {"i = 1"}
-                </ExplanationBox>
+                </p>
                 
                 <div style={{
                     marginLeft: 160,
