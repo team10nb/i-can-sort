@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme) =>({
     },
     cardOne:{
         width: 380, 
-        height: 240
+        height: 240,
+        background: "#F0F0F0",        
     },
     cardTwo:{
         width: 380, 

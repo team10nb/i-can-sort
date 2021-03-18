@@ -131,6 +131,7 @@ export default function Interminable(props){
         cardOne:{
             width: 380, 
             height: 240,
+            background: "#F0F0F0",        
         },
         cardTwo:{
             width: 380, 
@@ -264,9 +265,9 @@ export default function Interminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplanationBox width={60} height={ExplanationBoxHeight} >
+                <p>
                     {"i = 1"}
-                </ExplanationBox>
+                </p>
                 
                 <div style={{
                     marginLeft: 160,
