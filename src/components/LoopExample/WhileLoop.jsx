@@ -13,14 +13,26 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#c7dbc3 ",
+            backgroundColor: "#c7dbc3",
             marginTop: -6,
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
-        }
-        
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
+            // fontWeight: 550,
+        }, 
     }));
+
     const classes = useStyles();
 
     const forCode = 
@@ -29,25 +41,25 @@ const Code = (props)=> {
 {`Algorithm: WhileLoop()`}
         </pre>
         <pre className={classes.noBackground}>
-{`i = 0;`}
+{`  i = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`a = 0;`}
+{`  a = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`b = 2;`}
+{`  b = 2`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`while i < 4 do`}
+{`  while i < 4 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`   a = a + b`}
+{`     a = a + b`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`   i = i + 1`}
+{`     i = i + 1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`end while`}
+{`  end while`}
         </pre>
     </div>
     

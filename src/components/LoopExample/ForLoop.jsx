@@ -13,15 +13,26 @@ import { useStyles } from './Style';
 const Code = (props)=> {
     const {blockNum} = props;
   
+    
+
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#c7dbc3 ",
+            backgroundColor: "#c7dbc3",
             marginTop: -6,
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
         },
         noBackground:{
             marginTop: -6,
-        }
-        
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
+        }, 
     }));
     const classes = useStyles();
 
@@ -31,22 +42,22 @@ const Code = (props)=> {
 {`Algorithm: WhileLoop()`}
         </pre>
         <pre className={classes.noBackground}>
-{`i = 0`}
+{`  i = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`a = 0`}
+{`  a = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`b = 2`}
+{`  b = 2`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for i = 0 to 3 do`}
+{`  for i = 0 to 3 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`   a = a + b;`}
+{`     a = a + b;`}
         </pre>
         <pre className={classes.noBackground}>
-{`end for`}
+{`  end for`}
         </pre>
     </div>
     
