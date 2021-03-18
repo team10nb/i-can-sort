@@ -233,7 +233,7 @@ export default function Interminable(props){
 
     return (            
             <div className = {classes.root}>
-                <div className = {classes.title}>Interminable Swap</div>               
+                <div className = {classes.title}>Non-terminating Algorithm</div>               
                 <Card className = {classes.cardOne}>                 
                     <div className={classes.bars}>
                     {bars.map((background) => (

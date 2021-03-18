@@ -276,7 +276,7 @@ export default function InputTutorial(props) {
                 <div
                     className={classes.algorithmTitle}
                 >
-                    What day is&nbsp;(
+                    What is day&nbsp;(
                     <span
                         style={{
                             fontWeight: "600",
@@ -338,7 +338,7 @@ export default function InputTutorial(props) {
                         style={{ fontSize: "100px" }}
                     >
                         {isLegalPlaying
-                            ? "No." + dayCount + " day of a week is " + weekday
+                            ? "Day " + dayCount + " of a week is " + weekday
                             : "Error! Only integers 1-7 are legal"}
                     </ExplanationBox>
                 </div>

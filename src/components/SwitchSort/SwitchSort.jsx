@@ -87,7 +87,7 @@ export default function SwitchSort(props) {
         return 0;
     };
 
-    // to produce random array
+    // to produce a random array
     const shuffle = () => {
         const length = random(3,MAXLENGTH-4);
         let array = [];
