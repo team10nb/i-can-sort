@@ -110,7 +110,7 @@ export default function ForLoop() {
         if(i == 4){
             trace.push(traceUnit);
             blockNums.push(4);
-            description.push('i = 4, jump out the loop');
+            description.push('i = 4, jump out of the loop');
         }
 
     }
