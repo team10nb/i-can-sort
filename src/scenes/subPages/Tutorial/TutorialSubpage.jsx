@@ -5,8 +5,10 @@ import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/sty
 import AppBar from '@material-ui/core/AppBar';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
+import {color} from '../../mainPages/Tutorial';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -20,6 +22,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: "white",
   },
+  chip:{
+    position: 'relative',
+    marginRight: -50,
+    marginLeft: 205,
+    minWidth: 400,
+    justifyContent:"center",  
+    fontWeight: "600",      
+    color: color,
+    fontFamily:"Quicksand",
+    backgroundColor: "#F8F8F8",
+},
 }));
 
 
@@ -60,9 +73,11 @@ export default function TutorialSubPage(props) {
           <Button className={classes.icon} onClick={handleClick}>
             <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
           </Button>
-          <Typography variant="h6" className={classes.title}>
+          {/* <Typography variant="h6" className={classes.title}>
+
             <div style={{marginLeft:-100}}>{message}</div>
-          </Typography>
+          </Typography> */}
+            <Chip className={classes.chip} label= {message} />  
         </Toolbar>
       </AppBar>
       </ThemeProvider>

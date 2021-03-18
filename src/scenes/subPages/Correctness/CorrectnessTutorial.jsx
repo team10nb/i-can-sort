@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     chip:{
         position: 'relative',
         marginRight: -50,
-        marginLeft: 120,
+        marginLeft: 85,
         minWidth: 400,
         justifyContent:"center",  
         fontWeight: "600",      

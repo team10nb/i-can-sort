@@ -34,9 +34,7 @@ import Typography from '@material-ui/core/Typography';
       color:"#4ba6ff",
       fontSize: "2em",
       "&:hover": {
-        fontWeight:400,
-        color:"#1564b2",
-        textShadow: "5px 5px 5px #0e467c",
+        textDecoration: "underline", 
       },
     },
     content:{
@@ -81,7 +79,7 @@ import Typography from '@material-ui/core/Typography';
     //open a link
     const handleLink=()=> {
       let url = "https://github.com/team10nb"
-      var win = window.open(url, '_blank');
+      var win = window.open(url, 'GitHub: I can sort');
       win.focus(); 
     }
     

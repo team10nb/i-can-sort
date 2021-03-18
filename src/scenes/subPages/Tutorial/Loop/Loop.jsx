@@ -29,6 +29,7 @@ export default function TutorialLoop(props) {
         history: props.history,      
         // intro: intro,
         // operate: operate,
+        message: "Loop",
     }
 
     const classes = useStyles();
