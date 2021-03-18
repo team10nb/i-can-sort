@@ -29,6 +29,16 @@ import Typography from '@material-ui/core/Typography';
     fullList: {
       width: 'auto',
     },
+    link:{
+      textDecoration: "none", 
+      color:"#4ba6ff",
+      fontSize: "2em",
+      "&:hover": {
+        fontWeight:400,
+        color:"#1564b2",
+        textShadow: "5px 5px 5px #0e467c",
+      },
+    },
     content:{
       color: "#6e767b"
     },
@@ -68,7 +78,12 @@ import Typography from '@material-ui/core/Typography';
        localStorage.clear(); 
        localStorage.setItem("snack", JSON.stringify(1));     
     };
-    //drawer close
+    //open a link
+    const handleLink=()=> {
+      let url = "https://github.com/team10nb"
+      var win = window.open(url, '_blank');
+      win.focus(); 
+    }
     
     
     //set event: when click outside drawer, drawer will close 
@@ -120,7 +135,8 @@ import Typography from '@material-ui/core/Typography';
           <Typography variant="subtitle2" className = {classes.content} gutterBottom>
                 You can follow the link to visit our repository:
               </Typography>
-              <Link href="https://github.com/team10nb" variant="body2">GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
+              
+              <Link onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
           </Paper>
               
         </AccordionDetails>
