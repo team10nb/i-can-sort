@@ -78,20 +78,22 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
-            fontSize:"10px",
+            fontSize:"12px",
             paddingLeft:"5px",
-
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
-            fontSize:"10px",
+            fontSize:"12px",
             paddingLeft:"5px",
-        }
-        
+            // fontWeight: 550,
+        }, 
     }));
     const classes = useStyles();
 
@@ -100,7 +102,7 @@ const Code = (props)=> {
     const terminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Algorithm: BubbleSort(Arr){`}
+{`Algorithm: BubbleSort(Arr)`}
         </pre>
         <pre className={classes.noBackground}>
 {`  length = Arr.length`}

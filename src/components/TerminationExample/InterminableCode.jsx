@@ -32,19 +32,22 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
-            lineHeight:"20px",
-            fontSize:"10px",
+            lineHeight:"22px",
+            fontSize:"12px",
             paddingLeft:"5px",
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
+            letterSpacing: 0.5,
             fontFamily:"Space Mono",
-            lineHeight:"20px",
-            fontSize:"10px",
+            lineHeight:"22px",
+            fontSize:"12px",
             paddingLeft:"5px",
-
-        }       
+            // fontWeight: 550,
+        }, 
     }));
     const classes = useStyles();
 
