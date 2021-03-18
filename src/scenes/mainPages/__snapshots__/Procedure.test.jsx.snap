@@ -392,7 +392,7 @@ Object {
                       />
                     </button>
                     <div
-                      class="PrivateSwipeArea-root-103 PrivateSwipeArea-anchorLeft-104"
+                      class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                       style="width: 20px;"
                     />
                   </div>
@@ -424,14 +424,14 @@ Object {
                     </button>
                     <div
                       aria-hidden="true"
-                      class="MuiBackdrop-root makeStyles-backdrop-88"
+                      class="MuiBackdrop-root makeStyles-backdrop-89"
                       style="opacity: 0; visibility: hidden;"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-card-89 MuiPaper-elevation1 MuiPaper-rounded"
+                        class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="makeStyles-avatar-90"
+                          class="makeStyles-avatar-91"
                         >
                           <button
                             aria-label="close"
@@ -492,7 +492,7 @@ Object {
                             </button>
                           </div>
                           <div
-                            class="makeStyles-button-91"
+                            class="makeStyles-button-92"
                           >
                             <button
                               class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -620,24 +620,24 @@ Object {
         <div>
           <div
             aria-hidden="true"
-            class="MuiBackdrop-root makeStyles-backdrop-93"
+            class="MuiBackdrop-root makeStyles-backdrop-94"
             style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
           >
             <div
               style="opacity: 0.2; transform: scale(0) translateZ(0);"
             >
               <div
-                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-94 MuiPaper-elevation1 MuiPaper-rounded"
+                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-95 MuiPaper-elevation1 MuiPaper-rounded"
               >
                 <div>
                   <h4
-                    class="MuiTypography-root makeStyles-title-98 MuiTypography-h4 MuiTypography-gutterBottom"
+                    class="MuiTypography-root makeStyles-title-99 MuiTypography-h4 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
                     Welcome!
                   </h4>
                   <p
-                    class="MuiTypography-root makeStyles-tip-99 MuiTypography-body1 MuiTypography-gutterBottom"
+                    class="MuiTypography-root makeStyles-tip-100 MuiTypography-body1 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
                     We designed a special section of Tutorial for freshmen. 
@@ -647,7 +647,7 @@ Object {
                   </p>
                 </div>
                 <div
-                  class="makeStyles-buttonBase-95"
+                  class="makeStyles-buttonBase-96"
                 >
                   <button
                     class="MuiButtonBase-root"
@@ -663,10 +663,10 @@ Object {
                         style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-96 MuiPaper-elevation1 MuiPaper-rounded"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-97 MuiPaper-elevation1 MuiPaper-rounded"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content1-100"
+                            class="MuiCardContent-root makeStyles-content1-101"
                           >
                             <h6
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -696,10 +696,10 @@ Object {
                         style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-97 MuiPaper-elevation1 MuiPaper-rounded"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-98 MuiPaper-elevation1 MuiPaper-rounded"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content2-101"
+                            class="MuiCardContent-root makeStyles-content2-102"
                           >
                             <h6
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -1112,7 +1112,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-103 PrivateSwipeArea-anchorLeft-104"
+                    class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
                     style="width: 20px;"
                   />
                 </div>
@@ -1144,14 +1144,14 @@ Object {
                   </button>
                   <div
                     aria-hidden="true"
-                    class="MuiBackdrop-root makeStyles-backdrop-88"
+                    class="MuiBackdrop-root makeStyles-backdrop-89"
                     style="opacity: 0; visibility: hidden;"
                   >
                     <div
-                      class="MuiPaper-root MuiCard-root makeStyles-card-89 MuiPaper-elevation1 MuiPaper-rounded"
+                      class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
                     >
                       <div
-                        class="makeStyles-avatar-90"
+                        class="makeStyles-avatar-91"
                       >
                         <button
                           aria-label="close"
@@ -1212,7 +1212,7 @@ Object {
                           </button>
                         </div>
                         <div
-                          class="makeStyles-button-91"
+                          class="makeStyles-button-92"
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -1340,24 +1340,24 @@ Object {
       <div>
         <div
           aria-hidden="true"
-          class="MuiBackdrop-root makeStyles-backdrop-93"
+          class="MuiBackdrop-root makeStyles-backdrop-94"
           style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
         >
           <div
             style="opacity: 0.2; transform: scale(0) translateZ(0);"
           >
             <div
-              class="MuiPaper-root MuiCard-root makeStyles-cardBackground-94 MuiPaper-elevation1 MuiPaper-rounded"
+              class="MuiPaper-root MuiCard-root makeStyles-cardBackground-95 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <div>
                 <h4
-                  class="MuiTypography-root makeStyles-title-98 MuiTypography-h4 MuiTypography-gutterBottom"
+                  class="MuiTypography-root makeStyles-title-99 MuiTypography-h4 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                 >
                   Welcome!
                 </h4>
                 <p
-                  class="MuiTypography-root makeStyles-tip-99 MuiTypography-body1 MuiTypography-gutterBottom"
+                  class="MuiTypography-root makeStyles-tip-100 MuiTypography-body1 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                 >
                   We designed a special section of Tutorial for freshmen. 
@@ -1367,7 +1367,7 @@ Object {
                 </p>
               </div>
               <div
-                class="makeStyles-buttonBase-95"
+                class="makeStyles-buttonBase-96"
               >
                 <button
                   class="MuiButtonBase-root"
@@ -1383,10 +1383,10 @@ Object {
                       style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardOne-96 MuiPaper-elevation1 MuiPaper-rounded"
+                        class="MuiPaper-root MuiCard-root makeStyles-cardOne-97 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content1-100"
+                          class="MuiCardContent-root makeStyles-content1-101"
                         >
                           <h6
                             class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -1416,10 +1416,10 @@ Object {
                       style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-97 MuiPaper-elevation1 MuiPaper-rounded"
+                        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-98 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content2-101"
+                          class="MuiCardContent-root makeStyles-content2-102"
                         >
                           <h6
                             class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"

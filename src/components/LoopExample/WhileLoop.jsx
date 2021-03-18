@@ -13,44 +13,53 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#c7dbc3 ",
+            backgroundColor: "#c7dbc3",
             marginTop: -6,
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
+            // fontWeight: 550,
         },
         noBackground:{
             marginTop: -6,
-        }
-        
+            letterSpacing: 0.5,
+            fontFamily:"Space Mono",
+            lineHeight:"22px",
+            fontSize:"12px",
+            paddingLeft:"5px",
+            // fontWeight: 550,
+        }, 
     }));
+
     const classes = useStyles();
 
     const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function while_loop () {`}
+{`Algorithm: WhileLoop()`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i = 0;`}
+{`  i = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var a = 0;`}
+{`  a = 0`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var b = 2;`}
+{`  b = 2`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  while(i < 4){`}
+{`  while i < 4 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     a = a + b;`}
+{`     a = a + b`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`     i = i + 1;`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`  }`}
+{`     i = i + 1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`}`}
+{`  end while`}
         </pre>
     </div>
     
@@ -66,7 +75,7 @@ export default function ForLoop() {
 
     var trace = [
         [
-            {value: 'i=0', height: 0, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i=0', height: 0, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a=0', height: 0, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ]
@@ -76,19 +85,19 @@ export default function ForLoop() {
 
     for(var i = 1; i < 5; i++){
         traceUnit = [
-            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+(i-1)*2, height: (i-1)*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
         trace.push(traceUnit);
         traceUnit = [
-            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+(i-1), height: (i-1)*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
         trace.push(traceUnit);
         traceUnit = [
-            {value: 'i='+i, height: i*10, backgroundColor: "#00BFFF", key: 0, y: 0},
+            {value: 'i='+i, height: i*10, backgroundColor: "#FFD700", key: 0, y: 0},
             {value: 'a='+i*2, height: i*20, backgroundColor: "#00BFFF", key: 1, y: 0},
             {value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0}
         ];
