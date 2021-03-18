@@ -26,31 +26,28 @@ const Code = (props)=> {
     const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`function while_loop () {`}
+{`Algorithm: WhileLoop()`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var i = 0;`}
+{`i = 0;`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var a = 0;`}
+{`a = 0;`}
         </pre>
         <pre className={classes.noBackground}>
-{`  var b = 2;`}
+{`b = 2;`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  while(i < 4){`}
+{`while i < 4 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     a = a + b;`}
+{`   a = a + b`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`     i = i + 1;`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`  }`}
+{`   i = i + 1`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`}`}
+{`end while`}
         </pre>
     </div>
     
