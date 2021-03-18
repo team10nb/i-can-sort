@@ -54,9 +54,6 @@ const Code = (props)=> {
 {`Algorithm: SwapForever(Arr)`}
         </pre>
         <pre className={classes.noBackground}>
-{`Input: an array of two intergers Arr`}
-        </pre>
-        <pre className={classes.noBackground}>
 {`  i = 1`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>

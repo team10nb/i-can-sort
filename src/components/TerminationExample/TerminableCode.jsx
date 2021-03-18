@@ -95,40 +95,39 @@ const Code = (props)=> {
     }));
     const classes = useStyles();
 
+
+    
     const terminableCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Algorithm: BubbleSort(Arr, length){`}
+{`Algorithm: BubbleSort(Arr){`}
         </pre>
         <pre className={classes.noBackground}>
-{`Input: an array of integers Arr`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`       the array's size length`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`  i, j;`}
+{`  length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for(i from 0 to length-1){`}
+{`  for i from 0 to length-1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     for(j from 0 to length-1-i){`}
+{`    for j from 0 to length-1-i do`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`       if(array[j] > array[j+1])`}
+{`      if Arr[j] > Arr[j+1] then`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`         swap(array[j], array[j+1])`}
+{`        swap((Arr[j], Arr[j+1])`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    }`}
+{`      end if`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  }`}
+{`    end for`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`}`}
+{`  end for`}
+        </pre>
+        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
+{`return Arr`}
         </pre>
     </div>
     
