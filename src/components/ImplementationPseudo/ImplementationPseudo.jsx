@@ -101,14 +101,14 @@ export default function ImplementationPseudo(props){
         
         cardOne:{
             marginTop: 80,
-            width: "50%",
+            width: "45%",
             height: 520,
             background: "#F0F0F0",        
         },
 
         cardTwo:{
             marginTop: 80,
-            width: "50%",
+            width: "55%",
             height: 520,
             background: "#F0F0F0",      
         },
