@@ -80,7 +80,7 @@ function recursiveMergeSort(
         // Visualize: lift them up to prepare for merge
         trace.push(hardcopy(patched));
         description.push("Only one number left for each part, merge may begin");
-        blockNums.push(2);
+        blockNums.push(6);
 
         patched[start].isPivot = false;
         changeColor(patched, start + 1, mergeColors[colorCount.num - 1]);
@@ -152,7 +152,7 @@ function recursiveMergeSort(
     description.push(
         "Now left and right parts are sorted seperatly, merge them"
     );
-    blockNums.push(6);
+    blockNums.push(7);
 
     let partColor = patched[start].backgroundColor;
     merge(patched, start, midPoint, end, description, trace);
@@ -170,7 +170,7 @@ function recursiveMergeSort(
             patched[end - 1].value +
             " is merged and sorted"
     );
-    blockNums.push(7);
+    blockNums.push(8);
     
     for (let i = start; i < end; i++) {
         patched[i].isPivot = false;
