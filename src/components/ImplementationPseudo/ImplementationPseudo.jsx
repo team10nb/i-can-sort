@@ -101,14 +101,14 @@ export default function ImplementationPseudo(props){
         
         cardOne:{
             marginTop: 80,
-            width: "50%",
+            width: "45%",
             height: 520,
             background: "#F0F0F0",        
         },
 
         cardTwo:{
             marginTop: 80,
-            width: "50%",
+            width: "55%",
             height: 520,
             background: "#F0F0F0",      
         },
@@ -121,15 +121,15 @@ export default function ImplementationPseudo(props){
             marginTop: -6,
             marginBottom: 10,
         },
-        export:{
-    
-        },
         button:{
-            marginLeft: 110,
+            marginLeft: 95,
             width: 200,
             position: 'fixed',
             bottom: 60,
         },
+        slider:{
+            marginLeft: 10
+        }
     }));
 
     const classes = useStyles();
@@ -290,11 +290,9 @@ export default function ImplementationPseudo(props){
                     <div>
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
-                    {/* <div className = {classes.export}> */}
                     <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
-                        Click to Export
+                        Export Note
                     </Button>
-                    {/* </div> */}
 
                 </CardContent>
                 </Card>
@@ -329,19 +327,20 @@ export default function ImplementationPseudo(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplanationBox width={60} height={6}>
+                <ExplanationBox width={50} height={6}>
                     {description[currentStep]}
                 </ExplanationBox>
-
+                
+                <div className={classes.slider}>
                 <AnimationSlider
-                    width={480}
+                    width={460}
                     step={1}
                     max={trace.length - 1}
                     handleChange={handleSliderChange}
                     value={currentStep}
                     display="none"                                       
                 />
-                
+                </div>
                 <AnimationControl {...animationControlProps} />
                     </div>
                     
