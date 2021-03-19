@@ -46,7 +46,7 @@ export default function BubbleSort(arr) {
                         patched[j + 1].value +
                         ", no operation"
                 );
-                blockNums.push(3);
+                blockNums.push(6);
             }
             trace.push(hardcopy(patched));
         }
@@ -58,13 +58,13 @@ export default function BubbleSort(arr) {
         changeColor(patched, j, COLORS.finished);
         trace.push(hardcopy(patched));
         description.push(patched[j].value + " is in the right place");
-        blockNums.push(2);
+        blockNums.push(7);
     }
 
     // 全都排好了
     trace.push(hardcopy(patched));
     description.push("Bubble Sort Finished!");
-    blockNums.push(8);
+    blockNums.push(9);
 
     return { trace: trace, description: description, blockNums: blockNums };
 }

@@ -10,9 +10,10 @@ const MergeSort = (arr) => {
     // Visualize: Initial State
     let description = ["Unsorted Array"];
     let trace = [hardcopy(patched)];
+    let blockNums = [1];
 
     // Sorting...
-    recursiveMergeSort(patched, 0, arr.length, description, trace, colorCount);
+    recursiveMergeSort(patched, 0, arr.length, description, trace, blockNums,colorCount);
 
     // Visualize: Final state
     patched.forEach((element) => {
@@ -20,8 +21,9 @@ const MergeSort = (arr) => {
     });
     trace.push(hardcopy(patched));
     description.push("Merge sort is finished, all sorted");
+    blockNums.push(9);
 
-    return { trace: trace, description: description };
+    return { trace: trace, description: description ,blockNums: blockNums};
 };
 
 // main function to recursively sort an array
@@ -31,6 +33,7 @@ function recursiveMergeSort(
     end,
     description,
     trace,
+    blockNums,
     colorCount
 ) {
     // read mergeColors from COLORS
@@ -50,7 +53,7 @@ function recursiveMergeSort(
             // Visualize: only one element left
             trace.push(hardcopy(patched));
             description.push("Only one number left, already sorted");
-            
+            blockNums.push(2);
             return [patched[start]];
         }
         // to make the process clearer, animate length == 2 seperately
@@ -68,6 +71,7 @@ function recursiveMergeSort(
                 patched[start + 1].value +
                 " into two parts"
         );
+        blockNums.push(1);
 
         for (let i = start; i < start + 2; i++) {
             patched[i].y = -20;
@@ -76,6 +80,7 @@ function recursiveMergeSort(
         // Visualize: lift them up to prepare for merge
         trace.push(hardcopy(patched));
         description.push("Only one number left for each part, merge may begin");
+        blockNums.push(2);
 
         patched[start].isPivot = false;
         changeColor(patched, start + 1, mergeColors[colorCount.num - 1]);
@@ -90,6 +95,7 @@ function recursiveMergeSort(
                 patched[start + 1].value +
                 " into sorted"
         );
+        blockNums.push(7);
 
         // back to the ground
         for (let i = start; i < start + 2; i++) {
@@ -104,6 +110,7 @@ function recursiveMergeSort(
     // Visualize: add pivot to indicate the objects that are being divided
     trace.push(hardcopy(patched));
     description.push("Divide these numbers into two parts");
+    blockNums.push(4);  
 
     //  Visualize: Start sorting LEFT section
     for (let i = start; i < midPoint; i++) {
@@ -117,12 +124,15 @@ function recursiveMergeSort(
     colorCount.num = colorCount.num + 1;
     trace.push(hardcopy(patched));
     description.push("Let's process the left part first");
+    blockNums.push(5);
+
     recursiveMergeSort(
         patched,
         start,
         midPoint,
         description,
         trace,
+        blockNums,
         colorCount
     );
 
@@ -132,7 +142,8 @@ function recursiveMergeSort(
     }
     trace.push(hardcopy(patched));
     description.push("Ok, let's see the right part");
-    recursiveMergeSort(patched, midPoint, end, description, trace, colorCount);
+    blockNums.push(6);
+    recursiveMergeSort(patched, midPoint, end, description, trace,blockNums, colorCount);
 
     for (let i = start; i < end; i++) {
         patched[i].y = -20;
@@ -141,6 +152,7 @@ function recursiveMergeSort(
     description.push(
         "Now left and right parts are sorted seperatly, merge them"
     );
+    blockNums.push(6);
 
     let partColor = patched[start].backgroundColor;
     merge(patched, start, midPoint, end, description, trace);
@@ -158,6 +170,8 @@ function recursiveMergeSort(
             patched[end - 1].value +
             " is merged and sorted"
     );
+    blockNums.push(7);
+    
     for (let i = start; i < end; i++) {
         patched[i].isPivot = false;
         patched[i].y = 0;
