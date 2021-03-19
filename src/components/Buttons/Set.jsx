@@ -20,6 +20,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
+// import {shell} from "electron";
 
 
   const useStyles = makeStyles((theme) => ({
@@ -28,6 +29,16 @@ import Typography from '@material-ui/core/Typography';
     },
     fullList: {
       width: 'auto',
+    },
+    link:{
+      textDecoration: "none", 
+      color:"#4ba6ff",
+      fontSize: "2em",
+      "&:hover": {
+        fontWeight:400,
+        color:"#1564b2",
+        // textDecoration: "underline",
+      },
     },
     content:{
       color: "#6e767b"
@@ -68,7 +79,14 @@ import Typography from '@material-ui/core/Typography';
        localStorage.clear(); 
        localStorage.setItem("snack", JSON.stringify(1));     
     };
-    //drawer close
+    //open a link
+    const handleLink=()=> {
+      let url = "https://github.com/team10nb"
+      // var win = window.open(url, '_blank');
+      // const electron = window.require("electron")
+      window.electron.shell.openExternal(url)
+      // win.focus(); 
+    }
     
     
     //set event: when click outside drawer, drawer will close 
@@ -100,7 +118,7 @@ import Typography from '@material-ui/core/Typography';
         <AccordionDetails>
           <Paper elevation={0}>
             <Typography variant="subtitle2" className = {classes.content}  gutterBottom>
-              We are a software development team of college students, dedicated to the development of algorithm correctness to help users learn.
+              We are university students from UNNC, dedicated to help users learn sorting algorithms and correctness.
             </Typography>
           </Paper>        
         </AccordionDetails>
@@ -120,7 +138,8 @@ import Typography from '@material-ui/core/Typography';
           <Typography variant="subtitle2" className = {classes.content} gutterBottom>
                 You can follow the link to visit our repository:
               </Typography>
-              <Link href="https://github.com/team10nb" variant="body2">GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
+              
+              <Link onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
           </Paper>
               
         </AccordionDetails>

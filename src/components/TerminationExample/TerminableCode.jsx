@@ -151,7 +151,7 @@ const TerminableCode = () => {
         blockNums,
         useStyles,
         Code,
-        title: "Terminable Bubble Sort",
+        title: "Terminating Bubble Sort",
     };
     
     return(<AnimationCode {...props}/>);

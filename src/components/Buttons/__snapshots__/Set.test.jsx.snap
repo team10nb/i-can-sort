@@ -33,7 +33,7 @@ Object {
           />
         </button>
         <div
-          class="PrivateSwipeArea-root-16 PrivateSwipeArea-anchorLeft-17"
+          class="PrivateSwipeArea-root-18 PrivateSwipeArea-anchorLeft-19"
           style="width: 20px;"
         />
       </div>
@@ -68,7 +68,7 @@ Object {
         />
       </button>
       <div
-        class="PrivateSwipeArea-root-16 PrivateSwipeArea-anchorLeft-17"
+        class="PrivateSwipeArea-root-18 PrivateSwipeArea-anchorLeft-19"
         style="width: 20px;"
       />
     </div>

@@ -16,7 +16,8 @@ mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
-    }
+      preload: __dirname + '/preload.js'
+    },
   })
 
 // 加载应用----react 打包

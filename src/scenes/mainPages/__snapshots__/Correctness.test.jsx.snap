@@ -167,7 +167,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-45 PrivateSwipeArea-anchorLeft-46"
+                    class="PrivateSwipeArea-root-46 PrivateSwipeArea-anchorLeft-47"
                     style="width: 20px;"
                   />
                 </div>
@@ -199,14 +199,14 @@ Object {
                   </button>
                   <div
                     aria-hidden="true"
-                    class="MuiBackdrop-root makeStyles-backdrop-40"
+                    class="MuiBackdrop-root makeStyles-backdrop-41"
                     style="opacity: 0; visibility: hidden;"
                   >
                     <div
-                      class="MuiPaper-root MuiCard-root makeStyles-card-41 MuiPaper-elevation1 MuiPaper-rounded"
+                      class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                     >
                       <div
-                        class="makeStyles-avatar-42"
+                        class="makeStyles-avatar-43"
                       >
                         <button
                           aria-label="close"
@@ -267,7 +267,7 @@ Object {
                           </button>
                         </div>
                         <div
-                          class="makeStyles-button-43"
+                          class="makeStyles-button-44"
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -557,7 +557,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-45 PrivateSwipeArea-anchorLeft-46"
+                  class="PrivateSwipeArea-root-46 PrivateSwipeArea-anchorLeft-47"
                   style="width: 20px;"
                 />
               </div>
@@ -589,14 +589,14 @@ Object {
                 </button>
                 <div
                   aria-hidden="true"
-                  class="MuiBackdrop-root makeStyles-backdrop-40"
+                  class="MuiBackdrop-root makeStyles-backdrop-41"
                   style="opacity: 0; visibility: hidden;"
                 >
                   <div
-                    class="MuiPaper-root MuiCard-root makeStyles-card-41 MuiPaper-elevation1 MuiPaper-rounded"
+                    class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                   >
                     <div
-                      class="makeStyles-avatar-42"
+                      class="makeStyles-avatar-43"
                     >
                       <button
                         aria-label="close"
@@ -657,7 +657,7 @@ Object {
                         </button>
                       </div>
                       <div
-                        class="makeStyles-button-43"
+                        class="makeStyles-button-44"
                       >
                         <button
                           class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"

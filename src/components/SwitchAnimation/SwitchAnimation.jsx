@@ -127,7 +127,6 @@ export const SwitchAnimation = (props) => {
         if (isPlaying) {
             pause();
         }
-        console.log(newValue);
 
         const item = trace[newValue];
         setCurrentStep(newValue);
@@ -181,7 +180,6 @@ export const SwitchAnimation = (props) => {
     const pause = () => {
         setIsPlaying(false);
         clearTimeouts();
-        localStorage.setItem("history", "hello");
     };
 
     // To resume the animation
@@ -189,8 +187,6 @@ export const SwitchAnimation = (props) => {
         setIsPlaying(true);
         const newtrace = trace.slice(currentStep);
         run(newtrace);
-        const his = localStorage.getItem("history");
-        console.log(his);
     };
 
     // Go to next step and pause
@@ -239,31 +235,31 @@ export const SwitchAnimation = (props) => {
         <div className={classes.root}>
             {/* bars */}
             <div className={classes.bars}>
-                {bars.map((background) => (
+                {bars.map((bar) => (
                     <motion.li
-                        key={background.key} // each bar's identification
+                        key={bar.key} // each bar's identification
                         layout
                         transition={spring}
-                        style={background}
+                        style={bar}
                         className={classes.bar}
                         animate={{
-                            backgroundColor: background.backgroundColor,
-                            y: background.y,
-                            x: background.x,
+                            backgroundColor: bar.backgroundColor,
+                            y: bar.y,
+                            x: bar.x,
                         }}
                     >
                         <div className={classes.barNumber}>
-                            {background.value}
+                            {bar.value}
                         </div>
                         <div
                             style={{
-                                marginTop: background.height-17,
+                                marginTop: bar.height-17,
                                 fontSize: "16px",
                                 textAlign: "center",
                                 fontWeight: "600",
                             }}
                         >
-                            {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                            {bar.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
                         </div>
                     </motion.li>
                 ))}
