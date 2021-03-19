@@ -18,6 +18,7 @@ mainWindow = new BrowserWindow({
       webSecurity: false,
       preload: __dirname + '/preload.js'
     },
+    icon: __dirname + '/src/Resource/algo.ico',
   })
 
 // 加载应用----react 打包
@@ -32,9 +33,19 @@ mainWindow = new BrowserWindow({
 
 mainWindow.loadURL('http://localhost:3000/');
 
+// mainWindow.setIcon('./Resource/swap.png');
+
+mainWindow.removeMenu();
+
+mainWindow.setTitle("iCanSort");
+
 mainWindow.on('closed', function () {
     mainWindow = null
   })
+
+mainWindow.on('page-title-updated', (evt) => {
+  evt.preventDefault();
+});
 //
 //mainWindow.webContents
 //.executeJavaScript('localStorage.clear();', true)

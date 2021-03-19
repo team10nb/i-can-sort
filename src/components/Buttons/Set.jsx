@@ -84,7 +84,7 @@ import Typography from '@material-ui/core/Typography';
       let url = "https://github.com/team10nb"
       // var win = window.open(url, '_blank');
       // const electron = window.require("electron")
-      // window.electron.shell.openExternal(url)
+      window.electron.shell.openExternal(url)
       // win.focus(); 
     }
     
