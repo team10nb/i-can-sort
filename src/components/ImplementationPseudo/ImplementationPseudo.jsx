@@ -127,6 +127,9 @@ export default function ImplementationPseudo(props){
             position: 'fixed',
             bottom: 60,
         },
+        slider:{
+            marginLeft: 10
+        }
     }));
 
     const classes = useStyles();
@@ -324,19 +327,20 @@ export default function ImplementationPseudo(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplanationBox width={60} height={6}>
+                <ExplanationBox width={50} height={6}>
                     {description[currentStep]}
                 </ExplanationBox>
-
+                
+                <div className={classes.slider}>
                 <AnimationSlider
-                    width={480}
+                    width={460}
                     step={1}
                     max={trace.length - 1}
                     handleChange={handleSliderChange}
                     value={currentStep}
                     display="none"                                       
                 />
-                
+                </div>
                 <AnimationControl {...animationControlProps} />
                     </div>
                     
