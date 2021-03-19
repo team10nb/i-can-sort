@@ -184,7 +184,7 @@ Output: The result of sorting Arr.`}
 {`for i = 1 to length -1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`  preInde = i - 1`}
+{`  preIndex = i - 1`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
 {`  current = arr[i]`}
@@ -193,7 +193,7 @@ Output: The result of sorting Arr.`}
 {`  while preIndex>=0 && current<Arr[preIndex] do`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    Arr[preIndex + 1] = Arr[preIndex]`}
+{`    Arr[preIndex + 1] = Arr[preIndex] !!!ADD COMMENT`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
 {`    preIndex--`}
@@ -238,7 +238,7 @@ Output: The result of sorting Arr.`}
 {`for each unsorted partition(a,b) do`}
         </pre>
         <pre className={blockNum===2 ? classes.qBackground : classes.qNoBackground}>
-{`  pivot = position of selected element`}
+{`  pivot = position of randomly selected element`}
         </pre>
         <pre className={blockNum===3 ? classes.qBackground : classes.qNoBackground}>
 {`  swap(Arr[pivot], Arr[a])`}
