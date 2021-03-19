@@ -14,7 +14,7 @@ Object {
           <div
             class="makeStyles-algorithmTitle-21"
           >
-            What day is (
+            What is day (
             <span
               style="font-weight: 600; font-size: 20px; color: rgb(255, 111, 0);"
             >
@@ -41,7 +41,7 @@ Object {
               <div
                 class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-29 MuiPaper-outlined MuiPaper-rounded"
               >
-                No.1 day of a week is Monday
+                Day 1 of a week is Monday
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ Object {
         <div
           class="makeStyles-algorithmTitle-21"
         >
-          What day is (
+          What is day (
           <span
             style="font-weight: 600; font-size: 20px; color: rgb(255, 111, 0);"
           >
@@ -258,7 +258,7 @@ Object {
             <div
               class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-29 MuiPaper-outlined MuiPaper-rounded"
             >
-              No.1 day of a week is Monday
+              Day 1 of a week is Monday
             </div>
           </div>
         </div>
