@@ -16,7 +16,7 @@ const QuickSort = (arr) => {
     // Visualize: Final state
     trace.push(hardcopy(patched));
     description.push("Quick sort is finished, all sorted");
-    blockNums.push(9);
+    blockNums.push(13);
 
     return { trace: trace, description: description, blockNums:blockNums };
 
@@ -117,7 +117,7 @@ const QuickSort = (arr) => {
                 description.push(
                     "Move the smaller " + patched[i].value + " to left side"
                 );
-                blockNums.push(9);
+                blockNums.push(10);
                 i += 1;
             } else {
                 changeColor(patched, j, COLORS.original);

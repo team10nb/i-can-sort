@@ -4,6 +4,7 @@
 
 import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
+//TODO:
 export default function SelectionSort(arr) {
     // initialize
     let patched = patch(arr);
@@ -69,6 +70,7 @@ export default function SelectionSort(arr) {
                 );
                 blockNums.push(6);
             } else{
+                // last element
                 trace.push(hardcopy(patched));
                 if (patched[j].value > patched[minIndex].value) {
                     description.push(
@@ -91,6 +93,7 @@ export default function SelectionSort(arr) {
         }
 
         if (minIndex === i) {
+            //explain no swap
             description.push(
                 "As the minimum is the first unsorted element, no swap"
             );

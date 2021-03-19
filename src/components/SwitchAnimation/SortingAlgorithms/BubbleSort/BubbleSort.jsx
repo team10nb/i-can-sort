@@ -58,7 +58,7 @@ export default function BubbleSort(arr) {
         changeColor(patched, j, COLORS.finished);
         trace.push(hardcopy(patched));
         description.push(patched[j].value + " is in the right place");
-        blockNums.push(2);
+        blockNums.push(7);
     }
 
     // 全都排好了
