@@ -18,6 +18,7 @@ const styles = {
         fontFamily: "Space Mono",
         fontWeight: "500",
         fontSize:"12px",
+        marginLeft:15,
     },
     thead:{
         lineHeight: "1em", 
@@ -56,6 +57,7 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
+            marginLeft: 10,
             width: "165px",
             fontFamily: "Space Mono",
             fontWeight: "500",
@@ -66,6 +68,7 @@ const Code = (props)=> {
             paddingLeft:"5px",
         },
         noBackground:{
+            marginLeft: 10,
             width: "165px",
             fontFamily: "Space Mono",
             fontWeight: "500",
@@ -170,7 +173,7 @@ export default function Terminable(props){
             fontWeight: "600",
         },
         cardOne:{
-            width: 400, 
+            width: 450, 
             height: 520,
             display: "grid",
             justifyContent: "center",
@@ -179,7 +182,7 @@ export default function Terminable(props){
             paddingTop: -30,
         },
         cardTwo:{
-            width: 400, 
+            width: 450, 
             height: 265,
             paddingTop: 10,
             paddingBottom: 10,
@@ -188,7 +191,7 @@ export default function Terminable(props){
             display: 'flex',
         },
         cardThree:{
-            width: 400, 
+            width: 450, 
             height: 200,
             paddingTop: 5,
             background: "#F0F0F0",  
@@ -421,7 +424,7 @@ export default function Terminable(props){
                     <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
                         <CardContent>
                             <div className = {classes.introduction}>
-                            Swapping a and b exchanges the values of them. <br></br><br/>
+                            Swapping a and b will exchange the values of them. <br></br><br/>
                             The example below will show you how swapping works.
                             </div>
                         </CardContent>
@@ -429,7 +432,7 @@ export default function Terminable(props){
                     </Card>
                     <Card className = {classes.cardTwo}>
                         
-                        <CardContent style={{marginTop:"0px"}}>
+                        <CardContent style={{marginTop:"0px", width:190}}>
                             <div style={{marginBottom:"10px", fontWeight:"600", fontSize:"12px", fontFamily:"Space Mono"}}>Code</div> 
                             <Typography>
                                 <Code blockNum={blockNums[currentStep]}/>

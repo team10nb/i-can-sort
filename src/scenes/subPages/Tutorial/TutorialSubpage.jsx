@@ -12,10 +12,14 @@ import {color} from '../../mainPages/Tutorial';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
+  appBar:{
+    justifyContent:"center",
+    height: 55,
+  },
   icon:{
     textAlign: 'left',
     width: 100,
-    height: 60,
+    height: 55,
   },
   title: {
     flexGrow: 1,
@@ -68,7 +72,7 @@ export default function TutorialSubPage(props) {
 
    <div >
       <ThemeProvider theme={theme}>
-      <AppBar>
+      <AppBar className={classes.appBar}>
         <Toolbar>
           <Button className={classes.icon} onClick={handleClick}>
             <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />

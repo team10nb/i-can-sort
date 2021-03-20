@@ -9,28 +9,9 @@ import {BubbleExample} from '../../../../components/ImplementationPseudo/Example
 const introMessage =
                 <div>
                 <h1>Bubble sort</h1>
-                <p style={{textAlign:"left"}}>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
-                {/* <h1>Performance</h1> */}
-                {/* <table>
-                    <tbody>
-                    <tr>
-                        <td>Worst-case time complexity</td>
-                        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
-                    </tr>
-                    <tr>
-                        <td>Average time complexity </td>
-                        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
-                    </tr>
-                    <tr>
-                        <td>Best-case time complexity </td>
-                        <td style = {{paddingLeft:7}}>O(n)</td>
-                    </tr>
-                    <tr>
-                        <td>Worst-case space complexity </td>
-                        <td style = {{paddingLeft:7}}>O(1)</td>
-                    </tr>
-                    </tbody>
-                </table> */}
+                <p style={{textAlign:"left", fontSize:17}}>
+                Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.
+                </p>
                 </div>
                
 const intro = {

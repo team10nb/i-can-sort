@@ -1,4 +1,6 @@
-
+/*
+    Author: Yuting Jiang
+*/
 import React from 'react';
 import { useState } from 'react';
 import AlgorithmButton from '../../../../components/CorrectnessExample/AlgorithmButton';
@@ -12,21 +14,21 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
-import '../../../../fonts/fonts.css';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import BackDrop from '../../../../components/CorrectnessExample/BackDrop';
+import '../../../../fonts/fonts.css';
 
 const useStyles = makeStyles((theme) => ({
-    button:{
-        borderWidth: 1.5,
-        borderColor: '#808080',
-        color: '#808080',
-        borderRadius: 11,
-        "&:hover, &$focusVisible": {backgroundColor: '#EFEFEF'},
-        marginLeft: "10px",
-        height: 40,
-        width: 80,
-    },
+    // button:{
+    //     borderWidth: 1.5,
+    //     borderColor: '#808080',
+    //     color: '#808080',
+    //     borderRadius: 11,
+    //     "&:hover, &$focusVisible": {backgroundColor: '#EFEFEF'},
+    //     marginLeft: "10px",
+    //     height: 40,
+    //     width: 80,
+    // },
 }))
 
 const CssTextField = withStyles({
@@ -176,23 +178,22 @@ const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</
 
 export default function Partial() {
     const classes = useStyles();
-    const [table,setTable] = useState([]);
-    const [timer,setTimer] = useState();
 
     const [exp,setExp] = useState("");
     const [output,setOutput] = useState(null);
-
-    const [input, setInput] = useState();
-    const [expOutput, setExpOutput] = useState();
+    const [input, setInput] = useState("7");
+    const [expOutput, setExpOutput] = useState("5040");
     const [wrongMsg, setWrongMsg] = useState(" ");
+    const [error, setError] = useState(false);
 
-    const confirm = () => {
+    const confirm = (props) => {
         setExp("");
         setOutput("");
         //input is undefined
         if(isUndefined(input)){
             setInput("empty");
             setExpOutput("");
+            setError(true);
             setWrongMsg("Please enter a positive integer from 1 to 20.");
             return;
         }
@@ -201,25 +202,32 @@ export default function Partial() {
         if(input === ""){
             setInput("empty");
             setExpOutput("");
+            setError(true);
             setWrongMsg("Please enter a positive integer from 1 to 20.");
         }
     
         //valid input
         if (input.match(/^[0-9]*$/) && input>0 && input<21){
+            const {exp, output} = props;
             setExpOutput(factorial(input));
+            setError(false);
             setWrongMsg("");
+            runAlgorithm(exp, output);
         }
         else{
             setInput("empty");
             setExpOutput("");
+            setError(true);
             setWrongMsg("Please enter a positive integer from 1 to 20.");
+            setExp("");
+            setOutput("");
         }
     };
 
     const handleClick = (props) => () => {
-        const {exp, output} = props;
-        confirm();
-        runAlgorithm(exp, output);
+        // const {exp, output} = props;
+        confirm(props);
+        // runAlgorithm(exp, output);
     };
 
     const handleChange = (e) => {
@@ -228,7 +236,7 @@ export default function Partial() {
 
     const runAlgorithm = (exp, index) => {
         if(isUndefined(input) || input==="empty"){
-            setExp("Please enter input and click 'CONFIRM' button first.");
+            setExp("Please enter input first.");
             return;
         }
         switch(index) {
@@ -252,30 +260,40 @@ export default function Partial() {
     return( 
         <div>
             <BackDrop message={message}/>
-            <div style={{paddingLeft:6}}>
+            <div style={{paddingLeft:6, paddingTop:10}}>
             <Card style={{height: 280, width:770, backgroundColor:'#EFEFEF', paddingTop:6}}>
-            <CardContent>
+                <div style={{paddingLeft: 20}}>
+
                 <h1 style={{height:35}}>Algorithm: factorial(n) </h1>
-                <h1 style={{ height:60}}>Input: &nbsp;
+
+                <h1 style={{ height:55}}>Input: &nbsp;
                 <CssTextField 
                     size="small" 
                     label="Enter a positive integer from 1 to 20" 
                     InputProps={{
                         startAdornment: <InputAdornment position="start">n = </InputAdornment>,
                     }}
+                    placeholder={input}
                     variant="outlined"
                     style={{display: 'inline-block'}}
                     onChange={handleChange}
                     helperText={wrongMsg}
                     style = {{width:300}}
+                    error = {error}
                 />
-                {/* <Button variant="outlined" className={classes.button} onClick={confirm}>Confirm</Button> */}
                 </h1>
+
                 <h1>Expected Output: {expOutput}</h1>
-                <h1 style={{color: color}}>----------------Click below example algorithms to see the output------------------</h1>
+
+                <div style={{height:40, display:"flex", verticalAlign: "middle"}}>
+                <h1 style={{color: color, fontFamily: "Space Mono", fontWeight: 400}}>-------Click below example algorithms to see the output-------</h1>
+                </div>
+
                 <h1>Actual Output: {output}</h1>
-                <h1 style = {{color: color}}> {exp}</h1>
-            </CardContent>
+
+                <h1 style = {{color: red[700]}}> {exp}</h1>
+
+                </div>
             </Card>
             </div>
             <div style = {{paddingTop:10}}>

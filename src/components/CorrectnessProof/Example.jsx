@@ -74,7 +74,7 @@ const InsertionExample = () => {
 
 const QuickExample = () => {
     const Code = Quick;
-    const title = '- Quick Sort -';
+    const title = 'Quick Sort';
     const algorithm = 'quick';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = QuickSort(arr);

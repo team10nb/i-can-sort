@@ -14,6 +14,7 @@ export default function TutorialTerminology(props) {
         history: props.history,      
         // intro: intro,
         // operate: operate,
+        message: "Terminology",
     }
 
     return(
