@@ -49,9 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonSet: {
         display: "flex",
-        "& > *": {
-            margin: theme.spacing(0),
-        },
+        marginTop: 30,
     },
 }));
 
@@ -290,6 +288,9 @@ export default function ProcedureMainPage(props) {
                             </Link>
                         </Grid>
 
+                        {/* <Grid item xs={6} sm={3}>
+                        </Grid> */}
+
                         <Grid item xs={6} sm={3}>
                             <Link to="/ProcedureSubpage/Merge">
                                 <Module {...mergeProps} />
@@ -310,7 +311,7 @@ export default function ProcedureMainPage(props) {
                         </Grid>
 
                         <Grid item xs={12}>
-                            <div style={{ marginLeft: -8, marginTop: 50 }}>
+                            <div style={{ marginLeft: -8, marginTop: 20 }}>
                                 <ProcedureChoiceMenu />
                             </div>
                         </Grid>
