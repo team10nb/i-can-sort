@@ -10,6 +10,8 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
+import Card from '@material-ui/core/Card';
+import { CardContent } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -54,6 +56,27 @@ const useStyles = makeStyles((theme) => ({
           margin: theme.spacing(0),
         },
     },
+
+    cardSet:{
+        display: 'flex',    
+        width: 1020,
+        '& > *': {
+          margin: theme.spacing(3),
+        }
+      },
+      cardOne:{
+        marginTop: 80,
+        background: "#F0F0F0",
+        width: "35%",
+        height: 520
+      },
+      cardTwo:{
+        marginTop: 80,
+        background: "#F0F0F0",
+        width: "65%",
+        height: 520,
+        alignItems:"center",
+      },
 
     icon:{
         marginRight: theme.spacing(2),
@@ -119,6 +142,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#F8F8F8",    
         "&:hover": {backgroundColor:color},
     },
+    
     listItemText:{
         fontFamily:"Quicksand",
         fontWeight: "600",
@@ -253,7 +277,18 @@ const useStyles = makeStyles((theme) => ({
                         </List>
                    </div>
                 </Drawer>
-                {getStepContent(activeStep)}
+                <div className = {classes.cardSet}>
+                    <Card className={classes.cardOne}>
+                        <CardContent style={{paddingLeft: "24px", paddingTop: "0px"}}>
+                            {/* {intro.introMessage} */}
+                        </CardContent>
+                    </Card>
+                    <Card className={classes.cardTwo} >
+                        <CardContent >
+                            {/* {intro.animation} */}
+                        </CardContent>
+                    </Card>
+                </div>
             </main>
 
 
