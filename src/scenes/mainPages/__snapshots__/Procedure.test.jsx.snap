@@ -392,156 +392,159 @@ Object {
                       />
                     </button>
                     <div
-                      class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
+                      class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
                       style="width: 20px;"
                     />
                   </div>
                   <div>
-                    <button
-                      aria-label="help"
-                      class="MuiButtonBase-root MuiIconButton-root"
-                      tabindex="0"
-                      title="tutorial"
-                      type="button"
-                    >
-                      <span
-                        class="MuiIconButton-label"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        class="MuiTouchRipple-root"
-                      />
-                    </button>
                     <div
-                      aria-hidden="true"
-                      class="MuiBackdrop-root makeStyles-backdrop-89"
-                      style="opacity: 0; visibility: hidden;"
+                      style="height: 48px;"
                     >
+                      <button
+                        aria-label="help"
+                        class="MuiButtonBase-root MuiIconButton-root"
+                        tabindex="0"
+                        title="tutorial"
+                        type="button"
+                      >
+                        <span
+                          class="MuiIconButton-label"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root makeStyles-icon-92"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="MuiTouchRipple-root"
+                        />
+                      </button>
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
+                        aria-hidden="true"
+                        class="MuiBackdrop-root makeStyles-backdrop-89"
+                        style="opacity: 0; visibility: hidden;"
                       >
                         <div
-                          class="makeStyles-avatar-91"
+                          class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
                         >
-                          <button
-                            aria-label="close"
-                            class="MuiButtonBase-root MuiIconButton-root"
-                            tabindex="0"
-                            type="button"
+                          <div
+                            class="makeStyles-avatar-91"
                           >
-                            <span
-                              class="MuiIconButton-label"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root"
-                                focusable="false"
-                                style="color: rgb(21, 101, 192); opacity: 0.8; font-size: 40px;"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                                />
-                              </svg>
-                            </span>
-                            <span
-                              class="MuiTouchRipple-root"
-                            />
-                          </button>
-                        </div>
-                        <div>
-                          <div>
                             <button
-                              class="MuiButtonBase-root MuiCardActionArea-root"
-                              style="width: 580px; height: 403px; margin-bottom: 15px;"
+                              aria-label="close"
+                              class="MuiButtonBase-root MuiIconButton-root"
                               tabindex="0"
                               type="button"
                             >
-                              <img
-                                alt="logo1"
-                                heigh="300"
-                                src="Phelp1.png"
-                                width="587"
-                              />
-                              <div
-                                class="MuiCardContent-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-                                  style="margin-left: 20px; margin-right: 20px;"
-                                >
-                                  This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
-                                </p>
-                              </div>
                               <span
-                                class="MuiCardActionArea-focusHighlight"
-                              />
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  style="color: rgb(21, 101, 192); opacity: 0.8; font-size: 40px;"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                                  />
+                                </svg>
+                              </span>
                               <span
                                 class="MuiTouchRipple-root"
                               />
                             </button>
                           </div>
-                          <div
-                            class="makeStyles-button-92"
-                          >
-                            <button
-                              class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
-                              disabled=""
-                              style="background-color: rgb(21, 101, 192); opacity: 0.5;"
-                              tabindex="-1"
-                              type="button"
-                            >
-                              <span
-                                class="MuiIconButton-label"
+                          <div>
+                            <div>
+                              <button
+                                class="MuiButtonBase-root MuiCardActionArea-root"
+                                style="height: 403px; margin-bottom: 15px;"
+                                tabindex="0"
+                                type="button"
                               >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root"
-                                  focusable="false"
-                                  style="color: white; font-size: 40px;"
-                                  viewBox="0 0 24 24"
+                                <img
+                                  alt="logo0"
+                                  src="Phelp1.png"
+                                  width="587px"
+                                />
+                                <div
+                                  class="MuiCardContent-root"
                                 >
-                                  <path
-                                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                                  />
-                                </svg>
-                              </span>
-                            </button>
-                            <button
-                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
-                              style="background-color: rgb(21, 101, 192); opacity: 0.5;"
-                              tabindex="0"
-                              type="button"
+                                  <p
+                                    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                                    style="margin-left: 20px; margin-right: 20px;"
+                                  >
+                                    This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
+                                  </p>
+                                </div>
+                                <span
+                                  class="MuiCardActionArea-focusHighlight"
+                                />
+                                <span
+                                  class="MuiTouchRipple-root"
+                                />
+                              </button>
+                            </div>
+                            <div
+                              class="makeStyles-button-94"
                             >
-                              <span
-                                class="MuiIconButton-label"
+                              <button
+                                class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+                                disabled=""
+                                style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                                tabindex="-1"
+                                type="button"
                               >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root"
-                                  focusable="false"
-                                  style="color: white; font-size: 40px;"
-                                  viewBox="0 0 24 24"
+                                <span
+                                  class="MuiIconButton-label"
                                 >
-                                  <path
-                                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                                  />
-                                </svg>
-                              </span>
-                              <span
-                                class="MuiTouchRipple-root"
-                              />
-                            </button>
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MuiSvgIcon-root"
+                                    focusable="false"
+                                    style="color: white; font-size: 40px;"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                                    />
+                                  </svg>
+                                </span>
+                              </button>
+                              <button
+                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+                                style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span
+                                  class="MuiIconButton-label"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MuiSvgIcon-root"
+                                    focusable="false"
+                                    style="color: white; font-size: 40px;"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                                    />
+                                  </svg>
+                                </span>
+                                <span
+                                  class="MuiTouchRipple-root"
+                                />
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -620,24 +623,24 @@ Object {
         <div>
           <div
             aria-hidden="true"
-            class="MuiBackdrop-root makeStyles-backdrop-94"
+            class="MuiBackdrop-root makeStyles-backdrop-96"
             style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
           >
             <div
               style="opacity: 0.2; transform: scale(0) translateZ(0);"
             >
               <div
-                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-95 MuiPaper-elevation1 MuiPaper-rounded"
+                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-97 MuiPaper-elevation1 MuiPaper-rounded"
               >
                 <div>
                   <h4
-                    class="MuiTypography-root makeStyles-title-99 MuiTypography-h4 MuiTypography-gutterBottom"
+                    class="MuiTypography-root makeStyles-title-101 MuiTypography-h4 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
                     Welcome!
                   </h4>
                   <p
-                    class="MuiTypography-root makeStyles-tip-100 MuiTypography-body1 MuiTypography-gutterBottom"
+                    class="MuiTypography-root makeStyles-tip-102 MuiTypography-body1 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
                     We designed a special section of Tutorial for freshmen. 
@@ -647,7 +650,7 @@ Object {
                   </p>
                 </div>
                 <div
-                  class="makeStyles-buttonBase-96"
+                  class="makeStyles-buttonBase-98"
                 >
                   <button
                     class="MuiButtonBase-root"
@@ -663,10 +666,10 @@ Object {
                         style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-97 MuiPaper-elevation1 MuiPaper-rounded"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-99 MuiPaper-elevation1 MuiPaper-rounded"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content1-101"
+                            class="MuiCardContent-root makeStyles-content1-103"
                           >
                             <h6
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -696,10 +699,10 @@ Object {
                         style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-98 MuiPaper-elevation1 MuiPaper-rounded"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-100 MuiPaper-elevation1 MuiPaper-rounded"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content2-102"
+                            class="MuiCardContent-root makeStyles-content2-104"
                           >
                             <h6
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -1112,156 +1115,159 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-104 PrivateSwipeArea-anchorLeft-105"
+                    class="PrivateSwipeArea-root-106 PrivateSwipeArea-anchorLeft-107"
                     style="width: 20px;"
                   />
                 </div>
                 <div>
-                  <button
-                    aria-label="help"
-                    class="MuiButtonBase-root MuiIconButton-root"
-                    tabindex="0"
-                    title="tutorial"
-                    type="button"
-                  >
-                    <span
-                      class="MuiIconButton-label"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
                   <div
-                    aria-hidden="true"
-                    class="MuiBackdrop-root makeStyles-backdrop-89"
-                    style="opacity: 0; visibility: hidden;"
+                    style="height: 48px;"
                   >
+                    <button
+                      aria-label="help"
+                      class="MuiButtonBase-root MuiIconButton-root"
+                      tabindex="0"
+                      title="tutorial"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root makeStyles-icon-92"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
                     <div
-                      class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
+                      aria-hidden="true"
+                      class="MuiBackdrop-root makeStyles-backdrop-89"
+                      style="opacity: 0; visibility: hidden;"
                     >
                       <div
-                        class="makeStyles-avatar-91"
+                        class="MuiPaper-root MuiCard-root makeStyles-card-90 MuiPaper-elevation1 MuiPaper-rounded"
                       >
-                        <button
-                          aria-label="close"
-                          class="MuiButtonBase-root MuiIconButton-root"
-                          tabindex="0"
-                          type="button"
+                        <div
+                          class="makeStyles-avatar-91"
                         >
-                          <span
-                            class="MuiIconButton-label"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root"
-                              focusable="false"
-                              style="color: rgb(21, 101, 192); opacity: 0.8; font-size: 40px;"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                              />
-                            </svg>
-                          </span>
-                          <span
-                            class="MuiTouchRipple-root"
-                          />
-                        </button>
-                      </div>
-                      <div>
-                        <div>
                           <button
-                            class="MuiButtonBase-root MuiCardActionArea-root"
-                            style="width: 580px; height: 403px; margin-bottom: 15px;"
+                            aria-label="close"
+                            class="MuiButtonBase-root MuiIconButton-root"
                             tabindex="0"
                             type="button"
                           >
-                            <img
-                              alt="logo1"
-                              heigh="300"
-                              src="Phelp1.png"
-                              width="587"
-                            />
-                            <div
-                              class="MuiCardContent-root"
-                            >
-                              <p
-                                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-                                style="margin-left: 20px; margin-right: 20px;"
-                              >
-                                This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
-                              </p>
-                            </div>
                             <span
-                              class="MuiCardActionArea-focusHighlight"
-                            />
+                              class="MuiIconButton-label"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root"
+                                focusable="false"
+                                style="color: rgb(21, 101, 192); opacity: 0.8; font-size: 40px;"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                                />
+                              </svg>
+                            </span>
                             <span
                               class="MuiTouchRipple-root"
                             />
                           </button>
                         </div>
-                        <div
-                          class="makeStyles-button-92"
-                        >
-                          <button
-                            class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
-                            disabled=""
-                            style="background-color: rgb(21, 101, 192); opacity: 0.5;"
-                            tabindex="-1"
-                            type="button"
-                          >
-                            <span
-                              class="MuiIconButton-label"
+                        <div>
+                          <div>
+                            <button
+                              class="MuiButtonBase-root MuiCardActionArea-root"
+                              style="height: 403px; margin-bottom: 15px;"
+                              tabindex="0"
+                              type="button"
                             >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root"
-                                focusable="false"
-                                style="color: white; font-size: 40px;"
-                                viewBox="0 0 24 24"
+                              <img
+                                alt="logo0"
+                                src="Phelp1.png"
+                                width="587px"
+                              />
+                              <div
+                                class="MuiCardContent-root"
                               >
-                                <path
-                                  d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                                />
-                              </svg>
-                            </span>
-                          </button>
-                          <button
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
-                            style="background-color: rgb(21, 101, 192); opacity: 0.5;"
-                            tabindex="0"
-                            type="button"
+                                <p
+                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                                  style="margin-left: 20px; margin-right: 20px;"
+                                >
+                                  This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
+                                </p>
+                              </div>
+                              <span
+                                class="MuiCardActionArea-focusHighlight"
+                              />
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                          <div
+                            class="makeStyles-button-94"
                           >
-                            <span
-                              class="MuiIconButton-label"
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+                              disabled=""
+                              style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                              tabindex="-1"
+                              type="button"
                             >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root"
-                                focusable="false"
-                                style="color: white; font-size: 40px;"
-                                viewBox="0 0 24 24"
+                              <span
+                                class="MuiIconButton-label"
                               >
-                                <path
-                                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                                />
-                              </svg>
-                            </span>
-                            <span
-                              class="MuiTouchRipple-root"
-                            />
-                          </button>
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  style="color: white; font-size: 40px;"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                                  />
+                                </svg>
+                              </span>
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+                              style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  style="color: white; font-size: 40px;"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1340,24 +1346,24 @@ Object {
       <div>
         <div
           aria-hidden="true"
-          class="MuiBackdrop-root makeStyles-backdrop-94"
+          class="MuiBackdrop-root makeStyles-backdrop-96"
           style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
         >
           <div
             style="opacity: 0.2; transform: scale(0) translateZ(0);"
           >
             <div
-              class="MuiPaper-root MuiCard-root makeStyles-cardBackground-95 MuiPaper-elevation1 MuiPaper-rounded"
+              class="MuiPaper-root MuiCard-root makeStyles-cardBackground-97 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <div>
                 <h4
-                  class="MuiTypography-root makeStyles-title-99 MuiTypography-h4 MuiTypography-gutterBottom"
+                  class="MuiTypography-root makeStyles-title-101 MuiTypography-h4 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                 >
                   Welcome!
                 </h4>
                 <p
-                  class="MuiTypography-root makeStyles-tip-100 MuiTypography-body1 MuiTypography-gutterBottom"
+                  class="MuiTypography-root makeStyles-tip-102 MuiTypography-body1 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                 >
                   We designed a special section of Tutorial for freshmen. 
@@ -1367,7 +1373,7 @@ Object {
                 </p>
               </div>
               <div
-                class="makeStyles-buttonBase-96"
+                class="makeStyles-buttonBase-98"
               >
                 <button
                   class="MuiButtonBase-root"
@@ -1383,10 +1389,10 @@ Object {
                       style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardOne-97 MuiPaper-elevation1 MuiPaper-rounded"
+                        class="MuiPaper-root MuiCard-root makeStyles-cardOne-99 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content1-101"
+                          class="MuiCardContent-root makeStyles-content1-103"
                         >
                           <h6
                             class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -1416,10 +1422,10 @@ Object {
                       style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-98 MuiPaper-elevation1 MuiPaper-rounded"
+                        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-100 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content2-102"
+                          class="MuiCardContent-root makeStyles-content2-104"
                         >
                           <h6
                             class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
