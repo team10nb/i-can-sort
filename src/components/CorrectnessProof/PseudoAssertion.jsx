@@ -8,23 +8,34 @@ import {color} from '../../scenes/mainPages/Correctness';
 
 const useStyles = makeStyles((theme) => ({
     qAssertNoBack:{
-        marginTop: -4,
+        backgroundColor:"#DCDCDC",
+        borderRadius:15,
+        marginTop: -8,
+        // marginBottom: 3,
         letterSpacing: -0.5,
-        fontSize: 15,
+        fontSize: 12,
+        fontWeight: 20,
         fontStyle: "italic",
         // paddingLeft:"5px",
         fontFamily: "Space Mono",
+        textAlign:"left",
+        padding:3,
         // textAlign: 'center',
     },
     qAssertBack:{
-       
-        marginTop: -4,
+        backgroundColor:"#DCDCDC",
+        borderRadius:15,
+        marginTop: -8,
+        // marginBottom: 2,
         letterSpacing: -0.5,
-        fontSize: 15,
+        fontSize: 12,
+        fontWeight: 20,
         fontStyle: "italic",
         // paddingLeft:"5px",
         fontFamily: "Space Mono",
+        textAlign:"left",
         color:color,
+        padding:3,
         // textAlign: 'center',
     },
     background:{
@@ -64,22 +75,23 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:"8px", 
     },
     qBackground:{
-        backgroundColor:color,
-        opacity:0.5,
+        backgroundColor:"#FEE5D4",
+        // borderRadius:15,
       
-        marginTop: -11,
+        marginTop: -8,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
         lineHeight:"22px",
-        fontSize:"12px",
+        fontSize:"13px",
         paddingLeft:"5px",
     },
     qNoBackground:{
-        marginTop: -11,
+        // borderRadius:15,
+        marginTop: -8,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
         lineHeight:"22px",
-        fontSize:"12px",
+        fontSize:"13px",
         paddingLeft:"5px",  
     },
 }));
@@ -277,8 +289,9 @@ Output: The result of sorting Arr.`}
         </pre>
         {/* assertion */}
         <pre className={blockNum===8 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`      // The element[i] would be swapped with pivot`}
+&nbsp;The element[i] would be swapped with pivot
         </pre>
+     
         <pre className={blockNum===9 ? classes.qBackground : classes.qNoBackground}>
 {`    end if`}
         </pre>
@@ -292,16 +305,19 @@ Output: The result of sorting Arr.`}
 {`end for`}
         </pre>
         {/* assertion */}
-        <pre className={blockNum===12 ? classes.qAssertBack : classes.qAssertNoBack}>
-{` // The pivot is at its sorted position `}
+        <pre wordWrap="break-word" className={blockNum===12 ? classes.qAssertBack : classes.qAssertNoBack}>
+{` The pivot is at its sorted position `}
         </pre>
         <pre className={blockNum===13 ? classes.qBackground : classes.qNoBackground}>
 {`return Arr`}
         </pre>
         {/* assertion */}
-        <pre className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`// The Partition size equals the array size, which means all numbers are sorted`}
+        <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
+&nbsp;The Partition size equals the array size,  which <br/> means all numbers are sorted
         </pre>
+        {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
+
+        </pre> */}
     </div>
 
     return(

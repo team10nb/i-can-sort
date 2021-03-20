@@ -117,7 +117,7 @@ export default function ImplementationPseudo(props){
             fontSize:"20px",
             justifyContent: "center",
             marginTop: -6,
-            marginBottom: 10,
+            marginBottom: 20,
         },
         button:{
             marginLeft: 95,
