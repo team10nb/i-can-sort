@@ -8,9 +8,13 @@ import {color} from '../../scenes/mainPages/Correctness';
 
 const useStyles = makeStyles((theme) => ({
     qAssertNoBack:{
+        backgroundColor:"#DCDCDC",
+        borderRadius:15,
         marginTop: -4,
+        // marginBottom: 3,
         letterSpacing: -0.5,
         fontSize: 12,
+        fontWeight: 20,
         fontStyle: "italic",
         // paddingLeft:"5px",
         fontFamily: "Space Mono",
@@ -18,10 +22,13 @@ const useStyles = makeStyles((theme) => ({
         // textAlign: 'center',
     },
     qAssertBack:{
-       
+        backgroundColor:"#DCDCDC",
+        borderRadius:15,
         marginTop: -4,
+        // marginBottom: 2,
         letterSpacing: -0.5,
         fontSize: 12,
+        fontWeight: 20,
         fontStyle: "italic",
         // paddingLeft:"5px",
         fontFamily: "Space Mono",
@@ -30,8 +37,7 @@ const useStyles = makeStyles((theme) => ({
         // textAlign: 'center',
     },
     background:{
-        backgroundColor: "#ffe69b",
-        opacity: 0.8,
+        backgroundColor: "#FEE5D4",
         marginTop: -6,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -48,8 +54,8 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:"5px",
     },  
     hBackground:{
-        backgroundColor: "#ffe69b",
-        
+        backgroundColor: "#FEE5D4", 
+        borderRadius:15,      
         marginTop: -6,
         letterSpacing: 0,
         fontFamily:"Space Mono",
@@ -67,8 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
     qBackground:{
         backgroundColor:"#FEE5D4",
-        
-      
+        borderRadius:15,    
         marginTop: -11,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -77,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:"5px",
     },
     qNoBackground:{
+        borderRadius:15,
         marginTop: -11,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -279,11 +285,9 @@ Output: The result of sorting Arr.`}
         </pre>
         {/* assertion */}
         <pre className={blockNum===8 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`// The element[i] would be swapped with`}
+&nbsp;&nbsp;The element[i] would be swapped with pivot
         </pre>
-        <pre className={blockNum===8 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`   pivot`}
-        </pre>
+     
         <pre className={blockNum===9 ? classes.qBackground : classes.qNoBackground}>
 {`    end if`}
         </pre>
@@ -298,18 +302,18 @@ Output: The result of sorting Arr.`}
         </pre>
         {/* assertion */}
         <pre wordWrap="break-word" className={blockNum===12 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`// The pivot is at its sorted position `}
+{`  The pivot is at its sorted position `}
         </pre>
         <pre className={blockNum===13 ? classes.qBackground : classes.qNoBackground}>
 {`return Arr`}
         </pre>
         {/* assertion */}
         <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`// The Partition size equals the array size,`}
+&nbsp;&nbsp;The Partition size equals the array size,  which <br/>&nbsp;&nbsp;means all numbers are sorted`
         </pre>
-        <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
-{`   which means all numbers are sorted`}
-        </pre>
+        {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
+
+        </pre> */}
     </div>
 
     return(
