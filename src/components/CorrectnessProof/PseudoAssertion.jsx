@@ -4,18 +4,32 @@ Author: Ruizi Han, Yani Huang
 
 import { makeStyles } from "@material-ui/core/styles";
 import "../../fonts/fonts.css";
+import {color} from '../../scenes/mainPages/Correctness';
 
 const useStyles = makeStyles((theme) => ({
-    algo:{
+    qAssertNoBack:{
         marginTop: -4,
         letterSpacing: -0.5,
         fontSize: 15,
+        fontStyle: "italic",
         // paddingLeft:"5px",
         fontFamily: "Space Mono",
         // textAlign: 'center',
     },
+    qAssertBack:{
+       
+        marginTop: -4,
+        letterSpacing: -0.5,
+        fontSize: 15,
+        fontStyle: "italic",
+        // paddingLeft:"5px",
+        fontFamily: "Space Mono",
+        color:color,
+        // textAlign: 'center',
+    },
     background:{
-        backgroundColor: "#cfd9e7",
+        backgroundColor: "#ffe69b",
+        opacity: 0.8,
         marginTop: -6,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -32,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:"5px",
     },  
     hBackground:{
-        backgroundColor: "#cfd9e7",
+        backgroundColor: "#ffe69b",
+        
         marginTop: -6,
         letterSpacing: 0,
         fontFamily:"Space Mono",
@@ -49,7 +64,9 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:"8px", 
     },
     qBackground:{
-        backgroundColor: "#cfd9e7",
+        backgroundColor:color,
+        opacity:0.5,
+      
         marginTop: -11,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -224,7 +241,7 @@ const Quick = (props)=> {
 
     const quickCode = 
     <div>
-        <pre className={classes.algo}>
+        {/* <pre className={classes.algo}>
 {`Algorithm: QuickSort(Arr)
 Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
@@ -233,7 +250,7 @@ Output: The result of sorting Arr.`}
 {`//partition(a,b) is a subset of Arr
 //including all elments from Arr[a] to Arr[b].
 `}
-        </pre>
+        </pre> */}
         <pre className={blockNum===1 ? classes.qBackground : classes.qNoBackground}>
 {`for each unsorted partition(a,b) do`}
         </pre>
@@ -258,6 +275,10 @@ Output: The result of sorting Arr.`}
         <pre className={blockNum===8 ? classes.qBackground : classes.qNoBackground}>
 {`      storeIndex++`}
         </pre>
+        {/* assertion */}
+        <pre className={blockNum===8 ? classes.qAssertBack : classes.qAssertNoBack}>
+{`      // The element[i] would be swapped with pivot`}
+        </pre>
         <pre className={blockNum===9 ? classes.qBackground : classes.qNoBackground}>
 {`    end if`}
         </pre>
@@ -270,8 +291,16 @@ Output: The result of sorting Arr.`}
         <pre className={blockNum===12 ? classes.qBackground : classes.qNoBackground}>
 {`end for`}
         </pre>
+        {/* assertion */}
+        <pre className={blockNum===12 ? classes.qAssertBack : classes.qAssertNoBack}>
+{` // The pivot is at its sorted position `}
+        </pre>
         <pre className={blockNum===13 ? classes.qBackground : classes.qNoBackground}>
 {`return Arr`}
+        </pre>
+        {/* assertion */}
+        <pre className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
+{`// The Partition size equals the array size, which means all numbers are sorted`}
         </pre>
     </div>
 

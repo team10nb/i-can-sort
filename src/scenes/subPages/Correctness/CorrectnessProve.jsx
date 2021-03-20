@@ -34,7 +34,7 @@ import {BubbleExample,
         MergeExample,} from '../../../components/CorrectnessProof/Example';
 
 
-const drawerWidth = 240;
+const drawerWidth = 170;
 const useStyles = makeStyles((theme) => ({
 
     appBar1: {
