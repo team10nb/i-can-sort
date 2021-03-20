@@ -50,6 +50,8 @@ export default function CorrectnessHelp() {
         picHeight:'415',
         contentMarginBottom:'0',
         contentMarginTop:'0',
+        avatarMarginLeft:"9px",
+        avatarMarginTop:"9px",
       }
 
     return (

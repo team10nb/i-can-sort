@@ -36,6 +36,8 @@ import ExplanationFrame from '../ExplanationFrame/ExplanationFrame';
       picHeight:'403',
       contentMarginBottom:"-70px",
       contentMarginTop:"60px",
+      avatarMarginLeft:"-490px",
+      avatarMarginTop:"10px",
     }
 
     return(
