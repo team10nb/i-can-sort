@@ -49,13 +49,16 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "5px",
     },
     noBackground: {
+        borderRadius:5,
         marginTop: -8,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
         lineHeight:"22px",
-        fontSize:"12px",
+        fontSize:"13px",
         paddingLeft:"5px",
     },  
+
+
 }));
 
 const Bubble = (props) => {
@@ -76,14 +79,28 @@ const Bubble = (props) => {
                     blockNum === 2 ? classes.background : classes.noBackground
                 }
             >
-                {`for i from 0 to length-1 do`}
+                {`for i from length to 1 do`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 2 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Elements after i th are sorted if exist
             </pre>
             <pre
                 className={
                     blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
-                {`  for j from 0 to length-1-i do`}
+                {`  for j from 0 to i do`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 3 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Arr[j] is the largest among the first to j th
             </pre>
             <pre
                 className={
@@ -108,10 +125,25 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
+                    blockNum === 6 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Arr[j+1] is the largest among the first to j+1 th
+            </pre>
+            <pre
+                className={
                     blockNum === 7 ? classes.background : classes.noBackground
                 }
             >
                 {`  end for`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 7 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Arr[i] is the largest among first to Arr[j+1] <br/>
+                &nbsp;Arr[i] to the end are sorted
             </pre>
             <pre
                 className={
@@ -120,12 +152,20 @@ const Bubble = (props) => {
             >
                 {`end for`}
             </pre>
+            
             <pre
                 className={
                     blockNum === 9 ? classes.background : classes.noBackground
                 }
             >
                 {`return Arr`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;From the first to the end of the array are sorted
             </pre>
         </div>
     );
@@ -190,6 +230,14 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
+                    blockNum === 7 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;The last marked number is the minumum <br/>
+                &nbsp;among the unsorted numbers
+            </pre>
+            <pre
+                className={
                     blockNum === 8 ? classes.background : classes.noBackground
                 }
             >
@@ -204,18 +252,28 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 10 ? classes.background : classes.noBackground
+                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
                 }
             >
-                {`end for`}
+                &nbsp;The new minimum and the numbers <br/>
+                &nbsp;before the new minimum are all sorted
             </pre>
             <pre
                 className={
                     blockNum === 11 ? classes.background : classes.noBackground
                 }
             >
-                {`return Arr`}
+                {`end for`}
             </pre>
+            <pre
+                className={
+                    blockNum === 11 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Repeating ends, the last new minimum is the last <br/>
+                &nbsp;number, which means all numbers are sorted
+            </pre>
+            
         </div>
     );
 
@@ -244,6 +302,13 @@ const Insertion = (props) => {
             </pre>
             <pre
                 className={
+                    blockNum === 8 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;Elements before i th are sorted
+            </pre>
+            <pre
+                className={
                     blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
@@ -262,6 +327,12 @@ const Insertion = (props) => {
                 }
             >
                 {`  while preIndex>=0 && current<Arr[preIndex] do`}
+            </pre><pre
+                className={
+                    blockNum === 5 ? classes.qAssertBack : classes.qAssertNoBack
+                }
+            >
+                &nbsp;current is smaller than the preIndex elements
             </pre>
             <pre
                 className={
@@ -293,24 +364,27 @@ const Insertion = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum == -0 ? classes.background : classes.noBackground
+                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
                 }
             >
-                {`//insert current elment at position preIndex`}
+                &nbsp;current and elements before current, <br/>
+                &nbsp;they are all sorted 
             </pre>
+
             <pre
                 className={
-                    blockNum === 10 ? classes.background : classes.noBackground
+                    blockNum === 11 ? classes.background : classes.noBackground
                 }
             >
                 {`end for`}
             </pre>
             <pre
                 className={
-                    blockNum === 11 ? classes.background : classes.noBackground
+                    blockNum === 11 ? classes.qAssertBack : classes.qAssertNoBack
                 }
             >
-                {`return Arr`}
+                &nbsp;Elements first to last are all sorted <br/>
+                &nbsp;array is all sorted 
             </pre>
         </div>
     );
@@ -324,6 +398,16 @@ const Quick = (props) => {
 
     const quickCode = (
         <div>
+            {/* <pre className={classes.algo}>
+{`Algorithm: QuickSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.`}
+        </pre>
+        <pre className={classes.noBackground}>
+{`//partition(a,b) is a subset of Arr
+//including all elments from Arr[a] to Arr[b].
+`}
+        </pre> */}
             <pre
                 className={
                     blockNum === 1 ? classes.background : classes.noBackground
@@ -418,9 +502,9 @@ const Quick = (props) => {
             <pre
                 wordWrap="break-word"
                 className={
-                    blockNum === 11
-                        ? classes.AssertBack
-                        : classes.AssertNoBack
+                    blockNum === 12
+                        ? classes.background
+                        : classes.noBackground
                 }
             >
                 {` The pivot is at its sorted position `}
@@ -441,7 +525,7 @@ const Quick = (props) => {
                         : classes.noBackground
                 }
             >
-                {`return Arr`}
+                {`return`}
             </pre>
             {/* assertion */}
             <pre
@@ -452,8 +536,8 @@ const Quick = (props) => {
                         : classes.AssertNoBack
                 }
             >
-                &nbsp;The Partition size equals the array size, which <br />{" "}
-                means all numbers are sorted
+                &nbsp;All pivots are at sorted position, <br />{" "}
+                which means all numbers are sorted
             </pre>
             {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
 
