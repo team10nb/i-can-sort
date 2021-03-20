@@ -15,7 +15,7 @@ import MergeSort from '../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort'
 
 const BubbleExample = () => {
     const Code = Bubble;
-    const title = '- Bubble Sort -';
+    const title = 'Bubble Sort';
     const algorithm = 'bubble';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = BubbleSort(arr);
@@ -36,7 +36,7 @@ const BubbleExample = () => {
 
 const SelectionExample = () => {
     const Code = Selection;
-    const title = '- Selection Sort -';
+    const title = 'Selection Sort';
     const algorithm = 'selection';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = SelectionSort(arr);
@@ -55,7 +55,7 @@ const SelectionExample = () => {
 
 const InsertionExample = () => {
     const Code = Insertion;
-    const title = '- Insertion Sort -';
+    const title = 'Insertion Sort';
     const algorithm = 'insertion';
     const arr = [4, 13, 11, 8, 5];
     const {trace, description, blockNums} = InsertionSort(arr);
@@ -74,7 +74,7 @@ const InsertionExample = () => {
 
 const QuickExample = () => {
     const Code = Quick;
-    const title = '- Quick Sort -';
+    const title = 'Quick Sort';
     const algorithm = 'quick';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = QuickSort(arr);
@@ -93,7 +93,7 @@ const QuickExample = () => {
 
 const MergeExample = () => {
     const Code = Merge;
-    const title = '- Merge Sort -';
+    const title = 'Merge Sort';
     const algorithm = 'merge';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = MergeSort(arr);
@@ -112,7 +112,7 @@ const MergeExample = () => {
 
 const HeapExample = () => {
     const Code = Heap;
-    const title = '- Heap Sort -';
+    const title = 'Heap Sort';
     const algorithm = 'heap';
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = HeapSort(arr);

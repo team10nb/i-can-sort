@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   function getStepContent(step,props) {
     const {color, logo0, logo1, logo2, logo3, logo4, logoFianl, stepNumber, content0, content1,
             content2, content3, content4, content5} = props;
-    if (stepNumber == 5){
+    if (stepNumber === 5){
         switch (step) {
             case 0:
               return (
@@ -106,35 +106,42 @@ const useStyles = makeStyles((theme) => ({
               return 'Unknown step';
           }
 
-    }else if (stepNumber == 3){
+    }else if (stepNumber === 3){
         switch (step) {
             case 0:
               return (
                 <CardActionArea  style={{ height:'403px', marginBottom:"15px"}}>
                   <img src={logo0} alt="logo0" width='587px'  />
-                  <CardContent >
-                      
-                      {content0} 
-                             
+                  <CardContent >              
+                      {content0}                           
                   </CardContent>
                 </CardActionArea>
       
               );
             case 1:
               return (
-                <CardActionArea  style={{ height:'403px', marginBottom:"15px"}}>
+                <CardActionArea style={{ width: "580px", height: "415px", marginBottom:"15px" }}>
                   <img src={logo1} alt="logo1"  width='587px' />
-                  <CardContent >
-                     
-                      {content1} 
-                               
+                  <CardContent >   
+                      {content1}                              
                   </CardContent>
                 </CardActionArea>
               );
             default:
               return 'Unknown step';
           }
-    }else{
+    }else if (stepNumber === 2){
+      switch (step) {
+        case 0:
+          return (
+            <CardActionArea  style={{ height:'403px', marginBottom:"15px"}}>
+              <img src={logo0} alt="logo0" width='587px'  />
+            </CardActionArea>
+  
+          );
+        default:
+          return 'Unknown step';
+      }
 
     }
     

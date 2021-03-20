@@ -3,24 +3,28 @@
 */
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import logo0 from '../../Resource/correctnessProve.png';
+import logo0 from '../../Resource/correctnessProve0.jpg';
+import logo1 from '../../Resource/correctnessProve1.png';
 import {color} from '../../scenes/mainPages/Correctness';
 import ExplanationFrame from '../ExplanationFrame/ExplanationFrame';
 
 
-  const content0 =  <Typography variant="body2" color="textSecondary" component="p">
-  As picture shown, when the sorting is at a specific state, the pseudo and assertion will be highlighted, which are labeled as "compiling pseudo" and "compiling assertion" in the picture. As normal, they would look like "pesudo" and "assertion" in the picture.
+  const content1 =  <Typography variant="body2" color="textSecondary" component="p" style={{ marginLeft: "23px" ,marginRight:"18px"}}>
+When a specific statement is being executed, the pseudo-code and assertion will be highlighted to show you the proof process step by step.
 </Typography>  
  
   export  default function Explanation() {
     const data = {
         color:color,   
-        logoFinal:logo0,
-        stepNumber:1,       
-        contentFinal:content0,
+        logo0: logo0,
+        logoFinal:logo1,
+        stepNumber:2,       
+        contentFinal:content1,
         picHeight:'415',
         contentMarginBottom:'0',
         contentMarginTop:'0',
+        avatarMarginLeft:"9px",
+        avatarMarginTop:"9px",
     }
   
     return(
