@@ -53,14 +53,14 @@ const useStyles = makeStyles((theme) => ({
         // borderRadius:15,
         marginTop: -8,
         letterSpacing: 0.5,
-        fontFamily: "Space Mono",
-        lineHeight: "22px",
-        fontSize: "13px",
-        paddingLeft: "5px",
-    },
-    hBackground: {
-        backgroundColor: "#ffe69b",
-
+        fontFamily:"Space Mono",
+        lineHeight:"22px",
+        fontSize:"12px",
+        paddingLeft:"5px",
+    },  
+    hBackground:{
+        backgroundColor: "#FEE5D4", 
+        borderRadius:15,      
         marginTop: -6,
         letterSpacing: 0,
         fontFamily: "Space Mono",
@@ -76,25 +76,24 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "12px",
         paddingLeft: "8px",
     },
-    qBackground: {
-        backgroundColor: "#FEE5D4",
-        // borderRadius:15,
-
-        marginTop: -8,
+    qBackground:{
+        backgroundColor:"#FEE5D4",
+        borderRadius:15,    
+        marginTop: -11,
         letterSpacing: 0.5,
-        fontFamily: "Space Mono",
-        lineHeight: "22px",
-        fontSize: "13px",
-        paddingLeft: "5px",
+        fontFamily:"Space Mono",
+        lineHeight:"22px",
+        fontSize:"14px",
+        paddingLeft:"5px",
     },
-    qNoBackground: {
-        // borderRadius:15,
-        marginTop: -8,
+    qNoBackground:{
+        borderRadius:15,
+        marginTop: -11,
         letterSpacing: 0.5,
-        fontFamily: "Space Mono",
-        lineHeight: "22px",
-        fontSize: "13px",
-        paddingLeft: "5px",
+        fontFamily:"Space Mono",
+        lineHeight:"22px",
+        fontSize:"14px",
+        paddingLeft:"5px",  
     },
 }));
 
