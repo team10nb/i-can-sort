@@ -6,7 +6,7 @@ import CorrectnessMainPage from './scenes/mainPages/Correctness';
 import ProcedureMainPage from './scenes/mainPages/Procedure';
 import ProcedureRouters from './scenes/subPages/Procedure/ProcedureRouters';
 import CorrectnessRouters from './scenes/subPages/Correctness/CorrectnessRouters';
-
+// import * as electron from 'electron'
 //Return routes
 function Routers() {
     return(

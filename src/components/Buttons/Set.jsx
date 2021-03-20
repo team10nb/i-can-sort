@@ -20,6 +20,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
+//import {shell} from "electron";
 
 
   const useStyles = makeStyles((theme) => ({
@@ -34,7 +35,9 @@ import Typography from '@material-ui/core/Typography';
       color:"#4ba6ff",
       fontSize: "2em",
       "&:hover": {
-        textDecoration: "underline", 
+        fontWeight:400,
+        color:"#1564b2",
+        // textDecoration: "underline",
       },
     },
     content:{
@@ -77,11 +80,13 @@ import Typography from '@material-ui/core/Typography';
        localStorage.setItem("snack", JSON.stringify(1));     
     };
     //open a link
-    const handleLink=()=> {
-      let url = "https://github.com/team10nb"
-      var win = window.open(url, 'GitHub: I can sort');
-      win.focus(); 
-    }
+    const handleLink=()=> {
+        let url = "https://github.com/team10nb";
+        // var win = window.open(url, '_blank');
+        // const electron = window.require("electron")
+        window.electron.shell.openExternal(url);
+        // win.focus(); 
+      }
     
     
     //set event: when click outside drawer, drawer will close 
@@ -113,7 +118,7 @@ import Typography from '@material-ui/core/Typography';
         <AccordionDetails>
           <Paper elevation={0}>
             <Typography variant="subtitle2" className = {classes.content}  gutterBottom>
-              We are a software development team of college students, dedicated to the development of algorithm correctness to help users learn.
+              We are university students from UNNC, dedicated to help users learn sorting algorithms and correctness.
             </Typography>
           </Paper>        
         </AccordionDetails>
@@ -167,7 +172,7 @@ import Typography from '@material-ui/core/Typography';
     </div>
   );
 
-   
+
     return (
       <div>
         {/*set button*/}
@@ -187,5 +192,5 @@ import Typography from '@material-ui/core/Typography';
     );
   }
 
- 
+
 

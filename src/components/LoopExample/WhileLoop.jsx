@@ -105,13 +105,13 @@ export default function ForLoop() {
         
         blockNums.push(2, 3, 4);
 
-        descriptionUnit = 'i = ' + (i-1) + ', i < 4';
+        descriptionUnit = 'i = ' + (i-1) + ', i < 4 is true';
         description.push(descriptionUnit, 'do a = a + b', 'do i = i + 1');
 
         if(i == 4){
             trace.push(traceUnit);
             blockNums.push(5);
-            description.push('i = 4, jump out the loop');
+            description.push('i = 4, i < 4 is false, jump out of the loop');
         }
     }
     
