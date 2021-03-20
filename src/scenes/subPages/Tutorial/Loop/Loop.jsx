@@ -29,7 +29,7 @@ export default function TutorialLoop(props) {
         history: props.history,      
         // intro: intro,
         // operate: operate,
-        message: "Loop",
+        message: "For & While Loop",
     }
 
     const classes = useStyles();
