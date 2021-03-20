@@ -80,13 +80,13 @@ import Typography from '@material-ui/core/Typography';
        localStorage.setItem("snack", JSON.stringify(1));     
     };
     //open a link
-    const handleLink=()=> {
-        let url = "https://github.com/team10nb";
-        // var win = window.open(url, '_blank');
-        // const electron = window.require("electron")
-        window.electron.shell.openExternal(url);
-        // win.focus(); 
-      }
+    const handleLink=()=> {
+      let url = "https://github.com/team10nb"
+      // var win = window.open(url, '_blank');
+      // const electron = window.require("electron")
+      window.electron.shell.openExternal(url)
+      // win.focus(); 
+    }
     
     
     //set event: when click outside drawer, drawer will close 

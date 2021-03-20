@@ -142,7 +142,7 @@ const Code = (props)=> {
 const TerminableCode = () => {
     // example array
     const arr = [2, 6, 9, 10, 3];
-    const {trace, description, blockNums} = BubbleSort(arr);
+    const {trace, blockNums} = BubbleSort(arr);
     
     const props = {
         trace,

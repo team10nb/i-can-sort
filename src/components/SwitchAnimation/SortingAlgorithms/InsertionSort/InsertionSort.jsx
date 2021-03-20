@@ -19,7 +19,7 @@ export default function InsertionSort(arr) {
 
     trace.push(hardcopy(patched));
     description.push("Mark the first element as sorted");
-    blockNums.push(1);
+    blockNums.push(3);
 
     for (i = 1; i < len; i++) {
         // The comparing number
@@ -46,7 +46,7 @@ export default function InsertionSort(arr) {
             patched[i].y = 0;
             description.push("Already sorted, no insertion");
             trace.push(hardcopy(patched));
-            blockNums.push(4);
+            blockNums.push(8);
         }
 
         while (j >= 0 && patched[j].value > k.value) {
@@ -94,7 +94,7 @@ export default function InsertionSort(arr) {
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
-                blockNums.push(8);
+                blockNums.push(9);
 
             } else if (j === 0) {
                 // Visualize: If the element is the first one
@@ -102,7 +102,7 @@ export default function InsertionSort(arr) {
                 patched[j].y = 0;
                 description.push("Proper position found, insert");
                 trace.push(hardcopy(patched));
-                blockNums.push(8);
+                blockNums.push(9);
             }
             j--;
         }
@@ -111,7 +111,7 @@ export default function InsertionSort(arr) {
     // Visualize: Final state
     description.push("Insertion sort is finished, all sorted");
     trace.push(hardcopy(patched));
-    blockNums.push(9);
+    blockNums.push(11);
 
     return { trace: trace, description: description, blockNums: blockNums };
 }

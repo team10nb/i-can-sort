@@ -143,7 +143,7 @@ export default function HeapSort(arr) {
                 " is already sorted. Heap sort finished."
         );
         trace.push(hardcopy(patched));
-        blockNums.push(1);
+        blockNums.push(12);
 
         return { trace: trace, description: description, blockNums:blockNums };
     }
