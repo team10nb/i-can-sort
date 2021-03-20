@@ -56,9 +56,8 @@ export default function ImplementationPseudo(props){
         root: {
             display: "flex",
             width: 1020,
-            '& > *': {     
-                margin: theme.spacing(3),
-            },
+            marginTop:-5,
+            marginLeft:5,
         },
         aniRoot: {
             display: "grid",
@@ -100,16 +99,15 @@ export default function ImplementationPseudo(props){
         },
         
         cardOne:{
-            marginTop: 80,
-            width: "45%",
-            height: 520,
+            width: "420px",
+            height: 550,
             background: "#F0F0F0",        
         },
 
         cardTwo:{
-            marginTop: 80,
-            width: "55%",
-            height: 520,
+            width: "400px",
+            marginLeft:20,
+            height: 550,
             background: "#F0F0F0",      
         },
         title:{
@@ -290,9 +288,7 @@ export default function ImplementationPseudo(props){
                     <div>
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
-                    <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
-                        Export Note
-                    </Button>
+
 
                 </CardContent>
                 </Card>
@@ -327,13 +323,13 @@ export default function ImplementationPseudo(props){
                         </motion.li>
                     ))}
                 </div>
-                <ExplanationBox width={50} height={6}>
+                <ExplanationBox width={40} height={6}>
                     {description[currentStep]}
                 </ExplanationBox>
                 
                 <div className={classes.slider}>
                 <AnimationSlider
-                    width={460}
+                    width={360}
                     step={1}
                     max={trace.length - 1}
                     handleChange={handleSliderChange}

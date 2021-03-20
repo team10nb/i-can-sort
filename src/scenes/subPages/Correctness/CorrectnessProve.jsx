@@ -34,7 +34,8 @@ import {BubbleExample,
         MergeExample,} from '../../../components/CorrectnessProof/Example';
 
 
-const drawerWidth = 240;
+const drawerWidth = 170;
+
 const useStyles = makeStyles((theme) => ({
 
     appBar1: {
@@ -283,7 +284,7 @@ const useStyles = makeStyles((theme) => ({
                         
                         <List>
                             <ListItem className = {classes.listItem}>             
-                            <ListItemText primary= 'Sorting Algorithm Prove' classes={{primary:classes.listItemTitle}}/>
+                            <ListItemText primary= 'Proof' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>                          
                             {['Bubble ' , 'Selection ', 'Insertion ', 'Quick ','Merge ','Heap ' ].map((text, index) => (
                             index === activeStep

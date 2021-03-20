@@ -2,7 +2,7 @@
     Author: Yani Huang, Ruizi Han
 */
 
-import ImplementationPseudo from '../ImplementationPseudo/ImplementationPseudo';
+import ImplementationPseudo from './CorrectnessProof';
 import { Bubble, Selection, Insertion, Quick, Heap, Merge } from './PseudoAssertion';
 import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 import SelectionSort from '../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
