@@ -183,27 +183,27 @@ const useStyles = makeStyles((theme) => ({
       switch (activeStep) {
         case 0:
             return(
-                {BubbleExample}
+                <BubbleExample/>
             );
         case 1:
             return(
-                {SelectionExample}
+                <SelectionExample/>
             );
         case 2:
             return(
-                {InsertionExample}
+                <InsertionExample/>
             );
         case 3:
             return(
-                {QuickExample}
+                <QuickExample/>
             );
         case 4:
             return(
-                {MergeExample}
+                <MergeExample/>
             );
         case 5:
             return(
-                {HeapExample}
+                <HeapExample/>
             );
         default:
             break;
@@ -300,7 +300,7 @@ const useStyles = makeStyles((theme) => ({
                    </div>
                 </Drawer>
                 
-                   {getStepContent}
+                {getStepContent(activeStep)}
            
             </main>
 
