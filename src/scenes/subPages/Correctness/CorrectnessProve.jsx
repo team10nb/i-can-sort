@@ -35,7 +35,6 @@ import {BubbleExample,
 
 
 const drawerWidth = 170;
-
 const useStyles = makeStyles((theme) => ({
 
     appBar1: {
