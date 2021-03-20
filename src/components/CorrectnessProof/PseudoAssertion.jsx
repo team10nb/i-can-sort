@@ -83,7 +83,7 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 2 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 2 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Elements after i th are sorted if exist
@@ -97,7 +97,7 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 3 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Arr[j] is the largest among the first to j th
@@ -125,7 +125,7 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 6 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Arr[j+1] is the largest among the first to j+1 th
@@ -139,7 +139,7 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 7 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Arr[i] is the largest among first to Arr[j+1] <br/>
@@ -162,7 +162,7 @@ const Bubble = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;From the first to the end of the array are sorted
@@ -230,7 +230,7 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 7 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;The last marked number is the minumum <br/>
@@ -252,7 +252,7 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;The new minimum and the numbers <br/>
@@ -267,7 +267,7 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 11 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 11 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Repeating ends, the last new minimum is the last <br/>
@@ -302,7 +302,7 @@ const Insertion = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 8 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Elements before i th are sorted
@@ -329,7 +329,7 @@ const Insertion = (props) => {
                 {`  while preIndex>=0 && current<Arr[preIndex] do`}
             </pre><pre
                 className={
-                    blockNum === 5 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;current is smaller than the preIndex elements
@@ -364,7 +364,7 @@ const Insertion = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 9 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;current and elements before current, <br/>
@@ -380,7 +380,7 @@ const Insertion = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 11 ? classes.qAssertBack : classes.qAssertNoBack
+                    blockNum === 11 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;Elements first to last are all sorted <br/>
@@ -539,7 +539,7 @@ Output: The result of sorting Arr.`}
                 &nbsp;All pivots are at sorted position, <br />{" "}
                 which means all numbers are sorted
             </pre>
-            {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
+            {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.AssertBack : classes.AssertNoBack}>
 
         </pre> */}
         </div>
@@ -638,12 +638,28 @@ const Merge = (props) => {
             >
                 {`else`}
             </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;leftIndex is less than rightIndex
+            </pre>
             <pre
                 className={
                     blockNum === 4 ? classes.background : classes.noBackground
                 }
             >
                 {`  midIndex = (leftIndex + rightIndex) / 2`}
+            </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 4 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;leftIndex to rightIndex of array is splited into  <br/>&nbsp;&nbsp;two parts
             </pre>
             <pre
                 className={
@@ -652,12 +668,28 @@ const Merge = (props) => {
             >
                 {`  mergeSort(array, leftIndex, midIndex)`}
             </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;leftIndex to midIndex of the array (left part) <br/>&nbsp;&nbsp;are sorted
+            </pre>
             <pre
                 className={
                     blockNum === 6 ? classes.background : classes.noBackground
                 }
             >
                 {`  mergeSort(array, midIndex+1, rightIndex)`}
+            </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;midIndex to rightIndex of the array (right part) <br/>&nbsp;&nbsp;are sorted
             </pre>
             <pre
                 className={
@@ -666,12 +698,28 @@ const Merge = (props) => {
             >
                 {`  merge(array, leftIndex, midIndex, rightIndex)`}
             </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;left part and right part are merged into sorted<br/>&nbsp;&nbsp;leftIndex to rightIndex of array are sorted
+            </pre>
             <pre
                 className={
                     blockNum === 8 ? classes.background : classes.noBackground
                 }
             >
                 {`  return Arr`}
+            </pre>
+            {/* Assertion */}
+            <pre
+                className={
+                    blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                &nbsp;&nbsp;start to end of array are sorted, merge sort finished
             </pre>
             <pre
                 className={

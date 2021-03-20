@@ -32,12 +32,12 @@ const useStyles = makeStyles((theme) => ({
       borderRadius:"30px",
     },
 
-    avatar: {
-      "& > *": {
-        marginTop: theme.spacing(1),
-        marginRight: theme.spacing(62.5),
-      },
-    },
+    // avatar: {
+    //   "& > *": {
+    //     marginTop: theme.spacing(1),
+    //     marginRight: theme.spacing(100),
+    //   },
+    // },
     icon:{
       color: "#696969"
     },
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
 
  
   export  default function ExplanationFrame(props) {
-    const {color, logo0, logo1, logoFinal, stepNumber,content0,content1,contentFinal,picHeight,contentMarginBottom,contentMarginTop} = props;
+    const {color, logo0, logo1, logoFinal, stepNumber,content0,content1,contentFinal,picHeight,contentMarginBottom,contentMarginTop,avatarMarginLeft,avatarMarginTop} = props;
 
     const classes = useStyles();
 
@@ -184,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
       //   <Fade in={open}>
       <Backdrop className={classes.backdrop} open={open} >
           <Card className={classes.card}>          
-            <div className = {classes.avatar}>
+            <div style={{marginLeft:avatarMarginLeft, marginTop:avatarMarginTop}}>
                 <IconButton aria-label="close"  onClick={handleClose} >
                   <HighlightOffIcon  style={{ color: color, opacity: 0.8, fontSize: 40  } } />
                 </IconButton>
@@ -192,7 +192,7 @@ const useStyles = makeStyles((theme) => ({
               {activeStep === steps - 1 ? (
                 <div>
                   <div>
-                <CardActionArea  style={{ height:{picHeight}, marginBottom:"15px"}}>
+                <CardActionArea  style={{ height:picHeight, marginBottom:"15px"}}>
                   <img src={logoFinal} alt="logoFinal"  width= '587px' />
                   <CardContent style={{marginBottom:contentMarginBottom, marginTop:contentMarginTop}}>
                     <Typography variant="body2" color="textSecondary" component="p">
