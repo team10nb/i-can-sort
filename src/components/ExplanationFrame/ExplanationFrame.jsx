@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
     card: {
       maxWidth: 580,
+      height: 570,
       borderRadius:"30px",
     },
 
@@ -42,8 +43,8 @@ const useStyles = makeStyles((theme) => ({
       color: "#696969"
     },
     actionArea:{
-      maxWidth: 395,
-      maxHeight: 570,
+      minWidth: 395,
+      minHeight: 570,
     },
 
     button:{
@@ -110,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
         switch (step) {
             case 0:
               return (
-                <CardActionArea  style={{ height:'403px', marginBottom:"15px"}}>
+                <CardActionArea  style={{ height:'415px', marginBottom:"15px"}}>
                   <img src={logo0} alt="logo0" width='587px'  />
                   <CardContent >              
                       {content0}                           
@@ -134,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
       switch (step) {
         case 0:
           return (
-            <CardActionArea  style={{ height:'403px', marginBottom:"15px"}}>
+            <CardActionArea  style={{ height:'415px', marginBottom:"15px"}}>
               <img src={logo0} alt="logo0" width='587px'  />
             </CardActionArea>
   
