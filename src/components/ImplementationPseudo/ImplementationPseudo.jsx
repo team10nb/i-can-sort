@@ -227,7 +227,6 @@ export default function ImplementationPseudo(props){
     const pause = () => {
         setIsPlaying(false);
         clearTimeouts();
-        localStorage.setItem("history", "hello");
     };
 
     // To resume the animation
@@ -291,7 +290,7 @@ export default function ImplementationPseudo(props){
                         <Code blockNum={blockNums[currentStep]}/>
                     </div>
                     <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
-                        Export Note
+                        Export Quick Guide
                     </Button>
 
                 </CardContent>
