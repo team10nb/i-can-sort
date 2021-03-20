@@ -1,5 +1,5 @@
 /*
-    Author: Yuting Jiang, Yijie Lu
+    Author: Shiliang Chen, Yijie Lu
 */
 
 import React from 'react';
@@ -9,9 +9,6 @@ import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Chip from '@material-ui/core/Chip';
-import Divider from '@material-ui/core/Divider';
-import Card from '@material-ui/core/Card';
-import { CardContent } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -20,12 +17,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
-import Bubble from './Prove/Bubble';
-import Heap from './Prove/Heap';
-import Insertion from './Prove/Insertion';
-import Merge from './Prove/Merge';
-import Quick from './Prove/Quick';
-import Selection from './Prove/Selection';
 import {BubbleExample,
         SelectionExample,
         InsertionExample,
@@ -307,7 +298,6 @@ const useStyles = makeStyles((theme) => ({
                         
                    </div>
                    <div className={classes.helpButton}>
-
                         <ProofHelp/>
                         </div>
                 </Drawer>

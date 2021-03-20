@@ -7,9 +7,9 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo1 from "../../Resource/Chelp1.png";
-import logo2 from "../../Resource/Chelp2.png";
-import logo3 from "../../Resource/Chelp3.png";
+import logo0 from "../../Resource/Chelp1.png";
+import logo1 from "../../Resource/Chelp2.png";
+import logo2 from "../../Resource/Chelp3.png";
 import { motion } from "framer-motion";
 import img_tutorial from "../../Resource/tutorial.png";
 import img_proof from "../../Resource/proof.png";
@@ -133,9 +133,9 @@ export default function CorrectnessMainPage(props) {
     };
 
     const helpProp = {
+        logo0: logo0,
         logo1: logo1,
         logo2: logo2,
-        logo3: logo3,
         color: color,
     };
 

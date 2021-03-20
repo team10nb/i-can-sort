@@ -40,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     background: {
         backgroundColor: "#FEE5D4",
-        borderRadius:15,
-
+        borderRadius:5,
         marginTop: -8,
         letterSpacing: 0.5,
         fontFamily: "Space Mono",
