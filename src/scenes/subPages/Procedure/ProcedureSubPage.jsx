@@ -197,21 +197,7 @@ export default function ProcedureSubPage(props) {
         </TabPanel>
 
         <TabPanel value={value} index={3} dir={theme.direction}>
-        {/* <div className = {classes.div}> */}
-            {/* <Card className={classes.cardOne}>
-              <CardContent>
-                <Button style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
-                  Export
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className={classes.cardTwo}>
-              <CardContent>
-                {operate}
-              </CardContent>
-            </Card> */}
             {Implementation}
-          {/* </div> */}
         </TabPanel>
         
       </SwipeableViews>

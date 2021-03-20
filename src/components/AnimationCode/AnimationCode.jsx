@@ -221,11 +221,13 @@ export default function Terminable(props){
                         </motion.li>
                     ))}
                 </div>
-                <div className = {classes.box}>
-                    <ExplanationBox width={60} height={6}>
+                {/* <div className = {classes.box}> */}
+                    {/* <ExplanationBox width={60} height={6}> */}
+                    <p className={classes.explanation}>
                         {description[currentStep]}
-                    </ExplanationBox>
-                </div>
+                    {/* </ExplanationBox> */}
+                    </p>
+                {/* </div> */}
                 
                 
                 <div className = {classes.slider}>
@@ -238,7 +240,9 @@ export default function Terminable(props){
                     display="none"                   
                 />
                 </div>               
+                <div className = {classes.control}>
                 <AnimationControl {...animationControlProps} />
+                </div>
             </Card>
         
             <Card className = {classes.cardTwo}>

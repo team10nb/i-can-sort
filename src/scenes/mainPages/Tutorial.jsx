@@ -10,10 +10,13 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo1 from "../../Resource/Chelp1.png";
-import logo2 from "../../Resource/Chelp2.png";
-import logo3 from "../../Resource/Chelp3.png";
+import logo1 from "../../Resource/Thelp1.png";
+import logo2 from "../../Resource/Thelp2.png";
+import logo3 from "../../Resource/Thelp3.png";
 import { motion } from "framer-motion";
+import img_swap from "../../Resource/swap.png";
+import img_loop from "../../Resource/loop.png";
+import img_terminology from "../../Resource/terminology.png";
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -56,23 +59,49 @@ const color = "#4caf50";
 //The progress bar under each module represents the learning progress of the algorithm
 export default function TutorialMainPage() {
     const classes = useStyles();
-    const [progress, setProgress] = React.useState(10);
+
+    const localPre = localStorage.getItem("tutorialPre")
+    ? JSON.parse(localStorage.getItem("tutorialPre"))
+    : null;
+
+    const localProgress = localStorage.getItem("tutorialProgress")
+    ? JSON.parse(localStorage.getItem("tutorialProgress"))
+    : [false, false, false];
+
+    const handleClick = (title, index) => () => {
+        //store previous visited algorithm and set its progress is finished
+        localStorage.setItem("tutorialPre", JSON.stringify(title));
+        localProgress[index] = true;
+        localStorage.setItem("tutorialProgress", JSON.stringify(localProgress));
+    };
+
+    const handleProgress = (index) => {
+        //set progess bar
+        const progress = localProgress[index] ? 100 : 0;
+        return progress;
+    };
+
+    const handlePre = (title) => {
+        //set previous visited algorithm
+        const preOne = title === localPre ? true : false;
+        return preOne;
+    };
 
     const images = [
         {
-            static: "",
+            static: img_swap,
             gif: "catch.gif",
             title: "Swap",
             width: "20%",
         },
         {
-            static: "",
+            static: img_loop,
             gif: "catch.gif",
             title: "Loop",
             width: "20%",
         },
         {
-            static: "",
+            static: img_terminology,
             gif: "catch.gif",
             title: "Terminology",
             width: "20%",
@@ -83,30 +112,30 @@ export default function TutorialMainPage() {
         image: images[0],
         width: 275,
         height: 280,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
+        onClick: handleClick(images[0].title, 0),
+        progress: handleProgress(0),
         color: color,
-        // preOne: false,
+        preOne: handlePre(images[0].title),
     };
 
     const loop = {
         image: images[1],
         width: 275,
         height: 280,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
+        onClick: handleClick(images[1].title, 1),
+        progress: handleProgress(1),
         color: color,
-        // preOne: false,
+        preOne: handlePre(images[1].title),
     };
 
     const terminology = {
         image: images[2],
         width: 275,
         height: 280,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
+        onClick: handleClick(images[2].title, 2),
+        progress: handleProgress(2),
         color: color,
-        // preOne: false,
+        preOne: handlePre(images[2].title),
     };
 
     const helpProp = {
@@ -127,7 +156,7 @@ export default function TutorialMainPage() {
             }}
             transition={{
                 type: "spring",
-                stiffness: 200,
+                stiffness: 250,
                 damping: 25,
             }}
             exit={{ opacity: 0.2, scale: 0, x: "-100vw" }}
@@ -194,7 +223,7 @@ export function TutorialChoiceMenu() {
                 Tutorial
             </Button>
 
-            <Link to="/ProcedureMainPage" style={{ textDecoration: "none" }}>
+            <Link to={{pathname:"/ProcedureMainPage", state:{id:"tutorial"}}} style={{ textDecoration: "none" }}>
                 <Button variant="contained" className={classes.button}>
                     Procedure
                 </Button>

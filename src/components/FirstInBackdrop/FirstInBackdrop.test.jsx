@@ -22,7 +22,7 @@ jest.mock("react-router-dom",()=>{
 
 // })
 
-test( 'should match CorrectnessHelp snapshot', () => {
+test( 'should match FirstInBackdrop snapshot', () => {
     const content = render(<FirstInBackdrop   />);
     expect(content).toMatchSnapshot();
 

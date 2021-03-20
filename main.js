@@ -16,24 +16,36 @@ mainWindow = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
-    }
+      preload: __dirname + '/preload.js'
+    },
+    icon: __dirname + '/src/Resource/algo.ico',
   })
 
 // 加载应用----react 打包
-mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, './build/index.html'),
-    // pathname: 'http://localhost:3000/',
-    protocol: 'file:',
-    // protocol: 'http://localhost:3000/',
-    slashes: true
-  }))
+// mainWindow.loadURL(url.format({
+//     pathname: path.join(__dirname, './build/index.html'),
+//     // pathname: 'http://localhost:3000/',
+//     protocol: 'file:',
+//     // protocol: 'http://localhost:3000/',
+//     slashes: true
+//   }))
   // 加载应用----适用于 react 开发时项目
 
-// mainWindow.loadURL('http://localhost:3000/');
+mainWindow.loadURL('http://localhost:3000/');
+
+// mainWindow.setIcon('./Resource/swap.png');
+
+mainWindow.removeMenu();
+
+mainWindow.setTitle("iCanSort");
 
 mainWindow.on('closed', function () {
     mainWindow = null
   })
+
+mainWindow.on('page-title-updated', (evt) => {
+  evt.preventDefault();
+});
 //
 //mainWindow.webContents
 //.executeJavaScript('localStorage.clear();', true)

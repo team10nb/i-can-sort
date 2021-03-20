@@ -9,7 +9,6 @@ Object {
         <button
           aria-label="setting"
           class="MuiButtonBase-root MuiIconButton-root"
-          style="background-color: rgb(240, 240, 240); font-size: small;"
           tabindex="0"
           title="information"
           type="button"
@@ -34,7 +33,7 @@ Object {
           />
         </button>
         <div
-          class="PrivateSwipeArea-root-16 PrivateSwipeArea-anchorLeft-17"
+          class="PrivateSwipeArea-root-18 PrivateSwipeArea-anchorLeft-19"
           style="width: 20px;"
         />
       </div>
@@ -45,7 +44,6 @@ Object {
       <button
         aria-label="setting"
         class="MuiButtonBase-root MuiIconButton-root"
-        style="background-color: rgb(240, 240, 240); font-size: small;"
         tabindex="0"
         title="information"
         type="button"
@@ -70,7 +68,7 @@ Object {
         />
       </button>
       <div
-        class="PrivateSwipeArea-root-16 PrivateSwipeArea-anchorLeft-17"
+        class="PrivateSwipeArea-root-18 PrivateSwipeArea-anchorLeft-19"
         style="width: 20px;"
       />
     </div>

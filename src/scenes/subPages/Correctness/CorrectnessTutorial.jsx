@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     chip:{
         position: 'relative',
         marginRight: -50,
-        marginLeft: 120,
+        marginLeft: 85,
         minWidth: 400,
         justifyContent:"center",  
         fontWeight: "600",      
@@ -184,16 +184,28 @@ const useStyles = makeStyles((theme) => ({
 
     const step = getSteps();
 
+    const progress = localStorage.getItem("CorrectTutorial")
+        ? JSON.parse(localStorage.getItem("CorrectTutorial"))
+        : [false, false, false, false, false];
+
+    const finishPage = (page) => {
+        progress[page] = true;
+        localStorage.setItem("CorrectTutorial", JSON.stringify(progress));
+    }
+
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        finishPage(activeStep+1);
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        finishPage(activeStep-1);
     };
 
     const handleChange =(index) => {
         setActiveStep(index);
+        finishPage(index);
     };
    
     const handleClick = () => {
@@ -201,7 +213,6 @@ const useStyles = makeStyles((theme) => ({
         props.history.push({pathname: '/CorrectnessMainPage'});
     };
 
-    
 
     return (
         <div>
@@ -221,6 +232,7 @@ const useStyles = makeStyles((theme) => ({
                 classes={{
                 paper: classes.drawerPaper,
                 }}
+                {...finishPage(0)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>
@@ -228,25 +240,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItemText primary= 'Catalogue' classes={{primary:classes.listItemCatalogue}}/>
                             </ListItem>
                         </List>
-{/*                         <Divider /> */}
-{/*                         <List > */}
-{/*                             <ListItem  className = {classes.listItem}>                           */}
-{/*                             <ListItemText primary= 'Input' /> */}
-{/*                             </ListItem> */}
-{/*                             {['Input'].map((text, index) => ( */}
-{/*                                  */}
-{/*                             index === activeStep  */}
-{/*                                 ?<ListItem className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index)}> */}
-{/*                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon> */}
-{/*                                     <ListItemText primary={text} /> */}
-{/*                                 </ListItem> */}
-{/*                                 :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index)}> */}
-{/*                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon> */}
-{/*                                     <ListItemText primary={text} /> */}
-{/*                                 </ListItem>  */}
-{/*                             ))}                   */}
-{/*                         </List> */}
-{/*                         <Divider /> */}
+
                         <List>
                             <ListItem className = {classes.listItem}>             
                             <ListItemText primary= 'Termination' classes={{primary:classes.listItemTitle}}/>

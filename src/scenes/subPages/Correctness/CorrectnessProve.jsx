@@ -214,16 +214,28 @@ const useStyles = makeStyles((theme) => ({
 
     const step = getSteps();
 
+    const progress = localStorage.getItem("CorrectProof")
+        ? JSON.parse(localStorage.getItem("CorrectProof"))
+        : [false, false, false, false, false, false];
+
+    const finishPage = (page) => {
+        progress[page] = true;
+        localStorage.setItem("CorrectProof", JSON.stringify(progress));
+    }
+
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        finishPage(activeStep+1);
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        finishPage(activeStep-1);
     };
 
     const handleChange =(index) => {
         setActiveStep(index);
+        finishPage(index);
     };
    
     const handleClick = () => {
@@ -251,6 +263,7 @@ const useStyles = makeStyles((theme) => ({
                 classes={{
                 paper: classes.drawerPaper,
                 }}
+                {...finishPage(0)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>

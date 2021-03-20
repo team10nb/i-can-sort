@@ -11,6 +11,8 @@ import logo1 from "../../Resource/Chelp1.png";
 import logo2 from "../../Resource/Chelp2.png";
 import logo3 from "../../Resource/Chelp3.png";
 import { motion } from "framer-motion";
+import img_tutorial from "../../Resource/tutorial.png";
+import img_proof from "../../Resource/proof.png";
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -55,68 +57,81 @@ const color = "#ff6f00";
 //The progress bar under each module represents the learning progress of the algorithm
 export default function CorrectnessMainPage(props) {
     const classes = useStyles();
-    //get progress info from local
-    //  const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
-    //  const localProgress = localStorage.getItem("progress") ? JSON.parse(localStorage.getItem("progress")) : 0;
 
-    //set progress
+    // get progress info from local
+     const localPre = localStorage.getItem("CorrectnessPre") ? JSON.parse(localStorage.getItem("CorrectnessPre")) : null;
+     const tutorialProgress = localStorage.getItem("CorrectTutorial") ? JSON.parse(localStorage.getItem("CorrectTutorial")) : 0;
+     const proofProgress = localStorage.getItem("CorrectProof") ? JSON.parse(localStorage.getItem("CorrectProof")) : 0;
+
+    // set progress
     //  const progress = props.location.state ? props.location.state : localProgress;
     //  localStorage.setItem("progress", JSON.stringify(progress));
 
-    //  const handleClick = (title) => () => {
-    //    //store previous visited algorithm
-    //    localStorage.setItem("pre", JSON.stringify(title));
-    //  }
+     const handleClick = (title) => () => {
+       //store previous visited algorithm
+       localStorage.setItem("CorrectnessPre", JSON.stringify(title));
+     }
 
-    //  const handlePre = (title) => {
-    //    //set previous visited algorithm
-    //    const preOne = (title === localPre) ? true : false;
-    //    return preOne;
-    //  }
+     const handleProgress = (title) => {
+         var progress = 0;
+
+         if(title === "Tutorial" && tutorialProgress != 0){
+            for(var i=0; i<tutorialProgress.length; i++){
+                if(tutorialProgress[i])
+                    progress += 20;
+            }
+         }
+
+         if(title === "Proof" && proofProgress != 0){
+            progress = 10;
+            for(var i=0; i<proofProgress.length; i++){
+                if(proofProgress[i])
+                    progress += 15;
+            }
+         }
+         
+         return progress;
+      }
+
+     const handlePre = (title) => {
+       //set previous visited algorithm
+       const preOne = (title === localPre) ? true : false;
+       return preOne;
+     }
 
     const images = [
         {
-            static: "",
+            static: img_tutorial,
             gif: "catch.gif",
             title: "Tutorial",
             width: "20%",
         },
         {
-            static: "",
+            static: img_proof,
             gif: "catch.gif",
             title: "Proof",
             width: "20%",
         },
     ];
 
-    //   const TutorialProps = {
-    //     image: images[0],
-    //     width: 200,
-    //     height: 200,
-    //     onClick: handleClick(images[0].title),
-    //     progress: progress,
-    //     color: color,
-    //     preOne: handlePre(images[0].title),
-    // };
-
-    const props1 = {
-        image: images[1],
-        width: 425,
-        height: 435,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
-        color: color,
-        // preOne: false,
-    };
-
-    const props2 = {
+    const tutorialProps = {
         image: images[0],
         width: 425,
         height: 435,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
+        onClick: handleClick(images[0].title),
+        progress: handleProgress(images[0].title),
         color: color,
-        // preOne: false,
+        preOne: handlePre(images[0].title),
+    };
+
+    const proofProps = {
+        image: images[1],
+        width: 425,
+        height: 435,
+        onClick: handleClick(images[1].title),
+        progress: handleProgress(images[1].title),
+        color: color,
+        preOne: handlePre(images[1].title),
     };
 
     const helpProp = {
@@ -137,7 +152,7 @@ export default function CorrectnessMainPage(props) {
             }}
             transition={{
                 type: "spring",
-                stiffness: 200,
+                stiffness: 250,
                 damping: 25,
             }}
             exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
@@ -147,13 +162,13 @@ export default function CorrectnessMainPage(props) {
                     <Grid container item xs={12}  spacing={0}>
                     <Grid item xs={6} >
                         <Link to="/Correctness/Tutorial">
-                            <Module {...props2} />
+                            <Module {...tutorialProps} />
                         </Link>
                     </Grid>
 
                     <Grid item xs={6} >
                         <Link to="/Correctness/Prove">
-                            <Module {...props2} />
+                            <Module {...proofProps} />
                         </Link>
                     </Grid>
                     </Grid>

@@ -18,6 +18,7 @@ import img_quick from "../../Resource/quick.png";
 import img_merge from "../../Resource/merge.png";
 import img_heap from "../../Resource/heap.png";
 import { motion } from "framer-motion";
+import { isUndefined } from 'lodash';
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -80,12 +81,10 @@ function calculateProgress(progressArray) {
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-export default function ProcedureMainPage() {
+export default function ProcedureMainPage(props) {
     const classes = useStyles();
 
-    const localPre = localStorage.getItem("pre")
-        ? JSON.parse(localStorage.getItem("pre"))
-        : null;
+    const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
 
     if (localStorage.getItem("first") == 1) {
         localStorage.setItem("first", JSON.stringify(1));
@@ -93,6 +92,14 @@ export default function ProcedureMainPage() {
         localStorage.setItem("first", JSON.stringify(0));
     } else {
         localStorage.setItem("first", JSON.stringify(1));
+    }
+
+    if (localStorage.getItem("snack") == 1) {
+        localStorage.setItem("snack", JSON.stringify(1));
+    } else if (localStorage.getItem("snack") == 0) {
+        localStorage.setItem("snack", JSON.stringify(0));
+    } else {
+        localStorage.setItem("snack", JSON.stringify(0));
     }
 
     const firstIn = localStorage.getItem("first")
@@ -103,6 +110,8 @@ export default function ProcedureMainPage() {
         //store previous visited algorithm
         localStorage.setItem("pre", JSON.stringify(title));
     };
+
+    
 
     const handlePre = (title) => {
         //set previous visited algorithm
@@ -226,24 +235,34 @@ export default function ProcedureMainPage() {
         color: color,
     };
 
+    const handleInner = () => {
+        if(isUndefined(props.location.state)){
+            return "-100vw";
+        }else{
+            const lastPage = props.location.state.id;
+            const inner = lastPage === "tutorial" ? "100vw" : "-100vw";
+            return inner;
+        }
+        
+    };
+
     return (
         <div>
             <motion.div
                 className={classes.div}
-                // initial={{
-                //     opacity: firstIn == 1 ? 1 : 0,
-                //     scale: firstIn == 1 ? 1 : 0,
-                // }}
-                // animate={{
-                //     opacity: 1,
-                //     scale: 1,
-                // }}
-                // transition={{
-                //     type: "spring",
-                //     stiffness: 100,
-                //     damping: 30,
-                //     mass: 0.1,
-                // }}
+                // initial={{ opacity: 0.2, x: "-100vw" }}
+                initial={{ opacity: 0.2, x: handleInner() }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    x: "0vw",
+                }}
+                transition={{
+                    type: "spring",
+                    stiffness: 250,
+                    damping: 25,
+                }}
+                exit={{ opacity: 0.2, scale: 0, x: "-100vw" }}
             >
                 <div className={classes.grid}>
                     <Grid container spacing={0}>
@@ -298,11 +317,12 @@ export default function ProcedureMainPage() {
                     </Grid>
                 </div>
             </motion.div>
-
+           
             {firstIn == 1 ? <FirstInBackdrop /> : <div />}
         </div>
     );
 }
+
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Procedure button is theme color without jump function

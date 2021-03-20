@@ -10,7 +10,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+import { Link } from "react-router-dom";
 import Tooltip from '@material-ui/core/Tooltip';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
@@ -19,11 +19,8 @@ import Collapse from '@material-ui/core/Collapse';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Snackbar from '@material-ui/core/Snackbar';
 import Typography from '@material-ui/core/Typography';
-
-
-
+//import {shell} from "electron";
 
 
   const useStyles = makeStyles((theme) => ({
@@ -33,13 +30,25 @@ import Typography from '@material-ui/core/Typography';
     fullList: {
       width: 'auto',
     },
+    link:{
+      textDecoration: "none", 
+      color:"#4ba6ff",
+      fontSize: "2em",
+      "&:hover": {
+        fontWeight:400,
+        color:"#1564b2",
+        // textDecoration: "underline",
+      },
+    },
     content:{
       color: "#6e767b"
     },
     warning:{
-    marginLeft:"23px",
+    marginLeft:"15px",
     marginRight:"5px",
     textAlign:'lefter',
+    fontSize:"14px",
+    fontWeight:"600",
     },
     confirmButton:{
       backgroundColor:"#FF8C00", 
@@ -65,30 +74,20 @@ import Typography from '@material-ui/core/Typography';
     });
     //alert state
     const [open, setOpen] = React.useState(true);
-    //snack state
-    const [appear, setAppear] = React.useState(false);
-    //confirm's handleclick
     const handleClick = () => {
-      //alert close 
-      setOpen(false);
-      //snackbar appear
-      setAppear(true); 
-      //reload page, set sleep time so that Snackbar has time to appear
-      setTimeout(function () { 
-          window.location.reload();
-       
-       }, 1500);
-       //clear local storage
-      localStorage.clear();      
+      setState(false);
+       localStorage.clear(); 
+       localStorage.setItem("snack", JSON.stringify(1));     
     };
-    //drawer close
-    const handleClose = (event, reason) => {
-      if (reason === 'clickaway') {
-        return;
-      }
-      setAppear(false);
-    };
-
+    //open a link
+    const handleLink=()=> {
+      let url = "https://github.com/team10nb"
+      // var win = window.open(url, '_blank');
+      // const electron = window.require("electron")
+      window.electron.shell.openExternal(url)
+      // win.focus(); 
+    }
+    
     
     //set event: when click outside drawer, drawer will close 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -119,7 +118,7 @@ import Typography from '@material-ui/core/Typography';
         <AccordionDetails>
           <Paper elevation={0}>
             <Typography variant="subtitle2" className = {classes.content}  gutterBottom>
-              We are a software development team of college students, dedicated to the development of algorithm correctness to help users learn.
+              We are university students from UNNC, dedicated to help users learn sorting algorithms and correctness.
             </Typography>
           </Paper>        
         </AccordionDetails>
@@ -139,7 +138,8 @@ import Typography from '@material-ui/core/Typography';
           <Typography variant="subtitle2" className = {classes.content} gutterBottom>
                 You can follow the link to visit our repository:
               </Typography>
-              <Link href="https://github.com/team10nb" variant="body2">GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
+              
+              <Link onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
           </Paper>
               
         </AccordionDetails>
@@ -159,23 +159,20 @@ import Typography from '@material-ui/core/Typography';
             <Collapse in={open}>
               <Alert severity="warning">
                 <div className = {classes.warning}>
-                  Are you sure you want to erase all history&nbsp;?&nbsp;&nbsp;All study progress will disapear.                   
-                </div>                      
-                <Button variant="contained" size = "small" onClick = {handleClick} className={classes.confirmButton}  >COMFIRM</Button>                           
+                  Are you sure you want to erase all history? All study progress will be reset.                   
+                </div>  
+                <Link to="/ProcedureMainPage" style={{ textDecoration: "none" }}>        
+                  <Button variant="contained" size = "small" onClick={handleClick}  className={classes.confirmButton}  >COMFIRM</Button>      
+                </Link>                     
               </Alert>
             </Collapse>                         
           </Paper>
-          <Snackbar open={appear} autoHideDuration={6000} onClose={handleClose}  >
-                <Alert onClose={handleClose} severity="success" style={{marginRight:"642px",width:"290px"}}>
-                  Successfully reset history!
-                </Alert>
-              </Snackbar> 
         </AccordionDetails>       
       </Accordion>
     </div>
   );
 
-   
+
     return (
       <div>
         {/*set button*/}
@@ -195,5 +192,5 @@ import Typography from '@material-ui/core/Typography';
     );
   }
 
- 
+
 

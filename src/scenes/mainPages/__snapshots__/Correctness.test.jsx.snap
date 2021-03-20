@@ -79,7 +79,7 @@ Object {
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
               >
                 <a
-                  href="/Page"
+                  href="/Correctness/Prove"
                 >
                   <div
                     style="display: inline-block; margin: 10px;"
@@ -143,7 +143,6 @@ Object {
                   <button
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
-                    style="background-color: rgb(240, 240, 240); font-size: small;"
                     tabindex="0"
                     title="information"
                     type="button"
@@ -168,7 +167,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-45 PrivateSwipeArea-anchorLeft-46"
+                    class="PrivateSwipeArea-root-46 PrivateSwipeArea-anchorLeft-47"
                     style="width: 20px;"
                   />
                 </div>
@@ -200,14 +199,14 @@ Object {
                   </button>
                   <div
                     aria-hidden="true"
-                    class="MuiBackdrop-root makeStyles-backdrop-40"
+                    class="MuiBackdrop-root makeStyles-backdrop-41"
                     style="opacity: 0; visibility: hidden;"
                   >
                     <div
-                      class="MuiPaper-root MuiCard-root makeStyles-card-41 MuiPaper-elevation1 MuiPaper-rounded"
+                      class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                     >
                       <div
-                        class="makeStyles-avatar-42"
+                        class="makeStyles-avatar-43"
                       >
                         <button
                           aria-label="close"
@@ -239,7 +238,7 @@ Object {
                         <div>
                           <button
                             class="MuiButtonBase-root MuiCardActionArea-root"
-                            style="width: 580px; height: 403px;"
+                            style="width: 580px; height: 403px; margin-bottom: 15px;"
                             tabindex="0"
                             type="button"
                           >
@@ -254,6 +253,7 @@ Object {
                             >
                               <p
                                 class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                                style="margin-left: 20px; margin-right: 20px;"
                               >
                                 This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
                               </p>
@@ -267,7 +267,7 @@ Object {
                           </button>
                         </div>
                         <div
-                          class="makeStyles-button-43"
+                          class="makeStyles-button-44"
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -469,7 +469,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
             >
               <a
-                href="/Page"
+                href="/Correctness/Prove"
               >
                 <div
                   style="display: inline-block; margin: 10px;"
@@ -533,7 +533,6 @@ Object {
                 <button
                   aria-label="setting"
                   class="MuiButtonBase-root MuiIconButton-root"
-                  style="background-color: rgb(240, 240, 240); font-size: small;"
                   tabindex="0"
                   title="information"
                   type="button"
@@ -558,7 +557,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-45 PrivateSwipeArea-anchorLeft-46"
+                  class="PrivateSwipeArea-root-46 PrivateSwipeArea-anchorLeft-47"
                   style="width: 20px;"
                 />
               </div>
@@ -590,14 +589,14 @@ Object {
                 </button>
                 <div
                   aria-hidden="true"
-                  class="MuiBackdrop-root makeStyles-backdrop-40"
+                  class="MuiBackdrop-root makeStyles-backdrop-41"
                   style="opacity: 0; visibility: hidden;"
                 >
                   <div
-                    class="MuiPaper-root MuiCard-root makeStyles-card-41 MuiPaper-elevation1 MuiPaper-rounded"
+                    class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                   >
                     <div
-                      class="makeStyles-avatar-42"
+                      class="makeStyles-avatar-43"
                     >
                       <button
                         aria-label="close"
@@ -629,7 +628,7 @@ Object {
                       <div>
                         <button
                           class="MuiButtonBase-root MuiCardActionArea-root"
-                          style="width: 580px; height: 403px;"
+                          style="width: 580px; height: 403px; margin-bottom: 15px;"
                           tabindex="0"
                           type="button"
                         >
@@ -644,6 +643,7 @@ Object {
                           >
                             <p
                               class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                              style="margin-left: 20px; margin-right: 20px;"
                             >
                               This a entry for each sorting algorithm. Choose one and click it to enter next Page. A progress bar is at the bottom, it shows how much you have learnt.
                             </p>
@@ -657,7 +657,7 @@ Object {
                         </button>
                       </div>
                       <div
-                        class="makeStyles-button-43"
+                        class="makeStyles-button-44"
                       >
                         <button
                           class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"

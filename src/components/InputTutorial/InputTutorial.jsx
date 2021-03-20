@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         width: 740,
         height: 530,
         // marginTop:630,
-        marginLeft: 20,
+        marginLeft: 14,
+        marginTop: 16,
         "& > *": {
             margin: theme.spacing(1),
         },
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         // margintop: 10,
         background: "#F0F0F0",
         width: 550,
-        height: 505,
+        height: 500,
         display: "grid",
         justifyContent: "center",
     },
@@ -275,7 +276,7 @@ export default function InputTutorial(props) {
                 <div
                     className={classes.algorithmTitle}
                 >
-                    What day is&nbsp;(
+                    What is day&nbsp;(
                     <span
                         style={{
                             fontWeight: "600",
@@ -337,7 +338,7 @@ export default function InputTutorial(props) {
                         style={{ fontSize: "100px" }}
                     >
                         {isLegalPlaying
-                            ? "No." + dayCount + " day of a week is " + weekday
+                            ? "Day " + dayCount + " of a week is " + weekday
                             : "Error! Only integers 1-7 are legal"}
                     </ExplanationBox>
                 </div>
