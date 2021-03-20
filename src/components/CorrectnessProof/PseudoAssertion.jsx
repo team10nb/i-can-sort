@@ -40,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     background: {
         backgroundColor: "#FEE5D4",
-        // borderRadius:15,
-
+        borderRadius:5,
         marginTop: -8,
         letterSpacing: 0.5,
         fontFamily: "Space Mono",
@@ -50,51 +49,16 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "5px",
     },
     noBackground: {
-        // borderRadius:15,
+        borderRadius:5,
         marginTop: -8,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
         lineHeight:"22px",
-        fontSize:"12px",
+        fontSize:"13px",
         paddingLeft:"5px",
     },  
-    hBackground:{
-        backgroundColor: "#FEE5D4", 
-        borderRadius:15,      
-        marginTop: -6,
-        letterSpacing: 0,
-        fontFamily: "Space Mono",
-        lineHeight: "22px",
-        fontSize: "12px",
-        paddingLeft: "8px",
-    },
-    hNoBackground: {
-        marginTop: -6,
-        letterSpacing: 0,
-        fontFamily: "Space Mono",
-        lineHeight: "22px",
-        fontSize: "12px",
-        paddingLeft: "8px",
-    },
-    qBackground:{
-        backgroundColor:"#FEE5D4",
-        borderRadius:15,    
-        marginTop: -11,
-        letterSpacing: 0.5,
-        fontFamily:"Space Mono",
-        lineHeight:"22px",
-        fontSize:"14px",
-        paddingLeft:"5px",
-    },
-    qNoBackground:{
-        borderRadius:15,
-        marginTop: -11,
-        letterSpacing: 0.5,
-        fontFamily:"Space Mono",
-        lineHeight:"22px",
-        fontSize:"14px",
-        paddingLeft:"5px",  
-    },
+
+
 }));
 
 const Bubble = (props) => {
@@ -368,63 +332,63 @@ const Quick = (props) => {
 Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
         </pre>
-        <pre className={classes.qNoBackground}>
+        <pre className={classes.noBackground}>
 {`//partition(a,b) is a subset of Arr
 //including all elments from Arr[a] to Arr[b].
 `}
         </pre> */}
             <pre
                 className={
-                    blockNum === 1 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 1 ? classes.background : classes.noBackground
                 }
             >
                 {`for each unsorted partition(a,b) do`}
             </pre>
             <pre
                 className={
-                    blockNum === 2 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 2 ? classes.background : classes.noBackground
                 }
             >
                 {`  pivot = position of a random element`}
             </pre>
             <pre
                 className={
-                    blockNum === 3 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
                 {`  swap(Arr[pivot], Arr[a])`}
             </pre>
             <pre
                 className={
-                    blockNum === 4 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 4 ? classes.background : classes.noBackground
                 }
             >
                 {`  storeIndex = x + 1`}
             </pre>
             <pre
                 className={
-                    blockNum === 5 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 5 ? classes.background : classes.noBackground
                 }
             >
                 {`  for i = x + 1 to b do`}
             </pre>
             <pre
                 className={
-                    blockNum === 6 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 6 ? classes.background : classes.noBackground
                 }
             >
                 {`    if Arr[i] < Arr[pivot] then`}
             </pre>
             <pre
                 className={
-                    blockNum === 7 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 7 ? classes.background : classes.noBackground
                 }
             >
                 {`      swap(Arr[i], Arr[storeIndex])`}
             </pre>
             <pre
                 className={
-                    blockNum === 8 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 8 ? classes.background : classes.noBackground
                 }
             >
                 {`      storeIndex++`}
@@ -440,7 +404,7 @@ Output: The result of sorting Arr.`}
 
             <pre
                 className={
-                    blockNum === 9 ? classes.qBackground : classes.qNoBackground
+                    blockNum === 9 ? classes.background : classes.noBackground
                 }
             >
                 {`    end if`}
@@ -448,8 +412,8 @@ Output: The result of sorting Arr.`}
             <pre
                 className={
                     blockNum === 10
-                        ? classes.qBackground
-                        : classes.qNoBackground
+                        ? classes.background
+                        : classes.noBackground
                 }
             >
                 {`  end for`}
@@ -457,8 +421,8 @@ Output: The result of sorting Arr.`}
             <pre
                 className={
                     blockNum === 11
-                        ? classes.qBackground
-                        : classes.qNoBackground
+                        ? classes.background
+                        : classes.noBackground
                 }
             >
                 {`  swap(Arr[pivot], Arr[storeIndex - 1])`}
@@ -466,8 +430,8 @@ Output: The result of sorting Arr.`}
             <pre
                 className={
                     blockNum === 12
-                        ? classes.qBackground
-                        : classes.qNoBackground
+                        ? classes.background
+                        : classes.noBackground
                 }
             >
                 {`end for`}
@@ -486,11 +450,11 @@ Output: The result of sorting Arr.`}
             <pre
                 className={
                     blockNum === 13
-                        ? classes.qBackground
-                        : classes.qNoBackground
+                        ? classes.background
+                        : classes.noBackground
                 }
             >
-                {`return Arr`}
+                {`return`}
             </pre>
             {/* assertion */}
             <pre
@@ -501,8 +465,8 @@ Output: The result of sorting Arr.`}
                         : classes.qAssertNoBack
                 }
             >
-                &nbsp;The Partition size equals the array size, which <br />{" "}
-                means all numbers are sorted
+                &nbsp;All pivots are at sorted position, <br />{" "}
+                which means all numbers are sorted
             </pre>
             {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.qAssertBack : classes.qAssertNoBack}>
 

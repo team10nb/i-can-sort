@@ -274,7 +274,7 @@ Output: The result of sorting Arr.`}
 {`end for`}
         </pre>
         <pre className={blockNum===13 ? classes.qBackground : classes.qNoBackground}>
-{`return Arr`}
+{`return`}
         </pre>
     </div>
 
