@@ -14,28 +14,10 @@ let props = SelectionSort(arr);
 const introMessage = 
 <div>
 <h1>Selection sort</h1>
-<p style={{textAlign:"left"}}>The algorithm divides the input list into a sorted sublist and a unsorted sublist. It proceeds by finding the smallest (largest) element in the unsorted sublist, swapping it with the leftmost unsorted element, and moving the sublist boundaries one element to the right.</p>
-{/* <h1>Performance</h1> */}
-{/* <table>
-    <tbody>
-    <tr>
-        <td>Worst-case time complexity</td>
-        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
-    </tr>
-    <tr>
-        <td>Average time complexity </td>
-        <td style = {{paddingLeft:7}}>O(n<sup>2</sup>)</td>
-    </tr>
-    <tr>
-        <td>Best-case time complexity </td>
-        <td style = {{paddingLeft:7}}>O(n)</td>
-    </tr>
-    <tr>
-        <td>Worst-case space complexity </td>
-        <td style = {{paddingLeft:7}}>O(1)</td>
-    </tr>
-    </tbody>
-</table>  */}
+<p style={{textAlign:"left", fontSize:16}}>
+Selection sort divides the input list into two parts: a sorted sublist of items which is built up from left to right at the left of the list and a sublist of the remaining unsorted items. 
+The algorithm proceeds by finding the smallest/largest element in the unsorted sublist, swapping it with the leftmost unsorted element, and moving the sublist boundaries one element to the right.
+</p>
 </div>
 
 const intro = {
