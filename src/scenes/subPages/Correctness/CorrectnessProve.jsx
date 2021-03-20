@@ -25,7 +25,13 @@ import Heap from './Prove/Heap';
 import Insertion from './Prove/Insertion';
 import Merge from './Prove/Merge';
 import Quick from './Prove/Quick';
-import Selection from './Prove/Selection'
+import Selection from './Prove/Selection';
+import {BubbleExample,
+        SelectionExample,
+        InsertionExample,
+        QuickExample,
+        HeapExample,
+        MergeExample,} from '../../../components/CorrectnessProof/Example';
 
 
 const drawerWidth = 240;
@@ -177,27 +183,27 @@ const useStyles = makeStyles((theme) => ({
       switch (activeStep) {
         case 0:
             return(
-                <Bubble />
+                {BubbleExample}
             );
         case 1:
             return(
-                <Selection />
+                {SelectionExample}
             );
         case 2:
             return(
-                <Insertion />
+                {InsertionExample}
             );
         case 3:
             return(
-                <Quick />
+                {QuickExample}
             );
         case 4:
             return(
-                <Merge />
+                {MergeExample}
             );
         case 5:
             return(
-                <Heap />
+                {HeapExample}
             );
         default:
             break;
@@ -207,6 +213,9 @@ const useStyles = makeStyles((theme) => ({
   
     export default function CorrectnessProve(props) {
     const classes = useStyles();
+
+    const{Implementation} = props;
+
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -290,18 +299,9 @@ const useStyles = makeStyles((theme) => ({
                         </List>
                    </div>
                 </Drawer>
-                <div className = {classes.cardSet}>
-                    <Card className={classes.cardOne}>
-                        <CardContent style={{paddingLeft: "24px", paddingTop: "0px"}}>
-                            {/* {intro.introMessage} */}
-                        </CardContent>
-                    </Card>
-                    <Card className={classes.cardTwo} >
-                        <CardContent >
-                            {/* {intro.animation} */}
-                        </CardContent>
-                    </Card>
-                </div>
+                
+                   {getStepContent}
+           
             </main>
 
 
