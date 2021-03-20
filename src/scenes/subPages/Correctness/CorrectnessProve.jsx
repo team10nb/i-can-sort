@@ -32,6 +32,7 @@ import {BubbleExample,
         QuickExample,
         HeapExample,
         MergeExample,} from '../../../components/CorrectnessProof/Example';
+import ProofHelp from "../../../components/CorrectnessProof/ProofHelp";
 
 
 const drawerWidth = 170;
@@ -118,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     drawer: {
+        display:"relative",
         width: drawerWidth,   
         flexShrink: 0,
         height:620,
@@ -162,20 +164,25 @@ const useStyles = makeStyles((theme) => ({
         fontFamily:"Quicksand",
         fontWeight: "600",
         fontSize: "20px"
-      }
+      },
 
+      helpButton:{
+          position:"absolute",
+        bottom:5,
+        left:5,
+      }
     
    
   }));
 
   function getSteps() {
     return [
-        'Bubble Prove' , 
-        'Selection Prove',
-        'Insertion Prove',
-        'Quick Prove',
-        'Merge Prove',
-        'Heap Prove'
+        'Correctness of Bubble Sort' , 
+        'Correctness of Selection Sort',
+        'Correctness of Insertion Sort',
+        'Correctness of Quick Sort',
+        'Correctness of Merge Sort',
+        'Correctness of Heap Sort'
     ];
   }
 
@@ -297,7 +304,12 @@ const useStyles = makeStyles((theme) => ({
                             </ListItem> 
                             ))}
                         </List>
+                        
                    </div>
+                   <div className={classes.helpButton}>
+
+                        <ProofHelp/>
+                        </div>
                 </Drawer>
                 
                 {getStepContent(activeStep)}

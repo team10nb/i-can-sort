@@ -9,13 +9,12 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ExplanationBox from '../ExplanationBox/ExplanationBox';
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import {color} from '../../scenes/mainPages/Procedure';
-
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import { color } from "../../scenes/mainPages/Procedure";
 
 // a framer motion transition attributes
 const spring = {
@@ -25,15 +24,16 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-
-export default function ImplementationPseudo(props){
-    const { title,
-            algorithm,
-            trace, 
-            description, 
-            blockNums, 
-            Code, 
-            file } = props;
+export default function ImplementationPseudo(props) {
+    const {
+        title,
+        algorithm,
+        trace,
+        description,
+        blockNums,
+        Code,
+        file,
+    } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -52,12 +52,12 @@ export default function ImplementationPseudo(props){
     // the State of previous step bnutton
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
-    const useStyles = makeStyles((theme) =>({
+    const useStyles = makeStyles((theme) => ({
         root: {
             display: "flex",
             width: 1020,
-            marginTop:-5,
-            marginLeft:5,
+            marginTop: -5,
+            marginLeft: 5,
         },
         aniRoot: {
             display: "grid",
@@ -65,6 +65,7 @@ export default function ImplementationPseudo(props){
             alignContent: "flex-end",
             height: 430,
             marginTop: "20px",
+            marginBottom: "40px",
         },
         bars: {
             listStyle: "none",
@@ -97,37 +98,40 @@ export default function ImplementationPseudo(props){
             textAlign: "center",
             fontWeight: "600",
         },
-        
-        cardOne:{
+
+        cardOne: {
             width: "420px",
             height: 550,
-            background: "#F0F0F0",        
+            background: "#F0F0F0",
         },
 
-        cardTwo:{
+        cardTwo: {
+            display: "grid",
             width: "400px",
-            marginLeft:20,
+            marginLeft: 20,
             height: 550,
-            background: "#F0F0F0",      
+            background: "#F0F0F0",
+            justifyContent: "center",
+            alignContent: "flex-end",
         },
-        title:{
-            display:"flex",
+        title: {
+            display: "flex",
             fontFamily: "inherit",
             fontWeight: "700",
-            fontSize:"20px",
+            fontSize: "20px",
             justifyContent: "center",
             marginTop: -6,
             marginBottom: 20,
         },
-        button:{
+        button: {
             marginLeft: 95,
             width: 200,
-            position: 'fixed',
+            position: "fixed",
             bottom: 60,
         },
-        slider:{
-            marginLeft: 10
-        }
+        slider: {
+            marginLeft: 10,
+        },
     }));
 
     const classes = useStyles();
@@ -140,7 +144,7 @@ export default function ImplementationPseudo(props){
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -279,70 +283,71 @@ export default function ImplementationPseudo(props){
         trace,
     };
 
-    return (            
-            <div className = {classes.root}>
-                <Card className = {classes.cardOne}>
+    return (
+        <div className={classes.root}>
+            <Card className={classes.cardOne}>
                 <CardContent>
-                    <div className = {classes.title}>{title}</div>
+                    <div className={classes.title}>{title}</div>
 
                     <div>
-                        <Code blockNum={blockNums[currentStep]}/>
+                        <Code blockNum={blockNums[currentStep]} />
                     </div>
-
-
                 </CardContent>
-                </Card>
-                <Card className = {classes.cardTwo}>             
-                    <div className={classes.aniRoot}>
+            </Card>
+            <Card className={classes.cardTwo}>
+                <div className={classes.aniRoot}>
                     <div className={classes.bars}>
-                    {bars.map((background) => (
-                        <motion.li
-                            key={background.key} // each bar's identification
-                            layout
-                            transition={spring}
-                            style={background}
-                            className={classes.bar}
-                            animate={{
-                                backgroundColor: background.backgroundColor,
-                                y: background.y,
-                            }}
-                        >
-                            <div className={classes.barNumber}>
-                                {background.value}
-                            </div>
-                            <div
-                                style={{
-                                    marginTop: background.height-17,
-                                    fontSize: "16px",
-                                    textAlign: "center",
-                                    fontWeight: "600",
+                        {bars.map((background) => (
+                            <motion.li
+                                key={background.key} // each bar's identification
+                                layout
+                                transition={spring}
+                                style={background}
+                                className={classes.bar}
+                                animate={{
+                                    backgroundColor: background.backgroundColor,
+                                    y: background.y,
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-25px"}}/> : ""}
-                            </div>
-                        </motion.li>
-                    ))}
-                </div>
-                <ExplanationBox width={40} height={6}>
-                    {description[currentStep]}
-                </ExplanationBox>
-                
-                <div className={classes.slider}>
-                <AnimationSlider
-                    width={360}
-                    step={1}
-                    max={trace.length - 1}
-                    handleChange={handleSliderChange}
-                    value={currentStep}
-                    display="none"                                       
-                />
-                </div>
-                <AnimationControl {...animationControlProps} />
+                                <div className={classes.barNumber}>
+                                    {background.value}
+                                </div>
+                                <div
+                                    style={{
+                                        marginTop: background.height - 17,
+                                        fontSize: "16px",
+                                        textAlign: "center",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    {background.isPivot ? (
+                                        <ArrowDropUpIcon
+                                            style={{ marginBottom: "-25px" }}
+                                        />
+                                    ) : (
+                                        ""
+                                    )}
+                                </div>
+                            </motion.li>
+                        ))}
                     </div>
-                    
+                    <ExplanationBox width={40} height={6}>
+                        {description[currentStep]}
+                    </ExplanationBox>
+
+                    <div className={classes.slider}>
+                        <AnimationSlider
+                            width={360}
+                            step={1}
+                            max={trace.length - 1}
+                            handleChange={handleSliderChange}
+                            value={currentStep}
+                            display="none"
+                        />
+                    </div>
+                    <AnimationControl {...animationControlProps} />
+                </div>
             </Card>
-            
-            
-            </div>  
+        </div>
     );
-};
+}

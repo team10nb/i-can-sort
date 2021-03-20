@@ -267,7 +267,7 @@ Output: The result of sorting Arr.`}
 {`for each unsorted partition(a,b) do`}
         </pre>
         <pre className={blockNum===2 ? classes.qBackground : classes.qNoBackground}>
-{`  pivot = position of randomly selected element`}
+{`  pivot = position of a random element`}
         </pre>
         <pre className={blockNum===3 ? classes.qBackground : classes.qNoBackground}>
 {`  swap(Arr[pivot], Arr[a])`}
