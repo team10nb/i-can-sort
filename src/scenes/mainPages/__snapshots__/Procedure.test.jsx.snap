@@ -553,7 +553,7 @@ Object {
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
               >
                 <div
-                  style="margin-left: -8px; margin-top: 50px;"
+                  style="margin-left: -8px; margin-top: 20px;"
                 >
                   <div
                     class="makeStyles-root-6"
@@ -1273,7 +1273,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
             >
               <div
-                style="margin-left: -8px; margin-top: 50px;"
+                style="margin-left: -8px; margin-top: 20px;"
               >
                 <div
                   class="makeStyles-root-6"

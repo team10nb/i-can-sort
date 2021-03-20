@@ -40,39 +40,39 @@ export default function HeapSort(arr) {
 
             if (iMax !== index) {
                 //compare bars to build max heap
-                changeColor(patched, iMax, COLORS.comparing);
-                changeColor(patched, index, COLORS.comparing);
-                description.push(
-                    "Compare " +
-                        patched[index].value +
-                        " and " +
-                        patched[iMax].value
-                );
-                trace.push(hardcopy(patched));
-                blockNums.push(1);
+                // changeColor(patched, iMax, COLORS.comparing);
+                // changeColor(patched, index, COLORS.comparing);
+                // description.push(
+                //     "Compare " +
+                //         patched[index].value +
+                //         " and " +
+                //         patched[iMax].value
+                // );
+                // trace.push(hardcopy(patched));
+                // blockNums.push(1);
 
-                description.push(
-                    patched[iMax].value +
-                        " is bigger than " +
-                        patched[index].value
-                );
-                trace.push(hardcopy(patched));
-                blockNums.push(1);
+                // description.push(
+                //     patched[iMax].value +
+                //         " is bigger than " +
+                //         patched[index].value
+                // );
+                // trace.push(hardcopy(patched));
+                // blockNums.push(1);
 
                 //swapping
                 swap(patched, iMax, index);
-                description.push(
-                    "Swap " +
-                        patched[iMax].value +
-                        " and " +
-                        patched[index].value
-                );
-                trace.push(hardcopy(patched));
-                blockNums.push(1);
+                // description.push(
+                //     "Swap " +
+                //         patched[iMax].value +
+                //         " and " +
+                //         patched[index].value
+                // );
+                // trace.push(hardcopy(patched));
+                // blockNums.push(1);
 
                 //恢复对比中bar的颜色
-                changeColor(patched, iMax, COLORS.original);
-                changeColor(patched, index, COLORS.original);
+                // changeColor(patched, iMax, COLORS.original);
+                // changeColor(patched, index, COLORS.original);
 
                 index = iMax;
             } else {
@@ -107,7 +107,7 @@ export default function HeapSort(arr) {
 
             description.push("A max heap is built, heap size is: " + j);
             trace.push(hardcopy(patched));
-            blockNums.push(1);
+            blockNums.push(2);
 
             //恢复堆颜色
             for (var j = 0; j < i + 1; j++) {
@@ -131,7 +131,7 @@ export default function HeapSort(arr) {
                 "Take " + patched[i].value + " out of the heap"
             );
             trace.push(hardcopy(patched));
-            blockNums.push(6);
+            blockNums.push(3);
 
             maxHeapify(patched, 0, i);
         }
@@ -143,7 +143,7 @@ export default function HeapSort(arr) {
                 " is already sorted. Heap sort finished."
         );
         trace.push(hardcopy(patched));
-        blockNums.push(12);
+        blockNums.push(5);
 
         return { trace: trace, description: description, blockNums:blockNums };
     }

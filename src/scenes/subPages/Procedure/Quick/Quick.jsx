@@ -16,28 +16,9 @@ let props = QuickSort(arr);
 
 const introMessage = <div>
 <h1>Quick sort</h1>
-<p style={{textAlign:"left"}}>Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. </p>
-{/* <h1>Performance</h1> */}
-{/* <table>
-    <tbody>
-    <tr>
-        <td style={{textAlign:"left"}}>Worst-case time complexity</td>
-        <td style = {{textAlign:"right"}}>O(n<sup>2</sup>)</td>
-    </tr>
-    <tr>
-        <td style={{textAlign:"left"}}>Average time complexity </td>
-        <td style = {{textAlign:"right"}}>O(nlogn)</td>
-    </tr>
-    <tr>
-        <td style={{textAlign:"left"}}>Best-case time complexity </td>
-        <td style = {{textAlign:"right"}}>O(nlogn)</td>
-    </tr>
-    <tr>
-        <td style={{textAlign:"left"}}>Worst-case space complexity </td>
-        <td style = {{textAlign:"right"}}>O(nlogn)</td>
-    </tr>
-    </tbody>
-</table>  */}
+<p style={{textAlign:"left", fontSize:17}}>
+Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort. The sub-arrays are then sorted recursively.
+</p>
 </div>
 
 const intro = {

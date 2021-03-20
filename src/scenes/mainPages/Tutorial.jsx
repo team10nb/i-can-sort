@@ -45,9 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonSet: {
         display: "flex",
-        "& > *": {
-            margin: theme.spacing(0),
-        },
+        marginTop: 30,
     },
 }));
 
@@ -196,7 +194,7 @@ export default function TutorialMainPage() {
                     </Grid>
 
                     <Grid item xs={12}>
-                        <div style={{ marginLeft: -8, marginTop: 50 }}>
+                        <div style={{ marginLeft: -8, marginTop: 20 }}>
                             <TutorialChoiceMenu />
                         </div>
                     </Grid>
