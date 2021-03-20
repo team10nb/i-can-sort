@@ -120,7 +120,7 @@ export default function ImplementationPseudo(props) {
             fontWeight: "700",
             fontSize: "20px",
             justifyContent: "center",
-            marginTop: -6,
+            marginTop: -2,
             marginBottom: 20,
         },
         button: {
