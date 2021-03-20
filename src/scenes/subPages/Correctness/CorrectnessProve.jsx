@@ -283,7 +283,7 @@ const useStyles = makeStyles((theme) => ({
                         
                         <List>
                             <ListItem className = {classes.listItem}>             
-                            <ListItemText primary= 'Sorting Algorithm Prove' classes={{primary:classes.listItemTitle}}/>
+                            <ListItemText primary= 'Proof' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>                          
                             {['Bubble ' , 'Selection ', 'Insertion ', 'Quick ','Merge ','Heap ' ].map((text, index) => (
                             index === activeStep
