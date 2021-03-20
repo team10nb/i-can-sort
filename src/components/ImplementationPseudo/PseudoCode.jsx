@@ -193,7 +193,7 @@ Output: The result of sorting Arr.`}
 {`  while preIndex>=0 && current<Arr[preIndex] do`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    Arr[preIndex + 1] = Arr[preIndex] !!!ADD COMMENT`}
+{`    Arr[preIndex + 1] = Arr[preIndex]`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
 {`    preIndex--`}
@@ -203,6 +203,9 @@ Output: The result of sorting Arr.`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
 {`Arr[preIndex + 1] = current`}
+        </pre>
+        <pre className={blockNum==- 0 ? classes.background : classes.noBackground}>
+{`//insert current elment at position preIndex`}
         </pre>
         <pre className={blockNum===10 ? classes.background : classes.noBackground}>
 {`end for`}
@@ -294,39 +297,18 @@ Input: an array of integers Arr.
 Output: The result of sorting Arr.`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Build_max_heap from unordered Arr`}
+{`for i = Arr.length - 1 to 0 do`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`for each unsorted element`}
+{`  maxHeapify(Arr, 0, i)`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`  set the first unsorted element as the maximum`}
+{`  swap(0, i)`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  for i = 0 to lastSortedIndex - 1`}
-        </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`    if element[n] < element[maximum] then`}
-        </pre>
-        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`      swap(n, maximum)`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`      swap(Arr[j],Arr[j-1])`}
-        </pre>
-        <pre className={blockNum===8 ? classes.hBackground : classes.hNoBackground}>
-{`      Discard node n from heap decrementing heap size`}
-        </pre>
-        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`    end if`}
-        </pre>
-        <pre className={blockNum===10 ? classes.background : classes.noBackground}>
-{`  end for`}
-        </pre>
-        <pre className={blockNum===11 ? classes.background : classes.noBackground}>
 {`end for`}
         </pre>
-        <pre className={blockNum===12 ? classes.background : classes.noBackground}>
+        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`return Arr`}
         </pre>
     </div>
