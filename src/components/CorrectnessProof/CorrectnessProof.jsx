@@ -318,7 +318,7 @@ export default function ImplementationPseudo(props){
                                     fontWeight: "600",
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-25px"}}/> : ""}
                             </div>
                         </motion.li>
                     ))}
