@@ -82,28 +82,28 @@ Output: The result of sorting Arr.`}
 {`length = Arr.length`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`FOR i from 0 to length-1 DO`}
+{`for i from 0 to length-1 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`  FOR j from 0 to length-1-i DO`}
+{`  for j from 0 to length-1-i do`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`    IF Arr[j] > Arr[j+1] THEN`}
+{`    if Arr[j] > Arr[j+1] then`}
         </pre>
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`      swap(Arr[j], Arr[j+1])`}
         </pre>
         <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`    END IF`}
+{`    end if`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`  END FOR`}
+{`  end for`}
         </pre>
         <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`END FOR`}
+{`end for`}
         </pre>
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`RETURN Arr`}
+{`return Arr`}
         </pre>
     </div>
     
