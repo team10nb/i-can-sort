@@ -167,7 +167,7 @@ Object {
                     />
                   </button>
                   <div
-                    class="PrivateSwipeArea-root-48 PrivateSwipeArea-anchorLeft-49"
+                    class="PrivateSwipeArea-root-47 PrivateSwipeArea-anchorLeft-48"
                     style="width: 20px;"
                   />
                 </div>
@@ -187,7 +187,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root makeStyles-icon-44"
+                          class="MuiSvgIcon-root makeStyles-icon-43"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -209,7 +209,7 @@ Object {
                         class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                       >
                         <div
-                          class="makeStyles-avatar-43"
+                          style="margin-left: -490px; margin-top: 10px;"
                         >
                           <button
                             aria-label="close"
@@ -241,7 +241,7 @@ Object {
                           <div>
                             <button
                               class="MuiButtonBase-root MuiCardActionArea-root"
-                              style="height: 403px; margin-bottom: 15px;"
+                              style="height: 415px; margin-bottom: 15px;"
                               tabindex="0"
                               type="button"
                             >
@@ -269,7 +269,7 @@ Object {
                             </button>
                           </div>
                           <div
-                            class="makeStyles-button-46"
+                            class="makeStyles-button-45"
                           >
                             <button
                               class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -560,7 +560,7 @@ Object {
                   />
                 </button>
                 <div
-                  class="PrivateSwipeArea-root-48 PrivateSwipeArea-anchorLeft-49"
+                  class="PrivateSwipeArea-root-47 PrivateSwipeArea-anchorLeft-48"
                   style="width: 20px;"
                 />
               </div>
@@ -580,7 +580,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root makeStyles-icon-44"
+                        class="MuiSvgIcon-root makeStyles-icon-43"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
@@ -602,7 +602,7 @@ Object {
                       class="MuiPaper-root MuiCard-root makeStyles-card-42 MuiPaper-elevation1 MuiPaper-rounded"
                     >
                       <div
-                        class="makeStyles-avatar-43"
+                        style="margin-left: -490px; margin-top: 10px;"
                       >
                         <button
                           aria-label="close"
@@ -634,7 +634,7 @@ Object {
                         <div>
                           <button
                             class="MuiButtonBase-root MuiCardActionArea-root"
-                            style="height: 403px; margin-bottom: 15px;"
+                            style="height: 415px; margin-bottom: 15px;"
                             tabindex="0"
                             type="button"
                           >
@@ -662,7 +662,7 @@ Object {
                           </button>
                         </div>
                         <div
-                          class="makeStyles-button-46"
+                          class="makeStyles-button-45"
                         >
                           <button
                             class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"

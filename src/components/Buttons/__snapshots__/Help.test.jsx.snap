@@ -21,7 +21,7 @@ Object {
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root makeStyles-icon-11"
+                class="MuiSvgIcon-root makeStyles-icon-9"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -36,14 +36,14 @@ Object {
           </button>
           <div
             aria-hidden="true"
-            class="MuiBackdrop-root makeStyles-backdrop-8"
+            class="MuiBackdrop-root makeStyles-backdrop-7"
             style="opacity: 0; visibility: hidden;"
           >
             <div
-              class="MuiPaper-root MuiCard-root makeStyles-card-9 MuiPaper-elevation1 MuiPaper-rounded"
+              class="MuiPaper-root MuiCard-root makeStyles-card-8 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <div
-                class="makeStyles-avatar-10"
+                style="margin-left: -490px; margin-top: 10px;"
               >
                 <button
                   aria-label="close"
@@ -75,7 +75,7 @@ Object {
                 <div>
                   <button
                     class="MuiButtonBase-root MuiCardActionArea-root"
-                    style="height: 403px; margin-bottom: 15px;"
+                    style="height: 415px; margin-bottom: 15px;"
                     tabindex="0"
                     type="button"
                   >
@@ -102,7 +102,7 @@ Object {
                   </button>
                 </div>
                 <div
-                  class="makeStyles-button-13"
+                  class="makeStyles-button-11"
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
@@ -177,7 +177,7 @@ Object {
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root makeStyles-icon-11"
+              class="MuiSvgIcon-root makeStyles-icon-9"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -192,14 +192,14 @@ Object {
         </button>
         <div
           aria-hidden="true"
-          class="MuiBackdrop-root makeStyles-backdrop-8"
+          class="MuiBackdrop-root makeStyles-backdrop-7"
           style="opacity: 0; visibility: hidden;"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-card-9 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-card-8 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
-              class="makeStyles-avatar-10"
+              style="margin-left: -490px; margin-top: 10px;"
             >
               <button
                 aria-label="close"
@@ -231,7 +231,7 @@ Object {
               <div>
                 <button
                   class="MuiButtonBase-root MuiCardActionArea-root"
-                  style="height: 403px; margin-bottom: 15px;"
+                  style="height: 415px; margin-bottom: 15px;"
                   tabindex="0"
                   type="button"
                 >
@@ -258,7 +258,7 @@ Object {
                 </button>
               </div>
               <div
-                class="makeStyles-button-13"
+                class="makeStyles-button-11"
               >
                 <button
                   class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
