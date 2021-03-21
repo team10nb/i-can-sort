@@ -18,7 +18,7 @@ Object {
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
               data-shrink="true"
             >
-              Enter positive integers from 1 to 25
+              Enter positive integers from 1 to undefined
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
@@ -37,7 +37,7 @@ Object {
                   class="PrivateNotchedOutline-legendLabelled-29 PrivateNotchedOutline-legendNotched-30"
                 >
                   <span>
-                    Enter positive integers from 1 to 25
+                    Enter positive integers from 1 to undefined
                   </span>
                 </legend>
               </fieldset>
@@ -96,7 +96,7 @@ Object {
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
             data-shrink="true"
           >
-            Enter positive integers from 1 to 25
+            Enter positive integers from 1 to undefined
           </label>
           <div
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
@@ -115,7 +115,7 @@ Object {
                 class="PrivateNotchedOutline-legendLabelled-29 PrivateNotchedOutline-legendNotched-30"
               >
                 <span>
-                  Enter positive integers from 1 to 25
+                  Enter positive integers from 1 to undefined
                 </span>
               </legend>
             </fieldset>
