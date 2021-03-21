@@ -13,7 +13,8 @@ const Code = (props)=> {
   
     const useStyles = makeStyles((theme) => ({
         background:{
-            backgroundColor: "#c7dbc3",
+            backgroundColor: "#c8e6c9",
+            borderRadius: 5,
             marginTop: -6,
             letterSpacing: 0.5,
             fontFamily:"Space Mono",

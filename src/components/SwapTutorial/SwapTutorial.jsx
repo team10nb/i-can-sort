@@ -63,6 +63,7 @@ const Code = (props)=> {
             fontWeight: "500",
             fontSize:"12px",
             backgroundColor: "#c8e6c9",
+            borderRadius: 5,
             marginTop: -6,
             lineHeight: "2.5em",
             paddingLeft:"5px",

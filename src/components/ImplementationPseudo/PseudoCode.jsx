@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     background:{
         backgroundColor: "#cfd9e7",
+        borderRadius: 5,
         marginTop: -6,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },  
     hBackground:{
         backgroundColor: "#cfd9e7",
+        borderRadius: 5,
         marginTop: -6,
         letterSpacing: 0,
         fontFamily:"Space Mono",
@@ -50,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     qBackground:{
         backgroundColor: "#cfd9e7",
+        borderRadius: 5,
         marginTop: -11,
         letterSpacing: 0.5,
         fontFamily:"Space Mono",
