@@ -71,7 +71,7 @@ function recursiveMergeSort(
                 patched[start + 1].value +
                 " into two parts"
         );
-        blockNums.push(1);
+        blockNums.push(4);
 
         for (let i = start; i < start + 2; i++) {
             patched[i].y = -20;
@@ -80,7 +80,7 @@ function recursiveMergeSort(
         // Visualize: lift them up to prepare for merge
         trace.push(hardcopy(patched));
         description.push("Only one number left for each part, merge may begin");
-        blockNums.push(6);
+        blockNums.push(7);
 
         patched[start].isPivot = false;
         changeColor(patched, start + 1, mergeColors[colorCount.num - 1]);

@@ -8,9 +8,9 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import FirstInBackdrop from "../../components/FirstInBackdrop/FirstInBackdrop";
-import logo1 from "../../Resource/Phelp1.png";
-import logo2 from "../../Resource/Phelp2.png";
-import logo3 from "../../Resource/Phelp3.png";
+import logo0 from "../../Resource/Phelp1.png";
+import logo1 from "../../Resource/Phelp2.png";
+import logo2 from "../../Resource/Phelp3.png";
 import img_bubble from "../../Resource/bubble.png";
 import img_selection from "../../Resource/selection.png";
 import img_insertion from "../../Resource/insert.png";
@@ -227,9 +227,9 @@ export default function ProcedureMainPage(props) {
     };
 
     const helpProp = {
+        logo0: logo0,
         logo1: logo1,
         logo2: logo2,
-        logo3: logo3,
         color: color,
     };
 

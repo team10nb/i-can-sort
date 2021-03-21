@@ -10,9 +10,9 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo1 from "../../Resource/Thelp1.png";
-import logo2 from "../../Resource/Thelp2.png";
-import logo3 from "../../Resource/Thelp3.png";
+import logo0 from "../../Resource/Thelp1.png";
+import logo1 from "../../Resource/Thelp2.png";
+import logo2 from "../../Resource/Thelp3.png";
 import { motion } from "framer-motion";
 import img_swap from "../../Resource/swap.png";
 import img_loop from "../../Resource/loop.png";
@@ -137,9 +137,9 @@ export default function TutorialMainPage() {
     };
 
     const helpProp = {
+        logo0: logo0,
         logo1: logo1,
         logo2: logo2,
-        logo3: logo3,
         color: color,
     };
 

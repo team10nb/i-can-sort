@@ -1,5 +1,5 @@
 /*
-    Author: Yuting Jiang, Yijie Lu
+    Author: Shiliang Chen, Yijie Lu
 */
 
 import React from 'react';
@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Chip from '@material-ui/core/Chip';
-import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -18,15 +17,16 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
-import Bubble from './Prove/Bubble';
-import Heap from './Prove/Heap';
-import Insertion from './Prove/Insertion';
-import Merge from './Prove/Merge';
-import Quick from './Prove/Quick';
-import Selection from './Prove/Selection'
+import {BubbleExample,
+        SelectionExample,
+        InsertionExample,
+        QuickExample,
+        HeapExample,
+        MergeExample,} from '../../../components/CorrectnessProof/Example';
+import ProofHelp from "../../../components/CorrectnessProof/ProofHelp";
 
 
-const drawerWidth = 240;
+const drawerWidth = 170;
 const useStyles = makeStyles((theme) => ({
 
     appBar1: {
@@ -54,6 +54,27 @@ const useStyles = makeStyles((theme) => ({
           margin: theme.spacing(0),
         },
     },
+
+    cardSet:{
+        display: 'flex',    
+        width: 1020,
+        '& > *': {
+          margin: theme.spacing(3),
+        }
+      },
+      cardOne:{
+        marginTop: 80,
+        background: "#F0F0F0",
+        width: "35%",
+        height: 520
+      },
+      cardTwo:{
+        marginTop: 80,
+        background: "#F0F0F0",
+        width: "65%",
+        height: 520,
+        alignItems:"center",
+      },
 
     icon:{
         marginRight: theme.spacing(2),
@@ -89,6 +110,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     drawer: {
+        display:"relative",
         width: drawerWidth,   
         flexShrink: 0,
         height:620,
@@ -119,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#F8F8F8",    
         "&:hover": {backgroundColor:color},
     },
+    
     listItemText:{
         fontFamily:"Quicksand",
         fontWeight: "600",
@@ -132,20 +155,25 @@ const useStyles = makeStyles((theme) => ({
         fontFamily:"Quicksand",
         fontWeight: "600",
         fontSize: "20px"
-      }
+      },
 
+      helpButton:{
+          position:"absolute",
+        bottom:5,
+        left:5,
+      }
     
    
   }));
 
   function getSteps() {
     return [
-        'Bubble Prove' , 
-        'Selection Prove',
-        'Insertion Prove',
-        'Quick Prove',
-        'Merge Prove',
-        'Heap Prove'
+        'Correctness of Bubble Sort' , 
+        'Correctness of Selection Sort',
+        'Correctness of Insertion Sort',
+        'Correctness of Quick Sort',
+        'Correctness of Merge Sort',
+        'Correctness of Heap Sort'
     ];
   }
 
@@ -153,27 +181,27 @@ const useStyles = makeStyles((theme) => ({
       switch (activeStep) {
         case 0:
             return(
-                <Bubble />
+                <BubbleExample/>
             );
         case 1:
             return(
-                <Selection />
+                <SelectionExample/>
             );
         case 2:
             return(
-                <Insertion />
+                <InsertionExample/>
             );
         case 3:
             return(
-                <Quick />
+                <QuickExample/>
             );
         case 4:
             return(
-                <Merge />
+                <MergeExample/>
             );
         case 5:
             return(
-                <Heap />
+                <HeapExample/>
             );
         default:
             break;
@@ -183,6 +211,9 @@ const useStyles = makeStyles((theme) => ({
   
     export default function CorrectnessProve(props) {
     const classes = useStyles();
+
+    const{Implementation} = props;
+
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -250,7 +281,7 @@ const useStyles = makeStyles((theme) => ({
                         
                         <List>
                             <ListItem className = {classes.listItem}>             
-                            <ListItemText primary= 'Sorting Algorithm Prove' classes={{primary:classes.listItemTitle}}/>
+                            <ListItemText primary= 'Proof' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>                          
                             {['Bubble ' , 'Selection ', 'Insertion ', 'Quick ','Merge ','Heap ' ].map((text, index) => (
                             index === activeStep
@@ -264,9 +295,15 @@ const useStyles = makeStyles((theme) => ({
                             </ListItem> 
                             ))}
                         </List>
+                        
                    </div>
+                   <div className={classes.helpButton}>
+                        <ProofHelp/>
+                        </div>
                 </Drawer>
+                
                 {getStepContent(activeStep)}
+           
             </main>
 
 
