@@ -17,15 +17,18 @@ const BubbleExample = () => {
     const Code = Bubble;
     const title = '- Bubble Sort -';
     const algorithm = 'bubble';
+    const sort = BubbleSort;
+
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = BubbleSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
         file: BubbleFile,
     };
@@ -38,15 +41,18 @@ const SelectionExample = () => {
     const Code = Selection;
     const title = '- Selection Sort -';
     const algorithm = 'selection';
+    const sort = SelectionSort;
+
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = SelectionSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
     };
 
@@ -57,15 +63,18 @@ const InsertionExample = () => {
     const Code = Insertion;
     const title = '- Insertion Sort -';
     const algorithm = 'insertion';
+    const sort = InsertionSort;
+
     const arr = [4, 13, 11, 8, 5];
     const {trace, description, blockNums} = InsertionSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
     };
 
@@ -76,15 +85,18 @@ const QuickExample = () => {
     const Code = Quick;
     const title = '- Quick Sort -';
     const algorithm = 'quick';
+    const sort = QuickSort;
+
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = QuickSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
     };
 
@@ -95,15 +107,18 @@ const MergeExample = () => {
     const Code = Merge;
     const title = '- Merge Sort -';
     const algorithm = 'merge';
+    const sort = MergeSort;
+
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = MergeSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
     };
 
@@ -114,15 +129,18 @@ const HeapExample = () => {
     const Code = Heap;
     const title = '- Heap Sort -';
     const algorithm = 'heap';
+    const sort = HeapSort;
+
     const arr = [4, 8, 11, 13, 5];
     const {trace, description, blockNums} = HeapSort(arr);
     
     const props = {
         title,
         algorithm,
-        trace,
-        description,
-        blockNums,
+        sort,
+        // trace,
+        // description,
+        // blockNums,
         Code,
     };
 

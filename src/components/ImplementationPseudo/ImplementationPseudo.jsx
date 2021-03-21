@@ -15,6 +15,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import {color} from '../../scenes/mainPages/Procedure';
+import InputBar from '../InputBar/InputBar';
+import {random} from 'lodash';
 
 
 // a framer motion transition attributes
@@ -29,14 +31,27 @@ const spring = {
 export default function ImplementationPseudo(props){
     const { title,
             algorithm,
-            trace, 
-            description, 
-            blockNums, 
+            sort,
             Code, 
             file } = props;
 
+    // The user input
+    const [str, setStr] = useState("4, 8, 11, 13, 5");
+    // The array gained from processed user input
+    const [arr, setArr] = useState([4, 8, 11, 13, 5]);
+    // The bool value which represent whether user input is valid or not
+    const [isValid, setIsValid] = useState(true);
+    // The wrong message 
+    const [wrongMsg, setWrongMsg] = useState(" ");
+    // The bars trace
+    const [trace, setTrace] = useState(sort([4, 8, 11, 13, 5]).trace);
+    // The description trace
+    const [description, setDescription] = useState(sort([4, 8, 11, 13, 5]).description);
+    // The block numbers trace
+    const [blockNums, setBlockNums] = useState(sort([4, 8, 11, 13, 5]).blockNums);
+
     // The bars displayed to visulise the numbers
-    const [bars, setBars] = useState(trace[0]);
+    const [bars, setBars] = useState(sort([4, 8, 11, 13, 5]).trace[0]);
     // The speed of playing the animation
     const [playSpeed, setPlaySpeed] = useState(1);
     // The current step among traces
@@ -52,6 +67,83 @@ export default function ImplementationPseudo(props){
     // the State of previous step bnutton
     const [backwardDisabled, setBackwardDisabled] = useState(true);
 
+    // The maximum value of input number
+    const MAXNUMBER = 20;
+    // The minimun value of input number
+    const MINNUMBER = 1;
+    // The maximum length of input array
+    const MAXLENGTH = 8;
+
+    // store user input
+    const handleChange = (e) => {
+        setStr(e.target.value);
+        setIsValid(true);
+    };
+
+    // check the format of user input
+    const checkFormat = () => {
+        let s = str.replace(/\s+/g, "");
+        s = removeDot(s);
+        setStr(s);
+
+        // user only enter one number
+        if (s.match(/^[0-9]*$/)) {
+            setIsValid(false);
+            setWrongMsg("Please enter more than 1 number.");
+        }
+        // correct format 
+        else if (s.match(/^\d+((,|，)\d+)*$/)) {
+            const numString = s.split(/[，,]/);
+            const nums = numString.map(num => parseInt(num));
+            let outRange = false;
+            for (let i = 0; i < nums.length; i++) {
+                if (nums[i] > MAXNUMBER) {
+                    outRange = true;
+                    break;
+                } else if (nums[i] < MINNUMBER) {
+                    outRange = true;
+                    break;
+                }
+            }
+            // check if input numbers are valid
+            if (nums.length > MAXLENGTH && outRange) {
+                setIsValid(false);
+                setWrongMsg(
+                    "Please enter no more than 8 numbers that between 1-20."
+                );
+            } else if (nums.length > MAXLENGTH && !outRange) {
+                setIsValid(false);
+                setWrongMsg("Please enter no more than 8 numbers.");
+            } else if (nums.length <= MAXLENGTH && outRange) {
+                setIsValid(false);
+                setWrongMsg("Please enter numbers that between 1-20.");
+            } else {
+                setIsValid(true);
+                setWrongMsg(" ");
+                setArr(nums);
+            }
+        } else {
+            setIsValid(false);
+            setWrongMsg("Please follow the correct format."); 
+        }
+        return 0;
+    };
+
+    // to produce a random array
+    const shuffle = () => {
+        const length = random(3,MAXLENGTH-4);
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            // const element = array[i];
+            array.push(random(1,MAXNUMBER-5));
+        }
+        setIsValid(true);
+        setWrongMsg(" ");
+        setArr(array);
+        setStr(array.join(","));
+    }
+
+    // styles for this page
     const useStyles = makeStyles((theme) =>({
         root: {
             display: "flex",
@@ -83,7 +175,6 @@ export default function ImplementationPseudo(props){
             margin: 0,
             boxShadow: "0px 0px 2px 2px #88888833",
             borderRadius: "10px",
-            // marginTop: 32,
             marginBottom: "5px",
             marginRight: "15px",
             marginLeft: "15px",
@@ -98,14 +189,12 @@ export default function ImplementationPseudo(props){
             textAlign: "center",
             fontWeight: "600",
         },
-        
         cardOne:{
             marginTop: 80,
             width: "45%",
             height: 520,
             background: "#F0F0F0",        
         },
-
         cardTwo:{
             marginTop: 80,
             width: "55%",
@@ -129,10 +218,21 @@ export default function ImplementationPseudo(props){
         },
         slider:{
             marginLeft: 10
+        },
+        inputBar:{
+            marginLeft: -80,
+            marginTop: 30,
         }
     }));
 
     const classes = useStyles();
+    
+    // Update traces when user enter new array
+    useEffect(() => {
+        setTrace(sort(arr).trace);
+        setDescription(sort(arr).description);
+        setBlockNums(sort(arr).blockNums);
+    }, [arr]);
 
     // Update buttons' disable property when steps are changed
     useEffect(() => {
@@ -142,7 +242,6 @@ export default function ImplementationPseudo(props){
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -152,8 +251,11 @@ export default function ImplementationPseudo(props){
             pause();
             resume();
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playSpeed]);
+
+    useEffect(() => {
+        handleResetClick();
+    }, [trace]);
 
     // It is used to open the speed menu
     const handleClick = (event) => {
@@ -169,12 +271,12 @@ export default function ImplementationPseudo(props){
         setAnchorEl(null);
     };
 
+    // Control slider's change
     const handleSliderChange = (event, newValue) => {
         if (isPlaying) {
             pause();
         }
         console.log(newValue);
-
         const item = trace[newValue];
         setCurrentStep(newValue);
         setBars(item);
@@ -258,12 +360,14 @@ export default function ImplementationPseudo(props){
         }
     };
 
+    // Reset the animation progress
     const handleResetClick = () => {
         pause();
         setCurrentStep(0);
         setBars(trace[0]);
     };
 
+    // Functions for AnimationControl
     const animationControlProps = {
         handleResetClick,
         stepForward,
@@ -292,10 +396,21 @@ export default function ImplementationPseudo(props){
                     <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
                         Export Quick Guide
                     </Button>
-
                 </CardContent>
                 </Card>
-                <Card className = {classes.cardTwo}>             
+                <Card className = {classes.cardTwo}> 
+                <div className={classes.inputBar}>
+                <InputBar
+                    inputString={str}
+                    handleChange={handleChange}
+                    checkFormat={checkFormat}
+                    isValid={isValid}
+                    wrongMsg={wrongMsg}
+                    shuffle={shuffle}
+                    max={MAXNUMBER}
+                    barLength="270px"
+                />   
+                </div>         
                     <div className={classes.aniRoot}>
                     <div className={classes.bars}>
                     {bars.map((background) => (
@@ -341,11 +456,23 @@ export default function ImplementationPseudo(props){
                 />
                 </div>
                 <AnimationControl {...animationControlProps} />
-                    </div>
-                    
+                    </div>                
             </Card>
-            
-            
             </div>  
     );
 };
+
+// remove dot(s) of str's right 
+function removeDot(s) {
+    if (s == null) return "";
+    var dot = "，,";
+    var str = s;
+    if (dot.indexOf(str.charAt(str.length - 1)) !== -1) {
+        var i = str.length - 1;
+        while (i >= 0 && dot.indexOf(str.charAt(i)) !== -1) {
+            i--;
+        }
+        str = str.substring(0, i + 1);
+    }
+    return str;
+}

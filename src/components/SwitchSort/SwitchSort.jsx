@@ -93,8 +93,7 @@ export default function SwitchSort(props) {
         let array = [];
         for (let i = 0; i < length; i++) {
             // const element = array[i];
-            array
-            .push(random(1,MAXNUMBER-5));
+            array.push(random(1,MAXNUMBER-5));
         }
         setIsValid(true);
         setWrongMsg(" ");
@@ -115,7 +114,7 @@ export default function SwitchSort(props) {
     } else if (sort === "Heap") {
         trace = HeapSort(arr);
     } else if (sort === "Merge") {
-       trace = MergeSort(arr);
+        trace = MergeSort(arr);
     }
 
     return (
@@ -137,9 +136,6 @@ export default function SwitchSort(props) {
                 width: 90,
                 fontSize:"26px",
                 fontWeight:"500",
-                // transform: "rotate(90deg)",
-                // marginTop:"35px",
-                // marginLeft:"-55px",
                 }}>
                 {sort }
                 </div>
@@ -151,6 +147,8 @@ export default function SwitchSort(props) {
                 isValid={isValid}
                 wrongMsg={wrongMsg}
                 shuffle={shuffle}
+                max={MAXNUMBER}
+                barLength="500px"
             />
             </div>
             <SwitchAnimation {...trace} width={900} explainationBoxHeight={3}/>

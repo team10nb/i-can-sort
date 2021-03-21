@@ -40,46 +40,49 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const CssTextField = withStyles({
-    root: {
-        "& label.Mui-focused": {
-            color: "grey",
-        },
-        "& .MuiInput-underline:after": {
-            borderBottomColor: "green",
-        },
-        "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-                borderColor: "grey",
-                borderRadius: 12,
-            },
-            "&:hover fieldset": {
-                borderColor: "grey",
-            },
-            "&.Mui-focused fieldset": {
-                borderColor: "green",
-            },
-        },
-        width: "500px",
-    },
-})(TextField);
+
 
 export default function InputBar(props) {
     const {
-        defaultArr,
         isValid,
         wrongMsg,
         handleChange,
         checkFormat,
         shuffle,
-        inputString
+        inputString,
+        max,
+        barLength
     } = props;
 
     const classes = useStyles();
 
     const error = isValid ? false : true;
-    const label = isValid ? "Enter positive integers from 1 to 25" : "Invalid Input";
+    const label = isValid ? "Enter positive integers from 1 to " + max : "Invalid Input";
     const helper = isValid ? " " : wrongMsg;
+
+    const CssTextField = withStyles({
+        root: {
+            "& label.Mui-focused": {
+                color: "grey",
+            },
+            "& .MuiInput-underline:after": {
+                borderBottomColor: "green",
+            },
+            "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                    borderColor: "grey",
+                    borderRadius: 12,
+                },
+                "&:hover fieldset": {
+                    borderColor: "grey",
+                },
+                "&.Mui-focused fieldset": {
+                    borderColor: "green",
+                },
+            },
+            width: barLength,
+        },
+    })(TextField);
 
     return (
         <div className={classes.root}>
@@ -112,7 +115,6 @@ export default function InputBar(props) {
                 >
                     Shuffle
                 </Button>
-
             </div>
         </div>
     );
