@@ -221,14 +221,9 @@ export default function Terminable(props){
                         </motion.li>
                     ))}
                 </div>
-                {/* <div className = {classes.box}> */}
-                    {/* <ExplanationBox width={60} height={6}> */}
-                    <p className={classes.explanation}>
-                        {description[currentStep]}
-                    {/* </ExplanationBox> */}
-                    </p>
-                {/* </div> */}
-                
+                <p className={classes.explanation}>
+                    {description[currentStep]}
+                </p>
                 
                 <div className = {classes.slider}>
                 <AnimationSlider
