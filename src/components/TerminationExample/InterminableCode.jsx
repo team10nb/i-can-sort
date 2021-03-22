@@ -65,7 +65,7 @@ const Code = (props)=> {
 {`    swap(Arr[0], Arr[1])`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  end for`}
+{`  end while`}
         </pre>
     </div>
     
