@@ -19,7 +19,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 
 const useStyles = makeStyles((theme) => ({
     backdrop: {
-      zIndex: theme.zIndex.drawer + 1,
+      zIndex: theme.zIndex.drawer+1,
       color: "#212121",
       marginLeft:"-500px",
       marginTop:"-155px",
@@ -193,18 +193,20 @@ const useStyles = makeStyles((theme) => ({
               {activeStep === steps - 1 ? (
                 <div>
                   <div>
-                <CardActionArea  style={{ height:picHeight, marginBottom:"15px"}}>
-                  <img src={logoFinal} alt="logoFinal"  width= '587px' />
-                  <CardContent style={{marginBottom:contentMarginBottom, marginTop:contentMarginTop}}>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {contentFinal} 
-                    </Typography>             
-                  </CardContent>
-                </CardActionArea>    
-              </div>
-              <div className = {classes.button}>
-                 <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
-               </div>
+                    <CardActionArea  style={{ height:picHeight, marginBottom:"15px"}}>
+                      <img src={logoFinal} alt="logoFinal"  width= '587px' />
+                      <CardContent style={{marginBottom:contentMarginBottom, marginTop:contentMarginTop}}>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {contentFinal} 
+                        </Typography>             
+                      </CardContent>
+                    </CardActionArea>    
+                  </div>
+                  {steps === 1 ? (<div/>) : (
+                    <div className = {classes.button}>
+                      <IconButton  onClick={handleReset} style={{ backgroundColor: color, opacity:0.5, }} size='small'><RotateLeftIcon style={{ color: 'white', fontSize:'40px'}}/></IconButton>          
+                    </div>
+                  )}          
                 </div>              
               ) : (
                 <div>
