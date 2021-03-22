@@ -39,6 +39,7 @@ const StyledTableCell = withStyles((theme) => ({
     createData('a > b / a < b ', 'a is bigger than b / a is less than b'),
     createData('a && b', 'a AND b'),
     createData('a || b', 'a OR b'),
+    createData('Arr[X]','The Xth element of array. e.g.: Arr = [1,2,3] Arr[0] = 1')
     
   ];
   
@@ -102,13 +103,12 @@ export default function Expressions(props) {
         <TerminologyBackDrop message={message}/>
          <Card style={styles.root}>
             <CardContent>
-            <img src={bulb} height={30} width={30}/>
+            {/* <img src={bulb} height={30} width={30}/> */}
             <h1 style={styles.title}>- Expressions -</h1>
-            <br></br>
+            {/* <br></br> */}
             <div style={styles.div}>
-                Expressions are used to used to _______________. Here are some explanations of commen expressions:
+            In computer science, an <font style = {{fontWeight:'bold'}}>expression</font> is a syntactic entity in a programming language that may be evaluated to determine its value. Here are some explanations of commen expressions:
             </div>
-            <br></br>
             <br></br>
             <TableContainer component={Paper}>
                 <Table className={classes.table} aria-label="customized table">
