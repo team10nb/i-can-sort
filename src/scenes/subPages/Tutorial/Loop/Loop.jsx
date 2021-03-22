@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(2),
         },
         '& > *':{
-            marginTop: theme.spacing(4),
+            marginTop: theme.spacing(-2),
         },
     },
     buttonSet:{
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         },
         position:"relative",
         left:"245px",
-        top:"82px",
+        top:"34px",
     },
 }));
 
