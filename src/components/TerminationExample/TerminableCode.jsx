@@ -78,7 +78,7 @@ const Code = (props)=> {
         background:{
             backgroundColor: "#FEE5D4",
             borderRadius: 5,
-            marginTop: -6,
+            marginTop: -8,
             letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
@@ -86,7 +86,7 @@ const Code = (props)=> {
             paddingLeft:"5px",
         },
         noBackground:{
-            marginTop: -6,
+            marginTop: -8,
             letterSpacing: 0.5,
             fontFamily:"Space Mono",
             lineHeight:"22px",
