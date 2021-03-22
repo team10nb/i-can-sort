@@ -503,8 +503,8 @@ Output: The result of sorting Arr.`}
                 wordWrap="break-word"
                 className={
                     blockNum === 12
-                        ? classes.background
-                        : classes.noBackground
+                        ? classes.AssertBack
+                        : classes.AssertNoBack
                 }
             >
                 {` The pivot is at its sorted position `}
