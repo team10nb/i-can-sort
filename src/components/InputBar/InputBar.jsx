@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "0px",
         borderRadius: 10,
         "&:hover, &$focusVisible": { backgroundColor: "#52af77"},
-        marginLeft: "10px"
+        marginLeft: "10px",
     },
     buttonShuffle: {
         backgroundColor: "#97adac",
@@ -40,7 +40,28 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
+const CssTextField = withStyles({
+    root: {
+        "& label.Mui-focused": {
+            color: "grey",
+        },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "green",
+        },
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderColor: "grey",
+                borderRadius: 12,
+            },
+            "&:hover fieldset": {
+                borderColor: "grey",
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: "green",
+            },
+        },
+    },
+})(TextField);
 
 export default function InputBar(props) {
     const {
@@ -60,30 +81,6 @@ export default function InputBar(props) {
     const label = isValid ? "Enter positive integers from 1 to " + max : "Invalid Input";
     const helper = isValid ? " " : wrongMsg;
 
-    const CssTextField = withStyles({
-        root: {
-            "& label.Mui-focused": {
-                color: "grey",
-            },
-            "& .MuiInput-underline:after": {
-                borderBottomColor: "green",
-            },
-            "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                    borderColor: "grey",
-                    borderRadius: 12,
-                },
-                "&:hover fieldset": {
-                    borderColor: "grey",
-                },
-                "&.Mui-focused fieldset": {
-                    borderColor: "green",
-                },
-            },
-            width: barLength,
-        },
-    })(TextField);
-
     return (
         <div className={classes.root}>
             <div style={{width: "550px", display:"flex"}}>
@@ -98,6 +95,9 @@ export default function InputBar(props) {
                 value={inputString}
                 className={classes.text}
                 size='small'
+                style={{
+                    width: barLength,
+                }}
             />
                 <Button
                     variant='contained'

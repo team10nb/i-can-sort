@@ -220,7 +220,7 @@ export default function ImplementationPseudo(props){
             marginLeft: 10
         },
         inputBar:{
-            marginLeft: -80,
+            marginLeft: -75,
             marginTop: 30,
         }
     }));

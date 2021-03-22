@@ -24,6 +24,7 @@ Object {
             >
               <div
                 class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-52 makeStyles-text-48"
+                style="width: 500px;"
               >
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
@@ -823,6 +824,7 @@ Object {
           >
             <div
               class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-52 makeStyles-text-48"
+              style="width: 500px;"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
