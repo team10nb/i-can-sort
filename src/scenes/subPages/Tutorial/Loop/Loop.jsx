@@ -7,6 +7,7 @@ import TutorialSubPage from '../TutorialSubpage';
 import ForLoop from '../../../../components/LoopExample/ForLoop';
 import WhileLoop from '../../../../components/LoopExample/WhileLoop';
 import {LoopForHelp, LoopWhileHelp} from './LoopHelp';
+import BackDrop from '../../../../components/BackDrop/BackDrop';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -36,37 +37,41 @@ export default function TutorialLoop(props) {
 
     const data = {
         color: color,
-        // algorithm: "bubble",
-        // progress: progress,
-        history: props.history,      
-        // intro: intro,
-        // operate: operate,
+        history: props.history,  
         message: "For & While Loop",
-    }
+    };
+
+    const size = {
+        top: 55, 
+    };
 
     const classes = useStyles();
 
-
-
+    const message = <p><font style={{fontWeight:'bold'}}>For loop</font> and <font style={{fontWeight:'bold'}}>while loop</font> are two widely used <font style={{fontWeight:'bold'}}>control flow statements</font> in programming language.<br/>
+                    Here are two simple examples. Click <font style={{fontWeight:'bold'}}>question marks</font> to know more about them.</p>
+    
     return(
         <div>
             <TutorialSubPage {...data} />
+            <BackDrop 
+                message={message}
+                size={size}
+                btnColor={color}
+            />
             <div>
                 <div className = {classes.buttonSet}>
                     <LoopForHelp />
                     <LoopWhileHelp />
                 </div>
            
-            <div className = {classes.root}>
-                
-                <ForLoop/>
-                <WhileLoop/>
-
+            <div className = {classes.root}>                
+                <ForLoop />
+                <WhileLoop />
             </div>
-            </div>
-            
-            
+            </div>           
         </div>
     );
 }
+
+
 

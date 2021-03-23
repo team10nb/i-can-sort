@@ -15,7 +15,7 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import BackDrop from '../../../../components/CorrectnessExample/BackDrop';
+import BackDrop from '../../../../components/BackDrop/BackDrop';
 import '../../../../fonts/fonts.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -176,6 +176,12 @@ const props_terminateAndCorrect = {
 
 const message = <p>Suppose now we have <font style={{fontWeight:'bold'}}>three</font> different examples to implement an algorithm <font style={{fontWeight:'bold'}}>factorial(n)</font>, which is used to calculate the factorial of 1 to 20.</p>
 
+const size = {
+      left:240, 
+      top:45, 
+      bottom:45,
+};
+
 export default function Partial() {
     const classes = useStyles();
 
@@ -259,7 +265,11 @@ export default function Partial() {
 
     return( 
         <div>
-            <BackDrop message={message}/>
+            <BackDrop 
+                message={message} 
+                size={size}
+                btnColor={color}
+            />
             <div style={{paddingLeft:6, paddingTop:10}}>
             <Card style={{height: 280, width:770, backgroundColor:'#EFEFEF', paddingTop:6}}>
                 <div style={{paddingLeft: 20}}>

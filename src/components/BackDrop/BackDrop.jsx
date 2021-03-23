@@ -1,5 +1,4 @@
 import React from 'react';
-import { color } from "../../scenes/mainPages/Correctness"
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
@@ -13,41 +12,41 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const styles = {
-  root:{
-    left:240, 
-    top:45, 
-    bottom:45,
-  },
-  snackbar: {
-    borderRadius: 30,
-    justifyContent: 'left', 
-    height: 220, 
-    width: 480, 
-    backgroundColor:"white", 
-    color:"black", 
-    fontSize:18,
-    paddingLeft: 40,
-    paddingRight: 40,
-    paddingTop:0,
 
-  },
-  button:{
-    marginRight: 220,
-    marginTop:-40,
-    fontWeight: 600,
-    backgroundColor:color,
-    color:"white",
-    fontSize:15
-  }
-}
-const action = (
-  <Button style={styles.button}>
-    OK
-  </Button>
-);
 export default function BackDrop(props) {
+  const {message, size, btnColor} = props;
+  
   const classes = useStyles();
+
+  const styles = {
+    snackbar: {
+      borderRadius: 30,
+      justifyContent: 'left', 
+      height: 220, 
+      width: 480, 
+      backgroundColor:"white", 
+      color:"black", 
+      fontSize:18,
+      paddingLeft: 40,
+      paddingRight: 40,
+      paddingTop:0,
+  
+    },
+    button:{
+      marginRight: 220,
+      marginTop:-40,
+      fontWeight: 600,
+      backgroundColor: btnColor,
+      color:"white",
+      fontSize:15
+    }
+  }
+
+  const action = (
+    <Button style={styles.button}>
+      OK
+    </Button>
+  );
 
   const [open, setOpen] = React.useState(true);
 
@@ -55,11 +54,10 @@ export default function BackDrop(props) {
     setOpen(false);
   };
 
-  const {message} = props;
 
   return (
     <div>
-       <Backdrop style={styles.root} className={classes.backdrop} open={open} onClick={handleClose}>
+       <Backdrop style={size} className={classes.backdrop} open={open} onClick={handleClose}>
        <SnackbarContent
         style={styles.snackbar}
         message={message}
