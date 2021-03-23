@@ -13,7 +13,7 @@ export function LoopForHelp() {
         color:color,
         logoFinal:logo0,
         stepNumber:1,
-        picHeight:"350px",
+        picHeight:"400px",
         avatarMarginLeft:"9px",
         avatarMarginTop:"9px",
       }
@@ -29,7 +29,7 @@ export function LoopWhileHelp() {
         color:color,
         logoFinal:logo1,
         stepNumber:1,
-        picHeight:"350px",
+        picHeight:"400px",
         avatarMarginLeft:"9px",
         avatarMarginTop:"9px",
       }

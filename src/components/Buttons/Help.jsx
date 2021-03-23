@@ -21,7 +21,7 @@ import ExplanationFrame from '../ExplanationFrame/ExplanationFrame';
 
 
  
-  export  default function CHelp(props) {
+  export  default function Help(props) {
     const{logo0, logo1, logo2, color} = props;
 
     const data = {

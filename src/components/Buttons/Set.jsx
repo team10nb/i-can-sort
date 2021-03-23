@@ -139,7 +139,7 @@ import Typography from '@material-ui/core/Typography';
                 You can follow the link to visit our repository:
               </Typography>
               
-              <Link onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
+              <Link component="button" onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
           </Paper>
               
         </AccordionDetails>
