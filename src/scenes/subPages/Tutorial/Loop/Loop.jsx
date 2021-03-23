@@ -7,7 +7,7 @@ import TutorialSubPage from '../TutorialSubpage';
 import ForLoop from '../../../../components/LoopExample/ForLoop';
 import WhileLoop from '../../../../components/LoopExample/WhileLoop';
 import {LoopForHelp, LoopWhileHelp} from './LoopHelp';
-import BackDrop from '../../../../components/CorrectnessExample/BackDrop';
+import BackDrop from '../../../../components/BackDrop/BackDrop';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -37,13 +37,13 @@ export default function TutorialLoop(props) {
 
     const data = {
         color: color,
-        // algorithm: "bubble",
-        // progress: progress,
-        history: props.history,      
-        // intro: intro,
-        // operate: operate,
+        history: props.history,  
         message: "For & While Loop",
-    }
+    };
+
+    const size = {
+        top: 55, 
+    };
 
     const classes = useStyles();
 
@@ -53,30 +53,25 @@ export default function TutorialLoop(props) {
     return(
         <div>
             <TutorialSubPage {...data} />
-            <BackDrop message={message}/>
+            <BackDrop 
+                message={message}
+                size={size}
+                btnColor={color}
+            />
             <div>
                 <div className = {classes.buttonSet}>
                     <LoopForHelp />
                     <LoopWhileHelp />
                 </div>
            
-            <div className = {classes.root}>
-                
+            <div className = {classes.root}>                
                 <ForLoop />
                 <WhileLoop />
-
             </div>
-            </div>
-            
-            
+            </div>           
         </div>
     );
 }
 
 
 
-// root:{
-//     // left:240, 
-//     top:55, 
-//     // bottom:45,
-//   },
