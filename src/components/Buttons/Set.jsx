@@ -34,6 +34,8 @@ import Typography from '@material-ui/core/Typography';
       textDecoration: "none", 
       color:"#4ba6ff",
       fontSize: "2em",
+      backgroundColor:"white",
+      borderWidth:"0px",
       "&:hover": {
         fontWeight:400,
         color:"#1564b2",
