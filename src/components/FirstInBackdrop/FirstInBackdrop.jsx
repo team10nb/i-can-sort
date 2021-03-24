@@ -45,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
     "&:hover, &$focusVisible": {
       transform: "scale(1.05, 1.05)",
       // boxShadow: "0 0 10 5 #888888,",
+    },"&:active, &$focusVisible": {
+      transform: "scale(1, 1 )",
     },
     transition: "0.5s"
   },
@@ -56,6 +58,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius:"30px", 
     "&:hover, &$focusVisible": {
       transform: "scale(1.05, 1.05)",
+    },"&:active, &$focusVisible": {
+      transform: "scale(1, 1 )",
     },
     transition: "0.5s"
   },
