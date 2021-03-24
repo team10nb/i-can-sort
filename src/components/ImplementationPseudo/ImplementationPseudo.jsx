@@ -109,14 +109,14 @@ export default function ImplementationPseudo(props){
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than 8 numbers that between 1-20."
+                    "Please enter no more than "+MAXLENGTH+" numbers that between "+MINNUMBER+"-"+MAXNUMBER+"."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than 8 numbers.");
+                setWrongMsg("Please enter no more than "+MAXLENGTH+" numbers.");
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between 1-20.");
+                setWrongMsg("Please enter numbers that between "+MINNUMBER+"-"+MAXNUMBER+".");
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
@@ -297,7 +297,7 @@ export default function ImplementationPseudo(props){
         const subTrace = trace.slice(1);
         const timeoutIds = [];
         // a time interval unit
-        const timer = 500 / playSpeed;
+        const timer = 1000 / playSpeed;
 
         // Set a timeout for each item in the trace
         subTrace.forEach((item, i) => {

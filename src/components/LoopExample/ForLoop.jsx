@@ -40,7 +40,7 @@ const Code = (props)=> {
     const forCode = 
     <div>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Algorithm: WhileLoop()`}
+{`Algorithm: ForLoop()`}
         </pre>
         <pre className={classes.noBackground}>
 {`  i = 0`}
@@ -55,7 +55,7 @@ const Code = (props)=> {
 {`  for i = 0 to 3 do`}
         </pre>
         <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`     a = a + b;`}
+{`     a = a + b`}
         </pre>
         <pre className={blockNum===4 ? classes.background : classes.noBackground}>
 {`  end for`}

@@ -23,24 +23,30 @@ const useStyles = makeStyles((theme) => ({
     
     width: 650,
     height: 450,
-    backgroundColor: "white",
-    opacity:0.8,
+    // backgroundColor: "white",
+    backgroundColor:"rgba(255,255,255,0.8)",
     borderRadius:"20px",
   },
   buttonBase:{
     display: "flex",
         '& > * + *': {     
-            marginLeft: theme.spacing(8),
+            marginLeft: theme.spacing(8   ),
         },
         justifyContent: "center",
         
   },
   cardOne:{
+    opacity:1,
     width: 230,
     height: 230,
     backgroundColor:"#4caf50",
     color:"white",
     borderRadius:"30px", 
+    "&:hover, &$focusVisible": {
+      transform: "scale(1.05, 1.05)",
+      // boxShadow: "0 0 10 5 #888888,",
+    },
+    transition: "0.5s"
   },
   cardTwo:{
     width: 230,
@@ -48,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:"#1565c0",
     color:"white",
     borderRadius:"30px", 
+    "&:hover, &$focusVisible": {
+      transform: "scale(1.05, 1.05)",
+    },
+    transition: "0.5s"
   },
   title:{
     marginLeft:"245px",

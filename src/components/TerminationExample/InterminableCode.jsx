@@ -79,8 +79,6 @@ export default function Interminable(props){
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
-    // The speed of playing the animation
-    const [playSpeed, setPlaySpeed] = useState(1);
     // The current step among traces
     const [currentStep, setCurrentStep] = useState(0);
     // It is used to clean timeouts to pause
@@ -171,7 +169,7 @@ export default function Interminable(props){
         const subTrace = trace.slice(0);
         const timeoutIds = [];
         // a time interval unit
-        const timer = 500 / playSpeed;
+        const timer = 1000;
 
         let item = [];
         let step = currentStep;
