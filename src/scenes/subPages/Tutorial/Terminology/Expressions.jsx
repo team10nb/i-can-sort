@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import TerminologyBackDrop from '../../../../components/TutorialTerminology/TerminologyBackDrop';
 import CardContent from '@material-ui/core/CardContent';
 import bulb from "../../../../Resource/bulb.png";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
@@ -11,6 +10,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import BackDrop from '../../../../components/BackDrop/BackDrop';
+import {color} from '../../../mainPages/Tutorial';
+
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -96,11 +98,22 @@ export default function Expressions(props) {
     const classes = useStyles();
     const message = 
     <p>
-        This module will mainly introduce you basic knowlege of <font style={{fontWeight:'bold'}}>pesudocodes</font>. You will get to learn syntax of Structured Basic style pseudocode. Hope you Enjoy!
+        This module will mainly introduce you basic knowlege of <font style={{fontWeight:'bold'}}>pseudocode</font>. You will get to learn syntax of Structured Basic style pseudocode. Hope you Enjoy!
     </p>
+
+    const size = {
+      left:240, 
+      top:45, 
+      bottom:45,
+    }
+  
     return(
         <div>
-        <TerminologyBackDrop message={message}/>
+          <BackDrop 
+            message={message}
+            size={size}
+            btnColor={color}
+          />
          <Card style={styles.root}>
             <CardContent>
             {/* <img src={bulb} height={30} width={30}/> */}
