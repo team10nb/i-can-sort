@@ -24,6 +24,7 @@ export const SwitchAnimation = (props) => {
     const { trace, description, width, explanationBoxHeight } = props;
 
     console.log(description);
+    console.log(trace);
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
