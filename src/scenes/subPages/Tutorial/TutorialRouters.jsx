@@ -1,7 +1,8 @@
 //Register routes for procedure algorithms
 import TutorialSwap from './Swap/Swap';
 import TutorialLoop from './Loop/Loop';
-import TutorialTerminology from './Terminology/Terminology';
+// import TutorialTerminology from './Terminology/Terminology';
+import TutorialTerminology from './TutorialTerminology';
 
 
 const TutorialRouters = [
