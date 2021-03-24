@@ -13,7 +13,7 @@ const arr = [3, 12, 7, 5, 10, 8];
 const trace = HeapSort(arr).trace;
 
 const description = [
-    "Unsorted Array", 
+    "Heap sort is one algorithm used to sort a sequence of numbers, and rely heavily on the use of heap data structure", 
     "A max heap is built, heap size is: 6", 
     "Top element 12 is the largest in the heap", 
     "Take 12 out of the heap", 
