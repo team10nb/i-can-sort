@@ -30,8 +30,8 @@ export default function ExplanationBox(props) {
         root: {
             display: "grid",
             "& > *": {
-                width: theme.spacing(width*1),
-                height: theme.spacing(height*1),
+                width: 500,
+                height: 30,
                 border: "3px solid white",
             },
             justifyContent: "center",

@@ -5,6 +5,7 @@ import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAn
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import {HeapExample} from '../../../../components/ImplementationPseudo/Example';
+import HeapIntro from '../../../../components/Introduction/HeapSort';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
@@ -20,7 +21,7 @@ Heap sort divides its input into a sorted and an unsorted region, and it iterati
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>,
+    animation: <HeapIntro/>,
 }
 
 const operate = <SwitchSort sort={"Heap"}/>;

@@ -401,7 +401,5 @@ const description = ["Bubble sort is one algorithm used to sort a sequence of nu
 export default function IntroBubble() {
     const props = { trace: trace, description: description };
 
-    
     return <SwitchAnimation {...props} width={490} explanationBoxHeight={6}/>;
-
 }

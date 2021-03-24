@@ -5,6 +5,7 @@ import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAn
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import MergeSort from '../../../../components/SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 import {MergeExample} from '../../../../components/ImplementationPseudo/Example';
+import MergeIntro from '../../../../components/Introduction/MergeSort';
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = MergeSort(arr);
@@ -19,7 +20,7 @@ const introMessage =
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={500}/>,
+    animation: <MergeIntro/>,
 }
 
 const operate = <SwitchSort sort={"Merge"}/>;

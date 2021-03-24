@@ -23,6 +23,8 @@ const spring = {
 export const SwitchAnimation = (props) => {
     const { trace, description, width, explanationBoxHeight } = props;
 
+    console.log(description);
+
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
     // The speed of playing the animation
