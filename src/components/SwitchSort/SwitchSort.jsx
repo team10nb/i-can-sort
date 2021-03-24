@@ -67,14 +67,14 @@ export default function SwitchSort(props) {
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than 15 numbers that between 1-25."
+                    "Please enter no more than "+MAXLENGTH+" numbers that between "+MINNUMBER+"-"+MAXNUMBER+"."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than 15 numbers.");
+                setWrongMsg("Please enter no more than "+MAXLENGTH+" numbers.");
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between 1-25.");
+                setWrongMsg("Please enter numbers that between "+MINNUMBER+"-"+MAXNUMBER+".");
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
