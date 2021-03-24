@@ -100,7 +100,7 @@ const Bubble = (props) => {
                     blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Arr[j] is the largest among the first to j th
+                &nbsp;Arr[j] is the largest among Arr[0] to Arr[j]
             </pre>
             <pre
                 className={
@@ -128,7 +128,7 @@ const Bubble = (props) => {
                     blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Arr[j+1] is the largest among the first to j+1 th
+                &nbsp;Arr[j+1] is the largest among Arr[0] to Arr[j+1]
             </pre>
             <pre
                 className={
@@ -142,7 +142,7 @@ const Bubble = (props) => {
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Arr[i] is the largest among first to Arr[j+1] <br/>
+                &nbsp;Arr[i] is the largest value among Arr[0] to Arr[i] <br/>
                 &nbsp;Arr[i] to the end are sorted
             </pre>
             <pre
@@ -305,7 +305,7 @@ const Insertion = (props) => {
                     blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Elements before i th are sorted
+                &nbsp;Elements before Arr[i] are sorted
             </pre>
             <pre
                 className={
@@ -332,7 +332,7 @@ const Insertion = (props) => {
                     blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;current is smaller than the preIndex elements
+                &nbsp;Current is smaller than the preIndex elements
             </pre>
             <pre
                 className={
@@ -367,8 +367,7 @@ const Insertion = (props) => {
                     blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;current and elements before current, <br/>
-                &nbsp;they are all sorted 
+                &nbsp;Current and elements before current are all sorted 
             </pre>
 
             <pre
@@ -383,8 +382,7 @@ const Insertion = (props) => {
                     blockNum === 11 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Elements first to last are all sorted <br/>
-                &nbsp;array is all sorted 
+                &nbsp;From the first to the end of the array are sorted <br/>
             </pre>
         </div>
     );
@@ -429,6 +427,14 @@ Output: The result of sorting Arr.`}
             >
                 {`  swap(Arr[pivot], Arr[a])`}
             </pre>
+            {/* assertion */}
+            <pre
+                className={
+                    blockNum === 3 ? classes.AssertBack: classes.AssertNoBack
+                }
+            >
+                {`  Pivot is the beginning of the partition`}
+            </pre>
             <pre
                 className={
                     blockNum === 4 ? classes.background : classes.noBackground
@@ -470,7 +476,7 @@ Output: The result of sorting Arr.`}
                     blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;The element[i] would be swapped with pivot
+                &nbsp;&nbsp;Arr[i] would be swapped to the left side
             </pre>
             
             <pre
@@ -573,7 +579,7 @@ const Heap = (props) => {
                     blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
-                {`  swap(0, i)`}
+                {`  swap(Arr[0], Arr[i])`}
             </pre>
             {/* Assertion */}
             <pre
@@ -581,7 +587,7 @@ const Heap = (props) => {
                     blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                {`  max element is at the end of array`}
+                {`  Elements after i th are sorted if exist`}
             </pre>
             <pre
                 className={
@@ -644,7 +650,7 @@ const Merge = (props) => {
                     blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;leftIndex is less than rightIndex
+                &nbsp;&nbsp;LeftIndex is less than rightIndex
             </pre>
             <pre
                 className={
@@ -659,7 +665,7 @@ const Merge = (props) => {
                     blockNum === 4 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;leftIndex to rightIndex of array is splited into  <br/>&nbsp;&nbsp;two parts
+                &nbsp;&nbsp;LeftIndex to rightIndex of array is splited into  <br/>&nbsp;&nbsp;two parts
             </pre>
             <pre
                 className={
@@ -674,7 +680,7 @@ const Merge = (props) => {
                     blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;leftIndex to midIndex of the array (left part) <br/>&nbsp;&nbsp;are sorted
+                &nbsp;&nbsp;LeftIndex to midIndex of the array (left part) <br/>&nbsp;&nbsp;are sorted
             </pre>
             <pre
                 className={
@@ -689,7 +695,7 @@ const Merge = (props) => {
                     blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;midIndex to rightIndex of the array (right part) <br/>&nbsp;&nbsp;are sorted
+                &nbsp;&nbsp;MidIndex to rightIndex of the array (right part) <br/>&nbsp;&nbsp;are sorted
             </pre>
             <pre
                 className={
@@ -704,7 +710,7 @@ const Merge = (props) => {
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;left part and right part are merged into sorted<br/>&nbsp;&nbsp;leftIndex to rightIndex of array are sorted
+                &nbsp;&nbsp;Left part and right part are merged into sorted<br/>&nbsp;&nbsp;leftIndex to rightIndex of array are sorted
             </pre>
             <pre
                 className={
@@ -719,7 +725,7 @@ const Merge = (props) => {
                     blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;start to end of array are sorted, merge sort finished
+                &nbsp;&nbsp;Start to end of array are sorted, merge sort finished
             </pre>
             <pre
                 className={
