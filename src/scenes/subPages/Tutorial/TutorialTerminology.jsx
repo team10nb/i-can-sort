@@ -16,6 +16,7 @@ import {color} from '../../mainPages/Tutorial';
 import Expressions from './Terminology/Expressions.jsx';
 import IfTutorial from './Terminology/ControlFlow.jsx';
 import Method from './Terminology/MethodCall.jsx';
+import ReturnValue from './Terminology/ReturnValue.jsx';
 
 
 const drawerWidth = 240;
@@ -151,6 +152,10 @@ const useStyles = makeStyles((theme) => ({
         case 2:
             return(
                 <Method />
+            );  
+        case 3:
+            return(
+                <ReturnValue />
             );     
         default:
             break;
@@ -215,7 +220,7 @@ const useStyles = makeStyles((theme) => ({
                 classes={{
                 paper: classes.drawerPaper,
                 }}
-                {...finishPage(1)}
+                {...finishPage(3)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>
@@ -228,7 +233,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>             
                             <ListItemText primary= 'Terminology' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>
-                            {['Expressions','Control Flow','Method Call', 'Return Value'].map((text, index) => (
+                            {['Expressions','IF-THEN-ELSE','Method', 'Return Value'].map((text, index) => (
                             index === activeStep
                                 ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>

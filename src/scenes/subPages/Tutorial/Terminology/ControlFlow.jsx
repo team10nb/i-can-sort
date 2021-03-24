@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import TerminologyBackDrop from '../../../../components/TutorialTerminology/TerminologyBackDrop';
 import CardContent from '@material-ui/core/CardContent';
 
 
@@ -15,7 +14,7 @@ export default function Expressions(props) {
             backgroundColor:"#EFEFEF", 
             height:"500px",
             width:"750px",
-            marginLeft:"22px",
+            marginLeft:"20px",
             marginRight:"20px",
 
         },
