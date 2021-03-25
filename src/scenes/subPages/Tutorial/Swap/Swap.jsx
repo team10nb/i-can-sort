@@ -4,23 +4,18 @@ import TutorialSubPage from "../TutorialSubpage";
 import SwapTutorial from "../../../../components/SwapTutorial/SwapTutorial";
 
 export default function TutorialSwap(props) {
-    // const progress = localStorage.getItem("bubble") ? JSON.parse(localStorage.getItem("bubble")) : [false, false, false];
+
+    localStorage.setItem("tutorialSwap", JSON.stringify(100));
 
     const data = {
         color: color,
-        // algorithm: "bubble",
-        // progress: progress,
         history: props.history,
-        // intro: intro,
-        // operate: operate,
         message: "Swap a & b"
     };
 
     const SwapAnimation = () => {
-        // const arr = [4, 6];
-        const blockNums = [1, 2, 3, 4, 5, 6];
 
-        // const {trace, description} = BubbleSort(arr);
+        const blockNums = [1, 2, 3, 4, 5, 6];
 
         const trace = [
             [

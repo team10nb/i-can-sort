@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TutorialLoop(props) {
 
-    // const progress = localStorage.getItem("bubble") ? JSON.parse(localStorage.getItem("bubble")) : [false, false, false];
+    localStorage.setItem("tutorialLoop", JSON.stringify(100));
 
     const data = {
         color: color,
