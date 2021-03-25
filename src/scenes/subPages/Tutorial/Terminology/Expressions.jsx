@@ -78,9 +78,12 @@ export default function Expressions(props) {
             fontWeight: "bold",
         },
         div:{
+            paddingLeft:"35px",
             fontSize: 15,
             lineHeight: '2em',
             fontWeight: "400",
+            letterSpacing:"1.5px",
+            lineHeight:"25px",
         },
         card1:{
             backgroundColor:"#EFEFEF", 
@@ -120,10 +123,10 @@ export default function Expressions(props) {
          <Card style={styles.root}>
             <CardContent>
             {/* <img src={bulb} height={30} width={30}/> */}
-            <h1 style={styles.title}>- Expressions -</h1>
+            <h1 style={styles.title}> Expressions </h1>
             {/* <br></br> */}
             <div style={styles.div}>
-            In computer science, an <font style = {{fontWeight:'bold'}}>expression</font> is a syntactic entity in a programming language that may be evaluated to determine its value. Here are some explanations of commen expressions:
+            In computer science, an <font style = {{fontWeight:'bold'}}>expression</font> is a syntactic entity in a programming language that may be evaluated to determine its value. <br/>Here are some explanations of commen expressions:
             </div>
             <br></br>
             <TableContainer component={Paper}>

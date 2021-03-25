@@ -39,6 +39,7 @@ import Typography from '@material-ui/core/Typography';
       "&:hover": {
         fontWeight:400,
         color:"#1564b2",
+        cursor: "pointer",
         // textDecoration: "underline",
       },
     },
