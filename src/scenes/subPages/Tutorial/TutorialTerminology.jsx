@@ -17,7 +17,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Tutorial';
 import Expressions from './Terminology/Expressions.jsx';
-import IfTutorial from './Terminology/ControlFlow.jsx';
+import IfThenElse from './Terminology/ControlFlow.jsx';
 import Method from './Terminology/MethodCall.jsx';
 import ReturnValue from './Terminology/ReturnValue.jsx';
 
@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
   function getSteps() {
     return [
             'Expressions',
-            'Control Flow',
+            'IF-THEN-ELSE',
             'Method',
             'Return Value',
     ];
@@ -151,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
             );
         case 1:
             return(
-                <IfTutorial />
+                <IfThenElse />
             );    
         case 2:
             return(
