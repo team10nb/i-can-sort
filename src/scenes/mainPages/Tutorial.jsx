@@ -110,19 +110,19 @@ export default function TutorialMainPage() {
     const images = [
         {
             static: img_swap,
-            gif: "catch.gif",
+            gif: "swap.gif",
             title: "Swap",
             width: "20%",
         },
         {
             static: img_loop,
-            gif: "catch.gif",
+            gif: "loop.gif",
             title: "Loop",
             width: "20%",
         },
         {
             static: img_terminology,
-            gif: "catch.gif",
+            gif: "terminology.gif",
             title: "Terminology",
             width: "20%",
         },

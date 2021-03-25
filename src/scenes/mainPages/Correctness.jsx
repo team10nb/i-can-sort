@@ -100,13 +100,13 @@ export default function CorrectnessMainPage(props) {
     const images = [
         {
             static: img_tutorial,
-            gif: "catch.gif",
+            gif: "tutorial.gif",
             title: "Tutorial",
             width: "20%",
         },
         {
             static: img_proof,
-            gif: "catch.gif",
+            gif: "proof.gif",
             title: "Proof",
             width: "20%",
         },
