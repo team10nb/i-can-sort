@@ -139,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
             'Expressions',
             'Control Flow',
             'Method',
+            'Return Value',
     ];
   }
 

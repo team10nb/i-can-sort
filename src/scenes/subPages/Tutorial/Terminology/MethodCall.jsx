@@ -29,18 +29,31 @@ export default function Method(props) {
         subtitle:{
             fontSize: 15,
             fontWeight: "bold",
+            marginLeft: '20px',
         },
         div:{
-            fontSize: 15,
+            fontSize: 14,
             lineHeight: '2em',
             fontWeight: "400",
+            marginLeft: '20px',
         },   
         sample:{
-            marginLeft:"240px",
-            textAlign:'left',
-            fontSize: 15,
+            fontSize: 12,
             lineHeight: '2em',
             fontWeight: "400",
+        },
+        sample2:{
+            marginLeft:"90px",
+            fontSize: 12,
+            lineHeight: '2em',
+            fontWeight: "400",
+        },
+        ExampleCard:{
+            paddingLeft:"15px",
+            paddingTop:"0px",
+            marginLeft:"210px",
+            width:'300px',
+            backgroundColor:"#FFFFFF", 
         },
     } 
  
@@ -48,16 +61,25 @@ export default function Method(props) {
         <div>
           <Card style={styles.root}>
             <CardContent>
-            <h1 style={styles.title}>- Method -</h1>
+            <h1 style={styles.title}>Method</h1>
             <div style={styles.subtitle}>
             Method Declaration
             </div>
             <br></br>
             <div style={styles.div}>Standard Pseudocode should start with a <font style={{fontWeight:'bold'}}>method declaration</font> to explain the name, input and output of the Algorithm. See the sample below:</div>
             <br></br>
-            <div style={styles.sample}>Algorithm: algorithm_name<br></br>Input: [explanation of input]<br></br>Output: [explanation of output]</div>
+            <Card style={styles.ExampleCard}>
+                <CardContent>
+                    <div style={styles.sample}>
+                        Algorithm: algorithm_name<br></br>Input: [explanation of input]<br></br>Output: [explanation of output]
+                    </div>
+                </CardContent>
+            </Card>
+           
+            <br></br>
             <br></br>
             <Divider variant="middle" />
+            <br></br>
             <br></br>
             <div style={styles.subtitle}>
             Method Call
@@ -67,7 +89,11 @@ export default function Method(props) {
                A <font style={{fontWeight:'bold'}}>Method Call</font> is required While using other methods in Pseudocode. Commen syntax of a method call is Algorithm method (arg [, arg…]). See example below:
             </div>
             <br></br>
-            <div style={styles.sample}>swap(a,b)</div>
+            <Card style={styles.ExampleCard}>
+                <CardContent>
+                <div style={styles.sample2}>swap(a,b)</div>
+                </CardContent>
+            </Card>
             </CardContent>
          </Card>
         </div>
