@@ -14,7 +14,7 @@ let props = SelectionSort(arr);
 const introMessage = 
 <div>
 <h1>Selection sort</h1>
-<p style={{textAlign:"left", fontSize:16}}>
+<p style={{textAlign:"left", fontSize:18, letterSpacing:0.5}}>
 Selection sort divides the input list into two parts: a sorted sublist of items which is built up from left to right at the left of the list and a sublist of the remaining unsorted items. 
 The algorithm proceeds by finding the smallest/largest element in the unsorted sublist, swapping it with the leftmost unsorted element, and moving the sublist boundaries one element to the right.
 </p>

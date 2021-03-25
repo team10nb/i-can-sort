@@ -12,7 +12,7 @@ let props = HeapSort(arr);
 
 const introMessage = <div>
 <h1>Heap sort</h1>
-<p style={{textAlign:"left", fontSize:17}}>
+<p style={{textAlign:"left", fontSize:19, letterSpacing:0.5}}>
 Heap sort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element from it and inserting it into the sorted region. Heap sort maintains the unsorted region in a heap data structure to quickly find the largest element in each step. 
 </p>
 </div>
