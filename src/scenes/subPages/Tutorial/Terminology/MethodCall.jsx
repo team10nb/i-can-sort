@@ -19,8 +19,7 @@ export default function Method(props) {
             backgroundColor:"#EFEFEF", 
             height:"500px",
             width:"750px",
-            marginLeft:"22px",
-            marginRight:"20px",
+            marginLeft:"15px",
 
         },
         title:{

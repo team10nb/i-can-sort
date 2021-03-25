@@ -17,8 +17,7 @@ export default function Expressions(props) {
             backgroundColor:"#EFEFEF", 
             height:"500px",
             width:"750px",
-            marginLeft:"20px",
-            marginRight:"20px",
+            marginLeft:"15px",
 
         },
         title:{
