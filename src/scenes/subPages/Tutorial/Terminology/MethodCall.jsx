@@ -80,7 +80,6 @@ export default function Method(props) {
             <br></br>
             <Divider variant="middle" />
             <br></br>
-            <br></br>
             <div style={styles.subtitle}>
             Method Call
             </div>
