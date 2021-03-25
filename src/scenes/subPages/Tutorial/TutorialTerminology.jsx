@@ -139,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
             'Expressions',
             'Control Flow',
             'Method',
+            'Return Value'
     ];
   }
 
@@ -175,13 +176,13 @@ const useStyles = makeStyles((theme) => ({
 
     const step = getSteps();
 
-    const progress = localStorage.getItem("Terminology")
-        ? JSON.parse(localStorage.getItem("Terminology"))
-        : [false, false, false, false, false];
+    const progress = localStorage.getItem("tutorialTerms")
+        ? JSON.parse(localStorage.getItem("tutorialTerms"))
+        : [false, false, false, false];
 
     const finishPage = (page) => {
         progress[page] = true;
-        localStorage.setItem("Terminology", JSON.stringify(progress));
+        localStorage.setItem("tutorialTerms", JSON.stringify(progress));
     }
 
     const handleNext = () => {
@@ -223,7 +224,7 @@ const useStyles = makeStyles((theme) => ({
                 classes={{
                 paper: classes.drawerPaper,
                 }}
-                {...finishPage(3)}
+                {...finishPage(0)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>

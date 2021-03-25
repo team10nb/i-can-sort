@@ -8,8 +8,6 @@ import TutorialSubPage from '../TutorialSubpage';
 
 export default function TutorialTerminology(props) {
 
-    // const progress = localStorage.getItem("bubble") ? JSON.parse(localStorage.getItem("bubble")) : [false, false, false];
-
     const data = {
         color: color,
         // algorithm: "bubble",
