@@ -263,7 +263,7 @@ const trace = [
     ]
 ]
 
-const description = ["Selection sort is one algorithm used to sort a sequence of numbers", 
+const description = ["Selection sort is an algorithm used to sort a sequence of numbers", 
                      "It will find the smallest element among unsorted elements, then put it to its right place",
                      "The present smallest element is marked red. First, suppose 3 is the minimum", 
                      "Compare 3 and 12, 3 is still the minimum", 

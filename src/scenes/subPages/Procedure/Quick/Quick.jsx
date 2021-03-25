@@ -9,6 +9,7 @@ import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAn
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import {QuickExample} from '../../../../components/ImplementationPseudo/Example';
+import QuickIntro from '../../../../components/Introduction/QuickSort';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
@@ -23,7 +24,7 @@ Quick sort works by selecting a 'pivot' element from the array and partitioning 
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>,
+    animation: <QuickIntro/>,
 }
 
 const operate = <SwitchSort sort={"Quick"}/>;
