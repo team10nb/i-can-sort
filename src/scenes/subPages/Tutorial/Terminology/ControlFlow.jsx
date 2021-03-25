@@ -5,9 +5,9 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 
-export default function Expressions(props) {
-    const styles = {
-        root: {
+export default function IfThenElse(props) {
+    const styles ={
+        root:{
             display: "flex",
             "& > *": {
                 marginRight: 10,
