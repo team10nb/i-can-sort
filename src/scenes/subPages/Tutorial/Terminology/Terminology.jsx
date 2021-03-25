@@ -1,3 +1,6 @@
+/*
+    Author: Yani Huang
+*/
 import React from 'react';
 import {color} from '../../../mainPages/Tutorial';
 import TutorialSubPage from '../TutorialSubpage';

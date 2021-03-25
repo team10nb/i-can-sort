@@ -1,3 +1,6 @@
+/*
+    Author: Yani Huang
+*/
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
