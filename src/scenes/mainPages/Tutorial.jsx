@@ -4,8 +4,8 @@
 // The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu
 import React from "react";
 import { Link } from "react-router-dom";
-import Set from "../../components/Buttons/Set";
-import Help from "../../components/Buttons/Help";
+import Set from "../../components/SetAndHelp/Set";
+import Help from "../../components/SetAndHelp/Help";
 import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
