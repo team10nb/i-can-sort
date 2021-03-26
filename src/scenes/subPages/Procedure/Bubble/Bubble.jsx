@@ -3,7 +3,7 @@ import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import BubbleIntro from '../../../../components/Introduction/BubbleSort';
-import file from '../../../../Resource/Bubble Sort.pdf';
+import file from '../../../../Resource/bubble.pdf';
 import {BubbleExample} from '../../../../components/ImplementationPseudo/Example';
 
 const introMessage =

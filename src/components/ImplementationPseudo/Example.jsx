@@ -9,7 +9,7 @@ import SelectionSort from '../SwitchAnimation/SortingAlgorithms/SelectionSort/Se
 import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
-import BubbleFile from '../../Resource/Bubble Sort.pdf';
+import BubbleFile from '../../Resource/bubble.pdf';
 import MergeSort from '../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 
 
@@ -30,7 +30,7 @@ const BubbleExample = () => {
         // description,
         // blockNums,
         Code,
-        file: BubbleFile,
+        // file: BubbleFile,
     };
 
     return <ImplementationPseudo {...props}/>
