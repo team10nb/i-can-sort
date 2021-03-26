@@ -1,9 +1,9 @@
 import React from "react";
 import { color } from "../../../mainPages/Tutorial";
 import TutorialSubPage from "../TutorialSubpage";
-import SwapTutorial from "../../../../components/SwapTutorial/SwapTutorial";
+import TutorialSwap from "../../../../components/TutorialSwap/TutorialSwap";
 
-export default function TutorialSwap(props) {
+export default function Swap(props) {
 
     localStorage.setItem("tutorialSwap", JSON.stringify(100));
 
@@ -245,7 +245,7 @@ export default function TutorialSwap(props) {
             table: table,
         };
 
-        return <SwapTutorial {...props} />;
+        return <TutorialSwap {...props} />;
     };
 
     return (

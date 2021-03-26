@@ -30,7 +30,7 @@ const BubbleExample = () => {
         // description,
         // blockNums,
         Code,
-        // file: BubbleFile,
+        file: BubbleFile,
     };
 
     return <ImplementationPseudo {...props}/>
