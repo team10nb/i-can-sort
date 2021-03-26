@@ -8,17 +8,17 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import FirstInBackdrop from "../../components/FirstInBackdrop/FirstInBackdrop";
-import logo0 from "../../Resource/Phelp1.png";
-import logo1 from "../../Resource/Phelp2.png";
-import logo2 from "../../Resource/Phelp3.png";
-import img_bubble from "../../Resource/bubble.png";
-import img_selection from "../../Resource/selection.png";
-import img_insertion from "../../Resource/insert.png";
-import img_quick from "../../Resource/quick.png";
-import img_merge from "../../Resource/merge.png";
-import img_heap from "../../Resource/heap.png";
+import logo0 from "../../resource/Phelp1.png";
+import logo1 from "../../resource/Phelp2.png";
+import logo2 from "../../resource/Phelp3.png";
+import img_bubble from "../../resource/bubble.png";
+import img_selection from "../../resource/selection.png";
+import img_insertion from "../../resource/insert.png";
+import img_quick from "../../resource/quick.png";
+import img_merge from "../../resource/merge.png";
+import img_heap from "../../resource/heap.png";
 import { motion } from "framer-motion";
-import { isUndefined } from 'lodash';
+import { isUndefined } from "lodash";
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -82,7 +82,9 @@ function calculateProgress(progressArray) {
 export default function ProcedureMainPage(props) {
     const classes = useStyles();
 
-    const localPre = localStorage.getItem("pre") ? JSON.parse(localStorage.getItem("pre")) : null;
+    const localPre = localStorage.getItem("pre")
+        ? JSON.parse(localStorage.getItem("pre"))
+        : null;
 
     if (localStorage.getItem("first") == 1) {
         localStorage.setItem("first", JSON.stringify(1));
@@ -108,8 +110,6 @@ export default function ProcedureMainPage(props) {
         //store previous visited algorithm
         localStorage.setItem("pre", JSON.stringify(title));
     };
-
-    
 
     const handlePre = (title) => {
         //set previous visited algorithm
@@ -234,14 +234,13 @@ export default function ProcedureMainPage(props) {
     };
 
     const handleInner = () => {
-        if(isUndefined(props.location.state)){
+        if (isUndefined(props.location.state)) {
             return "-100vw";
-        }else{
+        } else {
             const lastPage = props.location.state.id;
             const inner = lastPage === "tutorial" ? "100vw" : "-100vw";
             return inner;
         }
-        
     };
 
     return (
@@ -318,12 +317,11 @@ export default function ProcedureMainPage(props) {
                     </Grid>
                 </div>
             </motion.div>
-           
+
             {firstIn == 1 ? <FirstInBackdrop /> : <div />}
         </div>
     );
 }
-
 
 //Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
 //The Procedure button is theme color without jump function

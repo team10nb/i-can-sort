@@ -7,12 +7,12 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo0 from "../../Resource/Chelp1.png";
-import logo1 from "../../Resource/Chelp2.png";
-import logo2 from "../../Resource/Chelp3.png";
+import logo0 from "../../resource/Chelp1.png";
+import logo1 from "../../resource/Chelp2.png";
+import logo2 from "../../resource/Chelp3.png";
 import { motion } from "framer-motion";
-import img_tutorial from "../../Resource/tutorial.png";
-import img_proof from "../../Resource/proof.png";
+import img_tutorial from "../../resource/tutorial.png";
+import img_proof from "../../resource/proof.png";
 
 //Set css
 const useStyles = makeStyles((theme) => ({
@@ -57,45 +57,49 @@ export default function CorrectnessMainPage(props) {
     const classes = useStyles();
 
     // get progress info from local
-     const localPre = localStorage.getItem("CorrectnessPre") ? JSON.parse(localStorage.getItem("CorrectnessPre")) : null;
-     const tutorialProgress = localStorage.getItem("CorrectTutorial") ? JSON.parse(localStorage.getItem("CorrectTutorial")) : 0;
-     const proofProgress = localStorage.getItem("CorrectProof") ? JSON.parse(localStorage.getItem("CorrectProof")) : 0;
+    const localPre = localStorage.getItem("CorrectnessPre")
+        ? JSON.parse(localStorage.getItem("CorrectnessPre"))
+        : null;
+    const tutorialProgress = localStorage.getItem("CorrectTutorial")
+        ? JSON.parse(localStorage.getItem("CorrectTutorial"))
+        : 0;
+    const proofProgress = localStorage.getItem("CorrectProof")
+        ? JSON.parse(localStorage.getItem("CorrectProof"))
+        : 0;
 
     // set progress
     //  const progress = props.location.state ? props.location.state : localProgress;
     //  localStorage.setItem("progress", JSON.stringify(progress));
 
-     const handleClick = (title) => () => {
-       //store previous visited algorithm
-       localStorage.setItem("CorrectnessPre", JSON.stringify(title));
-     }
+    const handleClick = (title) => () => {
+        //store previous visited algorithm
+        localStorage.setItem("CorrectnessPre", JSON.stringify(title));
+    };
 
-     const handleProgress = (title) => {
-         var progress = 0;
+    const handleProgress = (title) => {
+        var progress = 0;
 
-         if(title === "Tutorial" && tutorialProgress != 0){
-            for(var i=0; i<tutorialProgress.length; i++){
-                if(tutorialProgress[i])
-                    progress += 20;
+        if (title === "Tutorial" && tutorialProgress != 0) {
+            for (var i = 0; i < tutorialProgress.length; i++) {
+                if (tutorialProgress[i]) progress += 20;
             }
-         }
+        }
 
-         if(title === "Proof" && proofProgress != 0){
+        if (title === "Proof" && proofProgress != 0) {
             progress = 10;
-            for(var i=0; i<proofProgress.length; i++){
-                if(proofProgress[i])
-                    progress += 15;
+            for (var i = 0; i < proofProgress.length; i++) {
+                if (proofProgress[i]) progress += 15;
             }
-         }
-         
-         return progress;
-      }
+        }
 
-     const handlePre = (title) => {
-       //set previous visited algorithm
-       const preOne = (title === localPre) ? true : false;
-       return preOne;
-     }
+        return progress;
+    };
+
+    const handlePre = (title) => {
+        //set previous visited algorithm
+        const preOne = title === localPre ? true : false;
+        return preOne;
+    };
 
     const images = [
         {
@@ -156,19 +160,19 @@ export default function CorrectnessMainPage(props) {
             exit={{ opacity: 0.2, scale: 0, x: "100vw" }}
         >
             <div className={classes.grid}>
-                <Grid container >
-                    <Grid container item xs={12}  spacing={0}>
-                    <Grid item xs={6} >
-                        <Link to="/Correctness/Tutorial">
-                            <Module {...tutorialProps} />
-                        </Link>
-                    </Grid>
+                <Grid container>
+                    <Grid container item xs={12} spacing={0}>
+                        <Grid item xs={6}>
+                            <Link to="/Correctness/Tutorial">
+                                <Module {...tutorialProps} />
+                            </Link>
+                        </Grid>
 
-                    <Grid item xs={6} >
-                        <Link to="/Correctness/Prove">
-                            <Module {...proofProps} />
-                        </Link>
-                    </Grid>
+                        <Grid item xs={6}>
+                            <Link to="/Correctness/Prove">
+                                <Module {...proofProps} />
+                            </Link>
+                        </Grid>
                     </Grid>
 
                     <Grid item xs={12}>

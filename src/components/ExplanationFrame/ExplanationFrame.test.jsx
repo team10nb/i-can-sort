@@ -8,7 +8,7 @@ const mockHandleClick = jest.fn();
     
 const data = {
     color:"#4caf50",
-    logoFinal:'../../Resource/ForLoop.png',
+    logoFinal:'../../resource/ForLoop.png',
     stepNumber:1,
     picHeight:"350px",
     avatarMarginLeft:"9px",

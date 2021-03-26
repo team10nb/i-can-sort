@@ -80,7 +80,7 @@ Object {
                 >
                   <img
                     alt="logoFinal"
-                    src="../../Resource/ForLoop.png"
+                    src="../../resource/ForLoop.png"
                     width="587px"
                   />
                   <div
@@ -181,7 +181,7 @@ Object {
               >
                 <img
                   alt="logoFinal"
-                  src="../../Resource/ForLoop.png"
+                  src="../../resource/ForLoop.png"
                   width="587px"
                 />
                 <div
