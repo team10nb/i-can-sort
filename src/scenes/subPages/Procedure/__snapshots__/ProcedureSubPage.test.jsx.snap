@@ -7,7 +7,7 @@ Object {
     <div>
       <div>
         <div>
-          mockInputTutorial
+          mockCorrectnessIntroduction
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@ Object {
   "container": <div>
     <div>
       <div>
-        mockInputTutorial
+        mockCorrectnessIntroduction
       </div>
     </div>
   </div>,

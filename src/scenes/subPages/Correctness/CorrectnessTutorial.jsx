@@ -18,7 +18,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
-import Input from '../../../components/InputTutorial/InputTutorial';
+import Input from '../../../components/CorrectnessIntroduction/CorrectnessIntroduction';
 import Example from './Tutorial/Example';
 import Partial_Def from './Tutorial/Parital_Def';
 import Total_Def from './Tutorial/Total_Def';

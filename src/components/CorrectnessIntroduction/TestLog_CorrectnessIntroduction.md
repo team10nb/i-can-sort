@@ -1,18 +1,31 @@
+#### ComponentName: CorrectnessIntroduction
+
+|Test No.|Date|Pass/Fail|Failed test(s)|Reason/Description|Modified version|
+|-------|----|---------|-------------------|----------------|----------------|
+|1 | 3.3 | Pass | All | Test meets the plan |version 1|
+
+##### Code - version 1
+```javascript
 /*
     Author: Yijie Lu, Shiliang Chen
 */
 
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
+import {
+    makeStyles,
+} from "@material-ui/core/styles";
+import Card from '@material-ui/core/Card';
 import InputTable from "../InputTable/InputTable";
-import ExplanationBox from "../ExplanationBox/ExplanationBox";
-import Typography from "@material-ui/core/Typography";
+import ExplainationBox from "../ExplainationBox/ExplainationBox";
+import Link from '@material-ui/core/Link';
+import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
+import Typography from '@material-ui/core/Typography';
+import { motion } from "framer-motion";
 import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
-import { color as CorrectnessColor } from "../../scenes/mainPages/Correctness";
-import TutorialLink from "../CorrectnessHelp/CorrectnessHelp";
+import {color as CorrectnessColor} from '../../scenes/mainPages/Correctness';
+
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -27,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
         width: 740,
         height: 530,
         // marginTop:630,
-        marginLeft: 14,
-        marginTop: 14,
+        marginLeft:20,
         "& > *": {
             margin: theme.spacing(1),
         },
@@ -37,87 +49,79 @@ const useStyles = makeStyles((theme) => ({
         // margintop: 10,
         background: "#F0F0F0",
         width: 550,
-        height: 500,
+        height: 510,
         display: "grid",
         justifyContent: "center",
     },
-    algorithmTitle: {
-        fontWeight: "300",
-        fontSize: "20px",
-        display: "flex",
-        marginTop:"20px",
-        justifyContent: "center",
+    InputBox: {
+        background: "#F0F0F0",
+        width: 180,
+        // height: 520,
+        alignItems: "center",
     },
-    output: {
+    bars: {
         listStyle: "none",
         padding: 0,
         margin: 0,
-        marginBottom: 20,
+        marginBottom: 15,
         position: "relative",
         display: "flex",
         flexWrap: "wrap-reverse",
         justifyContent: "center",
     },
-    divider: {
-        "& > *": {
-            marginTop: theme.spacing(17),
-        },
-        "& > * + *": {
-            marginTop: theme.spacing(1),
-        },
+    bar: {
+        listStyle: "none",
+        padding: 0,
+        margin: 0,
+        boxShadow: "0px 0px 2px 2px #88888833",
+        borderRadius: "10px",
+        marginBottom: "10px",
+        marginRight: "15px",
+        marginLeft: "15px",
+        width: "30px",
+        height: "140px",
+        fontSize: "0.1em",
+        justifyContent: "center",
     },
-    display: {
+    barNumber: {
+        fontSize: "16px",
+        marginTop: "-23px",
+        textAlign: "center",
+        fontWeight: "600",
+    },
+    switchAnimation: {
         display: "grid",
         justifyContent: "center",
         alignContent: "flex-end",
-        marginTop: "-50px",
-        marginLeft: "66px",
+        marginBottom: "110px",
+        marginLeft: "45px",
         height: "300px",
         width: "350px",
     },
-    explanation: {
+    explanation:{
         display: "flex",
-        "& > *": {
-            marginRight: theme.spacing(0.5),
-        },
-        "& > * + *": {
-            marginLeft: theme.spacing(0),
-        },
-        height: "45px",
-    },
-    links: {
-        display: "flex",
-        "& > *": {
-            marginTop: theme.spacing(1.4),
-            marginRight: theme.spacing(1.5),
-        },
-        "& > * + *": {
+        '& > *': {
+            marginTop: theme.spacing(4),
+          },
+        '& > * + *': {     
             marginLeft: theme.spacing(2),
         },
-        height: "50px",
+       
     },
-    text: {
+    links:{
         display: "flex",
-        "& > * + *": {
-            marginLeft: theme.spacing(0),
+        // '& > *': {
+        //     marginTop: theme.spacing(6),
+        //   },
+        '& > * + *': {     
+            marginLeft: theme.spacing(2),
         },
-        height: "50px",
-    },
+    }
 }));
 
-export default function InputTutorial(props) {
+export default function CorrectnessIntroduction() {
     const classes = useStyles();
-
-    const week = [
-        
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ];
+    const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     // The maximum value of pairs
     const PAIR = 3;
     // The maximum value of input number
@@ -140,18 +144,34 @@ export default function InputTutorial(props) {
         false,
         false,
     ]);
-    // Indicate whether
+    // Indicate whether 
     const [isLegalPlaying, setIsLegalPlaying] = useState(true);
     // The legal string
-    const [legalString, setLegalString] = useState([3, 5, 1]);
+    const [legalString, setLegalString] = useState([
+        3,
+        5,
+        1,
+    ]);
     // The legal array
-    const [legalArray, setLegalArray] = useState([3, 5, 1]);
+    const [legalArray, setLegalArray] = useState([
+        3,
+        5,
+        1,
+    ]);
     // The illegal string
-    const [illegalString, setIllegalString] = useState(["a", "e", "d"]);
+    const [illegalString, setIllegalString] = useState([
+        'a',
+        'e',
+        'd',
+    ]);
     // The illegal array
-    const [illegalArray, setIllegalArray] = useState(["a", "e", "d"]);
-    const [weekday, setWeekday] = useState("Monday");
-    const [dayCount, setDayCount] = useState(1);
+    const [illegalArray, setIllegalArray] = useState([
+        'a',
+        'e',
+        'd',
+    ]);
+    const [weekday, setWeekday] = useState("Sunday");
+    const [dayCount, setDayCount] = useState(0);
 
     // It is used to clean timeouts to pause the animation
     const clearTimeouts = () => {
@@ -170,7 +190,11 @@ export default function InputTutorial(props) {
         setLegalString(triple);
         setWeekday(week[0]);
         setDayCount(1);
-        setIsCompleteLegal([false, false, false]);
+        setIsCompleteLegal([
+            false,
+            false,
+            false,
+        ]);
         setIsLegalPlaying(true);
     };
 
@@ -183,9 +207,9 @@ export default function InputTutorial(props) {
         let triple = [];
 
         for (let j = 0; j < PAIR; j++) {
-            triple.push(
-                characters.charAt(Math.floor(Math.random() * charactersLength))
-            );
+            triple.push(characters.charAt(
+                Math.floor(Math.random() * charactersLength)
+            ));
         }
 
         setIllegalString(triple);
@@ -215,7 +239,7 @@ export default function InputTutorial(props) {
                     } else if (i === 2) {
                         setIsCompleteLegal([true, true, true]);
                     }
-                    setWeekday(week[item - 1]);
+                    setWeekday(week[item-1]);
                     setDayCount(item);
                     console.log(item);
                 },
@@ -226,10 +250,7 @@ export default function InputTutorial(props) {
         });
 
         // Clear timeouts upon completion
-        let timeoutId = setTimeout(
-            clearTimeouts,
-            (legalArray.length + 1) * 700
-        );
+        let timeoutId = setTimeout(clearTimeouts, (legalArray.length + 1) * 700);
         legalTimeoutIds.push(timeoutId);
         setTimeOutIds(legalTimeoutIds);
     };
@@ -252,7 +273,7 @@ export default function InputTutorial(props) {
                     } else if (i === 2) {
                         setIsCompleteIllegal([true, true, true]);
                     }
-                    setWeekday(week[item - 1]);
+                    setWeekday(week[item-1]);
                     setDayCount(item);
                 },
                 (i + 1) * 1000, //time interval
@@ -262,44 +283,35 @@ export default function InputTutorial(props) {
         });
 
         // Clear timeouts upon completion
-        let timeoutId = setTimeout(
-            clearTimeouts,
-            (legalArray.length + 1) * 700
-        );
+        let timeoutId = setTimeout(clearTimeouts, (legalArray.length + 1) * 700);
         illegalTimeoutIds.push(timeoutId);
         setTimeOutIds(illegalTimeoutIds);
     };
 
     return (
         <div className={classes.div}>
-            <Card className={classes.card}>           
-                <div
-                    className={classes.algorithmTitle}
-                >
-                    What is day&nbsp;(
-                    <span
-                        style={{
-                            fontWeight: "600",
-                            fontSize: "20px",
-                            color: CorrectnessColor,
-                        }}
-                    >
-                        {dayCount}
-                    </span>
-                    ) of a week?
+            <Card className={classes.card}>
+                <div className = {classes.explanation}>
+                        <HelpOutlineOutlinedIcon />
+                        <div className = {classes.links}>
+                        
+                            <Typography  >
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>legal input</Link>&nbsp;?
+                            </Typography>
+                            <Typography  >
+                            What&nbsp;&nbsp;is&nbsp;&nbsp;<Link href="#" style={{color:"#00BFFF"}}>illegal input</Link>&nbsp;?
+                            </Typography>
+                        </div>  
                 </div>
-                <div className={classes.display}>
-                    <div className={classes.output}>
+                <Divider />
+                <div className={classes.switchAnimation}>
+                    <div className={classes.bars}>
                         {isLegalPlaying ? (
-                            <span
-                                style={{
-                                    fontWeight: "600",
-                                    fontSize: "60px",
-                                    color: CorrectnessColor,
-                                }}
-                            >
-                                {weekday}
-                            </span>
+                        <span
+                        style={{ fontWeight: "600",  fontSize:"60px", color:CorrectnessColor}}
+                        >
+                            {weekday}
+                        </span>
                         ) : (
                             <div
                                 style={{
@@ -318,52 +330,18 @@ export default function InputTutorial(props) {
                         ""
                     ) : (
                         <span
-                            style={{
-                                fontWeight: "600",
-                                marginBottom: "20px",
-                                marginLeft: "450px",
-                                fontSize: "20px",
-                                width: "800px",
-                            }}
+                            style={{ fontWeight: "600", marginBottom: "20px",marginLeft:"450px",  fontSize:"20px", width:"800px"}}
                         >
-                            Could not process illegal input:{" "}
-                            <span style={{ color: CorrectnessColor }}>
-                                {dayCount}
-                            </span>
+                            Could not process illegal input: <span style={{color:CorrectnessColor}}>{dayCount}</span>
                         </span>
                     )}
-                    <ExplanationBox
-                        width="40"
-                        height={3}
-                        style={{ fontSize: "100px" }}
-                    >
-                        {isLegalPlaying
-                            ? "Day " + dayCount + " of a week is " + weekday
-                            : "Error! Only integers 1-7 are legal"}
-                    </ExplanationBox>
+                    <ExplainationBox width="40" height={3} style={{fontSize:"100px"}}>
+                        {isLegalPlaying ? "No." + dayCount + " day of a week is " + weekday : "Error! Only integers 1-7 are legal"}
+                    </ExplainationBox>
                 </div>
-                <div className={classes.divider}>
-                    <Divider  />
-                    <div className={classes.explanation}>
-                        <TutorialLink />
-                        <div className={classes.links}>
-                            <Typography className={classes.text}>
-                                For&nbsp;any&nbsp; 
-                                <span style={{ color: CorrectnessColor }}>
-                                    legal&nbsp;input
-                                </span>
-                                ,&nbsp;expected&nbsp;output&nbsp;can&nbsp;be&nbsp;generated
-                            </Typography>
-                            {/* <Typography className={classes.text}>
-                                What&nbsp;&nbsp;is&nbsp;&nbsp;
-                                <Typography style={{ color: CorrectnessColor }}>
-                                    illegal&nbsp;&nbsp;input
-                                </Typography>
-                                &nbsp;?
-                            </Typography> */}
-                        </div>
-                    </div>                 
-                </div>
+                
+                
+                
                 
             </Card>
             <InputTable
@@ -380,3 +358,6 @@ export default function InputTutorial(props) {
         </div>
     );
 }
+
+```
+

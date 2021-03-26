@@ -18,13 +18,13 @@ const props = {
 jest.mock("react-swipeable-views", () => {
     return {
         __esModule: true,
-        default: () => <div>mockInputTutorial</div>,
+        default: () => <div>mockCorrectnessIntroduction</div>,
     }
 });
 jest.mock("@material-ui/core/styles", () => {
     return {
         ...jest.requireActual('@material-ui/core/styles'),
-        ThemeProvider: () => <div>mockInputTutorial</div>,
+        ThemeProvider: () => <div>mockCorrectnessIntroduction</div>,
     }
 });
 

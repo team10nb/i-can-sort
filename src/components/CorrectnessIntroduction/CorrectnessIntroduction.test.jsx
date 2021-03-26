@@ -3,7 +3,7 @@
 */
 
 import { render } from "@testing-library/react";
-import InputTutorial from "./InputTutorial";
+import CorrectnessIntroduction from "./CorrectnessIntroduction";
 import * as InputTables from "../InputTable/InputTable";
 
 test( 'should call InputTable', () => {
@@ -12,19 +12,19 @@ test( 'should call InputTable', () => {
         .mockImplementation(() => <div>mockInputTable</div>);
 
 
-    const content = render(<InputTutorial/>);
+    const content = render(<CorrectnessIntroduction/>);
 
     expect(inputTableSpy).toBeCalled();
 
 })
 
-test( 'should match InputTutorial snapshot', () => {
+test( 'should match CorrectnessIntroduction snapshot', () => {
     const inputTableSpy = jest
         .spyOn(InputTables, "default")
         .mockImplementation(() => <div>mockInputTable</div>);
 
 
-    const content = render(<InputTutorial/>);
+    const content = render(<CorrectnessIntroduction/>);
 
     expect(content).toMatchSnapshot();
 

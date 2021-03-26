@@ -9,7 +9,7 @@ Reference: MATERIAL-UI (https://material-ui.com)
 
 ###  **Introduction**
 
-Input table is used for store the lagal input, illegal input, and their result. It is the component of InputTutorial. 
+Input table is used for store the lagal input, illegal input, and their result. It is the component of CorrectnessIntroduction. 
 
 ###  **Import**
 

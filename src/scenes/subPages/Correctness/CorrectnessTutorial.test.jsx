@@ -2,10 +2,10 @@
 import { render } from '@testing-library/react';
 import CorrectnessTutorial from './CorrectnessTutorial';
 
-jest.mock("../../../components/InputTutorial/InputTutorial", () => {
+jest.mock("../../../components/CorrectnessIntroduction/CorrectnessIntroduction", () => {
     return {
         __esModule: true,
-        default: () => <div>mockInputTutorial</div>,
+        default: () => <div>mockCorrectnessIntroduction</div>,
     }
 });
 
