@@ -1,10 +1,11 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
+import file from '../../../../Resource/heap.pdf';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import {HeapExample} from '../../../../components/ImplementationPseudo/Example';
+import HeapIntro from '../../../../components/Introduction/HeapSort';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
@@ -12,7 +13,7 @@ let props = HeapSort(arr);
 
 const introMessage = <div>
 <h1>Heap sort</h1>
-<p style={{textAlign:"left", fontSize:17}}>
+<p style={{textAlign:"left", fontSize:19, letterSpacing:0.5}}>
 Heap sort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element from it and inserting it into the sorted region. Heap sort maintains the unsorted region in a heap data structure to quickly find the largest element in each step. 
 </p>
 </div>
@@ -20,7 +21,7 @@ Heap sort divides its input into a sorted and an unsorted region, and it iterati
 
 const intro = {
     introMessage: introMessage,
-    animation: <SwitchAnimation {...props} width={490} explainationBoxHeight={6}/>,
+    animation: <HeapIntro/>,
 }
 
 const operate = <SwitchSort sort={"Heap"}/>;
@@ -38,6 +39,7 @@ export default function ProcedureHeap(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        file: file,
         Implementation: <HeapExample/>,
     }
 

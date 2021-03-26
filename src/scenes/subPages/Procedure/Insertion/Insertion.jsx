@@ -5,7 +5,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
+import file from '../../../../Resource/insertion.pdf';
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import InsertionIntro from '../../../../components/Introduction/InsertionSort';
@@ -17,7 +17,7 @@ let props = InsertionSort(arr);
 
 const introMessage = <div>
 <h1>Insertion sort</h1>
-<p style={{textAlign:"left", fontSize: 18}}>
+<p style={{textAlign:"left", fontSize: 19, letterSpacing:0.5}}>
 Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
 </p>
 </div>
@@ -42,6 +42,7 @@ export default function ProcedureInsertion(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        file: file,
         Implementation: <InsertionExample/>,
     }
 

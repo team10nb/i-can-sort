@@ -348,7 +348,7 @@ const trace = [
     ]
 ]
 
-const description = ["Bubble sort is one algorithm used to sort a sequence of numbers", 
+const description = ["Bubble sort is an algorithm used to sort a sequence of numbers", 
                      "Bars in yellow are comparing",
                      "Compare 3 and 12", 
                      "After comparing them, if the number on the right is smaller, they will be swapped",
@@ -401,7 +401,5 @@ const description = ["Bubble sort is one algorithm used to sort a sequence of nu
 export default function IntroBubble() {
     const props = { trace: trace, description: description };
 
-    
     return <SwitchAnimation {...props} width={490} explanationBoxHeight={6}/>;
-
 }

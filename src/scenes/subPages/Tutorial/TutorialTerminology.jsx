@@ -1,3 +1,6 @@
+/*
+    Author: Yani Huang
+*/
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -14,7 +17,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Tutorial';
 import Expressions from './Terminology/Expressions.jsx';
-import IfTutorial from './Terminology/ControlFlow.jsx';
+import IfThenElse from './Terminology/ControlFlow.jsx';
 import Method from './Terminology/MethodCall.jsx';
 import ReturnValue from './Terminology/ReturnValue.jsx';
 
@@ -134,8 +137,9 @@ const useStyles = makeStyles((theme) => ({
   function getSteps() {
     return [
             'Expressions',
-            'Control Flow',
+            'IF-THEN-ELSE',
             'Method',
+            'Return Value',
     ];
   }
 
@@ -147,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
             );
         case 1:
             return(
-                <IfTutorial />
+                <IfThenElse />
             );    
         case 2:
             return(
@@ -172,13 +176,13 @@ const useStyles = makeStyles((theme) => ({
 
     const step = getSteps();
 
-    const progress = localStorage.getItem("Terminology")
-        ? JSON.parse(localStorage.getItem("Terminology"))
-        : [false, false, false, false, false];
+    const progress = localStorage.getItem("tutorialTerms")
+        ? JSON.parse(localStorage.getItem("tutorialTerms"))
+        : [false, false, false, false];
 
     const finishPage = (page) => {
         progress[page] = true;
-        localStorage.setItem("Terminology", JSON.stringify(progress));
+        localStorage.setItem("tutorialTerms", JSON.stringify(progress));
     }
 
     const handleNext = () => {
@@ -220,7 +224,7 @@ const useStyles = makeStyles((theme) => ({
                 classes={{
                 paper: classes.drawerPaper,
                 }}
-                {...finishPage(3)}
+                {...finishPage(0)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>

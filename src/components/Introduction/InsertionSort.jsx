@@ -249,7 +249,7 @@ const trace = [
     ]
 ]
 
-const description = ["Insertion sort is one algorithm used to sort a sequence of numbers", 
+const description = ["Insertion sort is an algorithm used to sort a sequence of numbers", 
                      "To begin, the leftmost number is considered fully sorted",
                      "Mark the first element as sorted", 
                      "Next, from the remaining numbers the leftmost number is taken out",

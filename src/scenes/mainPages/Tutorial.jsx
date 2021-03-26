@@ -62,22 +62,44 @@ export default function TutorialMainPage() {
     ? JSON.parse(localStorage.getItem("tutorialPre"))
     : null;
 
-    const localProgress = localStorage.getItem("tutorialProgress")
-    ? JSON.parse(localStorage.getItem("tutorialProgress"))
-    : [false, false, false];
+    // const localProgress = localStorage.getItem("tutorialProgress")
+    // ? JSON.parse(localStorage.getItem("tutorialProgress"))
+    // : [0, false, false];
+    const swapProgress = localStorage.getItem("tutorialSwap") ? JSON.parse(localStorage.getItem("tutorialSwap")) : 0;
+    const loopProgress = localStorage.getItem("tutorialLoop") ? JSON.parse(localStorage.getItem("tutorialLoop")) : 0;
+    const termsProgress = localStorage.getItem("tutorialTerms") ? JSON.parse(localStorage.getItem("tutorialTerms")) : 0;
 
-    const handleClick = (title, index) => () => {
+    const handleClick = (title) => () => {
         //store previous visited algorithm and set its progress is finished
         localStorage.setItem("tutorialPre", JSON.stringify(title));
-        localProgress[index] = true;
-        localStorage.setItem("tutorialProgress", JSON.stringify(localProgress));
+        // localProgress[index] = true;
+        // localStorage.setItem("tutorialProgress", JSON.stringify(localProgress));
     };
 
-    const handleProgress = (index) => {
-        //set progess bar
-        const progress = localProgress[index] ? 100 : 0;
+    // const handleProgress = (index) => {
+    //     //set progess bar
+    //     const progress = localProgress[index] ? 100 : 0;
+    //     return progress;
+    // };
+
+    const handleProgress = (title) => {
+        var progress = 0;
+
+        if(title === "Swap" && swapProgress != 0)
+            progress += 100;
+
+        if(title === "Loop" && loopProgress != 0)
+            progress += 100;
+
+        if(title === "Terminology" && termsProgress != 0){
+           for(var i=0; i<termsProgress.length; i++){
+               if(termsProgress[i])
+                   progress += 25;
+           }
+        }
+        
         return progress;
-    };
+     }
 
     const handlePre = (title) => {
         //set previous visited algorithm
@@ -88,19 +110,19 @@ export default function TutorialMainPage() {
     const images = [
         {
             static: img_swap,
-            gif: "catch.gif",
+            gif: "swap.gif",
             title: "Swap",
             width: "20%",
         },
         {
             static: img_loop,
-            gif: "catch.gif",
+            gif: "loop.gif",
             title: "Loop",
             width: "20%",
         },
         {
             static: img_terminology,
-            gif: "catch.gif",
+            gif: "terminology.gif",
             title: "Terminology",
             width: "20%",
         },
@@ -110,8 +132,8 @@ export default function TutorialMainPage() {
         image: images[0],
         width: 275,
         height: 280,
-        onClick: handleClick(images[0].title, 0),
-        progress: handleProgress(0),
+        onClick: handleClick(images[0].title),
+        progress: handleProgress(images[0].title),
         color: color,
         preOne: handlePre(images[0].title),
     };
@@ -120,8 +142,8 @@ export default function TutorialMainPage() {
         image: images[1],
         width: 275,
         height: 280,
-        onClick: handleClick(images[1].title, 1),
-        progress: handleProgress(1),
+        onClick: handleClick(images[1].title),
+        progress: handleProgress(images[1].title),
         color: color,
         preOne: handlePre(images[1].title),
     };
@@ -130,8 +152,8 @@ export default function TutorialMainPage() {
         image: images[2],
         width: 275,
         height: 280,
-        onClick: handleClick(images[2].title, 2),
-        progress: handleProgress(2),
+        onClick: handleClick(images[2].title),
+        progress: handleProgress(images[2].title),
         color: color,
         preOne: handlePre(images[2].title),
     };
