@@ -10,7 +10,7 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo0 from "../../resource/Thelp1.png";
+import logo0 from "../../resource/Thelp0.png";
 import logo1 from "../../resource/Thelp2.png";
 import logo2 from "../../resource/Thelp3.png";
 import { motion } from "framer-motion";
