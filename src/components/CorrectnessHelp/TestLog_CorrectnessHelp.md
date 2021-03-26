@@ -27,11 +27,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import Backdrop from '@material-ui/core/Backdrop';
-import logo0 from '../../Resource/inputExp0.png';
-import logo1 from '../../Resource/inputExp1.png';
-import logo2 from '../../Resource/inputExp2.jpg';
-import logo3 from '../../Resource/inputExp3.png';
-import logo4 from '../../Resource/inputExp4.jpg';
+import logo0 from '../../resource/inputExp0.png';
+import logo1 from '../../resource/inputExp1.png';
+import logo2 from '../../resource/inputExp2.jpg';
+import logo3 from '../../resource/inputExp3.png';
+import logo4 from '../../resource/inputExp4.jpg';
 import {color} from '../../scenes/mainPages/Correctness';
 
   const useStyles = makeStyles((theme) => ({
@@ -241,11 +241,11 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import Backdrop from "@material-ui/core/Backdrop";
-import logo0 from "../../Resource/inputExp0.png";
-import logo1 from "../../Resource/inputExp1.png";
-import logo2 from "../../Resource/inputExp2.jpg";
-import logo3 from "../../Resource/inputExp3.png";
-import logo4 from "../../Resource/inputExp4.jpg";
+import logo0 from "../../resource/inputExp0.png";
+import logo1 from "../../resource/inputExp1.png";
+import logo2 from "../../resource/inputExp2.jpg";
+import logo3 from "../../resource/inputExp3.png";
+import logo4 from "../../resource/inputExp4.jpg";
 import { color } from "../../scenes/mainPages/Correctness";
 
 const useStyles = makeStyles((theme) => ({

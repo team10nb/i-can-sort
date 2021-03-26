@@ -2,26 +2,25 @@
     Author: Yani Huang, Ruizi Han
 */
 
-import ImplementationPseudo from './ImplementationPseudo';
-import { Bubble, Selection, Insertion, Quick, Heap, Merge } from './PseudoCode';
-import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
-import SelectionSort from '../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
-import InsertionSort from '../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
-import QuickSort from '../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
-import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
-import BubbleFile from '../../Resource/Bubble Sort.pdf';
-import MergeSort from '../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
-
+import ImplementationPseudo from "./ImplementationPseudo";
+import { Bubble, Selection, Insertion, Quick, Heap, Merge } from "./PseudoCode";
+import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
+import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
+import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
+import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
+import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
+import BubbleFile from "../../resource/Bubble Sort.pdf";
+import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
 
 const BubbleExample = () => {
     const Code = Bubble;
-    const title = 'Bubble Sort';
-    const algorithm = 'bubble';
+    const title = "Bubble Sort";
+    const algorithm = "bubble";
     const sort = BubbleSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = BubbleSort(arr);
-    
+    const { trace, description, blockNums } = BubbleSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -33,19 +32,18 @@ const BubbleExample = () => {
         file: BubbleFile,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
-
+    return <ImplementationPseudo {...props} />;
+};
 
 const SelectionExample = () => {
     const Code = Selection;
-    const title = 'Selection Sort';
-    const algorithm = 'selection';
+    const title = "Selection Sort";
+    const algorithm = "selection";
     const sort = SelectionSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = SelectionSort(arr);
-    
+    const { trace, description, blockNums } = SelectionSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -56,18 +54,18 @@ const SelectionExample = () => {
         Code,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
+    return <ImplementationPseudo {...props} />;
+};
 
 const InsertionExample = () => {
     const Code = Insertion;
-    const title = 'Insertion Sort';
-    const algorithm = 'insertion';
+    const title = "Insertion Sort";
+    const algorithm = "insertion";
     const sort = InsertionSort;
 
     const arr = [4, 13, 11, 8, 5];
-    const {trace, description, blockNums} = InsertionSort(arr);
-    
+    const { trace, description, blockNums } = InsertionSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -78,18 +76,18 @@ const InsertionExample = () => {
         Code,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
+    return <ImplementationPseudo {...props} />;
+};
 
 const QuickExample = () => {
     const Code = Quick;
-    const title = 'Quick Sort';
-    const algorithm = 'quick';
+    const title = "Quick Sort";
+    const algorithm = "quick";
     const sort = QuickSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = QuickSort(arr);
-    
+    const { trace, description, blockNums } = QuickSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -100,18 +98,18 @@ const QuickExample = () => {
         Code,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
+    return <ImplementationPseudo {...props} />;
+};
 
 const MergeExample = () => {
     const Code = Merge;
-    const title = 'Merge Sort';
-    const algorithm = 'merge';
+    const title = "Merge Sort";
+    const algorithm = "merge";
     const sort = MergeSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = MergeSort(arr);
-    
+    const { trace, description, blockNums } = MergeSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -122,18 +120,18 @@ const MergeExample = () => {
         Code,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
+    return <ImplementationPseudo {...props} />;
+};
 
 const HeapExample = () => {
     const Code = Heap;
-    const title = 'Heap Sort';
-    const algorithm = 'heap';
+    const title = "Heap Sort";
+    const algorithm = "heap";
     const sort = HeapSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const {trace, description, blockNums} = HeapSort(arr);
-    
+    const { trace, description, blockNums } = HeapSort(arr);
+
     const props = {
         title,
         algorithm,
@@ -144,9 +142,8 @@ const HeapExample = () => {
         Code,
     };
 
-    return <ImplementationPseudo {...props}/>
-}
-
+    return <ImplementationPseudo {...props} />;
+};
 
 export {
     BubbleExample,

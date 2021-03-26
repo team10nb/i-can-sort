@@ -16,7 +16,7 @@ It is a interface for all the explanation window. By passing the props, using it
 
 ```html
 import { makeStyles } from '@material-ui/core/styles';
-import logoFinal from "../../../../Resource/ForLoop.png";
+import logoFinal from "../../../../resource/ForLoop.png";
 ```
 
 ###  **Props**
@@ -45,7 +45,7 @@ import logoFinal from "../../../../Resource/ForLoop.png";
 ```jsx
 const data = {
         color:"#4caf50",
-        logoFinal:'../../Resource/ForLoop.png',
+        logoFinal:'../../resource/ForLoop.png',
         stepNumber:1,
         picHeight:"350px",
         avatarMarginLeft:"9px",

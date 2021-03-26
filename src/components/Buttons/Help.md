@@ -35,9 +35,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 ```jsx
 const data ={
-    logo0 : "../../Resource/Chelp1.png", 
-    logo1 : "../../Resource/Chelp2.png", 
-    logoFinal : "../../Resource/Chelp3.png", 
+    logo0 : "../../resource/Chelp1.png", 
+    logo1 : "../../resource/Chelp2.png", 
+    logoFinal : "../../resource/Chelp3.png", 
     color : "#ff6f00"
     };
 <Help {...data}/>

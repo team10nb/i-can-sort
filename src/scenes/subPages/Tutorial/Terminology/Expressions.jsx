@@ -4,7 +4,7 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import bulb from "../../../../Resource/bulb.png";
+import bulb from "../../../../resource/bulb.png";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";

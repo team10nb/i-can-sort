@@ -10,13 +10,13 @@ import Module from "../../components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import logo0 from "../../Resource/Thelp1.png";
-import logo1 from "../../Resource/Thelp2.png";
-import logo2 from "../../Resource/Thelp3.png";
+import logo0 from "../../resource/Thelp1.png";
+import logo1 from "../../resource/Thelp2.png";
+import logo2 from "../../resource/Thelp3.png";
 import { motion } from "framer-motion";
-import img_swap from "../../Resource/swap.png";
-import img_loop from "../../Resource/loop.png";
-import img_terminology from "../../Resource/terminology.png";
+import img_swap from "../../resource/swap.png";
+import img_loop from "../../resource/loop.png";
+import img_terminology from "../../resource/terminology.png";
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,15 +59,21 @@ export default function TutorialMainPage() {
     const classes = useStyles();
 
     const localPre = localStorage.getItem("tutorialPre")
-    ? JSON.parse(localStorage.getItem("tutorialPre"))
-    : null;
+        ? JSON.parse(localStorage.getItem("tutorialPre"))
+        : null;
 
     // const localProgress = localStorage.getItem("tutorialProgress")
     // ? JSON.parse(localStorage.getItem("tutorialProgress"))
     // : [0, false, false];
-    const swapProgress = localStorage.getItem("tutorialSwap") ? JSON.parse(localStorage.getItem("tutorialSwap")) : 0;
-    const loopProgress = localStorage.getItem("tutorialLoop") ? JSON.parse(localStorage.getItem("tutorialLoop")) : 0;
-    const termsProgress = localStorage.getItem("tutorialTerms") ? JSON.parse(localStorage.getItem("tutorialTerms")) : 0;
+    const swapProgress = localStorage.getItem("tutorialSwap")
+        ? JSON.parse(localStorage.getItem("tutorialSwap"))
+        : 0;
+    const loopProgress = localStorage.getItem("tutorialLoop")
+        ? JSON.parse(localStorage.getItem("tutorialLoop"))
+        : 0;
+    const termsProgress = localStorage.getItem("tutorialTerms")
+        ? JSON.parse(localStorage.getItem("tutorialTerms"))
+        : 0;
 
     const handleClick = (title) => () => {
         //store previous visited algorithm and set its progress is finished
@@ -85,21 +91,18 @@ export default function TutorialMainPage() {
     const handleProgress = (title) => {
         var progress = 0;
 
-        if(title === "Swap" && swapProgress != 0)
-            progress += 100;
+        if (title === "Swap" && swapProgress != 0) progress += 100;
 
-        if(title === "Loop" && loopProgress != 0)
-            progress += 100;
+        if (title === "Loop" && loopProgress != 0) progress += 100;
 
-        if(title === "Terminology" && termsProgress != 0){
-           for(var i=0; i<termsProgress.length; i++){
-               if(termsProgress[i])
-                   progress += 25;
-           }
+        if (title === "Terminology" && termsProgress != 0) {
+            for (var i = 0; i < termsProgress.length; i++) {
+                if (termsProgress[i]) progress += 25;
+            }
         }
-        
+
         return progress;
-     }
+    };
 
     const handlePre = (title) => {
         //set previous visited algorithm
@@ -182,31 +185,34 @@ export default function TutorialMainPage() {
             exit={{ opacity: 0.2, scale: 0, x: "-100vw" }}
         >
             <div className={classes.grid}>
-                <Grid  container >
-                    <Grid item xs={6} sm={3}><div style={{height:25}}></div></Grid> 
+                <Grid container>
+                    <Grid item xs={6} sm={3}>
+                        <div style={{ height: 25 }}></div>
+                    </Grid>
 
-                    <Grid container item xs={12}  spacing={0}>
-                        <Grid item xs={4} >
+                    <Grid container item xs={12} spacing={0}>
+                        <Grid item xs={4}>
                             <Link to="/TutorialSubPage/Swap">
                                 <Module {...swap} />
                             </Link>
                         </Grid>
 
-                        <Grid item xs={4} >
+                        <Grid item xs={4}>
                             <Link to="/TutorialSubPage/Loop">
                                 <Module {...loop} />
                             </Link>
                         </Grid>
 
-                        <Grid item xs={4} >
+                        <Grid item xs={4}>
                             <Link to="/TutorialSubPage/Terminology">
                                 <Module {...terminology} />
                             </Link>
                         </Grid>
-                   
                     </Grid>
 
-                    <Grid item xs={6} sm={3}><div style={{height:130}}></div></Grid> 
+                    <Grid item xs={6} sm={3}>
+                        <div style={{ height: 130 }}></div>
+                    </Grid>
 
                     <Grid item xs={12}>
                         <div className={classes.buttonSet}>
@@ -243,7 +249,13 @@ export function TutorialChoiceMenu() {
                 Tutorial
             </Button>
 
-            <Link to={{pathname:"/ProcedureMainPage", state:{id:"tutorial"}}} style={{ textDecoration: "none" }}>
+            <Link
+                to={{
+                    pathname: "/ProcedureMainPage",
+                    state: { id: "tutorial" },
+                }}
+                style={{ textDecoration: "none" }}
+            >
                 <Button variant="contained" className={classes.button}>
                     Procedure
                 </Button>
