@@ -1,7 +1,6 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import file from '../../../../Resource/merge.pdf';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import MergeSort from '../../../../components/SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 import {MergeExample} from '../../../../components/ImplementationPseudo/Example';
@@ -38,7 +37,6 @@ export default function ProcedureMerge(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
-        file: file,
         Implementation: <MergeExample/>,
     }
 

@@ -3,7 +3,6 @@ import { color } from "../../../mainPages/Procedure";
 import ProcedureSubPage from "../ProcedureSubPage";
 import SwitchSort from "../../../../components/SwitchSort/SwitchSort";
 import BubbleIntro from "../../../../components/Introduction/BubbleSort";
-import file from "../../../../resource/Bubble Sort.pdf";
 import { BubbleExample } from "../../../../components/ImplementationPseudo/Example";
 
 const introMessage = (
@@ -39,7 +38,6 @@ export default function ProcedureBubble(props) {
         history: props.history,
         intro: intro,
         operate: operate,
-        file: file,
         Implementation: <BubbleExample />,
     };
 
