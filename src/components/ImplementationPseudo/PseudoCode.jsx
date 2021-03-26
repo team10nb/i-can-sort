@@ -1,5 +1,5 @@
 /*
-Author: Ruizi Han, Yani Huang
+Author: Yani Huang, Ruizi Han
 */
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,9 +10,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: -4,
         letterSpacing: -0.5,
         fontSize: 15,
-        // paddingLeft:"5px",
         fontFamily: "Space Mono",
-        // textAlign: 'center',
     },
     background:{
         backgroundColor: "#cfd9e7",

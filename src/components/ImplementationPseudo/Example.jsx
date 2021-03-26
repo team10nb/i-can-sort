@@ -1,5 +1,5 @@
 /*
-    Author: Yani Huang, Ruizi Han
+    Author: Ruizi Han, Yani Huang
 */
 
 import ImplementationPseudo from "./ImplementationPseudo";
