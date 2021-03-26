@@ -38,6 +38,7 @@ import Typography from '@material-ui/core/Typography';
       borderWidth:"0px",
       "&:hover": {
         fontWeight:400,
+        backgroundColor:"white",
         color:"#1564b2",
         cursor: "pointer",
         // textDecoration: "underline",
@@ -142,7 +143,7 @@ import Typography from '@material-ui/core/Typography';
                 You can follow the link to visit our repository:
               </Typography>
               
-              <Link component="button" onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Link>
+              <Button onClick={handleLink}  className = {classes.link} >GitHub Address:&nbsp;&nbsp;I - can - sort</Button>
           </Paper>
               
         </AccordionDetails>
@@ -179,7 +180,7 @@ import Typography from '@material-ui/core/Typography';
     return (
       <div>
         {/*set button*/}
-        <Tooltip title="information" placement="bottom" arrow>
+        <Tooltip title="setting" placement="bottom" arrow>
           <IconButton aria-label="setting" onClick={toggleDrawer('left', true)}  > <SettingsOutlinedIcon  /></IconButton>
         </Tooltip>        
           <SwipeableDrawer

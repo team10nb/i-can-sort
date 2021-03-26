@@ -28,11 +28,3 @@ test('should contain buttons', () => {
     getAllByText("Next");
     getAllByText("Back");
 })
-
-
-
-// test('should match Snapshot', () => {
-//     const content = render(<CorrectnessTutorial />);
-//     expect(content).toMatchSnapshot();
-// })
-

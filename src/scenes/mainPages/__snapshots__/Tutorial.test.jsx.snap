@@ -215,7 +215,7 @@ Object {
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="information"
+                    title="setting"
                     type="button"
                   >
                     <span
@@ -250,7 +250,7 @@ Object {
                       aria-label="help"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="tutorial"
+                      title="help"
                       type="button"
                     >
                       <span
@@ -679,7 +679,7 @@ Object {
                   aria-label="setting"
                   class="MuiButtonBase-root MuiIconButton-root"
                   tabindex="0"
-                  title="information"
+                  title="setting"
                   type="button"
                 >
                   <span
@@ -714,7 +714,7 @@ Object {
                     aria-label="help"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="tutorial"
+                    title="help"
                     type="button"
                   >
                     <span

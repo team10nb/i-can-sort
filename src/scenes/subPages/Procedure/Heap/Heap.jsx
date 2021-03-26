@@ -1,7 +1,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
+import file from '../../../../Resource/heap.pdf';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import {HeapExample} from '../../../../components/ImplementationPseudo/Example';
@@ -39,6 +39,7 @@ export default function ProcedureHeap(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        file: file,
         Implementation: <HeapExample/>,
     }
 

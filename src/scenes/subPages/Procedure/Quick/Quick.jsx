@@ -5,7 +5,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import { SwitchAnimation } from '../../../../components/SwitchAnimation/SwitchAnimation';
+import file from '../../../../Resource/quick.pdf';
 import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
 import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import {QuickExample} from '../../../../components/ImplementationPseudo/Example';
@@ -42,6 +42,7 @@ export default function ProcedureQuick(props) {
         history: props.history,      
         intro: intro,
         operate: operate,
+        file: file,
         Implementation: <QuickExample/>,
     }
 

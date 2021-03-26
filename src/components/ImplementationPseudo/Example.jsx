@@ -9,8 +9,13 @@ import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/Se
 import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
 import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
-import BubbleFile from "../../resource/Bubble Sort.pdf";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
+import BubbleFile from "../../resource/bubble.pdf";
+import SelectionFile from "../../resource/selection.pdf";
+import InsertionFile from "../../resource/insertion.pdf";
+import QuickFile from "../../resource/quick.pdf";
+import MergeFile from "../../resource/merge.pdf";
+import HeapFile from "../../resource/heap.pdf";
 
 const BubbleExample = () => {
     const Code = Bubble;
@@ -19,15 +24,11 @@ const BubbleExample = () => {
     const sort = BubbleSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const { trace, description, blockNums } = BubbleSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
         file: BubbleFile,
     };
@@ -42,16 +43,13 @@ const SelectionExample = () => {
     const sort = SelectionSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const { trace, description, blockNums } = SelectionSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
+        file: SelectionFile,
     };
 
     return <ImplementationPseudo {...props} />;
@@ -64,16 +62,13 @@ const InsertionExample = () => {
     const sort = InsertionSort;
 
     const arr = [4, 13, 11, 8, 5];
-    const { trace, description, blockNums } = InsertionSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
+        file: InsertionFile,
     };
 
     return <ImplementationPseudo {...props} />;
@@ -86,16 +81,13 @@ const QuickExample = () => {
     const sort = QuickSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const { trace, description, blockNums } = QuickSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
+        file: QuickFile,
     };
 
     return <ImplementationPseudo {...props} />;
@@ -108,16 +100,13 @@ const MergeExample = () => {
     const sort = MergeSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const { trace, description, blockNums } = MergeSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
+        file: MergeFile,
     };
 
     return <ImplementationPseudo {...props} />;
@@ -130,16 +119,13 @@ const HeapExample = () => {
     const sort = HeapSort;
 
     const arr = [4, 8, 11, 13, 5];
-    const { trace, description, blockNums } = HeapSort(arr);
 
     const props = {
         title,
         algorithm,
         sort,
-        // trace,
-        // description,
-        // blockNums,
         Code,
+        file: HeapFile,
     };
 
     return <ImplementationPseudo {...props} />;
