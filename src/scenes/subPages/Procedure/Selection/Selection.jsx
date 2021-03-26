@@ -1,7 +1,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import SelectionIntro from '../../../../components/Introduction/SelectionSort';
 import {SelectionExample} from '../../../../components/ImplementationPseudo/Example';
 import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
@@ -24,7 +24,7 @@ const intro = {
     animation: <SelectionIntro/>,
 }
 
-const operate = <SwitchSort sort={"Selection"}/>;
+const operate = <ProcedureOperation sort={"Selection"}/>;
 
 
 

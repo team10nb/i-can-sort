@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-// import SwitchSort from "./components/SwitchSort/SwitchSort";
+// import ProcedureOperation from "./components/ProcedureOperation/ProcedureOperation";
 // import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import "./styles.css";
 import App from './App';

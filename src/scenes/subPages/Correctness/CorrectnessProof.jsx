@@ -17,12 +17,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {color} from '../../mainPages/Correctness';
-import {BubbleExample,
-        SelectionExample,
-        InsertionExample,
-        QuickExample,
-        HeapExample,
-        MergeExample,} from '../../../components/CorrectnessProof/Example';
+import {BubbleProof,
+        SelectionProof,
+        InsertionProof,
+        QuickProof,
+        HeapProof,
+        MergeProof,} from '../../../components/CorrectnessProof/CorrectnessProof';
 import ProofHelp from "../../../components/CorrectnessProof/ProofHelp";
 
 
@@ -181,27 +181,27 @@ const useStyles = makeStyles((theme) => ({
       switch (activeStep) {
         case 0:
             return(
-                <BubbleExample/>
+                <BubbleProof/>
             );
         case 1:
             return(
-                <SelectionExample/>
+                <SelectionProof/>
             );
         case 2:
             return(
-                <InsertionExample/>
+                <InsertionProof/>
             );
         case 3:
             return(
-                <QuickExample/>
+                <QuickProof/>
             );
         case 4:
             return(
-                <MergeExample/>
+                <MergeProof/>
             );
         case 5:
             return(
-                <HeapExample/>
+                <HeapProof/>
             );
         default:
             break;

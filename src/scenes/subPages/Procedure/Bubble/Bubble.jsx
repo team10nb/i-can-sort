@@ -1,7 +1,7 @@
 import React from "react";
 import { color } from "../../../mainPages/Procedure";
 import ProcedureSubPage from "../ProcedureSubPage";
-import SwitchSort from "../../../../components/SwitchSort/SwitchSort";
+import ProcedureOperation from "../../../../components/ProcedureOperation/ProcedureOperation";
 import BubbleIntro from "../../../../components/Introduction/BubbleSort";
 import { BubbleExample } from "../../../../components/ImplementationPseudo/Example";
 
@@ -24,7 +24,7 @@ const intro = {
     animation: <BubbleIntro />,
 };
 
-const operate = <SwitchSort sort={"Bubble"} />;
+const operate = <ProcedureOperation sort={"Bubble"} />;
 
 export default function ProcedureBubble(props) {
     const progress = localStorage.getItem("bubble")

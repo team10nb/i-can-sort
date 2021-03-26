@@ -2,7 +2,7 @@
 --------
 <br>
 
-#### Component: SwitchSort
+#### Component: ProcedureOperation
 
 |Test Name|Description|Operation|Expected Outcome|
 |----|------|--------|----------------|

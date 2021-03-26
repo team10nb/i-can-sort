@@ -1,7 +1,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import MergeSort from '../../../../components/SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 import {MergeExample} from '../../../../components/ImplementationPseudo/Example';
 import MergeIntro from '../../../../components/Introduction/MergeSort';
@@ -22,7 +22,7 @@ const intro = {
     animation: <MergeIntro/>,
 }
 
-const operate = <SwitchSort sort={"Merge"}/>;
+const operate = <ProcedureOperation sort={"Merge"}/>;
 
 
 

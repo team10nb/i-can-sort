@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import ProcedureSubPage from './ProcedureSubPage';
 import BubbleIntro from '../../../components/Introduction/BubbleSort';
-import SwitchSort from '../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../components/ProcedureOperation/ProcedureOperation';
 const props = {
     color: "#FFFFFF",
     algorithm: "bubble",
@@ -12,7 +12,7 @@ const props = {
         introMessage: 'intro',
         animation: <BubbleIntro />,
     },
-    operate:<SwitchSort sort={"Bubble"}/>
+    operate:<ProcedureOperation sort={"Bubble"}/>
 }
 
 jest.mock("react-swipeable-views", () => {

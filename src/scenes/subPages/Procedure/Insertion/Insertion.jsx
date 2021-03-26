@@ -6,7 +6,7 @@ import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import InsertionIntro from '../../../../components/Introduction/InsertionSort';
 import {InsertionExample} from '../../../../components/ImplementationPseudo/Example';
 
@@ -26,7 +26,7 @@ const intro = {
     animation: <InsertionIntro />,
 }
 
-const operate = <SwitchSort sort={"Insertion"}/>;
+const operate = <ProcedureOperation sort={"Insertion"}/>;
 
 
 

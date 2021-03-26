@@ -1,6 +1,6 @@
 //Register routes for procedure algorithms
 import CorrectnessTutorial from './CorrectnessTutorial';
-import CorrectnessProve from './CorrectnessProve';
+import CorrectnessProof from './CorrectnessProof';
 
 const CorrectnessRouters = [
     {
@@ -8,8 +8,8 @@ const CorrectnessRouters = [
        component: CorrectnessTutorial,
      },
      {
-        path: '/Correctness/Prove',
-        component: CorrectnessProve,
+        path: '/Correctness/Proof',
+        component: CorrectnessProof,
       },
    ]
    

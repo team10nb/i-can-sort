@@ -5,7 +5,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import {QuickExample} from '../../../../components/ImplementationPseudo/Example';
 import QuickIntro from '../../../../components/Introduction/QuickSort';
@@ -26,7 +26,7 @@ const intro = {
     animation: <QuickIntro/>,
 }
 
-const operate = <SwitchSort sort={"Quick"}/>;
+const operate = <ProcedureOperation sort={"Quick"}/>;
 
 
 

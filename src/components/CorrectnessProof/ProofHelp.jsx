@@ -1,5 +1,7 @@
 /*
-    Author:Shiliang Chen,  Yijie Lu
+    Author: Shiliang Chen, Yijie Lu
+
+    Help popup for expaining proof module.
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";

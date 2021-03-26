@@ -1,5 +1,7 @@
 /*
-Author: Shiliang Chen, Yijie Lu
+    Author: Shiliang Chen, Yijie Lu
+
+    Assertion file containing all the assertions of algorithms
 */
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     background: {
         backgroundColor: "#FEE5D4",
-        borderRadius:5,
+        borderRadius: 5,
         marginTop: -8,
         letterSpacing: 0.5,
         fontFamily: "Space Mono",
@@ -49,16 +51,14 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "5px",
     },
     noBackground: {
-        borderRadius:5,
+        borderRadius: 5,
         marginTop: -8,
         letterSpacing: 0.5,
-        fontFamily:"Space Mono",
-        lineHeight:"22px",
-        fontSize:"13px",
-        paddingLeft:"5px",
-    },  
-
-
+        fontFamily: "Space Mono",
+        lineHeight: "22px",
+        fontSize: "13px",
+        paddingLeft: "5px",
+    },
 }));
 
 const Bubble = (props) => {
@@ -81,6 +81,7 @@ const Bubble = (props) => {
             >
                 {`for i from length to 1 do`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 2 ? classes.AssertBack : classes.AssertNoBack
@@ -95,6 +96,7 @@ const Bubble = (props) => {
             >
                 {`  for j from 0 to i do`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
@@ -123,6 +125,7 @@ const Bubble = (props) => {
             >
                 {`    end if`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
@@ -137,12 +140,13 @@ const Bubble = (props) => {
             >
                 {`  end for`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Arr[i] is the largest value among Arr[0] to Arr[i] <br/>
+                &nbsp;Arr[i] is the largest value among Arr[0] to Arr[i] <br />
                 &nbsp;Arr[i] to the end are sorted
             </pre>
             <pre
@@ -152,7 +156,7 @@ const Bubble = (props) => {
             >
                 {`end for`}
             </pre>
-            
+
             <pre
                 className={
                     blockNum === 9 ? classes.background : classes.noBackground
@@ -160,6 +164,7 @@ const Bubble = (props) => {
             >
                 {`return Arr`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
@@ -228,12 +233,13 @@ const Selection = (props) => {
             >
                 {`    end if`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;The last marked number is the minumum <br/>
+                &nbsp;The last marked number is the minumum <br />
                 &nbsp;among the unsorted numbers
             </pre>
             <pre
@@ -250,12 +256,13 @@ const Selection = (props) => {
             >
                 {`  swap(Arr[j],Arr[smallest])`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;The new minimum and the numbers <br/>
+                &nbsp;The new minimum and the numbers <br />
                 &nbsp;before the new minimum are all sorted
             </pre>
             <pre
@@ -265,15 +272,15 @@ const Selection = (props) => {
             >
                 {`end for`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 11 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Repeating ends, the last new minimum is the last <br/>
+                &nbsp;Repeating ends, the last new minimum is the last <br />
                 &nbsp;number, which means all numbers are sorted
             </pre>
-            
         </div>
     );
 
@@ -300,6 +307,7 @@ const Insertion = (props) => {
             >
                 {`for i = 1 to length -1 do`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
@@ -327,7 +335,9 @@ const Insertion = (props) => {
                 }
             >
                 {`  while preIndex>=0 && current<Arr[preIndex] do`}
-            </pre><pre
+            </pre>
+            {/* assertion */}
+            <pre
                 className={
                     blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
@@ -362,12 +372,13 @@ const Insertion = (props) => {
             >
                 {`Arr[preIndex + 1] = current`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Current and elements before current are all sorted 
+                &nbsp;Current and elements before current are all sorted
             </pre>
 
             <pre
@@ -377,12 +388,13 @@ const Insertion = (props) => {
             >
                 {`end for`}
             </pre>
+            {/* assertion */}
             <pre
                 className={
                     blockNum === 11 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;From the first to the end of the array are sorted <br/>
+                &nbsp;From the first to the end of the array are sorted <br />
             </pre>
         </div>
     );
@@ -430,7 +442,7 @@ Output: The result of sorting Arr.`}
             {/* assertion */}
             <pre
                 className={
-                    blockNum === 3 ? classes.AssertBack: classes.AssertNoBack
+                    blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 {`  Pivot is the beginning of the partition`}
@@ -478,7 +490,7 @@ Output: The result of sorting Arr.`}
             >
                 &nbsp;&nbsp;Arr[i] would be swapped to the left side
             </pre>
-            
+
             <pre
                 className={
                     blockNum === 9 ? classes.background : classes.noBackground
@@ -488,18 +500,14 @@ Output: The result of sorting Arr.`}
             </pre>
             <pre
                 className={
-                    blockNum === 10
-                        ? classes.background
-                        : classes.noBackground
+                    blockNum === 10 ? classes.background : classes.noBackground
                 }
             >
                 {`  end for`}
             </pre>
             <pre
                 className={
-                    blockNum === 11
-                        ? classes.background
-                        : classes.noBackground
+                    blockNum === 11 ? classes.background : classes.noBackground
                 }
             >
                 {`  swap(Arr[pivot], Arr[storeIndex - 1])`}
@@ -508,27 +516,21 @@ Output: The result of sorting Arr.`}
             <pre
                 wordWrap="break-word"
                 className={
-                    blockNum === 12
-                        ? classes.AssertBack
-                        : classes.AssertNoBack
+                    blockNum === 12 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 {` The pivot is at its sorted position `}
             </pre>
             <pre
                 className={
-                    blockNum === 12
-                        ? classes.background
-                        : classes.noBackground
+                    blockNum === 12 ? classes.background : classes.noBackground
                 }
             >
                 {`end for`}
-            </pre>          
+            </pre>
             <pre
                 className={
-                    blockNum === 13
-                        ? classes.background
-                        : classes.noBackground
+                    blockNum === 13 ? classes.background : classes.noBackground
                 }
             >
                 {`return`}
@@ -537,17 +539,12 @@ Output: The result of sorting Arr.`}
             <pre
                 wordWrap="break-word"
                 className={
-                    blockNum === 13
-                        ? classes.AssertBack
-                        : classes.AssertNoBack
+                    blockNum === 13 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;All pivots are at sorted position, <br />{" "}
-                which means all numbers are sorted
+                &nbsp;All pivots are at sorted position, <br /> which means all
+                numbers are sorted
             </pre>
-            {/* <pre wordWrap="break-word" className={blockNum===13 ? classes.AssertBack : classes.AssertNoBack}>
-
-        </pre> */}
         </div>
     );
 
@@ -609,7 +606,9 @@ const Heap = (props) => {
                     blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                 &nbsp;&nbsp;All nodes are discarded from the heap, the array is <br/>&nbsp;&nbsp;sorted
+                &nbsp;&nbsp;All nodes are discarded from the heap, the array is{" "}
+                <br />
+                &nbsp;&nbsp;sorted
             </pre>
         </div>
     );
@@ -665,7 +664,9 @@ const Merge = (props) => {
                     blockNum === 4 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;LeftIndex to rightIndex of array is splited into  <br/>&nbsp;&nbsp;two parts
+                &nbsp;&nbsp;LeftIndex to rightIndex of array is splited into{" "}
+                <br />
+                &nbsp;&nbsp;two parts
             </pre>
             <pre
                 className={
@@ -680,7 +681,9 @@ const Merge = (props) => {
                     blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;LeftIndex to midIndex of the array (left part) <br/>&nbsp;&nbsp;are sorted
+                &nbsp;&nbsp;LeftIndex to midIndex of the array (left part){" "}
+                <br />
+                &nbsp;&nbsp;are sorted
             </pre>
             <pre
                 className={
@@ -695,7 +698,9 @@ const Merge = (props) => {
                     blockNum === 6 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;MidIndex to rightIndex of the array (right part) <br/>&nbsp;&nbsp;are sorted
+                &nbsp;&nbsp;MidIndex to rightIndex of the array (right part){" "}
+                <br />
+                &nbsp;&nbsp;are sorted
             </pre>
             <pre
                 className={
@@ -710,7 +715,9 @@ const Merge = (props) => {
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;Left part and right part are merged into sorted<br/>&nbsp;&nbsp;leftIndex to rightIndex of array are sorted
+                &nbsp;&nbsp;Left part and right part are merged into sorted
+                <br />
+                &nbsp;&nbsp;leftIndex to rightIndex of array are sorted
             </pre>
             <pre
                 className={
@@ -725,7 +732,8 @@ const Merge = (props) => {
                     blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;&nbsp;Start to end of array are sorted, merge sort finished
+                &nbsp;&nbsp;Start to end of array are sorted, merge sort
+                finished
             </pre>
             <pre
                 className={

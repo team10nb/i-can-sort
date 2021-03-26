@@ -13,7 +13,7 @@ import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
 import {random} from "lodash";
 
-export default function SwitchSort(props) {
+export default function ProcedureOperation(props) {
     const { sort } = props;
 
     // The user input

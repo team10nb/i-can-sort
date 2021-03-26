@@ -28,5 +28,5 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 ### **Demo**
 
 ```jsx
-<SwitchSort sort={"Bubble"} />
+<ProcedureOperation sort={"Bubble"} />
 ```

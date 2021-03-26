@@ -79,7 +79,7 @@ Object {
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
               >
                 <a
-                  href="/Correctness/Prove"
+                  href="/Correctness/Proof"
                 >
                   <div
                     style="display: inline-block; margin: 10px;"
@@ -472,7 +472,7 @@ Object {
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
             >
               <a
-                href="/Correctness/Prove"
+                href="/Correctness/Proof"
               >
                 <div
                   style="display: inline-block; margin: 10px;"

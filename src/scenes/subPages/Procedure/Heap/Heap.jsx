@@ -1,7 +1,7 @@
 import React from 'react';
 import {color} from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import SwitchSort from '../../../../components/SwitchSort/SwitchSort';
+import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import {HeapExample} from '../../../../components/ImplementationPseudo/Example';
 import HeapIntro from '../../../../components/Introduction/HeapSort';
@@ -23,7 +23,7 @@ const intro = {
     animation: <HeapIntro/>,
 }
 
-const operate = <SwitchSort sort={"Heap"}/>;
+const operate = <ProcedureOperation sort={"Heap"}/>;
 
 
 
