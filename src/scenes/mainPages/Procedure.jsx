@@ -17,6 +17,12 @@ import img_insertion from "../../resource/insert.png";
 import img_quick from "../../resource/quick.png";
 import img_merge from "../../resource/merge.png";
 import img_heap from "../../resource/heap.png";
+import gif_bubble from "../../resource/bubble.gif";
+import gif_selection from "../../resource/selection.gif";
+import gif_insertion from "../../resource/insertion.gif";
+import gif_quick from "../../resource/quick.gif";
+import gif_merge from "../../resource/merge.gif";
+import gif_heap from "../../resource/heap.gif";
 import { motion } from "framer-motion";
 import { isUndefined } from "lodash";
 
@@ -120,37 +126,37 @@ export default function ProcedureMainPage(props) {
     const images = [
         {
             static: img_bubble,
-            gif: "bubble.gif",
+            gif: gif_bubble,
             title: "Bubble sort",
             width: "20%",
         },
         {
             static: img_selection,
-            gif: "selection.gif",
+            gif: gif_selection,
             title: "Selection sort",
             width: "20%",
         },
         {
             static: img_insertion,
-            gif: "insertion.gif",
+            gif: gif_insertion,
             title: "Insertion sort",
             width: "20%",
         },
         {
             static: img_quick,
-            gif: "quick.gif",
+            gif: gif_quick,
             title: "Quick sort",
             width: "20%",
         },
         {
             static: img_merge,
-            gif: "merge.gif",
+            gif: gif_merge,
             title: "Merge sort",
             width: "20%",
         },
         {
             static: img_heap,
-            gif: "heap.gif",
+            gif: gif_heap,
             title: "Heap sort",
             width: "20%",
         },
