@@ -3,7 +3,7 @@
 */
 import React from 'react';
 import { useState } from 'react';
-import AlgorithmButton from '../../../../components/CorrectnessExample/AlgorithmButton';
+import AlgorithmButton from '../../../../components/AlgorithmButton/AlgorithmButton';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import {color} from '../../../mainPages/Correctness';
