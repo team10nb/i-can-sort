@@ -72,7 +72,7 @@ trace.splice(19, 0, traceUnit);
 
 
 const description = [
-    "Heap sort is an algorithm used to sort a sequence of numbers, it rely heavily on the use of heap data structure", 
+    "Heap sort is an sorting algorithm which heavily relies on the use of heap data structure", 
     "To begin, all of the numbers are stored in a heap.", 
     "In this example, numbers are structured in max heap, whose top element is the maximum element.",
     "A max heap is built, heap size is: 6", 
