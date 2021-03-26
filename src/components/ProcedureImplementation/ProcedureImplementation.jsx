@@ -1,8 +1,10 @@
 /*
     Author: Ruizi Han, Yani Huang
+
+    Export corresponding implementation.
 */
 
-import ImplementationPseudo from "./ImplementationPseudo";
+import ImplementationAnimation from "./ImplementationAnimation";
 import { Bubble, Selection, Insertion, Quick, Heap, Merge } from "./PseudoCode";
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
@@ -17,7 +19,7 @@ import QuickFile from "../../resource/quick.pdf";
 import MergeFile from "../../resource/merge.pdf";
 import HeapFile from "../../resource/heap.pdf";
 
-const BubbleExample = () => {
+const BubbleImplementation = () => {
     const Code = Bubble;
     const title = "Bubble Sort";
     const algorithm = "bubble";
@@ -33,10 +35,10 @@ const BubbleExample = () => {
         file: BubbleFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
-const SelectionExample = () => {
+const SelectionImplementation = () => {
     const Code = Selection;
     const title = "Selection Sort";
     const algorithm = "selection";
@@ -52,10 +54,10 @@ const SelectionExample = () => {
         file: SelectionFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
-const InsertionExample = () => {
+const InsertionImplementation = () => {
     const Code = Insertion;
     const title = "Insertion Sort";
     const algorithm = "insertion";
@@ -71,10 +73,10 @@ const InsertionExample = () => {
         file: InsertionFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
-const QuickExample = () => {
+const QuickImplementation = () => {
     const Code = Quick;
     const title = "Quick Sort";
     const algorithm = "quick";
@@ -90,10 +92,10 @@ const QuickExample = () => {
         file: QuickFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
-const MergeExample = () => {
+const MergeImplementation = () => {
     const Code = Merge;
     const title = "Merge Sort";
     const algorithm = "merge";
@@ -109,10 +111,10 @@ const MergeExample = () => {
         file: MergeFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
-const HeapExample = () => {
+const HeapImplementation = () => {
     const Code = Heap;
     const title = "Heap Sort";
     const algorithm = "heap";
@@ -128,14 +130,14 @@ const HeapExample = () => {
         file: HeapFile,
     };
 
-    return <ImplementationPseudo {...props} />;
+    return <ImplementationAnimation {...props} />;
 };
 
 export {
-    BubbleExample,
-    SelectionExample,
-    InsertionExample,
-    QuickExample,
-    HeapExample,
-    MergeExample,
+    BubbleImplementation,
+    SelectionImplementation,
+    InsertionImplementation,
+    QuickImplementation,
+    HeapImplementation,
+    MergeImplementation,
 };

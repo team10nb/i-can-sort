@@ -1,5 +1,7 @@
 /*
-Author: Yani Huang, Ruizi Han
+    Author: Yani Huang, Ruizi Han
+    
+    Pseudocode for algorithms.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
