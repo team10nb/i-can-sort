@@ -36,7 +36,7 @@ export default function ImplementationPseudo(props){
             file } = props;
 
     // The user input
-    const [str, setStr] = useState("4, 8, 11, 13, 5");
+    const [str, setStr] = useState("4,8,11,13,5");
     // The array gained from processed user input
     const [arr, setArr] = useState([4, 8, 11, 13, 5]);
     // The bool value which represent whether user input is valid or not
