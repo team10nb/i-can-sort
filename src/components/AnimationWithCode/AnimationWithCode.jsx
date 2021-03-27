@@ -23,7 +23,7 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-export default function Terminable(props) {
+export default function AnimationWithCode(props) {
     const { trace, description, width, blockNums, useStyles, Code, title } = props;
 
     // The bars displayed to visulise the numbers

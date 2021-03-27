@@ -11,7 +11,7 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
-import {random} from "lodash";
+import { random } from "lodash";
 
 export default function ProcedureOperation(props) {
     const { sort } = props;
@@ -67,14 +67,14 @@ export default function ProcedureOperation(props) {
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than "+MAXLENGTH+" numbers that between "+MINNUMBER+"-"+MAXNUMBER+"."
+                    "Please enter no more than " + MAXLENGTH + " numbers that between " + MINNUMBER + "-" + MAXNUMBER + "."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than "+MAXLENGTH+" numbers.");
+                setWrongMsg("Please enter no more than " + MAXLENGTH + " numbers.");
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between "+MINNUMBER+"-"+MAXNUMBER+".");
+                setWrongMsg("Please enter numbers that between " + MINNUMBER + "-" + MAXNUMBER + ".");
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
@@ -82,18 +82,18 @@ export default function ProcedureOperation(props) {
             }
         } else {
             setIsValid(false);
-            setWrongMsg("Please follow the correct format."); 
+            setWrongMsg("Please follow the correct format.");
         }
         return 0;
     };
 
     // to produce a random array
     const shuffle = () => {
-        const length = random(3,MAXLENGTH-4);
+        const length = random(3, MAXLENGTH - 4);
         let array = [];
         for (let i = 0; i < length; i++) {
             // const element = array[i];
-            array.push(random(1,MAXNUMBER-5));
+            array.push(random(1, MAXNUMBER - 5));
         }
         setIsValid(true);
         setWrongMsg(" ");
@@ -128,30 +128,30 @@ export default function ProcedureOperation(props) {
         >
             <div style={{
                 height: 40,
-                width:900,
+                width: 900,
                 display: "flex"
             }}>
                 <div style={{
-                height: 40,
-                width: 90,
-                fontSize:"26px",
-                fontWeight:"500",
+                    height: 40,
+                    width: 90,
+                    fontSize: "26px",
+                    fontWeight: "500",
                 }}>
-                {sort }
+                    {sort}
                 </div>
-                
-            <InputBar
-                inputString = {str}
-                handleChange={handleChange}
-                checkFormat={checkFormat}
-                isValid={isValid}
-                wrongMsg={wrongMsg}
-                shuffle={shuffle}
-                max={MAXNUMBER}
-                barLength="500px"
-            />
+
+                <InputBar
+                    inputString={str}
+                    handleChange={handleChange}
+                    checkFormat={checkFormat}
+                    isValid={isValid}
+                    wrongMsg={wrongMsg}
+                    shuffle={shuffle}
+                    max={MAXNUMBER}
+                    barLength="500px"
+                />
             </div>
-            <SwitchAnimation {...trace} width={900} explainationBoxHeight={3}/>
+            <SwitchAnimation {...trace} width={900} explainationBoxHeight={3} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 /*
     Author: Ruizi Han, Yani Huang
 
-    Export corresponding implementation.
+    Export corresponding implementation for sorting algorithms.
 */
 
 import ImplementationAnimation from "./ImplementationAnimation";
