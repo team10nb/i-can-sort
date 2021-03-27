@@ -13,8 +13,6 @@ import { useStyles } from './Style';
 const Code = (props) => {
     const { blockNum } = props;
 
-
-
     const useStyles = makeStyles((theme) => ({
         background: {
             backgroundColor: "#c8e6c9",
@@ -108,14 +106,13 @@ export default function ForLoop() {
         descriptionUnit = 'i = ' + (i - 1) + ', haven\'t exceeded 3';
         description.push(descriptionUnit, 'do a = a + b', 'i increase by 1');
 
-        if (i == 4) {
+        if (i === 4) {
             trace.push(traceUnit);
             blockNums.push(4);
             description.push('i = 4, jump out of the loop');
         }
 
     }
-
 
     const props = {
         trace,
