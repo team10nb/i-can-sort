@@ -37,7 +37,7 @@ const content4 = (
     </Typography>
 );
 
-export default function CorrectnessHelp() {
+export default function CorrectnessHelp(props) {  
     const data = {
         color: color,
         logo0: logo0,
@@ -53,6 +53,7 @@ export default function CorrectnessHelp() {
         contentMarginTop: "0",
         avatarMarginLeft: "9px",
         avatarMarginTop: "9px",
+        name:"CorrectnessHelp",
     };
 
     return (

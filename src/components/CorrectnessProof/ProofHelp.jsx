@@ -35,6 +35,7 @@ export default function Explanation() {
         contentMarginTop: "0",
         avatarMarginLeft: "9px",
         avatarMarginTop: "9px",
+        name: "Proof"
     };
 
     return (

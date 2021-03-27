@@ -83,10 +83,11 @@ Object {
                       class="MuiTouchRipple-root"
                     />
                   </button>
+                  ;
                   <div
                     aria-hidden="true"
                     class="MuiBackdrop-root makeStyles-backdrop-29"
-                    style="opacity: 0; visibility: hidden;"
+                    style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
                   >
                     <div
                       class="MuiPaper-root MuiCard-root makeStyles-card-30 MuiPaper-elevation1 MuiPaper-rounded"
@@ -97,8 +98,10 @@ Object {
                         <button
                           aria-label="close"
                           class="MuiButtonBase-root MuiIconButton-root"
+                          index="2"
                           tabindex="0"
                           type="button"
+                          value="0"
                         >
                           <span
                             class="MuiIconButton-label"
@@ -302,10 +305,11 @@ Object {
                     class="MuiTouchRipple-root"
                   />
                 </button>
+                ;
                 <div
                   aria-hidden="true"
                   class="MuiBackdrop-root makeStyles-backdrop-29"
-                  style="opacity: 0; visibility: hidden;"
+                  style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
                 >
                   <div
                     class="MuiPaper-root MuiCard-root makeStyles-card-30 MuiPaper-elevation1 MuiPaper-rounded"
@@ -316,8 +320,10 @@ Object {
                       <button
                         aria-label="close"
                         class="MuiButtonBase-root MuiIconButton-root"
+                        index="2"
                         tabindex="0"
                         type="button"
+                        value="0"
                       >
                         <span
                           class="MuiIconButton-label"
