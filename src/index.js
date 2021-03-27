@@ -6,9 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 // import { SwitchAnimation } from "./components/SwitchAnimation/SwitchAnimation";
 import "./styles.css";
 import App from './App';
-import IntroBubble from "./components/Introduction/BubbleSort";
-import IntroInsertion from "./components/Introduction/InsertionSort";
-import IntroSelection from "./components/Introduction/SelectionSort";
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 

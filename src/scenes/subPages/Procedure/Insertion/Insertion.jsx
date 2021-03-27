@@ -7,7 +7,7 @@ import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
-import InsertionIntro from '../../../../components/Introduction/InsertionSort';
+import InsertionIntro from '../../../../components/ProcedureIntroduction/InsertionSort';
 import { InsertionImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 
 

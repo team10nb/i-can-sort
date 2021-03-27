@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ProcedureSubPage from './ProcedureSubPage';
-import BubbleIntro from '../../../components/Introduction/BubbleSort';
+import BubbleIntro from '../../../components/ProcedureIntroduction/BubbleSort';
 import ProcedureOperation from '../../../components/ProcedureOperation/ProcedureOperation';
 const props = {
     color: "#FFFFFF",

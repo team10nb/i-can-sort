@@ -2,7 +2,7 @@ import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
-import SelectionIntro from '../../../../components/Introduction/SelectionSort';
+import SelectionIntro from '../../../../components/ProcedureIntroduction/SelectionSort';
 import { SelectionImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
 

@@ -2,7 +2,7 @@ import React from "react";
 import { color } from "../../../mainPages/Procedure";
 import ProcedureSubPage from "../ProcedureSubPage";
 import ProcedureOperation from "../../../../components/ProcedureOperation/ProcedureOperation";
-import BubbleIntro from "../../../../components/Introduction/BubbleSort";
+import BubbleIntro from "../../../../components/ProcedureIntroduction/BubbleSort";
 import { BubbleImplementation } from "../../../../components/ProcedureImplementation/ProcedureImplementation";
 
 const introMessage = (

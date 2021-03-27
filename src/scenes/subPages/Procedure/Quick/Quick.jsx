@@ -8,7 +8,7 @@ import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import { QuickImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
-import QuickIntro from '../../../../components/Introduction/QuickSort';
+import QuickIntro from '../../../../components/ProcedureIntroduction/QuickSort';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
