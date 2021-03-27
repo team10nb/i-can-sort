@@ -10,7 +10,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ExplainationBox from "../ExplanationBox/ExplanationBox";
-import IntroBubble from '../Introduction/BubbleSort';
 import { Divider } from "@material-ui/core";
 //css for table
 const styles = {
