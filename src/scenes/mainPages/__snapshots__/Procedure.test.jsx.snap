@@ -425,6 +425,7 @@ Object {
                           class="MuiTouchRipple-root"
                         />
                       </button>
+                      ;
                       <div
                         aria-hidden="true"
                         class="MuiBackdrop-root makeStyles-backdrop-89"
@@ -439,8 +440,10 @@ Object {
                             <button
                               aria-label="close"
                               class="MuiButtonBase-root MuiIconButton-root"
+                              index="2"
                               tabindex="0"
                               type="button"
+                              value="0"
                             >
                               <span
                                 class="MuiIconButton-label"
@@ -645,7 +648,8 @@ Object {
                   >
                     We designed a special section of Tutorial for freshmen. 
                     <br />
-                    Do you have any experience on programming? 
+                    Do you have any experience on programming?
+                     
                     <br />
                   </p>
                 </div>
@@ -1148,6 +1152,7 @@ Object {
                         class="MuiTouchRipple-root"
                       />
                     </button>
+                    ;
                     <div
                       aria-hidden="true"
                       class="MuiBackdrop-root makeStyles-backdrop-89"
@@ -1162,8 +1167,10 @@ Object {
                           <button
                             aria-label="close"
                             class="MuiButtonBase-root MuiIconButton-root"
+                            index="2"
                             tabindex="0"
                             type="button"
+                            value="0"
                           >
                             <span
                               class="MuiIconButton-label"
@@ -1368,7 +1375,8 @@ Object {
                 >
                   We designed a special section of Tutorial for freshmen. 
                   <br />
-                  Do you have any experience on programming? 
+                  Do you have any experience on programming?
+                   
                   <br />
                 </p>
               </div>

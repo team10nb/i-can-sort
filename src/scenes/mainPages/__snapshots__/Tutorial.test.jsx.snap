@@ -271,6 +271,7 @@ Object {
                         class="MuiTouchRipple-root"
                       />
                     </button>
+                    ;
                     <div
                       aria-hidden="true"
                       class="MuiBackdrop-root makeStyles-backdrop-53"
@@ -285,8 +286,10 @@ Object {
                           <button
                             aria-label="close"
                             class="MuiButtonBase-root MuiIconButton-root"
+                            index="2"
                             tabindex="0"
                             type="button"
+                            value="0"
                           >
                             <span
                               class="MuiIconButton-label"
@@ -735,6 +738,7 @@ Object {
                       class="MuiTouchRipple-root"
                     />
                   </button>
+                  ;
                   <div
                     aria-hidden="true"
                     class="MuiBackdrop-root makeStyles-backdrop-53"
@@ -749,8 +753,10 @@ Object {
                         <button
                           aria-label="close"
                           class="MuiButtonBase-root MuiIconButton-root"
+                          index="2"
                           tabindex="0"
                           type="button"
+                          value="0"
                         >
                           <span
                             class="MuiIconButton-label"
