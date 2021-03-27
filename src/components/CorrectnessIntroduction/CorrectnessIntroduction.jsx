@@ -12,7 +12,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
 import { color as CorrectnessColor } from "../../scenes/mainPages/Correctness";
-import TutorialLink from "../CorrectnessHelp/CorrectnessHelp";
+import CorrectnessHelp from "../CorrectnessHelp/CorrectnessHelp";
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -107,6 +107,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CorrectnessIntroduction(props) {
     const classes = useStyles();
+
+    if (localStorage.getItem("IntroFirst") == 1) {
+        localStorage.setItem("IntroFirst", JSON.stringify(1));
+    } else if (localStorage.getItem("IntroFirst") == 0) {
+        localStorage.setItem("IntroFirst", JSON.stringify(0));
+    } else {
+        localStorage.setItem("IntroFirst", JSON.stringify(1));
+    }
+
+    // const firstIn = localStorage.getItem("IntroFirst")
+    //     ? JSON.parse(localStorage.getItem("IntroFirst"))
+    //     : null;
 
     const week = [
         
@@ -270,6 +282,21 @@ export default function CorrectnessIntroduction(props) {
         setTimeOutIds(illegalTimeoutIds);
     };
 
+    // const [first, setFirst] = React.useState(true);
+
+    // const handleClickOpen = () =>{
+    //     setOpen(true);
+    // };
+    //for tutorial help
+    
+    // const handleClickOpen = () =>{
+    //     if (firstIn === 1){
+    //         setFirst(true);
+    //     }else{
+    //         setFirst(false);
+    //     }
+    // };
+
     return (
         <div className={classes.div}>
             <Card className={classes.card}>           
@@ -345,7 +372,8 @@ export default function CorrectnessIntroduction(props) {
                 <div className={classes.divider}>
                     <Divider  />
                     <div className={classes.explanation}>
-                        <TutorialLink />
+                        <CorrectnessHelp /> 
+                        
                         <div className={classes.links}>
                             <Typography className={classes.text}>
                                 For&nbsp;any&nbsp; 
