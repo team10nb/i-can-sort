@@ -17,6 +17,9 @@ import { motion } from "framer-motion";
 import img_swap from "../../resource/swap.png";
 import img_loop from "../../resource/loop.png";
 import img_terminology from "../../resource/terminology.png";
+import gif_swap from "../../resource/swap.gif";
+import gif_loop from "../../resource/loop.gif";
+import gif_terminology from "../../resource/terminology.gif";
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -113,19 +116,19 @@ export default function TutorialMainPage() {
     const images = [
         {
             static: img_swap,
-            gif: "swap.gif",
+            gif: gif_swap,
             title: "Swap",
             width: "20%",
         },
         {
             static: img_loop,
-            gif: "loop.gif",
+            gif: gif_loop,
             title: "Loop",
             width: "20%",
         },
         {
             static: img_terminology,
-            gif: "terminology.gif",
+            gif: gif_terminology,
             title: "Terminology",
             width: "20%",
         },
