@@ -11,10 +11,11 @@ const introMessage = (
         <p style={{ textAlign: "left", fontSize: 18, letterSpacing: 0.5 }}>
             Bubble sort is a simple sorting algorithm that repeatedly steps
             through the list, compares adjacent elements and swaps them if they
-            are in the wrong order. The pass through the list is repeated until
+            are in the wrong order. 
+            <br/><br/>The pass through the list is repeated until
             the list is sorted. The algorithm, which is a comparison sort, is
             named for the way smaller or larger elements "bubble" to the top of
-            the list.
+            the list. See explanations step by step on the right.
         </p>
     </div>
 );

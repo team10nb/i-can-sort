@@ -18,7 +18,8 @@ const introMessage =
     <div>
         <h1>Quick sort</h1>
         <p style={{ textAlign: "left", fontSize: 19, letterSpacing: 0.5 }}>
-            Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort. The sub-arrays are then sorted recursively.
+            Quick sort works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. 
+            <br/><br/>For this reason, it is sometimes called partition-exchange sort. The sub-arrays are then sorted recursively. Please see explanations step by step on the right.
         </p>
     </div>
 

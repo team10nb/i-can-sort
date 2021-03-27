@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   cardBackground: {
 
     width: 650,
-    height: 450,
+    height: 460,
     // backgroundColor: "white",
     backgroundColor: "rgba(255,255,255,0.8)",
     borderRadius: "20px",
@@ -75,11 +75,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   content1: {
-    marginTop: "69px",
+    marginTop: "50px",
     borderRadius: "30px",
   },
   content2: {
-    marginTop: "55px",
+    marginTop: "52px",
     borderRadius: "30px",
   },
   icon: {
@@ -133,7 +133,8 @@ export default function FirstInBackdrop(props) {
             </Typography>
               <Typography gutterBottom style={{ fontFamily: "Quicksand", fontWeight: "600", color: "#0e4686" }} className={classes.tip}>
                 We designed a special section of Tutorial for freshmen. <br />
-              Do you have any experience on programming? <br />
+                You can learn sorting and correctness in other two sections. <br/>
+                Do you have any experience on programming? <br />
               </Typography>
 
             </div>
@@ -153,7 +154,7 @@ export default function FirstInBackdrop(props) {
                   >
                     <Card className={classes.cardOne} >
                       <CardContent className={classes.content1}>
-                        <Typography variant="h6" gutterBottom style={{ fontFamily: "inherit", fontWeight: "600" }}>I'm new at this, go to Tutorial first!
+                        <Typography variant="h6" gutterBottom style={{ fontFamily: "inherit", fontWeight: "600" }}>I'm new at programming, go to Tutorial first!
                   </Typography>
                       </CardContent>
                     </Card>
@@ -186,7 +187,7 @@ export default function FirstInBackdrop(props) {
 
           </Card>
         </motion.div>
-        {snack == 1 ? <Snackbar open={appear} onClose={handleClose}  >
+        {snack === 1 ? <Snackbar open={appear} onClose={handleClose}  >
           <Alert onClose={handleClose} severity="success" >
             Successfully reset history!
         </Alert>
