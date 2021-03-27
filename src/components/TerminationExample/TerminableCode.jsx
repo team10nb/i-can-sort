@@ -1,18 +1,20 @@
 /*
     Author: Ruizi Han
+
+    Example animation and code of Terminating Bubble Sort.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
-import AnimationCode from '../AnimationCode/AnimationCode';
+import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
 import BubbleSort from '../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort';
 
-const useStyles = makeStyles((theme) =>({
+const useStyles = makeStyles((theme) => ({
     root: {
-        '& > * + *': {     
+        '& > * + *': {
             marginTop: theme.spacing(3),
         },
-        width: 380,    
+        width: 380,
     },
     bars: {
         listStyle: "none",
@@ -44,95 +46,95 @@ const useStyles = makeStyles((theme) =>({
         textAlign: "center",
         fontWeight: "600",
     },
-    cardOne:{
-        width: 380, 
+    cardOne: {
+        width: 380,
         height: 240,
-        background: "#F0F0F0",        
+        background: "#F0F0F0",
     },
-    cardTwo:{
-        width: 380, 
+    cardTwo: {
+        width: 380,
         height: 240,
-        background: "#F0F0F0",        
+        background: "#F0F0F0",
     },
-    slider:{
+    slider: {
         marginLeft: 28,
         marginBottom: 0,
     },
-    title:{
-        display:"flex",
+    title: {
+        display: "flex",
         fontFamily: "inherit",
         fontWeight: "700",
-        fontSize:"16px",
+        fontSize: "16px",
         justifyContent: "center",
     },
-    box:{
-        marginTop:-60,
+    box: {
+        marginTop: -60,
     }
 }));
 
 // dynamic pseudocode
-const Code = (props)=> {
-    const {blockNum} = props;
-  
+const Code = (props) => {
+    const { blockNum } = props;
+
     const useStyles = makeStyles((theme) => ({
-        background:{
+        background: {
             backgroundColor: "#FEE5D4",
             borderRadius: 5,
             marginTop: -8,
             letterSpacing: 0.5,
-            fontFamily:"Space Mono",
-            lineHeight:"22px",
-            fontSize:"12px",
-            paddingLeft:"5px",
+            fontFamily: "Space Mono",
+            lineHeight: "22px",
+            fontSize: "12px",
+            paddingLeft: "5px",
         },
-        noBackground:{
+        noBackground: {
             marginTop: -8,
             letterSpacing: 0.5,
-            fontFamily:"Space Mono",
-            lineHeight:"22px",
-            fontSize:"12px",
-            paddingLeft:"5px",
-        }, 
+            fontFamily: "Space Mono",
+            lineHeight: "22px",
+            fontSize: "12px",
+            paddingLeft: "5px",
+        },
     }));
     const classes = useStyles();
 
 
-    
-    const terminableCode = 
-    <div>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Algorithm: BubbleSort(Arr)`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`  length = Arr.length`}
-        </pre>
-        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  for i from 0 to length-1 do`}
-        </pre>
-        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`    for j from 0 to length-1-i do`}
-        </pre>
-        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`      if Arr[j] > Arr[j+1] then`}
-        </pre>
-        <pre className={blockNum===5 ? classes.background : classes.noBackground}>
-{`        swap((Arr[j], Arr[j+1])`}
-        </pre>
-        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
-{`      end if`}
-        </pre>
-        <pre className={blockNum===7 ? classes.background : classes.noBackground}>
-{`    end for`}
-        </pre>
-        <pre className={blockNum===8 ? classes.background : classes.noBackground}>
-{`  end for`}
-        </pre>
-        <pre className={blockNum===9 ? classes.background : classes.noBackground}>
-{`return Arr`}
-        </pre>
-    </div>
-    
-    return(
+
+    const terminableCode =
+        <div>
+            <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
+                {`Algorithm: BubbleSort(Arr)`}
+            </pre>
+            <pre className={classes.noBackground}>
+                {`  length = Arr.length`}
+            </pre>
+            <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
+                {`  for i from 0 to length-1 do`}
+            </pre>
+            <pre className={blockNum === 3 ? classes.background : classes.noBackground}>
+                {`    for j from 0 to length-1-i do`}
+            </pre>
+            <pre className={blockNum === 4 ? classes.background : classes.noBackground}>
+                {`      if Arr[j] > Arr[j+1] then`}
+            </pre>
+            <pre className={blockNum === 5 ? classes.background : classes.noBackground}>
+                {`        swap((Arr[j], Arr[j+1])`}
+            </pre>
+            <pre className={blockNum === 6 ? classes.background : classes.noBackground}>
+                {`      end if`}
+            </pre>
+            <pre className={blockNum === 7 ? classes.background : classes.noBackground}>
+                {`    end for`}
+            </pre>
+            <pre className={blockNum === 8 ? classes.background : classes.noBackground}>
+                {`  end for`}
+            </pre>
+            <pre className={blockNum === 9 ? classes.background : classes.noBackground}>
+                {`return Arr`}
+            </pre>
+        </div>
+
+    return (
         <div>{terminableCode}</div>
     )
 }
@@ -141,8 +143,8 @@ const Code = (props)=> {
 const TerminableCode = () => {
     // example array
     const arr = [2, 6, 9, 10, 3];
-    const {trace, blockNums} = BubbleSort(arr);
-    
+    const { trace, blockNums } = BubbleSort(arr);
+
     const props = {
         trace,
         description: "",
@@ -152,8 +154,8 @@ const TerminableCode = () => {
         Code,
         title: "Terminating Bubble Sort",
     };
-    
-    return(<AnimationCode {...props}/>);
+
+    return (<AnimationWithCode {...props} />);
 }
 
 export {

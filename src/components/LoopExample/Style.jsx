@@ -1,11 +1,17 @@
+/*
+    Author: Yijie Lu, Ruizi Han
+
+    Styles used by ForLoop and WhileLoop example.
+*/
+
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) =>({
+const useStyles = makeStyles((theme) => ({
     root: {
-        '& > * + *': {     
+        '& > * + *': {
             marginTop: theme.spacing(3),
         },
-        width: 380,    
+        width: 380,
     },
     bars: {
         listStyle: "none",
@@ -37,35 +43,35 @@ const useStyles = makeStyles((theme) =>({
         textAlign: "center",
         fontWeight: "600",
     },
-    cardOne:{
-        width: 380, 
+    cardOne: {
+        width: 380,
         height: 240,
         display: 'grid',
         alignContent: 'flex-end',
         justifyContent: 'center',
-        background: "#F0F0F0",        
+        background: "#F0F0F0",
     },
-    cardTwo:{
-        width: 380, 
+    cardTwo: {
+        width: 380,
         height: 240,
-        background: "#F0F0F0",        
+        background: "#F0F0F0",
     },
-    slider:{
+    slider: {
         // marginLeft: 82,
         marginBottom: -10,
     },
-    control:{
+    control: {
         marginBottom: 5,
     },
-    title:{
-        display:"flex",
+    title: {
+        display: "flex",
         fontFamily: "inherit",
         fontWeight: "700",
-        fontSize:"18px",
+        fontSize: "18px",
         justifyContent: "center",
         marginTop: 14,
     },
-    explanation:{
+    explanation: {
         fontFamily: "inherit",
         fontSize: "16px",
         fontWeight: "700",
@@ -77,4 +83,4 @@ const useStyles = makeStyles((theme) =>({
 
 
 
-export {useStyles};
+export { useStyles };

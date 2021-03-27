@@ -1,5 +1,7 @@
 /*
     Author: Ruizi Han, Shiliang Chen
+
+    Example animation and code of Non-terminating Swap.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,7 +9,6 @@ import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -25,56 +26,56 @@ const spring = {
 };
 
 // dynamic pseudocode
-const Code = (props)=> {
-    const {blockNum} = props;
-  
+const Code = (props) => {
+    const { blockNum } = props;
+
     const useStyles = makeStyles((theme) => ({
-        background:{
+        background: {
             backgroundColor: "#FEE5D4",
             borderRadius: 5,
             marginTop: -6,
             letterSpacing: 0.5,
-            fontFamily:"Space Mono",
-            lineHeight:"22px",
-            fontSize:"12px",
-            paddingLeft:"5px",
+            fontFamily: "Space Mono",
+            lineHeight: "22px",
+            fontSize: "12px",
+            paddingLeft: "5px",
         },
-        noBackground:{
+        noBackground: {
             marginTop: -6,
             letterSpacing: 0.5,
-            fontFamily:"Space Mono",
-            lineHeight:"22px",
-            fontSize:"12px",
-            paddingLeft:"5px",
-        }, 
+            fontFamily: "Space Mono",
+            lineHeight: "22px",
+            fontSize: "12px",
+            paddingLeft: "5px",
+        },
     }));
     const classes = useStyles();
 
-    const interminableCode = 
-    <div>
-        <pre className={blockNum===1 ? classes.background : classes.noBackground}>
-{`Algorithm: SwapForever(Arr)`}
-        </pre>
-        <pre className={classes.noBackground}>
-{`  i = 1`}
-        </pre>
-        <pre className={blockNum===2 ? classes.background : classes.noBackground}>
-{`  while i > 0 do`}
-        </pre>
-        <pre className={blockNum===3 ? classes.background : classes.noBackground}>
-{`    swap(Arr[0], Arr[1])`}
-        </pre>
-        <pre className={blockNum===4 ? classes.background : classes.noBackground}>
-{`  end while`}
-        </pre>
-    </div>
-    
-    return(
+    const interminableCode =
+        <div>
+            <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
+                {`Algorithm: SwapForever(Arr)`}
+            </pre>
+            <pre className={classes.noBackground}>
+                {`  i = 1`}
+            </pre>
+            <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
+                {`  while i > 0 do`}
+            </pre>
+            <pre className={blockNum === 3 ? classes.background : classes.noBackground}>
+                {`    swap(Arr[0], Arr[1])`}
+            </pre>
+            <pre className={blockNum === 4 ? classes.background : classes.noBackground}>
+                {`  end while`}
+            </pre>
+        </div>
+
+    return (
         <div>{interminableCode}</div>
     )
 }
 
-export default function Interminable(props){
+export default function Interminable(props) {
     const { trace, ExplanationBoxHeight, blockNums } = props;
 
     // The bars displayed to visulise the numbers
@@ -88,12 +89,12 @@ export default function Interminable(props){
     // It is used to clean interval to pause
     const [intervalIds, setIntervalIds] = useState();
 
-    const useStyles = makeStyles((theme) =>({
+    const useStyles = makeStyles((theme) => ({
         root: {
-            '& > * + *': {     
+            '& > * + *': {
                 marginTop: theme.spacing(3),
             },
-            width: 380,        
+            width: 380,
         },
         bars: {
             listStyle: "none",
@@ -125,24 +126,24 @@ export default function Interminable(props){
             textAlign: "center",
             fontWeight: "600",
         },
-        cardOne:{
-            width: 380, 
+        cardOne: {
+            width: 380,
             height: 240,
-            background: "#F0F0F0",        
+            background: "#F0F0F0",
         },
-        cardTwo:{
-            width: 380, 
+        cardTwo: {
+            width: 380,
             height: 240,
-            background: "#F0F0F0",        
+            background: "#F0F0F0",
         },
-        title:{
-            display:"flex",
+        title: {
+            display: "flex",
             fontFamily: "inherit",
             fontWeight: "700",
-            fontSize:"16px",
+            fontSize: "16px",
             justifyContent: "center",
         },
-        explanation:{
+        explanation: {
             fontFamily: "inherit",
             fontSize: "16px",
             fontWeight: "700",
@@ -169,13 +170,13 @@ export default function Interminable(props){
         const subTrace = trace.slice(0);
         const timeoutIds = [];
         // a time interval unit
-        const timer = 1000;
+        const timer = 500;
 
         let item = [];
         let step = currentStep;
 
         // get the corresponding item from trace
-        switch(currentStep%4){
+        switch (currentStep % 4) {
             case 0:
                 item = trace[1];
                 break;
@@ -197,8 +198,8 @@ export default function Interminable(props){
 
         // Set time interval for one swapping
         let intervalId = setInterval(
-            (trace) =>{
-                switch(step%4){
+            (trace) => {
+                switch (step % 4) {
                     case 0:
                         item = trace[1];
                         break;
@@ -237,11 +238,11 @@ export default function Interminable(props){
         run(trace);
     };
 
-    return (            
-            <div className = {classes.root}>
-                <div className = {classes.title}>Non-terminating Swap</div>               
-                <Card className = {classes.cardOne}>                 
-                    <div className={classes.bars}>
+    return (
+        <div className={classes.root}>
+            <div className={classes.title}>Non-terminating Swap</div>
+            <Card className={classes.cardOne}>
+                <div className={classes.bars}>
                     {bars.map((background) => (
                         <motion.li
                             key={background.key} // each bar's identification
@@ -259,21 +260,21 @@ export default function Interminable(props){
                             </div>
                             <div
                                 style={{
-                                    marginTop: background.height-17,
+                                    marginTop: background.height - 17,
                                     fontSize: "16px",
                                     textAlign: "center",
                                     fontWeight: "600",
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                                {background.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
                             </div>
                         </motion.li>
                     ))}
                 </div>
-                <p className = {classes.explanation}>
+                <p className={classes.explanation}>
                     {"i = 1"}
                 </p>
-                
+
                 <div style={{
                     marginLeft: 160,
                     marginTop: -12,
@@ -283,7 +284,7 @@ export default function Interminable(props){
                         onClick={() => {
                             isPlaying ? pause() : resume();
                         }}
-                        className = {classes.control}
+                        className={classes.control}
                     >
                         {/* button appearence depends on isPlaying */}
                         {isPlaying ? (
@@ -295,13 +296,13 @@ export default function Interminable(props){
                 </div>
             </Card>
 
-            <Card className = {classes.cardTwo}>
+            <Card className={classes.cardTwo}>
                 <CardContent>
-                    <div style={{lineHeight:"25px"}}>
-                        <Code blockNum={blockNums[currentStep===0 ? 0 : currentStep%2+1]}/>
+                    <div style={{ lineHeight: "25px" }}>
+                        <Code blockNum={blockNums[currentStep === 0 ? 0 : currentStep % 2 + 1]} />
                     </div>
                 </CardContent>
             </Card>
-            </div>        
+        </div>
     );
 };

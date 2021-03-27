@@ -1,5 +1,7 @@
 /*
     Author: Ruizi Han, Yijie Lu
+
+    Framework of animation and pseudocode, support for 2 loop examples and Terminating Bubble Sort in correctness-tutorial-termination.
 */
 
 import "@fontsource/roboto";
@@ -8,7 +10,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -22,7 +23,7 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-export default function Terminable(props){
+export default function Terminable(props) {
     const { trace, description, width, blockNums, useStyles, Code, title } = props;
 
     // The bars displayed to visulise the numbers
@@ -52,7 +53,7 @@ export default function Terminable(props){
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -188,11 +189,11 @@ export default function Terminable(props){
         trace,
     };
 
-    return (            
-            <div className = {classes.root}>
-                <div className = {classes.title}>{title}</div>               
-                <Card className = {classes.cardOne}>                
-                    <div className={classes.bars}>
+    return (
+        <div className={classes.root}>
+            <div className={classes.title}>{title}</div>
+            <Card className={classes.cardOne}>
+                <div className={classes.bars}>
                     {bars.map((background) => (
                         <motion.li
                             key={background.key} // each bar's identification
@@ -210,13 +211,13 @@ export default function Terminable(props){
                             </div>
                             <div
                                 style={{
-                                    marginTop: background.height-17,
+                                    marginTop: background.height - 17,
                                     fontSize: "16px",
                                     textAlign: "center",
                                     fontWeight: "600",
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                                {background.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
                             </div>
                         </motion.li>
                     ))}
@@ -224,29 +225,29 @@ export default function Terminable(props){
                 <p className={classes.explanation}>
                     {description[currentStep]}
                 </p>
-                
-                <div className = {classes.slider}>
-                <AnimationSlider
-                    width={width}
-                    step={1}
-                    max={trace.length - 1}
-                    handleChange={handleSliderChange}
-                    value={currentStep}
-                    display="none"                   
-                />
-                </div>               
-                <div className = {classes.control}>
-                <AnimationControl {...animationControlProps} />
+
+                <div className={classes.slider}>
+                    <AnimationSlider
+                        width={width}
+                        step={1}
+                        max={trace.length - 1}
+                        handleChange={handleSliderChange}
+                        value={currentStep}
+                        display="none"
+                    />
+                </div>
+                <div className={classes.control}>
+                    <AnimationControl {...animationControlProps} />
                 </div>
             </Card>
-        
-            <Card className = {classes.cardTwo}>
+
+            <Card className={classes.cardTwo}>
                 <CardContent>
-                    <div style={{lineHeight:"25px"}}>
-                        <Code blockNum={blockNums[currentStep]}/>
+                    <div style={{ lineHeight: "25px" }}>
+                        <Code blockNum={blockNums[currentStep]} />
                     </div>
-                </CardContent>                
+                </CardContent>
             </Card>
-            </div>       
+        </div>
     );
 };
