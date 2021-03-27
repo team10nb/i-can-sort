@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
         background: "#F0F0F0",
     },
     slider: {
-        // marginLeft: 82,
         marginBottom: -10,
     },
     control: {

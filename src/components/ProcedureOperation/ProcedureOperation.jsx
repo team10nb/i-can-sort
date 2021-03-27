@@ -1,5 +1,7 @@
 /*
-    Author: Shiliang Chen, Ruizi Han
+    Author: Shiliang Chen, Ruizi Han, Yijie Lu
+
+    Animation support for displaying operation process.
 */
 
 import React, { useState } from "react";

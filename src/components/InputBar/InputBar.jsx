@@ -1,5 +1,7 @@
 /*
-    Author: Yijie Lu, Ruizi Han
+    Author: Ruizi Han, Shiliang Chen
+
+    The bar that accept user input.
 */
 
 import React from "react";
@@ -19,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
         height: 40,
     },
     text: {
-        marginRight:"10px",
+        marginRight: "10px",
     },
-    focusVisible:{},
+    focusVisible: {},
     buttonCreate: {
         backgroundColor: "#52af77",
         color: "white",
         marginTop: "0px",
         borderRadius: 10,
-        "&:hover, &$focusVisible": { backgroundColor: "#52af77"},
+        "&:hover, &$focusVisible": { backgroundColor: "#52af77" },
         marginLeft: "10px",
     },
     buttonShuffle: {
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         marginTop: "0px",
         borderRadius: 10,
-        "&:hover, &$focusVisible": { backgroundColor: "#97adac"},
+        "&:hover, &$focusVisible": { backgroundColor: "#97adac" },
         marginLeft: "10px",
     },
 }));
@@ -83,22 +85,22 @@ export default function InputBar(props) {
 
     return (
         <div className={classes.root}>
-            <div style={{width: "550px", display:"flex"}}>
-            <CssTextField
-                error={error}
-                label={label}
-                type='search'
-                helperText={helper}
-                variant='outlined'
-                onChange={handleChange}
-                onFocus={handleChange}
-                value={inputString}
-                className={classes.text}
-                size='small'
-                style={{
-                    width: barLength,
-                }}
-            />
+            <div style={{ width: "550px", display: "flex" }}>
+                <CssTextField
+                    error={error}
+                    label={label}
+                    type='search'
+                    helperText={helper}
+                    variant='outlined'
+                    onChange={handleChange}
+                    onFocus={handleChange}
+                    value={inputString}
+                    className={classes.text}
+                    size='small'
+                    style={{
+                        width: barLength,
+                    }}
+                />
                 <Button
                     variant='contained'
                     disableElevation

@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -76,7 +76,7 @@ const Code = (props) => {
 }
 
 export default function Interminable(props) {
-    const { trace, ExplanationBoxHeight, blockNums } = props;
+    const { trace, blockNums } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -99,7 +99,7 @@ export default function Interminable(props) {
         bars: {
             listStyle: "none",
             padding: 0,
-            margin: 0,
+            marginTop: 15,
             position: "relative",
             display: "flex",
             flexWrap: "wrap-reverse",
@@ -142,6 +142,7 @@ export default function Interminable(props) {
             fontWeight: "700",
             fontSize: "16px",
             justifyContent: "center",
+            marginBottom: -5,
         },
         explanation: {
             fontFamily: "inherit",
@@ -149,7 +150,10 @@ export default function Interminable(props) {
             fontWeight: "700",
             letterSpacing: "1px",
             textAlign: 'center',
-            marginBottom: 12,
+            marginTop: 8,
+        },
+        control: {
+            marginTop: 16,
         }
     }));
 
@@ -275,10 +279,13 @@ export default function Interminable(props) {
                     {"i = 1"}
                 </p>
 
-                <div style={{
-                    marginLeft: 160,
-                    marginTop: -12,
-                }}>
+                <div
+                    style={{
+                        marginLeft: 160,
+                        marginTop: -12,
+                    }}
+                    className={classes.control}
+                >
                     <IconButton
                         // function using depends on isPlaying
                         onClick={() => {
