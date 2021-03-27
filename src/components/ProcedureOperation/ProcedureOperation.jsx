@@ -40,6 +40,13 @@ export default function ProcedureOperation(props) {
         setIsValid(true);
     };
 
+    // accept carriage return to change array
+    const handleKeyDown = (e) => {
+        if (e.keyCode === 13) {
+            checkFormat();
+        }
+    };
+
     // check the format of user input
     const checkFormat = () => {
         let s = str.replace(/\s+/g, "");
@@ -103,6 +110,7 @@ export default function ProcedureOperation(props) {
         setStr(array.join(","));
     }
 
+
     // use corresponding algorithm to props
     let trace = "";
     if (sort === "Bubble") {
@@ -145,6 +153,7 @@ export default function ProcedureOperation(props) {
                 <InputBar
                     inputString={str}
                     handleChange={handleChange}
+                    handleKeyDown={handleKeyDown}
                     checkFormat={checkFormat}
                     isValid={isValid}
                     wrongMsg={wrongMsg}

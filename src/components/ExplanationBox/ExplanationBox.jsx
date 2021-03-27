@@ -1,11 +1,12 @@
 /*
     Author: Ruizi Han, Shiliang Chen
+
+    The outside frame for explanation sentence.
 */
 
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-
 
 const ExplanationBoxes = withStyles({
     root: {
@@ -18,9 +19,9 @@ const ExplanationBoxes = withStyles({
         backgroundColor: "white",
         marginTop: "4px",
         marginBottom: "3px",
-        textAlign:"center",
-        alignItems:"center",
-        justifyContent:"center",
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
     },
 })(Paper);
 
@@ -30,13 +31,13 @@ export default function ExplanationBox(props) {
         root: {
             display: "grid",
             "& > *": {
-                width: theme.spacing(width*1),
-                height: theme.spacing(height*1),
+                width: theme.spacing(width * 1),
+                height: theme.spacing(height * 1),
                 border: "3px solid white",
             },
             justifyContent: "center",
             alignContent: "center",
-            verticalAlign:"center",
+            verticalAlign: "center",
         },
     }));
     const classes = useStyles();

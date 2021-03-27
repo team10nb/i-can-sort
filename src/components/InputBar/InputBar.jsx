@@ -70,6 +70,7 @@ export default function InputBar(props) {
         isValid,
         wrongMsg,
         handleChange,
+        handleKeyDown,
         checkFormat,
         shuffle,
         inputString,
@@ -100,6 +101,7 @@ export default function InputBar(props) {
                     style={{
                         width: barLength,
                     }}
+                    onKeyDown={handleKeyDown}
                 />
                 <Button
                     variant='contained'

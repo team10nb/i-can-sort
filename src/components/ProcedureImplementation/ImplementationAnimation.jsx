@@ -1,5 +1,5 @@
 /*
-    Author: Ruizi Han
+    Author: Ruizi Han, Shiliang Chen
 
     Animation support for displaying implementation process.
 */
@@ -81,6 +81,13 @@ export default function ImplementationAnimation(props) {
     const handleChange = (e) => {
         setStr(e.target.value);
         setIsValid(true);
+    };
+
+    // accept carriage return to change array
+    const handleKeyDown = (e) => {
+        if (e.keyCode === 13) {
+            checkFormat();
+        }
     };
 
     // check the format of user input
@@ -406,6 +413,7 @@ export default function ImplementationAnimation(props) {
                     <InputBar
                         inputString={str}
                         handleChange={handleChange}
+                        handleKeyDown={handleKeyDown}
                         checkFormat={checkFormat}
                         isValid={isValid}
                         wrongMsg={wrongMsg}
