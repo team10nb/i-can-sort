@@ -1,3 +1,9 @@
+/*
+    Author: Yuting Jiang
+
+    A pop up window with a backdrop, used to give tip.
+*/
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -13,32 +19,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function BackDrop(props) {
-  const {message, size, btnColor} = props;
-  
+export default function TipFrame(props) {
+  const { message, size, btnColor } = props;
+
   const classes = useStyles();
 
   const styles = {
     snackbar: {
       borderRadius: 30,
-      justifyContent: 'left', 
-      height: 220, 
-      width: 480, 
-      backgroundColor:"white", 
-      color:"black", 
-      fontSize:18,
+      justifyContent: 'left',
+      height: 220,
+      width: 480,
+      backgroundColor: "white",
+      color: "black",
+      fontSize: 18,
       paddingLeft: 40,
       paddingRight: 40,
-      paddingTop:0,
-  
+      paddingTop: 0,
+
     },
-    button:{
+    button: {
       marginRight: 220,
-      marginTop:-40,
+      marginTop: -40,
       fontWeight: 600,
       backgroundColor: btnColor,
-      color:"white",
-      fontSize:15
+      color: "white",
+      fontSize: 15
     }
   }
 
@@ -57,15 +63,14 @@ export default function BackDrop(props) {
 
   return (
     <div>
-       <Backdrop style={size} className={classes.backdrop} open={open} onClick={handleClose}>
-       <SnackbarContent
-        style={styles.snackbar}
-        message={message}
-        action={action}
-       >
-       </SnackbarContent>
+      <Backdrop style={size} className={classes.backdrop} open={open} onClick={handleClose}>
+        <SnackbarContent
+          style={styles.snackbar}
+          message={message}
+          action={action}
+        >
+        </SnackbarContent>
       </Backdrop>
     </div>
   );
- 
 }

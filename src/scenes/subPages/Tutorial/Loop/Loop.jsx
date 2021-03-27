@@ -7,7 +7,7 @@ import TutorialSubPage from '../TutorialSubpage';
 import ForLoop from '../../../../components/LoopExample/ForLoop';
 import WhileLoop from '../../../../components/LoopExample/WhileLoop';
 import {LoopForHelp, LoopWhileHelp} from './LoopHelp';
-import BackDrop from '../../../../components/BackDrop/BackDrop';
+import TipFrame from '../../../../components/TipFrame/TipFrame';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -53,7 +53,7 @@ export default function TutorialLoop(props) {
     return(
         <div>
             <TutorialSubPage {...data} />
-            <BackDrop 
+            <TipFrame 
                 message={message}
                 size={size}
                 btnColor={color}

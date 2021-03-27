@@ -15,7 +15,7 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import BackDrop from '../../../../components/BackDrop/BackDrop';
+import TipFrame from '../../../../components/TipFrame/TipFrame';
 import '../../../../fonts/fonts.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -265,7 +265,7 @@ export default function Partial() {
 
     return( 
         <div>
-            <BackDrop 
+            <TipFrame 
                 message={message} 
                 size={size}
                 btnColor={color}

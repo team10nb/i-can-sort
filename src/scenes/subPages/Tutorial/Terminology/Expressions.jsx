@@ -13,7 +13,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import BackDrop from "../../../../components/BackDrop/BackDrop";
+import TipFrame from "../../../../components/TipFrame/TipFrame";
 import { color } from "../../../mainPages/Tutorial";
 
 const StyledTableCell = withStyles((theme) => ({
@@ -118,7 +118,7 @@ export default function Expressions(props) {
 
     return (
         <div>
-            <BackDrop message={message} size={size} btnColor={color} />
+            <TipFrame message={message} size={size} btnColor={color} />
             <Card style={styles.root}>
                 <CardContent>
                     {/* <img src={bulb} height={30} width={30}/> */}

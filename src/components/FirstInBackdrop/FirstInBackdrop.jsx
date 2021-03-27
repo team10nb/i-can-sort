@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,71 +20,71 @@ const useStyles = makeStyles((theme) => ({
     color: "#212121",
   },
   cardBackground: {
-    
+
     width: 650,
     height: 450,
     // backgroundColor: "white",
-    backgroundColor:"rgba(255,255,255,0.8)",
-    borderRadius:"20px",
+    backgroundColor: "rgba(255,255,255,0.8)",
+    borderRadius: "20px",
   },
-  buttonBase:{
+  buttonBase: {
     display: "flex",
-        '& > * + *': {     
-            marginLeft: theme.spacing(8   ),
-        },
-        justifyContent: "center",
-        
+    '& > * + *': {
+      marginLeft: theme.spacing(8),
+    },
+    justifyContent: "center",
+
   },
-  cardOne:{
-    opacity:1,
+  cardOne: {
+    opacity: 1,
     width: 230,
     height: 230,
-    backgroundColor:"#4caf50",
-    color:"white",
-    borderRadius:"30px", 
+    backgroundColor: "#4caf50",
+    color: "white",
+    borderRadius: "30px",
     "&:hover, &$focusVisible": {
       transform: "scale(1.05, 1.05)",
       // boxShadow: "0 0 10 5 #888888,",
-    },"&:active, &$focusVisible": {
+    }, "&:active, &$focusVisible": {
       transform: "scale(1, 1 )",
     },
     transition: "0.5s"
   },
-  cardTwo:{
+  cardTwo: {
     width: 230,
     height: 230,
-    backgroundColor:"#1565c0",
-    color:"white",
-    borderRadius:"30px", 
+    backgroundColor: "#1565c0",
+    color: "white",
+    borderRadius: "30px",
     "&:hover, &$focusVisible": {
       transform: "scale(1.05, 1.05)",
-    },"&:active, &$focusVisible": {
+    }, "&:active, &$focusVisible": {
       transform: "scale(1, 1 )",
     },
     transition: "0.5s"
   },
-  title:{
-    marginLeft:"245px",
-    marginTop:"36px",
+  title: {
+    marginLeft: "245px",
+    marginTop: "36px",
   },
-  tip:{
+  tip: {
     marginLeft: 52,
     marginRight: 50,
     marginBottom: 23,
     justifyContent: 'center',
-    textAlign:'center',
+    textAlign: 'center',
   },
-  content1:{
-    marginTop:"69px",
-    borderRadius:"30px", 
+  content1: {
+    marginTop: "69px",
+    borderRadius: "30px",
   },
-  content2:{
-    marginTop: "55px",       
-    borderRadius:"30px", 
+  content2: {
+    marginTop: "55px",
+    borderRadius: "30px",
   },
-  icon:{
-    color:"white",
-    fontSize :"3rem"
+  icon: {
+    color: "white",
+    fontSize: "3rem"
   }
 }));
 
@@ -96,13 +96,13 @@ export default function FirstInBackdrop(props) {
     : null;
   const [open, setOpen] = React.useState(true);
   const [appear, setAppear] = React.useState(true);
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-        localStorage.setItem("snack", JSON.stringify(0));
-        setAppear(false);
-      };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    localStorage.setItem("snack", JSON.stringify(0));
+    setAppear(false);
+  };
   const onClick1 = () => {
     localStorage.setItem("first", JSON.stringify(0));
     window.location.href = "/TutorialMainPage";
@@ -111,86 +111,86 @@ export default function FirstInBackdrop(props) {
   return (
     <div>
       <Backdrop className={classes.backdrop} open={open} >
-      <motion.div
-        initial={{ opacity: 0.2, scale: 0 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          
-        }}
-  transition={{
-    type: "spring",
-    stiffness: 150,
-    damping: 15,
-    mass: 0.1,
-    
-  }}
->
-        <Card className = {classes.cardBackground}>
-          <div >
-            <Typography variant="h4" gutterBottom style={{fontFamily:"Quicksand", fontWeight:"600", color:"#0e4686"}}  className = {classes.title}> 
-              Welcome! 
-            </Typography>
-            <Typography  gutterBottom style={{fontFamily:"Quicksand", fontWeight:"600", color:"#0e4686"}}  className = {classes.tip}> 
-              We designed a special section of Tutorial for freshmen. <br/>
-              Do you have any experience on programming? <br/>
-            </Typography>
+        <motion.div
+          initial={{ opacity: 0.2, scale: 0 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
 
-          </div>
-         
-          <div className = {classes.buttonBase}>
-            <ButtonBase style={{borderRadius:"30px", }}>
-              <Link to="./TutorialMainPage" style={{textDecoration:"none"}}>
-              <motion.div
-                initial={{ y: -50, opacity: 0 }}
-                animate={{
-                y: 0,
-                opacity: 1
-                }}
-                transition={{
-                  delay: 0.4
-                }}
-              >
-              <Card className = {classes.cardOne} >
-                <CardContent className = {classes.content1}>
-                  <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I'm new at this, go to Tutorial first!
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+            mass: 0.1,
+
+          }}
+        >
+          <Card className={classes.cardBackground}>
+            <div >
+              <Typography variant="h4" gutterBottom style={{ fontFamily: "Quicksand", fontWeight: "600", color: "#0e4686" }} className={classes.title}>
+                Welcome!
+            </Typography>
+              <Typography gutterBottom style={{ fontFamily: "Quicksand", fontWeight: "600", color: "#0e4686" }} className={classes.tip}>
+                We designed a special section of Tutorial for freshmen. <br />
+              Do you have any experience on programming? <br />
+              </Typography>
+
+            </div>
+
+            <div className={classes.buttonBase}>
+              <ButtonBase style={{ borderRadius: "30px", }}>
+                <Link to="./TutorialMainPage" style={{ textDecoration: "none" }}>
+                  <motion.div
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{
+                      y: 0,
+                      opacity: 1
+                    }}
+                    transition={{
+                      delay: 0.4
+                    }}
+                  >
+                    <Card className={classes.cardOne} >
+                      <CardContent className={classes.content1}>
+                        <Typography variant="h6" gutterBottom style={{ fontFamily: "inherit", fontWeight: "600" }}>I'm new at this, go to Tutorial first!
                   </Typography>
-                </CardContent>
-              </Card>
-              </motion.div>
-              </Link>
-            </ButtonBase>
-            <ButtonBase  style={{borderRadius:"30px", }}>
-              <Link to="./ProcedureMainPage" style={{textDecoration:"none"}}>
-              <motion.div
-                initial={{ y: -50, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  opacity: 1
-                  
-                }}
-                transition={{
-                  delay: 0.6
-                }}
-              >
-              <Card className = {classes.cardTwo} >         
-                <CardContent className = {classes.content2}>
-                <Typography variant="h6" gutterBottom style={{fontFamily:"inherit", fontWeight:"600"}}>I've got basic knowledge, start now!
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </Link>
+              </ButtonBase>
+              <ButtonBase style={{ borderRadius: "30px", }}>
+                <Link to="./ProcedureMainPage" style={{ textDecoration: "none" }}>
+                  <motion.div
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{
+                      y: 0,
+                      opacity: 1
+
+                    }}
+                    transition={{
+                      delay: 0.6
+                    }}
+                  >
+                    <Card className={classes.cardTwo} >
+                      <CardContent className={classes.content2}>
+                        <Typography variant="h6" gutterBottom style={{ fontFamily: "inherit", fontWeight: "600" }}>I've got basic knowledge, start now!
                 </Typography>
-                </CardContent>
-              </Card></motion.div>
-              </Link>
-            </ButtonBase>
-          </div>
-          
-          
-        </Card>
+                      </CardContent>
+                    </Card></motion.div>
+                </Link>
+              </ButtonBase>
+            </div>
+
+
+          </Card>
         </motion.div>
         {snack == 1 ? <Snackbar open={appear} onClose={handleClose}  >
-        <Alert onClose={handleClose} severity="success" >
-          Successfully reset history!
+          <Alert onClose={handleClose} severity="success" >
+            Successfully reset history!
         </Alert>
-      </Snackbar> : <div />}
+        </Snackbar> : <div />}
       </Backdrop>
     </div>
   );
