@@ -35,17 +35,17 @@ export default function SpeedMenu(props) {
             width: "10px",
             paddingLeft: "0px",
             paddingRight: "0px",
-            fontSize: "10px",
+            fontSize: "12px",
             fontWeight: "600",
             fontFamily: "inherit",
         },
         customTooltip: {
             // I used the rgba color for the standard "secondary" color
             fontFamily: "inherit",
-            fontSize: "0.5em",
+            fontSize: "1.2em",
             fontWeight: "700",
-            paddingTop: "8px",
-            paddingBottom: "10px",
+            paddingTop: "5px",
+            paddingBottom: "6px",
             letterSpacing:"1px",
             marginTop: "3px"
         },

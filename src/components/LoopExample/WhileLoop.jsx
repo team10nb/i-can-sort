@@ -23,7 +23,6 @@ const Code = (props) => {
             lineHeight: "22px",
             fontSize: "12px",
             paddingLeft: "5px",
-            // fontWeight: 550,
         },
         noBackground: {
             marginTop: -6,
@@ -32,7 +31,6 @@ const Code = (props) => {
             lineHeight: "22px",
             fontSize: "12px",
             paddingLeft: "5px",
-            // fontWeight: 550,
         },
     }));
 
@@ -111,7 +109,7 @@ export default function ForLoop() {
         descriptionUnit = 'i = ' + (i - 1) + ', i < 4 is true';
         description.push(descriptionUnit, 'do a = a + b', 'do i = i + 1');
 
-        if (i == 4) {
+        if (i === 4) {
             trace.push(traceUnit);
             blockNums.push(5);
             description.push('i = 4, i < 4 is false, jump out of the loop');

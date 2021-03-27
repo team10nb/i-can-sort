@@ -220,7 +220,7 @@ export default function Terminable(props){
             fontSize:"18px",
             textAlign:"left",
             marginLeft:"15px",
-            marginTop:"20px",
+            marginTop:"8px",
             lineHeight:"1.3em"
 
         }
@@ -294,7 +294,7 @@ export default function Terminable(props){
         const subTrace = trace.slice(1);
         const timeoutIds = [];
         // a time interval unit
-        const timer = 1000 / playSpeed;
+        const timer = 1200 / playSpeed;
 
         // Set a timeout for each item in the trace
         subTrace.forEach((item, i) => {
@@ -424,8 +424,8 @@ export default function Terminable(props){
                     <Card className = {classes.cardThree} style={{maiginBottom: 30}}>
                         <CardContent>
                             <div className = {classes.introduction}>
-                            Swapping a and b will exchange the values of them. <br></br><br/>
-                            The example below will show you how swapping works.
+                            Swapping a and b will exchange the values of them. The example below will show you how swapping works. <br/><br/>
+                            Please press the play button on the right to see the example.
                             </div>
                         </CardContent>
                        

@@ -533,7 +533,7 @@ Output: The result of sorting Arr.`}
                     blockNum === 13 ? classes.background : classes.noBackground
                 }
             >
-                {`return`}
+                {`return Arr`}
             </pre>
             {/* assertion */}
             <pre

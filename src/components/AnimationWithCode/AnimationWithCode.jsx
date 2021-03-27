@@ -106,7 +106,7 @@ export default function AnimationWithCode(props) {
         const subTrace = trace.slice(1);
         const timeoutIds = [];
         // a time interval unit
-        const timer = 1000 / playSpeed;
+        const timer = 1200 / playSpeed;
 
         // Set a timeout for each item in the trace
         subTrace.forEach((item, i) => {
