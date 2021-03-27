@@ -144,7 +144,7 @@ Object {
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="setting"
+                    title="Setting"
                     type="button"
                   >
                     <span
@@ -540,7 +540,7 @@ Object {
                   aria-label="setting"
                   class="MuiButtonBase-root MuiIconButton-root"
                   tabindex="0"
-                  title="setting"
+                  title="Setting"
                   type="button"
                 >
                   <span
