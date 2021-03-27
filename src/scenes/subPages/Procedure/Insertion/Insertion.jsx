@@ -18,7 +18,9 @@ const introMessage =
     <div>
         <h1>Insertion sort</h1>
         <p style={{ textAlign: "left", fontSize: 19, letterSpacing: 0.5 }}>
-            Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+            Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. 
+            <br/><br/>At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+            Please see explanations step by step on the right.
         </p>
     </div>
 

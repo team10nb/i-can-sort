@@ -226,7 +226,7 @@ export default function ExplanationFrame(props) {
 
   return (
     <div style={{ height: "48px" }}>
-      <Tooltip title="help" placement="bottom" arrow>
+      <Tooltip title="Help" placement="bottom" arrow>
         <IconButton aria-label="help" onClick={handleClickOpen}>
           <HelpOutlineOutlinedIcon className={classes.icon} />
         </IconButton>
