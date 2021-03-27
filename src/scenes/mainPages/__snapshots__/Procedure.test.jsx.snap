@@ -369,7 +369,7 @@ Object {
                       aria-label="setting"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="setting"
+                      title="Setting"
                       type="button"
                     >
                       <span
@@ -404,7 +404,7 @@ Object {
                         aria-label="help"
                         class="MuiButtonBase-root MuiIconButton-root"
                         tabindex="0"
-                        title="help"
+                        title="Help"
                         type="button"
                       >
                         <span
@@ -645,6 +645,8 @@ Object {
                   >
                     We designed a special section of Tutorial for freshmen. 
                     <br />
+                    You can learn sorting and correctness in other two sections. 
+                    <br />
                     Do you have any experience on programming? 
                     <br />
                   </p>
@@ -675,7 +677,7 @@ Object {
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                               style="font-family: inherit; font-weight: 600;"
                             >
-                              I'm new at this, go to Tutorial first!
+                              I'm new at programming, go to Tutorial first!
                             </h6>
                           </div>
                         </div>
@@ -1092,7 +1094,7 @@ Object {
                     aria-label="setting"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="setting"
+                    title="Setting"
                     type="button"
                   >
                     <span
@@ -1127,7 +1129,7 @@ Object {
                       aria-label="help"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="help"
+                      title="Help"
                       type="button"
                     >
                       <span
@@ -1368,6 +1370,8 @@ Object {
                 >
                   We designed a special section of Tutorial for freshmen. 
                   <br />
+                  You can learn sorting and correctness in other two sections. 
+                  <br />
                   Do you have any experience on programming? 
                   <br />
                 </p>
@@ -1398,7 +1402,7 @@ Object {
                             class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                             style="font-family: inherit; font-weight: 600;"
                           >
-                            I'm new at this, go to Tutorial first!
+                            I'm new at programming, go to Tutorial first!
                           </h6>
                         </div>
                       </div>
