@@ -3,30 +3,31 @@
 */
 
 import React from 'react';
-import {color} from '../../../mainPages/Procedure';
+import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import InsertionIntro from '../../../../components/Introduction/InsertionSort';
-import {InsertionExample} from '../../../../components/ImplementationPseudo/Example';
+import { InsertionImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 
 
 let arr = [2, 1, 6, 10, 9, 12, 8, 3];
 let props = InsertionSort(arr);
 
-const introMessage = <div>
-<h1>Insertion sort</h1>
-<p style={{textAlign:"left", fontSize: 19, letterSpacing:0.5}}>
-Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
-</p>
-</div>
+const introMessage =
+    <div>
+        <h1>Insertion sort</h1>
+        <p style={{ textAlign: "left", fontSize: 19, letterSpacing: 0.5 }}>
+            Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+        </p>
+    </div>
 
 const intro = {
     introMessage: introMessage,
     animation: <InsertionIntro />,
 }
 
-const operate = <ProcedureOperation sort={"Insertion"}/>;
+const operate = <ProcedureOperation sort={"Insertion"} />;
 
 
 
@@ -38,13 +39,13 @@ export default function ProcedureInsertion(props) {
         color: color,
         algorithm: "insertion",
         progress: progress,
-        history: props.history,      
+        history: props.history,
         intro: intro,
         operate: operate,
-        Implementation: <InsertionExample/>,
+        Implementation: <InsertionImplementation />,
     }
 
-    return(
+    return (
         <div>
             <ProcedureSubPage {...data} />
         </div>

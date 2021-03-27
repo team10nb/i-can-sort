@@ -3,7 +3,7 @@ import { color } from "../../../mainPages/Procedure";
 import ProcedureSubPage from "../ProcedureSubPage";
 import ProcedureOperation from "../../../../components/ProcedureOperation/ProcedureOperation";
 import BubbleIntro from "../../../../components/Introduction/BubbleSort";
-import { BubbleExample } from "../../../../components/ImplementationPseudo/Example";
+import { BubbleImplementation } from "../../../../components/ProcedureImplementation/ProcedureImplementation";
 
 const introMessage = (
     <div>
@@ -38,7 +38,7 @@ export default function ProcedureBubble(props) {
         history: props.history,
         intro: intro,
         operate: operate,
-        Implementation: <BubbleExample />,
+        Implementation: <BubbleImplementation />,
     };
 
     return (

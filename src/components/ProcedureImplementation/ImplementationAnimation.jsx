@@ -1,8 +1,10 @@
 /*
     Author: Ruizi Han
+
+    Animation support for displaying implementation process.
 */
 
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -14,9 +16,9 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import {color} from '../../scenes/mainPages/Procedure';
+import { color } from '../../scenes/mainPages/Procedure';
 import InputBar from '../InputBar/InputBar';
-import {random} from 'lodash';
+import { random } from 'lodash';
 
 
 // a framer motion transition attributes
@@ -28,12 +30,13 @@ const spring = {
 };
 
 
-export default function ImplementationPseudo(props){
-    const { title,
-            algorithm,
-            sort,
-            Code, 
-            file } = props;
+export default function ImplementationAnimation(props) {
+    const {
+        title,
+        algorithm,
+        sort,
+        Code,
+        file } = props;
 
     // The user input
     const [str, setStr] = useState("4,8,11,13,5");
@@ -109,14 +112,14 @@ export default function ImplementationPseudo(props){
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than "+MAXLENGTH+" numbers that between "+MINNUMBER+"-"+MAXNUMBER+"."
+                    "Please enter no more than " + MAXLENGTH + " numbers that between " + MINNUMBER + "-" + MAXNUMBER + "."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than "+MAXLENGTH+" numbers.");
+                setWrongMsg("Please enter no more than " + MAXLENGTH + " numbers.");
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between "+MINNUMBER+"-"+MAXNUMBER+".");
+                setWrongMsg("Please enter numbers that between " + MINNUMBER + "-" + MAXNUMBER + ".");
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
@@ -124,18 +127,18 @@ export default function ImplementationPseudo(props){
             }
         } else {
             setIsValid(false);
-            setWrongMsg("Please follow the correct format."); 
+            setWrongMsg("Please follow the correct format.");
         }
         return 0;
     };
 
     // to produce a random array
     const shuffle = () => {
-        const length = random(3,MAXLENGTH-4);
+        const length = random(3, MAXLENGTH - 4);
         let array = [];
         for (let i = 0; i < length; i++) {
             // const element = array[i];
-            array.push(random(1,MAXNUMBER-5));
+            array.push(random(1, MAXNUMBER - 5));
         }
         setIsValid(true);
         setWrongMsg(" ");
@@ -144,11 +147,11 @@ export default function ImplementationPseudo(props){
     }
 
     // styles for this page
-    const useStyles = makeStyles((theme) =>({
+    const useStyles = makeStyles((theme) => ({
         root: {
             display: "flex",
             width: 1020,
-            '& > *': {     
+            '& > *': {
                 margin: theme.spacing(3),
             },
         },
@@ -189,44 +192,44 @@ export default function ImplementationPseudo(props){
             textAlign: "center",
             fontWeight: "600",
         },
-        cardOne:{
+        cardOne: {
             marginTop: 80,
             width: "45%",
             height: 520,
-            background: "#F0F0F0",        
+            background: "#F0F0F0",
         },
-        cardTwo:{
+        cardTwo: {
             marginTop: 80,
             width: "55%",
             height: 520,
-            background: "#F0F0F0",      
+            background: "#F0F0F0",
         },
-        title:{
-            display:"flex",
+        title: {
+            display: "flex",
             fontFamily: "inherit",
             fontWeight: "700",
-            fontSize:"20px",
+            fontSize: "20px",
             justifyContent: "center",
             marginTop: -6,
             marginBottom: 10,
         },
-        button:{
+        button: {
             marginLeft: 95,
             width: 200,
             position: 'fixed',
             bottom: 60,
         },
-        slider:{
+        slider: {
             marginLeft: 10
         },
-        inputBar:{
+        inputBar: {
             marginLeft: -75,
             marginTop: 30,
         }
     }));
 
     const classes = useStyles();
-    
+
     // Update traces when user enter new array
     useEffect(() => {
         setTrace(sort(arr).trace);
@@ -384,81 +387,81 @@ export default function ImplementationPseudo(props){
         trace,
     };
 
-    return (            
-            <div className = {classes.root}>
-                <Card className = {classes.cardOne}>
+    return (
+        <div className={classes.root}>
+            <Card className={classes.cardOne}>
                 <CardContent>
-                    <div className = {classes.title}>{title}</div>
+                    <div className={classes.title}>{title}</div>
 
                     <div>
-                        <Code blockNum={blockNums[currentStep]}/>
+                        <Code blockNum={blockNums[currentStep]} />
                     </div>
-                    <Button className={classes.button} style={{color:"white", backgroundColor:color}} href={file} download={algorithm + ".pdf"}>
+                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} href={file} download={algorithm + ".pdf"}>
                         Export Quick Guide
                     </Button>
                 </CardContent>
-                </Card>
-                <Card className = {classes.cardTwo}> 
+            </Card>
+            <Card className={classes.cardTwo}>
                 <div className={classes.inputBar}>
-                <InputBar
-                    inputString={str}
-                    handleChange={handleChange}
-                    checkFormat={checkFormat}
-                    isValid={isValid}
-                    wrongMsg={wrongMsg}
-                    shuffle={shuffle}
-                    max={MAXNUMBER}
-                    barLength="270px"
-                />   
-                </div>         
-                    <div className={classes.aniRoot}>
+                    <InputBar
+                        inputString={str}
+                        handleChange={handleChange}
+                        checkFormat={checkFormat}
+                        isValid={isValid}
+                        wrongMsg={wrongMsg}
+                        shuffle={shuffle}
+                        max={MAXNUMBER}
+                        barLength="270px"
+                    />
+                </div>
+                <div className={classes.aniRoot}>
                     <div className={classes.bars}>
-                    {bars.map((background) => (
-                        <motion.li
-                            key={background.key} // each bar's identification
-                            layout
-                            transition={spring}
-                            style={background}
-                            className={classes.bar}
-                            animate={{
-                                backgroundColor: background.backgroundColor,
-                                y: background.y,
-                            }}
-                        >
-                            <div className={classes.barNumber}>
-                                {background.value}
-                            </div>
-                            <div
-                                style={{
-                                    marginTop: background.height-17,
-                                    fontSize: "16px",
-                                    textAlign: "center",
-                                    fontWeight: "600",
+                        {bars.map((background) => (
+                            <motion.li
+                                key={background.key} // each bar's identification
+                                layout
+                                transition={spring}
+                                style={background}
+                                className={classes.bar}
+                                animate={{
+                                    backgroundColor: background.backgroundColor,
+                                    y: background.y,
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
-                            </div>
-                        </motion.li>
-                    ))}
+                                <div className={classes.barNumber}>
+                                    {background.value}
+                                </div>
+                                <div
+                                    style={{
+                                        marginTop: background.height - 17,
+                                        fontSize: "16px",
+                                        textAlign: "center",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    {background.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
+                                </div>
+                            </motion.li>
+                        ))}
+                    </div>
+                    <ExplanationBox width={50} height={6}>
+                        {description[currentStep]}
+                    </ExplanationBox>
+
+                    <div className={classes.slider}>
+                        <AnimationSlider
+                            width={460}
+                            step={1}
+                            max={trace.length - 1}
+                            handleChange={handleSliderChange}
+                            value={currentStep}
+                            display="none"
+                        />
+                    </div>
+                    <AnimationControl {...animationControlProps} />
                 </div>
-                <ExplanationBox width={50} height={6}>
-                    {description[currentStep]}
-                </ExplanationBox>
-                
-                <div className={classes.slider}>
-                <AnimationSlider
-                    width={460}
-                    step={1}
-                    max={trace.length - 1}
-                    handleChange={handleSliderChange}
-                    value={currentStep}
-                    display="none"                                       
-                />
-                </div>
-                <AnimationControl {...animationControlProps} />
-                    </div>                
             </Card>
-            </div>  
+        </div>
     );
 };
 
