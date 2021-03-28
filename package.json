@@ -9,8 +9,8 @@
   "build": {
     "appId": "iCanSort.app",
     "mac":{
-      "target": ["dmg", "zip"],  
-      "icon": "build/icon.png" 
+      "target": ["dmg", "zip"],
+      "icon": "build/icon.png"
     },
     "dmg": {
       "title": "iCanSort",

@@ -15,6 +15,7 @@ mainWindow = new BrowserWindow({
       webSecurity: false,
       preload: path.join(__dirname, 'preload.js')
     },
+    icon: path.join(__dirname, 'icon.png')
   })
 
 mainWindow.loadURL(url.format({
