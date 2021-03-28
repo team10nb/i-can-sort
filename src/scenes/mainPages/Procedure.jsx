@@ -322,9 +322,10 @@ export default function ProcedureMainPage(props) {
                         </Grid>
                     </Grid>
                 </div>
+                {firstIn == 1 ? <FirstInBackdrop /> : <div />}
             </motion.div>
 
-            {firstIn == 1 ? <FirstInBackdrop /> : <div />}
+           
         </div>
     );
 }
