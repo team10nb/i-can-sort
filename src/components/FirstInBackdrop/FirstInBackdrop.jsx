@@ -18,6 +18,8 @@ import { motion } from "framer-motion";
 const useStyles = makeStyles((theme) => ({
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
+        marginLeft:-475,
+        width:2000,
         color: "#212121",
     },
     cardBackground: {

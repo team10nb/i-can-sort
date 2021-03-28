@@ -12,8 +12,8 @@ let props = MergeSort(arr);
 const introMessage =
     <div>
         <h1>Merge sort</h1>
-        <p style={{ textAlign: "left", fontSize: 19, letterSpacing: 0.5 }}>
-            Merge sort works as two steps. First, divide the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
+        <p style={{ textAlign: "justify", fontSize: 18, letterSpacing: 0.5, marginTop:"-7px", paddingRight:"10px" }}>
+            Merge sort works as two steps. First, it divides the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
             <br/><br/> Then, merge sublists to produce new sorted sublists repeatedly until there is only one sublist remaining. This will be the sorted list.
             Please see explanations step by step on the right.
         </p>

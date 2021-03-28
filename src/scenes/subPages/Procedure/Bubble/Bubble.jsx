@@ -8,7 +8,7 @@ import { BubbleImplementation } from "../../../../components/ProcedureImplementa
 const introMessage = (
     <div>
         <h1>Bubble sort</h1>
-        <p style={{ textAlign: "left", fontSize: 18, letterSpacing: 0.5 }}>
+        <p style={{ textAlign: "justify", fontSize: 18, letterSpacing: 0.5, marginTop:"-7px" }}>
             Bubble sort is a simple sorting algorithm that repeatedly steps
             through the list, compares adjacent elements and swaps them if they
             are in the wrong order. 
