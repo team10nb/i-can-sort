@@ -404,7 +404,7 @@ Object {
                         aria-label="help"
                         class="MuiButtonBase-root MuiIconButton-root"
                         tabindex="0"
-                        title="Help"
+                        title="help"
                         type="button"
                       >
                         <span
@@ -1132,7 +1132,7 @@ Object {
                       aria-label="help"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="Help"
+                      title="help"
                       type="button"
                     >
                       <span
