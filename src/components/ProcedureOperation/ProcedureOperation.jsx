@@ -49,7 +49,8 @@ export default function ProcedureOperation(props) {
 
     // check the format of user input
     const checkFormat = () => {
-        let s = str.replace(/\s+/g, "");
+        let s = str.replace(/\s+/g, ",");
+        s = s.replace(/(,|，)+/g, ",");
         s = removeDot(s);
         setStr(s);
 
@@ -109,7 +110,6 @@ export default function ProcedureOperation(props) {
         setArr(array);
         setStr(array.join(","));
     }
-
 
     // use corresponding algorithm to props
     let trace = "";

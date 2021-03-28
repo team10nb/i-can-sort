@@ -93,6 +93,7 @@ export default function ImplementationAnimation(props) {
     // check the format of user input
     const checkFormat = () => {
         let s = str.replace(/\s+/g, "");
+        s = s.replace(/(,|，)+/g, ",");
         s = removeDot(s);
         setStr(s);
 
