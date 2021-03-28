@@ -93,13 +93,17 @@ export default function ProcedureMainPage(props) {
         ? JSON.parse(localStorage.getItem("pre"))
         : null;
 
-    if (localStorage.getItem("first") == 1) {
-        localStorage.setItem("first", JSON.stringify(1));
-    } else if (localStorage.getItem("first") == 0) {
-        localStorage.setItem("first", JSON.stringify(0));
-    } else {
-        localStorage.setItem("first", JSON.stringify(1));
-    }
+        const localFirst = localStorage.getItem("first")
+        ? JSON.parse(localStorage.getItem("first"))
+        : localStorage.setItem("first", JSON.stringify(true));
+        
+    // if (localStorage.getItem("first") == 1) {
+    //     localStorage.setItem("first", JSON.stringify(1));
+    // } else if (localStorage.getItem("first") == 0) {
+    //     localStorage.setItem("first", JSON.stringify(0));
+    // } else {
+    //     localStorage.setItem("first", JSON.stringify(1));
+    // }
 
     if (localStorage.getItem("snack") == 1) {
         localStorage.setItem("snack", JSON.stringify(1));
@@ -323,7 +327,7 @@ export default function ProcedureMainPage(props) {
                         </Grid>
                     </Grid>
                 </div>
-                {firstIn == 1 ? <FirstInBackdrop /> : <div />}
+                {firstIn===true ? <FirstInBackdrop /> : <div />}
             </motion.div>
 
            

@@ -104,11 +104,11 @@ export default function FirstInBackdrop(props) {
         localStorage.setItem("snack", JSON.stringify(0));
         setAppear(false);
     };
-    const onClick1 = () => {
-        localStorage.setItem("first", JSON.stringify(0));
-        window.location.href = "/TutorialMainPage";
-    };
-    const onClick = localStorage.setItem("first", JSON.stringify(0));
+    // const onClick1 = () => {
+    //     localStorage.setItem("first", JSON.stringify(0));
+    //     window.location.href = "/TutorialMainPage";
+    // };
+    const onClick = () =>  { localStorage.setItem("first", JSON.stringify(false));}
     return (
         <div>
             <Backdrop className={classes.backdrop} open={open}>
@@ -158,7 +158,7 @@ export default function FirstInBackdrop(props) {
                         </div>
 
                         <div className={classes.buttonBase}>
-                            <ButtonBase style={{ borderRadius: "30px" }}>
+                            <ButtonBase style={{ borderRadius: "30px" }} onClick={onClick}>
                                 <Link
                                     to="/TutorialMainPage"
                                     style={{ textDecoration: "none" }}
@@ -193,7 +193,7 @@ export default function FirstInBackdrop(props) {
                                     </motion.div>
                                 </Link>
                             </ButtonBase>
-                            <ButtonBase style={{ borderRadius: "30px" }}>
+                            <ButtonBase style={{ borderRadius: "30px" }} onClick={onClick}>
                                 <Link
                                     to="./ProcedureMainPage"
                                     style={{ textDecoration: "none" }}

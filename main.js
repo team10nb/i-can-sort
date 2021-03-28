@@ -35,7 +35,7 @@ mainWindow.loadURL(url.format({
 
 // mainWindow.setIcon('./resource/swap.png');
 
-mainWindow.removeMenu();
+//mainWindow.removeMenu();
 
 mainWindow.setTitle("iCanSort");
 
