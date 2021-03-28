@@ -200,7 +200,6 @@ Object {
                         class="MuiTouchRipple-root"
                       />
                     </button>
-                    ;
                     <div
                       aria-hidden="true"
                       class="MuiBackdrop-root makeStyles-backdrop-41"
@@ -596,7 +595,6 @@ Object {
                       class="MuiTouchRipple-root"
                     />
                   </button>
-                  ;
                   <div
                     aria-hidden="true"
                     class="MuiBackdrop-root makeStyles-backdrop-41"

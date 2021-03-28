@@ -88,7 +88,7 @@ const Code = (props) => {
         background: {
             backgroundColor: "#FEE5D4",
             borderRadius: 5,
-            marginTop: -8,
+            marginTop: -6,
             letterSpacing: 0.5,
             fontFamily: "Space Mono",
             lineHeight: "22px",
@@ -96,7 +96,7 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
         noBackground: {
-            marginTop: -8,
+            marginTop: -6,
             letterSpacing: 0.5,
             fontFamily: "Space Mono",
             lineHeight: "22px",
@@ -104,6 +104,7 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
     }));
+    
     const classes = useStyles();
 
     const terminableCode =
@@ -112,7 +113,7 @@ const Code = (props) => {
                 {`Algorithm: SwapFourTimes(Arr)`}
             </pre>
             <pre className={classes.noBackground}>
-                {`  i = 0;`}
+                {`  i = 0`}
             </pre>
             <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
                 {`  for i from 0 to 3 do`}

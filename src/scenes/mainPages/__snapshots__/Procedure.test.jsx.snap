@@ -425,7 +425,6 @@ Object {
                           class="MuiTouchRipple-root"
                         />
                       </button>
-                      ;
                       <div
                         aria-hidden="true"
                         class="MuiBackdrop-root makeStyles-backdrop-89"
@@ -622,111 +621,112 @@ Object {
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div
-            aria-hidden="true"
-            class="MuiBackdrop-root makeStyles-backdrop-95"
-            style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
-          >
+          <div>
             <div
-              style="opacity: 0.2; transform: scale(0) translateZ(0);"
+              aria-hidden="true"
+              class="MuiBackdrop-root makeStyles-backdrop-95"
+              style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
             >
               <div
-                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-96 MuiPaper-elevation1 MuiPaper-rounded"
+                style="opacity: 0.2; transform: scale(0) translateZ(0);"
               >
-                <div>
-                  <h4
-                    class="MuiTypography-root makeStyles-title-100 MuiTypography-h4 MuiTypography-gutterBottom"
-                    style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
-                  >
-                    Welcome!
-                  </h4>
-                  <p
-                    class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
-                    style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
-                  >
-                    We designed a special section of Tutorial for freshmen. 
-                    <br />
-                    You can learn sorting and correctness in other two sections. 
-                    <br />
-                    Do you have any experience on programming? 
-                    <br />
-                  </p>
-                </div>
                 <div
-                  class="makeStyles-buttonBase-97"
+                  class="MuiPaper-root MuiCard-root makeStyles-cardBackground-96 MuiPaper-elevation1 MuiPaper-rounded"
                 >
-                  <button
-                    class="MuiButtonBase-root"
-                    style="border-radius: 30px;"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <a
-                      href="/TutorialMainPage"
-                      style="text-decoration: none;"
+                  <div>
+                    <h4
+                      class="MuiTypography-root makeStyles-title-100 MuiTypography-h4 MuiTypography-gutterBottom"
+                      style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                     >
-                      <div
-                        style="opacity: 0; transform: translateY(-50px) translateZ(0);"
+                      Welcome!
+                    </h4>
+                    <p
+                      class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
+                      style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+                    >
+                      We designed a special section of Tutorial for freshmen. 
+                      <br />
+                      You can learn sorting and correctness in other two sections. 
+                      <br />
+                      Do you have any experience on programming?
+                       
+                      <br />
+                    </p>
+                  </div>
+                  <div
+                    class="makeStyles-buttonBase-97"
+                  >
+                    <button
+                      class="MuiButtonBase-root"
+                      style="border-radius: 30px;"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <a
+                        href="/TutorialMainPage"
+                        style="text-decoration: none;"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-98 MuiPaper-elevation1 MuiPaper-rounded"
+                          style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content1-102"
+                            class="MuiPaper-root MuiCard-root makeStyles-cardOne-98 MuiPaper-elevation1 MuiPaper-rounded"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
-                              style="font-family: inherit; font-weight: 600;"
+                            <div
+                              class="MuiCardContent-root makeStyles-content1-102"
                             >
-                              I'm new at programming, go to Tutorial first!
-                            </h6>
+                              <h6
+                                class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+                                style="font-family: inherit; font-weight: 600;"
+                              >
+                                I'm new at programming, go to Tutorial first!
+                              </h6>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
-                  <button
-                    class="MuiButtonBase-root"
-                    style="border-radius: 30px;"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <a
-                      href="/ProcedureMainPage"
-                      style="text-decoration: none;"
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                    <button
+                      class="MuiButtonBase-root"
+                      style="border-radius: 30px;"
+                      tabindex="0"
+                      type="button"
                     >
-                      <div
-                        style="opacity: 0; transform: translateY(-50px) translateZ(0);"
+                      <a
+                        href="/ProcedureMainPage"
+                        style="text-decoration: none;"
                       >
                         <div
-                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-99 MuiPaper-elevation1 MuiPaper-rounded"
+                          style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                         >
                           <div
-                            class="MuiCardContent-root makeStyles-content2-103"
+                            class="MuiPaper-root MuiCard-root makeStyles-cardTwo-99 MuiPaper-elevation1 MuiPaper-rounded"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
-                              style="font-family: inherit; font-weight: 600;"
+                            <div
+                              class="MuiCardContent-root makeStyles-content2-103"
                             >
-                              I've got basic knowledge, start now!
-                            </h6>
+                              <h6
+                                class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+                                style="font-family: inherit; font-weight: 600;"
+                              >
+                                I've got basic knowledge, start now!
+                              </h6>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                    <span
-                      class="MuiTouchRipple-root"
-                    />
-                  </button>
+                      </a>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
+              <div />
             </div>
-            <div />
           </div>
         </div>
       </div>
@@ -1153,7 +1153,6 @@ Object {
                         class="MuiTouchRipple-root"
                       />
                     </button>
-                    ;
                     <div
                       aria-hidden="true"
                       class="MuiBackdrop-root makeStyles-backdrop-89"
@@ -1350,111 +1349,112 @@ Object {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div
-          aria-hidden="true"
-          class="MuiBackdrop-root makeStyles-backdrop-95"
-          style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
-        >
+        <div>
           <div
-            style="opacity: 0.2; transform: scale(0) translateZ(0);"
+            aria-hidden="true"
+            class="MuiBackdrop-root makeStyles-backdrop-95"
+            style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
           >
             <div
-              class="MuiPaper-root MuiCard-root makeStyles-cardBackground-96 MuiPaper-elevation1 MuiPaper-rounded"
+              style="opacity: 0.2; transform: scale(0) translateZ(0);"
             >
-              <div>
-                <h4
-                  class="MuiTypography-root makeStyles-title-100 MuiTypography-h4 MuiTypography-gutterBottom"
-                  style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
-                >
-                  Welcome!
-                </h4>
-                <p
-                  class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
-                  style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
-                >
-                  We designed a special section of Tutorial for freshmen. 
-                  <br />
-                  You can learn sorting and correctness in other two sections. 
-                  <br />
-                  Do you have any experience on programming? 
-                  <br />
-                </p>
-              </div>
               <div
-                class="makeStyles-buttonBase-97"
+                class="MuiPaper-root MuiCard-root makeStyles-cardBackground-96 MuiPaper-elevation1 MuiPaper-rounded"
               >
-                <button
-                  class="MuiButtonBase-root"
-                  style="border-radius: 30px;"
-                  tabindex="0"
-                  type="button"
-                >
-                  <a
-                    href="/TutorialMainPage"
-                    style="text-decoration: none;"
+                <div>
+                  <h4
+                    class="MuiTypography-root makeStyles-title-100 MuiTypography-h4 MuiTypography-gutterBottom"
+                    style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
-                    <div
-                      style="opacity: 0; transform: translateY(-50px) translateZ(0);"
+                    Welcome!
+                  </h4>
+                  <p
+                    class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
+                    style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
+                  >
+                    We designed a special section of Tutorial for freshmen. 
+                    <br />
+                    You can learn sorting and correctness in other two sections. 
+                    <br />
+                    Do you have any experience on programming?
+                     
+                    <br />
+                  </p>
+                </div>
+                <div
+                  class="makeStyles-buttonBase-97"
+                >
+                  <button
+                    class="MuiButtonBase-root"
+                    style="border-radius: 30px;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <a
+                      href="/TutorialMainPage"
+                      style="text-decoration: none;"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardOne-98 MuiPaper-elevation1 MuiPaper-rounded"
+                        style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content1-102"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardOne-98 MuiPaper-elevation1 MuiPaper-rounded"
                         >
-                          <h6
-                            class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
-                            style="font-family: inherit; font-weight: 600;"
+                          <div
+                            class="MuiCardContent-root makeStyles-content1-102"
                           >
-                            I'm new at programming, go to Tutorial first!
-                          </h6>
+                            <h6
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+                              style="font-family: inherit; font-weight: 600;"
+                            >
+                              I'm new at programming, go to Tutorial first!
+                            </h6>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root"
-                  style="border-radius: 30px;"
-                  tabindex="0"
-                  type="button"
-                >
-                  <a
-                    href="/ProcedureMainPage"
-                    style="text-decoration: none;"
+                    </a>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                  <button
+                    class="MuiButtonBase-root"
+                    style="border-radius: 30px;"
+                    tabindex="0"
+                    type="button"
                   >
-                    <div
-                      style="opacity: 0; transform: translateY(-50px) translateZ(0);"
+                    <a
+                      href="/ProcedureMainPage"
+                      style="text-decoration: none;"
                     >
                       <div
-                        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-99 MuiPaper-elevation1 MuiPaper-rounded"
+                        style="opacity: 0; transform: translateY(-50px) translateZ(0);"
                       >
                         <div
-                          class="MuiCardContent-root makeStyles-content2-103"
+                          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-99 MuiPaper-elevation1 MuiPaper-rounded"
                         >
-                          <h6
-                            class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
-                            style="font-family: inherit; font-weight: 600;"
+                          <div
+                            class="MuiCardContent-root makeStyles-content2-103"
                           >
-                            I've got basic knowledge, start now!
-                          </h6>
+                            <h6
+                              class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+                              style="font-family: inherit; font-weight: 600;"
+                            >
+                              I've got basic knowledge, start now!
+                            </h6>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </button>
+                    </a>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
+            <div />
           </div>
-          <div />
         </div>
       </div>
     </div>
