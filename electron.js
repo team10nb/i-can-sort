@@ -23,7 +23,7 @@ mainWindow.loadURL(url.format({
     slashes: true
   }))
 
-mainWindow.removeMenu();
+//mainWindow.removeMenu();
 
 mainWindow.setTitle("iCanSort");
 
