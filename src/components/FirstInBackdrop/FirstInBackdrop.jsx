@@ -230,7 +230,7 @@ export default function FirstInBackdrop(props) {
                     </Card>
                 </motion.div>
                 {snack === 1 ? (
-                    <Snackbar open={appear} onClose={handleClose}>
+                    <Snackbar open={appear} onClose={handleClose} style={{bottom:"80px"}}>
                         <Alert onClose={handleClose} severity="success">
                             Successfully reset history!
                         </Alert>
