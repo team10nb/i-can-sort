@@ -32,16 +32,18 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 1000,
     },
     grid: {
-        flexGrow: 1,
         width: 900,
         height: 600,
-        paddingLeft: 30,
-        paddingTop: 30,
+        
     },
     div: {
+        display:"flex",
+        alignContent:"center",
+        justifyContent:"center",
         textAlign: "center",
-        height: 690,
-        width: 960,
+        height: 700,
+        width: 1050,
+        paddingTop: 80,
     },
     buttonSet: {
         display: "flex",
