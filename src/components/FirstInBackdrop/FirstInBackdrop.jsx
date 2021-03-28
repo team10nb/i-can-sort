@@ -65,8 +65,7 @@ const useStyles = makeStyles((theme) => ({
         transition: "0.5s",
     },
     title: {
-        marginLeft: "245px",
-        marginTop: "36px",
+        marginTop: "33px",
     },
     tip: {
         marginLeft: 52,
