@@ -22,10 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
         color: "#212121",
-        marginLeft: "-500px",
-        marginTop: "-155px",
-        height: "1000px",
-        width: "2000px",
+        
     },
 
     card: {
@@ -381,7 +378,7 @@ export default function ExplanationFrame(props) {
                             <HelpOutlineOutlinedIcon className={classes.icon} />
                         </IconButton>
                     </Tooltip>
-                )};       
+                )} 
                 
             {card}
         </div>
