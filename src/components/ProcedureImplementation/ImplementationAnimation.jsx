@@ -19,6 +19,7 @@ import Button from '@material-ui/core/Button';
 import { color } from '../../scenes/mainPages/Procedure';
 import InputBar from '../InputBar/InputBar';
 import { random } from 'lodash';
+import { resolveOnChange } from "antd/lib/input/Input";
 
 
 // a framer motion transition attributes
@@ -395,6 +396,12 @@ export default function ImplementationAnimation(props) {
         trace,
     };
 
+    // jump to quick gudie pdfs
+    const handleDownload  = () => {
+      let url = "https://github.com/team10nb/i-can-sort/tree/main/docs/Quick%20guide"
+      window.electron.shell.openExternal(url)
+    };
+
     return (
         <div className={classes.root}>
             <Card className={classes.cardOne}>
@@ -404,8 +411,8 @@ export default function ImplementationAnimation(props) {
                     <div>
                         <Code blockNum={blockNums[currentStep]} />
                     </div>
-                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} href={file} download={algorithm + ".pdf"}>
-                        Export Quick Guide
+                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} onClick={handleDownload} >
+                        Check Quick Guide
                     </Button>
                 </CardContent>
             </Card>
