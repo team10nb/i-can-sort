@@ -56,7 +56,7 @@ export default function Method(props) {
             paddingLeft: "15px",
             paddingTop: "0px",
             marginLeft: "210px",
-            width: "300px",
+            width: "600px",
             backgroundColor: "#FFFFFF",
         },
     };

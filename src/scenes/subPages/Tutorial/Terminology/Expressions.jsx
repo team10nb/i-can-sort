@@ -22,7 +22,7 @@ const StyledTableCell = withStyles((theme) => ({
         color: theme.palette.common.white,
     },
     body: {
-        fontSize: 14,
+        fontSize: 13,
     },
 }))(TableCell);
 
@@ -39,7 +39,7 @@ function createData(name, meaning) {
 }
 
 const rows = [
-    createData("a = b", "a equals to b"),
+    createData("a = 1", "let a = 1"),
     createData("a > b / a < b ", "a is bigger than b / a is less than b"),
     createData("a && b", "a AND b"),
     createData("a || b", "a OR b"),
@@ -105,8 +105,8 @@ export default function Expressions(props) {
         <p>
             This module will mainly introduce you basic knowlege of{" "}
             <font style={{ fontWeight: "bold" }}>pseudocode</font>. You will get
-            to learn syntax of Structured Basic style pseudocode. Hope you
-            Enjoy!
+            to learn syntax of structured basic style pseudocode. Hope you
+            enjoy!
         </p>
     );
 

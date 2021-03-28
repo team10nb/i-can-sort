@@ -237,7 +237,7 @@ const useStyles = makeStyles((theme) => ({
                             <ListItem className = {classes.listItem}>             
                             <ListItemText primary= 'Terminology' classes={{primary:classes.listItemTitle}}/>
                             </ListItem>
-                            {['Expressions','IF-THEN-ELSE','Method', 'Return Value'].map((text, index) => (
+                            {['Expressions','if-then-else','Method', 'Return Value'].map((text, index) => (
                             index === activeStep
                                 ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
