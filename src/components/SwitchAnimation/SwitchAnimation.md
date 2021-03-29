@@ -10,7 +10,7 @@ Animation component which contains a control bar, a slider and a description box
 
 ### **Import**
 
-```html
+```jsx
 import Zoom from "@material-ui/core/Zoom"; 
 import SpeedMenu from "../SpeedMenu/SpeedMenu"; 
 import Tooltip from "@material-ui/core/Tooltip";
