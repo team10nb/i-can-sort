@@ -16,7 +16,7 @@ import {
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
 import SelectionSort from "../SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort";
 import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort";
-import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
+import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSortRecursion";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
 

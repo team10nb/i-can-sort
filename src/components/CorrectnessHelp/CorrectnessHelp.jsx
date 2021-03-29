@@ -19,7 +19,7 @@ const content2 = (
         style={{ marginLeft: "20px" }}
     >
         By inputting a number from 1 to 7, the algorithm will output the week
-        name from Sunday to Saturday.
+        name from Monday to Sunday.
     </Typography>
 );
 
