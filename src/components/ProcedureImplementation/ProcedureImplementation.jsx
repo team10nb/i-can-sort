@@ -25,8 +25,6 @@ const BubbleImplementation = () => {
     const algorithm = "bubble";
     const sort = BubbleSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
@@ -43,8 +41,6 @@ const SelectionImplementation = () => {
     const title = "Selection Sort";
     const algorithm = "selection";
     const sort = SelectionSort;
-
-    const arr = [4, 8, 11, 13, 5];
 
     const props = {
         title,
@@ -63,8 +59,6 @@ const InsertionImplementation = () => {
     const algorithm = "insertion";
     const sort = InsertionSort;
 
-    const arr = [4, 13, 11, 8, 5];
-
     const props = {
         title,
         algorithm,
@@ -81,8 +75,6 @@ const QuickImplementation = () => {
     const title = "Quick Sort";
     const algorithm = "quick";
     const sort = QuickSort;
-
-    const arr = [4, 8, 11, 13, 5];
 
     const props = {
         title,
@@ -101,8 +93,6 @@ const MergeImplementation = () => {
     const algorithm = "merge";
     const sort = MergeSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
@@ -119,8 +109,6 @@ const HeapImplementation = () => {
     const title = "Heap Sort";
     const algorithm = "heap";
     const sort = HeapSort;
-
-    const arr = [4, 8, 11, 13, 5];
 
     const props = {
         title,
