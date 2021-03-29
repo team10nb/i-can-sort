@@ -267,10 +267,17 @@ const Selection = (props) => {
             </pre>
             <pre
                 className={
-                    blockNum === 11 ? classes.background : classes.noBackground
+                    blockNum === 10 ? classes.background : classes.noBackground
                 }
             >
                 {`end for`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 11 ? classes.background : classes.noBackground
+                }
+            >
+                {`return Arr`}
             </pre>
             {/* assertion */}
             <pre
@@ -383,10 +390,17 @@ const Insertion = (props) => {
 
             <pre
                 className={
-                    blockNum === 11 ? classes.background : classes.noBackground
+                    blockNum === 10 ? classes.background : classes.noBackground
                 }
             >
                 {`end for`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 11 ? classes.background : classes.noBackground
+                }
+            >
+                {`return Arr`}
             </pre>
             {/* assertion */}
             <pre
