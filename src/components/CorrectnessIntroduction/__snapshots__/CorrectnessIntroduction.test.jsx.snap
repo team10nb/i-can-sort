@@ -59,10 +59,10 @@ Object {
                   style="height: 48px;"
                 >
                   <button
-                    aria-label="help"
+                    aria-label="Help"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="help"
+                    title="Help"
                     type="button"
                   >
                     <span
@@ -280,10 +280,10 @@ Object {
                 style="height: 48px;"
               >
                 <button
-                  aria-label="help"
+                  aria-label="Help"
                   class="MuiButtonBase-root MuiIconButton-root"
                   tabindex="0"
-                  title="help"
+                  title="Help"
                   type="button"
                 >
                   <span
