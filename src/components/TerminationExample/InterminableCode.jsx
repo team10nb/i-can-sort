@@ -75,8 +75,26 @@ const Code = (props) => {
     )
 }
 
-export default function Interminable(props) {
-    const { trace, blockNums } = props;
+export default function Interminable() {
+    // pseudocode highlight block numbers
+    const blockNums = [1, 3, 2];
+
+    // loop trace
+    const trace = [
+        [
+            { value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0 },
+            { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 }
+        ], [
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 }
+        ], [
+            { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 },
+            { value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0 }
+        ], [
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 }
+        ]
+    ];
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
