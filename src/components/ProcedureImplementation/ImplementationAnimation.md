@@ -1,6 +1,6 @@
 ### **Developer**
 
-Ruizi Han
+Ruizi Han, Shiliang Chen
 
 Reference: MATERIAL-UI (https://material-ui.com)
 
