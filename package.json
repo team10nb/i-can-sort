@@ -24,9 +24,32 @@
       "node_modules/",
       "package.json"
     ],
+    
+      "nsis": {
+        "oneClick": false, 
+        "perMachine": true, 
+        "allowElevation": true,
+        "allowToChangeInstallationDirectory": true, 
+        "installerIcon": "build/icon.png",
+        "uninstallerIcon": "build/icon.png",
+        "installerHeaderIcon": "build/icon.png",
+        "createDesktopShortcut": true, 
+        "createStartMenuShortcut": true, 
+        "shortcutName": "iCanSort" 
+    },
+
     "win": {
-      "icon": "build/icon.png"
-    }
+      "icon": "build/icon.png",
+      "target": [
+        {
+            "target": "nsis",
+            "arch": [
+              "ia32"
+            ]
+        }
+        ]
+      }
+
   },
   "dependencies": {},
   "scripts": {
@@ -39,7 +62,8 @@
     "styleguide": "styleguidist server  --config styleguidist.config.js",
     "styleguide:build": "styleguidist build --config styleguidist.config.js",
     "packager": "npm run build && rm -rf dist && electron-builder",
-    "dist": "react-scripts build && electron-builder --mac --x64"
+    "dist-mac": "react-scripts build && electron-builder --mac --x64 ",
+    "dist-win": "react-scripts build && electron-builder --win --x64"
   },
   "eslintConfig": {
     "extends": [
