@@ -10,7 +10,7 @@ Animation component which contains a control bar, a slider, a description box an
 
 ### **Import**
 
-```jsx
+```html
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -41,6 +41,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
 import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
 import { useStyles } from './Style';
+
+const useStyles = makeStyles((theme) => ({...}));
 
 // dynamic pseudocode
 const Code = (props) => {
