@@ -65,25 +65,25 @@ export default function IfThenElse(props) {
         <div>
             <Card style={styles.root}>
                 <CardContent>
-                    <h1 style={styles.title}>IF-THEN-ELSE</h1>
+                    <h1 style={styles.title}>if-then-else</h1>
                     <br></br>
                     <div style={styles.div}>
                         Binary choice on a given Boolean condition is indicated
-                        by the use of four keywords: IF, THEN, ELSE, and ENDIF.
+                        by the use of four keywords: 'if', 'then', 'else' and 'end if'.
                         The general form is:
                     </div>
                     <br></br>
                     <br></br>
 
                     <div style={styles.sample}>
-                        IF condition THEN<br></br>sequence 1<br></br>ELSE
-                        <br></br>sequence 2<br></br>END IF
+                        if condition then<br></br>sequence 1<br></br>else
+                        <br></br>sequence 2<br></br>end if
                     </div>
 
                     <br></br>
                     <br></br>
                     <div style={styles.div}>
-                        The ELSE keyword and "sequence 2" are optional. If the
+                        The 'else' keyword and "sequence 2" are optional. If the
                         condition is true, sequence 1 is performed, otherwise
                         sequence 2 is performed.
                     </div>

@@ -65,7 +65,7 @@ export default function ReturnValue(props) {
                     <div style={styles.div}>
                         Standard Pseudocode use{" "}
                         <font style={{ fontWeight: "bold" }}>
-                            return [expression]
+                            Return [expression]
                         </font>{" "}
                         to present the output of an algorithm. See the example
                         below:
@@ -75,7 +75,7 @@ export default function ReturnValue(props) {
                     <div style={styles.sample}>
                         Algorithm: Return_A<br></br>Input: an integer A<br></br>
                         Output: An integer A<br></br>A = 0 <br></br> B = 2{" "}
-                        <br></br> A = A + B <br></br> return A
+                        <br></br> A = A + B <br></br> Return A
                     </div>
 
                     <br></br>

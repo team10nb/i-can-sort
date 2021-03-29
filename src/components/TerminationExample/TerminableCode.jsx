@@ -162,7 +162,7 @@ const TerminableCode = () => {
         "i = 2",
         "i = 3",
         "i = 3",
-        "i = 4, out of loop",
+        "i = 4, jump out of the loop",
     ];
 
     const props = {
