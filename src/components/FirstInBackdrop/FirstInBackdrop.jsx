@@ -148,10 +148,8 @@ export default function FirstInBackdrop(props) {
                                 }}
                                 className={classes.tip}
                             >
-                                We designed a special section of Tutorial for
-                                freshmen. <br />
-                                You can learn sorting and correctness in other
-                                two sections. <br />
+                                You can learn sorting in PROCEDURE section. <br />
+                                Ideas of correctness is available in CORRECTNESS section.<br />
                                 Do you have any experience on programming?{" "}
                                 <br />
                             </Typography>
@@ -185,7 +183,7 @@ export default function FirstInBackdrop(props) {
                                                         fontWeight: "600",
                                                     }}
                                                 >
-                                                    I'm new at programming, go
+                                                    No. I'm new at programming, go
                                                     to Tutorial first!
                                                 </Typography>
                                             </CardContent>
@@ -220,7 +218,7 @@ export default function FirstInBackdrop(props) {
                                                         fontWeight: "600",
                                                     }}
                                                 >
-                                                    I've got basic knowledge,
+                                                    Yes. I've got basic knowledge,
                                                     start now!
                                                 </Typography>
                                             </CardContent>
