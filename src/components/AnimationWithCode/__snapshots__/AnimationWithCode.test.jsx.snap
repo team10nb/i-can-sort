@@ -1,0 +1,696 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="makeStyles-root-32"
+      >
+        <div>
+          For Loop
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="makeStyles-bars-33"
+          >
+            <li
+              class="makeStyles-bar-34"
+              style="background-color: rgb(255, 0, 140); transform: none;"
+            >
+              <div />
+              <div
+                style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-34"
+              style="background-color: rgb(211, 9, 225); transform: none;"
+            >
+              <div />
+              <div
+                style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-34"
+              style="background-color: rgb(156, 26, 255); transform: none;"
+            >
+              <div />
+              <div
+                style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-34"
+              style="background-color: rgb(119, 0, 255); transform: none;"
+            >
+              <div />
+              <div
+                style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-34"
+              style="background-color: rgb(102, 170, 0); transform: none;"
+            >
+              <div />
+              <div
+                style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+          </div>
+          <p />
+          <div
+            class="makeStyles-slider-35"
+          >
+            <div
+              class="makeStyles-root-36"
+            >
+              <span
+                class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-37 MuiSlider-colorPrimary"
+              >
+                <span
+                  class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-42"
+                />
+                <span
+                  class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-41"
+                  style="left: 0%; width: 0%;"
+                />
+                <input
+                  type="hidden"
+                  value="0"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-43 MuiSlider-markActive"
+                  data-index="0"
+                  style="left: 0%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-43"
+                  data-index="1"
+                  style="left: 100%;"
+                />
+                <span
+                  aria-labelledby="Progress"
+                  aria-orientation="horizontal"
+                  aria-valuemax="1"
+                  aria-valuemin="0"
+                  aria-valuenow="0"
+                  class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-38 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-44"
+                  data-index="0"
+                  role="slider"
+                  style="left: 0%;"
+                  tabindex="0"
+                >
+                  <span
+                    class="PrivateValueLabel-offset-46 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-40"
+                  >
+                    <span
+                      class="PrivateValueLabel-circle-47"
+                    >
+                      <span
+                        class="PrivateValueLabel-label-48"
+                      >
+                        0
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div
+              style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+            >
+              <span
+                class="makeStyles-customTooltip-49"
+                title="Reset"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                      focusable="false"
+                      style="color: grey;"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <div
+                class="makeStyles-root-50"
+              >
+                <button
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-52"
+                  style="min-width: 40px;"
+                  tabindex="0"
+                  title="Speed"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    1x
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <div
+              style="line-height: 25px;"
+            >
+              <div>
+                <div>
+                  <pre
+                    class="makeStyles-background-54"
+                  >
+                    test
+                  </pre>
+                  <pre
+                    class="makeStyles-noBackground-55"
+                  >
+                    test
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="MuiPopover-root makeStyles-menu-51"
+      id="simple-menu"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
+    >
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="menu"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-56 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="0"
+            value="1"
+          >
+            0.25x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-56 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="2"
+          >
+            0.5x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-56 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="4"
+          >
+            1x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-56 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="8"
+          >
+            2x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-56 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="16"
+          >
+            4x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="makeStyles-root-32"
+    >
+      <div>
+        For Loop
+      </div>
+      <div
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="makeStyles-bars-33"
+        >
+          <li
+            class="makeStyles-bar-34"
+            style="background-color: rgb(255, 0, 140); transform: none;"
+          >
+            <div />
+            <div
+              style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-34"
+            style="background-color: rgb(211, 9, 225); transform: none;"
+          >
+            <div />
+            <div
+              style="margin-top: 13px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-34"
+            style="background-color: rgb(156, 26, 255); transform: none;"
+          >
+            <div />
+            <div
+              style="margin-top: 73px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-34"
+            style="background-color: rgb(119, 0, 255); transform: none;"
+          >
+            <div />
+            <div
+              style="margin-top: -7px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+          <li
+            class="makeStyles-bar-34"
+            style="background-color: rgb(102, 170, 0); transform: none;"
+          >
+            <div />
+            <div
+              style="margin-top: 3px; font-size: 16px; text-align: center; font-weight: 600;"
+            />
+          </li>
+        </div>
+        <p />
+        <div
+          class="makeStyles-slider-35"
+        >
+          <div
+            class="makeStyles-root-36"
+          >
+            <span
+              class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-37 MuiSlider-colorPrimary"
+            >
+              <span
+                class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-42"
+              />
+              <span
+                class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-41"
+                style="left: 0%; width: 0%;"
+              />
+              <input
+                type="hidden"
+                value="0"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-43 MuiSlider-markActive"
+                data-index="0"
+                style="left: 0%;"
+              />
+              <span
+                class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-43"
+                data-index="1"
+                style="left: 100%;"
+              />
+              <span
+                aria-labelledby="Progress"
+                aria-orientation="horizontal"
+                aria-valuemax="1"
+                aria-valuemin="0"
+                aria-valuenow="0"
+                class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-38 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-44"
+                data-index="0"
+                role="slider"
+                style="left: 0%;"
+                tabindex="0"
+              >
+                <span
+                  class="PrivateValueLabel-offset-46 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-40"
+                >
+                  <span
+                    class="PrivateValueLabel-circle-47"
+                  >
+                    <span
+                      class="PrivateValueLabel-label-48"
+                    >
+                      0
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div
+            style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+          >
+            <span
+              class="makeStyles-customTooltip-49"
+              title="Reset"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <div
+              class="makeStyles-root-50"
+            >
+              <button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-52"
+                style="min-width: 40px;"
+                tabindex="0"
+                title="Speed"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  1x
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardContent-root"
+        >
+          <div
+            style="line-height: 25px;"
+          >
+            <div>
+              <div>
+                <pre
+                  class="makeStyles-background-54"
+                >
+                  test
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-55"
+                >
+                  test
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
