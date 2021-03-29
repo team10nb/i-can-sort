@@ -398,7 +398,7 @@ export default function ImplementationAnimation(props) {
 
     // jump to quick gudie pdfs
     const handleDownload  = () => {
-      let url = "https://github.com/team10nb/i-can-sort/tree/main/docs/Quick%20guide"
+      let url = "https://github.com/team10nb/i-can-sort/raw/main/docs/Quick%20guide/" + algorithm + ".pdf";
       window.electron.shell.openExternal(url)
     };
 
