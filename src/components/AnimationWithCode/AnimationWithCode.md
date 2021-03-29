@@ -36,7 +36,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 ### **Demo**
 
-```jsx
+```html
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
 import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
