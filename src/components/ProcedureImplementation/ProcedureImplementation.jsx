@@ -12,12 +12,6 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
-import BubbleFile from "../../resource/bubble.pdf";
-import SelectionFile from "../../resource/selection.pdf";
-import InsertionFile from "../../resource/insertion.pdf";
-import QuickFile from "../../resource/quick.pdf";
-import MergeFile from "../../resource/merge.pdf";
-import HeapFile from "../../resource/heap.pdf";
 
 const BubbleImplementation = () => {
     const Code = Bubble;
@@ -30,7 +24,6 @@ const BubbleImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: BubbleFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -47,7 +40,6 @@ const SelectionImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: SelectionFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -64,7 +56,6 @@ const InsertionImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: InsertionFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -81,7 +72,6 @@ const QuickImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: QuickFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -98,7 +88,6 @@ const MergeImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: MergeFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -115,7 +104,6 @@ const HeapImplementation = () => {
         algorithm,
         sort,
         Code,
-        file: HeapFile,
     };
 
     return <ImplementationAnimation {...props} />;

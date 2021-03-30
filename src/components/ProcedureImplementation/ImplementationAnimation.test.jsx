@@ -9,7 +9,6 @@ import * as AnimationSliders from "../AnimationSlider/AnimationSlider";
 import * as AnimationControls from "../AnimationControl/AnimationControl";
 import * as ExplanationBoxes from "../ExplanationBox/ExplanationBox";
 import BubbleSort from "../SwitchAnimation/SortingAlgorithms/BubbleSort/BubbleSort";
-import BubbleFile from "../../resource/bubble.pdf";
 import { Bubble } from "./PseudoCode";
 
 const props = {
@@ -17,7 +16,6 @@ const props = {
     algorithm: "test",
     sort: BubbleSort,
     Code: Bubble,
-    file: BubbleFile,
 };
 
 it('should call InputBar', () => {
