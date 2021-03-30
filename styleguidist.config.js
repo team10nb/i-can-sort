@@ -40,16 +40,17 @@ module.exports = {
           name: 'Procedure',
           components: 
           [
-            './src/scenes/subPages/Procedure/**/*.jsx', 
             './src/scenes/mainPages/Procedure.jsx',
+            './src/scenes/subPages/Procedure/ProcedureSubPage.jsx',
           ]
         },
         {
           name: 'Correctness',
           components: 
           [
-            './src/scenes/subPages/Correctness/**/*.jsx', 
-            './src/scenes/mainPages/Correctness.jsx'
+            './src/scenes/mainPages/Correctness.jsx',
+            './src/scenes/subPages/Correctness/CorrectnessTutorial.jsx',
+            './src/scenes/subPages/Correctness/CorrectnessProof.jsx',
           ]
         },
       ]

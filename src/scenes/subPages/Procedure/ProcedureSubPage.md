@@ -16,7 +16,7 @@ This is a interface for exact sorting algorithms use.
 import { makeStyles } from '@material-ui/core/styles';
 ```
 
-###  **Props**
+###  **Components**
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
