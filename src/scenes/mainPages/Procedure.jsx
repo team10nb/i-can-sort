@@ -93,9 +93,11 @@ export default function ProcedureMainPage(props) {
         ? JSON.parse(localStorage.getItem("pre"))
         : null;
 
-        const localFirst = localStorage.getItem("first")
-        ? JSON.parse(localStorage.getItem("first"))
-        : localStorage.setItem("first", JSON.stringify(true));
+    localStorage.getItem("first")
+    ? JSON.parse(localStorage.getItem("first"))
+    : localStorage.setItem("first", JSON.stringify(true));
+
+    const firstIn = JSON.parse(localStorage.getItem("first"));
         
     // if (localStorage.getItem("first") == 1) {
     //     localStorage.setItem("first", JSON.stringify(1));
@@ -113,9 +115,7 @@ export default function ProcedureMainPage(props) {
         localStorage.setItem("snack", JSON.stringify(0));
     }
 
-    const firstIn = localStorage.getItem("first")
-        ? JSON.parse(localStorage.getItem("first"))
-        : null;
+    
 
     const handleClick = (title) => () => {
         //store previous visited algorithm
