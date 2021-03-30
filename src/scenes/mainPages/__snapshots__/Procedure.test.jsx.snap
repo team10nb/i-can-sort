@@ -366,7 +366,7 @@ Object {
                 >
                   <div>
                     <button
-                      aria-label="setting"
+                      aria-label="Setting"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
                       title="Setting"
@@ -401,10 +401,10 @@ Object {
                       style="height: 48px;"
                     >
                       <button
-                        aria-label="help"
+                        aria-label="Help"
                         class="MuiButtonBase-root MuiIconButton-root"
                         tabindex="0"
-                        title="help"
+                        title="Help"
                         type="button"
                       >
                         <span
@@ -644,9 +644,9 @@ Object {
                       class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
                       style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                     >
-                      We designed a special section of Tutorial for freshmen. 
+                      You can learn sorting in PROCEDURE section. 
                       <br />
-                      You can learn sorting and correctness in other two sections. 
+                      Ideas of correctness is available in CORRECTNESS section.
                       <br />
                       Do you have any experience on programming?
                        
@@ -679,7 +679,7 @@ Object {
                                 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                                 style="font-family: inherit; font-weight: 600;"
                               >
-                                I'm new at programming, go to Tutorial first!
+                                No. I'm new at programming, go to Tutorial first!
                               </h6>
                             </div>
                           </div>
@@ -712,7 +712,7 @@ Object {
                                 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                                 style="font-family: inherit; font-weight: 600;"
                               >
-                                I've got basic knowledge, start now!
+                                Yes. I've got basic knowledge, start now!
                               </h6>
                             </div>
                           </div>
@@ -1094,7 +1094,7 @@ Object {
               >
                 <div>
                   <button
-                    aria-label="setting"
+                    aria-label="Setting"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
                     title="Setting"
@@ -1129,10 +1129,10 @@ Object {
                     style="height: 48px;"
                   >
                     <button
-                      aria-label="help"
+                      aria-label="Help"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="help"
+                      title="Help"
                       type="button"
                     >
                       <span
@@ -1372,9 +1372,9 @@ Object {
                     class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
-                    We designed a special section of Tutorial for freshmen. 
+                    You can learn sorting in PROCEDURE section. 
                     <br />
-                    You can learn sorting and correctness in other two sections. 
+                    Ideas of correctness is available in CORRECTNESS section.
                     <br />
                     Do you have any experience on programming?
                      
@@ -1407,7 +1407,7 @@ Object {
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                               style="font-family: inherit; font-weight: 600;"
                             >
-                              I'm new at programming, go to Tutorial first!
+                              No. I'm new at programming, go to Tutorial first!
                             </h6>
                           </div>
                         </div>
@@ -1440,7 +1440,7 @@ Object {
                               class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
                               style="font-family: inherit; font-weight: 600;"
                             >
-                              I've got basic knowledge, start now!
+                              Yes. I've got basic knowledge, start now!
                             </h6>
                           </div>
                         </div>

@@ -166,7 +166,7 @@ import Typography from '@material-ui/core/Typography';
                   Are you sure you want to erase all history? All study progress will be reset.                   
                 </div>  
                 <Link to="/ProcedureMainPage" style={{ textDecoration: "none" }}>        
-                  <Button variant="contained" size = "small" onClick={handleClick}  className={classes.confirmButton}  >COMFIRM</Button>      
+                  <Button variant="contained" size = "small" onClick={handleClick}  className={classes.confirmButton}  >CONFIRM</Button>      
                 </Link>                     
               </Alert>
             </Collapse>                         
@@ -181,7 +181,7 @@ import Typography from '@material-ui/core/Typography';
       <div>
         {/*set button*/}
         <Tooltip title="Setting" placement="bottom" arrow>
-          <IconButton aria-label="setting" onClick={toggleDrawer('left', true)}  > <SettingsOutlinedIcon  /></IconButton>
+          <IconButton aria-label="Setting" onClick={toggleDrawer('left', true)}  > <SettingsOutlinedIcon  /></IconButton>
         </Tooltip>        
           <SwipeableDrawer
             anchor={'left'}

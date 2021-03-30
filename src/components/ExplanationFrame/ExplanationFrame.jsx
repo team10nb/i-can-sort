@@ -366,15 +366,15 @@ export default function ExplanationFrame(props) {
                     }}
                     unmountOnExit
                 >
-                    <Tooltip title="help" placement="bottom" arrow>
-                        <IconButton aria-label="help" onClick={handleClickOpen}>
+                    <Tooltip title="Help" placement="bottom" arrow>
+                        <IconButton aria-label="Help" onClick={handleClickOpen}>
                             <HelpOutlineOutlinedIcon className={classes.icon} />
                         </IconButton>
                     </Tooltip>
                 </Zoom>
                 ):(
-                    <Tooltip title="help" placement="bottom" arrow>
-                        <IconButton aria-label="help" onClick={handleClickOpen}>
+                    <Tooltip title="Help" placement="bottom" arrow>
+                        <IconButton aria-label="Help" onClick={handleClickOpen}>
                             <HelpOutlineOutlinedIcon className={classes.icon} />
                         </IconButton>
                     </Tooltip>
