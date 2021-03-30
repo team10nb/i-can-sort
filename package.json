@@ -62,7 +62,7 @@
     "electron-start": "react-scripts build && electron .",
     "estart": "electron .",
     "styleguide": "styleguidist server  --config styleguidist.config.js",
-    "styleguide:build": "styleguidist build --config styleguidist.config.js",
+    "styleguide-build": "styleguidist build --config styleguidist.config.js",
     "packager": "npm run build && rm -rf dist && electron-builder",
     "dist-mac": "react-scripts build && electron-builder --mac --x64 ",
     "dist-win": "react-scripts build && electron-builder --win --x64"
