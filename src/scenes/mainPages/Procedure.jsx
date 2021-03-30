@@ -108,7 +108,7 @@ export default function ProcedureMainPage(props) {
 
     const firstIn = localStorage.getItem("first")
         ? JSON.parse(localStorage.getItem("first"))
-        : null;
+        : localStorage.setItem("first", JSON.stringify(true));
 
     const handleClick = (title) => () => {
         //store previous visited algorithm
