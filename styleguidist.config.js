@@ -10,40 +10,48 @@ const packageFile = require(packagePath)
 module.exports = {
   title: "Project title", // 文档名
   version: packageFile.version, // 同上 使用 package.json 的 version
-  // verbose: true, // 打印详细信息
   usageMode: 'expand', // 自动打开文档的缩放
   pagePerSection: true, // 是否每页一个组件显示
   sections: [
     {
       name: 'Components',
       components: './src/components/**/*.jsx',
-      ignore: './src/components/**/*.test.jsx',
+      ignore: 
+      [
+        './src/components/**/*.test.jsx',
+        './src/components/CorrectnessProof/**',
+        './src/components/ProcedureIntroduction/**',
+        './src/components/SwitchAnimation/SortingAlgorithms/**',
+        './src/components/ProcedureImplementation/**',
+      ]
     },
     {
       name: 'Scenes',
       sections:[
         {
           name: 'Tutorial',
-          components: './src/scenes/Tutorial.jsx',
+          components: 
+          [
+            './src/scenes/mainPages/Tutorial.jsx',
+            './src/scenes/subPages/Tutorial/TutorialSubPage.jsx',
+          ]
         },
         {
           name: 'Procedure',
-          components: ['./src/scenes/subPages/Procedure/**/*.jsx', './src/scenes/mainPages/Procedure.jsx'],
-          ignore: './src/scenes/subPages/Procedure/**/*.test.jsx', 
-        },
-        {
-          name: 'Efficiency',
-          components: ['./src/scenes/subPages/Efficiency/*.jsx', './src/scenes/mainPages/Efficiency.jsx'],
+          components: 
+          [
+            './src/scenes/subPages/Procedure/**/*.jsx', 
+            './src/scenes/mainPages/Procedure.jsx',
+          ]
         },
         {
           name: 'Correctness',
-          components: ['./src/scenes/subPages/Correctness/**/*.jsx', './src/scenes/mainPages/Correctness.jsx'],
-          ignore: './src/scenes/subPages/Correctness/**/*.test.jsx', 
+          components: 
+          [
+            './src/scenes/subPages/Correctness/**/*.jsx', 
+            './src/scenes/mainPages/Correctness.jsx'
+          ]
         },
-        {
-          name: 'Exercise',
-          components: './src/scenes/Exercise.jsx',
-        }
       ]
     }
   ],
