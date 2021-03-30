@@ -4,7 +4,6 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import bulb from "../../../../resource/bulb.png";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -66,7 +65,6 @@ export default function Expressions(props) {
             height: "525px",
             width: "750px",
             marginLeft: "15px",
-            // marginRight:"20px",
         },
         title: {
             fontSize: 20,
@@ -121,9 +119,7 @@ export default function Expressions(props) {
             <TipFrame message={message} size={size} btnColor={color} />
             <Card style={styles.root}>
                 <CardContent>
-                    {/* <img src={bulb} height={30} width={30}/> */}
                     <h1 style={styles.title}>Expressions</h1>
-                    {/* <br></br> */}
                     <div style={styles.div}>
                         In computer science, an{" "}
                         <font style={{ fontWeight: "bold" }}>expression</font>{" "}

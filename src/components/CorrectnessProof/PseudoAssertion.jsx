@@ -87,7 +87,7 @@ const Bubble = (props) => {
                     blockNum === 2 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;Elements after i th are sorted if exist
+                &nbsp;Elements after Arr[i] are sorted if exist
             </pre>
             <pre
                 className={
@@ -217,7 +217,7 @@ const Selection = (props) => {
                     blockNum === 5 ? classes.background : classes.noBackground
                 }
             >
-                {`    if seq[i] < seq[smallest] then`}
+                {`    if Arr[i] < Arr[smallest] then`}
             </pre>
             <pre
                 className={
@@ -239,8 +239,7 @@ const Selection = (props) => {
                     blockNum === 7 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;The last marked number is the minumum <br />
-                &nbsp;among the unsorted numbers
+                &nbsp;Arr[smallest] is the minumum among Arr[0] to Arr[i]
             </pre>
             <pre
                 className={
@@ -262,8 +261,7 @@ const Selection = (props) => {
                     blockNum === 9 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                &nbsp;The new minimum and the numbers <br />
-                &nbsp;before the new minimum are all sorted
+                &nbsp;Arr[0] to Arr[j] are all sorted
             </pre>
             <pre
                 className={
@@ -437,123 +435,70 @@ Output: The result of sorting Arr.`}
                     blockNum === 1 ? classes.background : classes.noBackground
                 }
             >
-                {`for each unsorted partition(a,b) do`}
+                {`if leftIndex < rightIndex then`}
             </pre>
             <pre
                 className={
                     blockNum === 2 ? classes.background : classes.noBackground
                 }
             >
-                {`  pivot = position of a random element`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 3 ? classes.background : classes.noBackground
-                }
-            >
-                {`  swap(Arr[pivot], Arr[a])`}
-            </pre>
-            {/* assertion */}
-            <pre
-                className={
-                    blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
-                }
-            >
-                {`  Pivot is the beginning of the partition`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 4 ? classes.background : classes.noBackground
-                }
-            >
-                {`  storeIndex = x + 1`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 5 ? classes.background : classes.noBackground
-                }
-            >
-                {`  for i = x + 1 to b do`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 6 ? classes.background : classes.noBackground
-                }
-            >
-                {`    if Arr[i] < Arr[pivot] then`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 7 ? classes.background : classes.noBackground
-                }
-            >
-                {`      swap(Arr[i], Arr[storeIndex])`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 8 ? classes.background : classes.noBackground
-                }
-            >
-                {`      storeIndex++`}
-            </pre>
-            {/* assertion */}
-            <pre
-                className={
-                    blockNum === 8 ? classes.AssertBack : classes.AssertNoBack
-                }
-            >
-                &nbsp;&nbsp;Arr[i] would be swapped to the left side
-            </pre>
-
-            <pre
-                className={
-                    blockNum === 9 ? classes.background : classes.noBackground
-                }
-            >
-                {`    end if`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 10 ? classes.background : classes.noBackground
-                }
-            >
-                {`  end for`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 11 ? classes.background : classes.noBackground
-                }
-            >
-                {`  swap(Arr[pivot], Arr[storeIndex - 1])`}
+                {`  pivot = partition(Arr, leftIndex, rightIndex)`}
             </pre>
             {/* assertion */}
             <pre
                 wordWrap="break-word"
                 className={
-                    blockNum === 12 ? classes.AssertBack : classes.AssertNoBack
+                    blockNum === 2 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 {` The pivot is at its sorted position `}
             </pre>
             <pre
                 className={
-                    blockNum === 12 ? classes.background : classes.noBackground
+                    blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
-                {`end for`}
-            </pre>
-            <pre
-                className={
-                    blockNum === 13 ? classes.background : classes.noBackground
-                }
-            >
-                {`return Arr`}
+                {`  quickSort(Arr, leftIndex, pivot-1)`}
             </pre>
             {/* assertion */}
             <pre
                 wordWrap="break-word"
                 className={
-                    blockNum === 13 ? classes.AssertBack : classes.AssertNoBack
+                    blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                {` The left part of pivot is sorted`}
+            </pre>
+            <pre
+                className={
+                    blockNum === 4 ? classes.background : classes.noBackground
+                }
+            >
+                {`  quickSort(Arr, pivot-1, rightIndex)`}
+            </pre>
+            {/* assertion */}
+            <pre
+                wordWrap="break-word"
+                className={
+                    blockNum === 4 ? classes.AssertBack : classes.AssertNoBack
+                }
+            >
+                {` The right part of pivot is sorted`}
+            </pre>
+
+            <pre
+                className={
+                    blockNum === 5 ? classes.background : classes.noBackground
+                }
+            >
+                {`end if`}
+            </pre>
+            
+            {/* assertion */}
+            <pre
+                wordWrap="break-word"
+                className={
+                    blockNum === 5 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
                 &nbsp;All pivots are at sorted position, <br /> which means all
@@ -598,7 +543,7 @@ const Heap = (props) => {
                     blockNum === 3 ? classes.AssertBack : classes.AssertNoBack
                 }
             >
-                {`  Elements after i th are sorted if exist`}
+                {`  Elements after Arr[i] are sorted if exist`}
             </pre>
             <pre
                 className={

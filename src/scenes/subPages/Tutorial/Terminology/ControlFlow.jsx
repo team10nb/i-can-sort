@@ -33,11 +33,6 @@ export default function IfThenElse(props) {
             marginLeft: "20px",
         },
         sample: {
-            // marginLeft:"0px",
-            // textAlign:'left',
-            // fontSize: 15,
-            // lineHeight: '2em',
-            // fontWeight: "350",
             fontSize: 14,
             lineHeight: "2em",
             fontWeight: "400",

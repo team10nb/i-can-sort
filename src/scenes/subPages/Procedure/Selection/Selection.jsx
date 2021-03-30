@@ -1,14 +1,15 @@
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The procedure subpage of selection sort.
+*/
+
 import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import SelectionIntro from '../../../../components/ProcedureIntroduction/SelectionSort';
 import { SelectionImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
-import SelectionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/SelectionSort/SelectionSort';
-
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = SelectionSort(arr);
 
 const introMessage =
     <div>

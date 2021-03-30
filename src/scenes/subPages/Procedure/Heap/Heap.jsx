@@ -1,14 +1,15 @@
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The procedure subpage of heap sort.
+*/
+
 import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
-import HeapSort from '../../../../components/SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
 import { HeapImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 import HeapIntro from '../../../../components/ProcedureIntroduction/HeapSort';
-
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = HeapSort(arr);
 
 const introMessage =
     <div>

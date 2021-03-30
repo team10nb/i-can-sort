@@ -1,5 +1,7 @@
 /*
     Author: Yuting Jiang, Yijie Lu
+
+    The basic frame for correctness tutoial page.
 */
 
 import React from "react";
@@ -20,8 +22,8 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { color } from "../../mainPages/Correctness";
 import Input from "../../../components/CorrectnessIntroduction/CorrectnessIntroduction";
 import Example from "./Tutorial/Example";
-import Partial_Def from "./Tutorial/Parital_Def";
-import Total_Def from "./Tutorial/Total_Def";
+import PartialDef from "./Tutorial/Parital_Def";
+import TotalDef from "./Tutorial/Total_Def";
 import Termination from "./Tutorial/Termination";
 
 const drawerWidth = 240;
@@ -149,9 +151,9 @@ function getStepContent(activeStep) {
         case 1:
             return <Input />;
         case 2:
-            return <Partial_Def />;
+            return <PartialDef />;
         case 3:
-            return <Total_Def />;
+            return <TotalDef />;
         case 4:
             return <Example />;
         default:
@@ -171,14 +173,6 @@ export default function CorrectnessTutorial(props) {
     const progress = localStorage.getItem("CorrectTutorial")
         ? JSON.parse(localStorage.getItem("CorrectTutorial"))
         : [false, false, false, false, false];
-
-    // if (localStorage.getItem("IntroFirst") === 1) {
-    //     localStorage.setItem("IntroFirst", JSON.stringify(1));
-    // } else if (localStorage.getItem("IntroFirst") === 0) {
-    //     localStorage.setItem("IntroFirst", JSON.stringify(0));
-    // } else {
-    //     localStorage.setItem("IntroFirst", JSON.stringify(1));
-    // }
 
     const finishPage = (page) => {
         progress[page] = true;

@@ -31,12 +31,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "30px",
     },
 
-    // avatar: {
-    //   "& > *": {
-    //     marginTop: theme.spacing(1),
-    //     marginRight: theme.spacing(100),
-    //   },
-    // },
     icon: {
         color: "#696969",
     },
@@ -66,20 +60,14 @@ const useStyles = makeStyles((theme) => ({
 
 function getStepContent(step, props) {
     const {
-        color,
         logo0,
         logo1,
         logo2,
         logo3,
-        logo4,
-        logoFianl,
         stepNumber,
         content0,
         content1,
         content2,
-        content3,
-        content4,
-        content5,
     } = props;
     if (stepNumber === 5) {
         switch (step) {
@@ -181,12 +169,8 @@ function getStepContent(step, props) {
 export default function ExplanationFrame(props) {
     const {
         color,
-        logo0,
-        logo1,
         logoFinal,
         stepNumber,
-        content0,
-        content1,
         contentFinal,
         picHeight,
         contentMarginBottom,

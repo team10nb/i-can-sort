@@ -1,13 +1,15 @@
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The procedure subpage of merge sort.
+*/
+
 import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
-import MergeSort from '../../../../components/SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort';
 import { MergeImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 import MergeIntro from '../../../../components/ProcedureIntroduction/MergeSort';
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = MergeSort(arr);
 
 const introMessage =
     <div>

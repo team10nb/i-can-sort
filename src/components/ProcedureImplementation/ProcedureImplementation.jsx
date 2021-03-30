@@ -12,12 +12,6 @@ import InsertionSort from "../SwitchAnimation/SortingAlgorithms/InsertionSort/In
 import QuickSort from "../SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort";
 import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 import MergeSort from "../SwitchAnimation/SortingAlgorithms/MergeSort/MergeSort";
-import BubbleFile from "../../resource/bubble.pdf";
-import SelectionFile from "../../resource/selection.pdf";
-import InsertionFile from "../../resource/insertion.pdf";
-import QuickFile from "../../resource/quick.pdf";
-import MergeFile from "../../resource/merge.pdf";
-import HeapFile from "../../resource/heap.pdf";
 
 const BubbleImplementation = () => {
     const Code = Bubble;
@@ -25,14 +19,11 @@ const BubbleImplementation = () => {
     const algorithm = "bubble";
     const sort = BubbleSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: BubbleFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -44,14 +35,11 @@ const SelectionImplementation = () => {
     const algorithm = "selection";
     const sort = SelectionSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: SelectionFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -63,14 +51,11 @@ const InsertionImplementation = () => {
     const algorithm = "insertion";
     const sort = InsertionSort;
 
-    const arr = [4, 13, 11, 8, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: InsertionFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -82,14 +67,11 @@ const QuickImplementation = () => {
     const algorithm = "quick";
     const sort = QuickSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: QuickFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -101,14 +83,11 @@ const MergeImplementation = () => {
     const algorithm = "merge";
     const sort = MergeSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: MergeFile,
     };
 
     return <ImplementationAnimation {...props} />;
@@ -120,14 +99,11 @@ const HeapImplementation = () => {
     const algorithm = "heap";
     const sort = HeapSort;
 
-    const arr = [4, 8, 11, 13, 5];
-
     const props = {
         title,
         algorithm,
         sort,
         Code,
-        file: HeapFile,
     };
 
     return <ImplementationAnimation {...props} />;

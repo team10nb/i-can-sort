@@ -1,18 +1,15 @@
 /*
-    Author: Shiliang Chen, Yani Huang
+    Author: Yuting Jiang, Yijie Lu, Yani Huang, Shiliang Chen
+
+    The procedure subpage of inserton sort.
 */
 
 import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
-import InsertionSort from '../../../../components/SwitchAnimation/SortingAlgorithms/InsertionSort/InsertionSort';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
 import InsertionIntro from '../../../../components/ProcedureIntroduction/InsertionSort';
 import { InsertionImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
-
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = InsertionSort(arr);
 
 const introMessage =
     <div>

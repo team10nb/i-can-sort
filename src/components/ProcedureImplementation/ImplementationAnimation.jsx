@@ -36,7 +36,7 @@ export default function ImplementationAnimation(props) {
         algorithm,
         sort,
         Code,
-        file } = props;
+    } = props;
 
     // The user input
     const [str, setStr] = useState("4,8,11,13,5");
@@ -395,6 +395,12 @@ export default function ImplementationAnimation(props) {
         trace,
     };
 
+    // jump to quick gudie pdfs
+    const handleDownload  = () => {
+      let url = "https://github.com/team10nb/i-can-sort/raw/main/docs/Quick%20guide/" + algorithm + ".pdf";
+      window.electron.shell.openExternal(url)
+    };
+
     return (
         <div className={classes.root}>
             <Card className={classes.cardOne}>
@@ -404,8 +410,8 @@ export default function ImplementationAnimation(props) {
                     <div>
                         <Code blockNum={blockNums[currentStep]} />
                     </div>
-                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} href={file} download={algorithm + ".pdf"}>
-                        Export Quick Guide
+                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} onClick={handleDownload} >
+                        Check Quick Guide
                     </Button>
                 </CardContent>
             </Card>

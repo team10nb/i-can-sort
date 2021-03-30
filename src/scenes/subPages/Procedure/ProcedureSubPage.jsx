@@ -1,5 +1,9 @@
-//The template of procedure subpages.
-//Consists of a menu bar with the theme color and Card components to contain content
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The template of procedure subpages. Consists of a menu bar with the theme color and Card components to contain content.
+*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -106,7 +110,6 @@ export default function ProcedureSubPage(props) {
       primary: {
         main: color,
       },
-      //改颜色
       secondary: {
         main: "#FFFFFF"
       },
@@ -143,7 +146,6 @@ export default function ProcedureSubPage(props) {
       <ThemeProvider theme={theme}>
       <AppBar>
         <Tabs
-      
 
           value={value}
           onChange={handleChange}

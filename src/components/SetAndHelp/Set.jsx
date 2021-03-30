@@ -20,7 +20,6 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
-//import {shell} from "electron";
 
 
   const useStyles = makeStyles((theme) => ({
@@ -41,7 +40,6 @@ import Typography from '@material-ui/core/Typography';
         backgroundColor:"white",
         color:"#1564b2",
         cursor: "pointer",
-        // textDecoration: "underline",
       },
     },
     content:{
@@ -86,10 +84,7 @@ import Typography from '@material-ui/core/Typography';
     //open a link
     const handleLink=()=> {
       let url = "https://github.com/team10nb"
-      // var win = window.open(url, '_blank');
-      // const electron = window.require("electron")
       window.electron.shell.openExternal(url)
-      // win.focus(); 
     }
     
     

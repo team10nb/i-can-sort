@@ -5,7 +5,7 @@
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import logo0 from "../../resource/correctnessProve0.jpg";
+import logo0 from "../../resource/correctnessProve0.png";
 import logo1 from "../../resource/correctnessProve1.png";
 import { color } from "../../scenes/mainPages/Correctness";
 import ExplanationFrame from "../ExplanationFrame/ExplanationFrame";

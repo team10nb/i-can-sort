@@ -1,0 +1,1276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="makeStyles-root-363"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cardOne-368 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <div
+              class="makeStyles-title-370"
+            >
+              test
+            </div>
+            <div>
+              <div>
+                <pre
+                  class="makeStyles-algo-307"
+                >
+                  Algorithm: BubbleSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.
+                </pre>
+                <pre
+                  class="makeStyles-background-308"
+                >
+                  length = Arr.length
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                  for i from 0 to length-1 do
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                    for j from 0 to length-1-i do
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                      if Arr[j] &gt; Arr[j+1] then
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                        swap(Arr[j], Arr[j+1])
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                      end if
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                    end for
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                  end for
+                </pre>
+                <pre
+                  class="makeStyles-noBackground-309"
+                >
+                  return Arr
+                </pre>
+              </div>
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-371"
+              style="color: white; background-color: rgb(21, 101, 192);"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Check Quick Guide
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cardTwo-369 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="makeStyles-inputBar-373"
+          >
+            <div
+              class="makeStyles-root-314"
+            >
+              <div
+                style="width: 550px; display: flex;"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-319 makeStyles-text-315"
+                  style="width: 270px;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
+                    data-shrink="true"
+                  >
+                    Enter positive integers from 1 to 20
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputTypeSearch MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                      type="search"
+                      value="4,8,11,13,5"
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="PrivateNotchedOutline-root-320 MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="PrivateNotchedOutline-legendLabelled-322 PrivateNotchedOutline-legendNotched-323"
+                      >
+                        <span>
+                          Enter positive integers from 1 to 20
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled MuiFormHelperText-marginDense"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </p>
+                </div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-317 MuiButton-disableElevation"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Create
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-318 MuiButton-disableElevation"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Shuffle
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="makeStyles-aniRoot-364"
+          >
+            <div
+              class="makeStyles-bars-365"
+            >
+              <li
+                class="makeStyles-bar-366"
+                style="height: 40px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+              >
+                <div
+                  class="makeStyles-barNumber-367"
+                >
+                  4
+                </div>
+                <div
+                  style="margin-top: 23px; font-size: 16px; text-align: center; font-weight: 600;"
+                />
+              </li>
+              <li
+                class="makeStyles-bar-366"
+                style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+              >
+                <div
+                  class="makeStyles-barNumber-367"
+                >
+                  8
+                </div>
+                <div
+                  style="margin-top: 63px; font-size: 16px; text-align: center; font-weight: 600;"
+                />
+              </li>
+              <li
+                class="makeStyles-bar-366"
+                style="height: 110px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+              >
+                <div
+                  class="makeStyles-barNumber-367"
+                >
+                  11
+                </div>
+                <div
+                  style="margin-top: 93px; font-size: 16px; text-align: center; font-weight: 600;"
+                />
+              </li>
+              <li
+                class="makeStyles-bar-366"
+                style="height: 130px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+              >
+                <div
+                  class="makeStyles-barNumber-367"
+                >
+                  13
+                </div>
+                <div
+                  style="margin-top: 113px; font-size: 16px; text-align: center; font-weight: 600;"
+                />
+              </li>
+              <li
+                class="makeStyles-bar-366"
+                style="height: 50px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+              >
+                <div
+                  class="makeStyles-barNumber-367"
+                >
+                  5
+                </div>
+                <div
+                  style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
+                />
+              </li>
+            </div>
+            <div
+              class="makeStyles-root-374"
+            >
+              <div
+                class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-325 MuiPaper-outlined MuiPaper-rounded"
+              >
+                Unsorted Array
+              </div>
+            </div>
+            <div
+              class="makeStyles-slider-372"
+            >
+              <div
+                class="makeStyles-root-375"
+              >
+                <span
+                  class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-327 MuiSlider-colorPrimary"
+                >
+                  <span
+                    class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-332"
+                  />
+                  <span
+                    class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-331"
+                    style="left: 0%; width: 0%;"
+                  />
+                  <input
+                    type="hidden"
+                    value="0"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333 MuiSlider-markActive"
+                    data-index="0"
+                    style="left: 0%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="1"
+                    style="left: 3.8461538461538463%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="2"
+                    style="left: 7.6923076923076925%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="3"
+                    style="left: 11.538461538461538%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="4"
+                    style="left: 15.384615384615385%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="5"
+                    style="left: 19.23076923076923%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="6"
+                    style="left: 23.076923076923077%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="7"
+                    style="left: 26.923076923076923%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="8"
+                    style="left: 30.76923076923077%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="9"
+                    style="left: 34.61538461538461%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="10"
+                    style="left: 38.46153846153846%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="11"
+                    style="left: 42.30769230769231%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="12"
+                    style="left: 46.15384615384615%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="13"
+                    style="left: 50%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="14"
+                    style="left: 53.84615384615385%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="15"
+                    style="left: 57.69230769230769%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="16"
+                    style="left: 61.53846153846154%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="17"
+                    style="left: 65.38461538461539%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="18"
+                    style="left: 69.23076923076923%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="19"
+                    style="left: 73.07692307692308%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="20"
+                    style="left: 76.92307692307692%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="21"
+                    style="left: 80.76923076923077%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="22"
+                    style="left: 84.61538461538461%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="23"
+                    style="left: 88.46153846153847%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="24"
+                    style="left: 92.3076923076923%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="25"
+                    style="left: 96.15384615384616%;"
+                  />
+                  <span
+                    class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                    data-index="26"
+                    style="left: 100%;"
+                  />
+                  <span
+                    aria-labelledby="Progress"
+                    aria-orientation="horizontal"
+                    aria-valuemax="26"
+                    aria-valuemin="0"
+                    aria-valuenow="0"
+                    class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-328 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-334"
+                    data-index="0"
+                    role="slider"
+                    style="left: 0%;"
+                    tabindex="0"
+                  >
+                    <span
+                      class="PrivateValueLabel-offset-336 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-330"
+                    >
+                      <span
+                        class="PrivateValueLabel-circle-337"
+                      >
+                        <span
+                          class="PrivateValueLabel-label-338"
+                        >
+                          0
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+            >
+              <span
+                class="makeStyles-customTooltip-376"
+                title="Reset"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                      focusable="false"
+                      style="color: grey;"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <div
+                class="makeStyles-root-377"
+              >
+                <button
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-379"
+                  style="min-width: 40px;"
+                  tabindex="0"
+                  title="Speed"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    1x
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="MuiPopover-root makeStyles-menu-378"
+      id="simple-menu"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"
+    >
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="menu"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-362 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="0"
+            value="1"
+          >
+            0.25x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-362 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="2"
+          >
+            0.5x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-362 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="4"
+          >
+            1x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-362 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="8"
+          >
+            2x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root WithStyles(ForwardRef(MenuItem))-root-362 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            role="menuitem"
+            tabindex="-1"
+            value="16"
+          >
+            4x
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="makeStyles-root-363"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-cardOne-368 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardContent-root"
+        >
+          <div
+            class="makeStyles-title-370"
+          >
+            test
+          </div>
+          <div>
+            <div>
+              <pre
+                class="makeStyles-algo-307"
+              >
+                Algorithm: BubbleSort(Arr)
+Input: an array of integers Arr.
+Output: The result of sorting Arr.
+              </pre>
+              <pre
+                class="makeStyles-background-308"
+              >
+                length = Arr.length
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                for i from 0 to length-1 do
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                  for j from 0 to length-1-i do
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                    if Arr[j] &gt; Arr[j+1] then
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                      swap(Arr[j], Arr[j+1])
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                    end if
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                  end for
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                end for
+              </pre>
+              <pre
+                class="makeStyles-noBackground-309"
+              >
+                return Arr
+              </pre>
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-371"
+            style="color: white; background-color: rgb(21, 101, 192);"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Check Quick Guide
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-cardTwo-369 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="makeStyles-inputBar-373"
+        >
+          <div
+            class="makeStyles-root-314"
+          >
+            <div
+              style="width: 550px; display: flex;"
+            >
+              <div
+                class="MuiFormControl-root MuiTextField-root WithStyles(ForwardRef(TextField))-root-319 makeStyles-text-315"
+                style="width: 270px;"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiInputLabel-outlined MuiFormLabel-filled"
+                  data-shrink="true"
+                >
+                  Enter positive integers from 1 to 20
+                </label>
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputTypeSearch MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                    type="search"
+                    value="4,8,11,13,5"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root-320 MuiOutlinedInput-notchedOutline"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legendLabelled-322 PrivateNotchedOutline-legendNotched-323"
+                    >
+                      <span>
+                        Enter positive integers from 1 to 20
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <p
+                  class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled MuiFormHelperText-marginDense"
+                >
+                  <span>
+                    ​
+                  </span>
+                </p>
+              </div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonCreate-317 MuiButton-disableElevation"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Create
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-buttonShuffle-318 MuiButton-disableElevation"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Shuffle
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="makeStyles-aniRoot-364"
+        >
+          <div
+            class="makeStyles-bars-365"
+          >
+            <li
+              class="makeStyles-bar-366"
+              style="height: 40px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-367"
+              >
+                4
+              </div>
+              <div
+                style="margin-top: 23px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-366"
+              style="height: 80px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-367"
+              >
+                8
+              </div>
+              <div
+                style="margin-top: 63px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-366"
+              style="height: 110px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-367"
+              >
+                11
+              </div>
+              <div
+                style="margin-top: 93px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-366"
+              style="height: 130px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-367"
+              >
+                13
+              </div>
+              <div
+                style="margin-top: 113px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+            <li
+              class="makeStyles-bar-366"
+              style="height: 50px; background-color: rgb(0, 191, 255); transform: translate3d(0px, 0px, 0) scale(NaN, NaN); transform-origin: 50% 50% 0;"
+            >
+              <div
+                class="makeStyles-barNumber-367"
+              >
+                5
+              </div>
+              <div
+                style="margin-top: 33px; font-size: 16px; text-align: center; font-weight: 600;"
+              />
+            </li>
+          </div>
+          <div
+            class="makeStyles-root-374"
+          >
+            <div
+              class="MuiPaper-root WithStyles(ForwardRef(Paper))-root-325 MuiPaper-outlined MuiPaper-rounded"
+            >
+              Unsorted Array
+            </div>
+          </div>
+          <div
+            class="makeStyles-slider-372"
+          >
+            <div
+              class="makeStyles-root-375"
+            >
+              <span
+                class="MuiSlider-root WithStyles(ForwardRef(Slider))-root-327 MuiSlider-colorPrimary"
+              >
+                <span
+                  class="MuiSlider-rail WithStyles(ForwardRef(Slider))-rail-332"
+                />
+                <span
+                  class="MuiSlider-track WithStyles(ForwardRef(Slider))-track-331"
+                  style="left: 0%; width: 0%;"
+                />
+                <input
+                  type="hidden"
+                  value="0"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333 MuiSlider-markActive"
+                  data-index="0"
+                  style="left: 0%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="1"
+                  style="left: 3.8461538461538463%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="2"
+                  style="left: 7.6923076923076925%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="3"
+                  style="left: 11.538461538461538%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="4"
+                  style="left: 15.384615384615385%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="5"
+                  style="left: 19.23076923076923%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="6"
+                  style="left: 23.076923076923077%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="7"
+                  style="left: 26.923076923076923%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="8"
+                  style="left: 30.76923076923077%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="9"
+                  style="left: 34.61538461538461%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="10"
+                  style="left: 38.46153846153846%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="11"
+                  style="left: 42.30769230769231%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="12"
+                  style="left: 46.15384615384615%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="13"
+                  style="left: 50%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="14"
+                  style="left: 53.84615384615385%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="15"
+                  style="left: 57.69230769230769%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="16"
+                  style="left: 61.53846153846154%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="17"
+                  style="left: 65.38461538461539%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="18"
+                  style="left: 69.23076923076923%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="19"
+                  style="left: 73.07692307692308%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="20"
+                  style="left: 76.92307692307692%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="21"
+                  style="left: 80.76923076923077%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="22"
+                  style="left: 84.61538461538461%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="23"
+                  style="left: 88.46153846153847%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="24"
+                  style="left: 92.3076923076923%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="25"
+                  style="left: 96.15384615384616%;"
+                />
+                <span
+                  class="MuiSlider-mark WithStyles(ForwardRef(Slider))-mark-333"
+                  data-index="26"
+                  style="left: 100%;"
+                />
+                <span
+                  aria-labelledby="Progress"
+                  aria-orientation="horizontal"
+                  aria-valuemax="26"
+                  aria-valuemin="0"
+                  aria-valuenow="0"
+                  class="MuiSlider-thumb WithStyles(ForwardRef(Slider))-thumb-328 MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-334"
+                  data-index="0"
+                  role="slider"
+                  style="left: 0%;"
+                  tabindex="0"
+                >
+                  <span
+                    class="PrivateValueLabel-offset-336 MuiSlider-valueLabel WithStyles(ForwardRef(Slider))-valueLabel-330"
+                  >
+                    <span
+                      class="PrivateValueLabel-circle-337"
+                    >
+                      <span
+                        class="PrivateValueLabel-label-338"
+                      >
+                        0
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div
+            style="position: relative; left: 50%; transform: translate(-50%); width: 240px;"
+          >
+            <span
+              class="makeStyles-customTooltip-376"
+              title="Reset"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: grey;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </span>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 6h2v12H6zm3.5 6l8.5 6V6z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  style="color: grey;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <div
+              class="makeStyles-root-377"
+            >
+              <button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-379"
+                style="min-width: 40px;"
+                tabindex="0"
+                title="Speed"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  1x
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

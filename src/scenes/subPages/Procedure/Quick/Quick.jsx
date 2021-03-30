@@ -1,18 +1,16 @@
 /*
-    Author: Shiliang Chen
+    Author: Yuting Jiang, Yijie Lu, Shiliang Chen
+
+    The procedure subpage of quick sort.
 */
 
 import React from 'react';
 import { color } from '../../../mainPages/Procedure';
 import ProcedureSubPage from '../ProcedureSubPage';
 import ProcedureOperation from '../../../../components/ProcedureOperation/ProcedureOperation';
-import QuickSort from '../../../../components/SwitchAnimation/SortingAlgorithms/QuickSort/QuickSort';
 import { QuickImplementation } from '../../../../components/ProcedureImplementation/ProcedureImplementation';
 import QuickIntro from '../../../../components/ProcedureIntroduction/QuickSort';
 
-
-let arr = [2, 1, 6, 10, 9, 12, 8, 3];
-let props = QuickSort(arr);
 
 const introMessage =
     <div>

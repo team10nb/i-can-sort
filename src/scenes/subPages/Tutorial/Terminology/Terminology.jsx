@@ -10,11 +10,7 @@ export default function TutorialTerminology(props) {
 
     const data = {
         color: color,
-        // algorithm: "bubble",
-        // progress: progress,
         history: props.history,      
-        // intro: intro,
-        // operate: operate,
         message: "Terminology",
     }
 

@@ -1,4 +1,9 @@
-//Register routes for procedure algorithms
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    Register routers for procedure subpages
+*/
+
 import ProcedureBubble from './Bubble/Bubble';
 import ProcedureSelection from './Selection/Selection';
 import ProcedureInsertion from './Insertion/Insertion';

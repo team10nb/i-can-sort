@@ -1,3 +1,9 @@
+/*
+    Author: Yuting Jiang, Shiliang Chen
+
+    Use animation to explain what is swap. 
+*/
+
 import React from "react";
 import { color } from "../../../mainPages/Tutorial";
 import TutorialSubPage from "../TutorialSubpage";

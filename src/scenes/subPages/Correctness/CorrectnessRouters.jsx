@@ -1,4 +1,9 @@
-//Register routes for procedure algorithms
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    Register routers for correctness subpages
+*/
+
 import CorrectnessTutorial from './CorrectnessTutorial';
 import CorrectnessProof from './CorrectnessProof';
 

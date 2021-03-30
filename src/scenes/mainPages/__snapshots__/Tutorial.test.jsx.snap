@@ -212,7 +212,7 @@ Object {
               >
                 <div>
                   <button
-                    aria-label="setting"
+                    aria-label="Setting"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
                     title="Setting"
@@ -247,10 +247,10 @@ Object {
                     style="height: 48px;"
                   >
                     <button
-                      aria-label="help"
+                      aria-label="Help"
                       class="MuiButtonBase-root MuiIconButton-root"
                       tabindex="0"
-                      title="help"
+                      title="Help"
                       type="button"
                     >
                       <span
@@ -678,7 +678,7 @@ Object {
             >
               <div>
                 <button
-                  aria-label="setting"
+                  aria-label="Setting"
                   class="MuiButtonBase-root MuiIconButton-root"
                   tabindex="0"
                   title="Setting"
@@ -713,10 +713,10 @@ Object {
                   style="height: 48px;"
                 >
                   <button
-                    aria-label="help"
+                    aria-label="Help"
                     class="MuiButtonBase-root MuiIconButton-root"
                     tabindex="0"
-                    title="help"
+                    title="Help"
                     type="button"
                   >
                     <span

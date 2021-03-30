@@ -1,3 +1,9 @@
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The procedure subpage of bubble sort.
+*/
+
 import React from "react";
 import { color } from "../../../mainPages/Procedure";
 import ProcedureSubPage from "../ProcedureSubPage";

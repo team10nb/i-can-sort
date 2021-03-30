@@ -7,7 +7,7 @@ Object {
     <div>
       <div>
         <button
-          aria-label="setting"
+          aria-label="Setting"
           class="MuiButtonBase-root MuiIconButton-root"
           tabindex="0"
           title="Setting"
@@ -42,7 +42,7 @@ Object {
   "container": <div>
     <div>
       <button
-        aria-label="setting"
+        aria-label="Setting"
         class="MuiButtonBase-root MuiIconButton-root"
         tabindex="0"
         title="Setting"
