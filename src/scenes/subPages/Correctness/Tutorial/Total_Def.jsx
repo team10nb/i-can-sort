@@ -1,5 +1,7 @@
 /*
     Author: Yuting Jiang, Shiliang Chen, Yiming Tang
+
+    Show the definition for total correctness. 
 */
 import React from "react";
 import Card from "@material-ui/core/Card";
@@ -71,7 +73,7 @@ export default function Total_Def(props) {
             />
 
             <CardContent style={styles.card2} align="center">
-                <img src={img_total} height={400} width={320} />
+                <img src={img_total} alt={""} height={400} width={320} />
             </CardContent>
         </Card>
     );

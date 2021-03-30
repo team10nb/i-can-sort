@@ -1,7 +1,9 @@
 /*
-    Author: Yijie Lu
+    Author: Yuting Jiang, Yijie Lu
+
+    The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu.
 */
-// The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Set from "../../components/SetAndHelp/Set";
@@ -20,6 +22,7 @@ import img_terminology from "../../resource/terminology.png";
 import gif_swap from "../../resource/swap.gif";
 import gif_loop from "../../resource/loop.gif";
 import gif_terminology from "../../resource/terminology.gif";
+
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,9 +70,6 @@ export default function TutorialMainPage() {
         ? JSON.parse(localStorage.getItem("tutorialPre"))
         : null;
 
-    // const localProgress = localStorage.getItem("tutorialProgress")
-    // ? JSON.parse(localStorage.getItem("tutorialProgress"))
-    // : [0, false, false];
     const swapProgress = localStorage.getItem("tutorialSwap")
         ? JSON.parse(localStorage.getItem("tutorialSwap"))
         : 0;
@@ -83,15 +83,7 @@ export default function TutorialMainPage() {
     const handleClick = (title) => () => {
         //store previous visited algorithm and set its progress is finished
         localStorage.setItem("tutorialPre", JSON.stringify(title));
-        // localProgress[index] = true;
-        // localStorage.setItem("tutorialProgress", JSON.stringify(localProgress));
     };
-
-    // const handleProgress = (index) => {
-    //     //set progess bar
-    //     const progress = localProgress[index] ? 100 : 0;
-    //     return progress;
-    // };
 
     const handleProgress = (title) => {
         var progress = 0;

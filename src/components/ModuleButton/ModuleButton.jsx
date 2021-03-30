@@ -1,5 +1,7 @@
 /*
     Author: Shiliang Chen, Yuting Jiang
+
+    Click to enter an algorithm learning process.
 */
 
 import React from "react";
@@ -17,7 +19,6 @@ export default function ModuleButton(props) {
     // styles of this module button
     const useStyles = makeStyles((theme) => ({
         root: {
-            // boxShadow: "2px 8px 30px 2px #888888",
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
             borderBottomRightRadius: 0,
@@ -41,22 +42,15 @@ export default function ModuleButton(props) {
             position: "relative",
             height: presentHeight,
             width: "100%",
-            // [theme.breakpoints.down("xs")]: {
-            //     width: "100% !important", // Overrides inline-style
-            //     height: 100,
-            // },
             "&:hover, &$focusVisible": {
                 zIndex: 1,
                 "& $imageBackdrop": {
-                    // backgroundImage: `url(${image.gif})`,
                     backgroundColor: "",
                     opacity: 0,
                     transition: "opacity 0.3s"
                 },
                 "& $imageTitle": {
-                    // border: "4px solid currentColor",
                     opacity: 0,
-                    // transition: "opacity 0.5s"
                 },
             },
         },
@@ -98,7 +92,6 @@ export default function ModuleButton(props) {
             right: 0,
             top: 0,
             bottom: 0,
-            // backgroundColor: theme.palette.common.grey,
             backgroundColor: "#d5d5d5",
             opacity: 1,
             transition: theme.transitions.create("opacity"),
@@ -108,9 +101,6 @@ export default function ModuleButton(props) {
             position: "absolute",
             right: 0,
             bottom: 0,
-            // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
-            //     theme.spacing(1) + 6
-            // }px`,
             paddingBottom: 5,
             paddingRight: 10,
             fontFamily: "QuickSand",
@@ -121,7 +111,7 @@ export default function ModuleButton(props) {
 
     }));
 
-    const useRippleStyles = makeStyles((theme) => ({
+    const useRippleStyles = makeStyles(() => ({
         child:{
             backgroundColor: "grey"
         }
@@ -145,7 +135,6 @@ export default function ModuleButton(props) {
                 <span
                     className={classes.imageSrc}
                     style={{
-                        // backgroundImage: `url(${props.image.static})`,
                         backgroundColor: "#d5d5d5",
                     }}
                 />

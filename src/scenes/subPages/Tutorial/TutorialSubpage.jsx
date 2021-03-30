@@ -1,12 +1,15 @@
-//The template of procedure subpages.
-//Consists of a menu bar with the theme color and Card components to contain content
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    //The template of tutrial subpages. 
+*/
+
 import React from 'react';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
-import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import {color} from '../../mainPages/Tutorial';
 
@@ -40,11 +43,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
 //Return a menu bar consists of a home button and three tabs
 //Each tab is corresponding to a tabpanel
 export default function TutorialSubPage(props) {
-  const{color, algorithm, progress, history, intro, operate, message} = props;
+  const{color, history, message} = props;
 
   const classes = useStyles();
   const theme = createMuiTheme({
@@ -52,7 +54,6 @@ export default function TutorialSubPage(props) {
       primary: {
         main: color,
       },
-      //改颜色
       secondary: {
         main: "#FFFFFF"
       },
@@ -77,10 +78,7 @@ export default function TutorialSubPage(props) {
           <Button className={classes.icon} onClick={handleClick}>
             <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
           </Button>
-          {/* <Typography variant="h6" className={classes.title}>
 
-            <div style={{marginLeft:-100}}>{message}</div>
-          </Typography> */}
             <Chip className={classes.chip} label= {message} />  
         </Toolbar>
       </AppBar>

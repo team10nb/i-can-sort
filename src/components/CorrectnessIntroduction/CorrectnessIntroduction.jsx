@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         width: 740,
         height: 530,
-        // marginTop:630,
         marginLeft: 14,
         marginTop: 14,
         "& > *": {
@@ -34,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     card: {
-        // margintop: 10,
         background: "#F0F0F0",
         width: 550,
         height: 500,
@@ -116,9 +114,6 @@ export default function CorrectnessIntroduction(props) {
         localStorage.setItem("IntroFirst", JSON.stringify(1));
     }
 
-    // const firstIn = localStorage.getItem("IntroFirst")
-    //     ? JSON.parse(localStorage.getItem("IntroFirst"))
-    //     : null;
 
     const week = [
         
@@ -282,20 +277,6 @@ export default function CorrectnessIntroduction(props) {
         setTimeOutIds(illegalTimeoutIds);
     };
 
-    // const [first, setFirst] = React.useState(true);
-
-    // const handleClickOpen = () =>{
-    //     setOpen(true);
-    // };
-    //for tutorial help
-    
-    // const handleClickOpen = () =>{
-    //     if (firstIn === 1){
-    //         setFirst(true);
-    //     }else{
-    //         setFirst(false);
-    //     }
-    // };
 
     return (
         <div className={classes.div}>
@@ -382,13 +363,7 @@ export default function CorrectnessIntroduction(props) {
                                 </span>
                                 ,&nbsp;expected&nbsp;output&nbsp;can&nbsp;be&nbsp;generated
                             </Typography>
-                            {/* <Typography className={classes.text}>
-                                What&nbsp;&nbsp;is&nbsp;&nbsp;
-                                <Typography style={{ color: CorrectnessColor }}>
-                                    illegal&nbsp;&nbsp;input
-                                </Typography>
-                                &nbsp;?
-                            </Typography> */}
+                        
                         </div>
                     </div>                 
                 </div>

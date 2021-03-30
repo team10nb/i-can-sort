@@ -243,7 +243,7 @@ const useStyles = makeStyles((theme) => ({
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                                 </ListItem>
-                                :<ListItem className = {classes. listItem} button key={text} onClick={() => handleChange(index )}>
+                                :<ListItem className = {classes.listItem} button key={text} onClick={() => handleChange(index )}>
                                     <ListItemIcon><ChevronRightIcon/></ListItemIcon>
                                     <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
                                 </ListItem> 

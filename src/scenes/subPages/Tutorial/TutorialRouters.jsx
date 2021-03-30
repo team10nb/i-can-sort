@@ -1,7 +1,11 @@
-//Register routes for procedure algorithms
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    Register routers for tutorial subpages
+*/
+
 import TutorialSwap from './Swap/Swap';
 import TutorialLoop from './Loop/Loop';
-// import TutorialTerminology from './Terminology/Terminology';
 import TutorialTerminology from './TutorialTerminology';
 
 

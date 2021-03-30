@@ -19,7 +19,6 @@ import Button from '@material-ui/core/Button';
 import { color } from '../../scenes/mainPages/Procedure';
 import InputBar from '../InputBar/InputBar';
 import { random } from 'lodash';
-import { resolveOnChange } from "antd/lib/input/Input";
 
 
 // a framer motion transition attributes
@@ -37,7 +36,7 @@ export default function ImplementationAnimation(props) {
         algorithm,
         sort,
         Code,
-        file } = props;
+    } = props;
 
     // The user input
     const [str, setStr] = useState("4,8,11,13,5");

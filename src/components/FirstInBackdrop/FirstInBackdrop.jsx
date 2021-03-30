@@ -10,7 +10,6 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
-import TutorialMainPage from '../../scenes/mainPages/Tutorial';
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

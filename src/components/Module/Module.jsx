@@ -1,5 +1,7 @@
 /*
     Author: Shiliang Chen, Yuting Jiang
+
+    Combine ModuleButton and ModuleProgress
 */
 
 import React from "react";

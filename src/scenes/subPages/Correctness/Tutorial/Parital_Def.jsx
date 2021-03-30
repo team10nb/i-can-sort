@@ -1,5 +1,7 @@
 /*
     Author: Yuting Jiang, Shiliang Chen, Yiming Tang
+
+    Show the definition for partial correctness. 
 */
 import React from "react";
 import Card from "@material-ui/core/Card";
@@ -7,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import img_partial from "../../../../resource/partial.png";
 import Divider from "@material-ui/core/Divider";
 
-export default function Partial_Def(props) {
+export default function Partial_Def() {
     const styles = {
         root: {
             display: "flex",
@@ -69,7 +71,7 @@ export default function Partial_Def(props) {
             />
 
             <CardContent style={styles.card2}>
-                <img src={img_partial} height={400} width={320} />
+                <img src={img_partial} alt={""} height={400} width={320} />
             </CardContent>
         </Card>
     );

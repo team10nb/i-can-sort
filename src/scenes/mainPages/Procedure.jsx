@@ -1,4 +1,9 @@
-// The procedure main page, consists of algorithm modules, set and help buttons, and the choice menu
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The procedure main page, consists of algorithm modules, set and help buttons, and the choice menu.
+*/
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Set from "../../components/SetAndHelp/Set";
@@ -92,18 +97,6 @@ export default function ProcedureMainPage(props) {
     const localPre = localStorage.getItem("pre")
         ? JSON.parse(localStorage.getItem("pre"))
         : null;
-
-        const localFirst = localStorage.getItem("first")
-        ? JSON.parse(localStorage.getItem("first"))
-        : localStorage.setItem("first", JSON.stringify(true));
-        
-    // if (localStorage.getItem("first") == 1) {
-    //     localStorage.setItem("first", JSON.stringify(1));
-    // } else if (localStorage.getItem("first") == 0) {
-    //     localStorage.setItem("first", JSON.stringify(0));
-    // } else {
-    //     localStorage.setItem("first", JSON.stringify(1));
-    // }
 
     if (localStorage.getItem("snack") == 1) {
         localStorage.setItem("snack", JSON.stringify(1));
@@ -227,16 +220,6 @@ export default function ProcedureMainPage(props) {
         preOne: handlePre(images[5].title),
     };
 
-    const props2 = {
-        image: images[4],
-        width: 200,
-        height: 200,
-        // onClick: handleClick(images[3].title),
-        progress: 0,
-        color: color,
-        preOne: false,
-    };
-
     const helpProp = {
         logo0: logo0,
         logo1: logo1,
@@ -258,7 +241,6 @@ export default function ProcedureMainPage(props) {
         <div>
             <motion.div
                 className={classes.div}
-                // initial={{ opacity: 0.2, x: "-100vw" }}
                 initial={{ opacity: 0.2, x: handleInner() }}
                 animate={{
                     opacity: 1,
@@ -297,9 +279,6 @@ export default function ProcedureMainPage(props) {
                                 <Module {...quickProps} />
                             </Link>
                         </Grid>
-
-                        {/* <Grid item xs={6} sm={3}>
-                        </Grid> */}
 
                         <Grid item xs={6} sm={3}>
                             <Link to="/ProcedureSubpage/Merge">

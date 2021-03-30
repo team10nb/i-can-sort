@@ -1,16 +1,22 @@
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+/*
+    Author: Shiliang Chen, Yuting Jiang
+
+    Show an example for swapping two bars.
+*/
+
+import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ExplainationBox from "../ExplanationBox/ExplanationBox";
 import { Divider } from "@material-ui/core";
+
 //css for table
 const styles = {
     table:{
@@ -134,11 +140,7 @@ export default function Terminable(props){
 
     const useStyles = makeStyles((theme) =>({
         root: {  
-            // '& > * + *': {     
-            //     marginTop: theme.spacing(3),
-            // },
             marginTop: 60,
-            // width: 380, 
             textAlign:"center",
         },
         bars: {
@@ -248,11 +250,6 @@ export default function Terminable(props){
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playSpeed]);
-
-    // useEffect(() => {
-    //     handleResetClick();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [trace]);
 
     // It is used to open the speed menu
     const handleClick = (event) => {
@@ -417,7 +414,6 @@ export default function Terminable(props){
 
     return (            
             <div className = {classes.root}>
-                {/* <div className = {classes.title}>Swap a & b</div> */}
 
                 <div className = {classes.div}>
                     <div>

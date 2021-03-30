@@ -1,11 +1,13 @@
 /*
     Author: Yuting Jiang
+
+    Show an example for partial correctness and total correctness.
 */
+
 import React from 'react';
 import { useState } from 'react';
 import AlgorithmButton from '../../../../components/AlgorithmButton/AlgorithmButton';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import { color } from '../../../mainPages/Correctness';
 import Button from '@material-ui/core/Button';
 import { green, red } from '@material-ui/core/colors';
@@ -14,23 +16,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { isUndefined } from 'lodash';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import TipFrame from '../../../../components/TipFrame/TipFrame';
 import '../../../../fonts/fonts.css';
 
-const useStyles = makeStyles((theme) => ({
-    // button:{
-    //     borderWidth: 1.5,
-    //     borderColor: '#808080',
-    //     color: '#808080',
-    //     borderRadius: 11,
-    //     "&:hover, &$focusVisible": {backgroundColor: '#EFEFEF'},
-    //     marginLeft: "10px",
-    //     height: 40,
-    //     width: 80,
-    // },
-}))
-
+//Set css for TextField
 const CssTextField = withStyles({
     root: {
         "& label.Mui-focused": {
@@ -183,7 +173,6 @@ const size = {
 };
 
 export default function Partial() {
-    const classes = useStyles();
 
     const [exp, setExp] = useState("");
     const [output, setOutput] = useState(null);
@@ -231,9 +220,7 @@ export default function Partial() {
     };
 
     const handleClick = (props) => () => {
-        // const {exp, output} = props;
         confirm(props);
-        // runAlgorithm(exp, output);
     };
 
     const handleChange = (e) => {
@@ -288,7 +275,6 @@ export default function Partial() {
                                 style={{ display: 'inline-block' }}
                                 onChange={handleChange}
                                 helperText={wrongMsg}
-                                style={{ width: 300 }}
                                 error={error}
                             />
                         </h1>
@@ -337,21 +323,6 @@ export default function Partial() {
             </div>
         </div>
     );
-}
-
-
-function removeDot(s) {
-    if (s == null) return "";
-    var dot = "，,";
-    var str = s;
-    if (dot.indexOf(str.charAt(str.length - 1)) !== -1) {
-        var i = str.length - 1;
-        while (i >= 0 && dot.indexOf(str.charAt(i)) !== -1) {
-            i--;
-        }
-        str = str.substring(0, i + 1);
-    }
-    return str;
 }
 
 function factorial(number) {

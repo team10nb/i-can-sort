@@ -1,4 +1,9 @@
-// The correctness main page, consists of algorithm modules, set and help buttons, and the choice menu
+/*
+    Author: Yuting Jiang, Yijie Lu
+
+    The correctness main page, consists of algorithm modules, set and help buttons, and the choice menu.
+*/
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Set from "../../components/SetAndHelp/Set";
@@ -19,7 +24,6 @@ import gif_proof from "../../resource/proof.gif";
 //Set css
 const useStyles = makeStyles((theme) => ({
     root: {
-        // minWidth: 200,
         display: "flex",
         "& > *": {
             marginLeft: 89,
@@ -57,7 +61,7 @@ const color = "#ff6f00";
 //Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
-export default function CorrectnessMainPage(props) {
+export default function CorrectnessMainPage() {
     const classes = useStyles();
 
     // get progress info from local
@@ -70,10 +74,6 @@ export default function CorrectnessMainPage(props) {
     const proofProgress = localStorage.getItem("CorrectProof")
         ? JSON.parse(localStorage.getItem("CorrectProof"))
         : 0;
-
-    // set progress
-    //  const progress = props.location.state ? props.location.state : localProgress;
-    //  localStorage.setItem("progress", JSON.stringify(progress));
 
     const handleClick = (title) => () => {
         //store previous visited algorithm
@@ -91,8 +91,8 @@ export default function CorrectnessMainPage(props) {
 
         if (title === "Proof" && proofProgress != 0) {
             progress = 10;
-            for (var i = 0; i < proofProgress.length; i++) {
-                if (proofProgress[i]) progress += 15;
+            for (var j = 0; j < proofProgress.length; j++) {
+                if (proofProgress[j]) progress += 15;
             }
         }
 

@@ -1,18 +1,17 @@
 /*
     Author: Shiliang Chen, Yuting Jiang
+
+    Show the learning progress of an algorithm. 
 */
 
 import React from "react";
 import { makeStyles, withStyles} from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
-
-
 export default function ModuleProgress(props) {
 
     const {width, color, progress, preOne} = props;
     const presentingWidth = preOne ? (width + 6) : (width);
-    // TODO if complete??
     const presentingColor = progress === 100 ? color : color;
 
     // modify the default styles of linear progress bar
@@ -31,7 +30,6 @@ export default function ModuleProgress(props) {
         bar: {
             borderRadius: 2,
             backgroundColor: presentingColor,
-            // backgroundColor: "#1a90ff",
         },
     }))(LinearProgress);
 

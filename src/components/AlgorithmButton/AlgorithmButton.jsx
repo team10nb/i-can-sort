@@ -1,9 +1,14 @@
+/*
+    Author: Yuting Jiang
+
+    Algorithms code is on the button. Click to run the algorithm.
+*/
+
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import backgroundImage from "../../resource/run.png";
-// const color = '#FEE5D4'
 
 export default function AlgorithmButton(props) {
     const { title, code, paddingLeft, paddingRight, onClick } = props;
@@ -15,7 +20,7 @@ export default function AlgorithmButton(props) {
         },
     };
 
-    const useStyles = makeStyles((theme) => ({
+    const useStyles = makeStyles(() => ({
         buttonBase: {
             paddingLeft: 20,
             width: 250,
