@@ -8,8 +8,11 @@
   "author": "Team10",
   "build": {
     "appId": "iCanSort.app",
-    "mac":{
-      "target": ["dmg", "zip"],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "icon": "build/icon.png"
     },
     "dmg": {
@@ -24,32 +27,31 @@
       "node_modules/",
       "package.json"
     ],
-    
-      "nsis": {
-        "oneClick": false, 
-        "perMachine": true, 
-        "allowElevation": true,
-        "allowToChangeInstallationDirectory": true, 
-        "installerIcon": "build/icon.png",
-        "uninstallerIcon": "build/icon.png",
-        "installerHeaderIcon": "build/icon.png",
-        "createDesktopShortcut": true, 
-        "createStartMenuShortcut": true, 
-        "shortcutName": "iCanSort" 
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerSidebar": "build/sidebar.bmp",
+      "uninstallerSidebar": "build/sidebar.bmp",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "iCanSort"
     },
-
     "win": {
-      "icon": "build/icon.png",
+      "icon": "build/icon.ico",
       "target": [
         {
-            "target": "nsis",
-            "arch": [
-              "ia32"
-            ]
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
         }
-        ]
-      }
-
+      ]
+    }
   },
   "dependencies": {},
   "scripts": {
