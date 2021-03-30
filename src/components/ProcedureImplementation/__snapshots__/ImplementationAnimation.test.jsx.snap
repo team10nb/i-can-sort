@@ -75,23 +75,21 @@ Output: The result of sorting Arr.
                 </pre>
               </div>
             </div>
-            <a
-              aria-disabled="false"
+            <button
               class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-371"
-              download="test.pdf"
-              href="bubble.pdf"
               style="color: white; background-color: rgb(21, 101, 192);"
               tabindex="0"
+              type="button"
             >
               <span
                 class="MuiButton-label"
               >
-                Export Quick Guide
+                Check Quick Guide
               </span>
               <span
                 class="MuiTouchRipple-root"
               />
-            </a>
+            </button>
           </div>
         </div>
         <div
@@ -730,23 +728,21 @@ Output: The result of sorting Arr.
               </pre>
             </div>
           </div>
-          <a
-            aria-disabled="false"
+          <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-371"
-            download="test.pdf"
-            href="bubble.pdf"
             style="color: white; background-color: rgb(21, 101, 192);"
             tabindex="0"
+            type="button"
           >
             <span
               class="MuiButton-label"
             >
-              Export Quick Guide
+              Check Quick Guide
             </span>
             <span
               class="MuiTouchRipple-root"
             />
-          </a>
+          </button>
         </div>
       </div>
       <div
