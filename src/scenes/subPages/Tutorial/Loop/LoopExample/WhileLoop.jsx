@@ -1,12 +1,12 @@
 /*
     Author: Ruizi Han
 
-    Example animation and code of for loop.
+    Example animation and code of while loop.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
-import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
+import AnimationWithCode from '../../../../../components/AnimationWithCode/AnimationWithCode';
 import { useStyles } from './Style';
 
 // dynamic pseudocode
@@ -33,12 +33,13 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
     }));
+
     const classes = useStyles();
 
     const forCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
-                {`Algorithm: ForLoop()`}
+                {`Algorithm: WhileLoop()`}
             </pre>
             <pre className={classes.noBackground}>
                 {`  i = 0`}
@@ -50,13 +51,16 @@ const Code = (props) => {
                 {`  b = 2`}
             </pre>
             <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
-                {`  for i = 0 to 3 do`}
+                {`  while i < 4 do`}
             </pre>
             <pre className={blockNum === 3 ? classes.background : classes.noBackground}>
                 {`     a = a + b`}
             </pre>
             <pre className={blockNum === 4 ? classes.background : classes.noBackground}>
-                {`  end for`}
+                {`     i = i + 1`}
+            </pre>
+            <pre className={blockNum === 5 ? classes.background : classes.noBackground}>
+                {`  end while`}
             </pre>
         </div>
 
@@ -77,7 +81,7 @@ export default function ForLoop() {
             { value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0 }
         ]
     ];
-    var description = ['Begin for loop'];
+    var description = ['Begin while loop'];
     var blockNums = [1];
 
     for (var i = 1; i < 5; i++) {
@@ -100,18 +104,16 @@ export default function ForLoop() {
         ];
         trace.push(traceUnit);
 
-        blockNums.push(2, 3, 2);
+        blockNums.push(2, 3, 4);
 
-
-        descriptionUnit = 'i = ' + (i - 1) + ', haven\'t exceeded 3';
-        description.push(descriptionUnit, 'do a = a + b', 'i increase by 1');
+        descriptionUnit = 'i = ' + (i - 1) + ', i < 4 is true';
+        description.push(descriptionUnit, 'do a = a + b', 'do i = i + 1');
 
         if (i === 4) {
             trace.push(traceUnit);
-            blockNums.push(4);
-            description.push('i = 4, jump out of the loop');
+            blockNums.push(5);
+            description.push('i = 4, i < 4 is false, jump out of the loop');
         }
-
     }
 
     const props = {
@@ -121,7 +123,7 @@ export default function ForLoop() {
         blockNums,
         useStyles,
         Code,
-        title: "For Loop",
+        title: "While Loop",
     };
 
     return (<AnimationWithCode {...props} />);

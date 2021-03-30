@@ -5,14 +5,14 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import InputTable from "../InputTable/InputTable";
-import ExplanationBox from "../ExplanationBox/ExplanationBox";
+import InputTable from "../../../../../components/InputTable/InputTable";
+import ExplanationBox from "../../../../../components/ExplanationBox/ExplanationBox";
 import Typography from "@material-ui/core/Typography";
 import ErrorIcon from "@material-ui/icons/Error";
 import { random } from "lodash";
 import { Divider } from "@material-ui/core";
-import { color as CorrectnessColor } from "../../scenes/mainPages/Correctness";
-import CorrectnessHelp from "../CorrectnessHelp/CorrectnessHelp";
+import { color as CorrectnessColor } from "../../../../mainPages/Correctness";
+import CorrectnessHelp from '../../../../../components/CorrectnessHelp/CorrectnessHelp';
 
 const spring = {
     type: "spring", // a framer motion type that simulates spring
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function CorrectnessIntroduction(props) {
+export default function Input() {
     const classes = useStyles();
 
     if (localStorage.getItem("IntroFirst") == 1) {

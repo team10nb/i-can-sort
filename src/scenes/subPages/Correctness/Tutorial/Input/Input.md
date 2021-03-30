@@ -29,10 +29,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 | Name | Props | Return | Description |
 | ---- | ----- | ------ | ----------- |
-|  CorrectnessIntroduction    ||    a input page     |     show the input page of correctness page      |
+|  Input  ||    a input page     |     show the input page of correctness page      |
 
 ###  **Demo**
 
 ```jsx
-<CorrectnessIntroduction />
+<Input />
 ```

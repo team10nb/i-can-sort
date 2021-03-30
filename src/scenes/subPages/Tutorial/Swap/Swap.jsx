@@ -7,7 +7,7 @@
 import React from "react";
 import { color } from "../../../mainPages/Tutorial";
 import TutorialSubPage from "../TutorialSubpage";
-import TutorialSwap from "../../../../components/TutorialSwap/TutorialSwap";
+import SwapFrame from './SwapFrame';
 
 export default function Swap(props) {
 
@@ -251,7 +251,7 @@ export default function Swap(props) {
             table: table,
         };
 
-        return <TutorialSwap {...props} />;
+        return <SwapFrame {...props} />;
     };
 
     return (

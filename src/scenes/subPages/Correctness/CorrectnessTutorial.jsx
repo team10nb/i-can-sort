@@ -20,11 +20,11 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import HomeIcon from "@material-ui/icons/Home";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { color } from "../../mainPages/Correctness";
-import Input from "../../../components/CorrectnessIntroduction/CorrectnessIntroduction";
+import Input from "./Tutorial/Input/Input";
 import Example from "./Tutorial/Example";
 import PartialDef from "./Tutorial/Parital_Def";
 import TotalDef from "./Tutorial/Total_Def";
-import Termination from "./Tutorial/Termination";
+import Termination from "./Tutorial/Termination/Termination";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({

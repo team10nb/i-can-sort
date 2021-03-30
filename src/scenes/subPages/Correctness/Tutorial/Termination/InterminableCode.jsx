@@ -15,7 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
-import "../../fonts/fonts.css"
+import "../../../../../fonts/fonts.css";
 
 // a framer motion transition attributes
 const spring = {

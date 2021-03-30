@@ -4,10 +4,10 @@
 
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { TerminableCode } from '../../../../components/TerminationExample/TerminableCode';
-import InterminableCode from '../../../../components/TerminationExample/InterminableCode';
-import TipFrame from '../../../../components/TipFrame/TipFrame';
-import { color } from '../../../mainPages/Correctness';
+import { TerminableCode } from './TerminableCode';
+import InterminableCode from './InterminableCode';
+import TipFrame from '../../../../../components/TipFrame/TipFrame';
+import { color } from '../../../../mainPages/Correctness';
 
 const useStyles = makeStyles((theme) => ({
     root: {

@@ -9,13 +9,13 @@ import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import AnimationSlider from "../AnimationSlider/AnimationSlider";
-import AnimationControl from "../AnimationControl/AnimationControl";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import ExplainationBox from "../ExplanationBox/ExplanationBox";
 import { Divider } from "@material-ui/core";
+import AnimationSlider from '../../../../components/AnimationSlider/AnimationSlider';
+import AnimationControl from '../../../../components/AnimationControl/AnimationControl';
+import ExplanationBox from '../../../../components/ExplanationBox/ExplanationBox';
 
 //css for table
 const styles = {
@@ -118,7 +118,7 @@ const Code = (props)=> {
 
 
 
-export default function Terminable(props){
+export default function SwapFrame(props){
     const { trace, description, width, explainationBoxHeight, blockNums, table } = props;
 
     // The bars displayed to visulise the numbers
@@ -473,9 +473,9 @@ export default function Terminable(props){
                         </motion.li>
                     ))}
                     </div>
-                    <ExplainationBox width={40} height={explainationBoxHeight}>
+                    <ExplanationBox width={40} height={explainationBoxHeight}>
                         {description[currentStep]}
-                    </ExplainationBox>
+                    </ExplanationBox>
                     
                     <div className = {classes.slider}>
                     <AnimationSlider

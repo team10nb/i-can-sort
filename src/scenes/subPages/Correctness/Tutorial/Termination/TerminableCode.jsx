@@ -6,8 +6,7 @@
 
 import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
-import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
-
+import AnimationWithCode from '../../../../../components/AnimationWithCode/AnimationWithCode';
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > * + *': {

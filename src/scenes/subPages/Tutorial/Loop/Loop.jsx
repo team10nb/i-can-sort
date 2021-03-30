@@ -7,10 +7,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import { color } from "../../../mainPages/Tutorial";
 import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined";
 import TutorialSubPage from "../TutorialSubpage";
-import ForLoop from "../../../../components/LoopExample/ForLoop";
-import WhileLoop from "../../../../components/LoopExample/WhileLoop";
 import { LoopForHelp, LoopWhileHelp } from "./LoopHelp";
 import TipFrame from "../../../../components/TipFrame/TipFrame";
+import ForLoop from './LoopExample/ForLoop';
+import WhileLoop from "./LoopExample/WhileLoop";
 
 const useStyles = makeStyles((theme) => ({
     root: {
