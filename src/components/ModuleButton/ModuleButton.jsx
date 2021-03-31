@@ -94,7 +94,7 @@ export default function ModuleButton(props) {
             bottom: 0,
             backgroundColor: "#d5d5d5",
             opacity: 1,
-            transition: theme.transitions.create("opacity"),
+            // transition: theme.transitions.create("opacity"),
             transition: "opacity 0.3s"
         },
         imageTitle: {

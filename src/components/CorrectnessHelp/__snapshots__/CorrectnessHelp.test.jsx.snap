@@ -101,7 +101,7 @@ Object {
                   <button
                     class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                     disabled=""
-                    style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                    style="background-color: rgb(255, 111, 0); opacity: 0;"
                     tabindex="-1"
                     type="button"
                   >
@@ -251,7 +251,7 @@ Object {
                 <button
                   class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                   disabled=""
-                  style="background-color: rgb(255, 111, 0); opacity: 0.5;"
+                  style="background-color: rgb(255, 111, 0); opacity: 0;"
                   tabindex="-1"
                   type="button"
                 >

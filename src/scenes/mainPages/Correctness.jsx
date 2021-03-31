@@ -83,13 +83,13 @@ export default function CorrectnessMainPage() {
     const handleProgress = (title) => {
         var progress = 0;
 
-        if (title === "Tutorial" && tutorialProgress != 0) {
+        if (title === "Tutorial" && tutorialProgress !== 0) {
             for (var i = 0; i < tutorialProgress.length; i++) {
                 if (tutorialProgress[i]) progress += 20;
             }
         }
 
-        if (title === "Proof" && proofProgress != 0) {
+        if (title === "Proof" && proofProgress !== 0) {
             progress = 10;
             for (var j = 0; j < proofProgress.length; j++) {
                 if (proofProgress[j]) progress += 15;

@@ -110,7 +110,7 @@ export default function HeapSort(arr) {
             blockNums.push(2);
 
             //恢复堆颜色
-            for (var j = 0; j < i + 1; j++) {
+            for (j = 0; j < i + 1; j++) {
                 changeColor(patched, j, COLORS.original);
                 changeY(patched, j, 0);
             }

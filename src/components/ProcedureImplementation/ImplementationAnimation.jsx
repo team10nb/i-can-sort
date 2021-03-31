@@ -243,17 +243,19 @@ export default function ImplementationAnimation(props) {
         setTrace(sort(arr).trace);
         setDescription(sort(arr).description);
         setBlockNums(sort(arr).blockNums);
+        // eslint-disable-next-line
     }, [arr]);
 
     // Update buttons' disable property when steps are changed
-    useEffect(() => {
+        useEffect(() => {
         currentStep === 0
             ? setBackwardDisabled(true)
             : setBackwardDisabled(false);
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-    }, [currentStep]);
+    // eslint-disable-next-line
+        }, [currentStep]);
 
     // Use the latest speed to play the animation
     useEffect(() => {
@@ -262,10 +264,12 @@ export default function ImplementationAnimation(props) {
             pause();
             resume();
         }
+        // eslint-disable-next-line
     }, [playSpeed]);
 
     useEffect(() => {
         handleResetClick();
+        // eslint-disable-next-line
     }, [trace]);
 
     // It is used to open the speed menu

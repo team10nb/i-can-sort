@@ -1,4 +1,3 @@
-import React from "react";
 import { COLORS, patch, hardcopy, changeColor, swap } from "../Patch/Patch";
 import { random } from "lodash";
 

@@ -88,11 +88,11 @@ export default function TutorialMainPage() {
     const handleProgress = (title) => {
         var progress = 0;
 
-        if (title === "Swap" && swapProgress != 0) progress += 100;
+        if (title === "Swap" && swapProgress !== 0) progress += 100;
 
-        if (title === "Loop" && loopProgress != 0) progress += 100;
+        if (title === "Loop" && loopProgress !== 0) progress += 100;
 
-        if (title === "Terminology" && termsProgress != 0) {
+        if (title === "Terminology" && termsProgress !== 0) {
             for (var i = 0; i < termsProgress.length; i++) {
                 if (termsProgress[i]) progress += 25;
             }

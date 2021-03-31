@@ -75,6 +75,7 @@ import Typography from '@material-ui/core/Typography';
       left: false,
     });
     //alert state
+    // eslint-disable-next-line
     const [open, setOpen] = React.useState(true);
     const handleClick = () => {
       setState(false);
@@ -83,7 +84,7 @@ import Typography from '@material-ui/core/Typography';
     };
     //open a link
     const handleLink=()=> {
-      let url = "https://github.com/team10nb"
+      let url = "https://github.com/team10nb/i-can-sort"
       window.electron.shell.openExternal(url)
     }
     

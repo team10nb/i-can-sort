@@ -14,12 +14,6 @@ import { Divider } from "@material-ui/core";
 import { color as CorrectnessColor } from "../../../../mainPages/Correctness";
 import CorrectnessHelp from '../../../../../components/CorrectnessHelp/CorrectnessHelp';
 
-const spring = {
-    type: "spring", // a framer motion type that simulates spring
-    damping: 15, //Strength of opposing force. If set to 0, spring will oscillate indefinitely
-    stiffness: 150, //Stiffness of the spring. Higher values will create more sudden movement. Set to 100 by default.
-    mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
-};
 
 const useStyles = makeStyles((theme) => ({
     div: {
@@ -106,9 +100,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Input() {
     const classes = useStyles();
 
-    if (localStorage.getItem("IntroFirst") == 1) {
+    if (localStorage.getItem("IntroFirst") === 1) {
         localStorage.setItem("IntroFirst", JSON.stringify(1));
-    } else if (localStorage.getItem("IntroFirst") == 0) {
+    } else if (localStorage.getItem("IntroFirst") === 0) {
         localStorage.setItem("IntroFirst", JSON.stringify(0));
     } else {
         localStorage.setItem("IntroFirst", JSON.stringify(1));
@@ -131,8 +125,7 @@ export default function Input() {
     const MAXNUMBER = 7;
     // The minimun value of input number
     const MINNUMBER = 1;
-    // The maximum length of input array
-    const LENGTH = 4;
+
     // It is used to clean timeouts to pause
     const [timeOutIds, setTimeOutIds] = useState([]);
     // Indicate whether a legal input demonstration complete
@@ -155,8 +148,7 @@ export default function Input() {
     const [legalArray, setLegalArray] = useState([3, 5, 1]);
     // The illegal string
     const [illegalString, setIllegalString] = useState(["a", "e", "d"]);
-    // The illegal array
-    const [illegalArray, setIllegalArray] = useState(["a", "e", "d"]);
+
     const [weekday, setWeekday] = useState("Monday");
     const [dayCount, setDayCount] = useState(1);
 
@@ -196,7 +188,6 @@ export default function Input() {
         }
 
         setIllegalString(triple);
-        setIllegalArray(triple);
         setDayCount(0);
 
         setIsCompleteIllegal([false, false, false]);

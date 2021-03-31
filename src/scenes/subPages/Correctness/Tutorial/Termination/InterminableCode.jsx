@@ -190,7 +190,6 @@ export default function Interminable() {
         // here we begin the animation from [1] of trace
         // it's also suitable for pause, step forward and backwar
         const subTrace = trace.slice(0);
-        const timeoutIds = [];
         // a time interval unit
         const timer = 500;
 

@@ -4,7 +4,7 @@
     Animation support for displaying proof process.
 */
 
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -15,8 +15,6 @@ import ExplanationBox from "../ExplanationBox/ExplanationBox";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import { color } from "../../scenes/mainPages/Procedure";
 
 // a framer motion transition attributes
 const spring = {
@@ -29,12 +27,10 @@ const spring = {
 export default function ProofAnimation(props) {
     const {
         title,
-        algorithm,
         trace,
         description,
         blockNums,
         Code,
-        file,
     } = props;
 
     // The bars displayed to visulise the numbers

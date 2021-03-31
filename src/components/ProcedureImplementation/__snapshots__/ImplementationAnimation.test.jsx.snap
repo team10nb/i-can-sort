@@ -25,8 +25,8 @@ Object {
                   class="makeStyles-algo-307"
                 >
                   Algorithm: BubbleSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order
                 </pre>
                 <pre
                   class="makeStyles-background-308"
@@ -678,8 +678,8 @@ Output: The result of sorting Arr.
                 class="makeStyles-algo-307"
               >
                 Algorithm: BubbleSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order
               </pre>
               <pre
                 class="makeStyles-background-308"

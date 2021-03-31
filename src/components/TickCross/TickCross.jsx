@@ -3,17 +3,12 @@
 */
 
 import * as React from "react";
-import { useEffect, useState } from "react";
 import {
   motion,
-  useViewportScroll,
-  useSpring,
-  useTransform,
-  useMotionValue
 } from "framer-motion";
 
 export function Cross(props) {
-    const {isComplete, color} = props;
+    const {isComplete} = props;
 
 
   return (
@@ -65,7 +60,7 @@ export function Cross(props) {
 };
 
 export function Tick(props) {
-  const {isComplete, color} = props;
+  const {isComplete} = props;
 
 
   return (

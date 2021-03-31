@@ -98,17 +98,29 @@ export default function ProcedureMainPage(props) {
         ? JSON.parse(localStorage.getItem("pre"))
         : null;
 
-    if (localStorage.getItem("snack") == 1) {
+    localStorage.getItem("first")
+    ? JSON.parse(localStorage.getItem("first"))
+    : localStorage.setItem("first", JSON.stringify(true));
+
+    const firstIn = JSON.parse(localStorage.getItem("first"));
+        
+    // if (localStorage.getItem("first") == 1) {
+    //     localStorage.setItem("first", JSON.stringify(1));
+    // } else if (localStorage.getItem("first") == 0) {
+    //     localStorage.setItem("first", JSON.stringify(0));
+    // } else {
+    //     localStorage.setItem("first", JSON.stringify(1));
+    // }
+
+    if (localStorage.getItem("snack") === 1) {
         localStorage.setItem("snack", JSON.stringify(1));
-    } else if (localStorage.getItem("snack") == 0) {
+    } else if (localStorage.getItem("snack") === 0) {
         localStorage.setItem("snack", JSON.stringify(0));
     } else {
         localStorage.setItem("snack", JSON.stringify(0));
     }
 
-    const firstIn = localStorage.getItem("first")
-        ? JSON.parse(localStorage.getItem("first"))
-        : null;
+    
 
     const handleClick = (title) => () => {
         //store previous visited algorithm

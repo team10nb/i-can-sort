@@ -94,6 +94,7 @@ export default function FirstInBackdrop(props) {
     const snack = localStorage.getItem("snack")
         ? JSON.parse(localStorage.getItem("snack"))
         : null;
+    // eslint-disable-next-line
     const [open, setOpen] = React.useState(true);
     const [appear, setAppear] = React.useState(true);
     const handleClose = (event, reason) => {
@@ -147,8 +148,8 @@ export default function FirstInBackdrop(props) {
                                 }}
                                 className={classes.tip}
                             >
-                                You can learn sorting in PROCEDURE section. <br />
-                                Ideas of correctness is available in CORRECTNESS section.<br />
+                                You can learn sorting in Procedure section. <br />
+                                Ideas of correctness is available in Correctness section.<br />
                                 Do you have any experience on programming?{" "}
                                 <br />
                             </Typography>
