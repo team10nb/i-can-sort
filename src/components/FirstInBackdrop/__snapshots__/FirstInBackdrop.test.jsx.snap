@@ -28,9 +28,9 @@ Object {
                   class="MuiTypography-root makeStyles-tip-7 MuiTypography-body1 MuiTypography-gutterBottom"
                   style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                 >
-                  You can learn sorting in PROCEDURE section. 
+                  You can learn sorting in Procedure section. 
                   <br />
-                  Ideas of correctness is available in CORRECTNESS section.
+                  Ideas of correctness is available in Correctness section.
                   <br />
                   Do you have any experience on programming?
                    
@@ -98,9 +98,9 @@ Object {
                 class="MuiTypography-root makeStyles-tip-7 MuiTypography-body1 MuiTypography-gutterBottom"
                 style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
               >
-                You can learn sorting in PROCEDURE section. 
+                You can learn sorting in Procedure section. 
                 <br />
-                Ideas of correctness is available in CORRECTNESS section.
+                Ideas of correctness is available in Correctness section.
                 <br />
                 Do you have any experience on programming?
                  

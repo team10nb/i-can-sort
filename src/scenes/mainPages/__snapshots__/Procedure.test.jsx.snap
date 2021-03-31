@@ -501,7 +501,7 @@ Object {
                               <button
                                 class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                                 disabled=""
-                                style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                                style="background-color: rgb(21, 101, 192); opacity: 0;"
                                 tabindex="-1"
                                 type="button"
                               >
@@ -644,9 +644,9 @@ Object {
                       class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
                       style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                     >
-                      You can learn sorting in PROCEDURE section. 
+                      You can learn sorting in Procedure section. 
                       <br />
-                      Ideas of correctness is available in CORRECTNESS section.
+                      Ideas of correctness is available in Correctness section.
                       <br />
                       Do you have any experience on programming?
                        
@@ -1229,7 +1229,7 @@ Object {
                             <button
                               class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                               disabled=""
-                              style="background-color: rgb(21, 101, 192); opacity: 0.5;"
+                              style="background-color: rgb(21, 101, 192); opacity: 0;"
                               tabindex="-1"
                               type="button"
                             >
@@ -1372,9 +1372,9 @@ Object {
                     class="MuiTypography-root makeStyles-tip-101 MuiTypography-body1 MuiTypography-gutterBottom"
                     style="font-family: Quicksand; font-weight: 600; color: rgb(14, 70, 134);"
                   >
-                    You can learn sorting in PROCEDURE section. 
+                    You can learn sorting in Procedure section. 
                     <br />
-                    Ideas of correctness is available in CORRECTNESS section.
+                    Ideas of correctness is available in Correctness section.
                     <br />
                     Do you have any experience on programming?
                      
