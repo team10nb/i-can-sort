@@ -12,7 +12,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import { color } from "../../../mainPages/Tutorial";
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -82,19 +81,7 @@ export default function Expressions(props) {
         },
     };
     const classes = useStyles();
-    const message = (
-        <p>
-            This module introduces basic knowledge of{" "}
-            <font style={{ fontWeight: "bold" }}>pseudocode</font>. You will get
-            to learn syntax of structured basic style pseudocode. Hope you enjoy!
-        </p>
-    );
 
-    const size = {
-        left: 240,
-        top: 45,
-        bottom: 45,
-    };
 
     return (
         <div>

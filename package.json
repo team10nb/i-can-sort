@@ -2,7 +2,7 @@
   "main": "electron.js",
   "homepage": ".",
   "name": "iCanSort",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.3",
   "private": true,
   "productName": "iCanSort",
   "author": "Team10",
@@ -65,7 +65,8 @@
     "styleguide-build": "styleguidist build --config styleguidist.config.js",
     "packager": "npm run build && rm -rf dist && electron-builder",
     "dist-mac": "react-scripts build && electron-builder --mac --x64 ",
-    "dist-win": "react-scripts build && electron-builder --win --x64"
+    "dist-win": "react-scripts build && electron-builder --win --x64",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "eslintConfig": {
     "extends": [
@@ -94,6 +95,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "antd": "^4.11.2",
+    "conventional-changelog-cli": "^2.1.1",
     "electron": "^11.1.1",
     "electron-builder": "^22.10.5",
     "electron-packager": "^15.2.0",
