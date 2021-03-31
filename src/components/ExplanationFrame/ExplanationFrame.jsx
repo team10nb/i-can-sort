@@ -191,6 +191,10 @@ export default function ExplanationFrame(props) {
         firstIn = localStorage.getItem("ProofFirst")
             ? JSON.parse(localStorage.getItem("ProofFirst"))
             : null;
+    }else if (name === "Term") {
+        firstIn = localStorage.getItem("TermFirst")
+            ? JSON.parse(localStorage.getItem("TermFirst"))
+            : null;
     }
 
     const [open, setOpen] = React.useState(firstIn === 1 ? true : false);
@@ -208,7 +212,10 @@ export default function ExplanationFrame(props) {
             localStorage.setItem("IntroFirst", JSON.stringify(0));
         } else if (name === "Proof") {
             localStorage.setItem("ProofFirst", JSON.stringify(0));
+        } else if (name === "Term") {
+            localStorage.setItem("TermFirst", JSON.stringify(0));
         }
+
     };
 
     const [activeStep, setActiveStep] = React.useState(0);

@@ -20,6 +20,7 @@ import Expressions from './Terminology/Expressions.jsx';
 import IfThenElse from './Terminology/IfThenElse.jsx';
 import Method from './Terminology/MethodCall.jsx';
 import ReturnValue from './Terminology/ReturnValue.jsx';
+import ProofHelp from "./Terminology/TerminologyHelp";
 
 
 const drawerWidth = 240;
@@ -126,7 +127,12 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Quicksand",
         fontWeight: "600",
         fontSize: "20px"
-    }
+    },
+    helpButton: {
+        position: "absolute",
+        bottom: 5,
+        left: 5,
+    },
 }));
 
 function getSteps() {
@@ -200,6 +206,13 @@ export default function TutorialTerminology(props) {
         props.history.push({ pathname: '/TutorialMainPage' });
     };
 
+    if (localStorage.getItem("TermFirst") === 1) {
+        localStorage.setItem("TermFirst", JSON.stringify(1));
+    } else if (localStorage.getItem("TermFirst") === 0) {
+        localStorage.setItem("TermFirst", JSON.stringify(0));
+    } else {
+        localStorage.setItem("TermFirst", JSON.stringify(1));
+    }
 
     return (
         <div>
@@ -244,6 +257,9 @@ export default function TutorialTerminology(props) {
                                     </ListItem>
                             ))}
                         </List>
+                    </div>
+                    <div className={classes.helpButton}>
+                        <ProofHelp />
                     </div>
                 </Drawer>
                 {getStepContent(activeStep)}
