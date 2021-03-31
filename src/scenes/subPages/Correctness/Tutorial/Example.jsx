@@ -167,7 +167,7 @@ const props_terminateAndCorrect = {
 const message = <p>Suppose now we have <font style={{ fontWeight: 'bold' }}>three</font> different examples to implement an algorithm <font style={{ fontWeight: 'bold' }}>factorial(n)</font>, which is used to calculate the factorial of 1 to 20.</p>
 
 const size = {
-    left: 240,
+    left: 241,
     top: 45,
     bottom: 45,
 };
