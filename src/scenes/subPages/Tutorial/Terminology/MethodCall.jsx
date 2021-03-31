@@ -33,7 +33,7 @@ export default function Method(props) {
             fontWeight: "400",
             marginLeft: "20px",
         },
-        sample: {
+        sampleOne: {
             fontSize: 12,
             lineHeight: "2em",
             fontWeight: "400",
@@ -42,23 +42,31 @@ export default function Method(props) {
             paddingLeft: "15px",
             paddingTop: "10px",
             paddingBottom: "10px",
-            marginLeft: "270px",
-            width: "200px",
+            marginLeft: "210px",
+            width: "300px",
             fontFamily: "Space Mono",
+            justifyContent: "centor"
         },
-        sample2: {
-            marginLeft: "90px",
+        sampleTwo: {
             fontSize: 12,
             lineHeight: "2em",
             fontWeight: "400",
-        },
-        ExampleCard: {
+            backgroundColor: "white",
+            borderRadius: "15px",
             paddingLeft: "15px",
-            paddingTop: "0px",
-            marginLeft: "210px",
-            width: "600px",
-            backgroundColor: "#FFFFFF",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            marginLeft: "285px",
+            width: "150px",
+            fontFamily: "Space Mono",
         },
+        // ExampleCard: {
+        //     paddingLeft: "15px",
+        //     paddingTop: "0px",
+        //     marginLeft: "210px",
+        //     width: "600px",
+        //     backgroundColor: "#FFFFFF",
+        // },
     };
 
     return (
@@ -69,36 +77,36 @@ export default function Method(props) {
                     <div style={styles.subtitle}>Method Declaration</div>
                     <br></br>
                     <div style={styles.div}>
-                        Standard Pseudocode should start with a{" "}
+                        Standard pseudocode should start with a{" "}
                         <font style={{ fontWeight: "bold" }}>
                             method declaration
                         </font>{" "}
-                        to explain the name, input and output of the Algorithm.
+                        to explain the name, input and output of the algorithm.
                         See the sample below:
                     </div>
-                    <br></br>
+                    <br/><br/>
 
-                    <div style={styles.sample}>
+                    <div style={styles.sampleOne}>
                         Algorithm: algorithm_name<br></br>Input: [explanation of
                         input]<br></br>Output: [explanation of output]
                     </div>
 
-                    <br></br>
-                    <br></br>
+                    <br/><br/><br/>
                     <Divider variant="middle" />
-                    <br></br>
+                    <br/><br/>
                     <div style={styles.subtitle}>Method Call</div>
                     <br></br>
                     <div style={styles.div}>
                         A{" "}
-                        <font style={{ fontWeight: "bold" }}>Method Call</font>{" "}
-                        is required While using other methods in Pseudocode.
-                        Commen syntax of a method call is Algorithm method (arg
-                        [, arg…]). See example below:
+                        <font style={{ fontWeight: "bold" }}>method call</font>{" "}
+                        is required while using other methods in pseudocode.
+                        Common syntax of a method call is{" "}
+                        <font style={{ fontWeight: "bold" }}>algorithm_name (arg1, arg2, ...)</font>.{" "}
+                        See example below:
                     </div>
-                    <br></br>
+                    <br/><br/>
 
-                    <div style={styles.sample}>swap(a,b)</div>
+                    <div style={styles.sampleTwo}>swap(a, b)</div>
                 </CardContent>
             </Card>
         </div>
