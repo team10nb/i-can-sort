@@ -78,8 +78,8 @@ const Bubble = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: BubbleSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`length = Arr.length`}
@@ -123,8 +123,8 @@ const Selection = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: SelectionSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`n = Arr.length`}
@@ -177,8 +177,8 @@ const Insertion = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: InsertionSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`length = Arr.length `}
@@ -232,8 +232,8 @@ const Quick = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: QuickSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={classes.qNoBackground}>
 {`//partition(a,b) is a subset of Arr
@@ -296,11 +296,14 @@ const Heap = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: HeapSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`for i = Arr.length - 1 to 0 do`}
+        </pre>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+{`  // Click button below to learn maxHeapify`}
         </pre>
         <pre className={blockNum===2 ? classes.background : classes.noBackground}>
 {`  maxHeapify(Arr, 0, i)`}
@@ -314,6 +317,7 @@ Output: The result of sorting Arr.`}
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`return Arr`}
         </pre>
+        
     </div>
 
     return(
@@ -329,8 +333,8 @@ const Merge = (props)=> {
     <div>
         <pre className={classes.algo}>
 {`Algorithm: MergeSort(Arr)
-Input: an array of integers Arr.
-Output: The result of sorting Arr.`}
+Input: An array of integers Arr
+Output: Sorted Arr in increasing order`}
         </pre>
         <pre className={blockNum===1 ? classes.background : classes.noBackground}>
 {`if leftIndex > rightIndex then`}
@@ -347,8 +351,11 @@ Output: The result of sorting Arr.`}
         <pre className={blockNum===5 ? classes.background : classes.noBackground}>
 {`  mergeSort(array, leftIndex, midIndex)`}
         </pre>
-        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+        <pre className={classes.noBackground}>
 {`  mergeSort(array, midIndex+1, rightIndex)`}
+        </pre>
+        <pre className={blockNum===6 ? classes.background : classes.noBackground}>
+{`  // Click button below to learn merge`}
         </pre>
         <pre className={blockNum===7 ? classes.background : classes.noBackground}>
 {`  merge(array, leftIndex, midIndex, rightIndex)`}

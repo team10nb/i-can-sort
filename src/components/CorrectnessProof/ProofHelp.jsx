@@ -19,7 +19,8 @@ const content1 = (
     >
         When a specific statement is being executed, the pseudo-code and
         assertion will be highlighted to show you the proof process step by
-        step.
+        step. <br/>
+        Note this is not a formal proof. Plain language is used for demonstration purposes.
     </Typography>
 );
 

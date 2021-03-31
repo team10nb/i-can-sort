@@ -147,8 +147,8 @@ export default function FirstInBackdrop(props) {
                                 }}
                                 className={classes.tip}
                             >
-                                You can learn sorting in PROCEDURE section. <br />
-                                Ideas of correctness is available in CORRECTNESS section.<br />
+                                You can learn sorting in Procedure section. <br />
+                                Ideas of correctness is available in Correctness section.<br />
                                 Do you have any experience on programming?{" "}
                                 <br />
                             </Typography>
