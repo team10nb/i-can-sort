@@ -75,6 +75,7 @@ import Typography from '@material-ui/core/Typography';
       left: false,
     });
     //alert state
+    // eslint-disable-next-line
     const [open, setOpen] = React.useState(true);
     const handleClick = () => {
       setState(false);

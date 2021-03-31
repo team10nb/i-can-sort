@@ -7,7 +7,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined";
 import Zoom from "@material-ui/core/Zoom";
-import Fab from "@material-ui/core/Fab";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -311,7 +310,16 @@ export default function ExplanationFrame(props) {
                     <div>
                         <div>{getStepContent(activeStep, props)}</div>
                         <div className={classes.button}>
-                            <IconButton
+                            {activeStep === 0 ? (<IconButton
+                                disabled={activeStep === 0}
+                                onClick={handleBack}
+                                style={{ backgroundColor: color, opacity: 0 }}
+                                size="small"
+                            >
+                                <ChevronLeftIcon
+                                    style={{ color: "white", fontSize: "40px" }}
+                                />
+                            </IconButton>) : (<IconButton
                                 disabled={activeStep === 0}
                                 onClick={handleBack}
                                 style={{ backgroundColor: color, opacity: 0.5 }}
@@ -320,7 +328,9 @@ export default function ExplanationFrame(props) {
                                 <ChevronLeftIcon
                                     style={{ color: "white", fontSize: "40px" }}
                                 />
-                            </IconButton>
+                            </IconButton>)
+                            }
+                            
                             <IconButton
                                 onClick={handleNext}
                                 style={{ backgroundColor: color, opacity: 0.5 }}

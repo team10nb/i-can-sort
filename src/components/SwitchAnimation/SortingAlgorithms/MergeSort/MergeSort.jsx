@@ -1,5 +1,4 @@
-import React from "react";
-import { COLORS, patch, hardcopy, changeColor, swap } from "../Patch/Patch";
+import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
 const MergeSort = (arr) => {
     // To count the number of merge colors that has been used

@@ -94,6 +94,7 @@ export default function FirstInBackdrop(props) {
     const snack = localStorage.getItem("snack")
         ? JSON.parse(localStorage.getItem("snack"))
         : null;
+    // eslint-disable-next-line
     const [open, setOpen] = React.useState(true);
     const [appear, setAppear] = React.useState(true);
     const handleClose = (event, reason) => {

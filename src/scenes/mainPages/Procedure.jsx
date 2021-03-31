@@ -112,9 +112,9 @@ export default function ProcedureMainPage(props) {
     //     localStorage.setItem("first", JSON.stringify(1));
     // }
 
-    if (localStorage.getItem("snack") == 1) {
+    if (localStorage.getItem("snack") === 1) {
         localStorage.setItem("snack", JSON.stringify(1));
-    } else if (localStorage.getItem("snack") == 0) {
+    } else if (localStorage.getItem("snack") === 0) {
         localStorage.setItem("snack", JSON.stringify(0));
     } else {
         localStorage.setItem("snack", JSON.stringify(0));

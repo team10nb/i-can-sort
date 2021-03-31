@@ -207,7 +207,7 @@ Output: Sorted Arr in increasing order`}
         <pre className={blockNum===9 ? classes.background : classes.noBackground}>
 {`Arr[preIndex + 1] = current`}
         </pre>
-        <pre className={blockNum==- 0 ? classes.background : classes.noBackground}>
+        <pre className={blockNum=== 0 ? classes.background : classes.noBackground}>
 {`//insert current elment at position preIndex`}
         </pre>
         <pre className={blockNum===10 ? classes.background : classes.noBackground}>

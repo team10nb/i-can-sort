@@ -197,8 +197,6 @@ function getStepContent(activeStep) {
 export default function CorrectnessProve(props) {
     const classes = useStyles();
 
-    const { Implementation } = props;
-
     const [activeStep, setActiveStep] = React.useState(0);
 
     const maxSteps = getSteps().length;
@@ -234,9 +232,9 @@ export default function CorrectnessProve(props) {
         props.history.push({ pathname: "/CorrectnessMainPage" });
     };
 
-    if (localStorage.getItem("ProofFirst") == 1) {
+    if (localStorage.getItem("ProofFirst") === 1) {
         localStorage.setItem("ProofFirst", JSON.stringify(1));
-    } else if (localStorage.getItem("ProofFirst") == 0) {
+    } else if (localStorage.getItem("ProofFirst") === 0) {
         localStorage.setItem("ProofFirst", JSON.stringify(0));
     } else {
         localStorage.setItem("ProofFirst", JSON.stringify(1));
