@@ -42,11 +42,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#4caf50",
         color: "white",
         borderRadius: "30px",
-        "&:hover, &$focusVisible": {
+        "&:hover": {
             transform: "scale(1.05, 1.05)",
             // boxShadow: "0 0 10 5 #888888,",
         },
-        "&:active, &$focusVisible": {
+        "&:active": {
             transform: "scale(1, 1 )",
         },
         transition: "0.5s",
@@ -57,10 +57,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#1565c0",
         color: "white",
         borderRadius: "30px",
-        "&:hover, &$focusVisible": {
+        "&:hover": {
             transform: "scale(1.05, 1.05)",
         },
-        "&:active, &$focusVisible": {
+        "&:active": {
             transform: "scale(1, 1 )",
         },
         transition: "0.5s",
