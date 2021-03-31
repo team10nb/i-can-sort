@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
     appBar1: {
         [theme.breakpoints.up("sm")]: {
             width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
         },
         height: 45,
         backgroundColor: color,
@@ -43,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         [theme.breakpoints.up("sm")]: {
             width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
         },
     },
 
@@ -232,13 +230,10 @@ export default function CorrectnessProve(props) {
         props.history.push({ pathname: "/CorrectnessMainPage" });
     };
 
-    if (localStorage.getItem("ProofFirst") === 1) {
-        localStorage.setItem("ProofFirst", JSON.stringify(1));
-    } else if (localStorage.getItem("ProofFirst") === 0) {
-        localStorage.setItem("ProofFirst", JSON.stringify(0));
-    } else {
-        localStorage.setItem("ProofFirst", JSON.stringify(1));
-    }
+    
+    localStorage.getItem("ProofFirst")
+    ? JSON.parse(localStorage.getItem("ProofFirst"))
+    : localStorage.setItem("ProofFirst", JSON.stringify(1));
 
     return (
         <div>

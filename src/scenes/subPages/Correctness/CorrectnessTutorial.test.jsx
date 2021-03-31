@@ -2,10 +2,10 @@
 import { render } from '@testing-library/react';
 import CorrectnessTutorial from './CorrectnessTutorial';
 
-jest.mock("../../../components/CorrectnessIntroduction/CorrectnessIntroduction", () => {
+jest.mock("./Tutorial/Input/Input", () => {
     return {
         __esModule: true,
-        default: () => <div>mockCorrectnessIntroduction</div>,
+        default: () => <div>mockInput</div>,
     }
 });
 
@@ -13,17 +13,11 @@ test('should contain buttons', () => {
     const {getAllByText} = render(        
             <CorrectnessTutorial />
     );
-    // getAllByText("Input");
-    // getAllByText("Input_Def");
     getAllByText("Termination");
-    // getAllByText("Termination_Def");
     getAllByText("Introduction");
     getAllByText("Partial Correctness");
     getAllByText("Total Correctness");
-    // getAllByText("Partial_Example");
     getAllByText("Example");
-    
-    // getAllByText("Correctness_Intro");
 
     getAllByText("Next");
     getAllByText("Back");

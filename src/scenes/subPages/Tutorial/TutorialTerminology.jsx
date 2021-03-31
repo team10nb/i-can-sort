@@ -20,6 +20,7 @@ import Expressions from './Terminology/Expressions.jsx';
 import IfThenElse from './Terminology/IfThenElse.jsx';
 import Method from './Terminology/MethodCall.jsx';
 import ReturnValue from './Terminology/ReturnValue.jsx';
+import ProofHelp from "./Terminology/TerminologyHelp";
 
 
 const drawerWidth = 240;
@@ -28,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     appBar1: {
         [theme.breakpoints.up('sm')]: {
             width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
         },
         height: 45,
         backgroundColor: color,
@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         [theme.breakpoints.up('sm')]: {
             width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
         },
     },
 
@@ -128,7 +127,12 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Quicksand",
         fontWeight: "600",
         fontSize: "20px"
-    }
+    },
+    helpButton: {
+        position: "absolute",
+        bottom: 5,
+        left: 5,
+    },
 }));
 
 function getSteps() {
@@ -203,6 +207,10 @@ export default function TutorialTerminology(props) {
     };
 
 
+    localStorage.getItem("TermFirst")
+    ? JSON.parse(localStorage.getItem("TermFirst"))
+    : localStorage.setItem("TermFirst", JSON.stringify(1));
+
     return (
         <div>
             <AppBar className={classes.appBar1} >
@@ -246,6 +254,9 @@ export default function TutorialTerminology(props) {
                                     </ListItem>
                             ))}
                         </List>
+                    </div>
+                    <div className={classes.helpButton}>
+                        <ProofHelp />
                     </div>
                 </Drawer>
                 {getStepContent(activeStep)}
