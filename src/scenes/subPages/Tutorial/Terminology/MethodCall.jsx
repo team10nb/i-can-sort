@@ -42,7 +42,7 @@ export default function Method(props) {
             paddingLeft: "15px",
             paddingTop: "10px",
             paddingBottom: "10px",
-            marginLeft: "220px",
+            marginLeft: "210px",
             width: "300px",
             fontFamily: "Space Mono",
             justifyContent: "centor"
@@ -56,7 +56,7 @@ export default function Method(props) {
             paddingLeft: "15px",
             paddingTop: "10px",
             paddingBottom: "10px",
-            marginLeft: "295px",
+            marginLeft: "285px",
             width: "150px",
             fontFamily: "Space Mono",
         },
@@ -84,7 +84,7 @@ export default function Method(props) {
                         to explain the name, input and output of the algorithm.
                         See the sample below:
                     </div>
-                    <br></br>
+                    <br/><br/>
 
                     <div style={styles.sampleOne}>
                         Algorithm: algorithm_name<br></br>Input: [explanation of
@@ -104,7 +104,7 @@ export default function Method(props) {
                         <font style={{ fontWeight: "bold" }}>algorithm_name (arg1, arg2, ...)</font>.{" "}
                         See example below:
                     </div>
-                    <br></br>
+                    <br/><br/>
 
                     <div style={styles.sampleTwo}>swap(a, b)</div>
                 </CardContent>
