@@ -6,8 +6,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 
 export default function IfThenElse(props) {
-    const styles ={
-        root:{
+    const styles = {
+        root: {
             display: "flex",
             "& > *": {
                 marginRight: 10,
@@ -64,21 +64,28 @@ export default function IfThenElse(props) {
                     <br></br>
                     <div style={styles.div}>
                         Binary choice on a given Boolean condition is indicated
-                        by the use of four keywords: 'if', 'then', 'else' and 'end if'.
+                        by the use of four keywords:{" "} 
+                        <font style={{ fontWeight: "bold" }}>if</font>,{" "}
+                        <font style={{ fontWeight: "bold" }}>then</font>,{" "}
+                        <font style={{ fontWeight: "bold" }}>else</font> and{" "}
+                        <font style={{ fontWeight: "bold" }}>end if</font>.
                         The general form is:
                     </div>
                     <br></br>
                     <br></br>
 
                     <div style={styles.sample}>
-                        if condition then<br></br>sequence 1<br></br>else
-                        <br></br>sequence 2<br></br>end if
+                        <font style={{ fontWeight: "bold" }}>if</font> condition{" "}
+                        <font style={{ fontWeight: "bold" }}>then</font><br></br>sequence 1<br></br>
+                        <font style={{ fontWeight: "bold" }}>else</font>
+                        <br></br>sequence 2<br></br>
+                        <font style={{ fontWeight: "bold" }}>end if</font>
                     </div>
 
                     <br></br>
                     <br></br>
                     <div style={styles.div}>
-                        The 'else' keyword and "sequence 2" are optional. If the
+                        The <font style={{ fontWeight: "bold" }}>else</font> keyword and <font style={{ fontWeight: "bold" }}>sequence 2</font> are optional. If the
                         condition is true, sequence 1 is performed, otherwise
                         sequence 2 is performed.
                     </div>

@@ -63,9 +63,9 @@ export default function ReturnValue(props) {
                     <h1 style={styles.title}>Return Value</h1>
                     <br></br>
                     <div style={styles.div}>
-                        Standard Pseudocode use{" "}
+                        Standard pseudocode use{" "}
                         <font style={{ fontWeight: "bold" }}>
-                            Return [expression]
+                            return [expression]
                         </font>{" "}
                         to present the output of an algorithm. See the example
                         below:
@@ -73,17 +73,18 @@ export default function ReturnValue(props) {
                     <br></br>
 
                     <div style={styles.sample}>
-                        Algorithm: Return_A<br></br>Input: an integer A<br></br>
-                        Output: An integer A<br></br>A = 0 <br></br> B = 2{" "}
-                        <br></br> A = A + B <br></br> Return A
+                        Algorithm: return_a<br></br>Input: an integer a<br></br>
+                        Output: An integer a<br></br>a = 0 <br></br> b = 2{" "}
+                        <br></br> a = a + b <br></br>{" "}
+                        <font style={{ fontWeight: "bold" }}>return a</font>
                     </div>
 
                     <br></br>
 
                     <br></br>
                     <div style={styles.div}>
-                        The example above will return an integer A, which should
-                        be 2.
+                        The example above will return an integer a, which should
+                        be 2 here.
                     </div>
                 </CardContent>
             </Card>
