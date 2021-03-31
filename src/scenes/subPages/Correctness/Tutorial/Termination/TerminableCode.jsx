@@ -142,12 +142,22 @@ const TerminableCode = () => {
 
     const traceUnit2 =
         [
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
+        ];
+    
+    const traceUnit3 =
+        [
             { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 },
             { value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0 },
         ];
 
-
-    trace.push(traceUnit1, traceUnit1, traceUnit2, traceUnit2, traceUnit1, traceUnit1, traceUnit2, traceUnit2, traceUnit1, traceUnit1);
+    const traceUnit4 =
+        [
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
+        ];
+    trace.push(traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit1);
 
     const blockNums = [1, 2, 3, 2, 3, 2, 3, 2, 3, 4];
 
