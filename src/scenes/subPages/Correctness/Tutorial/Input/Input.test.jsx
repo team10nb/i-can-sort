@@ -18,7 +18,7 @@ test( 'should call InputTable', () => {
 
 })
 
-test( 'should match CorrectnessIntroduction snapshot', () => {
+test( 'should match snapshot', () => {
     const inputTableSpy = jest
         .spyOn(InputTables, "default")
         .mockImplementation(() => <div>mockInputTable</div>);
