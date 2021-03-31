@@ -100,13 +100,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Input() {
     const classes = useStyles();
 
-    if (localStorage.getItem("IntroFirst") === 1) {
-        localStorage.setItem("IntroFirst", JSON.stringify(1));
-    } else if (localStorage.getItem("IntroFirst") === 0) {
-        localStorage.setItem("IntroFirst", JSON.stringify(0));
-    } else {
-        localStorage.setItem("IntroFirst", JSON.stringify(1));
-    }
+    localStorage.getItem("IntroFirst")
+    ? JSON.parse(localStorage.getItem("IntroFirst"))
+    : localStorage.setItem("IntroFirst", JSON.stringify(1));
 
 
     const week = [
