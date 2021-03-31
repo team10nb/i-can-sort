@@ -15,9 +15,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import {color} from '../../mainPages/Tutorial';
+import { color } from '../../mainPages/Tutorial';
 import Expressions from './Terminology/Expressions.jsx';
-import IfThenElse from './Terminology/ControlFlow.jsx';
+import IfThenElse from './Terminology/IfThenElse.jsx';
 import Method from './Terminology/MethodCall.jsx';
 import ReturnValue from './Terminology/ReturnValue.jsx';
 
@@ -29,145 +29,142 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: drawerWidth,
-          },
-        height:45,
-        backgroundColor:color,       
+        },
+        height: 45,
+        backgroundColor: color,
     },
 
-    appBar2: {      
+    appBar2: {
         top: 'auto',
         bottom: 0,
         [theme.breakpoints.up('sm')]: {
             width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: drawerWidth,
-          },
-    },
-
-    div:{
-        display:"flex",
-        alignItems:"center",       
-        '& > *': {
-          margin: theme.spacing(0),
         },
     },
 
-    icon:{
+    div: {
+        display: "flex",
+        alignItems: "center",
+        '& > *': {
+            margin: theme.spacing(0),
+        },
+    },
+
+    icon: {
         marginRight: theme.spacing(2),
         width: 100,
         height: 45,
     },
 
-    chip:{
+    chip: {
         position: 'relative',
         marginRight: -50,
         marginLeft: 85,
         minWidth: 400,
-        justifyContent:"center",  
-        fontWeight: "600",      
+        justifyContent: "center",
+        fontWeight: "600",
         color: color,
-        fontFamily:"Quicksand",
+        fontFamily: "Quicksand",
         backgroundColor: "#F8F8F8",
     },
 
-    stepper:{        
-        alignItems:"bottom",
+    stepper: {
+        alignItems: "bottom",
         fontSize: 16,
-        fontWeight: "bold",        
+        fontWeight: "bold",
         color: color,
-        backgroundColor: "#F0F0F0",     
+        backgroundColor: "#F0F0F0",
     },
 
-    content:{
-        display:"flex",
-        alignItems:"center",          
+    content: {
+        display: "flex",
+        alignItems: "center",
         width: 1020,
         height: 560,
     },
 
     drawer: {
-        width: drawerWidth,   
+        width: drawerWidth,
         flexShrink: 0,
-        height:620,
+        height: 620,
         fontFamily: "Arial"
     },
-    
+
     drawerPaper: {
-        width: drawerWidth,    
+        width: drawerWidth,
     },
 
     drawerContainer: {
-        overflow: 'auto',   
+        overflow: 'auto',
     },
 
-    listHeader:{
-        height:30,       
+    listHeader: {
+        height: 30,
         color: color,
         fontSize: "20px"
     },
 
-    listItem:{
-        height:40,
+    listItem: {
+        height: 40,
     },
 
-    hightlightItem:{
-        height:40,
+    hightlightItem: {
+        height: 40,
         backgroundColor: color,
-        color: "#F8F8F8",    
-        "&:hover": {backgroundColor:color},
+        color: "#F8F8F8",
+        "&:hover": { backgroundColor: color },
     },
-    listItemText:{
-        fontFamily:"Quicksand",
+    listItemText: {
+        fontFamily: "Quicksand",
         fontWeight: "600",
-      },
-      listItemTitle:{
-        fontFamily:"Quicksand",
+    },
+    listItemTitle: {
+        fontFamily: "Quicksand",
         fontWeight: "600",
         fontSize: "18px"
-      },
-      listItemCatalogue:{
-        fontFamily:"Quicksand",
+    },
+    listItemCatalogue: {
+        fontFamily: "Quicksand",
         fontWeight: "600",
         fontSize: "20px"
-      }
+    }
+}));
 
-    
-   
-  }));
-
-  function getSteps() {
+function getSteps() {
     return [
-            'Expressions',
-            'IF-THEN-ELSE',
-            'Method',
-            'Return Value',
+        'Expressions',
+        'IF-THEN-ELSE',
+        'Method',
+        'Return Value',
     ];
-  }
+}
 
-  function getStepContent(activeStep) {
-      switch (activeStep) {
+function getStepContent(activeStep) {
+    switch (activeStep) {
         case 0:
-            return(
+            return (
                 <Expressions />
             );
         case 1:
-            return(
+            return (
                 <IfThenElse />
-            );    
+            );
         case 2:
-            return(
+            return (
                 <Method />
-            );  
+            );
         case 3:
-            return(
+            return (
                 <ReturnValue />
-            );     
+            );
         default:
             break;
-      }
-  }
+    }
+}
 
-  
-    export default function TutorialTerminology(props) {
+
+export default function TutorialTerminology(props) {
     const classes = useStyles();
 
     const [activeStep, setActiveStep] = React.useState(0);
@@ -187,98 +184,98 @@ const useStyles = makeStyles((theme) => ({
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        finishPage(activeStep+1);
+        finishPage(activeStep + 1);
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
-        finishPage(activeStep-1);
+        finishPage(activeStep - 1);
     };
 
-    const handleChange =(index) => {
+    const handleChange = (index) => {
         setActiveStep(index);
         finishPage(index);
     };
-   
+
     const handleClick = () => {
         //return to Tutorial main page with the progress
-        props.history.push({pathname: '/TutorialMainPage'});
+        props.history.push({ pathname: '/TutorialMainPage' });
     };
 
 
     return (
         <div>
             <AppBar className={classes.appBar1} >
-                <div className ={classes.div}>
-                <Button className={classes.icon} onClick={handleClick}>
-                    <HomeIcon style={{ fontSize: 30, color: "#FFFFFF"}} />
-                </Button>
-                <Chip className={classes.chip} label= {step[activeStep]} />  
-                </div>                          
+                <div className={classes.div}>
+                    <Button className={classes.icon} onClick={handleClick}>
+                        <HomeIcon style={{ fontSize: 30, color: "#FFFFFF" }} />
+                    </Button>
+                    <Chip className={classes.chip} label={step[activeStep]} />
+                </div>
             </AppBar>
-     
+
             <main className={classes.content}>
                 <Drawer
-                className={classes.drawer}
-                variant="permanent"
-                classes={{
-                paper: classes.drawerPaper,
-                }}
-                {...finishPage(0)}
+                    className={classes.drawer}
+                    variant="permanent"
+                    classes={{
+                        paper: classes.drawerPaper,
+                    }}
+                    {...finishPage(0)}
                 >
                     <div className={classes.drawerContainer}>
                         <List>
-                            <ListItem  className = {classes.listHeader}>                
-                            <ListItemText primary= 'Catalogue' classes={{primary:classes.listItemCatalogue}}/>
+                            <ListItem className={classes.listHeader}>
+                                <ListItemText primary='Catalogue' classes={{ primary: classes.listItemCatalogue }} />
                             </ListItem>
                         </List>
 
                         <List>
-                            <ListItem className = {classes.listItem}>             
-                            <ListItemText primary= 'Terminology' classes={{primary:classes.listItemTitle}}/>
+                            <ListItem className={classes.listItem}>
+                                <ListItemText primary='Terminology' classes={{ primary: classes.listItemTitle }} />
                             </ListItem>
-                            {['Expressions','if-then-else','Method', 'Return Value'].map((text, index) => (
-                            index === activeStep
-                                ?<ListItem  className = {classes.hightlightItem} button key={text} onClick={() => handleChange(index )}>
-                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
-                                </ListItem>
-                                :<ListItem className = {classes.listItem} button key={text} onClick={() => handleChange(index )}>
-                                    <ListItemIcon><ChevronRightIcon/></ListItemIcon>
-                                    <ListItemText primary={text} classes={{primary:classes.listItemText}}/>
-                                </ListItem> 
+                            {['Expressions', 'if-then-else', 'Method', 'Return Value'].map((text, index) => (
+                                index === activeStep
+                                    ? <ListItem className={classes.hightlightItem} button key={text} onClick={() => handleChange(index)}>
+                                        <ListItemIcon><ChevronRightIcon /></ListItemIcon>
+                                        <ListItemText primary={text} classes={{ primary: classes.listItemText }} />
+                                    </ListItem>
+                                    : <ListItem className={classes.listItem} button key={text} onClick={() => handleChange(index)}>
+                                        <ListItemIcon><ChevronRightIcon /></ListItemIcon>
+                                        <ListItemText primary={text} classes={{ primary: classes.listItemText }} />
+                                    </ListItem>
                             ))}
                         </List>
-                   </div>
+                    </div>
                 </Drawer>
                 {getStepContent(activeStep)}
             </main>
 
 
 
-            <AppBar  className = {classes.appBar2}>
+            <AppBar className={classes.appBar2}>
                 <MobileStepper
                     steps={maxSteps}
                     position="static"
-                    className = {classes.stepper}
-                    variant="text"                  
+                    className={classes.stepper}
+                    variant="text"
                     activeStep={activeStep}
                     nextButton={
-                    <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF"}} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-                        Next                       
+                        <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF" }} onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                            Next
                     </Button>
                     }
-                    middlebutton = {<MoreHorizIcon color={color} />}
+                    middlebutton={<MoreHorizIcon color={color} />}
                     backButton={
-                    <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF"}} onClick={handleBack} disabled={activeStep === 0}>
-                        Back
+                        <Button size="small" variant="contained" style={{ backgroundColor: color, color: "#FFFFFF" }} onClick={handleBack} disabled={activeStep === 0}>
+                            Back
                     </Button>
                     }
                 />
             </AppBar>
         </div>
-       
-       
+
+
     );
 }
 
