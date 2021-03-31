@@ -38,13 +38,13 @@ function createData(name, meaning) {
 }
 
 const rows = [
-    createData("a = 1", "let a = 1"),
+    createData("a = 1", "assign a to be 1"),
     createData("a > b / a < b ", "a is bigger than b / a is less than b"),
     createData("a && b", "a AND b"),
     createData("a || b", "a OR b"),
     createData(
-        "Arr[X]",
-        "The Xth element of array. e.g.: Arr = [1,2,3] Arr[0] = 1"
+        "arr[x]",
+        "The xth element of array 'arr'. e.g. arr = [1,2,3]; arr[0] = 1"
     ),
 ];
 
@@ -80,31 +80,14 @@ export default function Expressions(props) {
             fontSize: 15,
             lineHeight: "2em",
             fontWeight: "400",
-            marginLeft: "20px",
-        },
-        card1: {
-            backgroundColor: "#EFEFEF",
-            height: 500,
-            width: "55%",
-            paddingLeft: "30px",
-            paddingTop: "25px",
-        },
-        card2: {
-            backgroundColor: "#EFEFEF",
-            height: 500,
-            width: "45%",
-            paddingTop: "44px",
-            paddingLeft: "20px",
-            paddingRight: "30px",
         },
     };
     const classes = useStyles();
     const message = (
         <p>
-            This module will mainly introduce you basic knowlege of{" "}
+            This module introduces basic knowledge of{" "}
             <font style={{ fontWeight: "bold" }}>pseudocode</font>. You will get
-            to learn syntax of structured basic style pseudocode. Hope you
-            enjoy!
+            to learn syntax of structured basic style pseudocode. Hope you enjoy!
         </p>
     );
 
@@ -121,11 +104,13 @@ export default function Expressions(props) {
                 <CardContent>
                     <h1 style={styles.title}>Expressions</h1>
                     <div style={styles.div}>
-                        In computer science, an{" "}
-                        <font style={{ fontWeight: "bold" }}>expression</font>{" "}
+                        <p>
+                            In computer science, an{" "}
+                            <font style={{ fontWeight: "bold" }}>expression</font>{" "}
                         is a syntactic entity in a programming language that may
                         be evaluated to determine its value. <br />
-                        Here are some explanations of commen expressions:
+                        Here are some explanations of common expressions:
+                    </p>
                     </div>
                     <br></br>
                     <TableContainer component={Paper}>
