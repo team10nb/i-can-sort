@@ -12,7 +12,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import TipFrame from "../../../../components/TipFrame/TipFrame";
 import { color } from "../../../mainPages/Tutorial";
 
 const StyledTableCell = withStyles((theme) => ({
@@ -38,10 +37,10 @@ function createData(name, meaning) {
 }
 
 const rows = [
-    createData("a = 1", "assign a to be 1"),
+    createData("a = 1", "assign 1 to a"),
     createData("a > b / a < b ", "a is bigger than b / a is less than b"),
-    createData("a && b", "a AND b"),
-    createData("a || b", "a OR b"),
+    createData("a && b", "a AND b (Logical operation)"),
+    createData("a || b", "a OR b (Logical operation)"),
     createData(
         "arr[x]",
         "The xth element of array 'arr'. e.g. arr = [1,2,3]; arr[0] = 1"
@@ -99,7 +98,6 @@ export default function Expressions(props) {
 
     return (
         <div>
-            <TipFrame message={message} size={size} btnColor={color} />
             <Card style={styles.root}>
                 <CardContent>
                     <h1 style={styles.title}>Expressions</h1>
