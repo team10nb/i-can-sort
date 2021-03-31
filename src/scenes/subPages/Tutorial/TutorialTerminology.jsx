@@ -208,6 +208,13 @@ export default function TutorialTerminology(props) {
         props.history.push({ pathname: '/TutorialMainPage' });
     };
 
+    if (localStorage.getItem("TermFirst") === 1) {
+        localStorage.setItem("TermFirst", JSON.stringify(1));
+    } else if (localStorage.getItem("TermFirst") === 0) {
+        localStorage.setItem("TermFirst", JSON.stringify(0));
+    } else {
+        localStorage.setItem("TermFirst", JSON.stringify(1));
+    }
 
     return (
         <div>
