@@ -6,7 +6,7 @@
 
 import TutorialSwap from './Swap/Swap';
 import TutorialLoop from './Loop/Loop';
-import TutorialTerminology from './TutorialTerminology';
+import TutorialTerminology from './Terminology/Terminology';
 
 
 const TutorialRouters = [

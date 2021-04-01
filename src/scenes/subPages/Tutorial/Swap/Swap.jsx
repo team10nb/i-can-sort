@@ -9,7 +9,7 @@ import { color } from "../../../mainPages/Tutorial";
 import TutorialSubPage from "../TutorialSubpage";
 import SwapFrame from './SwapFrame';
 
-export default function Swap(props) {
+export default function TutorialSwap(props) {
 
     localStorage.setItem("tutorialSwap", JSON.stringify(100));
 

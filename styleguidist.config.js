@@ -33,7 +33,9 @@ module.exports = {
           components: 
           [
             './src/scenes/mainPages/Tutorial.jsx',
-            './src/scenes/subPages/Tutorial/TutorialSubPage.jsx',
+            './src/scenes/subPages/Tutorial/Swap/Swap.jsx',
+            './src/scenes/subPages/Tutorial/Loop/Loop.jsx',
+            './src/scenes/subPages/Tutorial/Terminology/Terminology.jsx',
           ]
         },
         {
