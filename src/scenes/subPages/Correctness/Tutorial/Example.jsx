@@ -184,6 +184,7 @@ export default function Partial() {
     const confirm = (props) => {
         setExp("");
         setOutput("");
+        setExpOutput(factorial(input));
         //input is undefined
         if (isUndefined(input)) {
             setInput("empty");
@@ -282,7 +283,7 @@ export default function Partial() {
                         <h1>Expected Output: {expOutput}</h1>
 
                         <div style={{ height: 40, display: "flex", verticalAlign: "middle" }}>
-                            <h1 style={{ color: color, fontFamily: "Space Mono", fontWeight: 400 }}>-------Click below example algorithms to see the output-------</h1>
+                            <h1 style={{letterSpacing:0.3, color: color, fontFamily: "Space Mono", fontWeight: 400 }}>-------------Double click below algorithms to see the output-------------</h1>
                         </div>
 
                         <h1>Actual Output: {output}</h1>
@@ -326,11 +327,14 @@ export default function Partial() {
 }
 
 function factorial(number) {
-    var result = 1;
-    for (var i = 1; i <= number; i++) {
-        result = result * i;
+    if (number.match(/^[0-9]*$/) && number > 0 && number < 21) {
+        var result = 1;
+        for (var i = 1; i <= number; i++) {
+            result = result * i;
+        }
+        return result;
     }
-    return result;
+    return;
 }
 
 function factorial_add(number) {
