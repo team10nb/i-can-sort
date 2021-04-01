@@ -8,10 +8,10 @@ const packageFile = require(packagePath)
 
 
 module.exports = {
-  title: "Project title", // 文档名
-  version: packageFile.version, // 同上 使用 package.json 的 version
-  usageMode: 'expand', // 自动打开文档的缩放
-  pagePerSection: true, // 是否每页一个组件显示
+  title: "Project title", 
+  version: packageFile.version, 
+  usageMode: 'expand', 
+  pagePerSection: true, 
   sections: [
     {
       name: 'Components',
