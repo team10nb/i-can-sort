@@ -1,5 +1,8 @@
 /*
-    Author: Yijie Lu
+    Author: Yijie Lu, Shiliang Chen
+
+    This is a popup windows which would display pages of expanation to a specific module.
+    A icon button would call this popup.
 */
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";

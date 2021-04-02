@@ -2,7 +2,7 @@
   "main": "main.js",
   "homepage": ".",
   "name": "iCanSort",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0",
   "private": true,
   "productName": "iCanSort",
   "author": "Team10",

@@ -2,7 +2,7 @@
 
 ### **Developer**
 
-Yijie Lu
+Yijie Lu, Shiliang Chen
 
 Reference: MATERIAL-UI (https://material-ui.com)
 

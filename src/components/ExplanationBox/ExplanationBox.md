@@ -25,9 +25,9 @@ import Paper from "@material-ui/core/Paper";
 ### **Demo**
 
 ```jsx
-<div styles={{backgroundColor: "grey"}}>
+<div style={{backgroundColor: "grey", height:"40px", width:"500px"}}>
 <ExplanationBox width="55px">
-                This is a box with background color white
+                Expanation box with background color white
             </ExplanationBox>
 </div>
 ```

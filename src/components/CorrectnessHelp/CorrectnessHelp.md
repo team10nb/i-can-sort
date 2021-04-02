@@ -36,12 +36,7 @@ import logo4 from "../../resource/inputExp4.jpg";
 import { color } from "../../scenes/mainPages/Correctness";
 ```
 
-###  **Props**
 
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-|/|/|/|/|
 
 
 ###  **Methods**

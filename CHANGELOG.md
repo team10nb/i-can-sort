@@ -1,4 +1,10 @@
-# [1.0.0-beta.3](https://github.com/team10nb/i-can-sort/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2021-03-31)
+# [1.0.0](https://github.com/team10nb/i-can-sort/compare/v1.0.0-beta.2...v1.0.0) (2021-04-02)
+
+
+### Bug Fixes
+
+* **makeStyle:** delete focusVisible in makestyle ([116cf03](https://github.com/team10nb/i-can-sort/commit/116cf03e96bc837f4b58b5deb468fc2fdad0f0be))
+* **Termination:** fix bars color ([46182fe](https://github.com/team10nb/i-can-sort/commit/46182feb39effda2f9dd47e1d1a9bba25184d945))
 
 
 ### Features

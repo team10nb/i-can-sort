@@ -192,7 +192,7 @@ function getStepContent(activeStep) {
     }
 }
 
-export default function CorrectnessProve(props) {
+export default function CorrectnessProof(props) {
     const classes = useStyles();
 
     const [activeStep, setActiveStep] = React.useState(0);

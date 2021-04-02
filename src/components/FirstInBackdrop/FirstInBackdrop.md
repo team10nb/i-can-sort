@@ -27,19 +27,7 @@ import {Link} from 'react-router-dom';
 import { motion } from "framer-motion";
 ```
 
-###  **Props**
 
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-| / | / | / | / |
-
-
-###  **Methods**
-
-| Name | Props | Return | Description |
-| ---- | ----- | ------ | ----------- |
-|/|/|    /     |     /      |
 
 
 ###  **Demo**
@@ -49,5 +37,10 @@ import { motion } from "framer-motion";
 // <Router>
 // < FirstInBackdrop/>
 // </Router>
+const str = "< FirstInBackdrop/>";
+<div> This is a popup windows only appears when users open the software for the first time.
+Please use it like this: <br/>
+{str}
+</div>
 
 ```
