@@ -22,17 +22,16 @@ import Zoom from "@material-ui/core/Zoom";
 ```
 
 ### **Props**
-
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-
-| handleClick | fn | | Handle clicking speed button. |
-| handleClose | fn | | Handle closing speed menu. |
-| speed | number | 0 | Indicate the speeding of playing animation. |
-| anchorEl | object | null | Indicate the openning speed menu. |
+| Name        | Type   | Default | Description                                 |
+| ----------- | ------ | ------- | ------------------------------------------- |
+| handleClick | fn     |         | Handle clicking speed button.               |
+| handleClose | fn     |         | Handle closing speed menu.                  |
+| speed       | number | 0       | Indicate the speeding of playing animation. |
+| anchorEl    | object | null    | Indicate the openning speed menu.           |
 
 ### **Demo**
 
 ```jsx
 <SpeedMenu speed={'2x'} />
 ```
+
