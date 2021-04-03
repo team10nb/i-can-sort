@@ -7,10 +7,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import {
-    makeStyles,
-    withStyles,
-} from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,8 +64,8 @@ const CssTextField = withStyles({
 
 export default function InputBar(props) {
     const {
-        isValid,
-        wrongMsg,
+        isValid,        // is the input in the right format or not
+        wrongMsg,       // prompt massage to user
         handleChange,
         handleKeyDown,
         checkFormat,

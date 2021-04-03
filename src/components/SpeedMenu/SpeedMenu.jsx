@@ -1,5 +1,7 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The menu used to change speed
 */
 
 import "@fontsource/roboto";
@@ -46,7 +48,7 @@ export default function SpeedMenu(props) {
             fontWeight: "700",
             paddingTop: "5px",
             paddingBottom: "6px",
-            letterSpacing:"1px",
+            letterSpacing: "1px",
             marginTop: "3px"
         },
     });
@@ -67,7 +69,7 @@ export default function SpeedMenu(props) {
                     aria-haspopup='true'
                     onClick={handleClick}
                     className={classes.button}
-                    style={{minWidth: "40px"}}
+                    style={{ minWidth: "40px" }}
                 >
                     {speed}
                 </Button>

@@ -1,5 +1,7 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The animation of bars
 */
 
 import "@fontsource/roboto";
@@ -91,7 +93,7 @@ export const SwitchAnimation = (props) => {
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -253,13 +255,13 @@ export const SwitchAnimation = (props) => {
                         </div>
                         <div
                             style={{
-                                marginTop: bar.height-17,
+                                marginTop: bar.height - 17,
                                 fontSize: "16px",
                                 textAlign: "center",
                                 fontWeight: "600",
                             }}
                         >
-                            {bar.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                            {bar.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
                         </div>
                     </motion.li>
                 ))}

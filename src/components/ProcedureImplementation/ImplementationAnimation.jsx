@@ -29,7 +29,6 @@ const spring = {
     mass: 0.1, // Mass of the moving object. Higher values will result in more lethargic movement
 };
 
-
 export default function ImplementationAnimation(props) {
     const {
         title,
