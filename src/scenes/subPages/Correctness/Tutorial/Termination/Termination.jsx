@@ -1,5 +1,7 @@
 /*
     Author: Ruizi Han, Yijie Lu
+
+    The termination page
 */
 
 import React from 'react';

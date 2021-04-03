@@ -36,7 +36,8 @@ const Code = (props) => {
 
     const classes = useStyles();
 
-    const forCode =
+    // pseudocode of while loop example
+    const whileCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
                 {`Algorithm: WhileLoop()`}
@@ -65,12 +66,13 @@ const Code = (props) => {
         </div>
 
     return (
-        <div>{forCode}</div>
+        <div>{whileCode}</div>
     )
 }
 
 const width = 320;
 export default function ForLoop() {
+    // produce trace, description and blockNums
     var traceUnit = [];
     var descriptionUnit = '';
 
