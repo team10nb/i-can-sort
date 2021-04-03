@@ -33,8 +33,8 @@ import {
 
 ```jsx
 <InputBar
-                defaultArr={[1,2,3,4,5,6,7]}
-                isValid={false}
-                wrongMsg={"Error message"}
-            />
+    defaultArr={[1,2,3,4,5,6,7]}
+    isValid={false}
+    wrongMsg={"Error message"}
+/>
 ```
