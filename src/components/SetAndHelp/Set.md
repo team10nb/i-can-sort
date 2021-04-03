@@ -19,20 +19,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 ```
 
-###  **Props**
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
-|      |     |         |            |
 
 ###  **Methods**
 
 | Name | Props | Return | Description |
 | ---- | ----- | ------ | ----------- |
-|  |    |       |           |
+| set |  /  |  a drawer     |   give users setting choices: about us, share link, erase history        |
 
 ###  **Demo**
 
 ```jsx
-<Set />
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+<SettingsOutlinedIcon />
 ```

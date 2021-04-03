@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+//corresponding page
 function getStepContent(step, props) {
     const {
         logo0,
@@ -225,6 +226,7 @@ export default function ExplanationFrame(props) {
 
     const steps = stepNumber;
 
+    //handle the page switch
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
@@ -243,8 +245,6 @@ export default function ExplanationFrame(props) {
     };
 
     const card = (
-        // <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} classes = {classes.dialog}>
-        //   <Fade in={open}>
         <Backdrop className={classes.backdrop} open={open}>
             <Card className={classes.card}>
                 <div

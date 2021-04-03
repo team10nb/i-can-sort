@@ -43,13 +43,6 @@ import logoFinal from "../../../../resource/ForLoop.png";
 ###  **Demo**
 
 ```jsx
-const data = {
-        color:"#4caf50",
-        logoFinal:'../../resource/ForLoop.png',
-        stepNumber:1,
-        picHeight:"350px",
-        avatarMarginLeft:"9px",
-        avatarMarginTop:"9px",
-      };
-<ExplanationFrame {...data}/>
+
+<ExplanationFrame width="100px" height="100px"/>
 ```

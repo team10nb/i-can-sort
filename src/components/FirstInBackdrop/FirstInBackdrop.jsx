@@ -1,5 +1,6 @@
 /*
     Author: Yijie Lu, Shiliang Chen
+    It is for users who are the first time to access to the software
 */
 
 import React from "react";
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     cardBackground: {
         width: 650,
         height: 460,
-        // backgroundColor: "white",
         backgroundColor: "rgba(255,255,255,0.8)",
         borderRadius: "20px",
     },
@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "30px",
         "&:hover": {
             transform: "scale(1.05, 1.05)",
-            // boxShadow: "0 0 10 5 #888888,",
         },
         "&:active": {
             transform: "scale(1, 1 )",
@@ -91,10 +90,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FirstInBackdrop(props) {
     const classes = useStyles();
+    //decide whether it is because users erase history
     const snack = localStorage.getItem("snack")
         ? JSON.parse(localStorage.getItem("snack"))
         : null;
-    // eslint-disable-next-line
     const [open, setOpen] = React.useState(true);
     const [appear, setAppear] = React.useState(true);
     const handleClose = (event, reason) => {
@@ -104,10 +103,6 @@ export default function FirstInBackdrop(props) {
         localStorage.setItem("snack", JSON.stringify(0));
         setAppear(false);
     };
-    // const onClick1 = () => {
-    //     localStorage.setItem("first", JSON.stringify(0));
-    //     window.location.href = "/TutorialMainPage";
-    // };
     const onClick = () =>  { localStorage.setItem("first", JSON.stringify(false));}
     return (
         <div>

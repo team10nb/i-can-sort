@@ -1,5 +1,6 @@
 /*
     Author: Yijie Lu, Shiliang Chen
+    Tutorial of each main page
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";
