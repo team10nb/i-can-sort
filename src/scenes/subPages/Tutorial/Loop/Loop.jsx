@@ -1,5 +1,7 @@
 /*
     Author: Ruizi Han
+
+    Use animation and pseudocode to explain for loop and while loop.
 */
 
 import React from "react";
