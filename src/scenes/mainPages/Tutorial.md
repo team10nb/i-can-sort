@@ -1,6 +1,6 @@
 
 ### **Developer**
-Yijie Lu
+Yuting Jiang
 
 Reference: MATERIAL-UI (https://material-ui.com)
 
@@ -8,7 +8,8 @@ Reference: MATERIAL-UI (https://material-ui.com)
 
 ###  **Introduction**
 
-This is the correctness main page. It consists of two modules, set and help buttons, and the Section Navigation.
+This is the tutorial main page. It consists of three modules, set and help buttons, and the Section Navigation.
+
 ###  **Import**
 
 ```html
