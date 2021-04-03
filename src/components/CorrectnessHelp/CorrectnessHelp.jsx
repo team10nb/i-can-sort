@@ -1,5 +1,6 @@
 /*
     Author: Yijie Lu, Shiliang Chen
+    
     A popup to introduce basic idea of Correctness and legal/illegal input with an example algorithm.
 */
 import React from "react";
@@ -38,7 +39,7 @@ const content4 = (
     </Typography>
 );
 
-export default function CorrectnessHelp(props) {  
+export default function CorrectnessHelp(props) {
     const data = {
         color: color,
         logo0: logo0,
@@ -54,7 +55,7 @@ export default function CorrectnessHelp(props) {
         contentMarginTop: "0",
         avatarMarginLeft: "9px",
         avatarMarginTop: "9px",
-        name:"CorrectnessHelp",
+        name: "CorrectnessHelp",
     };
 
     return (

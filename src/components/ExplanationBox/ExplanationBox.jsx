@@ -27,6 +27,7 @@ const ExplanationBoxes = withStyles({
 
 export default function ExplanationBox(props) {
     const { width, height, children } = props;
+    
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",

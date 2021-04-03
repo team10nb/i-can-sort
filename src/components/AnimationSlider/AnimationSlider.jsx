@@ -1,5 +1,7 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The progress slider of animation.
 */
 
 import React from "react";
@@ -51,6 +53,7 @@ export default function AnimationSlider(props) {
             marginTop: "10px",
         },
     });
+    
     const classes = useStyles();
 
     return (
