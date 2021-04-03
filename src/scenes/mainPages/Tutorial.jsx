@@ -1,7 +1,7 @@
 /*
     Author: Yuting Jiang, Yijie Lu
 
-    The tutorial main page, consists of algorithm modules, set and help buttons, and the choice menu.
+    The tutorial main page, consists of three modules, set and help buttons, and the choice menu.
 */
 
 import React from "react";
@@ -60,9 +60,9 @@ const useStyles = makeStyles((theme) => ({
 //Set theme color
 const color = "#4caf50";
 
-//Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
-//Click the modules to jump to the corresponding algorithm learning page
-//The progress bar under each module represents the learning progress of the algorithm
+//Return a grid contains three modules，set and help buttons，and the choice menu
+//Click the modules to jump to the corresponding page
+//The progress bar under each module represents the learning progress of the module
 export default function TutorialMainPage() {
     const classes = useStyles();
 
@@ -81,7 +81,7 @@ export default function TutorialMainPage() {
         : 0;
 
     const handleClick = (title) => () => {
-        //store previous visited algorithm and set its progress is finished
+        //store previous visited module and set its progress is finished
         localStorage.setItem("tutorialPre", JSON.stringify(title));
     };
 
@@ -102,7 +102,7 @@ export default function TutorialMainPage() {
     };
 
     const handlePre = (title) => {
-        //set previous visited algorithm
+        //set previous visited module
         const preOne = title === localPre ? true : false;
         return preOne;
     };
@@ -229,8 +229,8 @@ export default function TutorialMainPage() {
     );
 }
 
-//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
-//The Efficiency button is theme color without jump function
+//Return three button, which are 'Tutorial', 'Procedure', and 'Correctness'
+//The Tutorial button is theme color without jump function
 export function TutorialChoiceMenu() {
     const classes = useStyles();
 
