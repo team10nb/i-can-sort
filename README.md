@@ -1,13 +1,56 @@
 # i-can-sort
-I Can Sort is a learning tool to help students study and visualise sorting algorithms.
+The software iCanSort is a learning tool to help students study and visualise sorting algorithms and their correctness available on Windows and macOS. 
 
-# Getting Started with Create React App
+This project i-can-sort is built with React and Electron based on NodeJS with npm.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with iCanSort
 
-## Available Scripts
+You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
 
-In the project directory, you can run:
+## Download & Install NodeJS and npm
+
+You can follow the link below to download for Windows and Mac. 
+
+For **Windows 64-bit**, you can download and install:
+
+[https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi](https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi)
+
+For **Mac**, you can download and install:
+
+[https://nodejs.org/dist/v15.6.0/node-v15.6.0.pkg](https://nodejs.org/dist/v15.6.0/node-v15.6.0.pkg)
+
+Or you can find downloads that fits your system here by yourself:
+
+ [https://nodejs.org/dist/v15.6.0/](https://nodejs.org/dist/v15.6.0/)
+
+Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
+
+
+## Configuration Guide
+
+In the project directory, you should run following command in your terminal in order to configure the dependencies.
+
+### `npm install -g npm@6.14.10`
+
+To install the specific npm version 6.14.10
+
+### `npm -v`
+
+Make sure that you see `6.14.10` in your terminal.\
+To ensure that you install the specific npm version 6.14.10. 
+
+### `npm install`
+
+Installs all the develepment dependencies.
+
+If this step took more than 10 minutes, you shall consider to connect to eduroam or open a VPN and set proxy for npm.\
+`npm config set proxy http://server:port`\
+`npm config set https-proxy http://server:port`
+
+*Note that using a mirror may result in some error for some reason. Please use official registry.*
+
+
+## Available Script
 
 ### `npm start`
 
@@ -16,6 +59,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+Now you shall see iCanSort in your bowswer.
 
 ### `npm test`
 
@@ -32,42 +77,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run electron-start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Builds the app and launch electron to hava a development view of this app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm run dist-win`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Builds the app and create an installer for Windows to the `dist` folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `npm run dist-mac`
 
+Builds the app and create an installer for Mac to the `dist` folder.
+
+
+### `npm run styleguide`
+
+Launch a web view of the Style Guidist.\
+This will build JavaScript Doc in each folder and display them in a webpage.
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
