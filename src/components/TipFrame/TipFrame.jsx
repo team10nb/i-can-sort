@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 import Backdrop from '@material-ui/core/Backdrop';
 
+//Set css
 const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
@@ -20,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function TipFrame(props) {
+  //Get info for TipFrame from props
   const { message, size, btnColor } = props;
 
   const classes = useStyles();
 
+  //Set css
   const styles = {
     snackbar: {
       borderRadius: 30,
@@ -48,14 +51,17 @@ export default function TipFrame(props) {
     }
   }
 
+  //Set action for SnackbarContent
   const action = (
     <Button style={styles.button}>
       OK
     </Button>
   );
 
+  //Set state for Backdrop
   const [open, setOpen] = React.useState(true);
 
+  //Close the Backdrop when it is clicked
   const handleClose = () => {
     setOpen(false);
   };

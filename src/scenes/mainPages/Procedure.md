@@ -1,6 +1,6 @@
 
 ### **Developer**
-Yijie Lu
+Yuting Jiang
 
 Reference: MATERIAL-UI (https://material-ui.com)
 
@@ -8,7 +8,8 @@ Reference: MATERIAL-UI (https://material-ui.com)
 
 ###  **Introduction**
 
-This is the correctness main page. It consists of two modules, set and help buttons, and the Section Navigation.
+This is the procedure main page. It consists of six algorithm modules, set and help buttons, and the Section Navigation.
+
 ###  **Import**
 
 ```html
@@ -19,6 +20,7 @@ import Module from "src/components/Module/Module";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import FirstInBackdrop from "src/components/FirstInBackdrop/FirstInBackdrop";
 import { motion } from "framer-motion";
 ```
 

@@ -88,7 +88,7 @@ function calculateProgress(progressArray) {
     return value;
 }
 
-//Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
+//Return a grid contains six modules that represent six sorting algorithms，set and help buttons，and the choice menu
 //Click the modules to jump to the corresponding algorithm learning page
 //The progress bar under each module represents the learning progress of the algorithm
 export default function ProcedureMainPage(props) {
@@ -103,16 +103,6 @@ export default function ProcedureMainPage(props) {
     : localStorage.setItem("first", JSON.stringify(true));
 
     const firstIn = JSON.parse(localStorage.getItem("first"));
-        
-    // if (localStorage.getItem("first") == 1) {
-    //     localStorage.setItem("first", JSON.stringify(1));
-    // } else if (localStorage.getItem("first") == 0) {
-    //     localStorage.setItem("first", JSON.stringify(0));
-    // } else {
-    //     localStorage.setItem("first", JSON.stringify(1));
-    // }
-
-
     
     localStorage.getItem("snack")
     ? JSON.parse(localStorage.getItem("snack"))
@@ -323,7 +313,7 @@ export default function ProcedureMainPage(props) {
     );
 }
 
-//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
+//Return three button, which are 'Tutorial', 'Procedure', and 'Correctness'
 //The Procedure button is theme color without jump function
 export function ProcedureChoiceMenu() {
     const classes = useStyles();
