@@ -23,6 +23,7 @@ import { color } from "../../scenes/mainPages/Correctness";
 import { Tick, Cross } from "../TickCross/TickCross";
 import Typography from "@material-ui/core/Typography";
 
+// css classes
 const useStyles = makeStyles((theme) => ({
     root: {
         marginRight: -12,
@@ -59,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+// help present data in object way
 function createData(str) {
     return { str };
 }
@@ -99,14 +101,7 @@ export default function InputTable(props) {
                 <div className={classes.title}>Legal Input</div>
 
                 <div className={classes.buttons}>
-                    {/* <Button 
-                        variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
-                        onClick = {legalShuffle}
-                        
-                    >
-                        shuffle
-                    </Button> */}
+                    {/* shuffle button */}
                     <Tooltip title="shuffle" placement="bottom" arrow>
                         <IconButton
                             variant="contained"
@@ -117,6 +112,7 @@ export default function InputTable(props) {
                             <RefreshIcon />
                         </IconButton>
                     </Tooltip>
+                    {/* play button */}
                     <Tooltip title="play" placement="bottom" arrow>
                         <IconButton
                             variant="contained"
@@ -128,6 +124,7 @@ export default function InputTable(props) {
                         </IconButton>
                     </Tooltip>
                 </div>
+                {/* table for legal ones */}
                 <div className={classes.tables}>
                     <TableContainer component={Paper}>
                         <Table
@@ -174,17 +171,12 @@ export default function InputTable(props) {
                 display="block"
                 gutterBottom
             ></Typography>
+
+            {/* table for illegal input */}
             <div className={classes.title}>Illegal Input</div>
 
             <div>
                 <div className={classes.buttons}>
-                    {/* <Button 
-                        variant="contained" 
-                        style={{backgroundColor:color, color:"#FFFFFF", marginRight: 10, height: 30, width: 80}}
-                        onClick = {illegalShuffle}
-                    >
-                        shuffle
-                    </Button> */}
                     <Tooltip title="shuffle" placement="bottom" arrow>
                         <IconButton
                             variant="contained"

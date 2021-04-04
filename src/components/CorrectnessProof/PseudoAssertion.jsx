@@ -9,37 +9,32 @@ import { makeStyles } from "@material-ui/core/styles";
 import "../../fonts/fonts.css";
 import { color } from "../../scenes/mainPages/Correctness";
 
+// define css classes
 const useStyles = makeStyles((theme) => ({
     AssertNoBack: {
         backgroundColor: "#DCDCDC",
         borderRadius: 15,
         marginTop: -8,
-        // marginBottom: 3,
         letterSpacing: -0.5,
         fontSize: 12,
         fontWeight: 20,
         fontStyle: "italic",
-        // paddingLeft:"5px",
         fontFamily: "Space Mono",
         textAlign: "left",
         padding: 3,
-        // textAlign: 'center',
     },
     AssertBack: {
         backgroundColor: "#DCDCDC",
         borderRadius: 15,
         marginTop: -8,
-        // marginBottom: 2,
         letterSpacing: -0.5,
         fontSize: 12,
         fontWeight: 20,
         fontStyle: "italic",
-        // paddingLeft:"5px",
         fontFamily: "Space Mono",
         textAlign: "left",
         color: color,
         padding: 3,
-        // textAlign: 'center',
     },
     background: {
         backgroundColor: "#FEE5D4",

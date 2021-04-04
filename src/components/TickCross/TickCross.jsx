@@ -8,6 +8,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+// an animated cross built by svg
 export function Cross(props) {
     const { isComplete } = props;
 
@@ -64,6 +65,7 @@ export function Cross(props) {
     );
 }
 
+// an animated tick built by svg
 export function Tick(props) {
     const { isComplete } = props;
 

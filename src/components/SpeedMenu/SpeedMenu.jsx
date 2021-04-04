@@ -13,6 +13,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 
+// Creat a self-defined menu item
 const MenuItem = withStyles({
     root: {
         justifyContent: "center",
@@ -25,6 +26,7 @@ const MenuItem = withStyles({
 export default function SpeedMenu(props) {
     const { handleClick, handleClose, anchorEl, speed } = props;
 
+    // define css
     const useStyles = makeStyles({
         root: {
             display: "inline-block",
@@ -42,7 +44,6 @@ export default function SpeedMenu(props) {
             fontFamily: "inherit",
         },
         customTooltip: {
-            // I used the rgba color for the standard "secondary" color
             fontFamily: "inherit",
             fontSize: "1.2em",
             fontWeight: "700",
@@ -56,6 +57,7 @@ export default function SpeedMenu(props) {
 
     return (
         <div className={classes.root}>
+            {/* use button to call menu */}
             <Tooltip
                 title='Speed'
                 TransitionComponent={Zoom}
@@ -74,6 +76,7 @@ export default function SpeedMenu(props) {
                     {speed}
                 </Button>
             </Tooltip>
+            {/* speed menu */}
             <Menu
                 id='simple-menu'
                 anchorEl={anchorEl}

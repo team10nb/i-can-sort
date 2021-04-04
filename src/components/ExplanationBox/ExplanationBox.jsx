@@ -9,6 +9,7 @@ import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
+// creare a self-defined box
 const ExplanationBoxes = withStyles({
     root: {
         display: "flex",

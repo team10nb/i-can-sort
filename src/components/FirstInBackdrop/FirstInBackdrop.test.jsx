@@ -10,14 +10,6 @@ jest.mock("react-router-dom", () => {
     };
 });
 
-// test( 'should contain buttons', () => {
-//     const content = render(<FirstInBackdrop  />)
-//     const {getByText, getAllByText, getAllByRole} = content;
-//     getByText("I'm new at this, go to Tutorial first!");
-//     getByText("I've got' basic knowledge, start now!");
-
-// })
-
 test("should match FirstInBackdrop snapshot", () => {
     const content = render(<FirstInBackdrop />);
     expect(content).toMatchSnapshot();

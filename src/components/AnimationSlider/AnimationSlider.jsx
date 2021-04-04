@@ -9,6 +9,7 @@ import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 
+// Define a special slider based on the original one
 const PrettoSlider = withStyles({
     root: {
         color: "#52af77",
