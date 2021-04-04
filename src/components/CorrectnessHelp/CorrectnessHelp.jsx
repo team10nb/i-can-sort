@@ -2,6 +2,7 @@
     Author: Yijie Lu, Shiliang Chen
     
     A popup to introduce basic idea of Correctness and legal/illegal input with an example algorithm.
+    material-ui library is used for UI.
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";

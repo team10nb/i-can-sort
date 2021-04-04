@@ -4,12 +4,11 @@
 import FirstInBackdrop from "./FirstInBackdrop";
 import { render } from "@testing-library/react";
 
-jest.mock("react-router-dom",()=>{
+jest.mock("react-router-dom", () => {
     return {
         Link: () => <div>mockLink</div>,
-
-    }
-})
+    };
+});
 
 // test( 'should contain buttons', () => {
 //     const content = render(<FirstInBackdrop  />)
@@ -17,13 +16,9 @@ jest.mock("react-router-dom",()=>{
 //     getByText("I'm new at this, go to Tutorial first!");
 //     getByText("I've got' basic knowledge, start now!");
 
-
-
-
 // })
 
-test( 'should match FirstInBackdrop snapshot', () => {
-    const content = render(<FirstInBackdrop   />);
+test("should match FirstInBackdrop snapshot", () => {
+    const content = render(<FirstInBackdrop />);
     expect(content).toMatchSnapshot();
-
-})
+});

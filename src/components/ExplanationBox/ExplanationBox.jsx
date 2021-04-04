@@ -2,6 +2,7 @@
     Author: Ruizi Han, Shiliang Chen
 
     The outside frame for explanation sentence.
+    material-ui library is used for UI.
 */
 
 import React from "react";
@@ -27,7 +28,7 @@ const ExplanationBoxes = withStyles({
 
 export default function ExplanationBox(props) {
     const { width, height, children } = props;
-    
+
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",
@@ -45,9 +46,7 @@ export default function ExplanationBox(props) {
 
     return (
         <div className={classes.root}>
-            <ExplanationBoxes variant='outlined'>
-                {children}
-            </ExplanationBoxes>
+            <ExplanationBoxes variant="outlined">{children}</ExplanationBoxes>
         </div>
     );
 }

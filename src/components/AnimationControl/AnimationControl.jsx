@@ -2,6 +2,7 @@
     Author: Shiliang Chen, Ruizi Han
 
     The control field of animation.
+    material-ui library is used for UI.
 */
 
 import * as React from "react";

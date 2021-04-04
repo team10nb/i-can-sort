@@ -2,14 +2,13 @@
     Author: Shiliang Chen, Yuting Jiang
 */
 
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ModuleButton from './ModuleButton';
+import ModuleButton from "./ModuleButton";
 
-test('should contain Bubble Sort', () => {
-    
+test("should contain Bubble Sort", () => {
     const mockHandleClick = jest.fn();
-    
+
     const image = {
         static: "./logo512.png",
         gif: "sorting.gif",
@@ -23,16 +22,13 @@ test('should contain Bubble Sort', () => {
         onClick: mockHandleClick,
     };
 
-    const {getByText} = render(<ModuleButton {...props} />);
+    const { getByText } = render(<ModuleButton {...props} />);
     getByText("Bubble sort");
-    
+});
 
-})
-
-test('should call onClick', () => {
-    
+test("should call onClick", () => {
     const mockHandleClick = jest.fn();
-    
+
     const image = {
         static: "./logo512.png",
         gif: "sorting.gif",
@@ -46,18 +42,15 @@ test('should call onClick', () => {
         onClick: mockHandleClick,
     };
 
-    const {getByText} = render(<ModuleButton {...props} />);
+    const { getByText } = render(<ModuleButton {...props} />);
     const button = getByText("Bubble sort");
     userEvent.click(button);
     expect(mockHandleClick).toBeCalledTimes(1);
+});
 
-})
-
-
-test('should match Snapshot', () => {
-    
+test("should match Snapshot", () => {
     const mockHandleClick = jest.fn();
-    
+
     const image = {
         static: "./logo512.png",
         gif: "sorting.gif",
@@ -73,6 +66,4 @@ test('should match Snapshot', () => {
 
     const content = render(<ModuleButton {...props} />);
     expect(content).toMatchSnapshot();
-
-})
-
+});

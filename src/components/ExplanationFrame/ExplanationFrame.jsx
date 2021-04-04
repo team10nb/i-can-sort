@@ -3,6 +3,7 @@
 
     This is a popup windows which would display pages of expanation to a specific module.
     A icon button would call this popup.
+    material-ui library is used for UI.
 */
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
         color: "#212121",
-        
     },
 
     card: {
@@ -195,7 +195,7 @@ export default function ExplanationFrame(props) {
         firstIn = localStorage.getItem("ProofFirst")
             ? JSON.parse(localStorage.getItem("ProofFirst"))
             : null;
-    }else if (name === "Term") {
+    } else if (name === "Term") {
         firstIn = localStorage.getItem("TermFirst")
             ? JSON.parse(localStorage.getItem("TermFirst"))
             : null;
@@ -219,7 +219,6 @@ export default function ExplanationFrame(props) {
         } else if (name === "Term") {
             localStorage.setItem("TermFirst", JSON.stringify(0));
         }
-
     };
 
     const [activeStep, setActiveStep] = React.useState(0);
@@ -320,27 +319,42 @@ export default function ExplanationFrame(props) {
                     <div>
                         <div>{getStepContent(activeStep, props)}</div>
                         <div className={classes.button}>
-                            {activeStep === 0 ? (<IconButton
-                                disabled={activeStep === 0}
-                                onClick={handleBack}
-                                style={{ backgroundColor: color, opacity: 0 }}
-                                size="small"
-                            >
-                                <ChevronLeftIcon
-                                    style={{ color: "white", fontSize: "40px" }}
-                                />
-                            </IconButton>) : (<IconButton
-                                disabled={activeStep === 0}
-                                onClick={handleBack}
-                                style={{ backgroundColor: color, opacity: 0.5 }}
-                                size="small"
-                            >
-                                <ChevronLeftIcon
-                                    style={{ color: "white", fontSize: "40px" }}
-                                />
-                            </IconButton>)
-                            }
-                            
+                            {activeStep === 0 ? (
+                                <IconButton
+                                    disabled={activeStep === 0}
+                                    onClick={handleBack}
+                                    style={{
+                                        backgroundColor: color,
+                                        opacity: 0,
+                                    }}
+                                    size="small"
+                                >
+                                    <ChevronLeftIcon
+                                        style={{
+                                            color: "white",
+                                            fontSize: "40px",
+                                        }}
+                                    />
+                                </IconButton>
+                            ) : (
+                                <IconButton
+                                    disabled={activeStep === 0}
+                                    onClick={handleBack}
+                                    style={{
+                                        backgroundColor: color,
+                                        opacity: 0.5,
+                                    }}
+                                    size="small"
+                                >
+                                    <ChevronLeftIcon
+                                        style={{
+                                            color: "white",
+                                            fontSize: "40px",
+                                        }}
+                                    />
+                                </IconButton>
+                            )}
+
                             <IconButton
                                 onClick={handleNext}
                                 style={{ backgroundColor: color, opacity: 0.5 }}
@@ -359,8 +373,8 @@ export default function ExplanationFrame(props) {
 
     return (
         <div style={{ height: "48px" }}>
-                {value === 2 ?(
-                    <Zoom
+            {value === 2 ? (
+                <Zoom
                     in={value === 2}
                     timeout={transitionDuration}
                     style={{
@@ -376,14 +390,14 @@ export default function ExplanationFrame(props) {
                         </IconButton>
                     </Tooltip>
                 </Zoom>
-                ):(
-                    <Tooltip title="Help" placement="bottom" arrow>
-                        <IconButton aria-label="Help" onClick={handleClickOpen}>
-                            <HelpOutlineOutlinedIcon className={classes.icon} />
-                        </IconButton>
-                    </Tooltip>
-                )} 
-                
+            ) : (
+                <Tooltip title="Help" placement="bottom" arrow>
+                    <IconButton aria-label="Help" onClick={handleClickOpen}>
+                        <HelpOutlineOutlinedIcon className={classes.icon} />
+                    </IconButton>
+                </Tooltip>
+            )}
+
             {card}
         </div>
     );

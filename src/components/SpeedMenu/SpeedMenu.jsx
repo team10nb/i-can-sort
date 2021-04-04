@@ -1,10 +1,10 @@
 /*
     Author: Shiliang Chen, Ruizi Han
 
-    The menu used to change speed
+    The menu used to change speed.
+    material-ui library is used for UI.
 */
 
-import "@fontsource/roboto";
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";

@@ -10,7 +10,7 @@ jest.mock("../ModuleProgress/ModuleProgress", () => {
     return {
         __esModule: true,
         default: () => <div>mockModuleProgress</div>,
-    }
+    };
 });
 
 test("should call two modules", () => {
@@ -26,5 +26,4 @@ test("should call two modules", () => {
     expect(buttonSpy).toBeCalledTimes(1);
 
     expect(content).toMatchSnapshot();
-    
 });

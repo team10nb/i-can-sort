@@ -6,7 +6,7 @@
 
 import React from "react";
 import SwitchAnimation from "../SwitchAnimation/SwitchAnimation";
-import HeapSort from '../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort';
+import HeapSort from "../SwitchAnimation/SortingAlgorithms/HeapSort/HeapSort";
 
 const arr = [3, 12, 7, 5, 10, 8];
 
@@ -17,61 +17,299 @@ let traceUnit = trace[1];
 trace.splice(1, 0, traceUnit);
 
 traceUnit = [
-    { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0, x: 0, isPivot: false },
-    { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0, x: 0, isPivot: false },
-    { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0, x: 0, isPivot: false },
-    { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0, x: 0, isPivot: false },
-    { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0, x: 0, isPivot: false },
-    { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0, x: 0, isPivot: false },
+    {
+        value: 12,
+        height: 120,
+        backgroundColor: "#00BFFF",
+        key: 1,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 10,
+        height: 100,
+        backgroundColor: "#00BFFF",
+        key: 4,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 8,
+        height: 80,
+        backgroundColor: "#00BFFF",
+        key: 5,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 5,
+        height: 50,
+        backgroundColor: "#00BFFF",
+        key: 3,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 3,
+        height: 30,
+        backgroundColor: "#00BFFF",
+        key: 0,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 7,
+        height: 70,
+        backgroundColor: "#00BFFF",
+        key: 2,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
 ];
 
 trace.splice(3, 0, traceUnit);
 
 traceUnit = [
-    { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0, x: 0, isPivot: false },
-    { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0, x: 0, isPivot: false },
-    { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0, x: 0, isPivot: false },
-    { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0, x: 0, isPivot: false },
-    { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0, x: 0, isPivot: false },
-    { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0, x: 0, isPivot: false },
+    {
+        value: 10,
+        height: 100,
+        backgroundColor: "#00BFFF",
+        key: 4,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 7,
+        height: 70,
+        backgroundColor: "#00BFFF",
+        key: 2,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 8,
+        height: 80,
+        backgroundColor: "#00BFFF",
+        key: 5,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 5,
+        height: 50,
+        backgroundColor: "#00BFFF",
+        key: 3,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 3,
+        height: 30,
+        backgroundColor: "#00BFFF",
+        key: 0,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 12,
+        height: 120,
+        backgroundColor: "#008000",
+        key: 1,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
 ];
 
 trace.splice(7, 0, traceUnit);
 
 traceUnit = [
-    { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0, x: 0, isPivot: false },
-    { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0, x: 0, isPivot: false },
-    { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0, x: 0, isPivot: false },
-    { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0, x: 0, isPivot: false },
-    { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0, x: 0, isPivot: false },
-    { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0, x: 0, isPivot: false },
+    {
+        value: 8,
+        height: 80,
+        backgroundColor: "#00BFFF",
+        key: 5,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 7,
+        height: 70,
+        backgroundColor: "#00BFFF",
+        key: 2,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 3,
+        height: 30,
+        backgroundColor: "#00BFFF",
+        key: 0,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 5,
+        height: 50,
+        backgroundColor: "#00BFFF",
+        key: 3,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 10,
+        height: 100,
+        backgroundColor: "#008000",
+        key: 4,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 12,
+        height: 120,
+        backgroundColor: "#008000",
+        key: 1,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
 ];
-
 
 trace.splice(11, 0, traceUnit);
 
 traceUnit = [
-    { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0, x: 0, isPivot: false },
-    { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0, x: 0, isPivot: false },
-    { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0, x: 0, isPivot: false },
-    { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0, x: 0, isPivot: false },
-    { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0, x: 0, isPivot: false },
-    { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0, x: 0, isPivot: false },
+    {
+        value: 7,
+        height: 70,
+        backgroundColor: "#00BFFF",
+        key: 2,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 5,
+        height: 50,
+        backgroundColor: "#00BFFF",
+        key: 3,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 3,
+        height: 30,
+        backgroundColor: "#00BFFF",
+        key: 0,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 8,
+        height: 80,
+        backgroundColor: "#008000",
+        key: 5,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 10,
+        height: 100,
+        backgroundColor: "#008000",
+        key: 4,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 12,
+        height: 120,
+        backgroundColor: "#008000",
+        key: 1,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
 ];
 
 trace.splice(15, 0, traceUnit);
 
 traceUnit = [
-    { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0, x: 0, isPivot: false },
-    { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0, x: 0, isPivot: false },
-    { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0, x: 0, isPivot: false },
-    { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0, x: 0, isPivot: false },
-    { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0, x: 0, isPivot: false },
-    { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0, x: 0, isPivot: false },
+    {
+        value: 5,
+        height: 50,
+        backgroundColor: "#00BFFF",
+        key: 3,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 3,
+        height: 30,
+        backgroundColor: "#00BFFF",
+        key: 0,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 7,
+        height: 70,
+        backgroundColor: "#008000",
+        key: 2,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 8,
+        height: 80,
+        backgroundColor: "#008000",
+        key: 5,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 10,
+        height: 100,
+        backgroundColor: "#008000",
+        key: 4,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
+    {
+        value: 12,
+        height: 120,
+        backgroundColor: "#008000",
+        key: 1,
+        y: 0,
+        x: 0,
+        isPivot: false,
+    },
 ];
 
 trace.splice(19, 0, traceUnit);
-
 
 const description = [
     "Heap sort is an sorting algorithm which heavily relies on heap data structure",
@@ -96,11 +334,11 @@ const description = [
     "A max heap is built, heap size is: 2",
     "Top element 5 is the largest in the heap",
     "Take 5 out of the heap",
-    "The last element 3 is already sorted. Heap sort finished."
+    "The last element 3 is already sorted. Heap sort finished.",
 ];
 
 export default function IntroHeap() {
     const props = { trace: trace, description: description };
 
-    return (<SwitchAnimation {...props} width={490} explanationBoxHeight={6} />);
+    return <SwitchAnimation {...props} width={490} explanationBoxHeight={6} />;
 }

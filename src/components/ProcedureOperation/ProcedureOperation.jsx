@@ -2,6 +2,7 @@
     Author: Shiliang Chen, Ruizi Han, Yijie Lu
 
     Animation support for displaying operation process.
+    lodash library for random function
 */
 
 import React, { useState } from "react";
@@ -24,7 +25,7 @@ export default function ProcedureOperation(props) {
     const [arr, setArr] = useState([2, 1, 6, 10, 9, 12, 8, 3]);
     // The bool value which represent whether user input is valid or not
     const [isValid, setIsValid] = useState(true);
-    // The wrong message 
+    // The wrong message
     const [wrongMsg, setWrongMsg] = useState(" ");
 
     // The maximum value of input number
@@ -59,10 +60,10 @@ export default function ProcedureOperation(props) {
             setIsValid(false);
             setWrongMsg("Please enter more than 1 number.");
         }
-        // correct format 
+        // correct format
         else if (s.match(/^\d+((,|，)\d+)*$/)) {
             const numString = s.split(/[，,]/);
-            const nums = numString.map(num => parseInt(num));
+            const nums = numString.map((num) => parseInt(num));
             let outRange = false;
             for (let i = 0; i < nums.length; i++) {
                 if (nums[i] > MAXNUMBER) {
@@ -77,14 +78,28 @@ export default function ProcedureOperation(props) {
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than " + MAXLENGTH + " numbers that between " + MINNUMBER + "-" + MAXNUMBER + "."
+                    "Please enter no more than " +
+                        MAXLENGTH +
+                        " numbers that between " +
+                        MINNUMBER +
+                        "-" +
+                        MAXNUMBER +
+                        "."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than " + MAXLENGTH + " numbers.");
+                setWrongMsg(
+                    "Please enter no more than " + MAXLENGTH + " numbers."
+                );
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between " + MINNUMBER + "-" + MAXNUMBER + ".");
+                setWrongMsg(
+                    "Please enter numbers that between " +
+                        MINNUMBER +
+                        "-" +
+                        MAXNUMBER +
+                        "."
+                );
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
@@ -109,7 +124,7 @@ export default function ProcedureOperation(props) {
         setWrongMsg(" ");
         setArr(array);
         setStr(array.join(","));
-    }
+    };
 
     // use corresponding algorithm to props
     let trace = "";
@@ -136,17 +151,21 @@ export default function ProcedureOperation(props) {
                 height: 500,
             }}
         >
-            <div style={{
-                height: 40,
-                width: 900,
-                display: "flex"
-            }}>
-                <div style={{
+            <div
+                style={{
                     height: 40,
-                    width: 90,
-                    fontSize: "26px",
-                    fontWeight: "500",
-                }}>
+                    width: 900,
+                    display: "flex",
+                }}
+            >
+                <div
+                    style={{
+                        height: 40,
+                        width: 90,
+                        fontSize: "26px",
+                        fontWeight: "500",
+                    }}
+                >
                     {sort}
                 </div>
 
@@ -167,7 +186,7 @@ export default function ProcedureOperation(props) {
     );
 }
 
-// remove dot(s) of str's right 
+// remove dot(s) of str's right
 function removeDot(s) {
     if (s == null) return "";
     var dot = "，,";

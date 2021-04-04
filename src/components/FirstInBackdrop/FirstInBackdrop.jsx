@@ -1,6 +1,9 @@
 /*
     Author: Yijie Lu, Shiliang Chen
-    It is for users who are the first time to access to the software
+    
+    It is for users who are the first time to access to the software.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import React from "react";
@@ -18,8 +21,8 @@ import { motion } from "framer-motion";
 const useStyles = makeStyles((theme) => ({
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
-        marginLeft:-475,
-        width:2000,
+        marginLeft: -475,
+        width: 2000,
         color: "#212121",
     },
     cardBackground: {
@@ -104,7 +107,9 @@ export default function FirstInBackdrop(props) {
         localStorage.setItem("snack", JSON.stringify(0));
         setAppear(false);
     };
-    const onClick = () =>  { localStorage.setItem("first", JSON.stringify(false));}
+    const onClick = () => {
+        localStorage.setItem("first", JSON.stringify(false));
+    };
     return (
         <div>
             <Backdrop className={classes.backdrop} open={open}>
@@ -144,15 +149,21 @@ export default function FirstInBackdrop(props) {
                                 }}
                                 className={classes.tip}
                             >
-                                You can learn sorting in Procedure section. <br />
-                                Ideas of correctness is available in Correctness section.<br />
+                                You can learn sorting in Procedure section.{" "}
+                                <br />
+                                Ideas of correctness is available in Correctness
+                                section.
+                                <br />
                                 Do you have any experience on programming?{" "}
                                 <br />
                             </Typography>
                         </div>
 
                         <div className={classes.buttonBase}>
-                            <ButtonBase style={{ borderRadius: "30px" }} onClick={onClick}>
+                            <ButtonBase
+                                style={{ borderRadius: "30px" }}
+                                onClick={onClick}
+                            >
                                 <Link
                                     to="/TutorialMainPage"
                                     style={{ textDecoration: "none" }}
@@ -179,15 +190,18 @@ export default function FirstInBackdrop(props) {
                                                         fontWeight: "600",
                                                     }}
                                                 >
-                                                    No. I'm new at programming, go
-                                                    to Tutorial first!
+                                                    No. I'm new at programming,
+                                                    go to Tutorial first!
                                                 </Typography>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
                                 </Link>
                             </ButtonBase>
-                            <ButtonBase style={{ borderRadius: "30px" }} onClick={onClick}>
+                            <ButtonBase
+                                style={{ borderRadius: "30px" }}
+                                onClick={onClick}
+                            >
                                 <Link
                                     to="./ProcedureMainPage"
                                     style={{ textDecoration: "none" }}
@@ -214,8 +228,8 @@ export default function FirstInBackdrop(props) {
                                                         fontWeight: "600",
                                                     }}
                                                 >
-                                                    Yes. I've got basic knowledge,
-                                                    start now!
+                                                    Yes. I've got basic
+                                                    knowledge, start now!
                                                 </Typography>
                                             </CardContent>
                                         </Card>
@@ -226,7 +240,11 @@ export default function FirstInBackdrop(props) {
                     </Card>
                 </motion.div>
                 {snack === 1 ? (
-                    <Snackbar open={appear} onClose={handleClose} style={{bottom:"80px"}}>
+                    <Snackbar
+                        open={appear}
+                        onClose={handleClose}
+                        style={{ bottom: "80px" }}
+                    >
                         <Alert onClose={handleClose} severity="success">
                             Successfully reset history!
                         </Alert>

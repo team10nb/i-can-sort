@@ -2,6 +2,7 @@
     Author: Shiliang Chen, Ruizi Han
 
     The progress slider of animation.
+    material-ui library is used for UI.
 */
 
 import React from "react";
@@ -39,7 +40,7 @@ const PrettoSlider = withStyles({
     },
     mark: {
         height: 5,
-    }
+    },
 })(Slider);
 
 export default function AnimationSlider(props) {
@@ -53,15 +54,15 @@ export default function AnimationSlider(props) {
             marginTop: "10px",
         },
     });
-    
+
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <PrettoSlider
                 value={typeof value === "number" ? value : 0}
-                aria-labelledby='Progress'
-                valueLabelDisplay='auto'
+                aria-labelledby="Progress"
+                valueLabelDisplay="auto"
                 step={step}
                 marks
                 min={0}

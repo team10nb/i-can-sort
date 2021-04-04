@@ -1,16 +1,18 @@
 /*
-    Author: Ruizi Han, Yijie Lu
+    Author: Ruizi Han, Yijie Lu, Shiliang Chen
 
     Framework of animation and pseudocode, support for 2 loop examples and Terminating Bubble Sort in correctness-tutorial-termination.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
 
@@ -23,7 +25,15 @@ const spring = {
 };
 
 export default function AnimationWithCode(props) {
-    const { trace, description, width, blockNums, useStyles, Code, title } = props;
+    const {
+        trace,
+        description,
+        width,
+        blockNums,
+        useStyles,
+        Code,
+        title,
+    } = props;
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(trace[0]);
@@ -218,7 +228,13 @@ export default function AnimationWithCode(props) {
                                     fontWeight: "600",
                                 }}
                             >
-                                {background.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
+                                {background.isPivot ? (
+                                    <ArrowDropUpIcon
+                                        style={{ marginBottom: "-18px" }}
+                                    />
+                                ) : (
+                                    ""
+                                )}
                             </div>
                         </motion.li>
                     ))}
@@ -251,4 +267,4 @@ export default function AnimationWithCode(props) {
             </Card>
         </div>
     );
-};
+}

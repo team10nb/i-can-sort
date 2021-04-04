@@ -2,6 +2,8 @@
     Author: Ruizi Han, Shiliang Chen
 
     Animation support for displaying implementation process.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -11,15 +13,14 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import AnimationControl from "../AnimationControl/AnimationControl";
-import ExplanationBox from '../ExplanationBox/ExplanationBox';
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import { color } from '../../scenes/mainPages/Procedure';
-import InputBar from '../InputBar/InputBar';
-import { random } from 'lodash';
-
+import ExplanationBox from "../ExplanationBox/ExplanationBox";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import { color } from "../../scenes/mainPages/Procedure";
+import InputBar from "../InputBar/InputBar";
+import { random } from "lodash";
 
 // a framer motion transition attributes
 const spring = {
@@ -30,12 +31,7 @@ const spring = {
 };
 
 export default function ImplementationAnimation(props) {
-    const {
-        title,
-        algorithm,
-        sort,
-        Code,
-    } = props;
+    const { title, algorithm, sort, Code } = props;
 
     // The user input
     const [str, setStr] = useState("4,8,11,13,5");
@@ -43,14 +39,18 @@ export default function ImplementationAnimation(props) {
     const [arr, setArr] = useState([4, 8, 11, 13, 5]);
     // The bool value which represent whether user input is valid or not
     const [isValid, setIsValid] = useState(true);
-    // The wrong message 
+    // The wrong message
     const [wrongMsg, setWrongMsg] = useState(" ");
     // The bars trace
     const [trace, setTrace] = useState(sort([4, 8, 11, 13, 5]).trace);
     // The description trace
-    const [description, setDescription] = useState(sort([4, 8, 11, 13, 5]).description);
+    const [description, setDescription] = useState(
+        sort([4, 8, 11, 13, 5]).description
+    );
     // The block numbers trace
-    const [blockNums, setBlockNums] = useState(sort([4, 8, 11, 13, 5]).blockNums);
+    const [blockNums, setBlockNums] = useState(
+        sort([4, 8, 11, 13, 5]).blockNums
+    );
 
     // The bars displayed to visulise the numbers
     const [bars, setBars] = useState(sort([4, 8, 11, 13, 5]).trace[0]);
@@ -101,10 +101,10 @@ export default function ImplementationAnimation(props) {
             setIsValid(false);
             setWrongMsg("Please enter more than 1 number.");
         }
-        // correct format 
+        // correct format
         else if (s.match(/^\d+((,|，)\d+)*$/)) {
             const numString = s.split(/[，,]/);
-            const nums = numString.map(num => parseInt(num));
+            const nums = numString.map((num) => parseInt(num));
             let outRange = false;
             for (let i = 0; i < nums.length; i++) {
                 if (nums[i] > MAXNUMBER) {
@@ -119,14 +119,28 @@ export default function ImplementationAnimation(props) {
             if (nums.length > MAXLENGTH && outRange) {
                 setIsValid(false);
                 setWrongMsg(
-                    "Please enter no more than " + MAXLENGTH + " numbers that between " + MINNUMBER + "-" + MAXNUMBER + "."
+                    "Please enter no more than " +
+                        MAXLENGTH +
+                        " numbers that between " +
+                        MINNUMBER +
+                        "-" +
+                        MAXNUMBER +
+                        "."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter no more than " + MAXLENGTH + " numbers.");
+                setWrongMsg(
+                    "Please enter no more than " + MAXLENGTH + " numbers."
+                );
             } else if (nums.length <= MAXLENGTH && outRange) {
                 setIsValid(false);
-                setWrongMsg("Please enter numbers that between " + MINNUMBER + "-" + MAXNUMBER + ".");
+                setWrongMsg(
+                    "Please enter numbers that between " +
+                        MINNUMBER +
+                        "-" +
+                        MAXNUMBER +
+                        "."
+                );
             } else {
                 setIsValid(true);
                 setWrongMsg(" ");
@@ -151,14 +165,14 @@ export default function ImplementationAnimation(props) {
         setWrongMsg(" ");
         setArr(array);
         setStr(array.join(","));
-    }
+    };
 
     // styles for this page
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "flex",
             width: 1020,
-            '& > *': {
+            "& > *": {
                 margin: theme.spacing(3),
             },
         },
@@ -223,16 +237,16 @@ export default function ImplementationAnimation(props) {
         button: {
             marginLeft: 95,
             width: 200,
-            position: 'fixed',
+            position: "fixed",
             bottom: 60,
         },
         slider: {
-            marginLeft: 10
+            marginLeft: 10,
         },
         inputBar: {
             marginLeft: -75,
             marginTop: 30,
-        }
+        },
     }));
 
     const classes = useStyles();
@@ -246,15 +260,15 @@ export default function ImplementationAnimation(props) {
     }, [arr]);
 
     // Update buttons' disable property when steps are changed
-        useEffect(() => {
+    useEffect(() => {
         currentStep === 0
             ? setBackwardDisabled(true)
             : setBackwardDisabled(false);
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-    // eslint-disable-next-line
-        }, [currentStep]);
+        // eslint-disable-next-line
+    }, [currentStep]);
 
     // Use the latest speed to play the animation
     useEffect(() => {
@@ -399,9 +413,12 @@ export default function ImplementationAnimation(props) {
     };
 
     // jump to quick gudie pdfs
-    const handleDownload  = () => {
-      let url = "https://github.com/team10nb/i-can-sort/raw/main/docs/Quick%20guide/" + algorithm + ".pdf";
-      window.electron.shell.openExternal(url)
+    const handleDownload = () => {
+        let url =
+            "https://github.com/team10nb/i-can-sort/raw/main/docs/Quick%20guide/" +
+            algorithm +
+            ".pdf";
+        window.electron.shell.openExternal(url);
     };
 
     return (
@@ -413,7 +430,11 @@ export default function ImplementationAnimation(props) {
                     <div>
                         <Code blockNum={blockNums[currentStep]} />
                     </div>
-                    <Button className={classes.button} style={{ color: "white", backgroundColor: color }} onClick={handleDownload} >
+                    <Button
+                        className={classes.button}
+                        style={{ color: "white", backgroundColor: color }}
+                        onClick={handleDownload}
+                    >
                         Check Quick Guide
                     </Button>
                 </CardContent>
@@ -457,7 +478,13 @@ export default function ImplementationAnimation(props) {
                                         fontWeight: "600",
                                     }}
                                 >
-                                    {background.isPivot ? <ArrowDropUpIcon style={{ marginBottom: "-18px" }} /> : ""}
+                                    {background.isPivot ? (
+                                        <ArrowDropUpIcon
+                                            style={{ marginBottom: "-18px" }}
+                                        />
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </motion.li>
                         ))}
@@ -481,9 +508,9 @@ export default function ImplementationAnimation(props) {
             </Card>
         </div>
     );
-};
+}
 
-// remove dot(s) of str's right 
+// remove dot(s) of str's right
 function removeDot(s) {
     if (s == null) return "";
     var dot = "，,";

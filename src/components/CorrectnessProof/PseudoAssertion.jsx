@@ -1,7 +1,8 @@
 /*
     Author: Shiliang Chen, Yijie Lu
 
-    Assertion file containing all the assertions of algorithms
+    Assertion file containing all the assertions of algorithms.
+    material-ui library is used for UI.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -493,7 +494,7 @@ Output: The result of sorting Arr.`}
             >
                 {`end if`}
             </pre>
-            
+
             {/* assertion */}
             <pre
                 wordWrap="break-word"

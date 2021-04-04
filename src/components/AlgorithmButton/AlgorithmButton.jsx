@@ -2,6 +2,7 @@
     Author: Yuting Jiang
 
     Algorithms code is on the button. Click to run the algorithm.
+    material-ui library is used for UI.
 */
 
 import React from "react";
