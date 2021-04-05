@@ -6,16 +6,22 @@ The following is a set of guidelines for contributing to and maintaining iCanSor
 
 [TOC]
 
+## Wait! I just want to try your software!
+
+You can download the software directly [here](https://github.com/team10nb/i-can-sort/releases).
+
+We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/blob/main/User%20Manual.pdf).
+
 ## What do I need for environment requirements?
 
-Hardware Requirement
+### Hardware Requirement
 
   1. 2GB RAM minimum
   2. 300MB disk space minimum
   3. 1024 x 768 monitor resolution minimum
   4. Internet connection for visiting GitHub
 
-Software Requirement
+### Software Requirement
 
 1. This software requires operating system (low configuration tested):
     - Windows: Windows 10 20H1 x64
@@ -31,7 +37,7 @@ The software iCanSort is a learning tool to help students study and visualise so
 
 ### Download & Install NodeJS and npm
 
-You can follow the link below to download for Windows and Mac. 
+You can follow the link below to download for Windows and Mac. Note that npm will be downloaded and installed together with Node, so here we only provide you the link to download Node.
 
 For **Windows 64-bit**, you can download and install:
 
@@ -47,11 +53,20 @@ Or you can find downloads that fits your system here by yourself:
 
 Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
 
+### Clone or Download i-can-sort
+
+For clone the project, you can use both HTTPS or SSH. Please make sure you have configured SSH in your machine and GitHub if you want to use SSH.
+
+- HTTPS: `git clone https://github.com/team10nb/i-can-sort.git`
+- SSH: `git clone git@github.com:team10nb/i-can-sort.git`
 
 ### Configuration Guide
 
-In the project directory, you should run following command in your terminal in order to configure the dependencies.
+In the project directory, you should run following command in your **terminal** in order to configure the dependencies. 
 
+#### `cd PATH-TO-ROOT-OF-ICANSORT`
+
+Goes to the directory which is the root of this project folder you downloaded
 #### `npm install -g npm@6.14.10`
 
 To install the specific npm version 6.14.10
@@ -139,7 +154,7 @@ InputBar
 ├── TestLog_InputBar.md
 └── TestPlan_InputBar.md
 
-In InputBar.jsx, please write your name and purpose as follow.
+In source code like *InputBar.jsx*, please write your name and purpose as follow.
 
 ```js
 /*
@@ -149,6 +164,18 @@ In InputBar.jsx, please write your name and purpose as follow.
     External Library used
 */
 ```
+
+In documentation like *InputBar.md*, please follow the guide in [JavaScript Documentation Styleguide](#javascript-documentation-styleguide).
+
+In test file like *InputBar.test.jsx*, please write your name as follow.
+
+```js
+/*
+    Author: Your Name
+*/
+```
+
+In *TestLog* and *TestPlan*， please follow the sample in `src/TestLog` and `src/TestPlan`
 
 ### JavaScript Styleguide
 
@@ -245,15 +272,7 @@ Use angular style.
 
 ### Coding Convention
 
-The team has made commit style:
-
-`<type>(<scope>): <subject>`
-
-`docs(README): fix grammar`
-
-`fix(Main): fix function call`
-
-Coding will be styled by Prettier.
+The styleguides in the previous chapter includes our coding convention. We follow the guide we defined, which makes the structure clear and code clean.
 ### Independent quality assurance team
 
 The team has two members who are mainly responsible for UI design, and they are also responsible for quality assurance.
@@ -261,6 +280,10 @@ The team has two members who are mainly responsible for UI design, and they are 
 The two members monitored coding process of the project, including structure, testing, documentation.
 
 They also conducted Release Testing and Acceptance Testing by their own. They checked whether the system worked as the plan expected and remind technical team if there is anything wrong.
+
+
+### Peer Programming
+
 
 ### Automated Unit Testing and Integration Testing
 
@@ -277,7 +300,6 @@ A CI server on GitHub is utilised to conduct tests every time there is a push re
 ### Issue and Kanban
 
 The team utilised Issue and kanban to track tasks and report bugs.
-
 
 
 ## User Manual

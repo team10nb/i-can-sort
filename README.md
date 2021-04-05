@@ -8,6 +8,12 @@ For downloading the executable software, please refer to [Release](https://githu
 
 You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
 
+## Wait! I just want to try your software!
+
+You can download the software directly [here](https://github.com/team10nb/i-can-sort/releases).
+
+We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/blob/main/User%20Manual.pdf).
+
 ## Download & Install NodeJS and npm
 
 You can follow the link below to download for Windows and Mac. 
