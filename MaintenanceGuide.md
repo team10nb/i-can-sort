@@ -134,24 +134,24 @@ This will build JavaScript Doc in each folder and display them in a webpage.
 
 ## Project Structure and Styleguides
 
-iCanSort
-├── src
-│   ├── index.js
-│   ├── components
-│   └── scenes
-│       ├── mainPages
-│       └── subPages
+iCanSort\
+├── src\
+│   ├── index.js\
+│   ├── components\
+│   └── scenes\
+│       ├── mainPages\
+│       └── subPages\
 └──
 
 ### Component Sructure Styleguide
 
 Each component in components folder has five files. The component itself, its documentation, test, test log, test plan. Please follow the style as the example below.
 
-InputBar
-├── InputBar.jsx
-├── InputBar.md
-├── InputBar.test.jsx
-├── TestLog_InputBar.md
+InputBar\
+├── InputBar.jsx\
+├── InputBar.md\
+├── InputBar.test.jsx\
+├── TestLog_InputBar.md\
 └── TestPlan_InputBar.md
 
 In source code like *InputBar.jsx*, please write your name and purpose as follow.
@@ -193,7 +193,7 @@ All JavaScript code is linted with [Prettier](https://prettier.io).
 
 - Open the source code and find the related Markdown file to edit the documentation.
 
-  Example:  edit the docementation of the component AlgorithmButton in the "src/components/AlgorithmButton/AlgorithmButton.md" file.
+  Example:  edit the documentation of the component AlgorithmButton in the "src/components/AlgorithmButton/AlgorithmButton.md" file.
 
 - For more information about the styleguide, please visit the official website of [Styleguide (hugeinc.github.io)](https://hugeinc.github.io/styleguide/)
 
