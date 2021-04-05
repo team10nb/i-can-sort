@@ -28,7 +28,10 @@ export default function ModuleProgress(props) {
                 theme.palette.grey[theme.palette.type === "light" ? 200 : 700],
         },
         bar: {
-            borderRadius: 2,
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 2,
+            borderBottomLeftRadius: 2,
             backgroundColor: presentingColor,
         },
     }))(LinearProgress);
