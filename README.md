@@ -12,7 +12,7 @@ We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/
 
 # Run the Source Code
 
-#### 1. Download & Install NodeJS and npm
+## 1. Download & Install NodeJS and npm
 
 You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
 
@@ -33,7 +33,7 @@ Or you can find downloads that fits your system here by yourself:
 Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
 
 
-#### 2. Configuration Guide
+## 2. Configuration Guide
 
 In the project directory, you should run following command in your terminal in order to configure the dependencies.
 
@@ -57,7 +57,7 @@ If this step took more than 10 minutes, you shall consider to connect to eduroam
 *Note that using a mirror may result in some error for some reason. Please use official registry.*
 
 
-#### 3. Available Script
+## 3. Available Script
 
 ### `npm start`
 
