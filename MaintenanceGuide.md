@@ -1,4 +1,4 @@
-# Contributing and Maintenance Guide to iCanSort
+# Maintenance Guide to iCanSort
 
 👍🎉 First off, thanks for taking the time to contribute or maintain! 🎉👍
 
@@ -16,10 +16,10 @@ We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/
 
 ### Hardware Requirement
 
-  1. 2GB RAM minimum
-  2. 300MB disk space minimum
-  3. 1024 x 768 monitor resolution minimum
-  4. Internet connection for visiting GitHub
+1. 2GB RAM minimum
+2. 300MB disk space minimum
+3. 1024 x 768 monitor resolution minimum
+4. Internet connection for visiting GitHub
 
 ### Software Requirement
 
@@ -62,7 +62,7 @@ For clone the project, you can use both HTTPS or SSH. Please make sure you have 
 
 ### Configuration Guide
 
-In the project directory, you should run following command in your **terminal** in order to configure the dependencies. 
+In the project directory, you should run following command in your **terminal** in order to configure the dependencies.
 
 #### `cd PATH-TO-ROOT-OF-ICANSORT`
 
@@ -74,7 +74,7 @@ To install the specific npm version 6.14.10
 #### `npm -v`
 
 Make sure that you see `6.14.10` in your terminal.
-To ensure that you install the specific npm version 6.14.10. 
+To ensure that you install the specific npm version 6.14.10.
 
 #### `npm install`
 
@@ -187,7 +187,7 @@ All JavaScript code is linted with [Prettier](https://prettier.io).
 
   https://github.com/team10nb/i-can-sort/blob/main/styleguide/index.html
 
-- The styleguide configuration file can be found in: 
+- The styleguide configuration file can be found in:
 
   https://github.com/team10nb/i-can-sort/blob/main/styleguidist.config.js
 

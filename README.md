@@ -6,15 +6,15 @@ For downloading the executable software, please refer to [Release](https://githu
 
 # Getting Started with iCanSort
 
-You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
-
-## Wait! I just want to try your software!
-
-You can download the software directly [here](https://github.com/team10nb/i-can-sort/releases).
+We provide you the installation packages of the software. You can download directly [here](https://github.com/team10nb/i-can-sort/releases).
 
 We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/blob/main/User%20Manual.pdf).
 
-## Download & Install NodeJS and npm
+# Run the Source Code
+
+#### 1. Download & Install NodeJS and npm
+
+You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
 
 You can follow the link below to download for Windows and Mac. 
 
@@ -33,7 +33,7 @@ Or you can find downloads that fits your system here by yourself:
 Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
 
 
-## Configuration Guide
+#### 2. Configuration Guide
 
 In the project directory, you should run following command in your terminal in order to configure the dependencies.
 
@@ -57,7 +57,7 @@ If this step took more than 10 minutes, you shall consider to connect to eduroam
 *Note that using a mirror may result in some error for some reason. Please use official registry.*
 
 
-## Available Script
+#### 3. Available Script
 
 ### `npm start`
 
@@ -102,10 +102,16 @@ Builds the app and create an installer for Mac to the `dist` folder.
 Launch a web view of the Style Guidist.
 This will build JavaScript Doc in each folder and display them in a webpage.
 
-## Learn More
+# Learn More
 
 We create this app by Create React App. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-To see the user manual, check out the [User Manual](./User%20Manual.pdf).
+To learn Electron, check out the [Electron documentation](https://www.electronjs.org/).
+
+
+
+
+
+
