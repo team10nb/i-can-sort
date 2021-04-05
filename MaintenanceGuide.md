@@ -4,7 +4,41 @@
 
 The following is a set of guidelines for contributing to and maintaining iCanSort. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-[TOC]
+- [Maintenance Guide to iCanSort](#maintenance-guide-to-icansort)
+  - [Wait! I just want to try your software!](#wait-i-just-want-to-try-your-software)
+  - [What do I need for environment requirements?](#what-do-i-need-for-environment-requirements)
+    - [Hardware Requirement](#hardware-requirement)
+    - [Software Requirement](#software-requirement)
+  - [What should I know and do before I get started?](#what-should-i-know-and-do-before-i-get-started)
+    - [Download & Install NodeJS and npm](#download--install-nodejs-and-npm)
+    - [Clone or Download i-can-sort](#clone-or-download-i-can-sort)
+    - [Configuration Guide](#configuration-guide)
+      - [`cd PATH-TO-ROOT-OF-ICANSORT`](#cd-path-to-root-of-icansort)
+      - [`npm install -g npm@6.14.10`](#npm-install--g-npm61410)
+      - [`npm -v`](#npm--v)
+      - [`npm install`](#npm-install)
+    - [Available Scripts](#available-scripts)
+      - [`npm start`](#npm-start)
+      - [`npm test`](#npm-test)
+      - [`npm run build`](#npm-run-build)
+      - [`npm run electron-start`](#npm-run-electron-start)
+      - [`npm run dist-win`](#npm-run-dist-win)
+      - [`npm run dist-mac`](#npm-run-dist-mac)
+      - [`npm run styleguide`](#npm-run-styleguide)
+  - [Project Structure and Styleguides](#project-structure-and-styleguides)
+    - [Component Sructure Styleguide](#component-sructure-styleguide)
+    - [JavaScript Styleguide](#javascript-styleguide)
+    - [JavaScript Documentation Styleguide](#javascript-documentation-styleguide)
+    - [Git Commit Styleguide](#git-commit-styleguide)
+  - [Summary of quality assurance](#summary-of-quality-assurance)
+    - [Coding Convention](#coding-convention)
+    - [Independent quality assurance team](#independent-quality-assurance-team)
+    - [Peer Programming](#peer-programming)
+    - [Automated Unit Testing and Integration Testing](#automated-unit-testing-and-integration-testing)
+    - [Release Testing and Acceptance Testing](#release-testing-and-acceptance-testing)
+    - [Continuous Integration](#continuous-integration)
+    - [Issue and Kanban](#issue-and-kanban)
+  - [User Manual](#user-manual)
 
 ## Wait! I just want to try your software!
 
