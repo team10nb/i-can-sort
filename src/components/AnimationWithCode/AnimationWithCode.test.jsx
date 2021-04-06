@@ -10,19 +10,19 @@ import * as AnimationControls from "../AnimationControl/AnimationControl";
 
 const trace = [
     [
-        { height: "50", backgroundColor: "#FF008C", key: '1' },
-        { height: "30", backgroundColor: "#D309E1", key: '2' },
-        { height: "90", backgroundColor: "#9C1AFF", key: '3' },
-        { height: "10", backgroundColor: "#7700FF", key: '4' },
-        { height: "20", backgroundColor: "#66AA00", key: '5' },
-    ],[
-        { height: "50", backgroundColor: "#FF008C", key: '1' },
-        { height: "30", backgroundColor: "#D309E1", key: '2' },
-        { height: "90", backgroundColor: "#9C1AFF", key: '3' },
-        { height: "10", backgroundColor: "#7700FF", key: '4' },
-        { height: "20", backgroundColor: "#66AA00", key: '5' },
+        { height: "50", backgroundColor: "#FF008C", key: "1" },
+        { height: "30", backgroundColor: "#D309E1", key: "2" },
+        { height: "90", backgroundColor: "#9C1AFF", key: "3" },
+        { height: "10", backgroundColor: "#7700FF", key: "4" },
+        { height: "20", backgroundColor: "#66AA00", key: "5" },
     ],
-
+    [
+        { height: "50", backgroundColor: "#FF008C", key: "1" },
+        { height: "30", backgroundColor: "#D309E1", key: "2" },
+        { height: "90", backgroundColor: "#9C1AFF", key: "3" },
+        { height: "10", backgroundColor: "#7700FF", key: "4" },
+        { height: "20", backgroundColor: "#66AA00", key: "5" },
+    ],
 ];
 
 const description = ["", ""];
@@ -31,7 +31,7 @@ const blockNums = [1, 2];
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        '& > * + *': {
+        "& > * + *": {
             marginTop: theme.spacing(3),
         },
         width: 380,
@@ -89,23 +89,30 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
     }));
-    
+
     const classes = useStyles();
 
-    const testCode =
+    const testCode = (
         <div>
-            <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
+            <pre
+                className={
+                    blockNum === 1 ? classes.background : classes.noBackground
+                }
+            >
                 {`test`}
             </pre>
-            <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
+            <pre
+                className={
+                    blockNum === 2 ? classes.background : classes.noBackground
+                }
+            >
                 {`test`}
             </pre>
         </div>
+    );
 
-    return (
-        <div>{testCode}</div>
-    )
-}
+    return <div>{testCode}</div>;
+};
 
 const props = {
     trace,
@@ -117,27 +124,31 @@ const props = {
     title: "For Loop",
 };
 
-test('should call AnimationSlider', () => {
+test("should call AnimationSlider", () => {
     jest.restoreAllMocks();
-    const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
-    const content = render(<AnimationWithCode {...props}/>);
+    const sliderSpy = jest
+        .spyOn(AnimationSliders, "default")
+        .mockImplementation(() => <div>mockAnimationSlider</div>);
+    const content = render(<AnimationWithCode {...props} />);
     content.getByText("mockAnimationSlider");
     expect(sliderSpy).toBeCalledTimes(1);
 });
 
-test('should call AnimationControl', () => {
+test("should call AnimationControl", () => {
     jest.restoreAllMocks();
-    const controlSpy = jest.spyOn(AnimationControls, "default").mockImplementation(() => <div>mockAnimationControl</div>);
+    const controlSpy = jest
+        .spyOn(AnimationControls, "default")
+        .mockImplementation(() => <div>mockAnimationControl</div>);
 
-    const {getByText} = render(<AnimationWithCode {...props}/>);
+    const { getByText } = render(<AnimationWithCode {...props} />);
     getByText("mockAnimationControl");
     expect(controlSpy).toBeCalledTimes(1);
 });
 
-test('should match snapshot', () => {
+test("should match snapshot", () => {
     jest.restoreAllMocks();
     // jest.resetModules();
-    const content = render(<AnimationWithCode {...props}/>);
+    const content = render(<AnimationWithCode {...props} />);
 
     expect(content).toMatchSnapshot();
 });

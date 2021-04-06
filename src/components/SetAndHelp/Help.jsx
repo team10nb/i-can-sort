@@ -1,6 +1,8 @@
 /*
     Author: Yijie Lu, Shiliang Chen
-    Tutorial of each main page
+
+    Tutorial of each main page.
+    material-ui library is used for UI.
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";

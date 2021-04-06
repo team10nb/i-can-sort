@@ -4,7 +4,6 @@
 
 import { COLORS, patch, hardcopy, changeColor } from "../Patch/Patch";
 
-//TODO:
 export default function SelectionSort(arr) {
     // initialize
     let patched = patch(arr);
@@ -41,7 +40,7 @@ export default function SelectionSort(arr) {
 
 
         for (j = i + 1; j < len; j++) {
-            // 遍历数组对比大小
+            // Traverse to compare
             changeColor(patched, j, COLORS.comparing);
             trace.push(hardcopy(patched));
             description.push(
@@ -52,12 +51,13 @@ export default function SelectionSort(arr) {
             );
             blockNums.push(5);
 
-            // 遍历数小于当前最小数则最小数变current，原最小数变origin
+            // to find the minimum number
             if (patched[j].value < patched[minIndex].value) {
-                // 寻找最小的数
+                // Visualize: min found
                 changeColor(patched, minIndex, COLORS.original);
+                minIndex = j; 
+                // save the minimum
                 z = minIndex;
-                minIndex = j; // 将最小数的索引保存
                 changeColor(patched, minIndex, COLORS.current);
                 trace.push(hardcopy(patched));
                 description.push(
@@ -116,7 +116,7 @@ export default function SelectionSort(arr) {
         trace.push(hardcopy(patched));
     }
 
-    // 全都排好了
+    // Visualize: all sorted
     trace.push(hardcopy(patched));
     description.push("Selection Sort Finished");
     blockNums.push(11);

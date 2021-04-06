@@ -9,8 +9,7 @@ const props = {
     width: 60,
 };
 
-it('should match snapshot', () => {
-
+it("should match snapshot", () => {
     const content = render(<ExplanationBox {...props} />);
     expect(content).toMatchSnapshot();
-})
+});

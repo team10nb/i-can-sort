@@ -35,6 +35,7 @@ const Code = (props) => {
     }));
     const classes = useStyles();
 
+    // pseudocode of for loop example
     const forCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
@@ -67,6 +68,7 @@ const Code = (props) => {
 
 const width = 320;
 export default function ForLoop() {
+    // produce trace, description and blockNums
     var traceUnit = [];
     var descriptionUnit = '';
 
@@ -101,7 +103,6 @@ export default function ForLoop() {
         trace.push(traceUnit);
 
         blockNums.push(2, 3, 2);
-
 
         descriptionUnit = 'i = ' + (i - 1) + ', haven\'t exceeded 3';
         description.push(descriptionUnit, 'do a = a + b', 'i increase by 1');

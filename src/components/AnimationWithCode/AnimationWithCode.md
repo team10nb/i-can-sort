@@ -36,21 +36,17 @@ import CardContent from '@material-ui/core/CardContent';
 
 ### **Demo**
 
-```html
+```jsx
+import { useStyles } from "../../scenes/subpages/Tutorial/Loop/LoopExample/Style";
 import { makeStyles } from "@material-ui/core/styles";
-import * as React from "react";
-import AnimationWithCode from '../AnimationWithCode/AnimationWithCode';
-import { useStyles } from './Style';
 
-const useStyles = makeStyles((theme) => ({...}));
 
-// dynamic pseudocode
 const Code = (props) => {
     const { blockNum } = props;
 
     const useStyles = makeStyles((theme) => ({
         background: {
-            backgroundColor: "#c8e6c9",
+            backgroundColor: "#FEE5D4",
             borderRadius: 5,
             marginTop: -6,
             letterSpacing: 0.5,
@@ -68,27 +64,22 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
     }));
+    
     const classes = useStyles();
 
-    const forCode =
+    const terminableCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
-                {`Algorithm: ForLoop()`}
+                {`Algorithm: SwapFourTimes(Arr)`}
             </pre>
             <pre className={classes.noBackground}>
                 {`  i = 0`}
             </pre>
-            <pre className={classes.noBackground}>
-                {`  a = 0`}
-            </pre>
-            <pre className={classes.noBackground}>
-                {`  b = 2`}
-            </pre>
             <pre className={blockNum === 2 ? classes.background : classes.noBackground}>
-                {`  for i = 0 to 3 do`}
+                {`  for i from 0 to 3 do`}
             </pre>
             <pre className={blockNum === 3 ? classes.background : classes.noBackground}>
-                {`     a = a + b`}
+                {`    swap(Arr[0], Arr[1])`}
             </pre>
             <pre className={blockNum === 4 ? classes.background : classes.noBackground}>
                 {`  end for`}
@@ -96,69 +87,58 @@ const Code = (props) => {
         </div>
 
     return (
-        <div>{forCode}</div>
+        <div>{terminableCode}</div>
     )
 }
 
-const width = 320;
-export default function ForLoop() {
-    var traceUnit = [];
-    var descriptionUnit = '';
-
-    var trace = [
+const trace = [];
+const traceUnit1 =
         [
-            { value: 'i=0', height: 0, backgroundColor: "#FFD700", key: 0, y: 0 },
-            { value: 'a=0', height: 0, backgroundColor: "#00BFFF", key: 1, y: 0 },
-            { value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0 }
-        ]
+            { value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0 },
+            { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 },
+        ];
+
+    const traceUnit2 =
+        [
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
+        ];
+    
+    const traceUnit3 =
+        [
+            { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 },
+            { value: 5, height: 50, backgroundColor: "#00BFFF", key: 0, y: 0 },
+        ];
+
+    const traceUnit4 =
+        [
+            { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
+            { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
+        ];
+    trace.push(traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit1);
+
+    const blockNums = [1, 2, 3, 2, 3, 2, 3, 2, 3, 4];
+
+    const description = [
+        "i = 0",
+        "i = 0",
+        "i = 0",
+        "i = 1",
+        "i = 1",
+        "i = 2",
+        "i = 2",
+        "i = 3",
+        "i = 3",
+        "i = 4, jump out of the loop",
     ];
-    var description = ['Begin for loop'];
-    var blockNums = [1];
 
-    for (var i = 1; i < 5; i++) {
-        traceUnit = [
-            { value: 'i=' + (i - 1), height: (i - 1) * 10, backgroundColor: "#FFD700", key: 0, y: 0 },
-            { value: 'a=' + (i - 1) * 2, height: (i - 1) * 20, backgroundColor: "#00BFFF", key: 1, y: 0 },
-            { value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0 }
-        ];
-        trace.push(traceUnit);
-        traceUnit = [
-            { value: 'i=' + (i - 1), height: (i - 1) * 10, backgroundColor: "#FFD700", key: 0, y: 0 },
-            { value: 'a=' + i * 2, height: i * 20, backgroundColor: "#00BFFF", key: 1, y: 0 },
-            { value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0 }
-        ];
-        trace.push(traceUnit);
-        traceUnit = [
-            { value: 'i=' + i, height: i * 10, backgroundColor: "#FFD700", key: 0, y: 0 },
-            { value: 'a=' + i * 2, height: i * 20, backgroundColor: "#00BFFF", key: 1, y: 0 },
-            { value: 'b=2', height: 20, backgroundColor: "#00BFFF", key: 2, y: 0 }
-        ];
-        trace.push(traceUnit);
-
-        blockNums.push(2, 3, 2);
-
-
-        descriptionUnit = 'i = ' + (i - 1) + ', haven\'t exceeded 3';
-        description.push(descriptionUnit, 'do a = a + b', 'i increase by 1');
-
-        if (i === 4) {
-            trace.push(traceUnit);
-            blockNums.push(4);
-            description.push('i = 4, jump out of the loop');
-        }
-
-    }
-
-    const props = {
-        trace,
-        description,
-        width,
-        blockNums,
-        useStyles,
-        Code,
-        title: "For Loop",
-    };
-
-    return (<AnimationWithCode {...props} />);
-}
+<AnimationWithCode
+    trace={trace}
+    description={description}
+    width={320}
+    blockNums={blockNums}
+    useStyles={useStyles}
+    Code={Code}
+    title="Demo"
+/>
 ```

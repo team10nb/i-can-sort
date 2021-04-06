@@ -1,44 +1,40 @@
 /*
     Author: Shiliang Chen, Yijie Lu
 
-    Assertion file containing all the assertions of algorithms
+    Assertion file containing all the assertions of algorithms.
+    material-ui library is used for UI.
 */
 
 import { makeStyles } from "@material-ui/core/styles";
 import "../../fonts/fonts.css";
 import { color } from "../../scenes/mainPages/Correctness";
 
+// define css classes
 const useStyles = makeStyles((theme) => ({
     AssertNoBack: {
         backgroundColor: "#DCDCDC",
         borderRadius: 15,
         marginTop: -8,
-        // marginBottom: 3,
         letterSpacing: -0.5,
         fontSize: 12,
         fontWeight: 20,
         fontStyle: "italic",
-        // paddingLeft:"5px",
         fontFamily: "Space Mono",
         textAlign: "left",
         padding: 3,
-        // textAlign: 'center',
     },
     AssertBack: {
         backgroundColor: "#DCDCDC",
         borderRadius: 15,
         marginTop: -8,
-        // marginBottom: 2,
         letterSpacing: -0.5,
         fontSize: 12,
         fontWeight: 20,
         fontStyle: "italic",
-        // paddingLeft:"5px",
         fontFamily: "Space Mono",
         textAlign: "left",
         color: color,
         padding: 3,
-        // textAlign: 'center',
     },
     background: {
         backgroundColor: "#FEE5D4",
@@ -493,7 +489,7 @@ Output: The result of sorting Arr.`}
             >
                 {`end if`}
             </pre>
-            
+
             {/* assertion */}
             <pre
                 wordWrap="break-word"

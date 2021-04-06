@@ -1,8 +1,10 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The menu used to change speed.
+    material-ui library is used for UI.
 */
 
-import "@fontsource/roboto";
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -11,6 +13,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 
+// Creat a self-defined menu item
 const MenuItem = withStyles({
     root: {
         justifyContent: "center",
@@ -23,6 +26,7 @@ const MenuItem = withStyles({
 export default function SpeedMenu(props) {
     const { handleClick, handleClose, anchorEl, speed } = props;
 
+    // define css
     const useStyles = makeStyles({
         root: {
             display: "inline-block",
@@ -40,13 +44,12 @@ export default function SpeedMenu(props) {
             fontFamily: "inherit",
         },
         customTooltip: {
-            // I used the rgba color for the standard "secondary" color
             fontFamily: "inherit",
             fontSize: "1.2em",
             fontWeight: "700",
             paddingTop: "5px",
             paddingBottom: "6px",
-            letterSpacing:"1px",
+            letterSpacing: "1px",
             marginTop: "3px"
         },
     });
@@ -54,6 +57,7 @@ export default function SpeedMenu(props) {
 
     return (
         <div className={classes.root}>
+            {/* use button to call menu */}
             <Tooltip
                 title='Speed'
                 TransitionComponent={Zoom}
@@ -67,11 +71,12 @@ export default function SpeedMenu(props) {
                     aria-haspopup='true'
                     onClick={handleClick}
                     className={classes.button}
-                    style={{minWidth: "40px"}}
+                    style={{ minWidth: "40px" }}
                 >
                     {speed}
                 </Button>
             </Tooltip>
+            {/* speed menu */}
             <Menu
                 id='simple-menu'
                 anchorEl={anchorEl}

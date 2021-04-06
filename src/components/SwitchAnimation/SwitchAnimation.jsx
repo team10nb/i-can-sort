@@ -1,5 +1,9 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The animation of bars.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import "@fontsource/roboto";
@@ -10,7 +14,7 @@ import AnimationSlider from "../AnimationSlider/AnimationSlider";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimationControl from "../AnimationControl/AnimationControl";
 import ExplanationBox from "../ExplanationBox/ExplanationBox";
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 
 // a framer motion transition attributes
 const spring = {
@@ -91,7 +95,7 @@ export const SwitchAnimation = (props) => {
         currentStep + 1 === trace.length
             ? setPlayDisabled(true)
             : setPlayDisabled(false);
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentStep]);
 
     // Use the latest speed to play the animation
@@ -248,18 +252,22 @@ export const SwitchAnimation = (props) => {
                             x: bar.x,
                         }}
                     >
-                        <div className={classes.barNumber}>
-                            {bar.value}
-                        </div>
+                        <div className={classes.barNumber}>{bar.value}</div>
                         <div
                             style={{
-                                marginTop: bar.height-17,
+                                marginTop: bar.height - 17,
                                 fontSize: "16px",
                                 textAlign: "center",
                                 fontWeight: "600",
                             }}
                         >
-                            {bar.isPivot ? <ArrowDropUpIcon style={{marginBottom: "-18px"}}/> : ""}
+                            {bar.isPivot ? (
+                                <ArrowDropUpIcon
+                                    style={{ marginBottom: "-18px" }}
+                                />
+                            ) : (
+                                ""
+                            )}
                         </div>
                     </motion.li>
                 ))}

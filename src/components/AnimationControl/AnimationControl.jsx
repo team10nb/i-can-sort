@@ -1,5 +1,8 @@
 /*
     Author: Shiliang Chen, Ruizi Han
+
+    The control field of animation.
+    material-ui library is used for UI.
 */
 
 import * as React from "react";
@@ -29,8 +32,8 @@ export default function AnimationControl(props) {
     });
 
     const classes = useStyles();
-    const { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed} = props;
 
+    const { handleResetClick, stepForward, stepBackward, pause, resume, isPlaying, playDisabled, backwardDisabled, handleClick, handleClose, anchorEl, playSpeed } = props;
 
     return (
         <div
@@ -47,7 +50,7 @@ export default function AnimationControl(props) {
                 TransitionComponent={Zoom}
                 enterDelay={300}
                 leaveDelay={200}
-                className={classes.customTooltip }
+                className={classes.customTooltip}
                 arrow
             >
                 <span>

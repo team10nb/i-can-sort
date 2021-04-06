@@ -1,7 +1,7 @@
 /*
     Author: Yuting Jiang, Yijie Lu
 
-    //The template of tutrial subpages. 
+    The template of tutrial subpages. 
 */
 
 import React from 'react';

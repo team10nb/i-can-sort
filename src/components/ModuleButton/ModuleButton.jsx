@@ -2,6 +2,7 @@
     Author: Shiliang Chen, Yuting Jiang
 
     Click to enter an algorithm learning process.
+    material-ui library is used for UI.
 */
 
 import React from "react";
@@ -9,10 +10,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import "@fontsource/roboto";
-import "../../fonts/fonts.css"
+import "../../fonts/fonts.css";
 
 export default function ModuleButton(props) {
-    const {width, height, color, preOne, image, onClick} = props;
+    const { width, height, color, preOne, image, onClick } = props;
     const borderWidth = preOne ? "3px" : "0px";
     const presentHeight = preOne ? height - 3 : height;
 
@@ -47,7 +48,7 @@ export default function ModuleButton(props) {
                 "& $imageBackdrop": {
                     backgroundColor: "",
                     opacity: 0,
-                    transition: "opacity 0.3s"
+                    transition: "opacity 0.3s",
                 },
                 "& $imageTitle": {
                     opacity: 0,
@@ -95,7 +96,7 @@ export default function ModuleButton(props) {
             backgroundColor: "#d5d5d5",
             opacity: 1,
             // transition: theme.transitions.create("opacity"),
-            transition: "opacity 0.3s"
+            transition: "opacity 0.3s",
         },
         imageTitle: {
             position: "absolute",
@@ -106,15 +107,14 @@ export default function ModuleButton(props) {
             fontFamily: "QuickSand",
             fontSize: 20,
             color: "white",
-            fontWeight:"700",
+            fontWeight: "700",
         },
-
     }));
 
     const useRippleStyles = makeStyles(() => ({
-        child:{
-            backgroundColor: "grey"
-        }
+        child: {
+            backgroundColor: "grey",
+        },
     }));
 
     const classes = useStyles();
@@ -130,7 +130,6 @@ export default function ModuleButton(props) {
                 focusVisibleClassName={classes.focusVisible}
                 onClick={onClick}
             >
-                
                 {/* background of the button */}
                 <span
                     className={classes.imageSrc}
@@ -145,15 +144,14 @@ export default function ModuleButton(props) {
                 {/* title */}
                 <span className={classes.imageButton}>
                     <Typography
-                        component='span'
-                        variant='subtitle1'
-                        color= 'inherit'
+                        component="span"
+                        variant="subtitle1"
+                        color="inherit"
                         className={classes.imageTitle}
                     >
                         {image.title}
                     </Typography>
                 </span>
-
             </ButtonBase>
         </div>
     );

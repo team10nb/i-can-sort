@@ -1,5 +1,7 @@
 /*
     Author: Yijie Lu, Shiliang Chen
+
+    The help page which contains explanation of for loop and while loop.
 */
 import React from "react";
 import logo0 from "../../../../resource/ForLoop.png";

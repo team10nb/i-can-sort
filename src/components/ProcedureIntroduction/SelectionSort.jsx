@@ -16,254 +16,289 @@ const trace = [
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#00BFFF", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FFD700", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FFD700", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FFD700", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FFD700", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#FF0000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FF0000", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FF0000", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FFD700", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#00BFFF", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FFD700", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FF0000", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FF0000", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FFD700", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FF0000", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 5, height: 50, backgroundColor: "#FF0000", key: 3, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#00BFFF", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FFD700", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FFD700", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#FF0000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FF0000", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#FF0000", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FFD700", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FF0000", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#00BFFF", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FF0000", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#FFD700", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 8, height: 80, backgroundColor: "#FF0000", key: 5, y: 0 }
-    ], [
+        { value: 8, height: 80, backgroundColor: "#FF0000", key: 5, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#00BFFF", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 }
-    ], [
+        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FF0000", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 }
-    ], [
+        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#FF0000", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#FFD700", key: 1, y: 0 }
-    ], [
+        { value: 12, height: 120, backgroundColor: "#FFD700", key: 1, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 }
-    ], [
+        { value: 12, height: 120, backgroundColor: "#00BFFF", key: 1, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0 }
-    ], [
+        { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0 },
+    ],
+    [
         { value: 3, height: 30, backgroundColor: "#008000", key: 0, y: 0 },
         { value: 5, height: 50, backgroundColor: "#008000", key: 3, y: 0 },
         { value: 7, height: 70, backgroundColor: "#008000", key: 2, y: 0 },
         { value: 8, height: 80, backgroundColor: "#008000", key: 5, y: 0 },
         { value: 10, height: 100, backgroundColor: "#008000", key: 4, y: 0 },
-        { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0 }
-    ]
-]
+        { value: 12, height: 120, backgroundColor: "#008000", key: 1, y: 0 },
+    ],
+];
 
 const description = [
     "Selection sort is an algorithm used to sort a sequence of numbers",
@@ -301,7 +336,8 @@ const description = [
     "Compare 10 and 12, 10 is still the minimum",
     "As the minimum is the first unsorted element, numbers don't get swapped",
     "As the minimum is the first unsorted element, numbers don't get swapped",
-    "Selection Sort Finished!"]
+    "Selection Sort Finished!",
+];
 
 export default function IntroSelection() {
     const props = { trace: trace, description: description };

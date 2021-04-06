@@ -2,6 +2,7 @@
     Author: Shiliang Chen, Yijie Lu
 
     Help popup for expaining proof module.
+    material-ui library is used for UI.
 */
 import React from "react";
 import Typography from "@material-ui/core/Typography";
@@ -19,8 +20,9 @@ const content1 = (
     >
         When a specific statement is being executed, the pseudo-code and
         assertion will be highlighted to show you the proof process step by
-        step. <br/>
-        Note this is not a formal proof. Plain language is used for demonstration purposes.
+        step. <br />
+        Note this is not a formal proof. Plain language is used for
+        demonstration purposes.
     </Typography>
 );
 
@@ -36,7 +38,7 @@ export default function Explanation() {
         contentMarginTop: "0",
         avatarMarginLeft: "9px",
         avatarMarginTop: "9px",
-        name: "Proof"
+        name: "Proof",
     };
 
     return (

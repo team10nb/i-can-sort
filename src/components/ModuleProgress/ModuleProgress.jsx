@@ -2,16 +2,16 @@
     Author: Shiliang Chen, Yuting Jiang
 
     Show the learning progress of an algorithm. 
+    material-ui library is used for UI.
 */
 
 import React from "react";
-import { makeStyles, withStyles} from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 export default function ModuleProgress(props) {
-
-    const {width, color, progress, preOne} = props;
-    const presentingWidth = preOne ? (width + 6) : (width);
+    const { width, color, progress, preOne } = props;
+    const presentingWidth = preOne ? width + 6 : width;
     const presentingColor = progress === 100 ? color : color;
 
     // modify the default styles of linear progress bar
@@ -28,7 +28,10 @@ export default function ModuleProgress(props) {
                 theme.palette.grey[theme.palette.type === "light" ? 200 : 700],
         },
         bar: {
-            borderRadius: 2,
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 2,
+            borderBottomLeftRadius: 2,
             backgroundColor: presentingColor,
         },
     }))(LinearProgress);
@@ -41,13 +44,11 @@ export default function ModuleProgress(props) {
             minWidth: 200,
         },
     });
-    
+
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <BorderLinearProgress
-                variant= "determinate" value= {progress}
-            />
+            <BorderLinearProgress variant="determinate" value={progress} />
         </div>
     );
 }

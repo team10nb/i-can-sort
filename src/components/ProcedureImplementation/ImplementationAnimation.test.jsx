@@ -3,7 +3,7 @@
 */
 
 import { render } from "@testing-library/react";
-import ImplementationAnimation from './ImplementationAnimation';
+import ImplementationAnimation from "./ImplementationAnimation";
 import * as InputBar from "../InputBar/InputBar";
 import * as AnimationSliders from "../AnimationSlider/AnimationSlider";
 import * as AnimationControls from "../AnimationControl/AnimationControl";
@@ -18,45 +18,53 @@ const props = {
     Code: Bubble,
 };
 
-it('should call InputBar', () => {
+it("should call InputBar", () => {
     jest.restoreAllMocks();
-    const inputSpy = jest.spyOn(InputBar, "default").mockImplementation(() => <div>mockInputBar</div>);
-    const {getByText} = render(<ImplementationAnimation {...props} />);
-   
+    const inputSpy = jest
+        .spyOn(InputBar, "default")
+        .mockImplementation(() => <div>mockInputBar</div>);
+    const { getByText } = render(<ImplementationAnimation {...props} />);
+
     getByText("mockInputBar");
     expect(inputSpy).toBeCalledTimes(3);
-})
+});
 
-test('should call AnimationSlider', () => {
+test("should call AnimationSlider", () => {
     jest.restoreAllMocks();
-    const sliderSpy = jest.spyOn(AnimationSliders, "default").mockImplementation(() => <div>mockAnimationSlider</div>);
-    const content = render(<ImplementationAnimation {...props}/>);
-    
+    const sliderSpy = jest
+        .spyOn(AnimationSliders, "default")
+        .mockImplementation(() => <div>mockAnimationSlider</div>);
+    const content = render(<ImplementationAnimation {...props} />);
+
     content.getByText("mockAnimationSlider");
     expect(sliderSpy).toBeCalledTimes(3);
-})
+});
 
-test('should call AnimationControl', () => {
+test("should call AnimationControl", () => {
     jest.restoreAllMocks();
-    const controlSpy = jest.spyOn(AnimationControls, "default").mockImplementation(() => <div>mockAnimationControl</div>);
+    const controlSpy = jest
+        .spyOn(AnimationControls, "default")
+        .mockImplementation(() => <div>mockAnimationControl</div>);
 
-    const {getByText} = render(<ImplementationAnimation {...props}/>);
+    const { getByText } = render(<ImplementationAnimation {...props} />);
     getByText("mockAnimationControl");
     expect(controlSpy).toBeCalledTimes(3);
 });
 
-test('should call ExplanationBox', () => {
+test("should call ExplanationBox", () => {
     jest.restoreAllMocks();
-    const controlSpy = jest.spyOn(ExplanationBoxes, "default").mockImplementation(() => <div>mockExplanationBox</div>);
+    const controlSpy = jest
+        .spyOn(ExplanationBoxes, "default")
+        .mockImplementation(() => <div>mockExplanationBox</div>);
 
-    const {getByText} = render(<ImplementationAnimation {...props}/>);
+    const { getByText } = render(<ImplementationAnimation {...props} />);
     getByText("mockExplanationBox");
     expect(controlSpy).toBeCalledTimes(3);
 });
 
-test('should match snapshot', () => {
+test("should match snapshot", () => {
     jest.restoreAllMocks();
-    const content = render(<ImplementationAnimation {...props}/>);
+    const content = render(<ImplementationAnimation {...props} />);
 
     expect(content).toMatchSnapshot();
-})
+});

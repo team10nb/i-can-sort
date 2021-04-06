@@ -2,6 +2,7 @@
     Author: Yuting Jiang
 
     Algorithms code is on the button. Click to run the algorithm.
+    material-ui library is used for UI.
 */
 
 import React from "react";
@@ -11,7 +12,10 @@ import Typography from "@material-ui/core/Typography";
 import backgroundImage from "../../resource/run.png";
 
 export default function AlgorithmButton(props) {
+    //Get the content and onClick evernt for AlgorithmButton from props
     const { title, code, paddingLeft, paddingRight, onClick } = props;
+
+    //Set css
     const styles = {
         div: {
             textAlign: "left",
@@ -20,6 +24,7 @@ export default function AlgorithmButton(props) {
         },
     };
 
+    //Set css
     const useStyles = makeStyles(() => ({
         buttonBase: {
             paddingLeft: 20,

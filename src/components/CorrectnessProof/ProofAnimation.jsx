@@ -2,6 +2,8 @@
     Author: Ruizi Han, Shiliang Chen, Yijie Lu
 
     Animation support for displaying proof process.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import { makeStyles } from "@material-ui/core/styles";

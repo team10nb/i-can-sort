@@ -4,17 +4,17 @@
     Example animation and code of Non-terminating Swap.
 */
 
-import { makeStyles } from "@material-ui/core/styles";
-import "@fontsource/roboto";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import { makeStyles } from "@material-ui/core/styles";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
+import "@fontsource/roboto";
 import "../../../../../fonts/fonts.css";
 
 // a framer motion transition attributes
@@ -51,6 +51,7 @@ const Code = (props) => {
     }));
     const classes = useStyles();
 
+    // pseudocode of interminating swap example
     const interminableCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>

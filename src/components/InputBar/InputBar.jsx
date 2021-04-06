@@ -2,15 +2,13 @@
     Author: Ruizi Han, Shiliang Chen
 
     The bar that accept user input.
+    material-ui library is used for UI.
 */
 
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import {
-    makeStyles,
-    withStyles,
-} from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,21 +65,23 @@ const CssTextField = withStyles({
 
 export default function InputBar(props) {
     const {
-        isValid,
-        wrongMsg,
+        isValid, // is the input in the right format or not
+        wrongMsg, // prompt massage to user
         handleChange,
         handleKeyDown,
         checkFormat,
         shuffle,
         inputString,
         max,
-        barLength
+        barLength,
     } = props;
 
     const classes = useStyles();
 
     const error = isValid ? false : true;
-    const label = isValid ? "Enter positive integers from 1 to " + max : "Invalid Input";
+    const label = isValid
+        ? "Enter positive integers from 1 to " + max
+        : "Invalid Input";
     const helper = isValid ? " " : wrongMsg;
 
     return (
@@ -90,21 +90,21 @@ export default function InputBar(props) {
                 <CssTextField
                     error={error}
                     label={label}
-                    type='search'
+                    type="search"
                     helperText={helper}
-                    variant='outlined'
+                    variant="outlined"
                     onChange={handleChange}
                     onFocus={handleChange}
                     value={inputString}
                     className={classes.text}
-                    size='small'
+                    size="small"
                     style={{
                         width: barLength,
                     }}
                     onKeyDown={handleKeyDown}
                 />
                 <Button
-                    variant='contained'
+                    variant="contained"
                     disableElevation
                     onClick={checkFormat}
                     className={classes.buttonCreate}
@@ -112,7 +112,7 @@ export default function InputBar(props) {
                     Create
                 </Button>
                 <Button
-                    variant='contained'
+                    variant="contained"
                     disableElevation
                     onClick={shuffle}
                     className={classes.buttonShuffle}

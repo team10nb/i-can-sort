@@ -1,7 +1,7 @@
 /*
     Author: Yuting Jiang, Yijie Lu
 
-    The correctness main page, consists of algorithm modules, set and help buttons, and the choice menu.
+    The correctness main page, consists of two modules, set and help buttons, and the choice menu.
 */
 
 import React from "react";
@@ -58,9 +58,9 @@ const useStyles = makeStyles((theme) => ({
 //Set theme color
 const color = "#ff6f00";
 
-//Return a grid contains 8 modules that represent 8 sorting algorithms，set and help buttons，and the choice menu
-//Click the modules to jump to the corresponding algorithm learning page
-//The progress bar under each module represents the learning progress of the algorithm
+//Return a grid contains two modules，set and help buttons，and the choice menu
+//Click the modules to jump to the corresponding page
+//The progress bar under each module represents the learning progress of the module
 export default function CorrectnessMainPage() {
     const classes = useStyles();
 
@@ -76,7 +76,7 @@ export default function CorrectnessMainPage() {
         : 0;
 
     const handleClick = (title) => () => {
-        //store previous visited algorithm
+        //store previous visited module
         localStorage.setItem("CorrectnessPre", JSON.stringify(title));
     };
 
@@ -100,7 +100,7 @@ export default function CorrectnessMainPage() {
     };
 
     const handlePre = (title) => {
-        //set previous visited algorithm
+        //set previous visited module
         const preOne = title === localPre ? true : false;
         return preOne;
     };
@@ -197,7 +197,7 @@ export default function CorrectnessMainPage() {
     );
 }
 
-//Return five button, which are 'Tutorial', 'Procedure', 'Efficiency', 'Correctness', and 'Exercise'
+//Return three button, which are 'Tutorial', 'Procedure', and 'Correctness'
 //The Correctness button is theme color without jump function
 export function CorrectnessChoiceMenu() {
     const classes = useStyles();

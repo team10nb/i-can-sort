@@ -2,12 +2,14 @@
     Author: Ruizi Han, Shiliang Chen
 
     The outside frame for explanation sentence.
+    material-ui library is used for UI.
 */
 
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
+// creare a self-defined box
 const ExplanationBoxes = withStyles({
     root: {
         display: "flex",
@@ -27,6 +29,7 @@ const ExplanationBoxes = withStyles({
 
 export default function ExplanationBox(props) {
     const { width, height, children } = props;
+
     const useStyles = makeStyles((theme) => ({
         root: {
             display: "grid",
@@ -44,9 +47,7 @@ export default function ExplanationBox(props) {
 
     return (
         <div className={classes.root}>
-            <ExplanationBoxes variant='outlined'>
-                {children}
-            </ExplanationBoxes>
+            <ExplanationBoxes variant="outlined">{children}</ExplanationBoxes>
         </div>
     );
 }

@@ -4,9 +4,10 @@
     Example animation and code of Terminating Bubble Sort.
 */
 
-import { makeStyles } from "@material-ui/core/styles";
 import * as React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import AnimationWithCode from '../../../../../components/AnimationWithCode/AnimationWithCode';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > * + *': {
@@ -103,9 +104,10 @@ const Code = (props) => {
             paddingLeft: "5px",
         },
     }));
-    
+
     const classes = useStyles();
 
+    // pseudocode of terminating swap example
     const terminableCode =
         <div>
             <pre className={blockNum === 1 ? classes.background : classes.noBackground}>
@@ -145,7 +147,7 @@ const TerminableCode = () => {
             { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
             { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
         ];
-    
+
     const traceUnit3 =
         [
             { value: 8, height: 80, backgroundColor: "#00BFFF", key: 1, y: 0 },
@@ -157,6 +159,8 @@ const TerminableCode = () => {
             { value: 8, height: 80, backgroundColor: "#FFD700", key: 1, y: 0 },
             { value: 5, height: 50, backgroundColor: "#FFD700", key: 0, y: 0 },
         ];
+
+    // produce trace
     trace.push(traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit2, traceUnit3, traceUnit4, traceUnit1, traceUnit1);
 
     const blockNums = [1, 2, 3, 2, 3, 2, 3, 2, 3, 4];

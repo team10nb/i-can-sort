@@ -11,7 +11,7 @@ export default function BubbleSort(arr) {
 
     for (i = 0; i < patched.length; i++) {
         for (j = 0; j < patched.length - 1 - i; j++) {
-            // 表明现在即将比较这两个，算一步
+            // Visualize: Comparing
             if (j > 0) {
                 changeColor(patched, j - 1, COLORS.original);
             }
@@ -23,7 +23,7 @@ export default function BubbleSort(arr) {
             );
             blockNums.push(4);
 
-            // 比较完成，算一步
+            // Visualize: complete comparing
             if (patched[j].value > patched[j + 1].value) {
                 description.push(
                     patched[j].value +
@@ -51,7 +51,7 @@ export default function BubbleSort(arr) {
             trace.push(hardcopy(patched));
         }
 
-        // 最后一个已经排好了。
+        // Visualize: final one is sorted
         if (j > 0) {
             changeColor(patched, j - 1, COLORS.original);
         }
@@ -61,7 +61,7 @@ export default function BubbleSort(arr) {
         blockNums.push(7);
     }
 
-    // 全都排好了
+    // Visualize: all sorted
     trace.push(hardcopy(patched));
     description.push("Bubble Sort Finished!");
     blockNums.push(9);
