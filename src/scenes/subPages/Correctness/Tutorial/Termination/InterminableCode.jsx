@@ -2,6 +2,8 @@
     Author: Ruizi Han, Shiliang Chen
 
     Example animation and code of Non-terminating Swap.
+    material-ui library is used for UI.
+    framer-motion library is used for animation.
 */
 
 import * as React from "react";
