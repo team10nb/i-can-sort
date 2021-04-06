@@ -2,6 +2,7 @@
     Author: Ruizi Han
 
     Use animation and pseudocode to explain for loop and while loop.
+    material-ui library is used for UI.
 */
 
 import React from "react";
