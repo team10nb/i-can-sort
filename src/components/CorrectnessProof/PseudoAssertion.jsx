@@ -75,7 +75,7 @@ const Bubble = (props) => {
                     blockNum === 2 ? classes.background : classes.noBackground
                 }
             >
-                {`for i from length to 1 do`}
+                {`for i from length-1 to 1 do`}
             </pre>
             {/* assertion */}
             <pre
@@ -90,7 +90,7 @@ const Bubble = (props) => {
                     blockNum === 3 ? classes.background : classes.noBackground
                 }
             >
-                {`  for j from 0 to i do`}
+                {`  for j from 0 to i-1 do`}
             </pre>
             {/* assertion */}
             <pre
