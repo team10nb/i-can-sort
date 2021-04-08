@@ -120,12 +120,12 @@ export default function ImplementationAnimation(props) {
                 setIsValid(false);
                 setWrongMsg(
                     "Please enter no more than " +
-                        MAXLENGTH +
-                        " numbers that between " +
-                        MINNUMBER +
-                        "-" +
-                        MAXNUMBER +
-                        "."
+                    MAXLENGTH +
+                    " numbers that between " +
+                    MINNUMBER +
+                    "-" +
+                    MAXNUMBER +
+                    "."
                 );
             } else if (nums.length > MAXLENGTH && !outRange) {
                 setIsValid(false);
@@ -136,10 +136,10 @@ export default function ImplementationAnimation(props) {
                 setIsValid(false);
                 setWrongMsg(
                     "Please enter numbers that between " +
-                        MINNUMBER +
-                        "-" +
-                        MAXNUMBER +
-                        "."
+                    MINNUMBER +
+                    "-" +
+                    MAXNUMBER +
+                    "."
                 );
             } else {
                 setIsValid(true);
@@ -239,9 +239,6 @@ export default function ImplementationAnimation(props) {
             width: 200,
             position: "fixed",
             bottom: 60,
-        },
-        slider: {
-            marginLeft: 10,
         },
         inputBar: {
             marginLeft: -75,
@@ -492,17 +489,14 @@ export default function ImplementationAnimation(props) {
                     <ExplanationBox width={50} height={6}>
                         {description[currentStep]}
                     </ExplanationBox>
-
-                    <div className={classes.slider}>
-                        <AnimationSlider
-                            width={460}
-                            step={1}
-                            max={trace.length - 1}
-                            handleChange={handleSliderChange}
-                            value={currentStep}
-                            display="none"
-                        />
-                    </div>
+                    <AnimationSlider
+                        width={460}
+                        step={1}
+                        max={trace.length - 1}
+                        handleChange={handleSliderChange}
+                        value={currentStep}
+                        display="none"
+                    />
                     <AnimationControl {...animationControlProps} />
                 </div>
             </Card>

@@ -129,9 +129,9 @@ export default function ProofAnimation(props) {
             position: "fixed",
             bottom: 60,
         },
-        slider: {
-            marginLeft: 10,
-        },
+        // slider: {
+        //     marginLeft: 16,
+        // },
     }));
 
     const classes = useStyles();
@@ -334,17 +334,14 @@ export default function ProofAnimation(props) {
                     <ExplanationBox width={40} height={6}>
                         {description[currentStep]}
                     </ExplanationBox>
-
-                    <div className={classes.slider}>
-                        <AnimationSlider
-                            width={360}
-                            step={1}
-                            max={trace.length - 1}
-                            handleChange={handleSliderChange}
-                            value={currentStep}
-                            display="none"
-                        />
-                    </div>
+                    <AnimationSlider
+                        width={360}
+                        step={1}
+                        max={trace.length - 1}
+                        handleChange={handleSliderChange}
+                        value={currentStep}
+                        display="none"
+                    />
                     <AnimationControl {...animationControlProps} />
                 </div>
             </Card>
