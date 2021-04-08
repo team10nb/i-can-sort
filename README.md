@@ -1,7 +1,8 @@
 # i-can-sort
 The software iCanSort is a learning tool to help students study and visualise sorting algorithms and their correctness available on Windows and macOS. This project i-can-sort is built with React and Electron based on NodeJS with npm.
 
-For contributing and maintenance, please refer to [COUNTRIBUTING.md](./CONTRIBUTING.md).
+For contributing, please refer to [COUNTRIBUTING.md](./CONTRIBUTING.md).\
+For maintenance, please refer to [MaintenanceGuide.md](./MaintenanceGuide.md).\
 For downloading the executable software, please refer to [Release](https://github.com/team10nb/i-can-sort/releases).
 
 # Getting Started with iCanSort

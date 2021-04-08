@@ -33,10 +33,10 @@ import ProofHelp from "src/components/CorrectnessProof/ProofHelp";
 
 | Name | Description | Child components|
 | ---- | ----------- | ----------------|
-| AppBar1 |    a bar contains each subpage's name     |        |   
+| AppBar1 |    a bar contains each subpage's name     |          
 |Drawer |    a drawer show the level of subpage     |       List        |
-| List   |    a list of each subpage's name         |            |
-| AppBar2 |   a bar show page number and give access to the last and the next page|    |   
+| List   |    a list of each subpage's name         |            
+| AppBar2 |   a bar show page number and give access to the last and the next page| \   
 
 ###  **SubPages**
 
