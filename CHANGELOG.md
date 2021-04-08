@@ -4,6 +4,7 @@
 ### Bug Fixes
 
 * **FirstInBackdrop:** fix compile warning ([e2a82e9](https://github.com/team10nb/i-can-sort/commit/e2a82e9eac23f48b7d79fee7aff217fa44f8d611))
+* **Implementation:** fix input format ([181e21b](https://github.com/team10nb/i-can-sort/commit/181e21b9f0c9014f5f4d2066118be2c618d4d146))
 * **ModuleProgress:** fix top border radius to 0 ([d9f1255](https://github.com/team10nb/i-can-sort/commit/d9f125562f53a02187cb1fc3115dd0ad8e3bd1e8))
 * **PseudoAssertion:** fix code in bubble ([93a1253](https://github.com/team10nb/i-can-sort/commit/93a12539a44ae41bb9f5ce89bb8e566274f4005a))
 
