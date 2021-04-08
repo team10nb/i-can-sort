@@ -98,13 +98,11 @@ export default function ProofAnimation(props) {
             textAlign: "center",
             fontWeight: "600",
         },
-
         cardOne: {
             width: "420px",
             height: 550,
             background: "#F0F0F0",
         },
-
         cardTwo: {
             display: "grid",
             width: "400px",
@@ -129,9 +127,6 @@ export default function ProofAnimation(props) {
             position: "fixed",
             bottom: 60,
         },
-        // slider: {
-        //     marginLeft: 16,
-        // },
     }));
 
     const classes = useStyles();
