@@ -30,9 +30,9 @@ The following is a set of guidelines for contributing to and maintaining iCanSor
     - [JavaScript Styleguide](#javascript-styleguide)
     - [JavaScript Documentation Styleguide](#javascript-documentation-styleguide)
     - [Git Commit Styleguide](#git-commit-styleguide)
-  - [Summary of quality assurance](#summary-of-quality-assurance)
+  - [Summary of Quality Assurance](#summary-of-quality-assurance)
     - [Coding Convention](#coding-convention)
-    - [Independent quality assurance team](#independent-quality-assurance-team)
+    - [Independent Auality Assurance Team](#independent-auality-assurance-team)
     - [Peer Programming](#peer-programming)
     - [Automated Unit Testing and Integration Testing](#automated-unit-testing-and-integration-testing)
     - [Release Testing and Acceptance Testing](#release-testing-and-acceptance-testing)
@@ -241,12 +241,12 @@ Use angular style.
 `fix(Main): fix function call`
 
 
-## Summary of quality assurance
+## Summary of Quality Assurance
 
 ### Coding Convention
 
 The styleguides in the previous chapter includes our coding convention. We follow the guide we defined, which makes the structure clear and code clean.
-### Independent quality assurance team
+### Independent Auality Assurance Team
 
 The team has two members who are mainly responsible for UI design, and they are also responsible for quality assurance.
 
