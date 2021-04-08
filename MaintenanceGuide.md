@@ -25,8 +25,8 @@ The following is a set of guidelines for maintaining iCanSort. These are mostly 
       - [`npm run dist-win`](#npm-run-dist-win)
       - [`npm run dist-mac`](#npm-run-dist-mac)
       - [`npm run styleguide`](#npm-run-styleguide)
-  - [Project Structure and Styleguides](#project-structure-and-styleguides)
-    - [Component Sructure Styleguide](#component-sructure-styleguide)
+  - [Project Structure and Styleguide](#project-structure-and-styleguide)
+    - [Component Structure Styleguide](#component-structure-styleguide)
     - [JavaScript Styleguide](#javascript-styleguide)
     - [JavaScript Documentation Styleguide](#javascript-documentation-styleguide)
     - [Git Commit Styleguide](#git-commit-styleguide)
@@ -114,7 +114,7 @@ To ensure that you install the specific npm version 6.14.10.
 
 #### `npm install`
 
-Installs all the develepment dependencies.
+Installs all the development dependencies.
 
 If this step took more than 10 minutes, you shall consider to connect to eduroam or open a VPN and set proxy for npm.\
 `npm config set proxy http://server:port`
@@ -133,7 +133,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-Now you shall see iCanSort in your bowswer.
+Now you shall see iCanSort in your browser.
 
 *Note that using broswer view the app does not utilise electron features, 'view Group's website' and 'export note' functions cannot work. The performance is somehow reduced either due to the browser.*
 
@@ -170,7 +170,7 @@ Builds the app and create an installer for Mac to the `dist` folder.
 Launch a web view of the Style Guidist.\
 This will build JavaScript Doc in each folder and display them in a webpage.
 
-## Project Structure and Styleguides
+## Project Structure and Styleguide
 
 iCanSort\
 ├── src\
@@ -181,7 +181,7 @@ iCanSort\
 │       └── subPages\
 └──
 
-### Component Sructure Styleguide
+### Component Structure Styleguide
 
 Each component in components folder has five files. The component itself, its documentation, test, test log, test plan. Please follow the style as the example below.
 
@@ -253,7 +253,7 @@ Use angular style.
 
 ### Coding Convention
 
-The styleguides in the previous chapter includes our coding convention. We follow the guide we defined, which makes the structure clear and code clean.
+The styleguide in the previous chapter includes our coding convention. We follow the guide we defined, which makes the structure clear and code clean.
 ### Independent Quality Assurance Team
 
 The team has two members who are mainly responsible for UI design, and they are also responsible for quality assurance.

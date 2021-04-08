@@ -8,7 +8,7 @@ const packageFile = require(packagePath)
 
 
 module.exports = {
-  title: "Project title", 
+  title: "iCanSort",
   version: packageFile.version, 
   usageMode: 'expand', 
   pagePerSection: true, 
