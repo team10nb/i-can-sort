@@ -36,11 +36,11 @@ import Button from '@material-ui/core/Button';
 
 | Name | Description | 
 | ---- | ----------- | 
-| ProcedureBubble | The subpage for leaning Bubble sort |  
-| ProcedureInsertion | The subpage for leaning Insertion sort |  
-| ProcedureSelection | The subpage for leaning Selection sort |  
-| ProcedureHeap | The subpage for leaning Heap sort |  
-| ProcedureMerge | The subpage for leaning Merge sort |  
-| ProcedureQuick | The subpage for leaning Quick sort |  
+| ProcedureBubble | The subpage for leaning Bubble sort
+| ProcedureInsertion | The subpage for leaning Insertion sort
+| ProcedureSelection | The subpage for leaning Selection sort
+| ProcedureHeap | The subpage for leaning Heap sort
+| ProcedureMerge | The subpage for leaning Merge sort
+| ProcedureQuick | The subpage for leaning Quick sort | 
 
 

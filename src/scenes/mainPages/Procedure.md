@@ -28,8 +28,8 @@ import { motion } from "framer-motion";
 
 | Name | Description | Child components |
 | ---- | ----------- | ---------------- |
-| Module |    This button contains an image and a gif to indicate the sorting process. Gif will be shown when the cursor hovers.    |                 |   
-| Setting Button |    It is a set button. By clicking it, users can change language, background music and see some information about the team.      |         |
-| Help Button |    It is a help button, after clicking it, the explanation of each interface's component will be shown.      |              |
-| Section Navigation  |    a navigation used to switch different pages    |               | 
+| Module |    This button contains an image and a gif to indicate the sorting process. Gif will be shown when the cursor hovers.    | \
+| Setting Button |    It is a set button. By clicking it, users can change language, background music and see some information about the team. |\
+| Help Button |    It is a help button, after clicking it, the explanation of each interface's component will be shown.       |\
+| Section Navigation  |    a navigation used to switch different pages    |\
 

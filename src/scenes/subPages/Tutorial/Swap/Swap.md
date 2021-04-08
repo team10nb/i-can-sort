@@ -22,7 +22,7 @@ import SwapFrame from './SwapFrame';
 
 | Name | Description | Child components |
 | ---- | ----------- | ---------------- |
-| TutorialSubPage |Provide App bar on the top and a home button|  AppBar, Toolbar                |   
+| TutorialSubPage |Provide App bar on the top and a home button|  AppBar, Toolbar
 | SwapFrame |Provide Swap animation on the right of this page to demonstrate the process|AnimationSlider, AnimationControl, ExplanationBox                 |   
 
 
