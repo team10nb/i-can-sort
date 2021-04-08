@@ -1,8 +1,8 @@
 # Maintenance Guide to iCanSort
 
-👍🎉 First off, thanks for taking the time to contribute or maintain! 🎉👍
+👍🎉 First off, thanks for taking the time to maintain! 🎉👍
 
-The following is a set of guidelines for contributing to and maintaining iCanSort. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for maintaining iCanSort. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 - [Maintenance Guide to iCanSort](#maintenance-guide-to-icansort)
   - [Wait! I just want to try your software!](#wait-i-just-want-to-try-your-software)
@@ -32,12 +32,13 @@ The following is a set of guidelines for contributing to and maintaining iCanSor
     - [Git Commit Styleguide](#git-commit-styleguide)
   - [Summary of Quality Assurance](#summary-of-quality-assurance)
     - [Coding Convention](#coding-convention)
-    - [Independent Auality Assurance Team](#independent-auality-assurance-team)
+    - [Independent Quality Assurance Team](#independent-quality-assurance-team)
     - [Peer Programming](#peer-programming)
+    - [Detailed JavaScriptDoc Documentation](#detailed-javascriptdoc-documentation)
     - [Automated Unit Testing and Integration Testing](#automated-unit-testing-and-integration-testing)
     - [Release Testing and Acceptance Testing](#release-testing-and-acceptance-testing)
     - [Continuous Integration](#continuous-integration)
-    - [Issue and Kanban](#issue-and-kanban)
+    - [Issues and Kanban](#issues-and-kanban)
   - [User Manual](#user-manual)
 
 ## Wait! I just want to try your software!
@@ -91,8 +92,9 @@ Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
 
 For clone the project, you can use both HTTPS or SSH. Please make sure you have configured SSH in your machine and GitHub if you want to use SSH.
 
-- HTTPS: `git clone https://github.com/team10nb/i-can-sort.git`
-- SSH: `git clone git@github.com:team10nb/i-can-sort.git`
+- Clone via HTTPS: `git clone https://github.com/team10nb/i-can-sort.git`
+- Clone via SSH: `git clone git@github.com:team10nb/i-can-sort.git`
+- Download ZIP: [Click_To_Download](https://github.com/team10nb/i-can-sort/archive/refs/heads/main.zip)
 
 ### Configuration Guide
 
@@ -133,7 +135,7 @@ You will also see any lint errors in the console.
 
 Now you shall see iCanSort in your bowswer.
 
-*Note that using broswer view the app does not utilise electron features, 'view Group's website' and 'export note' functions cannot work.*
+*Note that using broswer view the app does not utilise electron features, 'view Group's website' and 'export note' functions cannot work. The performance is somehow reduced either due to the browser.*
 
 #### `npm test`
 
@@ -219,17 +221,21 @@ All JavaScript code is linted with [Prettier](https://prettier.io).
 
 ### JavaScript Documentation Styleguide
 
-- Download the file from the following website to check the documentation for iCanSort.
+- Download the folder from the following website to check the documentation for iCanSort.
 
-  https://github.com/team10nb/i-can-sort/blob/main/styleguide/index.html
+  `https://github.com/team10nb/i-can-sort/blob/main/styleguide/`
+
+- Or click link below to see the web documentation if you are the marker of GRP who downloaded documentation we uploaded through moodle/MS Form
+  
+  [JavaScriptDoc](./styleguide/index.html)
 
 - The styleguide configuration file can be found in:
 
-  https://github.com/team10nb/i-can-sort/blob/main/styleguidist.config.js
+  `https://github.com/team10nb/i-can-sort/blob/main/styleguidist.config.js`
 
 - Open the source code and find the related Markdown file to edit the documentation.
 
-  Example:  edit the documentation of the component AlgorithmButton in the "src/components/AlgorithmButton/AlgorithmButton.md" file.
+  Example:  edit the documentation of the component AlgorithmButton in the `src/components/AlgorithmButton/AlgorithmButton.md` file.
 
 - For more information about the styleguide, please visit the official website of [Styleguide (hugeinc.github.io)](https://hugeinc.github.io/styleguide/)
 
@@ -248,7 +254,7 @@ Use angular style.
 ### Coding Convention
 
 The styleguides in the previous chapter includes our coding convention. We follow the guide we defined, which makes the structure clear and code clean.
-### Independent Auality Assurance Team
+### Independent Quality Assurance Team
 
 The team has two members who are mainly responsible for UI design, and they are also responsible for quality assurance.
 
@@ -260,6 +266,13 @@ They also conducted Release Testing and Acceptance Testing by their own. They ch
 
 The team did peer programming for each piece of code. Each component we built was coded by two people. One would be monitoring while the other was coding. That is an effective method to advoid problems, such as wrong naming, missing semicolon, and no comments.
 
+### Detailed JavaScriptDoc Documentation
+
+The team utilised StyleGuidist for documentation. Each component and main scenes are documented carefully for maintenance purpose.
+
+If you have downloaded the whole project, you can view the web through [JavaScriptDoc](./styleguide/index.html).
+
+The whole folder is in `https://github.com/team10nb/i-can-sort/blob/main/styleguide/`
 
 ### Automated Unit Testing and Integration Testing
 
@@ -273,9 +286,15 @@ Our quality assurance team conducted release testing after all the necessary fea
 
 A CI server on GitHub is utilised to conduct tests every time there is a push request. The team will receive email from GitHub if tests failed and will fix problems at once.
 
-### Issue and Kanban
+View CI server by: [https://github.com/team10nb/i-can-sort/actions](https://github.com/team10nb/i-can-sort/actions)
 
-The team utilised Issue and kanban to track tasks and report bugs.
+### Issues and Kanban
+
+The team utilised Issues and kanban to track tasks and report bugs.
+
+Issues are available in [https://github.com/team10nb/i-can-sort/actions](https://github.com/team10nb/i-can-sort/actions)
+
+Kanban is available in [https://github.com/team10nb/i-can-sort/projects/1](https://github.com/team10nb/i-can-sort/projects/1)
 
 
 ## User Manual
