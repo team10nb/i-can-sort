@@ -69,6 +69,8 @@ You will also see any lint errors in the console.
 
 Now you shall see iCanSort in your bowswer.
 
+*Note that using broswer view the app does not utilise electron features, 'view Group's website' and 'export note' functions cannot work.*
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.
