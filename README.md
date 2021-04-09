@@ -3,6 +3,7 @@ The software iCanSort is a learning tool to help students study and visualise so
 
 For contributing, please refer to [COUNTRIBUTING.md](./CONTRIBUTING.md).\
 For maintenance, please refer to [MaintenanceGuide.md](./MaintenanceGuide.md).\
+For code report, please refer to [CodeReport.md](./CodeReport.md).\
 For downloading the executable software, please refer to [Release](https://github.com/team10nb/i-can-sort/releases).
 
 # Getting Started with iCanSort
