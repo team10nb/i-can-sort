@@ -6,11 +6,11 @@
 
 iCanSort\
 ├── src\
-|   ├── index.js\
-|   ├── components\
-|   └── scenes\
-|       ├── mainPages\
-|       └── subPages\
+ |   ├── index.js\
+ |   ├── components\
+ |   └── scenes\
+ |       ├── mainPages\
+ |       └── subPages\
 └──
 
 ## Change Log
