@@ -15,37 +15,37 @@ We also provide you a User Manual [here](https://github.com/team10nb/i-can-sort/
 
 ## 1. Download & Install NodeJS and npm
 
-You’ll need to have `Node@15.6.0` with `npm@6.14.10` but NO later version on your local development machine.
+You’ll need to have `Node@14.15.3` with `npm@6.14.9` but NO later version on your local development machine.
 
 You can follow the link below to download for Windows and Mac. 
 
 For **Windows 64-bit**, you can download and install:
 
-[https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi](https://nodejs.org/dist/v15.6.0/node-v15.6.0-x64.msi)
+[https://nodejs.org/dist/v14.15.3/node-v14.15.3-x64.msi](https://nodejs.org/dist/v14.15.3/node-v14.15.3-x64.msi)
 
 For **Mac**, you can download and install:
 
-[https://nodejs.org/dist/v15.6.0/node-v15.6.0.pkg](https://nodejs.org/dist/v15.6.0/node-v15.6.0.pkg)
+[https://nodejs.org/dist/v14.15.3/node-v14.15.3.pkg](https://nodejs.org/dist/v14.15.3/node-v14.15.3.pkg)
 
 Or you can find downloads that fits your system here by yourself:
 
- [https://nodejs.org/dist/v15.6.0/](https://nodejs.org/dist/v15.6.0/)
+ [https://nodejs.org/dist/v14.15.3/](https://nodejs.org/dist/v14.15.3/)
 
-Now you shall be able to execute `node -v` in your terminal and see `v15.6.0`
+Now you shall be able to execute `node -v` in your terminal and see `v14.15.3`
 
 
 ## 2. Configuration Guide
 
 In the project directory, you should run following command in your terminal in order to configure the dependencies.
 
-### `npm install -g npm@6.14.10`
+### `npm install -g npm@6.14.9`
 
-To install the specific npm version 6.14.10
+To install the specific npm version 6.14.9
 
 ### `npm -v`
 
-Make sure that you see `6.14.10` in your terminal.
-To ensure that you install the specific npm version 6.14.10. 
+Make sure that you see `6.14.9` in your terminal.
+To ensure that you install the specific npm version 6.14.9. 
 
 ### `npm install`
 
